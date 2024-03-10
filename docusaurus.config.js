@@ -84,6 +84,12 @@ const config = {
             position: 'left',
             label: 'Mainnet',
           },
+          {
+            type: 'docSidebar',
+            sidebarId: 'testnetSidebar',
+            position: 'left',
+            label: 'Testnet',
+          },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/facebook/docusaurus',
