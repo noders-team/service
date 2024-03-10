@@ -38,121 +38,10 @@ const sidebars = {
           id: 'getting-started/introduction-to-solana',
           label: 'Introduction to Solana'
         },
-        {
-          type: 'doc',
-          id: 'getting-started/web3-and-mobile',
-          label: 'Web3 and Mobile'
-        },
       ]
-    },
-    {
-      type: 'doc',
-      id: 'getting-started/saga-genesis-token',
-      label: 'Saga Genesis Token'
-    },
-    {
-      type: 'category',
-      label: 'The Solana Mobile Stack',
-      collapsible: true,
-      collapsed: true,
-      items: [
-        {
-          type: 'link',
-          href: '/getting-started/overview#mobile-wallet-adapter',
-          label: 'Mobile Wallet Adapter'
-        },
-        {
-          type: 'link',
-          href: '/getting-started/overview#seed-vault',
-          label: 'Seed Vault'
-        },
-        {
-          type: 'link',
-          href: '/getting-started/overview#solana-dapp-store',
-          label: 'Solana dApp Store'
-        },
-      ]
-    },
-    {
-      type: 'doc',
-      id: 'getting-started/mobile-dapp-architecture',
-      label: 'Mobile dApp Architecture'
-    },
-    {
-      type: 'doc',
-      id: 'getting-started/development-setup',
-      label: 'Development Setup'
-    },
-
-
-    /* SDK Section **/
-    {
-      type: 'html',
-      value: '<div class="sidebar-divider" />',
-    },
-    {
-      type: 'html',
-      value: 'SDK',
-      className: 'sidebar-section-header',
-    },
-    {
-      type: 'ref',
-      id: 'react-native/overview',
-      label: 'React Native'
-    },
-    {
-      type: 'ref',
-      id: 'android-native/overview',
-      label: 'Kotlin'
-    },
-    {
-      type: 'ref',
-      id: 'flutter/overview',
-      label: 'Flutter',
-    },
-    {
-      type: 'ref',
-      id: 'unity/unity_sdk',
-      label: 'Unity',
-    },
-    {
-      type: 'ref',
-      id: 'unreal/unreal_sdk',
-      label: 'Unreal Engine',
-    },
-    {
-      type: 'doc',
-      id: 'solana-kmp/solana-kmp',
-      label: 'SolanaKMP',
-    },
-    
-     /* Resources Section */
-    {
-      type: 'html',
-      value: '<div class="sidebar-divider" />',
-    },
-    {
-      type: 'html',
-      value: 'Resources',
-      className: 'sidebar-section-header',
-    },
-    {
-      type: 'doc',
-      id: 'sample-apps/sample_app_overview',
-      label: 'Sample App Collection',
-    },
-    { // dApp publishing entrypoint
-      type: 'doc',
-      label: 'dApp Store Publishing',
-      id: 'dapp-publishing/intro',
-    },
-    { // Reference entrypoint
-      type: 'doc',
-      label: 'API Reference',
-      id: 'reference/overview',
     },
   ],
-  // other sidebars
+  /* other sidebars
   ...require("./sidebars/kotlinSidebar.js"),
   ...require("./sidebars/reactNativeSidebar.js"),
   ...require("./sidebars/flutterSidebar.js"),
@@ -161,6 +50,7 @@ const sidebars = {
   ...require("./sidebars/dappStoreSidebar.js"),
   ...require("./sidebars/referenceSidebar.js"),
   ...require("./sidebars/sagaSidebar.js"),
+  */
 };
 
 module.exports = sidebars;
