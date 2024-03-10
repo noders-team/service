@@ -25,3 +25,7 @@ source .bash_profile
 ## Initialize the node
 
 ## Start service and check the logs
+
+:::note The Solana Flutter SDK is a community-developed and maintained project and it is not an official library. Please be understanding if certain areas are still under development. Your contributions are always welcome to help address any issues you may encounter.
+
+Thank you to the Espresso Cash team for your active maintanence of this library! :::
