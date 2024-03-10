@@ -1,4 +1,6 @@
 ---
+hide_table_of_contents: false
+title: Usefull commands
 sidebar_position: 6
 ---
 

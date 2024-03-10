@@ -1,5 +1,7 @@
 ---
-sidebar_position: 6
+hide_table_of_contents: false
+title: Upgrade
+sidebar_position: 2
 ---
 
 # Upgrade
