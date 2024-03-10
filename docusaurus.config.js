@@ -17,8 +17,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'solana-mobile', // Usually your GitHub org/user name.
-  projectName: 'sms-docsite', // Usually your repo name.
+  organizationName: 'nodersteam', // Usually your GitHub org/user name.
+  projectName: 'services-docusaurus', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -37,7 +37,6 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          editUrl: 'https://github.com/solana-mobile/solana-mobile-doc-site/tree/main/',
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
         },
@@ -48,11 +47,6 @@ const config = {
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
-        },
-        gtag: {
-          // this GA code is safe to be published
-          trackingID: "G-PBF6HZVSRX",
-          anonymizeIP: true,
         },
       }),
     ],

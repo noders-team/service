@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="609d9c4d-607e-4257-a03b-37575134f343" name="Changes" comment="Source code changes" />
+    <list default="true" id="609d9c4d-607e-4257-a03b-37575134f343" name="Changes" comment="Source code changes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +14,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "nodersteam"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="25846dc9-29c6-48eb-a173-f5d07814b2da" />
+        <option name="url" value="https://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@github.com/nodersteam/services-docusaurus" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -64,38 +80,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710087909869</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710095708489</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1710095708489</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710095739785</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1710095739785</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710095787862</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1710095787862</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710095806446</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1710095806446</updated>
     </task>
     <task id="LOCAL-00023" summary="Source code changes">
       <option name="closed" value="true" />
@@ -457,7 +441,39 @@
       <option name="project" value="LOCAL" />
       <updated>1710106196777</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710106328462</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1710106328462</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710106417604</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1710106417604</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710106494316</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1710106494316</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710106575557</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1710106575558</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
