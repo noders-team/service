@@ -41,16 +41,9 @@ const sidebars = {
       ]
     },
   ],
-  /* other sidebars
-  ...require("./sidebars/kotlinSidebar.js"),
-  ...require("./sidebars/reactNativeSidebar.js"),
-  ...require("./sidebars/flutterSidebar.js"),
-  ...require("./sidebars/unitySidebar.js"),
-  ...require("./sidebars/unrealSidebar.js"),
-  ...require("./sidebars/dappStoreSidebar.js"),
-  ...require("./sidebars/referenceSidebar.js"),
-  ...require("./sidebars/sagaSidebar.js"),
-  */
+
+  ...require("./sidebars/mainnetSidebar.js"),
+
 };
 
 module.exports = sidebars;
