@@ -7,7 +7,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Solana Mobile Docs',
   tagline: 'Learn to build on Solana Mobile',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
 
   // Set the production url of your site here
   url: 'https://services.noders.team',
@@ -69,10 +69,10 @@ const config = {
         respectPrefersColorScheme: false,
       },
       navbar: {
-        title: 'Solana Mobile',
+        title: 'Services',
         logo: {
-          alt: 'Solana Mobile Logo',
-          src: 'img/solana-mobile-stack-logo-50x50.png',
+          alt: 'NODERS[TEAM]',
+          src: 'img/logo.svg',
         },
         items: [
           {
