@@ -14,7 +14,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 Explore the API references for the various libraries that are used in the Solana Mobile Stack.
 
 ## Usefull resources
-See the API for the various client libraries implemented for [Mobile Wallet Adapter](/getting-started/overview#mobile-wallet-adapter).
+See the API for the various client libraries implemented for.
 
 <CardLayout autoFitEnabled={false}>
     <SmallCard
