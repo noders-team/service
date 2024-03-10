@@ -82,45 +82,6 @@ const config = {
             position: 'left',
             label: 'Overview',
           },
-          {
-            type: 'dropdown',
-            position: 'left',
-            label: 'SDKs',
-            items: [
-              {
-                to: 'react-native/overview',
-                label: 'React Native'
-              },
-              {
-                to: 'android-native/overview',
-                label: 'Kotlin'
-              },
-              {
-                to: 'flutter/overview', 
-                label: 'Flutter'
-              },
-              {
-                to: 'unity/unity_sdk', 
-                label: 'Unity'
-              },
-              {
-                to: 'unreal/unreal_sdk', 
-                label: 'Unreal Engine'
-              },
-            ],
-          },
-          {
-            type: 'doc',
-            docId: 'dapp-publishing/intro',
-            position: 'left',
-            label: 'dApp Store',
-          },
-          {
-            type: 'doc',
-            docId: 'saga/overview',
-            position: 'left',
-            label: 'Saga',
-          },
           {to: 'blog', label: 'Blog', position: 'right'},
           {
             href: 'https://github.com/solana-mobile',
@@ -167,16 +128,9 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Solana Mobile, Inc.`,
       },
       prism: {
-        additionalLanguages: ['kotlin', 'json', 'swift', 'java'],
+        additionalLanguages: ['bash'],
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-      },
-      algolia: {
-        // This API key is "search-only" and safe to be published
-        apiKey: "c52fd1c2b00a7f8d578b7d2b36430a44",
-        appId: "QHX7ZKLF5I",
-        indexName: "solanamobile",
-        contextualSearch: true,
       },
     }),
 };
