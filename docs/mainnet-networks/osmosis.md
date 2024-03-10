@@ -18,10 +18,42 @@ See the API for the various client libraries implemented for.
 
 <CardLayout autoFitEnabled={false}>
     <SmallCard
-        to="https://google.com"
+        to="#"
         header={{
             label: "Website",
             translateId: "typescript-reference",
+        }}
+        iconPath="img/typescript-icon.png"
+    />
+    <SmallCard
+        to="#"
+        header={{
+            label: "Github",
+            translateId: "github-reference",
+        }}
+        iconPath="img/typescript-icon.png"
+    />
+    <SmallCard
+        to="#"
+        header={{
+            label: "Discord",
+            translateId: "discord-reference",
+        }}
+        iconPath="img/typescript-icon.png"
+    />
+    <SmallCard
+        to="#"
+        header={{
+            label: "X",
+            translateId: "x-reference",
+        }}
+        iconPath="img/typescript-icon.png"
+    />
+    <SmallCard
+        to="#"
+        header={{
+            label: "Telegram",
+            translateId: "telegram-reference",
         }}
         iconPath="img/typescript-icon.png"
     />
