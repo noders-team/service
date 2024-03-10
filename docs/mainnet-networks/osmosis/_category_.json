@@ -3,7 +3,7 @@
   "position": 2,
   "link": {
     "type": "generated-index",
-    "image": "/img/logo.svg˚",
+    "image": "../../img/osmosis.svg",
     "description": "5 minutes to learn the most important Docusaurus concepts."
   }
 }
