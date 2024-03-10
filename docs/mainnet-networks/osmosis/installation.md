@@ -7,24 +7,15 @@ sidebar_position: 6
 ## Install dependencies
 
 ```bash
-function HighlightSomeText(highlight) {
-  if (highlight) {
-    // highlight-next-line
-    return 'This text is highlighted!';
-  }
+# Install dependencies for building from source
+sudo apt update
+sudo apt install -y curl git jq lz4 build-essential
 
-  return 'Nothing highlighted';
-}
-
-function HighlightMoreText(highlight) {
-  // highlight-start
-  if (highlight) {
-    return 'This range is highlighted!';
-  }
-  // highlight-end
-
-  return 'Nothing highlighted';
-}
+# Install Go
+sudo rm -rf /usr/local/go
+curl -L https://go.dev/dl/go1.21.6.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
+echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin' >> $HOME/.bash_profile
+source .bash_profile
 ```
 
 ## Download and build binaries
