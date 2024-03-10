@@ -3,8 +3,8 @@ hide_table_of_contents: false
 title: Introduction
 ---
 
-import Card from "../../src/components/Card"
-import CardLayout from "../../src/layouts/CardLayout"
+#import Card from "../../src/components/Card"
+#import CardLayout from "../../src/layouts/CardLayout"
 
 Welcome to the **Solana Mobile Documentation** site!
 
