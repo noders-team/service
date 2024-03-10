@@ -42,9 +42,6 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
         },
-        mainnet-networks: {
-          sidebarPath: './sidebars/mainnetSidebar.js',
-        },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
