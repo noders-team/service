@@ -10,7 +10,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://docs.solanamobile.com',
+  url: 'https://services.noders.team',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -76,8 +76,8 @@ const config = {
         },
         items: [
           {
-            type: 'doc',
-            docId: 'getting-started/intro',
+            type: 'docSidebar',
+            sidebarId: 'documentationSidebar',
             position: 'left',
             label: 'Overview',
           },
