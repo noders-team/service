@@ -1,29 +1,34 @@
 // @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
+// `@type` JSDoc annotations allow editor autocompletion and type checking
+// (when paired with `@ts-check`).
+// There are various equivalent ways to declare your Docusaurus config.
+// See: https://docusaurus.io/docs/api/docusaurus-config
+
+import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Solana Mobile Docs',
-  tagline: 'Learn to build on Solana Mobile',
-  favicon: 'img/favicon.ico',
+  title: 'NODERS[TEAM] services for web3',
+  tagline: 'Dinosaurs are cool',
+  favicon: 'img/favicon.svg',
 
   // Set the production url of your site here
-  url: 'https://docs.solanamobile.com',
+  url: 'https://services.noders.team',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'solana-mobile', // Usually your GitHub org/user name.
-  projectName: 'sms-docsite', // Usually your repo name.
+  organizationName: 'facebook', // Usually your GitHub org/user name.
+  projectName: 'docusaurus', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
+  // Even if you don't use internationalization, you can use this field to set
+  // useful metadata like html lang. For example, if your site is Chinese, you
+  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -35,22 +40,17 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          editUrl: 'https://github.com/solana-mobile/solana-mobile-doc-site/tree/main/',
-          routeBasePath: '/',
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: './sidebars.js',
         },
         blog: {
-          blogTitle: 'Solana Mobile Blog',
-          blogDescription: 'A curated feed of thought pieces, articles, and writings from Solana Mobile',
-          postsPerPage: 'ALL',
+          showReadingTime: true,
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          editUrl:
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
-        gtag: {
-          // this GA code is safe to be published
-          trackingID: "G-PBF6HZVSRX",
-          anonymizeIP: true,
+          customCss: './src/css/custom.css',
         },
       }),
     ],
@@ -60,12 +60,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/solana-mobile-stack-social-card.png',
-      colorMode: {
-        defaultMode: 'dark',
-        disableSwitch: false,
-        respectPrefersColorScheme: false,
-      },
+      image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'Solana Mobile',
         logo: {
@@ -96,19 +91,28 @@ const config = {
         style: 'dark',
         links: [
           {
+            title: 'Docs',
+            items: [
+              {
+                label: 'Tutorial',
+                to: '/docs/intro',
+              },
+            ],
+          },
+          {
             title: 'Community',
             items: [
               {
-                label: 'Stack Exchange',
-                href: 'https://solana.stackexchange.com/',
+                label: 'Stack Overflow',
+                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
               },
               {
                 label: 'Discord',
-                href: 'https://discord.gg/solanamobile',
+                href: 'https://discordapp.com/invite/docusaurus',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/solanamobile',
+                href: 'https://twitter.com/docusaurus',
               },
             ],
           },
@@ -116,20 +120,24 @@ const config = {
             title: 'More',
             items: [
               {
+                label: 'Blog',
+                to: '/blog',
+              },
+              {
                 label: 'GitHub',
-                href: 'https://github.com/solana-mobile',
+                href: 'https://github.com/facebook/docusaurus',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Solana Mobile, Inc.`,
+        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
       prism: {
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
         additionalLanguages: ['bash'],
-        theme: require('prism-react-renderer/themes/github'),
-        darkTheme: require('prism-react-renderer/themes/dracula'),
       },
     }),
 };
 
-module.exports = config;
+export default config;
