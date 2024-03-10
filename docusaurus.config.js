@@ -81,12 +81,6 @@ const config = {
             position: 'left',
             label: 'Overview',
           },
-          {
-            type: 'docSidebar',
-            sidebarId: 'mainnetSidebar',
-            position: 'left',
-            label: 'Mainnet',
-          },
           {to: 'blog', label: 'Blog', position: 'right'},
           {
             href: 'https://github.com/solana-mobile',
