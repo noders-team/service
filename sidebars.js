@@ -23,7 +23,7 @@ const sidebars = {
     {
       type: 'html',
       value: '<img src="/img/osmosis.svg" alt="Osmosis" />', // The HTML to be rendered
-      label: 'Osmosis',
+      label: 'Osmosis2',
       items: ['mainnet-networks/osmosis'],
       defaultStyle: true, // Use the default menu item styling
     },
