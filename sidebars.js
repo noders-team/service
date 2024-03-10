@@ -22,7 +22,7 @@ const sidebars = {
     'intro',
     {
       type: 'html',
-      value: '<img src="/img/osmosis.svg" alt="Osmosis" />', // The HTML to be rendered
+      value: '<img style="height:32px;" src="/img/osmosis.svg" alt="Osmosis" />', // The HTML to be rendered
       label: 'Tutorial',
       items: ['mainnet-networks/osmosis'],
       defaultStyle: true, // Use the default menu item styling
