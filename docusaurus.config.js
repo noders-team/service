@@ -127,9 +127,9 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Solana Mobile, Inc.`,
       },
       prism: {
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
         additionalLanguages: ['bash'],
-        theme: require('prism-react-renderer/themes/github'),
-        darkTheme: require('prism-react-renderer/themes/dracula'),
       },
     }),
 };
