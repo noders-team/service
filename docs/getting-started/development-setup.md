@@ -60,7 +60,7 @@ These are our official SDKs that are maintained by the Solana Mobile team.
 
 <CardLayout autoFitEnabled={true}>
     <Card
-        to="/react-native/quickstart"
+        to="/getting-started/intro"
         header={{
             label: "React Native",
             translateId: "react-native",
@@ -72,7 +72,7 @@ These are our official SDKs that are maintained by the Solana Mobile team.
         iconPath="img/react-native-96.svg"
     />
     <Card
-        to="/android-native/overview"
+        to="/getting-started/intro"
         header={{
             label: "Kotlin",
             translateId: "android-native",
@@ -92,7 +92,7 @@ the capabilities supported by each, the state of development, and how to get sta
 
 <CardLayout autoFitEnabled={true}>
     <Card
-        to="/flutter/overview"
+        to="/getting-started/intro"
         header={{
             label: "Flutter",
             translateId: "flutter-headr",
@@ -104,7 +104,7 @@ the capabilities supported by each, the state of development, and how to get sta
         iconPath="img/flutter-icon.svg"
     />
     <Card
-        to="/unity/unity_sdk"
+        to="/getting-started/intro"
         header={{
             label: "Unity",
             translateId: "unity-header",
@@ -116,7 +116,7 @@ the capabilities supported by each, the state of development, and how to get sta
         iconPath="img/unity-logo.png"
     />
     <Card
-        to="/unreal/unreal_sdk"
+        to="/getting-started/intro"
         header={{
             label: "Unreal Engine",
             translateId: "unreal-header",

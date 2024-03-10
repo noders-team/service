@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="609d9c4d-607e-4257-a03b-37575134f343" name="Changes" comment="Source code changes">
-      <change beforePath="$PROJECT_DIR$/sidebars/dappStoreSidebar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidebars/flutterSidebar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidebars/kotlinSidebar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidebars/reactNativeSidebar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidebars/referenceSidebar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidebars/sagaSidebar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidebars/unitySidebar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidebars/unrealSidebar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/getting-started/intro.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/getting-started/intro.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,22 +66,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710087909869</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710092795071</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1710092795071</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710093035936</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1710093035936</updated>
     </task>
     <task id="LOCAL-00007" summary="Source code changes">
       <option name="closed" value="true" />
@@ -466,7 +443,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710104295975</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710104347725</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1710104347725</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710104472115</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1710104472116</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

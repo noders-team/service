@@ -25,7 +25,7 @@ Learn how to develop Solana Mobile dApps in your preferred programming language.
 
 <CardLayout autoFitEnabled={true}>
     <Card
-        to="/react-native/overview"
+        to="/getting-started/intro"
         header={{
             label: "React Native",
             translateId: "developer-programs",
@@ -37,7 +37,7 @@ Learn how to develop Solana Mobile dApps in your preferred programming language.
         iconPath="img/react-native-96.svg"
     />
     <Card
-        to="/android-native/overview"
+        to="/getting-started/intro"
         header={{
             label: "Kotlin",
             translateId: "development-setup",
@@ -52,7 +52,7 @@ Learn how to develop Solana Mobile dApps in your preferred programming language.
 
 <CardLayout autoFitEnabled={true}>
     <Card
-        to="/react-native/setup#solana-mobile-dapp-scaffold"
+        to="/getting-started/intro"
         header={{
             label: "React Native Template dApp",
             translateId: "developer-programs",
@@ -64,7 +64,7 @@ Learn how to develop Solana Mobile dApps in your preferred programming language.
         iconPath="img/rocket-icon2.png"
     />
     <Card
-        to="/sample-apps/sample_app_overview"
+        to="/getting-started/intro"
         header={{
             label: "Sample Apps",
             translateId: "development-setup",
@@ -83,7 +83,7 @@ Explore the full Solana Mobile SDK or learn about the Solana blockchain itself.
 
 <CardLayout autoFitEnabled={true}>
     <Card
-        to="/getting-started/overview"
+        to="/getting-started/intro"
         header={{
             label: "SDK Overview",
             translateId: "developer-programs",
