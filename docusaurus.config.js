@@ -68,6 +68,7 @@ const config = {
           alt: 'NODERS[TEAM]',
           src: 'img/logo.svg',
         },
+        hideOnScroll: true,
         items: [
           {
             type: 'docSidebar',
