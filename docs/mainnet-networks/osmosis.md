@@ -2,7 +2,7 @@
 hide_table_of_contents: false
 ---
 
-# 123 Osmosis
+# ![Osmosis](img/typescript-icon.png) Osmosis
 
 
 
