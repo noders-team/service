@@ -7,6 +7,22 @@ sidebar_position: 3
 # Osmosis Node Snapshot
 ###### Chain ID: `osmosis-1` | Current Node Version: `v23.0.0`
 
++-------+----------+------+
+| Table Headings   | Here |
++-------+----------+------+
+| Sub   | Headings | Too  |
++=======+==========+======+
+| cell  | column spanning |
++ spans +----------+------+
+| rows  | normal   | cell |
++-------+----------+------+
+| multi | cells can be    |
+| line  | *formatted*     |
+|       | **paragraphs**  |
+| cells |                 |
+| too   |                 |
++-------+-----------------+
+
 ## Our Osmosis Snapshot Server Setup
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
 
