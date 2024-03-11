@@ -32,7 +32,7 @@ Osmosis is a decentralized peer-to-peer blockchain that people can use to create
     <SmallCard
         to="#"
         header={{
-            label: "gRPC Endpoint",
+            label: "gRPC-Web Endpoint",
             translateId: "grpc-endpoint",
         }}
     />
