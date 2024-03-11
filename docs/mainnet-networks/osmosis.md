@@ -11,6 +11,18 @@ import SmallCard from "../../src/components/SmallCard"
 import Card from "../../src/components/Card"
 import CardLayout from "../../src/layouts/CardLayout"
 
+
+<CardLayout autoFitEnabled={false}>
+    <SmallCard
+        to="mainnet-networks/osmosis/installation"
+        header={{
+            label: "Node Installation Guide",
+            translateId: "typescript-reference",
+        }}
+        iconPath="img/typescript-icon.png"
+    />
+</CardLayout>
+
 Explore the API references for the various libraries that are used in the Solana Mobile Stack.
 
 ## We are
