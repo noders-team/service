@@ -1,14 +1,17 @@
 ---
 hide_table_of_contents: false
+title: Osmosis
 ---
-
-# Osmosis
-
-
 
 import SmallCard from "../../src/components/SmallCard"
 import Card from "../../src/components/Card"
 import CardLayout from "../../src/layouts/CardLayout"
+
+# Osmosis
+
+Osmosis is a decentralized peer-to-peer blockchain that people can use to create liquidity and trade IBC enabled tokens. The Osmosis blockchain is made up of free, public, and open-source software.
+
+## Public endpoints 
 
 <CardLayout autoFitEnabled={true}>
     <SmallCard
@@ -33,8 +36,6 @@ import CardLayout from "../../src/layouts/CardLayout"
         }}
     />
 </CardLayout>
-
-Explore the API references for the various libraries that are used in the Solana Mobile Stack.
 
 ## We are
 
