@@ -93,12 +93,13 @@ sudo journalctl -u celestia -f
 :::info ADVANCED ROUTE
 
 The above solution requires you to download the compressed file, uncompressed it and then delete the original file. This requires extra storage space on your server. You can run the following combo command to stream the snapshot into your database location. For advanced users only:
-
-:::
-
 ```bash
 curl -o - -L https://snapshots.polkachu.com/snapshots/celestia/celestia_971453.tar.lz4 | lz4 -c -d - | tar -x -C $HOME/.celestia-app
 ```
+
+:::
+
+
 
 :::info ADVANCED ROUTE
 
