@@ -5,9 +5,9 @@ sidebar_position: 5
 ---
 
 # Live peers
-
 ###### Chain ID: `osmosis-1` | Current Node Version: `v23.0.0`
 
+## Osmosis Live Peers
 Here is a list of 139 active peers as observed by [NODERS]TEAM in real-time. Add them to your `config.toml` if you have trouble finding peers.
 
 ```bash
@@ -24,7 +24,7 @@ sudo systemctl restart andromedad
 sudo journalctl -u andromedad -f --no-hostname -o cat
 ```
 
-## Ours State-Sync Peer for Osmosis
+## Ours Peer for Osmosis
 When you state-sync, you might also consider adding [NODERS]TEAM state-sync peer to your persistent_peers setting in `config.toml`.
 
 ```bash

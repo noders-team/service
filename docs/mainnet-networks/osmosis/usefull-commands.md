@@ -1,7 +1,7 @@
 ---
 hide_table_of_contents: false
 title: Usefull commands
-sidebar_position: 6
+sidebar_position: 7
 ---
 
 # Usefull commands
