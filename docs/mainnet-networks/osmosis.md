@@ -11,11 +11,32 @@ import Card from "../../src/components/Card"
 import CardLayout from "../../src/layouts/CardLayout"
 
 
-<CardLayout autoFitEnabled={false}>
-    <SmallCard
+<CardLayout autoFitEnabled={true}>
+    <Card
         to="osmosis/installation"
         header={{
             label: "Node Installation Guide",
+            translateId: "typescript-reference",
+        }}
+    />
+    <Card
+        to="osmosis/installation"
+        header={{
+            label: "Node Upgrade",
+            translateId: "typescript-reference",
+        }}
+    />
+    <Card
+        to="osmosis/installation"
+        header={{
+            label: "Node Snapshot",
+            translateId: "typescript-reference",
+        }}
+    />
+    <Card
+        to="osmosis/installation"
+        header={{
+            label: "Live Peers",
             translateId: "typescript-reference",
         }}
     />
