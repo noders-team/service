@@ -1,6 +1,6 @@
 ---
 hide_table_of_contents: false
-title: Snapshot
+title: Snapshot*
 sidebar_position: 3
 ---
 
@@ -32,7 +32,7 @@ sudo apt update
 sudo apt install snapd -y
 sudo snap install lz4
 ```
-Download the snapshot
+Download the [snapshot (0.56 GB)](https://google.com) with sha256sum [`ABCDEF`](https://google.com)
 ```bash
 wget -O osmosis_14249428.tar.lz4 https://snapshots.polkachu.com/snapshots/osmosis/osmosis_14249428.tar.lz4 --inet4-only
 ```

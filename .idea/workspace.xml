@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="609d9c4d-607e-4257-a03b-37575134f343" name="Changes" comment="Source code changes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/mainnet-networks/osmosis/snapshot.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mainnet-networks/osmosis/snapshot.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,30 +80,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710087909869</updated>
-    </task>
-    <task id="LOCAL-00063" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710105722735</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1710105722735</updated>
-    </task>
-    <task id="LOCAL-00064" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710105922257</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1710105922257</updated>
-    </task>
-    <task id="LOCAL-00065" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710106010564</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1710106010564</updated>
     </task>
     <task id="LOCAL-00066" summary="Source code changes">
       <option name="closed" value="true" />
@@ -474,7 +449,31 @@
       <option name="project" value="LOCAL" />
       <updated>1710181525170</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710182076743</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1710182076743</updated>
+    </task>
+    <task id="LOCAL-00113" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710182116312</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1710182116312</updated>
+    </task>
+    <task id="LOCAL-00114" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710182150435</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1710182150435</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
