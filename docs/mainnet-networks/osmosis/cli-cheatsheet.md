@@ -1,6 +1,6 @@
 ---
 hide_table_of_contents: false
-title: CLI Cheatsheet
+title: CLI Cheatsheet*
 sidebar_position: 7
 ---
 

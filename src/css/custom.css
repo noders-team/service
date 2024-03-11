@@ -93,3 +93,9 @@
   margin-top: 0.25rem;  /* Adjust to match your design */
   margin-right: 0.5rem; /* Adjust to match your design */
 }
+
+/* Code Block */
+
+code .variable {
+  font-style: normal !important;
+}

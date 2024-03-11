@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="609d9c4d-607e-4257-a03b-37575134f343" name="Changes" comment="Source code changes">
-      <change afterPath="$PROJECT_DIR$/docs/mainnet-networks/osmosis/cli-cheatsheet.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/mainnet-networks/osmosis/usefull-commands.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/mainnet-networks/osmosis/cli-cheatsheet.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mainnet-networks/osmosis/cli-cheatsheet.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,14 +80,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710087909869</updated>
-    </task>
-    <task id="LOCAL-00070" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710106494316</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1710106494316</updated>
     </task>
     <task id="LOCAL-00071" summary="Source code changes">
       <option name="closed" value="true" />
@@ -475,7 +465,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710183198876</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <task id="LOCAL-00119" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710183701429</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1710183701429</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
