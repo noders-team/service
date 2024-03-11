@@ -19,27 +19,6 @@ import CardLayout from "../../src/layouts/CardLayout"
             translateId: "installation-reference",
         }}
     />
-    <Card
-        to="osmosis/upgrade"
-        header={{
-            label: "Node Upgrade",
-            translateId: "upgrade-reference",
-        }}
-    />
-    <Card
-        to="osmosis/snapshot"
-        header={{
-            label: "Node Snapshot",
-            translateId: "snapshot-reference",
-        }}
-    />
-    <Card
-        to="osmosis/live-peers"
-        header={{
-            label: "Live Peers",
-            translateId: "live-peers-reference",
-        }}
-    />
 </CardLayout>
 
 Explore the API references for the various libraries that are used in the Solana Mobile Stack.
