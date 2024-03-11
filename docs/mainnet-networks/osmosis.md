@@ -21,7 +21,7 @@ import CardLayout from "../../src/layouts/CardLayout"
     <SmallCard
         to="#"
         header={{
-            label: "API endpoint",
+            label: "API Endpoint",
             translateId: "api-endpoint",
         }}
     />
