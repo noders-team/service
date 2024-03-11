@@ -18,7 +18,6 @@ import CardLayout from "../../src/layouts/CardLayout"
             label: "Node Installation Guide",
             translateId: "typescript-reference",
         }}
-        iconPath="img/typescript-icon.png"
     />
 </CardLayout>
 
