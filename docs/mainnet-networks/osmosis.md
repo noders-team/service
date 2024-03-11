@@ -16,28 +16,28 @@ import CardLayout from "../../src/layouts/CardLayout"
         to="osmosis/installation"
         header={{
             label: "Node Installation Guide",
-            translateId: "typescript-reference",
+            translateId: "installation-reference",
         }}
     />
     <Card
         to="osmosis/installation"
         header={{
             label: "Node Upgrade",
-            translateId: "typescript-reference",
+            translateId: "upgrade-reference",
         }}
     />
     <Card
         to="osmosis/installation"
         header={{
             label: "Node Snapshot",
-            translateId: "typescript-reference",
+            translateId: "snapshot-reference",
         }}
     />
     <Card
         to="osmosis/installation"
         header={{
             label: "Live Peers",
-            translateId: "typescript-reference",
+            translateId: "live-peers-reference",
         }}
     />
 </CardLayout>
