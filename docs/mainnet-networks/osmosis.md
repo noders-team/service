@@ -2,7 +2,7 @@
 hide_table_of_contents: false
 ---
 
-# ![Osmosis](img/typescript-icon.png) Osmosis
+# ![Osmosis](img/osmosis.svg) Osmosis
 
 
 
