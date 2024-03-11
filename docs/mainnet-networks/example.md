@@ -1,6 +1,6 @@
 ---
 hide_table_of_contents: false
-title: Osmosis
+title: Example
 ---
 
 import SmallCard from "../../src/components/SmallCard"
