@@ -16,7 +16,7 @@ import CardLayout from "../../src/layouts/CardLayout"
         to="osmosis/installation"
         header={{
             label: "Node Installation Guide",
-            translateId: "installation-reference",
+            translateId: "node-installation",
         }}
     />
 </CardLayout>
