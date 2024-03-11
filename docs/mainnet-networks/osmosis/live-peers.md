@@ -4,10 +4,10 @@ title: Live peers*
 sidebar_position: 5
 ---
 
-# Live peers
+# Osmosis Live Peers
 ###### Chain ID: `osmosis-1` | Current Node Version: `v23.0.0`
 
-## Osmosis Live Peers
+## All Live Peers for Osmosis
 Here is a list of 139 active peers as observed by [NODERS]TEAM in real-time. Add them to your `config.toml` if you have trouble finding peers.
 
 ```bash
