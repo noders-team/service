@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="609d9c4d-607e-4257-a03b-37575134f343" name="Changes" comment="Source code changes">
-      <change beforePath="$PROJECT_DIR$/docs/mainnet-networks/osmosis/installation.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mainnet-networks/osmosis/installation.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidebars/mainnetSidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidebars/mainnetSidebar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,22 +80,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710087909869</updated>
-    </task>
-    <task id="LOCAL-00054" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710104347725</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1710104347725</updated>
-    </task>
-    <task id="LOCAL-00055" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710104472115</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1710104472116</updated>
     </task>
     <task id="LOCAL-00056" summary="Source code changes">
       <option name="closed" value="true" />
@@ -473,7 +457,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710179512174</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710179801829</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1710179801829</updated>
+    </task>
+    <task id="LOCAL-00104" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710180022014</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1710180022014</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
