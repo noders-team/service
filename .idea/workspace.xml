@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="609d9c4d-607e-4257-a03b-37575134f343" name="Changes" comment="Source code changes">
-      <change beforePath="$PROJECT_DIR$/docs/mainnet-networks/osmosis.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mainnet-networks/osmosis.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidebars/mainnetSidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidebars/mainnetSidebar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,38 +81,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710087909869</updated>
-    </task>
-    <task id="LOCAL-00039" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710100538368</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1710100538368</updated>
-    </task>
-    <task id="LOCAL-00040" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710100640652</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1710100640652</updated>
-    </task>
-    <task id="LOCAL-00041" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710100775534</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1710100775534</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710100946998</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1710100946998</updated>
     </task>
     <task id="LOCAL-00043" summary="Source code changes">
       <option name="closed" value="true" />
@@ -473,7 +442,39 @@
       <option name="project" value="LOCAL" />
       <updated>1710172915528</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710173048927</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1710173048927</updated>
+    </task>
+    <task id="LOCAL-00089" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710173100258</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1710173100258</updated>
+    </task>
+    <task id="LOCAL-00090" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710173147068</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1710173147068</updated>
+    </task>
+    <task id="LOCAL-00091" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710173178029</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1710173178029</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
