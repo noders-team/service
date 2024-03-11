@@ -14,7 +14,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 
 <CardLayout autoFitEnabled={false}>
     <SmallCard
-        to="mainnet-networks/osmosis/installation"
+        to="osmosis/installation"
         header={{
             label: "Node Installation Guide",
             translateId: "typescript-reference",
