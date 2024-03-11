@@ -5,8 +5,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Solana Mobile Docs',
-  tagline: 'Learn to build on Solana Mobile',
+  title: '[NODERS]TEAM Services',
+  tagline: 'Trusted blockchain validator and web3 developer team',
   favicon: 'img/favicon.svg',
 
   // Set the production url of your site here
