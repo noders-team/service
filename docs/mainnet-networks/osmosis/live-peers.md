@@ -1,6 +1,6 @@
 ---
 hide_table_of_contents: false
-title: Live peers
+title: Live peers*
 sidebar_position: 5
 ---
 
