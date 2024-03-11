@@ -7,11 +7,13 @@ sidebar_position: 3
 # Osmosis Node Snapshot
 ###### Chain ID: `osmosis-1` | Current Node Version: `v23.0.0`
 
-| Block height | Size | Timestamp | Download                                                                                   |
-|--------------|------|-----------|--------------------------------------------------------------------------------------------|
-| 971453       | 3 GB |9 hours ago| [osmosis_latest.tar.lz4](https://google.com) with sha256sum [`ABCDEF`](https://google.com) |
-
 ## Our Osmosis Snapshot Server Setup
+
+| Block height | Size | Timestamp | Download                                                                                         |
+|--------------|------|-----------|--------------------------------------------------------------------------------------------------|
+| 971453       | 3 GB |9 hours ago| [osmosis_latest.tar.lz4](https://google.com) with sha256sum [`ABCDEF`](https://google.com)       |
+
+
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
 
 The snapshot is designed for node opeartors to run an efficient node on Osmosis chain. To make the snapshot as small as possible while still viable as a validator, we use the following setting to save on the disk space. It might be helpful for you to sync with our snapshot periodically because Tendermint chain storage grows over time regardless of the pruning. Since we periodically state-sync our snapshot nodes, you might notice that sometimes the size of our snapshot is surprisingly small.
