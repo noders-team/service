@@ -17,11 +17,6 @@ import CardLayout from "../../src/layouts/CardLayout"
             label: "Flutter",
             translateId: "flutter-headr",
         }}
-        body={{
-            label: "An actively maintained SDK for building Solana mobile dApps with Flutter.",
-            translateId: "learn-programs",
-        }}
-        iconPath="img/flutter-icon.svg"
     />
     <Card
         to="#"
