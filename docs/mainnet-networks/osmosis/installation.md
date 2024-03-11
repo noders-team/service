@@ -1,10 +1,10 @@
 ---
 hide_table_of_contents: false
-title: Installation
+title: Node Installation Guide
 sidebar_position: 1
 ---
 
-# Installation
+# Osmosis Node Installation Guide
 
 ## Install dependencies
 
