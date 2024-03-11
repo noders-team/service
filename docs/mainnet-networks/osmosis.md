@@ -17,6 +17,10 @@ import CardLayout from "../../src/layouts/CardLayout"
             label: "Flutter",
             translateId: "flutter-headr",
         }}
+        body={{
+            label: "",
+            translateId: "unity-setup-body",
+        }}
     />
     <Card
         to="#"
