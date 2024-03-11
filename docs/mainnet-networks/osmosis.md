@@ -11,16 +11,6 @@ import Card from "../../src/components/Card"
 import CardLayout from "../../src/layouts/CardLayout"
 
 
-<CardLayout autoFitEnabled={true}>
-    <Card
-        to="osmosis/installation"
-        header={{
-            label: "Node Installation Guide",
-            translateId: "node-installation",
-        }}
-    />
-</CardLayout>
-
 Explore the API references for the various libraries that are used in the Solana Mobile Stack.
 
 ## We are
