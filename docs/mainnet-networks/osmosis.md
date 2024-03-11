@@ -29,10 +29,9 @@ import CardLayout from "../../src/layouts/CardLayout"
             translateId: "unity-header",
         }}
         body={{
-            label: "Integrate the Solana Mobile stack into your Unity mobile game.",
+            label: "",
             translateId: "unity-setup-body",
         }}
-        iconPath="img/unity-logo.png"
     />
     <Card
         to="#"
@@ -41,10 +40,9 @@ import CardLayout from "../../src/layouts/CardLayout"
             translateId: "unreal-header",
         }}
         body={{
-            label: "An early stage SDK for integrating Solana Mobile into an Unreal Engine mobile game.",
-            translateId: "unreal-header-body",
+            label: "",
+            translateId: "unity-setup-body",
         }}
-        iconPath="img/unreal-logo.png"
     />
 </CardLayout>
 
