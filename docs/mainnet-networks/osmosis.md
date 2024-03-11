@@ -10,6 +10,44 @@ import SmallCard from "../../src/components/SmallCard"
 import Card from "../../src/components/Card"
 import CardLayout from "../../src/layouts/CardLayout"
 
+<CardLayout autoFitEnabled={true}>
+    <Card
+        to="#"
+        header={{
+            label: "Flutter",
+            translateId: "flutter-headr",
+        }}
+        body={{
+            label: "An actively maintained SDK for building Solana mobile dApps with Flutter.",
+            translateId: "learn-programs",
+        }}
+        iconPath="img/flutter-icon.svg"
+    />
+    <Card
+        to="#"
+        header={{
+            label: "Unity",
+            translateId: "unity-header",
+        }}
+        body={{
+            label: "Integrate the Solana Mobile stack into your Unity mobile game.",
+            translateId: "unity-setup-body",
+        }}
+        iconPath="img/unity-logo.png"
+    />
+    <Card
+        to="#"
+        header={{
+            label: "Unreal Engine",
+            translateId: "unreal-header",
+        }}
+        body={{
+            label: "An early stage SDK for integrating Solana Mobile into an Unreal Engine mobile game.",
+            translateId: "unreal-header-body",
+        }}
+        iconPath="img/unreal-logo.png"
+    />
+</CardLayout>
 
 Explore the API references for the various libraries that are used in the Solana Mobile Stack.
 
