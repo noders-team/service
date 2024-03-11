@@ -2,7 +2,7 @@
 hide_table_of_contents: false
 ---
 
-# ![Osmosis](img/osmosis.svg) Osmosis
+# Osmosis
 
 
 

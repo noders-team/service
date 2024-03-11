@@ -79,22 +79,6 @@
       <option name="presentableId" value="Default" />
       <updated>1710087909869</updated>
     </task>
-    <task id="LOCAL-00032" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710099589574</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1710099589574</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710099828793</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1710099828793</updated>
-    </task>
     <task id="LOCAL-00034" summary="Source code changes">
       <option name="closed" value="true" />
       <created>1710099868392</created>
@@ -471,7 +455,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710172018709</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710172345832</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1710172345832</updated>
+    </task>
+    <task id="LOCAL-00082" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710172358030</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1710172358030</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
