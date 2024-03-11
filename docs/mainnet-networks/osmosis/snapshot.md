@@ -52,5 +52,56 @@ If you use this snapshot on a validator node during a chain halt, make sure you 
 # Back up priv_validator_state.json if needed
 cp ~/.osmosisd/data/priv_validator_state.json  ~/.osmosisd/priv_validator_state.json
 
-andromedad tendermint unsafe-reset-all --home $HOME/.andromeda --keep-addr-book
+andromedad tendermint unsafe-reset-all --home ~/.andromeda --keep-addr-book
 ```
+
+Decompress the snapshot to your database location. You database location will be something to the effect of `~/.celestia-app` depending on your node implemention.
+
+```bash
+lz4 -c -d celestia_971453.tar.lz4  | tar -x -C $HOME/.celestia-app
+```
+
+:::warning WARNING
+
+If you run a validator node and the chain is in halt, it is time to replace the `priv_validator_state.json` file that you have backed up.
+:::
+
+```bash
+# Replace with the backed-up priv_validator_state.json
+cp ~/.celestia-app/priv_validator_state.json  ~/.celestia-app/data/priv_validator_state.json
+```
+
+If everything is good, now restart your node
+
+```bash
+sudo service celestia start
+```
+
+Remove downloaded snapshot to free up space
+
+```bash
+rm -v celestia_971453.tar.lz4
+```
+
+Make sure that your node is running
+
+```bash
+sudo service celestia status
+sudo journalctl -u celestia -f
+```
+
+:::info ADVANCED ROUTE
+
+The above solution requires you to download the compressed file, uncompressed it and then delete the original file. This requires extra storage space on your server. You can run the following combo command to stream the snapshot into your database location. For advanced users only:
+
+:::
+
+```bash
+curl -o - -L https://snapshots.polkachu.com/snapshots/celestia/celestia_971453.tar.lz4 | lz4 -c -d - | tar -x -C $HOME/.celestia-app
+```
+
+:::info ADVANCED ROUTE
+
+We also have Osmosis state-sync service to help you bootstrap a node.
+
+:::
