@@ -11,37 +11,25 @@ import Card from "../../src/components/Card"
 import CardLayout from "../../src/layouts/CardLayout"
 
 <CardLayout autoFitEnabled={true}>
-    <Card
+    <SmallCard
         to="#"
         header={{
-            label: "Flutter",
-            translateId: "flutter-headr",
-        }}
-        body={{
-            label: "",
-            translateId: "unity-setup-body",
+            label: "RPC Endpoint",
+            translateId: "rpc-endpoint",
         }}
     />
-    <Card
+    <SmallCard
         to="#"
         header={{
-            label: "Unity",
-            translateId: "unity-header",
-        }}
-        body={{
-            label: "",
-            translateId: "unity-setup-body",
+            label: "API endpoint",
+            translateId: "api-endpoint",
         }}
     />
-    <Card
+    <SmallCard
         to="#"
         header={{
-            label: "Unreal Engine",
-            translateId: "unreal-header",
-        }}
-        body={{
-            label: "",
-            translateId: "unity-setup-body",
+            label: "gRPC Endpoint",
+            translateId: "grpc-endpoint",
         }}
     />
 </CardLayout>
