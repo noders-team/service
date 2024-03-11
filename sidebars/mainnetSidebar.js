@@ -14,7 +14,6 @@ module.exports = {
       link: {
         type: 'doc',
         id: 'mainnet-networks/osmosis',
-        description: 'Learn about the most important Docusaurus concepts!',
         image: 'img/osmosis.svg',
       },
       collapsible: true,
