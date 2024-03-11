@@ -5,6 +5,7 @@ sidebar_position: 3
 ---
 
 # Snapshot
+###### Chain ID: `osmosis-1` | Current Node Version: `v23.0.0`
 
 ```bash
 # Install dependencies, if needed

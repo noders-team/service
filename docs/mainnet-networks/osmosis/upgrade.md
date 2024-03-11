@@ -5,6 +5,7 @@ sidebar_position: 2
 ---
 
 # Upgrade
+###### Chain ID: `osmosis-1` | Current Node Version: `v23.0.0`
 
 ```bash
 # Clone project repository

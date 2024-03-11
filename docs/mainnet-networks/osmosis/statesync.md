@@ -5,6 +5,7 @@ sidebar_position: 4
 ---
 
 # State sync
+###### Chain ID: `osmosis-1` | Current Node Version: `v23.0.0`
 
 ```bash
 SNAP_RPC=https://arable.rpc.m.anode.team:443 && \

@@ -1,10 +1,11 @@
 ---
 hide_table_of_contents: false
-title: Node Installation Guide
+title: Installation Guide
 sidebar_position: 1
 ---
 
 # Osmosis Node Installation Guide
+###### Chain ID: `osmosis-1` | Current Node Version: `v23.0.0`
 
 ## Install dependencies
 
