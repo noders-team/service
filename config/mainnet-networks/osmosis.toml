@@ -1,13 +1,19 @@
 # Blockchain
 CHAIN_NAME="Osmosis"
 CHAIN_DESCRIPTION="Osmosis is a decentralized peer-to-peer blockchain that people can use to create liquidity and trade IBC enabled tokens. The Osmosis blockchain is made up of free, public, and open-source software."
-BINARY_VERSION="v23.0.0"
+CHAIN_SYSTEM_NAME="osmosis"
+
+# Binary
+DAEMON_NAME="osmosisd"
+DAEMON_VERSION="v23.0.0"
+DAEMON_SERVICE="osmosisd.service"
+DAEMON_HOME="~/.osmosisd"
 
 # Endpoints
-RPC_ENDPOINT=""
-API_ENDPOINT=""
-GRPCWEB_ENDPOINT=""
-GRPC_ENDPOINT=""
+ENDPOINT_RPC=""
+ENDPOINT_API=""
+ENDPOINT_GRPCWEB=""
+ENDPOINT_GRPC=""
 
 # Social
 SOCIAL_WEBSITE=""
@@ -16,5 +22,8 @@ SOCIAL_DISCORD=""
 SOCIAL_X=""
 SOCIAL_TELEGRAM=""
 
-# Snapshot
-SNAPSHOT_URL=""
+# Download
+DOWNLOAD_URL="https://snapshots.mainnet.noders.team/osmosis/"
+
+# Updates
+UPDATE_LIVE_PEERS=true
