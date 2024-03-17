@@ -98,11 +98,6 @@ li > a.menu__link {
   justify-content: flex-start;
 }
 
-.item1 a::before {
-  padding-right: 0.5rem;
-  content: url(../img/osmosis.svg);
-}
-
 /* Code Block */
 
 code .variable {
