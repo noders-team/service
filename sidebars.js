@@ -20,7 +20,7 @@ const sidebars = {
   documentationSidebar: [
     {
       type: 'html',
-      value: 'Getting Started',
+      value: 'Getting Started 1',
       className: 'sidebar-section-header',
     },
     {
