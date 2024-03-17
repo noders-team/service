@@ -58,7 +58,7 @@ If you use this snapshot on a validator node during a chain halt, make sure you 
 # Back up priv_validator_state.json if needed
 cp ~/.osmosisd/data/priv_validator_state.json  ~/.osmosisd/priv_validator_state.json
 
-andromedad tendermint unsafe-reset-all --home ~/.andromeda --keep-addr-book
+osmosisd tendermint unsafe-reset-all --home ~/.osmosisd --keep-addr-book
 ```
 
 Decompress the snapshot to your database location. You database location will be something to the effect of `~/.celestia-app` depending on your node implemention.
@@ -80,7 +80,7 @@ cp ~/.celestia-app/priv_validator_state.json  ~/.celestia-app/data/priv_validato
 If everything is good, now restart your node
 
 ```bash
-sudo service celestia start
+sudo systemctl restart osmosisd.service
 ```
 
 Remove downloaded snapshot to free up space
@@ -92,8 +92,8 @@ rm -v celestia_971453.tar.lz4
 Make sure that your node is running
 
 ```bash
-sudo service celestia status
-sudo journalctl -u celestia -f
+sudo systemctl restart osmosisd.service
+sudo journalctl -fu osmosisd.service --no-hostname -o cat
 ```
 
 :::note ADVANCED ROUTE

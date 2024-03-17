@@ -36,6 +36,7 @@ function readBlockchainConfig {
 
   # Updates
   UPDATE_LIVE_PEERS=$(grep -oE '^UPDATE_LIVE_PEERS=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  UPDATE_SNAPSHOT=$(grep -oE '^UPDATE_SNAPSHOT=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
 }
 
 function enrichBlockchainConfig {
@@ -88,6 +89,26 @@ function updateLivePeers {
   fi
 }
 
+function updateSnapshot {
+  # Live peers
+  LIVE_PEERS_COUNT=""
+  LIVE_PEERS_ALL=""
+  LIVE_PEERS_RANDOM=""
+
+  if [ "$UPDATE_SNAPSHOT" = true ] ; then
+
+    # Update page
+    CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/snapshot.md"
+    cp "../docs/mainnet-networks/template/snapshot.md" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s/\[CHAIN_NAME\]/$CHAIN_NAME/g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s/\[CHAIN_ID\]/$CHAIN_ID/g" "${CHAIN_PAGE_PATH}"
+
+    perl -pi -e "s/\[DAEMON_NAME\]/$DAEMON_NAME/g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s/\[DAEMON_VERSION\]/$DAEMON_VERSION/g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s/\[DAEMON_HOME\]/$DAEMON_HOME/g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s/\[DAEMON_SERVICE\]/$DAEMON_SERVICE/g" "${CHAIN_PAGE_PATH}"
+  fi
+}
 
 #####################################################################################################################################################################
 #                                                                              INSTALL                                                                              #
@@ -99,6 +120,7 @@ do
   enrichBlockchainConfig
 
   updateLivePeers
+  updateSnapshot
 
   #echo ${LIVE_PEERS_RANDOM}
 done

@@ -56,9 +56,9 @@ If you use this snapshot on a validator node during a chain halt, make sure you 
 
 ```bash
 # Back up priv_validator_state.json if needed
-cp ~/.osmosisd/data/priv_validator_state.json  ~/.osmosisd/priv_validator_state.json
+cp [DAEMON_HOME]/data/priv_validator_state.json  [DAEMON_HOME]/priv_validator_state.json
 
-andromedad tendermint unsafe-reset-all --home ~/.andromeda --keep-addr-book
+[DAEMON_NAME] tendermint unsafe-reset-all --home [DAEMON_HOME] --keep-addr-book
 ```
 
 Decompress the snapshot to your database location. You database location will be something to the effect of `~/.celestia-app` depending on your node implemention.
@@ -80,7 +80,7 @@ cp ~/.celestia-app/priv_validator_state.json  ~/.celestia-app/data/priv_validato
 If everything is good, now restart your node
 
 ```bash
-sudo service celestia start
+sudo systemctl restart [DAEMON_SERVICE]
 ```
 
 Remove downloaded snapshot to free up space
@@ -92,8 +92,8 @@ rm -v celestia_971453.tar.lz4
 Make sure that your node is running
 
 ```bash
-sudo service celestia status
-sudo journalctl -u celestia -f
+sudo systemctl restart [DAEMON_SERVICE]
+sudo journalctl -fu [DAEMON_SERVICE] --no-hostname -o cat
 ```
 
 :::note ADVANCED ROUTE
@@ -109,6 +109,6 @@ curl -o - -L https://snapshots.polkachu.com/snapshots/celestia/celestia_971453.t
 
 :::info ADVANCED ROUTE
 
-We also have Osmosis state-sync service to help you bootstrap a node.
+We also have [CHAIN_NAME] state-sync service to help you bootstrap a node.
 
 :::
