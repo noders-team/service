@@ -72,15 +72,15 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'documentationSidebar',
+            sidebarId: 'mainnetSidebar',
             position: 'left',
-            label: 'Overview',
+            label: 'Mainnet',
           },
           {
             type: 'docSidebar',
             sidebarId: 'mainnetSidebar',
             position: 'left',
-            label: 'Mainnet',
+            label: 'Testnet',
           },
           {to: 'blog', label: 'Blog', position: 'right'},
           {
