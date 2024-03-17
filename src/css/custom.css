@@ -98,14 +98,13 @@ li > a.menu__link {
   justify-content: flex-start;
 }
 
-.item1 {
-    background-image: url('https://services.noders.team/img/logo-osmosis.svg');
+.sidebar-section-with-icon {
     background-repeat: no-repeat;
     background-position: 10px 4px;
     background-size: 24px 24px;
 }
 
-.item1 .menu__list-item-collapsible {
+.sidebar-section-with-icon .menu__list-item-collapsible {
     padding-left: 30px;
 }
 
@@ -113,4 +112,10 @@ li > a.menu__link {
 
 code .variable {
   font-style: normal !important;
+}
+
+/* Icons */
+
+.icon-osmosis {
+    background-image: url('https://services.noders.team/img/logo-osmosis.svg');
 }
