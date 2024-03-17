@@ -72,12 +72,6 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'documentationSidebar',
-            position: 'left',
-            label: 'Overview',
-          },
-          {
-            type: 'docSidebar',
             sidebarId: 'mainnetSidebar',
             position: 'left',
             label: 'Mainnet',
