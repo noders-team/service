@@ -76,15 +76,9 @@ const config = {
             position: 'left',
             label: 'Mainnet',
           },
-          {to: 'blog', label: 'Blog', position: 'right'},
           {
-            href: 'https://github.com/solana-mobile',
-            label: 'GitHub',
-            position: 'right',
-          },
-          {
-            href: 'https://discord.gg/solanamobile',
-            label: 'Discord',
+            href: 'https://cosmoslist.co',
+            label: 'Cosmos List',
             position: 'right',
           },
         ],
