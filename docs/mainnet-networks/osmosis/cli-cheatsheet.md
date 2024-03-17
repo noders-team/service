@@ -5,7 +5,7 @@ sidebar_position: 7
 ---
 
 <div class="h1-with-icon icon-osmosis">
-# Celestia CLI Cheatsheet
+# CLI Cheatsheet
 </div>
 ###### Chain ID: `osmosis-1` | Current Node Version: `v23.0.0`
 
