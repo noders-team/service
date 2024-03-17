@@ -1,6 +1,6 @@
 ---
 hide_table_of_contents: false
-title: [CHAIN_NAME]
+title: template
 ---
 
 import SmallCard from "../../src/components/SmallCard"
