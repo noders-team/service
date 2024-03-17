@@ -48,28 +48,24 @@ function updateLivePeers {
 
   if [ "$UPDATE_LIVE_PEERS" = true ] ; then
     # Gathering live peers
-    raw_live_peers=$(curl -Ls https://snapshots.mainnet.noders.team/osmosis/live_peers.txt)
+    LIVE_PEERS_RAW=$(curl -Ls https://snapshots.mainnet.noders.team/osmosis/live_peers.txt)
 
     # Variables
-    LIVE_PEERS_COUNT=$(echo "${raw_live_peers}" | wc -l)
-    LIVE_PEERS_ALL=$(echo "${raw_live_peers}" | paste -sd "," -)
-    LIVE_PEERS_RANDOM=$(echo "${raw_live_peers}" | sort --random-sort | head -n 5 | paste -sd "," -)
+    LIVE_PEERS_COUNT=$(echo "${LIVE_PEERS_RAW}" | wc -l)
+    LIVE_PEERS_ALL=$(echo "${LIVE_PEERS_RAW}" | paste -sd "," -)
+    LIVE_PEERS_RANDOM=$(echo "${LIVE_PEERS_RAW}" | sort --random-sort | head -n 5 | paste -sd "," -)
 
     # Update page
-    cp "../docs/mainnet-networks/template/live-peers.md" "../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/live-peers.md"
-    perl -pi -e "s/\[CHAIN_NAME\]/$CHAIN_NAME/g" "../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/live-peers.md"
-    perl -pi -e "s/\[LIVE_PEERS_COUNT\]/$LIVE_PEERS_COUNT/g" "../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/live-peers.md"
-    #sed -e "s/LIVE_PEERS_COUNT/${LIVE_PEERS_COUNT}/g" "../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/live-peers.md"
+    CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/live-peers.md"
+    echo "${CHAIN_PAGE_PATH}"
+    cp "../docs/mainnet-networks/template/live-peers.md" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s/\[CHAIN_NAME\]/$CHAIN_NAME/g" "${CHAIN_PAGE_PATH}"
+    #perl -pi -e "s/\[DAEMON_HOME\]/$DAEMON_HOME/g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s/\[DAEMON_SERVICE\]/$DAEMON_SERVICE/g" "${CHAIN_PAGE_PATH}"
 
-
-    #sed -i "s/LIVE_PEERS_COUNT/OKAY/g" "../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/live-peers.md"
-
-    #sed -i "s/live/okey/g" "/Users/slazarev/Documents/GitHub/services-docusaurus/config/docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/live-peers.md"
-
-
-    #value="$(cat "../docs/mainnet-networks/template/live-peers.md")"
-    #echo "${value}" > "../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/live-peers.md"
-
+    perl -pi -e "s/\[LIVE_PEERS_COUNT\]/$LIVE_PEERS_COUNT/g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s/\[LIVE_PEERS_ALL\]/$LIVE_PEERS_ALL/g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s/\[LIVE_PEERS_RANDOM\]/$LIVE_PEERS_RANDOM/g" "${CHAIN_PAGE_PATH}"
   fi
 }
 
