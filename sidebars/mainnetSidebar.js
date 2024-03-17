@@ -11,7 +11,7 @@ module.exports = {
     {
       type: 'category',
       label: 'Osmosis',
-      sidebar_class_name: 'item1',
+      className: 'item1',
       link: {
         type: 'doc',
         id: 'mainnet-networks/osmosis',
