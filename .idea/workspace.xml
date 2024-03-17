@@ -9,7 +9,6 @@
       <change beforePath="$PROJECT_DIR$/config/mainnet-networks/osmosis.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/mainnet-networks/osmosis.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/sync.sh" beforeDir="false" afterPath="$PROJECT_DIR$/config/sync.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/mainnet-networks/osmosis/live-peers.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mainnet-networks/osmosis/live-peers.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/mainnet-networks/template/live-peers.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mainnet-networks/template/live-peers.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,14 +86,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710087909869</updated>
-    </task>
-    <task id="LOCAL-00087" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710172915528</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1710172915528</updated>
     </task>
     <task id="LOCAL-00088" summary="Source code changes">
       <option name="closed" value="true" />
@@ -480,7 +471,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710678452091</updated>
     </task>
-    <option name="localTasksCounter" value="136" />
+    <task id="LOCAL-00136" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710681802137</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1710681802137</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

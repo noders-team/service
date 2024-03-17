@@ -17,7 +17,7 @@ bb14430cd32725447f62c0436454b31f4fdea0b8.109.118.148:28656,27740d856eb1eab458027
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=b09bf90af67e47827dc01e369d0f381979b06a54.34.212.220:26656,37c195e518c001099f956202d34af029b04f2c97.109.20.216:26656,ecb1211762cc8c1dbc620a95d9a2f7373983d012.109.144.236:27656,f896016cbf494a8da970de2707b0f3c982c760a2.92.91.142:26656,89b6c99ecd215cbd7eeac7fe9636295600198621.9.158.219:41056
+PEERS=709a475959c1c491aab37f1ea0b41657d71d1d79.109.118.169:36656,bb14430cd32725447f62c0436454b31f4fdea0b8.109.118.148:28656,ce7f7453e2b306bc670057e9055b142af2424b53.108.12.253:26656,74ea33e040d84b67011298e21128930f8882cb94.247.99.215:12556,729219c108c059824ea9a17c09d11adc99226db4.172.36.139:36656
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.osmosisd/config/config.toml
 
 sudo systemctl restart osmosisd.service
@@ -28,5 +28,5 @@ sudo journalctl -fu osmosisd.service --no-hostname -o cat
 When you state-sync, you might also consider adding [NODERS]TEAM state-sync peer to your persistent_peers setting in `config.toml`.
 
 ```bash
-[ENDPOINT_PEER]
+91570c5f4e2a54ce53996475aea4f530e0669a2e.rpc.mainnet.noders.team:10656
 ```

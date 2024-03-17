@@ -9,7 +9,7 @@ function readBlockchainConfig {
   CHAIN_NAME=$(grep -oE '^CHAIN_NAME=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   CHAIN_DESCRIPTION=$(grep -oE '^CHAIN_DESCRIPTION=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   CHAIN_SYSTEM_NAME=$(grep -oE '^CHAIN_SYSTEM_NAME=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
-  CHAIN_ID=""
+  CHAIN_ID=$(grep -oE '^CHAIN_ID=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
 
   # Binary
   DAEMON_NAME=$(grep -oE '^DAEMON_NAME=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
@@ -22,6 +22,7 @@ function readBlockchainConfig {
   ENDPOINT_API=$(grep -oE '^ENDPOINT_API=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   ENDPOINT_GRPCWEB=$(grep -oE '^ENDPOINT_GRPCWEB=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   ENDPOINT_GRPC=$(grep -oE '^ENDPOINT_GRPC=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  ENDPOINT_PEER=$(grep -oE '^ENDPOINT_PEER=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
 
   # Social
   SOCIAL_WEBSITE=$(grep -oE '^SOCIAL_WEBSITE=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
@@ -39,16 +40,17 @@ function readBlockchainConfig {
 
 function enrichBlockchainConfig {
   # enrich chain id
-  CHAIN_ID=$(curl -s "${ENDPOINT_API}/cosmos/base/tendermint/v1beta1/node_info" | jq -r '.default_node_info.network')
-  echo "${CHAIN_ID}"
+  if [ "${CHAIN_ID}" == "auto" ]; then
+    CHAIN_ID=$(curl -s "${ENDPOINT_API}/cosmos/base/tendermint/v1beta1/node_info" | jq -r '.default_node_info.network')
+  fi
 
   # enrich endpoint peer
-  peer_id=$(curl -s "${ENDPOINT_API}/cosmos/base/tendermint/v1beta1/node_info" | jq -r '.default_node_info.default_node_id')
-  peer_address=$(echo ${ENDPOINT_RPC} | sed -e "s/https\:\/\///")
-  peer_addr=$(curl -s "${ENDPOINT_API}/cosmos/base/tendermint/v1beta1/node_info" | jq -r '.default_node_info.listen_addr' | sed -e "s/tcp\:\/\/0\.0\.0\.0\://")
-  ENDPOINT_PEER="${peer_id}@${peer_address}:${peer_addr}"
-
-  echo ${ENDPOINT_PEER}
+  if [ "${ENDPOINT_PEER}" == "auto" ]; then
+    peer_id=$(curl -s "${ENDPOINT_API}/cosmos/base/tendermint/v1beta1/node_info" | jq -r '.default_node_info.default_node_id')
+    peer_address=$(echo ${ENDPOINT_RPC} | sed -e "s/https\:\/\///")
+    peer_addr=$(curl -s "${ENDPOINT_API}/cosmos/base/tendermint/v1beta1/node_info" | jq -r '.default_node_info.listen_addr' | sed -e "s/tcp\:\/\/0\.0\.0\.0\://")
+    ENDPOINT_PEER="${peer_id}@${peer_address}:${peer_addr}"
+  fi
 }
 
 
@@ -82,6 +84,7 @@ function updateLivePeers {
     perl -pi -e "s/\[LIVE_PEERS_COUNT\]/$LIVE_PEERS_COUNT/g" "${CHAIN_PAGE_PATH}"
     perl -pi -e "s/\[LIVE_PEERS_ALL\]/$LIVE_PEERS_ALL/g" "${CHAIN_PAGE_PATH}"
     perl -pi -e "s/\[LIVE_PEERS_RANDOM\]/$LIVE_PEERS_RANDOM/g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s/\[ENDPOINT_PEER\]/$ENDPOINT_PEER/g" "${CHAIN_PAGE_PATH}"
   fi
 }
 
