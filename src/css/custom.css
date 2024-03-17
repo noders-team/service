@@ -101,7 +101,12 @@ li > a.menu__link {
 .item1 {
     background-image: url('https://services.noders.team/img/osmosis.svg');
     background-repeat: no-repeat;
-    background-position: 50% 10px;
+    background-position: 4px 4px;
+    background-size: 24px 24px;
+}
+
+.item1 .menu__list-item-collapsible {
+    padding-left: 20px;
 }
 
 /* Code Block */
