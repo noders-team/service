@@ -4,8 +4,8 @@ title: Snapshot*
 sidebar_position: 3
 ---
 
-# Osmosis Node Snapshot
-###### Chain ID: `osmosis-1` | Current Node Version: `v23.0.0`
+# [CHAIN_NAME] Node Snapshot
+###### Chain ID: `[CHAIN_ID]` | Binary Version: `[DAEMON_VERSION]`
 
 ## Our Osmosis Snapshot Server Setup
 
@@ -44,7 +44,7 @@ wget -O osmosis_14249428.tar.lz4 https://snapshots.polkachu.com/snapshots/osmosi
 ```
 Stop your node
 ```bash
-sudo systemctl stop andromedad
+sudo systemctl stop [DAEMON_NAME]
 ```
 Reset your node. This will erase your node database. If you are already running validator, be sure you backed up your `priv_validator_key.json` prior to running the command. The command does not wipe the file. However, you should have a backup of it already in a safe location.
 
@@ -74,7 +74,7 @@ If you run a validator node and the chain is in halt, it is time to replace the 
 
 ```bash
 # Replace with the backed-up priv_validator_state.json
-cp ~/.celestia-app/priv_validator_state.json  ~/.celestia-app/data/priv_validator_state.json
+cp [DAEMON_HOME]/priv_validator_state.json  [DAEMON_HOME]/data/priv_validator_state.json
 ```
 
 If everything is good, now restart your node
