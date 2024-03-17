@@ -106,7 +106,6 @@ curl -o - -L https://snapshots.polkachu.com/snapshots/celestia/celestia_971453.t
 :::
 
 
-
 :::info ADVANCED ROUTE
 
 We also have [CHAIN_NAME] state-sync service to help you bootstrap a node.
