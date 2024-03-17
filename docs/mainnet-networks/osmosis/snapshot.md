@@ -61,7 +61,7 @@ cp ~/.osmosisd/data/priv_validator_state.json  ~/.osmosisd/priv_validator_state.
 osmosisd tendermint unsafe-reset-all --home ~/.osmosisd --keep-addr-book
 ```
 
-Decompress the snapshot to your database location. You database location will be something to the effect of `~/.celestia-app` depending on your node implemention.
+Decompress the snapshot to your database location. You database location will be something to the effect of `~/.osmosisd` depending on your node implemention.
 
 ```bash
 lz4 -c -d celestia_971453.tar.lz4  | tar -x -C ~/.osmosisd
