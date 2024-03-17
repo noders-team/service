@@ -56,13 +56,18 @@ function updateLivePeers {
     LIVE_PEERS_RANDOM=$(echo "${raw_live_peers}" | sort --random-sort | head -n 5 | paste -sd "," -)
 
     # Update page
-    cp "../docs/mainnet-networks/example/live-peers.md" "../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/live-peers.md"
+    cp "../docs/mainnet-networks/template/live-peers.md" "../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/live-peers.md"
+    perl -pi -e "s/\[LIVE_PEERS_COUNT\]/$LIVE_PEERS_COUNT/g" "../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/live-peers.md"
     #sed -e "s/LIVE_PEERS_COUNT/${LIVE_PEERS_COUNT}/g" "../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/live-peers.md"
 
 
     #sed -i "s/LIVE_PEERS_COUNT/OKAY/g" "../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/live-peers.md"
 
-    sed -i "s/live/okey/g" "/Users/slazarev/Documents/GitHub/services-docusaurus/config/docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/live-peers.md"
+    #sed -i "s/live/okey/g" "/Users/slazarev/Documents/GitHub/services-docusaurus/config/docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/live-peers.md"
+
+
+    #value="$(cat "../docs/mainnet-networks/template/live-peers.md")"
+    #echo "${value}" > "../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/live-peers.md"
 
   fi
 }
