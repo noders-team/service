@@ -51,6 +51,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Shell Script.sync.sh.executor": "Run",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/slazarev/Documents/GitHub/services-docusaurus/docs/mainnet-networks"
   }
 }]]></component>
@@ -85,54 +86,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710087909869</updated>
-    </task>
-    <task id="LOCAL-00094" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710178760420</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1710178760420</updated>
-    </task>
-    <task id="LOCAL-00095" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710178800330</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1710178800330</updated>
-    </task>
-    <task id="LOCAL-00096" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710178853007</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1710178853007</updated>
-    </task>
-    <task id="LOCAL-00097" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710178893497</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1710178893497</updated>
-    </task>
-    <task id="LOCAL-00098" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710179031410</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1710179031410</updated>
-    </task>
-    <task id="LOCAL-00099" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710179040235</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1710179040235</updated>
     </task>
     <task id="LOCAL-00100" summary="Source code changes">
       <option name="closed" value="true" />
@@ -478,8 +431,67 @@
       <option name="project" value="LOCAL" />
       <updated>1710683244059</updated>
     </task>
-    <option name="localTasksCounter" value="143" />
+    <task id="LOCAL-00143" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710697659693</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1710697659693</updated>
+    </task>
+    <task id="LOCAL-00144" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710697712191</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1710697712191</updated>
+    </task>
+    <task id="LOCAL-00145" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710697791575</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1710697791576</updated>
+    </task>
+    <task id="LOCAL-00146" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710697838875</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1710697838875</updated>
+    </task>
+    <task id="LOCAL-00147" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710697870263</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1710697870263</updated>
+    </task>
+    <task id="LOCAL-00148" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710697910937</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1710697910937</updated>
+    </task>
+    <option name="localTasksCounter" value="149" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Source code changes" />
