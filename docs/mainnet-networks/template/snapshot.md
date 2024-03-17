@@ -64,7 +64,7 @@ cp [DAEMON_HOME]/data/priv_validator_state.json  [DAEMON_HOME]/priv_validator_st
 Decompress the snapshot to your database location. You database location will be something to the effect of `~/.celestia-app` depending on your node implemention.
 
 ```bash
-lz4 -c -d celestia_971453.tar.lz4  | tar -x -C $HOME/.celestia-app
+lz4 -c -d celestia_971453.tar.lz4  | tar -x -C [DAEMON_HOME]
 ```
 
 :::warning WARNING
@@ -100,7 +100,7 @@ sudo journalctl -fu [DAEMON_SERVICE] --no-hostname -o cat
 
 The above solution requires you to download the compressed file, uncompressed it and then delete the original file. This requires extra storage space on your server. You can run the following combo command to stream the snapshot into your database location. For advanced users only:
 ```bash
-curl -o - -L https://snapshots.polkachu.com/snapshots/celestia/celestia_971453.tar.lz4 | lz4 -c -d - | tar -x -C $HOME/.celestia-app
+curl -o - -L https://snapshots.polkachu.com/snapshots/celestia/celestia_971453.tar.lz4 | lz4 -c -d - | tar -x -C [DAEMON_HOME]
 ```
 
 :::
