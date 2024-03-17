@@ -4,10 +4,10 @@ title: Live peers*
 sidebar_position: 5
 ---
 
-# [CHAIN_NAME] Live Peers
+# CHAIN_NAME Live Peers
 ###### Chain ID: `[CHAIN_ID]` | Binary Version: `${DAEMON_VERSION}`
 
-## All Live Peers for [CHAIN_NAME]
+## All Live Peers for CHAIN_NAME
 Here is a list of       29 active peers as observed by [NODERS]TEAM in real-time. Add them to your `config.toml` if you have trouble finding peers.
 
 ```bash
@@ -24,7 +24,7 @@ sudo systemctl restart [DAEMON_SERVICE]
 sudo journalctl -fu [DAEMON_SERVICE] --no-hostname -o cat
 ```
 
-## Ours Peer for [CHAIN_NAME]
+## Ours Peer for CHAIN_NAME
 When you state-sync, you might also consider adding [NODERS]TEAM state-sync peer to your persistent_peers setting in `config.toml`.
 
 ```bash
