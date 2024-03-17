@@ -7,7 +7,9 @@ import SmallCard from "../../src/components/SmallCard"
 import Card from "../../src/components/Card"
 import CardLayout from "../../src/layouts/CardLayout"
 
+<div class="h1-with-icon icon-osmosis">
 # [CHAIN_NAME]
+</div>
 ###### Chain ID: `[CHAIN_ID]` | Binary Version: `[DAEMON_VERSION]`
 
 [CHAIN_DESCRIPTION]

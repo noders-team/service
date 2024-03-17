@@ -108,6 +108,17 @@ li > a.menu__link {
     padding-left: 30px;
 }
 
+/* Headers */
+.h1-with-icon {
+    background-repeat: no-repeat;
+    background-position: 10px 4px;
+    background-size: 24px 24px;
+}
+
+.h1-with-icon h1 {
+    padding-left: 30px;
+}
+
 /* Code Block */
 
 code .variable {
