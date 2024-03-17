@@ -7,7 +7,7 @@ sidebar_position: 3
 # [CHAIN_NAME] Node Snapshot
 ###### Chain ID: `[CHAIN_ID]` | Binary Version: `[DAEMON_VERSION]`
 
-## Our Osmosis Snapshot Server Setup
+## Our [CHAIN_NAME] Snapshot Server Setup
 
 | Block height | Size | Timestamp | Download                                                                                         |
 |--------------|------|-----------|--------------------------------------------------------------------------------------------------|
@@ -16,7 +16,7 @@ sidebar_position: 3
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
 
-The snapshot is designed for node opeartors to run an efficient node on Osmosis chain. To make the snapshot as small as possible while still viable as a validator, we use the following setting to save on the disk space. It might be helpful for you to sync with our snapshot periodically because Tendermint chain storage grows over time regardless of the pruning. Since we periodically state-sync our snapshot nodes, you might notice that sometimes the size of our snapshot is surprisingly small.
+The snapshot is designed for node opeartors to run an efficient node on [CHAIN_NAME] chain. To make the snapshot as small as possible while still viable as a validator, we use the following setting to save on the disk space. It might be helpful for you to sync with our snapshot periodically because Tendermint chain storage grows over time regardless of the pruning. Since we periodically state-sync our snapshot nodes, you might notice that sometimes the size of our snapshot is surprisingly small.
 
 ```bash title="app.toml"
 # Prune Type
@@ -32,7 +32,7 @@ pruning-interval = "10"
 indexer = "null"
 ```
 
-## How To Process Osmosis Snapshot
+## How To Process [CHAIN_NAME] Snapshot
 ```bash
 sudo apt update
 sudo apt install snapd -y
@@ -61,7 +61,7 @@ cp [DAEMON_HOME]/data/priv_validator_state.json  [DAEMON_HOME]/priv_validator_st
 [DAEMON_NAME] tendermint unsafe-reset-all --home [DAEMON_HOME] --keep-addr-book
 ```
 
-Decompress the snapshot to your database location. You database location will be something to the effect of `~/.celestia-app` depending on your node implemention.
+Decompress the snapshot to your database location. You database location will be something to the effect of `[DAEMON_HOME]` depending on your node implemention.
 
 ```bash
 lz4 -c -d celestia_971453.tar.lz4  | tar -x -C [DAEMON_HOME]
