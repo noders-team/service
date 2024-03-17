@@ -28,14 +28,14 @@ const sidebars = {
       label: 'Introduction',
       link: {
         type: 'doc',
-        id: 'getting-started/intro',
+        id: 'mainnet-networks/template',
       },
       collapsible: true,
       collapsed: false,
       items: [
         {
           type: 'doc',
-          id: 'getting-started/introduction-to-solana',
+          id: 'mainnet-networks/template',
           label: 'Introduction to Solana'
         },
       ]
