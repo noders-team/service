@@ -21,7 +21,6 @@ PEERS=[LIVE_PEERS_RANDOM]
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" [DAEMON_HOME]/config/config.toml
 
 sudo systemctl restart [DAEMON_SERVICE]
-
 sudo journalctl -fu [DAEMON_SERVICE] --no-hostname -o cat
 ```
 
@@ -29,5 +28,5 @@ sudo journalctl -fu [DAEMON_SERVICE] --no-hostname -o cat
 When you state-sync, you might also consider adding [NODERS]TEAM state-sync peer to your persistent_peers setting in `config.toml`.
 
 ```bash
-2e6fb93b12f9cdff3a3cb69db3c93713e69df8f7@65.108.204.225:12556
+[ENDPOINT_PEER]
 ```

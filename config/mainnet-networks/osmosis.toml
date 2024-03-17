@@ -1,5 +1,6 @@
 # Blockchain
 CHAIN_NAME="Osmosis"
+CHAIN_ID="sync"
 CHAIN_DESCRIPTION="Osmosis is a decentralized peer-to-peer blockchain that people can use to create liquidity and trade IBC enabled tokens. The Osmosis blockchain is made up of free, public, and open-source software."
 CHAIN_SYSTEM_NAME="osmosis"
 
@@ -7,12 +8,13 @@ CHAIN_SYSTEM_NAME="osmosis"
 DAEMON_NAME="osmosisd"
 DAEMON_VERSION="v23.0.0"
 DAEMON_SERVICE="osmosisd.service"
-DAEMON_HOME="~/.osmosisd"
+DAEMON_HOME="~\/.osmosisd"
 
 # Endpoints
-ENDPOINT_RPC=""
-ENDPOINT_API=""
-ENDPOINT_GRPCWEB=""
+ENDPOINT_RPC="https://osmosis.rpc.mainnet.noders.team"
+ENDPOINT_API="https://osmosis.api.mainnet.noders.team"
+ENDPOINT_GRPCWEB="https://osmosis.grpc.mainnet.noders.team"
+ENDPOINT_PEER="sync"
 ENDPOINT_GRPC=""
 
 # Social

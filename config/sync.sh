@@ -9,6 +9,7 @@ function readBlockchainConfig {
   CHAIN_NAME=$(grep -oE '^CHAIN_NAME=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   CHAIN_DESCRIPTION=$(grep -oE '^CHAIN_DESCRIPTION=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   CHAIN_SYSTEM_NAME=$(grep -oE '^CHAIN_SYSTEM_NAME=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  CHAIN_ID=""
 
   # Binary
   DAEMON_NAME=$(grep -oE '^DAEMON_NAME=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
@@ -36,8 +37,19 @@ function readBlockchainConfig {
   UPDATE_LIVE_PEERS=$(grep -oE '^UPDATE_LIVE_PEERS=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
 }
 
+function enrichBlockchainConfig {
+  # enrich chain id
+  CHAIN_ID=$(curl -s "${ENDPOINT_API}/cosmos/base/tendermint/v1beta1/node_info" | jq -r '.default_node_info.network')
+  echo "${CHAIN_ID}"
 
+  # enrich endpoint peer
+  peer_id=$(curl -s "${ENDPOINT_API}/cosmos/base/tendermint/v1beta1/node_info" | jq -r '.default_node_info.default_node_id')
+  peer_address=$(echo ${ENDPOINT_RPC} | sed -e "s/https\:\/\///")
+  peer_addr=$(curl -s "${ENDPOINT_API}/cosmos/base/tendermint/v1beta1/node_info" | jq -r '.default_node_info.listen_addr' | sed -e "s/tcp\:\/\/0\.0\.0\.0\://")
+  ENDPOINT_PEER="${peer_id}@${peer_address}:${peer_addr}"
 
+  echo ${ENDPOINT_PEER}
+}
 
 
 function updateLivePeers {
@@ -60,7 +72,11 @@ function updateLivePeers {
     echo "${CHAIN_PAGE_PATH}"
     cp "../docs/mainnet-networks/template/live-peers.md" "${CHAIN_PAGE_PATH}"
     perl -pi -e "s/\[CHAIN_NAME\]/$CHAIN_NAME/g" "${CHAIN_PAGE_PATH}"
-    #perl -pi -e "s/\[DAEMON_HOME\]/$DAEMON_HOME/g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s/\[CHAIN_ID\]/$CHAIN_ID/g" "${CHAIN_PAGE_PATH}"
+
+    perl -pi -e "s/\[DAEMON_NAME\]/$DAEMON_NAME/g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s/\[DAEMON_VERSION\]/$DAEMON_VERSION/g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s/\[DAEMON_HOME\]/$DAEMON_HOME/g" "${CHAIN_PAGE_PATH}"
     perl -pi -e "s/\[DAEMON_SERVICE\]/$DAEMON_SERVICE/g" "${CHAIN_PAGE_PATH}"
 
     perl -pi -e "s/\[LIVE_PEERS_COUNT\]/$LIVE_PEERS_COUNT/g" "${CHAIN_PAGE_PATH}"
@@ -77,6 +93,8 @@ for config_file in "mainnet-networks"/*
 do
   echo "${config_file}"
   readBlockchainConfig "${config_file}"
+  enrichBlockchainConfig
+
   updateLivePeers
 
   #echo ${LIVE_PEERS_RANDOM}

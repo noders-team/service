@@ -5,7 +5,7 @@ sidebar_position: 5
 ---
 
 # Osmosis Live Peers
-###### Chain ID: `[CHAIN_ID]` | Binary Version: `[DAEMON_VERSION]`
+###### Chain ID: `osmosis-1` | Binary Version: `v23.0.0`
 
 ## All Live Peers for Osmosis
 Here is a list of       29 active peers as observed by [NODERS]TEAM in real-time. Add them to your `config.toml` if you have trouble finding peers.
@@ -17,11 +17,10 @@ bb14430cd32725447f62c0436454b31f4fdea0b8.109.118.148:28656,27740d856eb1eab458027
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=89b6c99ecd215cbd7eeac7fe9636295600198621.9.158.219:41056,ce7f7453e2b306bc670057e9055b142af2424b53.108.12.253:26656,bb14430cd32725447f62c0436454b31f4fdea0b8.109.118.148:28656,e46f865ad2a0c7f87667d2a08f2083766b875c71.108.197.163:30656,3720900feebf46ec44c3c2c377e63e6d9c4ab3c6.153.165.85:26656
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" [DAEMON_HOME]/config/config.toml
+PEERS=b09bf90af67e47827dc01e369d0f381979b06a54.34.212.220:26656,37c195e518c001099f956202d34af029b04f2c97.109.20.216:26656,ecb1211762cc8c1dbc620a95d9a2f7373983d012.109.144.236:27656,f896016cbf494a8da970de2707b0f3c982c760a2.92.91.142:26656,89b6c99ecd215cbd7eeac7fe9636295600198621.9.158.219:41056
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.osmosisd/config/config.toml
 
 sudo systemctl restart osmosisd.service
-
 sudo journalctl -fu osmosisd.service --no-hostname -o cat
 ```
 
@@ -29,5 +28,5 @@ sudo journalctl -fu osmosisd.service --no-hostname -o cat
 When you state-sync, you might also consider adding [NODERS]TEAM state-sync peer to your persistent_peers setting in `config.toml`.
 
 ```bash
-2e6fb93b12f9cdff3a3cb69db3c93713e69df8f7@65.108.204.225:12556
+[ENDPOINT_PEER]
 ```
