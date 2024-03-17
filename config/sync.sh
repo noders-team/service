@@ -57,6 +57,7 @@ function updateLivePeers {
 
     # Update page
     cp "../docs/mainnet-networks/template/live-peers.md" "../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/live-peers.md"
+    perl -pi -e "s/\[CHAIN_NAME\]/CHAIN_NAME/g" "../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/live-peers.md"
     perl -pi -e "s/\[LIVE_PEERS_COUNT\]/$LIVE_PEERS_COUNT/g" "../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/live-peers.md"
     #sed -e "s/LIVE_PEERS_COUNT/${LIVE_PEERS_COUNT}/g" "../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/live-peers.md"
 
