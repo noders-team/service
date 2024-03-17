@@ -7,7 +7,7 @@ sidebar_position: 5
 <div class="h1-with-icon icon-osmosis">
 # Osmosis Live Peers
 </div>
-###### Chain ID: `osmosis-1` | Binary Version: `v23.0.0`
+###### Chain ID: `osmosis-1` | Current Node Version: `v23.0.0`
 
 ## All Live Peers for Osmosis
 Here is a list of       29 active peers as observed by [NODERS]TEAM in real-time. Add them to your `config.toml` if you have trouble finding peers.
@@ -19,7 +19,7 @@ bb14430cd32725447f62c0436454b31f4fdea0b8.109.118.148:28656,27740d856eb1eab458027
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=ee43bc85f762aca4ef30d76597d2b861200f1958.217.143.167:22656,7d850e9300a7754e5e63dd0feed20505d6831bb6.109.117.113:27456,3720900feebf46ec44c3c2c377e63e6d9c4ab3c6.153.165.85:26656,89b6c99ecd215cbd7eeac7fe9636295600198621.9.158.219:41056,37c195e518c001099f956202d34af029b04f2c97.109.20.216:26656
+PEERS=3b1c206510bd1675d06c0d8a367da67776b597e6.109.50.183:26656,dc0bc80ba2e2d579a9e460b602ce9f50d869a014.115.25.178:2000,e46f865ad2a0c7f87667d2a08f2083766b875c71.108.197.163:30656,57ab9cf623124bdf55bab1261c7feea780957a6c.21.113.10:61456,2d7b93da6155a20298c3ceb952cee1fd7a9cd2d0.144.51.169:36656
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.osmosisd/config/config.toml
 
 sudo systemctl restart osmosisd.service
