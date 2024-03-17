@@ -98,7 +98,7 @@ li > a.menu__link {
   justify-content: flex-start;
 }
 
-.item1 a::before {
+.item1 {
   padding-right: 0.5rem;
 }
 
