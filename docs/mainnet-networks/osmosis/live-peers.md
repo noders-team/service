@@ -4,7 +4,9 @@ title: Live peers*
 sidebar_position: 5
 ---
 
+<div class="h1-with-icon icon-osmosis">
 # Osmosis Live Peers
+</div>
 ###### Chain ID: `osmosis-1` | Binary Version: `v23.0.0`
 
 ## All Live Peers for Osmosis

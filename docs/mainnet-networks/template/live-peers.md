@@ -4,8 +4,10 @@ title: Live peers*
 sidebar_position: 5
 ---
 
+<div class="h1-with-icon icon-osmosis">
 # [CHAIN_NAME] Live Peers
-###### Chain ID: `[CHAIN_ID]` | Binary Version: `[DAEMON_VERSION]`
+</div>
+###### Chain ID: `[CHAIN_ID]` | Current Node Version: `[DAEMON_VERSION]`
 
 ## All Live Peers for [CHAIN_NAME]
 Here is a list of [LIVE_PEERS_COUNT] active peers as observed by [NODERS]TEAM in real-time. Add them to your `config.toml` if you have trouble finding peers.

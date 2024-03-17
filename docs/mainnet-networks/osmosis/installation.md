@@ -4,7 +4,9 @@ title: Installation Guide
 sidebar_position: 1
 ---
 
+<div class="h1-with-icon icon-osmosis">
 # Osmosis Node Installation Guide
+</div>
 ###### Chain ID: `osmosis-1` | Current Node Version: `v23.0.0`
 
 ## Install dependencies

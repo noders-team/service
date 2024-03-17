@@ -4,7 +4,9 @@ title: Upgrade
 sidebar_position: 2
 ---
 
+<div class="h1-with-icon icon-osmosis">
 # Upgrade
+</div>
 ###### Chain ID: `osmosis-1` | Current Node Version: `v23.0.0`
 
 ```bash

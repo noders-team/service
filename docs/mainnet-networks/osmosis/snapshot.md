@@ -4,7 +4,9 @@ title: Snapshot*
 sidebar_position: 3
 ---
 
+<div class="h1-with-icon icon-osmosis">
 # Osmosis Node Snapshot
+</div>
 ###### Chain ID: `osmosis-1` | Binary Version: `v23.0.0`
 
 ## Our Osmosis Snapshot Server Setup
