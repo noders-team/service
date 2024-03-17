@@ -98,8 +98,10 @@ li > a.menu__link {
   justify-content: flex-start;
 }
 
-.item1::before {
-  padding-right: 0.5rem;
+.item1 {
+    background-image: url('https://services.noders.team/img/osmosis.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 10px;
 }
 
 /* Code Block */
