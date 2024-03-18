@@ -51,7 +51,7 @@ function HomeCallToAction() {
 function SolanaMobileStackLogo() {
   return (
     <div className={styles.logoContainer}>
-      <img src="img/solana-mobile-stack-logo-200x200.png" alt="Solana Mobile Stack" />
+      <img src="img/logo.png" alt="[NODERS]TEAM" />
     </div>
   );
 }
@@ -61,8 +61,8 @@ function HeaderHero() {
     <Section background="dark" className={styles.HeaderHero}>
       <SolanaMobileStackLogo />
       <>
-        <h1 className={styles.title}>Solana Mobile Stack</h1>
-        <p className={styles.tagline}>Build for the Web3 mobile era.</p>
+        <h1 className={styles.title}>[NODERS]TEAM Services</h1>
+        <p className={styles.tagline}>Trusted blockchain validator and web3 developer team</p>
         <div className={styles.buttons}>
           <HomeCallToAction />
         </div>
