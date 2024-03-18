@@ -34,15 +34,15 @@ function HomeCallToAction() {
     <>
       <ActionButton
         type="primary"
-        href={useBaseUrl('getting-started/intro')}
+        href={useBaseUrl('mainnet-networks/osmosis')}
         target="_self">
-        Get started
+        Mainnet Networks
       </ActionButton>
       <ActionButton
         type="secondary"
-        href={useBaseUrl('getting-started/overview')}
+        href={useBaseUrl('mainnet-networks/osmosis')}
         target="_self">
-        Learn the stack
+        Testnet Networks
       </ActionButton>
     </>
   );
@@ -51,7 +51,7 @@ function HomeCallToAction() {
 function SolanaMobileStackLogo() {
   return (
     <div className={styles.logoContainer}>
-      <img src="img/logo.png" alt="[NODERS]TEAM" />
+      <img src="img/logo.svg" alt="[NODERS]TEAM" />
     </div>
   );
 }
@@ -61,7 +61,7 @@ function HeaderHero() {
     <Section background="dark" className={styles.HeaderHero}>
       <SolanaMobileStackLogo />
       <>
-        <h1 className={styles.title}>[NODERS]TEAM Services</h1>
+        <h1 className={styles.title}>[NODERS]TEAM SERVICES</h1>
         <p className={styles.tagline}>Trusted blockchain validator and web3 developer team</p>
         <div className={styles.buttons}>
           <HomeCallToAction />
