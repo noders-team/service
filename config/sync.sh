@@ -155,8 +155,8 @@ function updateMain {
     if [ -n "${SOCIAL_DISCORD}" ] ; then
       SOCIAL_DISCORD_BLOCK="<SmallCard to=\"${SOCIAL_DISCORD}\" header={{label: \"Discord\", translateId: \"social-telegram\"}} iconPath=\"img/discord-icon.svg\"/>"
     fi
-    if [ -n "${SOCIAL_X_BLOCK}" ] ; then
-      SOCIAL_X_BLOCK="<SmallCard to=\"${SOCIAL_X_BLOCK}\" header={{label: \"X\", translateId: \"social-telegram\"}} iconPath=\"img/x-icon.svg\"/>"
+    if [ -n "${SOCIAL_X}" ] ; then
+      SOCIAL_X_BLOCK="<SmallCard to=\"${SOCIAL_X}\" header={{label: \"X\", translateId: \"social-telegram\"}} iconPath=\"img/x-icon.svg\"/>"
     fi
     if [ -n "${SOCIAL_TELEGRAM}" ] ; then
       SOCIAL_TELEGRAM_BLOCK="<SmallCard to=\"${SOCIAL_TELEGRAM}\" header={{label: \"Telegram\", translateId: \"social-telegram\"}} iconPath=\"img/telegram-icon.svg\"/>"

@@ -58,6 +58,6 @@ See the API for the various client libraries implemented for.
     <SmallCard to="#" header={{label: "Website", translateId: "social-telegram"}} iconPath="img/website-icon.svg"/>
     <SmallCard to="https://github.com/osmosis-labs/osmosis" header={{label: "GitHub", translateId: "social-telegram"}} iconPath="img/github-icon.svg"/>
     <SmallCard to="#" header={{label: "Discord", translateId: "social-telegram"}} iconPath="img/discord-icon.svg"/>
-    
+    <SmallCard to="#" header={{label: "X", translateId: "social-telegram"}} iconPath="img/x-icon.svg"/>
     <SmallCard to="https://t.me/osmosiszone" header={{label: "Telegram", translateId: "social-telegram"}} iconPath="img/telegram-icon.svg"/>
 </CardLayout>

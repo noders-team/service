@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="609d9c4d-607e-4257-a03b-37575134f343" name="Changes" comment="Source code changes">
-      <change beforePath="$PROJECT_DIR$/config/sync.sh" beforeDir="false" afterPath="$PROJECT_DIR$/config/sync.sh" afterDir="false" />
-    </list>
+    <list default="true" id="609d9c4d-607e-4257-a03b-37575134f343" name="Changes" comment="Source code changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,22 +87,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710087909869</updated>
-    </task>
-    <task id="LOCAL-00161" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710705920580</created>
-      <option name="number" value="00161" />
-      <option name="presentableId" value="LOCAL-00161" />
-      <option name="project" value="LOCAL" />
-      <updated>1710705920580</updated>
-    </task>
-    <task id="LOCAL-00162" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710705947792</created>
-      <option name="number" value="00162" />
-      <option name="presentableId" value="LOCAL-00162" />
-      <option name="project" value="LOCAL" />
-      <updated>1710705947792</updated>
     </task>
     <task id="LOCAL-00163" summary="Source code changes">
       <option name="closed" value="true" />
@@ -482,7 +464,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710794387907</updated>
     </task>
-    <option name="localTasksCounter" value="210" />
+    <task id="LOCAL-00210" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710794766004</created>
+      <option name="number" value="00210" />
+      <option name="presentableId" value="LOCAL-00210" />
+      <option name="project" value="LOCAL" />
+      <updated>1710794766004</updated>
+    </task>
+    <task id="LOCAL-00211" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710794806503</created>
+      <option name="number" value="00211" />
+      <option name="presentableId" value="LOCAL-00211" />
+      <option name="project" value="LOCAL" />
+      <updated>1710794806503</updated>
+    </task>
+    <option name="localTasksCounter" value="212" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
