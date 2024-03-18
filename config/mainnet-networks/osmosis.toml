@@ -31,6 +31,8 @@ DOWNLOAD_URL="https://snapshots.mainnet.noders.team/osmosis/"
 GITHUB_FOLDER_NAME="auto"
 
 # Updates
+UPDATE_MAIN=true
+UPDATE_CATEGORY=true
 UPDATE_UPGRADE=true
 UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true

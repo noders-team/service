@@ -1,6 +1,6 @@
 ---
 hide_table_of_contents: false
-title: State sync
+title: State sync*
 sidebar_position: 4
 ---
 

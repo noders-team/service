@@ -1,18 +1,16 @@
 ---
 hide_table_of_contents: false
-title: Osmosis
+title: template
 ---
 
 import SmallCard from "../../src/components/SmallCard"
 import Card from "../../src/components/Card"
 import CardLayout from "../../src/layouts/CardLayout"
 
-<div class="h1-with-icon icon-osmosis">
-# [CHAIN_NAME]
-</div>
-###### Chain ID: `[CHAIN_ID]` | Binary Version: `[DAEMON_VERSION]`
+# Osmosis
+###### Chain ID: `osmosis-1` | Current Node Version: `v23.0.0`
 
-[CHAIN_DESCRIPTION]
+Osmosis is a decentralized peer-to-peer blockchain that people can use to create liquidity and trade IBC enabled tokens. The Osmosis blockchain is made up of free, public, and open-source software.
 
 ## Public endpoints 
 

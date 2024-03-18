@@ -7,8 +7,8 @@
 function readBlockchainConfig {
   # Blockchain
   CHAIN_NAME=$(grep -oE '^CHAIN_NAME=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
-  CHAIN_DESCRIPTION=$(grep -oE '^CHAIN_DESCRIPTION=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   CHAIN_SYSTEM_NAME=$(grep -oE '^CHAIN_SYSTEM_NAME=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  CHAIN_DESCRIPTION=$(grep -oE '^CHAIN_DESCRIPTION=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   CHAIN_ID=$(grep -oE '^CHAIN_ID=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   CHAIN_DENOM=$(grep -oE '^CHAIN_DENOM=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   CHAIN_FEES=$(grep -oE '^CHAIN_FEES=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
@@ -38,6 +38,8 @@ function readBlockchainConfig {
   GITHUB_FOLDER_NAME=$(grep -oE '^GITHUB_FOLDER_NAME=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
 
   # Updates
+  UPDATE_MAIN=$(grep -oE '^UPDATE_MAIN=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  UPDATE_CATEGORY=$(grep -oE '^UPDATE_CATEGORY=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   UPDATE_UPGRADE=$(grep -oE '^UPDATE_UPGRADE=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   UPDATE_SNAPSHOT=$(grep -oE '^UPDATE_SNAPSHOT=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   UPDATE_STATESYNC=$(grep -oE '^UPDATE_STATESYNC=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
@@ -105,9 +107,29 @@ function replacePageVariables {
 #                                                                          UPDATE PAGES                                                                             #
 #####################################################################################################################################################################
 
+function updateMain {
+  if [ "$UPDATE_MAIN" = true ] ; then
+    CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}.md"
+    cp "../docs/mainnet-networks/template.md" "${CHAIN_PAGE_PATH}"
+    echo "${CHAIN_PAGE_PATH}"
+
+    replacePageVariables "${CHAIN_PAGE_PATH}"
+  fi
+}
+
+function updateCategory {
+  if [ "$UPDATE_CATEGORY" = true ] ; then
+    mkdir -p "../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}"
+    CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/_category_.json"
+    cp "../docs/mainnet-networks/template/_category_.json" "${CHAIN_PAGE_PATH}"
+    echo "${CHAIN_PAGE_PATH}"
+
+    replacePageVariables "${CHAIN_PAGE_PATH}"
+  fi
+}
+
 function updateUpgrade {
   if [ "$UPDATE_UPGRADE" = true ] ; then
-    # Update page
     CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/upgrade.md"
     cp "../docs/mainnet-networks/template/upgrade.md" "${CHAIN_PAGE_PATH}"
     echo "${CHAIN_PAGE_PATH}"
@@ -118,7 +140,6 @@ function updateUpgrade {
 
 function updateSnapshot {
   if [ "$UPDATE_SNAPSHOT" = true ] ; then
-    # Update page
     CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/snapshot.md"
     cp "../docs/mainnet-networks/template/snapshot.md" "${CHAIN_PAGE_PATH}"
     echo "${CHAIN_PAGE_PATH}"
@@ -129,7 +150,6 @@ function updateSnapshot {
 
 function updateStatesync {
   if [ "$UPDATE_STATESYNC" = true ] ; then
-    # Update page
     CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/statesync.md"
     cp "../docs/mainnet-networks/template/statesync.md" "${CHAIN_PAGE_PATH}"
     echo "${CHAIN_PAGE_PATH}"
@@ -153,7 +173,6 @@ function updateLivePeers {
     LIVE_PEERS_ALL=$(echo "${LIVE_PEERS_RAW}" | paste -sd "," -)
     LIVE_PEERS_RANDOM=$(echo "${LIVE_PEERS_RAW}" | sort --random-sort | head -n 5 | paste -sd "," -)
 
-    # Update page
     CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/live-peers.md"
     cp "../docs/mainnet-networks/template/live-peers.md" "${CHAIN_PAGE_PATH}"
     echo "${CHAIN_PAGE_PATH}"
@@ -164,7 +183,6 @@ function updateLivePeers {
 
 function updateCLICheatsheet {
   if [ "$UPDATE_CLI_CHEATSHEET" = true ] ; then
-    # Update page
     CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/cli-cheatsheet.md"
     cp "../docs/mainnet-networks/template/cli-cheatsheet.md" "${CHAIN_PAGE_PATH}"
     echo "${CHAIN_PAGE_PATH}"
@@ -182,6 +200,8 @@ do
   readBlockchainConfig "${config_file}"
   enrichBlockchainConfig
 
+  updateMain
+  updateCategory
   updateUpgrade
   updateSnapshot
   updateStatesync

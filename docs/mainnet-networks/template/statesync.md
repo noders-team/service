@@ -1,13 +1,13 @@
 ---
 hide_table_of_contents: false
-title: State sync
+title: State sync*
 sidebar_position: 4
 ---
 
-<div class="h1-with-icon icon-osmosis">
+<div class="h1-with-icon icon-[CHAIN_SYSTEM_NAME]">
 # State sync
 </div>
-###### Chain ID: `osmosis-1` | Current Node Version: `v23.0.0`
+###### Chain ID: `[CHAIN_ID]` | Current Node Version: `[DAEMON_VERSION]`
 
 ```bash
 SNAP_RPC=[ENDPOINT_RPC]:443 && \
