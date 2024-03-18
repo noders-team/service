@@ -20,10 +20,10 @@ ENDPOINT_GRPC=""
 ENDPOINT_PEER="auto"
 
 # Social
-SOCIAL_WEBSITE=""
+SOCIAL_WEBSITE="#"
 SOCIAL_GITHUB="https://github.com/osmosis-labs/osmosis"
-SOCIAL_DISCORD=""
-SOCIAL_X=""
+SOCIAL_DISCORD="#"
+SOCIAL_X="#"
 SOCIAL_TELEGRAM="https://t.me/osmosiszone"
 
 # Other
