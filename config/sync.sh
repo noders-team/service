@@ -46,6 +46,9 @@ function readBlockchainConfig {
   # Other
   DOWNLOAD_URL=$(grep -oE '^DOWNLOAD_URL=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   GITHUB_FOLDER_NAME=$(grep -oE '^GITHUB_FOLDER_NAME=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  LIVE_PEERS_COUNT=""
+  LIVE_PEERS_ALL=""
+  LIVE_PEERS_RANDOM=""
 
   # Updates
   UPDATE_MAIN=$(grep -oE '^UPDATE_MAIN=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
@@ -120,6 +123,9 @@ function replacePageVariables {
   # Other
   sed -i '' "s|\[DOWNLOAD_URL\]|${DOWNLOAD_URL}|g" $1
   sed -i '' "s|\[GITHUB_FOLDER_NAME\]|${GITHUB_FOLDER_NAME}|g" $1
+  sed -i '' "s|\[LIVE_PEERS_COUNT\]|${LIVE_PEERS_COUNT}|g" $1
+  sed -i '' "s|\[LIVE_PEERS_ALL\]|${LIVE_PEERS_ALL}|g" $1
+  sed -i '' "s|\[LIVE_PEERS_RANDOM\]|${LIVE_PEERS_RANDOM}|g" $1
 
 }
 
@@ -209,9 +215,6 @@ function updateStatesync {
 
 function updateLivePeers {
   # Live peers
-  LIVE_PEERS_COUNT=""
-  LIVE_PEERS_ALL=""
-  LIVE_PEERS_RANDOM=""
 
   if [ "$UPDATE_LIVE_PEERS" = true ] ; then
     # Gathering live peers

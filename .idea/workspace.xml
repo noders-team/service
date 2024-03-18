@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="609d9c4d-607e-4257-a03b-37575134f343" name="Changes" comment="Source code changes">
-      <change afterPath="$PROJECT_DIR$/static/img/github-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/x-icon.svg" afterDir="false" />
-    </list>
+    <list default="true" id="609d9c4d-607e-4257-a03b-37575134f343" name="Changes" comment="Source code changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,14 +87,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710087909869</updated>
-    </task>
-    <task id="LOCAL-00164" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710706052851</created>
-      <option name="number" value="00164" />
-      <option name="presentableId" value="LOCAL-00164" />
-      <option name="project" value="LOCAL" />
-      <updated>1710706052851</updated>
     </task>
     <task id="LOCAL-00165" summary="Source code changes">
       <option name="closed" value="true" />
@@ -483,7 +472,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710794877199</updated>
     </task>
-    <option name="localTasksCounter" value="213" />
+    <task id="LOCAL-00213" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710795342352</created>
+      <option name="number" value="00213" />
+      <option name="presentableId" value="LOCAL-00213" />
+      <option name="project" value="LOCAL" />
+      <updated>1710795342352</updated>
+    </task>
+    <option name="localTasksCounter" value="214" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
