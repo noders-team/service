@@ -10,12 +10,12 @@ CHAIN_FEES="3000"
 DAEMON_NAME="osmosisd"
 DAEMON_VERSION="v23.0.0"
 DAEMON_SERVICE="osmosisd.service"
-DAEMON_HOME="~/.osmosisd"
+DAEMON_HOME="~\/.osmosisd"
 
 # Endpoints
-ENDPOINT_RPC="https://osmosis.rpc.mainnet.noders.team"
-ENDPOINT_API="https://osmosis.api.mainnet.noders.team"
-ENDPOINT_GRPCWEB="https://osmosis.grpc.mainnet.noders.team"
+ENDPOINT_RPC="https:\/\/osmosis.rpc.mainnet.noders.team"
+ENDPOINT_API="https:\/\/osmosis.api.mainnet.noders.team"
+ENDPOINT_GRPCWEB="https:\/\/osmosis.grpc.mainnet.noders.team"
 ENDPOINT_GRPC=""
 ENDPOINT_PEER="auto"
 
