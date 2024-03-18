@@ -138,7 +138,7 @@ function updateMain {
 
     # Social
     if [ -n "${SOCIAL_TELEGRAM}" ] ; then
-      SOCIAL_TELEGRAM_BLOCK="<SmallCard to=\"${SOCIAL_TELEGRAM}\" header={{label: \"Telegram\", translateId: \"social-telegram\"}} iconPath="img/typescript-icon.png"/>"
+      SOCIAL_TELEGRAM_BLOCK="<SmallCard to=\"${SOCIAL_TELEGRAM}\" header={{label: \"Telegram\", translateId: \"social-telegram\"}} iconPath=\"img/typescript-icon.png\"/>"
     fi
 
     replacePageVariables "${CHAIN_PAGE_PATH}"
