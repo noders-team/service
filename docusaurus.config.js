@@ -10,7 +10,7 @@ const config = {
   favicon: 'img/favicon.svg',
 
   // Set the production url of your site here
-  url: 'https://services.noders.team',
+  url: 'https://noders.services',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -39,11 +39,6 @@ const config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
-        },
-        blog: {
-          blogTitle: 'Solana Mobile Blog',
-          blogDescription: 'A curated feed of thought pieces, articles, and writings from Solana Mobile',
-          postsPerPage: 'ALL',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
