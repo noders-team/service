@@ -17,6 +17,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 ## Public endpoints 
 
 <CardLayout autoFitEnabled={true}>
+    [ENDPOINT_RPC_BLOCK]
     <SmallCard
         to="#"
         header={{

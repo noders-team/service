@@ -26,6 +26,8 @@ function readBlockchainConfig {
   ENDPOINT_GRPC=$(grep -oE '^ENDPOINT_GRPC=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   ENDPOINT_PEER=$(grep -oE '^ENDPOINT_PEER=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
 
+  ENDPOINT_RPC_BLOCK=""
+
   # Social
   SOCIAL_WEBSITE=$(grep -oE '^SOCIAL_WEBSITE=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   SOCIAL_GITHUB=$(grep -oE '^SOCIAL_GITHUB=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
@@ -90,6 +92,8 @@ function replacePageVariables {
   sed -i '' "s|\[ENDPOINT_GRPC\]|${ENDPOINT_GRPC}|g" $1
   sed -i '' "s|\[ENDPOINT_PEER\]|${ENDPOINT_PEER}|g" $1
 
+  sed -i '' "s|\[ENDPOINT_RPC_BLOCK\]|${ENDPOINT_RPC_BLOCK}|g" $1
+
   # Social
   sed -i '' "s|\[SOCIAL_WEBSITE\]|${SOCIAL_WEBSITE}|g" $1
   sed -i '' "s|\[SOCIAL_GITHUB\]|${SOCIAL_GITHUB}|g" $1
@@ -112,6 +116,11 @@ function updateMain {
     CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}.md"
     cp "../docs/mainnet-networks/template.md" "${CHAIN_PAGE_PATH}"
     echo "${CHAIN_PAGE_PATH}"
+
+    # Endpoints
+    if [ -n "${ENDPOINT_RPC}" ] ; then
+      ENDPOINT_RPC_BLOCK="<SmallCard to=\"${ENDPOINT_RPC}\" header={{label: \"RPC Endpoint\", translateId: \"rpc-endpoint\"}}/>"
+    fi
 
     replacePageVariables "${CHAIN_PAGE_PATH}"
   fi
