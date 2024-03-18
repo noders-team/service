@@ -12,16 +12,16 @@ sidebar_position: 2
 ```bash
 # Clone project repository
 cd $HOME
-rm -rf quicksilver
-git clone https://github.com/ingenuity-build/quicksilver.git
-cd quicksilver
-git checkout v1.4.7
+rm -rf osmosis
+git clone https://github.com/osmosis-labs/osmosis.git
+cd osmosis
+git checkout v23.0.0
 
 # Build binaries
 make build
 
 # Prepare binaries for Cosmovisor
-mkdir -p $HOME/.quicksilverd/cosmovisor/upgrades/v1.4.7/bin
-mv build/quicksilverd $HOME/.quicksilverd/cosmovisor/upgrades/v1.4.7/bin/
+mkdir -p ~/.osmosisd/cosmovisor/upgrades/v23.0.0/bin
+mv build/osmosisd ~/.osmosisd/cosmovisor/upgrades/v23.0.0/bin/
 rm -rf build
 ```

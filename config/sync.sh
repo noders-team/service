@@ -33,28 +33,36 @@ function readBlockchainConfig {
   SOCIAL_X=$(grep -oE '^SOCIAL_X=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   SOCIAL_TELEGRAM=$(grep -oE '^SOCIAL_TELEGRAM=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
 
-  # Download
+  # Other
   DOWNLOAD_URL=$(grep -oE '^DOWNLOAD_URL=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  GITHUB_FOLDER_NAME=$(grep -oE '^GITHUB_FOLDER_NAME=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
 
   # Updates
+  UPDATE_UPGRADE=$(grep -oE '^UPDATE_UPGRADE=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   UPDATE_LIVE_PEERS=$(grep -oE '^UPDATE_LIVE_PEERS=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   UPDATE_SNAPSHOT=$(grep -oE '^UPDATE_SNAPSHOT=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   UPDATE_CLI_CHEATSHEET=$(grep -oE '^UPDATE_CLI_CHEATSHEET=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
 }
 
 function enrichBlockchainConfig {
-  # enrich chain id
+  # Enrich chain id
   if [ "${CHAIN_ID}" == "auto" ]; then
     CHAIN_ID=$(curl -s "${ENDPOINT_API}/cosmos/base/tendermint/v1beta1/node_info" | jq -r '.default_node_info.network')
   fi
 
-  # enrich endpoint peer
+  # Enrich endpoint peer
   if [ "${ENDPOINT_PEER}" == "auto" ]; then
     peer_id=$(curl -s "${ENDPOINT_API}/cosmos/base/tendermint/v1beta1/node_info" | jq -r '.default_node_info.default_node_id')
     peer_address=$(echo ${ENDPOINT_RPC} | sed -e "s/https\:\/\///")
     peer_addr=$(curl -s "${ENDPOINT_API}/cosmos/base/tendermint/v1beta1/node_info" | jq -r '.default_node_info.listen_addr' | sed -e "s/tcp\:\/\/0\.0\.0\.0\://")
     ENDPOINT_PEER="${peer_id}@${peer_address}:${peer_addr}"
   fi
+
+  # Enrich github
+  if [ "${GITHUB_FOLDER_NAME}" == "auto" ]; then
+    GITHUB_FOLDER_NAME=$(echo "${SOCIAL_GITHUB##*/}")
+  fi
+
 }
 
 function replacePageVariables {
@@ -86,18 +94,26 @@ function replacePageVariables {
   sed -i '' "s|\[SOCIAL_X\]|${SOCIAL_X}|g" $1
   sed -i '' "s|\[SOCIAL_TELEGRAM\]|${SOCIAL_TELEGRAM}|g" $1
 
-  # Download
+  # Other
   sed -i '' "s|\[DOWNLOAD_URL\]|${DOWNLOAD_URL}|g" $1
+  sed -i '' "s|\[GITHUB_FOLDER_NAME\]|${GITHUB_FOLDER_NAME}|g" $1
 
-  # Updates
-  sed -i '' "s|\[UPDATE_SNAPSHOT\]|${UPDATE_SNAPSHOT}|g" $1
-  sed -i '' "s|\[UPDATE_LIVE_PEERS\]|${UPDATE_LIVE_PEERS}|g" $1
-  sed -i '' "s|\[UPDATE_CLI_CHEATSHEET\]|${UPDATE_CLI_CHEATSHEET}|g" $1
 }
 
 #####################################################################################################################################################################
 #                                                                          UPDATE PAGES                                                                             #
 #####################################################################################################################################################################
+
+function updateUpgrade {
+  if [ "$UPDATE_UPGRADE" = true ] ; then
+    # Update page
+    CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/upgrade.md"
+    cp "../docs/mainnet-networks/template/upgrade.md" "${CHAIN_PAGE_PATH}"
+    echo "${CHAIN_PAGE_PATH}"
+
+    replacePageVariables "${CHAIN_PAGE_PATH}"
+  fi
+}
 
 function updateLivePeers {
   # Live peers
@@ -159,6 +175,7 @@ do
   readBlockchainConfig "${config_file}"
   enrichBlockchainConfig
 
+  updateUpgrade
   updateSnapshot
   updateLivePeers
   updateCLICheatsheet

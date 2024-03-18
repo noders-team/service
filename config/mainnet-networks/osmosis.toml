@@ -21,15 +21,17 @@ ENDPOINT_PEER="auto"
 
 # Social
 SOCIAL_WEBSITE=""
-SOCIAL_GITHUB=""
+SOCIAL_GITHUB="https://github.com/osmosis-labs/osmosis"
 SOCIAL_DISCORD=""
 SOCIAL_X=""
 SOCIAL_TELEGRAM=""
 
-# Download
+# Other
 DOWNLOAD_URL="https://snapshots.mainnet.noders.team/osmosis/"
+GITHUB_FOLDER_NAME="auto"
 
 # Updates
+UPDATE_UPGRADE=true
 UPDATE_SNAPSHOT=true
 UPDATE_LIVE_PEERS=true
 UPDATE_CLI_CHEATSHEET=true
