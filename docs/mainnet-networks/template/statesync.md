@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop [DAEMON_SERVICE] && [DAEMON_NAME] tendermint unsafe-reset-all --home [DAEMON_HOME] --keep-addr-book
 ```
 ```bash
-peers="e8d03dd64cdd5658167d0b1913c9fd1f05c80d9a@144.76.97.251:29966"
+peers="[ENDPOINT_PEER]"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" [DAEMON_HOME]/config/config.toml
 ```
 ```bash
