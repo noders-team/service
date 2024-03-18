@@ -18,27 +18,8 @@ import CardLayout from "../../src/layouts/CardLayout"
 
 <CardLayout autoFitEnabled={true}>
     [ENDPOINT_RPC_BLOCK]
-    <SmallCard
-        to="#"
-        header={{
-            label: "RPC Endpoint",
-            translateId: "rpc-endpoint",
-        }}
-    />
-    <SmallCard
-        to="#"
-        header={{
-            label: "API Endpoint",
-            translateId: "api-endpoint",
-        }}
-    />
-    <SmallCard
-        to="#"
-        header={{
-            label: "gRPC-Web Endpoint",
-            translateId: "grpc-endpoint",
-        }}
-    />
+    [ENDPOINT_API_BLOCK]
+    [ENDPOINT_GRPCWEB_BLOCK]
 </CardLayout>
 
 ## We are

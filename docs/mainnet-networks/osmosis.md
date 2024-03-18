@@ -18,27 +18,8 @@ Osmosis is a decentralized peer-to-peer blockchain that people can use to create
 
 <CardLayout autoFitEnabled={true}>
     <SmallCard to="https://osmosis.rpc.mainnet.noders.team" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
-    <SmallCard
-        to="#"
-        header={{
-            label: "RPC Endpoint",
-            translateId: "rpc-endpoint",
-        }}
-    />
-    <SmallCard
-        to="#"
-        header={{
-            label: "API Endpoint",
-            translateId: "api-endpoint",
-        }}
-    />
-    <SmallCard
-        to="#"
-        header={{
-            label: "gRPC-Web Endpoint",
-            translateId: "grpc-endpoint",
-        }}
-    />
+    <SmallCard to="https://osmosis.api.mainnet.noders.team" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
+    <SmallCard to="https://osmosis.grpc.mainnet.noders.team" header={{label: "gRPC-Web Endpoint", translateId: "grpcweb-endpoint"}}/>
 </CardLayout>
 
 ## We are
