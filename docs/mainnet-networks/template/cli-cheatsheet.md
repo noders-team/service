@@ -19,7 +19,7 @@ This cheatsheet collects commonly used CLI commands for node operators to easily
 ### Bank: Send
 ```bash
 [DAEMON_NAME] tx bank send KEY RECEIVER_ADDRESS 1000000[CHAIN_DENOM] \
-  --chain-id celestia \
+  --chain-id [CHAIN_ID] \
   --node [ENDPOINT_RPC]:443 --fees [CHAIN_FEES][CHAIN_DENOM] \
   --from KEY
 ```

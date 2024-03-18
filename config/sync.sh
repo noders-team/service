@@ -57,6 +57,47 @@ function enrichBlockchainConfig {
   fi
 }
 
+function replacePageVariables {
+  # Blockchain
+  sed -i '' "s|\[CHAIN_NAME\]|${CHAIN_NAME}|g" $1
+  sed -i '' "s|\[CHAIN_SYSTEM_NAME\]|${CHAIN_SYSTEM_NAME}|g" $1
+  sed -i '' "s|\[CHAIN_ID\]|${CHAIN_ID}|g" $1
+  sed -i '' "s|\[CHAIN_DESCRIPTION\]|${CHAIN_DESCRIPTION}|g" $1
+  sed -i '' "s|\[CHAIN_DENOM\]|${CHAIN_DENOM}|g" $1
+  sed -i '' "s|\[CHAIN_FEES\]|${CHAIN_FEES}|g" $1
+
+  # Binary
+  sed -i '' "s|\[DAEMON_NAME\]|${DAEMON_NAME}|g" $1
+  sed -i '' "s|\[DAEMON_VERSION\]|${DAEMON_VERSION}|g" $1
+  sed -i '' "s|\[DAEMON_SERVICE\]|${DAEMON_SERVICE}|g" $1
+  sed -i '' "s|\[DAEMON_HOME\]|${DAEMON_HOME}|g" $1
+
+  # Endpoints
+  sed -i '' "s|\[ENDPOINT_RPC\]|${ENDPOINT_RPC}|g" $1
+  sed -i '' "s|\[ENDPOINT_API\]|${ENDPOINT_API}|g" $1
+  sed -i '' "s|\[ENDPOINT_GRPCWEB\]|${ENDPOINT_GRPCWEB}|g" $1
+  sed -i '' "s|\[ENDPOINT_GRPC\]|${ENDPOINT_GRPC}|g" $1
+  sed -i '' "s|\[ENDPOINT_PEER\]|${ENDPOINT_PEER}|g" $1
+
+  # Social
+  sed -i '' "s|\[SOCIAL_WEBSITE\]|${SOCIAL_WEBSITE}|g" $1
+  sed -i '' "s|\[SOCIAL_GITHUB\]|${SOCIAL_GITHUB}|g" $1
+  sed -i '' "s|\[SOCIAL_DISCORD\]|${SOCIAL_DISCORD}|g" $1
+  sed -i '' "s|\[SOCIAL_X\]|${SOCIAL_X}|g" $1
+  sed -i '' "s|\[SOCIAL_TELEGRAM\]|${SOCIAL_TELEGRAM}|g" $1
+
+  # Download
+  sed -i '' "s|\[DOWNLOAD_URL\]|${DOWNLOAD_URL}|g" $1
+
+  # Updates
+  sed -i '' "s|\[UPDATE_SNAPSHOT\]|${UPDATE_SNAPSHOT}|g" $1
+  sed -i '' "s|\[UPDATE_LIVE_PEERS\]|${UPDATE_LIVE_PEERS}|g" $1
+  sed -i '' "s|\[UPDATE_CLI_CHEATSHEET\]|${UPDATE_CLI_CHEATSHEET}|g" $1
+}
+
+#####################################################################################################################################################################
+#                                                                          UPDATE PAGES                                                                             #
+#####################################################################################################################################################################
 
 function updateLivePeers {
   # Live peers
@@ -78,19 +119,7 @@ function updateLivePeers {
     cp "../docs/mainnet-networks/template/live-peers.md" "${CHAIN_PAGE_PATH}"
     echo "${CHAIN_PAGE_PATH}"
 
-    perl -pi -e "s/\[CHAIN_NAME\]/$CHAIN_NAME/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[CHAIN_SYSTEM_NAME\]/$CHAIN_NAME/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[CHAIN_ID\]/$CHAIN_ID/g" "${CHAIN_PAGE_PATH}"
-
-    perl -pi -e "s/\[DAEMON_NAME\]/$DAEMON_NAME/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[DAEMON_VERSION\]/$DAEMON_VERSION/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[DAEMON_HOME\]/$DAEMON_HOME/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[DAEMON_SERVICE\]/$DAEMON_SERVICE/g" "${CHAIN_PAGE_PATH}"
-
-    perl -pi -e "s/\[LIVE_PEERS_COUNT\]/$LIVE_PEERS_COUNT/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[LIVE_PEERS_ALL\]/$LIVE_PEERS_ALL/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[LIVE_PEERS_RANDOM\]/$LIVE_PEERS_RANDOM/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[ENDPOINT_PEER\]/$ENDPOINT_PEER/g" "${CHAIN_PAGE_PATH}"
+    replacePageVariables "${CHAIN_PAGE_PATH}"
   fi
 }
 
@@ -106,14 +135,7 @@ function updateSnapshot {
     cp "../docs/mainnet-networks/template/snapshot.md" "${CHAIN_PAGE_PATH}"
     echo "${CHAIN_PAGE_PATH}"
 
-    perl -pi -e "s/\[CHAIN_NAME\]/$CHAIN_NAME/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[CHAIN_SYSTEM_NAME\]/$CHAIN_NAME/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[CHAIN_ID\]/$CHAIN_ID/g" "${CHAIN_PAGE_PATH}"
-
-    perl -pi -e "s/\[DAEMON_NAME\]/$DAEMON_NAME/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[DAEMON_VERSION\]/$DAEMON_VERSION/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[DAEMON_HOME\]/$DAEMON_HOME/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[DAEMON_SERVICE\]/$DAEMON_SERVICE/g" "${CHAIN_PAGE_PATH}"
+    replacePageVariables "${CHAIN_PAGE_PATH}"
   fi
 }
 
@@ -124,19 +146,7 @@ function updateCLICheatsheet {
     cp "../docs/mainnet-networks/template/cli-cheatsheet.md" "${CHAIN_PAGE_PATH}"
     echo "${CHAIN_PAGE_PATH}"
 
-    perl -pi -e "s/\[CHAIN_NAME\]/$CHAIN_NAME/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[CHAIN_SYSTEM_NAME\]/$CHAIN_NAME/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[CHAIN_ID\]/$CHAIN_ID/g" "${CHAIN_PAGE_PATH}"
-
-    perl -pi -e "s/\[CHAIN_DENOM\]/$CHAIN_DENOM/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[CHAIN_FEES]/$CHAIN_FEES/g" "${CHAIN_PAGE_PATH}"
-
-    perl -pi -e "s/\[DAEMON_NAME\]/$DAEMON_NAME/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[DAEMON_VERSION\]/$DAEMON_VERSION/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[DAEMON_HOME\]/$DAEMON_HOME/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[DAEMON_SERVICE\]/$DAEMON_SERVICE/g" "${CHAIN_PAGE_PATH}"
-
-    perl -pi -e "s/\[ENDPOINT_RPC\]/$ENDPOINT_RPC/g" "${CHAIN_PAGE_PATH}"
+    replacePageVariables "${CHAIN_PAGE_PATH}"
   fi
 }
 

@@ -4,10 +4,10 @@ title: CLI Cheatsheet*
 sidebar_position: 7
 ---
 
-<div class="h1-with-icon icon-Osmosis">
+<div class="h1-with-icon icon-osmosis">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `` | Current Node Version: `v23.0.0`
+###### Chain ID: `osmosis-1` | Current Node Version: `v23.0.0`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -19,7 +19,7 @@ This cheatsheet collects commonly used CLI commands for node operators to easily
 ### Bank: Send
 ```bash
 osmosisd tx bank send KEY RECEIVER_ADDRESS 1000000uosmo \
-  --chain-id celestia \
+  --chain-id osmosis-1 \
   --node https://osmosis.rpc.mainnet.noders.team:443 --fees 3000uosmo \
   --from KEY
 ```
@@ -28,7 +28,7 @@ osmosisd tx bank send KEY RECEIVER_ADDRESS 1000000uosmo \
 ```bash
 osmosisd tx distribution withdraw-rewards VALIDATOR_OPERATOR \
   --commission \
-  --chain-id  \
+  --chain-id osmosis-1 \
   --node https://osmosis.rpc.mainnet.noders.team:443 --fees 3000uosmo \
   --from KEY
 ```
@@ -36,7 +36,7 @@ osmosisd tx distribution withdraw-rewards VALIDATOR_OPERATOR \
 ### Gov: Query Proposal
 ```bash
 osmosisd query gov proposal PROPOSAL_NUMBER \
-  --chain-id  \
+  --chain-id osmosis-1 \
   --node https://osmosis.rpc.mainnet.noders.team:443 --fees 3000uosmo \
   --output json | jq
 ```
@@ -45,7 +45,7 @@ osmosisd query gov proposal PROPOSAL_NUMBER \
 ###### VOTE_OPTION: `yes`, `no`, `no_with_veto` and `abstain`.
 ```bash
 osmosisd tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
-  --chain-id  \
+  --chain-id osmosis-1 \
   --node https://osmosis.rpc.mainnet.noders.team:443 --fees 3000uosmo \
   --from KEY
 ```
@@ -53,7 +53,7 @@ osmosisd tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
 ### Slashing: Unjail
 ```bash
 osmosisd tx slashing unjail \
-  --chain-id  \
+  --chain-id osmosis-1 \
   --node https://osmosis.rpc.mainnet.noders.team:443 --fees 3000uosmo \
   --from KEY
 ```
@@ -73,7 +73,7 @@ osmosisd tx staking create-validator \
   --identity "220491ADDD660741" \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
-  --chain-id  \
+  --chain-id osmosis-1 \
   --node https://osmosis.rpc.mainnet.noders.team:443 --fees 3000uosmo \
   --from KEY
 ```

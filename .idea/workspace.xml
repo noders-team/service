@@ -11,6 +11,7 @@
       <change beforePath="$PROJECT_DIR$/docs/mainnet-networks/osmosis/cli-cheatsheet.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mainnet-networks/osmosis/cli-cheatsheet.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/mainnet-networks/osmosis/live-peers.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mainnet-networks/osmosis/live-peers.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/mainnet-networks/osmosis/snapshot.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mainnet-networks/osmosis/snapshot.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/mainnet-networks/template/cli-cheatsheet.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mainnet-networks/template/cli-cheatsheet.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,30 +95,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710087909869</updated>
-    </task>
-    <task id="LOCAL-00144" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710698812145</created>
-      <option name="number" value="00144" />
-      <option name="presentableId" value="LOCAL-00144" />
-      <option name="project" value="LOCAL" />
-      <updated>1710698812145</updated>
-    </task>
-    <task id="LOCAL-00145" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710698876382</created>
-      <option name="number" value="00145" />
-      <option name="presentableId" value="LOCAL-00145" />
-      <option name="project" value="LOCAL" />
-      <updated>1710698876382</updated>
-    </task>
-    <task id="LOCAL-00146" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710700960594</created>
-      <option name="number" value="00146" />
-      <option name="presentableId" value="LOCAL-00146" />
-      <option name="project" value="LOCAL" />
-      <updated>1710700960594</updated>
     </task>
     <task id="LOCAL-00147" summary="Source code changes">
       <option name="closed" value="true" />
@@ -487,7 +464,31 @@
       <option name="project" value="LOCAL" />
       <updated>1710788087170</updated>
     </task>
-    <option name="localTasksCounter" value="193" />
+    <task id="LOCAL-00193" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710788901550</created>
+      <option name="number" value="00193" />
+      <option name="presentableId" value="LOCAL-00193" />
+      <option name="project" value="LOCAL" />
+      <updated>1710788901550</updated>
+    </task>
+    <task id="LOCAL-00194" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710789031849</created>
+      <option name="number" value="00194" />
+      <option name="presentableId" value="LOCAL-00194" />
+      <option name="project" value="LOCAL" />
+      <updated>1710789031849</updated>
+    </task>
+    <task id="LOCAL-00195" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710789036506</created>
+      <option name="number" value="00195" />
+      <option name="presentableId" value="LOCAL-00195" />
+      <option name="project" value="LOCAL" />
+      <updated>1710789036506</updated>
+    </task>
+    <option name="localTasksCounter" value="196" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
