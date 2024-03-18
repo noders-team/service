@@ -55,16 +55,16 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Shell Script.sync.sh.executor": "Run",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/slazarev/Documents/GitHub/services-docusaurus/docs/mainnet-networks/template"
+    "last_opened_file_path": "/Users/slazarev/Documents/GitHub/services-docusaurus/static/img"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/img" />
       <recent name="$PROJECT_DIR$/docs/mainnet-networks/template" />
       <recent name="$PROJECT_DIR$/docs/mainnet-networks" />
       <recent name="$PROJECT_DIR$/docs/mainnet-networks/osmosis" />
       <recent name="$PROJECT_DIR$/docs/testnet-networks" />
-      <recent name="$PROJECT_DIR$/static/img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/config" />
@@ -89,30 +89,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710087909869</updated>
-    </task>
-    <task id="LOCAL-00158" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710703514810</created>
-      <option name="number" value="00158" />
-      <option name="presentableId" value="LOCAL-00158" />
-      <option name="project" value="LOCAL" />
-      <updated>1710703514810</updated>
-    </task>
-    <task id="LOCAL-00159" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710705722540</created>
-      <option name="number" value="00159" />
-      <option name="presentableId" value="LOCAL-00159" />
-      <option name="project" value="LOCAL" />
-      <updated>1710705722540</updated>
-    </task>
-    <task id="LOCAL-00160" summary="Source code changes">
-      <option name="closed" value="true" />
-      <created>1710705885199</created>
-      <option name="number" value="00160" />
-      <option name="presentableId" value="LOCAL-00160" />
-      <option name="project" value="LOCAL" />
-      <updated>1710705885199</updated>
     </task>
     <task id="LOCAL-00161" summary="Source code changes">
       <option name="closed" value="true" />
@@ -482,7 +458,31 @@
       <option name="project" value="LOCAL" />
       <updated>1710794108400</updated>
     </task>
-    <option name="localTasksCounter" value="207" />
+    <task id="LOCAL-00207" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710794170857</created>
+      <option name="number" value="00207" />
+      <option name="presentableId" value="LOCAL-00207" />
+      <option name="project" value="LOCAL" />
+      <updated>1710794170857</updated>
+    </task>
+    <task id="LOCAL-00208" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710794175239</created>
+      <option name="number" value="00208" />
+      <option name="presentableId" value="LOCAL-00208" />
+      <option name="project" value="LOCAL" />
+      <updated>1710794175239</updated>
+    </task>
+    <task id="LOCAL-00209" summary="Source code changes">
+      <option name="closed" value="true" />
+      <created>1710794387906</created>
+      <option name="number" value="00209" />
+      <option name="presentableId" value="LOCAL-00209" />
+      <option name="project" value="LOCAL" />
+      <updated>1710794387907</updated>
+    </task>
+    <option name="localTasksCounter" value="210" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

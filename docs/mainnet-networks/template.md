@@ -55,45 +55,9 @@ import CardLayout from "../../src/layouts/CardLayout"
 See the API for the various client libraries implemented for.
 
 <CardLayout autoFitEnabled={false}>
-    <SmallCard
-        to="#"
-        header={{
-            label: "Website",
-            translateId: "typescript-reference",
-        }}
-        iconPath="img/typescript-icon.png"
-    />
-    <SmallCard
-        to="#"
-        header={{
-            label: "Github",
-            translateId: "github-reference",
-        }}
-        iconPath="img/typescript-icon.png"
-    />
-    <SmallCard
-        to="#"
-        header={{
-            label: "Discord",
-            translateId: "discord-reference",
-        }}
-        iconPath="img/typescript-icon.png"
-    />
-    <SmallCard
-        to="#"
-        header={{
-            label: "X",
-            translateId: "x-reference",
-        }}
-        iconPath="img/typescript-icon.png"
-    />
-    <SmallCard
-        to="#"
-        header={{
-            label: "Telegram",
-            translateId: "telegram-reference",
-        }}
-        iconPath="img/typescript-icon.png"
-    />
+    [SOCIAL_WEBSITE_BLOCK]
+    [SOCIAL_GITHUB_BLOCK]
+    [SOCIAL_DISCORD_BLOCK]
+    [SOCIAL_X_BLOCK]
     [SOCIAL_TELEGRAM_BLOCK]
 </CardLayout>

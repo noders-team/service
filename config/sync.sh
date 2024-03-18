@@ -37,6 +37,10 @@ function readBlockchainConfig {
   SOCIAL_X=$(grep -oE '^SOCIAL_X=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   SOCIAL_TELEGRAM=$(grep -oE '^SOCIAL_TELEGRAM=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
 
+  SOCIAL_WEBSITE_BLOCK=""
+  SOCIAL_GITHUB_BLOCK=""
+  SOCIAL_SOCIAL_DISCORD_BLOCK=""
+  SOCIAL_X_BLOCK=""
   SOCIAL_TELEGRAM_BLOCK=""
 
   # Other
@@ -107,6 +111,10 @@ function replacePageVariables {
   sed -i '' "s|\[SOCIAL_X\]|${SOCIAL_X}|g" $1
   sed -i '' "s|\[SOCIAL_TELEGRAM\]|${SOCIAL_TELEGRAM}|g" $1
 
+  sed -i '' "s|\[SOCIAL_WEBSITE_BLOCK\]|${SOCIAL_WEBSITE_BLOCK}|g" $1
+  sed -i '' "s|\[SOCIAL_GITHUB_BLOCK\]|${SOCIAL_GITHUB_BLOCK}|g" $1
+  sed -i '' "s|\[SOCIAL_DISCORD_BLOCK\]|${SOCIAL_DISCORD_BLOCK}|g" $1
+  sed -i '' "s|\[SOCIAL_X_BLOCK\]|${SOCIAL_X_BLOCK}|g" $1
   sed -i '' "s|\[SOCIAL_TELEGRAM_BLOCK\]|${SOCIAL_TELEGRAM_BLOCK}|g" $1
 
   # Other
@@ -137,6 +145,19 @@ function updateMain {
     fi
 
     # Social
+
+    if [ -n "${SOCIAL_WEBSITE}" ] ; then
+      SOCIAL_WEBSITE_BLOCK="<SmallCard to=\"${SOCIAL_WEBSITE}\" header={{label: \"Website\", translateId: \"social-telegram\"}} iconPath=\"img/website-icon.svg\"/>"
+    fi
+    if [ -n "${SOCIAL_GITHUB}" ] ; then
+      SOCIAL_GITHUB_BLOCK="<SmallCard to=\"${SOCIAL_GITHUB}\" header={{label: \"GitHub\", translateId: \"social-telegram\"}} iconPath=\"img/github-icon.svg\"/>"
+    fi
+    if [ -n "${SOCIAL_DISCORD}" ] ; then
+      SOCIAL_DISCORD_BLOCK="<SmallCard to=\"${SOCIAL_DISCORD}\" header={{label: \"Discord\", translateId: \"social-telegram\"}} iconPath=\"img/discord-icon.svg\"/>"
+    fi
+    if [ -n "${SOCIAL_X_BLOCK}" ] ; then
+      SOCIAL_X_BLOCK="<SmallCard to=\"${SOCIAL_X_BLOCK}\" header={{label: \"X\", translateId: \"social-telegram\"}} iconPath=\"img/x-icon.svg\"/>"
+    fi
     if [ -n "${SOCIAL_TELEGRAM}" ] ; then
       SOCIAL_TELEGRAM_BLOCK="<SmallCard to=\"${SOCIAL_TELEGRAM}\" header={{label: \"Telegram\", translateId: \"social-telegram\"}} iconPath=\"img/telegram-icon.svg\"/>"
     fi
