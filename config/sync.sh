@@ -39,8 +39,9 @@ function readBlockchainConfig {
 
   # Updates
   UPDATE_UPGRADE=$(grep -oE '^UPDATE_UPGRADE=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
-  UPDATE_LIVE_PEERS=$(grep -oE '^UPDATE_LIVE_PEERS=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   UPDATE_SNAPSHOT=$(grep -oE '^UPDATE_SNAPSHOT=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  UPDATE_STATESYNC=$(grep -oE '^UPDATE_STATESYNC=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  UPDATE_LIVE_PEERS=$(grep -oE '^UPDATE_LIVE_PEERS=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   UPDATE_CLI_CHEATSHEET=$(grep -oE '^UPDATE_CLI_CHEATSHEET=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
 }
 
@@ -115,6 +116,28 @@ function updateUpgrade {
   fi
 }
 
+function updateSnapshot {
+  if [ "$UPDATE_SNAPSHOT" = true ] ; then
+    # Update page
+    CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/snapshot.md"
+    cp "../docs/mainnet-networks/template/snapshot.md" "${CHAIN_PAGE_PATH}"
+    echo "${CHAIN_PAGE_PATH}"
+
+    replacePageVariables "${CHAIN_PAGE_PATH}"
+  fi
+}
+
+function updateStatesync {
+  if [ "$UPDATE_STATESYNC" = true ] ; then
+    # Update page
+    CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/statesync.md"
+    cp "../docs/mainnet-networks/template/statesync.md" "${CHAIN_PAGE_PATH}"
+    echo "${CHAIN_PAGE_PATH}"
+
+    replacePageVariables "${CHAIN_PAGE_PATH}"
+  fi
+}
+
 function updateLivePeers {
   # Live peers
   LIVE_PEERS_COUNT=""
@@ -133,22 +156,6 @@ function updateLivePeers {
     # Update page
     CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/live-peers.md"
     cp "../docs/mainnet-networks/template/live-peers.md" "${CHAIN_PAGE_PATH}"
-    echo "${CHAIN_PAGE_PATH}"
-
-    replacePageVariables "${CHAIN_PAGE_PATH}"
-  fi
-}
-
-function updateSnapshot {
-  # Live peers
-  LIVE_PEERS_COUNT=""
-  LIVE_PEERS_ALL=""
-  LIVE_PEERS_RANDOM=""
-
-  if [ "$UPDATE_SNAPSHOT" = true ] ; then
-    # Update page
-    CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/snapshot.md"
-    cp "../docs/mainnet-networks/template/snapshot.md" "${CHAIN_PAGE_PATH}"
     echo "${CHAIN_PAGE_PATH}"
 
     replacePageVariables "${CHAIN_PAGE_PATH}"
@@ -177,6 +184,7 @@ do
 
   updateUpgrade
   updateSnapshot
+  updateStatesync
   updateLivePeers
   updateCLICheatsheet
 

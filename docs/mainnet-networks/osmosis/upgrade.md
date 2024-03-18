@@ -1,6 +1,6 @@
 ---
 hide_table_of_contents: false
-title: Upgrade
+title: Upgrade *
 sidebar_position: 2
 ---
 
