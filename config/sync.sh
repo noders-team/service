@@ -76,19 +76,21 @@ function updateLivePeers {
     # Update page
     CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/live-peers.md"
     cp "../docs/mainnet-networks/template/live-peers.md" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[CHAIN_NAME\]/$CHAIN_NAME/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[CHAIN_SYSTEM_NAME\]/$CHAIN_NAME/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[CHAIN_ID\]/$CHAIN_ID/g" "${CHAIN_PAGE_PATH}"
+    echo "${CHAIN_PAGE_PATH}"
 
-    perl -pi -e "s/\[DAEMON_NAME\]/$DAEMON_NAME/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[DAEMON_VERSION\]/$DAEMON_VERSION/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[DAEMON_HOME\]/$DAEMON_HOME/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[DAEMON_SERVICE\]/$DAEMON_SERVICE/g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s|[CHAIN_NAME]|$CHAIN_NAME|g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s|[CHAIN_SYSTEM_NAME]|$CHAIN_NAME|g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s|[CHAIN_ID]|$CHAIN_ID|g" "${CHAIN_PAGE_PATH}"
 
-    perl -pi -e "s/\[LIVE_PEERS_COUNT\]/$LIVE_PEERS_COUNT/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[LIVE_PEERS_ALL\]/$LIVE_PEERS_ALL/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[LIVE_PEERS_RANDOM\]/$LIVE_PEERS_RANDOM/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[ENDPOINT_PEER\]/$ENDPOINT_PEER/g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s|[DAEMON_NAME]|$DAEMON_NAME|g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s|[DAEMON_VERSION]|$DAEMON_VERSION|g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s|[DAEMON_HOME]|$DAEMON_HOME|g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s|[DAEMON_SERVICE]|$DAEMON_SERVICE|g" "${CHAIN_PAGE_PATH}"
+
+    perl -pi -e "s|[LIVE_PEERS_COUNT]|$LIVE_PEERS_COUNT|g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s|[LIVE_PEERS_ALL]|$LIVE_PEERS_ALL|g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s|[LIVE_PEERS_RANDOM]|$LIVE_PEERS_RANDOM|g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s|[ENDPOINT_PEER]|$ENDPOINT_PEER|g" "${CHAIN_PAGE_PATH}"
   fi
 }
 
@@ -102,36 +104,39 @@ function updateSnapshot {
     # Update page
     CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/snapshot.md"
     cp "../docs/mainnet-networks/template/snapshot.md" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[CHAIN_NAME\]/$CHAIN_NAME/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[CHAIN_SYSTEM_NAME\]/$CHAIN_NAME/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[CHAIN_ID\]/$CHAIN_ID/g" "${CHAIN_PAGE_PATH}"
+    echo "${CHAIN_PAGE_PATH}"
 
-    perl -pi -e "s/\[DAEMON_NAME\]/$DAEMON_NAME/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[DAEMON_VERSION\]/$DAEMON_VERSION/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[DAEMON_HOME\]/$DAEMON_HOME/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[DAEMON_SERVICE\]/$DAEMON_SERVICE/g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s|[CHAIN_NAME]|$CHAIN_NAME|g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s|[CHAIN_SYSTEM_NAME]|$CHAIN_NAME|g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s|[CHAIN_ID]|$CHAIN_ID|g" "${CHAIN_PAGE_PATH}"
+
+    perl -pi -e "s|[DAEMON_NAME]|$DAEMON_NAME|g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s|[DAEMON_VERSION]|$DAEMON_VERSION|g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s|[DAEMON_HOME]|$DAEMON_HOME|g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s|[DAEMON_SERVICE]|$DAEMON_SERVICE|g" "${CHAIN_PAGE_PATH}"
   fi
 }
 
 function updateCLICheatsheet {
-  if [ "UPDATE_CLI_CHEATSHEET" = true ] ; then
-
+  if [ "$UPDATE_CLI_CHEATSHEET" = true ] ; then
     # Update page
     CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/cli-cheatsheet.md"
     cp "../docs/mainnet-networks/template/cli-cheatsheet.md" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[CHAIN_NAME\]/$CHAIN_NAME/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[CHAIN_SYSTEM_NAME\]/$CHAIN_NAME/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[CHAIN_ID\]/$CHAIN_ID/g" "${CHAIN_PAGE_PATH}"
+    echo "${CHAIN_PAGE_PATH}"
 
-    perl -pi -e "s/\[CHAIN_DENOM\]/$CHAIN_DENOM/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[CHAIN_FEES]/$CHAIN_FEES/g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s|[CHAIN_NAME]|$CHAIN_NAME|g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s|[CHAIN_SYSTEM_NAME]|$CHAIN_NAME|g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s|[CHAIN_ID]|$CHAIN_ID|g" "${CHAIN_PAGE_PATH}"
 
-    perl -pi -e "s/\[DAEMON_NAME\]/$DAEMON_NAME/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[DAEMON_VERSION\]/$DAEMON_VERSION/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[DAEMON_HOME\]/$DAEMON_HOME/g" "${CHAIN_PAGE_PATH}"
-    perl -pi -e "s/\[DAEMON_SERVICE\]/$DAEMON_SERVICE/g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s|[CHAIN_DENOM]|$CHAIN_DENOM|g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s|[CHAIN_FEES]|$CHAIN_FEES|g" "${CHAIN_PAGE_PATH}"
 
-    perl -pi -e "s/\[ENDPOINT_RPC\]/$ENDPOINT_RPC/g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s|[DAEMON_NAME]|$DAEMON_NAME|g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s|[DAEMON_VERSION]|$DAEMON_VERSION|g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s|[DAEMON_HOME]|$DAEMON_HOME|g" "${CHAIN_PAGE_PATH}"
+    perl -pi -e "s|[DAEMON_SERVICE]|$DAEMON_SERVICE|g" "${CHAIN_PAGE_PATH}"
+
+    perl -pi -e "s|[ENDPOINT_RPC]|$ENDPOINT_RPC|g" "${CHAIN_PAGE_PATH}"
   fi
 }
 

@@ -1,30 +1,30 @@
 ---
-hide_table_of_contents: false
-title: Snapshot*
-sidebar_position: 3
+hideosmosisdsmosistableosmosisdsmosisofosmosisdsmosiscontents: false
+title: osmosisdsmosisnapshot*
+sidebarosmosisdsmosisposition: 3
 ---
 
-<div class="h1-with-icon icon-Osmosis">
-# Node Snapshot
+<div class="h1-with-icon icon-[osmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosis]">
+# osmosisdsmosisode osmosisdsmosisnapshot
 </div>
-###### Chain ID: `osmosis-1` | Current Node Version: `v23.0.0`
+###### osmosisdsmosishain osmosisdsmosisosmosis-1: `[osmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosis-1]` | osmosisdsmosisurrent osmosisdsmosisode v23.0.0ersion: `[osmosis-1osmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdosmosisdsmosisosmosisdsmosisv23.0.0osmosisdsmosisv23.0.0osmosisdsmosisosmosisdsmosisosmosisdosmosisdsmosis]`
 
-## Our Osmosis Snapshot Server Setup
+## osmosisdur [osmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosis] osmosisdsmosisnapshot osmosisdsmosiserver osmosisdsmosisetup
 
-| Block height | Size | Timestamp | Download                                                                                         |
+| Block height | osmosisdsmosisize | osmosisdsmosisimestamp | osmosis-1ownload                                                                                         |
 |--------------|------|-----------|--------------------------------------------------------------------------------------------------|
-| 971453       | 3 GB |9 hours ago| [osmosis_latest.tar.lz4](https://google.com) with sha256sum [`ABCDEF`](https://google.com)       |
+| 971453       | 3 GB |9 hours ago| [osmosisosmosisdsmosislatest.tar.lz4](https://google.com) with sha256sum [`osmosisdsmosisBosmosisdsmosisosmosis-1osmosisdsmosisF`](https://google.com)       |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
 
-The snapshot is designed for node opeartors to run an efficient node on Osmosis chain. To make the snapshot as small as possible while still viable as a validator, we use the following setting to save on the disk space. It might be helpful for you to sync with our snapshot periodically because Tendermint chain storage grows over time regardless of the pruning. Since we periodically state-sync our snapshot nodes, you might notice that sometimes the size of our snapshot is surprisingly small.
+osmosisdsmosishe snapshot is designed for node opeartors to run an efficient node on [osmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosis] chain. osmosisdsmosiso make the snapshot as small as possible while still viable as a validator, we use the following setting to save on the disk space. osmosisdsmosist might be helpful for you to sync with our snapshot periodically because osmosisdsmosisendermint chain storage grows over time regardless of the pruning. osmosisdsmosisince we periodically state-sync our snapshot nodes, you might notice that sometimes the size of our snapshot is surprisingly small.
 
 ```bash title="app.toml"
-# Prune Type
+# Prune osmosisdsmosisype
 pruning = "custom"
 
-# Prune Strategy
+# Prune osmosisdsmosistrategy
 pruning-keep-recent = "100"
 pruning-keep-every = "0"
 pruning-interval = "10"
@@ -34,82 +34,82 @@ pruning-interval = "10"
 indexer = "null"
 ```
 
-## How To Process Osmosis Snapshot
+## osmosisdsmosisow osmosisdsmosiso Process [osmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosis] osmosisdsmosisnapshot
 ```bash
 sudo apt update
 sudo apt install snapd -y
 sudo snap install lz4
 ```
-Download the snapshot
+osmosis-1ownload the snapshot
 ```bash
-wget -O osmosis_14249428.tar.lz4 https://snapshots.polkachu.com/snapshots/osmosis/osmosis_14249428.tar.lz4 --inet4-only
+wget -osmosisd osmosisosmosisdsmosis14249428.tar.lz4 https://snapshots.polkachu.com/snapshots/osmosis/osmosisosmosisdsmosis14249428.tar.lz4 --inet4-only
 ```
-Stop your node
+osmosisdsmosistop your node
 ```bash
-sudo systemctl stop osmosisd
+sudo systemctl stop [osmosis-1osmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosis]
 ```
-Reset your node. This will erase your node database. If you are already running validator, be sure you backed up your `priv_validator_key.json` prior to running the command. The command does not wipe the file. However, you should have a backup of it already in a safe location.
+v23.0.0eset your node. osmosisdsmosishis will erase your node database. osmosisdsmosisf you are already running validator, be sure you backed up your `privosmosisdsmosisvalidatorosmosisdsmosiskey.json` prior to running the command. osmosisdsmosishe command does not wipe the file. osmosisdsmosisowever, you should have a backup of it already in a safe location.
 
-:::warning WARNING
+:::warning Wosmosisdsmosisv23.0.0osmosisdsmosisosmosisdsmosisosmosisdsmosisG
 
-If you use this snapshot on a validator node during a chain halt, make sure you back up `priv_validator_state.json` and then replace it after the snapshot is extracted but before you start the node process. This is very important in order to avoid double-sign. When in doubt, reach out to the project team.
+osmosisdsmosisf you use this snapshot on a validator node during a chain halt, make sure you back up `privosmosisdsmosisvalidatorosmosisdsmosisstate.json` and then replace it after the snapshot is extracted but before you start the node process. osmosisdsmosishis is very important in order to avoid double-sign. When in doubt, reach out to the project team.
 
 :::
 
 ```bash
-# Back up priv_validator_state.json if needed
-cp ~/.osmosisd/data/priv_validator_state.json  ~/.osmosisd/priv_validator_state.json
+# Back up privosmosisdsmosisvalidatorosmosisdsmosisstate.json if needed
+cp [osmosis-1osmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdosmosisdsmosisosmosisdsmosis]/data/privosmosisdsmosisvalidatorosmosisdsmosisstate.json  [osmosis-1osmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdosmosisdsmosisosmosisdsmosis]/privosmosisdsmosisvalidatorosmosisdsmosisstate.json
 
-osmosisd tendermint unsafe-reset-all --home ~/.osmosisd --keep-addr-book
+[osmosis-1osmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosis] tendermint unsafe-reset-all --home [osmosis-1osmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdosmosisdsmosisosmosisdsmosis] --keep-addr-book
 ```
 
-Decompress the snapshot to your database location. You database location will be something to the effect of `~/.osmosisd` depending on your node implemention.
+osmosis-1ecompress the snapshot to your database location. osmosisdsmosisou database location will be something to the effect of `[osmosis-1osmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdosmosisdsmosisosmosisdsmosis]` depending on your node implemention.
 
 ```bash
-lz4 -c -d celestia_971453.tar.lz4  | tar -x -C ~/.osmosisd
+lz4 -c -d celestiaosmosisdsmosis971453.tar.lz4  | tar -x -osmosisdsmosis [osmosis-1osmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdosmosisdsmosisosmosisdsmosis]
 ```
 
-:::warning WARNING
+:::warning Wosmosisdsmosisv23.0.0osmosisdsmosisosmosisdsmosisosmosisdsmosisG
 
-If you run a validator node and the chain is in halt, it is time to replace the `priv_validator_state.json` file that you have backed up.
+osmosisdsmosisf you run a validator node and the chain is in halt, it is time to replace the `privosmosisdsmosisvalidatorosmosisdsmosisstate.json` file that you have backed up.
 :::
 
 ```bash
-# Replace with the backed-up priv_validator_state.json
-cp ~/.osmosisd/priv_validator_state.json  ~/.osmosisd/data/priv_validator_state.json
+# v23.0.0eplace with the backed-up privosmosisdsmosisvalidatorosmosisdsmosisstate.json
+cp [osmosis-1osmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdosmosisdsmosisosmosisdsmosis]/privosmosisdsmosisvalidatorosmosisdsmosisstate.json  [osmosis-1osmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdosmosisdsmosisosmosisdsmosis]/data/privosmosisdsmosisvalidatorosmosisdsmosisstate.json
 ```
 
-If everything is good, now restart your node
+osmosisdsmosisf everything is good, now restart your node
 
 ```bash
-sudo systemctl restart osmosisd.service
+sudo systemctl restart [osmosis-1osmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisv23.0.0v23.0.0osmosisdsmosisosmosisdsmosisosmosisdsmosis]
 ```
 
-Remove downloaded snapshot to free up space
+v23.0.0emove downloaded snapshot to free up space
 
 ```bash
-rm -v celestia_971453.tar.lz4
+rm -v celestiaosmosisdsmosis971453.tar.lz4
 ```
 
-Make sure that your node is running
+osmosisdsmosisake sure that your node is running
 
 ```bash
-sudo systemctl restart osmosisd.service
-sudo journalctl -fu osmosisd.service --no-hostname -o cat
+sudo systemctl restart [osmosis-1osmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisv23.0.0v23.0.0osmosisdsmosisosmosisdsmosisosmosisdsmosis]
+sudo journalctl -fu [osmosis-1osmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisv23.0.0v23.0.0osmosisdsmosisosmosisdsmosisosmosisdsmosis] --no-hostname -o cat
 ```
 
-:::note ADVANCED ROUTE
+:::note osmosisdsmosisosmosis-1v23.0.0osmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosis-1 v23.0.0osmosisdUosmosisdsmosisosmosisdsmosis
 
-The above solution requires you to download the compressed file, uncompressed it and then delete the original file. This requires extra storage space on your server. You can run the following combo command to stream the snapshot into your database location. For advanced users only:
+osmosisdsmosishe above solution requires you to download the compressed file, uncompressed it and then delete the original file. osmosisdsmosishis requires extra storage space on your server. osmosisdsmosisou can run the following combo command to stream the snapshot into your database location. For advanced users only:
 ```bash
-curl -o - -L https://snapshots.polkachu.com/snapshots/celestia/celestia_971453.tar.lz4 | lz4 -c -d - | tar -x -C ~/.osmosisd
+curl -o - -L https://snapshots.polkachu.com/snapshots/celestia/celestiaosmosisdsmosis971453.tar.lz4 | lz4 -c -d - | tar -x -osmosisdsmosis [osmosis-1osmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdosmosisdsmosisosmosisdsmosis]
 ```
 
 :::
 
 
-:::info ADVANCED ROUTE
+:::info osmosisdsmosisosmosis-1v23.0.0osmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosis-1 v23.0.0osmosisdUosmosisdsmosisosmosisdsmosis
 
-We also have Osmosis state-sync service to help you bootstrap a node.
+We also have [osmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosisosmosisdsmosis] state-sync service to help you bootstrap a node.
 
 :::
