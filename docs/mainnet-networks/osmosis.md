@@ -95,5 +95,5 @@ See the API for the various client libraries implemented for.
         }}
         iconPath="img/typescript-icon.png"
     />
-    <SmallCard to="https://t.me/osmosiszone" header={{label: "Telegram", translateId: "social-telegram"}} iconPath=img/typescript-icon.png/>
+    <SmallCard to="https://t.me/osmosiszone" header={{label: "Telegram", translateId: "social-telegram"}} iconPath="img/typescript-icon.png"/>
 </CardLayout>
