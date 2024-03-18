@@ -7,8 +7,10 @@ import SmallCard from "../../src/components/SmallCard"
 import Card from "../../src/components/Card"
 import CardLayout from "../../src/layouts/CardLayout"
 
-# Osmosis
-###### Chain ID: `osmosis-1` | Current Node Version: `v23.0.0`
+<div class="h1-with-icon icon-[CHAIN_SYSTEM_NAME]">
+# [CHAIN_NAME]
+</div>
+###### Chain ID: `[CHAIN_ID]` | Current Node Version: `[DAEMON_VERSION]`
 
 [CHAIN_DESCRIPTION]
 
