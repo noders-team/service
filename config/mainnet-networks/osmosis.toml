@@ -24,7 +24,7 @@ SOCIAL_WEBSITE=""
 SOCIAL_GITHUB="https://github.com/osmosis-labs/osmosis"
 SOCIAL_DISCORD=""
 SOCIAL_X=""
-SOCIAL_TELEGRAM=""
+SOCIAL_TELEGRAM="https://t.me/osmosiszone"
 
 # Other
 DOWNLOAD_URL="https://snapshots.mainnet.noders.team/osmosis/"

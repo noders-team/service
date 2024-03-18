@@ -95,4 +95,5 @@ See the API for the various client libraries implemented for.
         }}
         iconPath="img/typescript-icon.png"
     />
+    [SOCIAL_TELEGRAM_BLOCK]
 </CardLayout>

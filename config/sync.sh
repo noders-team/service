@@ -37,6 +37,8 @@ function readBlockchainConfig {
   SOCIAL_X=$(grep -oE '^SOCIAL_X=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   SOCIAL_TELEGRAM=$(grep -oE '^SOCIAL_TELEGRAM=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
 
+  SOCIAL_TELEGRAM_BLOCK=""
+
   # Other
   DOWNLOAD_URL=$(grep -oE '^DOWNLOAD_URL=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   GITHUB_FOLDER_NAME=$(grep -oE '^GITHUB_FOLDER_NAME=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
@@ -105,6 +107,8 @@ function replacePageVariables {
   sed -i '' "s|\[SOCIAL_X\]|${SOCIAL_X}|g" $1
   sed -i '' "s|\[SOCIAL_TELEGRAM\]|${SOCIAL_TELEGRAM}|g" $1
 
+  sed -i '' "s|\[SOCIAL_TELEGRAM_BLOCK\]|${SOCIAL_TELEGRAM_BLOCK}|g" $1
+
   # Other
   sed -i '' "s|\[DOWNLOAD_URL\]|${DOWNLOAD_URL}|g" $1
   sed -i '' "s|\[GITHUB_FOLDER_NAME\]|${GITHUB_FOLDER_NAME}|g" $1
@@ -130,6 +134,11 @@ function updateMain {
     fi
     if [ -n "${ENDPOINT_GRPCWEB}" ] ; then
       ENDPOINT_GRPCWEB_BLOCK="<SmallCard to=\"${ENDPOINT_GRPCWEB}\" header={{label: \"gRPC-Web Endpoint\", translateId: \"grpcweb-endpoint\"}}/>"
+    fi
+
+    # Social
+    if [ -n "${SOCIAL_TELEGRAM}" ] ; then
+      SOCIAL_TELEGRAM_BLOCK="<SmallCard to=\"${SOCIAL_TELEGRAM}\" header={{label: \"Telegram\", translateId: \"social-telegram\"}} iconPath="img/typescript-icon.png"/>"
     fi
 
     replacePageVariables "${CHAIN_PAGE_PATH}"
