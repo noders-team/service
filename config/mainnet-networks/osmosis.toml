@@ -3,6 +3,8 @@ CHAIN_NAME="Osmosis"
 CHAIN_ID="auto"
 CHAIN_DESCRIPTION="Osmosis is a decentralized peer-to-peer blockchain that people can use to create liquidity and trade IBC enabled tokens. The Osmosis blockchain is made up of free, public, and open-source software."
 CHAIN_SYSTEM_NAME="osmosis"
+CHAIN_DENOM="uosmo"
+CHAIN_FEES="3000"
 
 # Binary
 DAEMON_NAME="osmosisd"
@@ -28,5 +30,6 @@ SOCIAL_TELEGRAM=""
 DOWNLOAD_URL="https://snapshots.mainnet.noders.team/osmosis/"
 
 # Updates
-UPDATE_LIVE_PEERS=true
 UPDATE_SNAPSHOT=true
+UPDATE_LIVE_PEERS=true
+UPDATE_CLI_CHEATSHEET=true

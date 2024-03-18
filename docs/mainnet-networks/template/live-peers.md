@@ -4,7 +4,7 @@ title: Live peers*
 sidebar_position: 5
 ---
 
-<div class="h1-with-icon icon-osmosis">
+<div class="h1-with-icon icon-[CHAIN_SYSTEM_NAME]">
 # Live Peers
 </div>
 ###### Chain ID: `[CHAIN_ID]` | Current Node Version: `[DAEMON_VERSION]`

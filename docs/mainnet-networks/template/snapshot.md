@@ -4,7 +4,7 @@ title: Snapshot*
 sidebar_position: 3
 ---
 
-<div class="h1-with-icon icon-osmosis">
+<div class="h1-with-icon icon-[CHAIN_SYSTEM_NAME]">
 # Node Snapshot
 </div>
 ###### Chain ID: `[CHAIN_ID]` | Current Node Version: `[DAEMON_VERSION]`
