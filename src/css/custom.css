@@ -6,30 +6,36 @@
 
 /* Purple theme */
 :root {
-  --ifm-color-primary: #5c5de5;
-  --ifm-color-primary-dark: #524fcc;
+  --ifm-color-primary: rgb(0, 0, 0);
+  --ifm-color-primary-dark: rgb(255, 255, 255);
   --ifm-color-primary-darker: #4942b2;
   --ifm-color-primary-darkest: #413499;
-  --ifm-color-primary-light: #6d6fe8;
+  --ifm-color-primary-light: rgb(255, 255, 255);
   --ifm-color-primary-lighter: #7d7feb;
   --ifm-color-primary-lightest: #8d8fef;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-
-  --sidebar-header-color: black;
+  --ifm-menu-color: rgba(0, 0, 0, 0.6);
+  --sidebar-header-color: #ffffff;
+  --ifm-navbar-link-color: rgba(0, 0, 0, 0.6);
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary: #898cff;
-  --ifm-color-primary-dark: #7b7fe6;
+  --ifm-color-primary: rgb(255, 255, 255);
+  --ifm-color-primary-dark: rgba(255, 255, 255, 0.6);
   --ifm-color-primary-darker: #6d72cc;
   --ifm-color-primary-darkest: #5e65b2;
-  --ifm-color-primary-light: #9699ff;
+  --ifm-color-primary-light: #ffffff;
   --ifm-color-primary-lighter: #a3a6ff;
   --ifm-color-primary-lightest: #b0b3ff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-
-  --sidebar-header-color: gray;
+  --ifm-toc-link-color: rgba(255, 255, 255, 0.6);
+  --sidebar-header-color: #ffffff;
+  --ifm-menu-color: rgba(255, 255, 255, 0.6);
+  --ifm-navbar-link-color: rgba(255, 255, 255, 0.6);
+}
+[data-theme='dark'] .menu__link:hover {
+    color: #eeeeee;
 }
 
 /* Image Styles */
@@ -77,9 +83,58 @@
 
 .sidebar-divider {
     height: 1px; /* Thickness of the divider */
-    background-color: rgb(96, 96, 96); /* Color of the divider */
+    background-color: rgb(255, 255, 255); /* Color of the divider */
     margin: 10px 0px 0px 2px;
 }
+
+/* Устанавливаем минимальную высоту футера */
+.footer {
+    padding-top: 0.1rem; /* Reduced from 0.25rem */
+    padding-bottom: 0.1rem; /* Reduced from 0.25rem */
+}
+
+/* Убедитесь, что для дочерних элементов не задана фиксированная высота, которая может влиять на общую высоту футера */
+.footer * {
+    margin: 0; /* Keep existing margin removal */
+    padding: 0; /* Keep existing padding removal */
+    height: initial; /* Make sure elements only take up necessary space */
+}
+
+.footer__links-container,
+.footer__bottom {
+    display: flex; /* Use flexbox to layout children */
+    justify-content: space-between; /* Spread out the content */
+    padding: 0; /* Keep existing padding removal */
+}
+
+/* Убедитесь, что для .container-fluid не заданы минимальные высоты или большие паддинги */
+.container.container-fluid {
+    padding: 0; /* Убираем паддинги */
+    /* Если установлена, уберите min-height */
+}
+
+
+/* Контейнер для логотипа и текста */
+.logo-container {
+    display: flex;        /* Используем Flexbox */
+    flex-direction: column;/* Элементы располагаются в колонку */
+    align-items: center;   /* Центрирование элементов по горизонтали */
+    justify-content: center;/* Центрирование элементов по вертикали (если контейнер занимает всю высоту) */
+    height: 100%;         /* Опционально, если необходимо занять всю высоту родительского элемента */
+}
+
+/* Если логотип - это img, убедитесь что у него нет встроенных стилей, препятствующих центрированию */
+.logo-container img {
+    max-width: 100%;      /* Чтобы изображение было отзывчивым и не выходило за пределы контейнера */
+    height: auto;         /* Высота автоматически регулируется в соответствии с шириной */
+}
+
+/* Текст под логотипом, если он находится внутри отдельных элементов */
+.logo-container .logo-text {
+    text-align: center;   /* Центрирование текста внутри каждого элемента */
+    width: 100%;          /* Элементы занимают всю ширину контейнера */
+}
+
 
 .sidebar-section-header {
   color: var(--sidebar-header-color); /* Text color */
@@ -130,6 +185,19 @@ li > a.menu__link {
     }
 }
 
+/* Pagination NavLink */
+
+[data-theme="dark"] .pagination-nav__link:hover {
+    font-weight: bold; /* Жирный текст при наведении */
+    /*border-color: #eeeeee;*/
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* Подсветка текста для лучшей видимости */
+}
+
+/*[data-theme="dark"] .pagination-nav__link a:hover,
+[data-theme="dark"] .hash-link,
+[data-theme="dark"] .hash-link:hover{
+    color: #eeeeee;
+}*/
 
 /* Code Block */
 
@@ -142,3 +210,4 @@ code .variable {
 .icon-osmosis {
     background-image: url('../../static/img/osmosis-icon.svg');
 }
+

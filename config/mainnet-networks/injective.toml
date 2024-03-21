@@ -1,0 +1,40 @@
+# Blockchain
+CHAIN_NAME="Injective"
+CHAIN_SYSTEM_NAME="injective"
+CHAIN_ID="auto"
+CHAIN_DESCRIPTION="Osmosis is a decentralized peer-to-peer blockchain that people can use to create liquidity and trade IBC enabled tokens. The Osmosis blockchain is made up of free, public, and open-source software."
+CHAIN_DENOM="inj"
+CHAIN_FEES="3000"
+
+# Binary
+DAEMON_NAME="injectived"
+DAEMON_VERSION="v1.12.1"
+DAEMON_SERVICE="injectived.service"
+DAEMON_HOME="~/.injectived"
+
+# Endpoints
+ENDPOINT_RPC=""
+ENDPOINT_API=""
+ENDPOINT_GRPCWEB=""
+ENDPOINT_GRPC=""
+ENDPOINT_PEER="auto"
+
+# Social
+SOCIAL_WEBSITE="https://injective.com/"
+SOCIAL_GITHUB="https://github.com/InjectiveLabs"
+SOCIAL_DISCORD="https://discord.com/invite/NK4qdbv"
+SOCIAL_X="https://twitter.com/Injective"
+SOCIAL_TELEGRAM="https://t.me/joininjective"
+
+# Other
+DOWNLOAD_URL="https://snapshots.mainnet.noders.team/injective/"
+GITHUB_FOLDER_NAME="auto"
+
+# Updates
+UPDATE_MAIN=true
+UPDATE_CATEGORY=true
+UPDATE_UPGRADE=true
+UPDATE_SNAPSHOT=true
+UPDATE_STATESYNC=true
+UPDATE_LIVE_PEERS=true
+UPDATE_CLI_CHEATSHEET=true

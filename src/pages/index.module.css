@@ -4,7 +4,7 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 3rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -26,9 +26,11 @@
 
 .logoContainer {
   position: relative;
-  width: 350px;
-  height: 350px;
-  margin-bottom: 30px;
+  width: 250px; /* фиксированная ширина */
+  height: 250px; /* фиксированная высота */
+  margin: 155px auto 0;
+  margin-bottom: 50px;
+  /* добавляем отступ сверху, авто-маргины по бокам для центрирования, 0 внизу */
 }
 
 .backgroundImage {
@@ -42,16 +44,17 @@
 }
 
 /* Header Hero */
+
 .HeaderHero {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 95vh;
+  min-height: 50vh; /* Было 95vh, теперь min-height, чтобы подстроиться под контент */
 }
 
 .HeaderHero .title {
-  font-size: 64px;
+  font-size: 48px;
   color: var(--brand);
   line-height: 1;
   margin-top: 0;
@@ -60,7 +63,7 @@
 }
 
 .HeaderHero .tagline {
-  font-size: 36px;
+  font-size: 24px;
   line-height: 1.3;
   color: white;
   font-weight: 500;
@@ -68,9 +71,9 @@
 }
 
 [data-theme='light'] .HeaderHero .tagline {
-  font-size: 36px;
+  font-size: 24px;
   line-height: 1.3;
-  color: black;
+  color: #000000;
   font-weight: 500;
   text-align: center;
 }
@@ -85,10 +88,11 @@
   justify-content: center;
 }
 
-@media only screen and (min-width: 481px) and (max-width: 960px) {
+@media only screen and (max-width: 481px) {
   .HeaderHero .title {
     display: flex;
     justify-content: center;
+    font-size: 24px;
   }
   .HeaderHero .column.last {
     text-align: center;
@@ -101,11 +105,11 @@
   }
 
   .HeaderHero .tagline {
-    font-size: 30px;
+    font-size: 18px;
   }
 
   .HeaderHero .socialLinks {
-    margin-top: -2rem;
+    margin-top: 1rem;
   }
 }
 
@@ -145,48 +149,70 @@
 
 /* ActionButton */
 
+/* ActionButton */
+
 .ActionButton {
-  padding: 0.50rem 1.25rem;
+  padding: 0.40rem 1.25rem;
   text-align: center;
   font-weight: 600;
   font-size: 1rem;
   text-decoration: none !important;
-  border-bottom: none;
-  transition: all 0.4s ease-out;
+  border: 1px solid transparent; /* Initialize with a transparent border */
+  transition: all 0.5s ease-out;
   border-radius: 25px;
 }
 
 .ActionButton.primary {
   margin-right: 5px;
-  color: black;
-  background-color: #14F195;
+  color: #ffffff;
+  background-color: #3058e3;
+  border: 1px solid #3058e3; /* Match the border color to background */
 }
 
+/* Maintain the color scheme on hover, without layout shift */
 [data-theme='dark'] .ActionButton.primary:hover {
-  color: black;
-  background-color: white;
+  color: #ffffff;
+  background-color: rgba(25, 25, 25, 0.47);
+  border-color: #3058e3; /* Make the border white on hover */
 }
 
 .ActionButton.secondary {
   margin-left: 5px;
-  color: #14F195;
-  border: 1px solid #14F195;
+  color: #ffffff;
+  background-color: transparent; /* Keep background transparent */
+  border: 1px solid #ffffff; /* Match the border color to the original */
 }
 
+/* Maintain the color scheme on hover, without layout shift */
 [data-theme='dark'] .ActionButton.secondary:hover {
-  margin-left: 5px;
-  color: white;
-  border: 1px solid white;
+  color: rgb(255, 255, 255);
+  background-color: rgba(25, 25, 25, 0.67); /* Background color matches border */
+  border-color: #3058e3; /* Border becomes white */
 }
 
 [data-theme='light'] .ActionButton.primary {
   margin-right: 5px;
-  color: black;
-  background-color: #14F195;
+  color: #ffffff;
+  background-color: #3058e3;
+  border: 1px solid transparent; /* Keep transparent border */
+}
+
+/* For light theme, keep the hover effects the same */
+[data-theme='light'] .ActionButton.primary:hover {
+  color: #3058e3;
+  background-color: #ffffff;
+  border-color: #3058e3; /* Just change border color, no layout shift */
 }
 
 [data-theme='light'] .ActionButton.secondary {
   margin-left: 5px;
-  color: #00cd78;
-  border: 1px solid #00cd78;
+  color: #191919;
+  border: 1px solid rgba(25, 25, 25, 0.67); /* Keep the initial border color */
+}
+
+/* For light theme, keep the hover effects the same */
+[data-theme='light'] .ActionButton.secondary:hover {
+  color: #3058e3;
+  background-color: rgb(255, 255, 255);
+  border-color: #3058e3; /* Just change border color, no layout shift */
 }

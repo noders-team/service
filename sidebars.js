@@ -22,6 +22,22 @@ const sidebars = {
       type: 'html',
       value: 'Getting Started 1',
       className: 'sidebar-section-header',
+    },{
+      type: 'category',
+      label: 'Testnet Introduction',
+      link: {
+        type: 'doc',
+        id: 'testnet-networks/template',
+      },
+      collapsible: true,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'testnet-networks/template',
+          label: 'Introduction to Solana'
+        },
+      ]
     },
     {
       type: 'category',
@@ -37,12 +53,13 @@ const sidebars = {
           type: 'doc',
           id: 'mainnet-networks/template',
           label: 'Introduction to Solana'
-        },
+        }
       ]
     },
   ],
 
   ...require("./sidebars/mainnetSidebar.js"),
+  ...require("./sidebars/testnetSidebar.js"), // Убедитесь, что этот файл существует и структурирован правильно
 
 };
 

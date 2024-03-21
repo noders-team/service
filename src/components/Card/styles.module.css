@@ -1,27 +1,17 @@
+/* Базовые стили */
 .cardContainer {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 18px;
-  background-color: var(--card-background);
-  border: 1px solid var(--card-border-color);
+  border-radius: 30px;
   transition: background-color 0.2s, box-shadow 0.2s, border-color 0.2s;
-  height: auto;
+  height: 170px;
   overflow: hidden;
   padding: 18px 18px 0px 18px;
 }
 
 @media screen and (max-width: 768px) {
   .cardContainer {
-      width: 100%;
+    width: 100%;
   }
-}
-
-[data-theme="dark"] .cardContainer {
-  --card-background: #2c2c2c;
-  --card-border-color: #3b3b3b;
-}
-
-[data-theme="light"] .cardContainer {
-  --card-border-color: #2c2c2c;
 }
 
 .cardLink {
@@ -30,38 +20,16 @@
   text-decoration: none;
 }
 
-.cardHeader {
-  display: flex;
-  color: white;
-  transition: color 0.2s; /* Added transition property */
-  align-items: center;
+.cardHeader, .cardBody {
+  transition: color 0.2s;
 }
 
-[data-theme="light"] .cardHeader {
-  display: flex;
-  color: black;
-  transition: color 0.2s; /* Added transition property */
-}
-
-.cardBody {
-  color: #ffffffb3;
-  transition: color 0.2s; /* Added transition property */
-}
-
-[data-theme="light"] .cardBody {
-  color: #000000;
-  transition: color 0.2s; /* Added transition property */
-}
-
-.cardIcon {
-  width: 32px;
-  height: 32px;
+.cardIcon, .emojiIcon {
   margin-right: 8px;
   background-color: transparent;
 }
 
 .emojiIcon {
-  margin-right: 8px;
   font-size: 24px;
   align-self: center;
 }
@@ -70,29 +38,50 @@
   margin: 0;
 }
 
-/* Hover */ 
-
+/* Hover effects */
 .cardContainer:hover {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border: 1px solid var(--outline-color);
-}
-
-[data-theme="light"] .cardContainer:hover {
-  --outline-color: var(--ifm-color-primary-light);
-}
-
-[data-theme="dark"] .cardContainer:hover {
-  --outline-color: var(--ifm-color-primary-light);
+  box-shadow: 0 1px 10px rgb(255, 255, 255);
 }
 
 .cardLink:hover {
   text-decoration: none;
 }
 
-.cardContainer:hover .cardBody p {
-  color: var(--ifm-color-primary-light);
+/* Стили для темной темы */
+[data-theme="dark"] .cardContainer {
+  background-color: #2c2c2c; /* Темный фон для темной темы */
+  border: 1px solid #3b3b3b; /* Начальная граница для темной темы */
+  transition: border-color 0.3s ease; /* Плавный переход для границы */
 }
 
-.cardContainer:hover .cardHeader {
-  color: var(--ifm-color-primary-light);
+[data-theme="dark"] .cardContainer:hover {
+  border-color: #ffffff; /* Белая обводка при наведении */
+}
+
+[data-theme="dark"] .cardHeader,
+[data-theme="dark"] .cardBody {
+  color: #ffffff; /* Белый цвет текста */
+  transition: font-weight 0.2s ease, text-shadow 0.2s ease; /* Плавные переходы для текста */
+}
+
+[data-theme="dark"] .cardContainer:hover .cardHeader,
+[data-theme="dark"] .cardContainer:hover .cardBody {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* Подсветка текста при наведении */
+}
+
+/* Стили для светлой темы */
+[data-theme="light"] .cardContainer {
+  background-color: #ffffff;
+  border: 1px solid #ffffff; /* Измените это значение, если нужен другой цвет обводки */
+}
+
+[data-theme="light"] .cardContainer:hover {
+  border-color: #000000; /* Черная обводка при наведении */
+}
+
+[data-theme="light"] .cardHeader,
+[data-theme="light"] .cardBody,
+[data-theme="light"] .cardContainer:hover .cardHeader,
+[data-theme="light"] .cardContainer:hover .cardBody {
+  color: #000000; /* Черный цвет текста */
 }

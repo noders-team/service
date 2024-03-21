@@ -40,7 +40,7 @@ function HomeCallToAction() {
       </ActionButton>
       <ActionButton
         type="secondary"
-        href={useBaseUrl('mainnet-networks/osmosis')}
+        href={useBaseUrl('testnet-networks/osmosis')}
         target="_self">
         Testnet Networks
       </ActionButton>
@@ -76,7 +76,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="A mobile development stack for building Solana Mobile dApps">
+      description="Trusted blockchain validator and web3 developer team">
       <HeaderHero />
     </Layout>
   );

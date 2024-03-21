@@ -33,6 +33,7 @@ import CardLayout from "../../src/layouts/CardLayout"
         }}
         body={{
             label: "Trusted blockchain validator",
+            translateId: "development-setup-body",
         }}
         iconPath="img/kotlin-icon-32.svg"
     />
