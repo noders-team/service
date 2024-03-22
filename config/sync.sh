@@ -43,12 +43,14 @@ function readBlockchainConfig {
   SOCIAL_X_BLOCK=""
   SOCIAL_TELEGRAM_BLOCK=""
 
+
   # Other
   DOWNLOAD_URL=$(grep -oE '^DOWNLOAD_URL=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   GITHUB_FOLDER_NAME=$(grep -oE '^GITHUB_FOLDER_NAME=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   LIVE_PEERS_COUNT=""
   LIVE_PEERS_ALL=""
   LIVE_PEERS_RANDOM=""
+
 
   # Updates
   UPDATE_MAIN=$(grep -oE '^UPDATE_MAIN=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
@@ -83,49 +85,49 @@ function enrichBlockchainConfig {
 
 function replacePageVariables {
   # Blockchain
-  sed -i '' "s|\[CHAIN_NAME\]|${CHAIN_NAME}|g" $1
-  sed -i '' "s|\[CHAIN_SYSTEM_NAME\]|${CHAIN_SYSTEM_NAME}|g" $1
-  sed -i '' "s|\[CHAIN_ID\]|${CHAIN_ID}|g" $1
-  sed -i '' "s|\[CHAIN_DESCRIPTION\]|${CHAIN_DESCRIPTION}|g" $1
-  sed -i '' "s|\[CHAIN_DENOM\]|${CHAIN_DENOM}|g" $1
-  sed -i '' "s|\[CHAIN_FEES\]|${CHAIN_FEES}|g" $1
+  sed -i'' "s|\[CHAIN_NAME\]|${CHAIN_NAME}|g" $1
+  sed -i'' "s|\[CHAIN_SYSTEM_NAME\]|${CHAIN_SYSTEM_NAME}|g" $1
+  sed -i'' "s|\[CHAIN_ID\]|${CHAIN_ID}|g" $1
+  sed -i'' "s|\[CHAIN_DESCRIPTION\]|${CHAIN_DESCRIPTION}|g" $1
+  sed -i'' "s|\[CHAIN_DENOM\]|${CHAIN_DENOM}|g" $1
+  sed -i'' "s|\[CHAIN_FEES\]|${CHAIN_FEES}|g" $1
 
   # Binary
-  sed -i '' "s|\[DAEMON_NAME\]|${DAEMON_NAME}|g" $1
-  sed -i '' "s|\[DAEMON_VERSION\]|${DAEMON_VERSION}|g" $1
-  sed -i '' "s|\[DAEMON_SERVICE\]|${DAEMON_SERVICE}|g" $1
-  sed -i '' "s|\[DAEMON_HOME\]|${DAEMON_HOME}|g" $1
+  sed -i'' "s|\[DAEMON_NAME\]|${DAEMON_NAME}|g" $1
+  sed -i'' "s|\[DAEMON_VERSION\]|${DAEMON_VERSION}|g" $1
+  sed -i'' "s|\[DAEMON_SERVICE\]|${DAEMON_SERVICE}|g" $1
+  sed -i'' "s|\[DAEMON_HOME\]|${DAEMON_HOME}|g" $1
 
   # Endpoints
-  sed -i '' "s|\[ENDPOINT_RPC\]|${ENDPOINT_RPC}|g" $1
-  sed -i '' "s|\[ENDPOINT_API\]|${ENDPOINT_API}|g" $1
-  sed -i '' "s|\[ENDPOINT_GRPCWEB\]|${ENDPOINT_GRPCWEB}|g" $1
-  sed -i '' "s|\[ENDPOINT_GRPC\]|${ENDPOINT_GRPC}|g" $1
-  sed -i '' "s|\[ENDPOINT_PEER\]|${ENDPOINT_PEER}|g" $1
+  sed -i'' "s|\[ENDPOINT_RPC\]|${ENDPOINT_RPC}|g" $1
+  sed -i'' "s|\[ENDPOINT_API\]|${ENDPOINT_API}|g" $1
+  sed -i'' "s|\[ENDPOINT_GRPCWEB\]|${ENDPOINT_GRPCWEB}|g" $1
+  sed -i'' "s|\[ENDPOINT_GRPC\]|${ENDPOINT_GRPC}|g" $1
+  sed -i'' "s|\[ENDPOINT_PEER\]|${ENDPOINT_PEER}|g" $1
 
-  sed -i '' "s|\[ENDPOINT_RPC_BLOCK\]|${ENDPOINT_RPC_BLOCK}|g" $1
-  sed -i '' "s|\[ENDPOINT_API_BLOCK\]|${ENDPOINT_API_BLOCK}|g" $1
-  sed -i '' "s|\[ENDPOINT_GRPCWEB_BLOCK\]|${ENDPOINT_GRPCWEB_BLOCK}|g" $1
+  sed -i'' "s|\[ENDPOINT_RPC_BLOCK\]|${ENDPOINT_RPC_BLOCK}|g" $1
+  sed -i'' "s|\[ENDPOINT_API_BLOCK\]|${ENDPOINT_API_BLOCK}|g" $1
+  sed -i'' "s|\[ENDPOINT_GRPCWEB_BLOCK\]|${ENDPOINT_GRPCWEB_BLOCK}|g" $1
 
   # Social
-  sed -i '' "s|\[SOCIAL_WEBSITE\]|${SOCIAL_WEBSITE}|g" $1
-  sed -i '' "s|\[SOCIAL_GITHUB\]|${SOCIAL_GITHUB}|g" $1
-  sed -i '' "s|\[SOCIAL_DISCORD\]|${SOCIAL_DISCORD}|g" $1
-  sed -i '' "s|\[SOCIAL_X\]|${SOCIAL_X}|g" $1
-  sed -i '' "s|\[SOCIAL_TELEGRAM\]|${SOCIAL_TELEGRAM}|g" $1
+  sed -i'' "s|\[SOCIAL_WEBSITE\]|${SOCIAL_WEBSITE}|g" $1
+  sed -i'' "s|\[SOCIAL_GITHUB\]|${SOCIAL_GITHUB}|g" $1
+  sed -i'' "s|\[SOCIAL_DISCORD\]|${SOCIAL_DISCORD}|g" $1
+  sed -i'' "s|\[SOCIAL_X\]|${SOCIAL_X}|g" $1
+  sed -i'' "s|\[SOCIAL_TELEGRAM\]|${SOCIAL_TELEGRAM}|g" $1
 
-  sed -i '' "s|\[SOCIAL_WEBSITE_BLOCK\]|${SOCIAL_WEBSITE_BLOCK}|g" $1
-  sed -i '' "s|\[SOCIAL_GITHUB_BLOCK\]|${SOCIAL_GITHUB_BLOCK}|g" $1
-  sed -i '' "s|\[SOCIAL_DISCORD_BLOCK\]|${SOCIAL_DISCORD_BLOCK}|g" $1
-  sed -i '' "s|\[SOCIAL_X_BLOCK\]|${SOCIAL_X_BLOCK}|g" $1
-  sed -i '' "s|\[SOCIAL_TELEGRAM_BLOCK\]|${SOCIAL_TELEGRAM_BLOCK}|g" $1
+  sed -i'' "s|\[SOCIAL_WEBSITE_BLOCK\]|${SOCIAL_WEBSITE_BLOCK}|g" $1
+  sed -i'' "s|\[SOCIAL_GITHUB_BLOCK\]|${SOCIAL_GITHUB_BLOCK}|g" $1
+  sed -i'' "s|\[SOCIAL_DISCORD_BLOCK\]|${SOCIAL_DISCORD_BLOCK}|g" $1
+  sed -i'' "s|\[SOCIAL_X_BLOCK\]|${SOCIAL_X_BLOCK}|g" $1
+  sed -i'' "s|\[SOCIAL_TELEGRAM_BLOCK\]|${SOCIAL_TELEGRAM_BLOCK}|g" $1
 
   # Other
-  sed -i '' "s|\[DOWNLOAD_URL\]|${DOWNLOAD_URL}|g" $1
-  sed -i '' "s|\[GITHUB_FOLDER_NAME\]|${GITHUB_FOLDER_NAME}|g" $1
-  sed -i '' "s|\[LIVE_PEERS_COUNT\]|${LIVE_PEERS_COUNT}|g" $1
-  sed -i '' "s|\[LIVE_PEERS_ALL\]|${LIVE_PEERS_ALL}|g" $1
-  sed -i '' "s|\[LIVE_PEERS_RANDOM\]|${LIVE_PEERS_RANDOM}|g" $1
+  sed -i'' "s|\[DOWNLOAD_URL\]|${DOWNLOAD_URL}|g" $1
+  sed -i'' "s|\[GITHUB_FOLDER_NAME\]|${GITHUB_FOLDER_NAME}|g" $1
+  sed -i'' "s|\[LIVE_PEERS_COUNT\]|${LIVE_PEERS_COUNT}|g" $1
+  sed -i'' "s|\[LIVE_PEERS_ALL\]|${LIVE_PEERS_ALL}|g" $1
+  sed -i'' "s|\[LIVE_PEERS_RANDOM\]|${LIVE_PEERS_RANDOM}|g" $1
 
 }
 
@@ -247,6 +249,23 @@ function updateCLICheatsheet {
 #                                                                              INSTALL                                                                              #
 #####################################################################################################################################################################
 for config_file in "mainnet-networks"/*
+do
+  echo "${config_file}"
+  readBlockchainConfig "${config_file}"
+  enrichBlockchainConfig
+
+  updateMain
+  updateCategory
+  updateUpgrade
+  updateSnapshot
+  updateStatesync
+  updateLivePeers
+  updateCLICheatsheet
+
+  #echo ${LIVE_PEERS_RANDOM}
+done
+
+for config_file in "testnet-networks"/*
 do
   echo "${config_file}"
   readBlockchainConfig "${config_file}"

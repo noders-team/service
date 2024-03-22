@@ -1,0 +1,60 @@
+# Blockchain
+CHAIN_NAME="Aura"
+CHAIN_SYSTEM_NAME="aura"
+CHAIN_ID="auto"
+CHAIN_DESCRIPTION="""Aura Network is a scalable, agile and effortless Layer-1 blockchain with a comprehensive ecosystem built to accelerate global NFTs adoption.
+
+Built with a focus on interoperability, user experience, and developer friendliness, Aura aims to address some of the most pressing challenges facing the blockchain industry today, including scalability, ease of use, and cross-chain communication.
+
+Key Features of Aura Network:
+Scalability: One of the core strengths of Aura Network is its ability to process a high volume of transactions efficiently, thanks to its advanced consensus mechanism and blockchain architecture. This makes it an attractive platform for developers looking to build scalable dApps that can accommodate a growing number of users.
+
+Interoperability: Aura Network emphasizes seamless interoperability with other blockchains, allowing for the free flow of assets and data across different ecosystems. This interoperability is crucial for building complex applications that leverage the strengths of multiple blockchain networks.
+
+Developer Friendly: The platform offers a range of tools and resources designed to simplify the development process. This includes comprehensive documentation, SDKs, and APIs that enable developers to quickly build, test, and deploy their applications on the Aura Network.
+
+Enhanced User Experience: Recognizing the importance of user experience in driving blockchain adoption, Aura Network focuses on creating a user-friendly environment. This includes intuitive interfaces, fast transaction times, and minimal fees, making it accessible for both seasoned blockchain users and newcomers.
+
+Sustainability: Aura Network is committed to sustainability and environmental responsibility. The network's consensus mechanism is designed to be energy-efficient, reducing the carbon footprint associated with blockchain operations.
+
+Applications of Aura Network:
+Aura Network is versatile and can support a wide range of applications, from decentralized finance (DeFi) platforms and non-fungible token (NFT) marketplaces to gaming and social media applications. Its scalability and interoperability make it an ideal platform for projects looking to offer a seamless experience across different blockchains.
+
+Conclusion:
+Aura Network represents a significant step forward in the development of blockchain infrastructure. By focusing on scalability, interoperability, and a positive user experience, Aura aims to broaden the appeal of blockchain technology and foster the development of a more connected and accessible digital ecosystem. Its commitment to sustainability and developer support further positions Aura Network as a forward-thinking platform ready to meet the evolving needs of the blockchain community."""
+
+CHAIN_DENOM="uaura"
+CHAIN_FEES="3000"
+
+# Binary
+DAEMON_NAME="aurad"
+DAEMON_VERSION="v0.7.2"
+DAEMON_SERVICE="aurad.service"
+DAEMON_HOME="~/.aura"
+
+# Endpoints
+ENDPOINT_RPC=""
+ENDPOINT_API=""
+ENDPOINT_GRPCWEB=""
+ENDPOINT_GRPC=""
+ENDPOINT_PEER="auto"
+
+# Social
+SOCIAL_WEBSITE="https://aura.network/"
+SOCIAL_GITHUB="https://github.com/aura-nw"
+SOCIAL_DISCORD="https://discord.com/invite/ZFHepmtZvr"
+SOCIAL_X="https://twitter.com/AuraNetworkHQ"
+SOCIAL_TELEGRAM="https://t.me/AuraNetworkOfficial"
+
+# Other
+DOWNLOAD_URL="h"
+GITHUB_FOLDER_NAME="auto"
+
+# Updates
+UPDATE_MAIN=true
+UPDATE_CATEGORY=true
+UPDATE_UPGRADE=true
+UPDATE_SNAPSHOT=true
+UPDATE_STATESYNC=true
+UPDATE_LIVE_PEERS=true
+UPDATE_CLI_CHEATSHEET=true

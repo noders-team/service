@@ -4,24 +4,24 @@ title: Upgrade *
 sidebar_position: 2
 ---
 
-<div class="h1-with-icon icon-[CHAIN_SYSTEM_NAME]">
+<div class="h1-with-icon icon-injective">
 # Upgrade
 </div>
-###### Chain ID: `[CHAIN_ID]` | Current Node Version: `[DAEMON_VERSION]`
+###### Chain ID: `` | Current Node Version: `v1.12.1`
 
 ```bash
 # Clone project repository
 cd $HOME
-rm -rf [GITHUB_FOLDER_NAME]
-git clone [SOCIAL_GITHUB].git
-cd [GITHUB_FOLDER_NAME]
-git checkout [DAEMON_VERSION]
+rm -rf InjectiveLabs
+git clone https://github.com/InjectiveLabs.git
+cd InjectiveLabs
+git checkout v1.12.1
 
 # Build binaries
 make build
 
 # Prepare binaries for Cosmovisor
-mkdir -p [DAEMON_HOME]/cosmovisor/upgrades/[DAEMON_VERSION]/bin
-mv build/[DAEMON_NAME] [DAEMON_HOME]/cosmovisor/upgrades/[DAEMON_VERSION]/bin/
+mkdir -p ~/.injectived/cosmovisor/upgrades/v1.12.1/bin
+mv build/injectived ~/.injectived/cosmovisor/upgrades/v1.12.1/bin/
 rm -rf build
 ```

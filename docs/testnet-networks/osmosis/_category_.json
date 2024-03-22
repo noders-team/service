@@ -1,5 +1,5 @@
 {
-  "label": "Osmosis",
+  "label": "[CHAIN_NAME]",
   "position": 1,
   "link": {
     "type": "generated-index"
