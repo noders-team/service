@@ -30,7 +30,7 @@ Official links of social networks of projects
 
 <CardLayout autoFitEnabled={true}>
     <Card
-        to="/testnet-networks/[VALIDATOR_LINK]"
+        to="[VALIDATOR_LINK]"
         header={{
             label: "[NODERS]TEAM",
             translateId: "development-setup",
