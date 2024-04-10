@@ -19,10 +19,14 @@ sudo apt -qy upgrade
 
 ## Install GO
 ```js
-sudo rm -rf /usr/local/go
-curl -Ls https://go.dev/dl/go1.21.3.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
-eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
-eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
+ver="1.21.3" &&
+wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" &&
+sudo rm -rf /usr/local/go &&
+sudo tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz" &&
+rm "go$ver.linux-amd64.tar.gz" &&
+echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> $HOME/.bash_profile &&
+source $HOME/.bash_profile &&
+go version
 ```
 
 ## Install with Cosmovisor
