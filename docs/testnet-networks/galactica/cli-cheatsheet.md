@@ -1,0 +1,275 @@
+---
+hide_table_of_contents: false
+title: CLI Cheatsheet
+sidebar_position: 8
+---
+
+<div class="h1-with-icon icon-galactica">
+# CLI Cheatsheet
+</div>
+###### Chain ID: `galactica_9302-1` | Current Node Version: `v0.1.2`
+
+This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
+
+- Capitalized words indicate placeholders
+- Always use our own [NODERS]TEAM RPC endpoints
+- Always specify `--chain-id` and `--node` flags even when they are unnecessary
+- Query CLI command always uses `--output json` flag and pipes result through `jq`
+
+## Wallet generate and recover
+### Add new key
+```js
+galacticad keys add KEY
+```
+
+### Recover key (via existing mnemonic)
+```js
+galacticad keys add KEY --recover
+```
+
+### List all keys
+```js
+galacticad keys list
+```
+
+### Delete key
+```js
+galacticad keys delete KEY
+```
+
+## Wallet
+### Wallet balance
+```js
+galacticad q bank balances $(galacticad keys show KEY -a) --node https://galactica-t-rpc.noders.services:443
+```
+
+### Send
+```js
+galacticad tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000agnet \
+  --chain-id galactica_9302-1 \
+  --node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
+  --from KEY
+```
+
+### Withdraw rewards from all validators
+```js
+galacticad tx distribution withdraw-all-rewards \
+  --chain-id galactica_9302-1 \
+  --node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
+  --from KEY
+```
+
+### Withdraw Rewards including Commission
+```js
+galacticad tx distribution withdraw-rewards VALIDATOR_ADRESS \
+  --commission \
+  --chain-id galactica_9302-1 \
+  --node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
+  --from KEY
+```
+
+### Delegate tokens to yourself
+```js
+galacticad tx staking delegate $(galacticad keys show KEY --bech val -a) 1000000agnet \
+--chain-id galactica_9302-1 \
+--node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
+--from KEY
+```
+
+### Delegate tokens to validator
+```js
+galacticad tx staking delegate VALIDATOR_ADDRESS 1000000agnet \
+--chain-id galactica_9302-1 \
+--node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
+--from KEY
+```
+
+### Redelegate tokens to another validator
+```js
+galacticad tx staking redelegate $(galacticad keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000agnet \
+  --chain-id galactica_9302-1 \
+  --node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
+  --from KEY
+```
+
+### Unbond tokens from your validator
+```js
+galacticad tx staking unbond $(galacticad keys show KEY --bech val -a) agnet \
+  --chain-id andromeda-1 \
+  --node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
+  --from KEY
+```
+
+## Governance
+### List of all proposals
+```js
+galacticad query gov proposals --node https://galactica-t-rpc.noders.services:443
+```
+### Check vote
+```js
+galacticad query gov proposal PROPOSAL_NUMBER \
+  --chain-id galactica_9302-1 \
+  --node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
+  --output json | jq
+```
+
+### Vote
+#### Vote options:
+* yes
+* no
+* no_with_veto
+* abstain
+```js
+galacticad tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
+  --chain-id galactica_9302-1 \
+  --node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
+  --from KEY
+```
+
+## Validator management
+### Create Validator
+:::note
+We use example filed values instead of capitalized dummy words for demo purpose in this command. Please make sure to adjust accordingly for your use.
+:::
+```js
+galacticad tx staking create-validator \
+  --amount 1000000agnet \
+  --commission-max-change-rate "0.05" \
+  --commission-max-rate "0.10" \
+  --commission-rate "0.05" \
+  --min-self-delegation "1" \
+  --pubkey=$(galacticad tendermint show-validator) \
+  --moniker '[NODERS]TEAM SERVICE' \
+  --website "https://noders.team" \
+  --identity "220491ADDD660741" \
+  --details "Trusted blockchain validator and web3 developer team" \
+  --security-contact="office@noders.team" \
+  --chain-id galactica_9302-1 \
+  --node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
+  --from KEY
+```
+
+### Edit validator
+```js
+galacticad tx staking edit-validator \
+--new-moniker "YOUR_MONIKER_NAME" \
+--identity "YOUR_KEYBASE_ID" \
+--details "YOUR_DETAILS" \
+--website "YOUR_WEBSITE_URL" \
+--chain-id galactica_9302-1 \
+--commission-rate 0.05 \
+--from KEY \
+--node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
+```
+
+### Unjail
+```js
+galacticad tx slashing unjail \
+  --chain-id galactica_9302-1 \
+  --node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
+  --from KEY
+```
+
+### Jail reason
+```js
+galacticad query slashing signing-info $(galacticad tendermint show-validator)
+```
+
+### Validator details
+```js
+galacticad q staking validator $(galacticad keys show KEY --bech val -a)
+```
+
+## Maintenance
+### Get validator info
+```js
+galacticad status 2>&1 | jq .ValidatorInfo
+```
+
+### Get sync info
+```js
+galacticad status 2>&1 | jq .SyncInfo
+```
+
+### Get node peer
+```js
+echo $(galacticad tendermint show-node-id)'@'$(curl -s ifconfig.me)':'$(cat ~/.galactica/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
+```
+
+### Check if validator key is correct
+```js
+[[ $(galacticad q staking validator $(galacticad keys show KEY --bech val -a) -oj | jq -r .consensus_pubkey.key) = $(galacticad status | jq -r .ValidatorInfo.PubKey.value) ]] && echo -e "\n\e[1m\e[32mTrue\e[0m\n" || echo -e "\n\e[1m\e[31mFalse\e[0m\n"
+```
+
+### Get live peers
+```js
+curl -sS https://galactica-t-rpc.noders.services:443/net_info | jq -r '.result.peers[] | "\(.node_info.id)@\(.remote_ip):\(.node_info.listen_addr)"' | awk -F ':' '{print $1":"$(NF)}'
+```
+
+### Set minimum gas price
+```js
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.001agnet\"/" ~/.galactica/config/app.toml
+```
+
+###Enable prometheus
+```js
+sed -i -e "s/prometheus = false/prometheus = true/" ~/.galactica/config/config.toml
+```
+
+### Reset chain data
+```js
+galacticad tendermint unsafe-reset-all --keep-addr-book --home ~/.galactica
+```
+
+## Service Management
+### Reload service configuration
+```js
+sudo systemctl daemon-reload
+```
+
+### Enable service
+```js
+sudo systemctl enable galactica.service
+```
+
+### Disable service
+```js
+sudo systemctl disable galactica.service
+```
+
+### Start service
+```js
+sudo systemctl start galactica.service
+```
+
+### Stop service
+```js
+sudo systemctl stop galactica.service
+```
+
+### Restart service
+```js
+sudo systemctl restart galactica.service
+```
+
+### Check service status
+```js
+sudo systemctl status galactica.service
+```
+
+### Check service logs
+```js
+sudo journalctl -u galactica.service -f --no-hostname -o cat
+```
+
+## Remove node
+```js
+cd $HOME
+sudo systemctl stop galactica.service
+sudo systemctl disable galactica.service
+sudo rm /etc/systemd/system/galactica.service
+sudo systemctl daemon-reload
+rm -f $(which galacticad)
+rm -rf ~/.galactica
+rm -rf $HOME/networks
+```

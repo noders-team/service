@@ -1,34 +1,34 @@
 ---
 hide_table_of_contents: false
-title: Live peers*
-sidebar_position: 5
+title: Live peers
+sidebar_position: 6
 ---
 
-<div class="h1-with-icon icon-[CHAIN_SYSTEM_NAME]">
+<div class="h1-with-icon icon-osmosis">
 # Live Peers
 </div>
-###### Chain ID: `[CHAIN_ID]` | Current Node Version: `[DAEMON_VERSION]`
+###### Chain ID: `osmosis-1` | Current Node Version: `23.0.0`
 
-## All Live Peers for [CHAIN_NAME]
-Here is a list of [LIVE_PEERS_COUNT] active peers as observed by [NODERS]TEAM in real-time. Add them to your `config.toml` if you have trouble finding peers.
+## All Live Peers for Osmosis
+Here is a list of 50 active peers as observed by [NODERS]TEAM in real-time. Add them to your `config.toml` if you have trouble finding peers.
 
 ```bash
-[LIVE_PEERS_ALL]
+c53dfe934aaba87008cd389e56bfc683861d53b1@51.222.143.30:56656,0968bbd97652ae1c7c0c6ce577230bd5d9f12eee@2a01:26656,d4075a59bfab35f70f207364460302f25ef7eca0@65.21.89.245:26656,f3262b9f490720920b0002fadd500af1cef3e6a6@51.222.40.84:26656,c4f143a940e651a3d7e45a202dd6565b1e6f4504@74.118.136.132:26656,aed7f2724726732d1c55b90a2ac5372fd8051b66@49.12.86.237:26656,4bb3629e3dc67e59c2367f6baa1e12e79cbc7ab2@128.140.93.9:26656,bc76d3251eaf3c559c531cd0f6a166aedcee6928@164.90.230.180:26100,eea2aa9f38c5bae8ebca9d4b5abce3c7233bfa69@141.98.216.190:26656,89623bf9fb9e64054cfe98ae1858d13181eef4ff@149.56.19.139:10101,c51c7cf2855d3fbbc4319b3b5bc0ac394826a046@18.189.57.228:26656,68462df6b431e6b9b557be17eae06790d315eacf@65.21.84.54:10101,d03e94c7ad1695ddd6145b187d10323991ec02f9@157.90.131.229:26656,beb75519a1993bfc2fbc23fa25213fbc0170f0cc@159.203.79.46:26100,13832193ba6d478e53b3887fd0452dca9f494acc@147.182.231.31:26656,affdf33799193b0368c9c752c69d6319ac41cd80@167.235.187.10:26656,055080e28a43554a708e5a5050bcdcb6d8dce718@138.201.222.149:26656,efbe79e244693ae343dd8b6308bf4b708da82200@74.118.139.212:26656,8350d3910f2805fa5bca28f3a597f4781b9b5f0f@65.108.193.249:2000,fe7873a8c6c4e2bda68a53c83d35fbf52016441c@185.119.118.110:2000,af9237697ceb26610c756d087760c2efc6fd16bc@136.243.7.108:10101,00d6d1177c5899cef52bd85312cc227f01f25e93@5.78.85.4:10101,8fe249502d4d36a43acefca163c8f2c14a27402d@65.109.141.32:10101,ccb85de2b4928cc67f7fb0acbdb5f6cae169eb6e@65.21.20.54:10101,9e1698b35041778794d4cfa97c623d4239603c82@95.216.185.206:26656,ed8ee7c187a602710eecdcdd7ba6adf32e3919bd@193.70.90.106:10101,865df574150c29f108fdc96cad43ddcfe02ed2b5@49.13.62.125:26656,7d0e0410ee66fc54ea4bd4aa6443ebb66ad77b97@168.119.106.234:26656,dc39ce57810e157cbbd581cd56e22391f7a6aeda@167.235.187.11:26656,47987080e86e0b5dda26cd9be1c1677f00c46dcd@5.75.149.205:26656,213b6ac4b64375570db88f01d6493c775bfdd1b6@5.78.85.94:26656,ba9ca02c4704c018131f21cbd4a4fb677711a160@141.94.162.204:10101,663f79f1e646ed4a7b27f3f8ad7770323d76f06b@3.71.218.95:26656,6114998e706a144ef0a8cd5db75433c60bc28a83@51.195.7.4:10101,6acef796262e3ba7d0a5c94d198f7089a04a4e90@5.75.243.228:26656,c521562f7361e385c0478763bb647af4522320b2@51.195.235.83:56656,3753eab2ddd1d269c5552ced7c679211df2f6418@44.230.94.114:26656,f675ea45db21d722812296aaf6dd5a8cae2be12a@5.75.242.239:26656,1634c775e94f9acf1c0897f78c42790424f69f62@46.4.22.159:26656,6628c6d16123cab2014bf97aa9fb5c0ab674183e@51.222.143.109:56656,8c20d5d59287f2c28692cd39596abedb027aeec4@135.181.92.165:26656,27af00377d0d65f14ea8bcf7bc26a053f48ec58f@135.181.46.125:26656,704fe34ec631cba29ee9d6f2dfc715f2363ce034@144.76.116.58:10101,5ac87e170220ba5a6c2fee3968c889bc40c529c8@37.27.67.69:10101,d9c245f29ce3950f18c470cba649039c06b5229c@142.132.166.212:10101,0d901b734acaac6021cc9103c6f1508355c4a4af@5.78.102.16:26656,7f36123a395e902deaecf63bdaf5656bbb209623@15.204.52.75:26656,01975f0062ff8b3f7903c96b920bb6b9d4f24e39@167.235.184.114:10101,140c455023c31ef06ac62969d9e04cdbd10cfb36@135.125.238.99:56656,cc417e9d806153cb0640d8e8fe67dae3aa81aa30@5.161.58.203:10101
 ```
 
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=[LIVE_PEERS_RANDOM]
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" [DAEMON_HOME]/config/config.toml
+PEERS=6628c6d16123cab2014bf97aa9fb5c0ab674183e@51.222.143.109:56656,01975f0062ff8b3f7903c96b920bb6b9d4f24e39@167.235.184.114:10101,d9c245f29ce3950f18c470cba649039c06b5229c@142.132.166.212:10101,5ac87e170220ba5a6c2fee3968c889bc40c529c8@37.27.67.69:10101,d03e94c7ad1695ddd6145b187d10323991ec02f9@157.90.131.229:26656
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.osmosisd/config/config.toml
 
-sudo systemctl restart [DAEMON_SERVICE]
-sudo journalctl -fu [DAEMON_SERVICE] --no-hostname -o cat
+sudo systemctl restart osmosisd.service
+sudo journalctl -fu osmosisd.service --no-hostname -o cat
 ```
 
-## Ours Peer for [CHAIN_NAME]
+## Our peer for Osmosis
 When you state-sync, you might also consider adding [NODERS]TEAM state-sync peer to your persistent_peers setting in `config.toml`.
 
 ```bash
-[ENDPOINT_PEER]
+91570c5f4e2a54ce53996475aea4f530e0669a2e@osmosis.rpc.mainnet.noders.team:10656
 ```

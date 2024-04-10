@@ -1,0 +1,48 @@
+# Blockchain
+CHAIN_NAME="Celestia"
+CHAIN_SYSTEM_NAME="celestia"
+CHAIN_ID="auto"
+VERSION="auto"
+CHAIN_DESCRIPTION="""# Celestia: Revolutionizing Blockchain with Modularity
+
+Celestia introduces a modular data availability network to enhance blockchain scalability and flexibility. It features a minimal design focusing on transaction ordering and data availability, decoupling consensus from execution for improved scalability. This approach allows for customized execution layers, powered by a secure Proof of Stake mechanism. Celestia's innovation lies in its ability to ensure transaction data is verifiable without downloading the entire chain, offering a foundation for scalable, efficient blockchain applications.
+
+"""
+[CHAIN_DESCRIPTION_END]
+
+CHAIN_DENOM="utia"
+CHAIN_FEES="3000"
+
+# Binary
+DAEMON_NAME="celestia-appd"
+DAEMON_SERVICE="celestai.service"
+DAEMON_HOME="~/.celestia-app"
+
+# Endpoints
+ENDPOINT_RPC="https://celestia-t-rpc.noders.services"
+ENDPOINT_API="https://celestia-t-api.noders.services"
+ENDPOINT_JRPC=""
+ENDPOINT_GRPC="https://celestia-t-grpc.noders.services"
+ENDPOINT_PEER="auto"
+
+# Social
+SOCIAL_WEBSITE="https://celestia.org/"
+SOCIAL_GITHUB="https://github.com/celestiaorg"
+SOCIAL_DISCORD="https://discord.gg/celestiacommunity"
+SOCIAL_X="https://twitter.com/CelestiaOrg"
+SOCIAL_TELEGRAM="https://t.me/celestiaru"
+
+# Other
+DOWNLOAD_URL="h"
+GITHUB_FOLDER_NAME="auto"
+VALIDATOR_LINK="https://testnet.celestia.explorers.guru/validator/celestiavaloper1zzxrq7tjlsqvv0jtqtlt8gjaa68racukf5n9xh"
+
+# Updates
+UPDATE_MAIN=true
+UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
+UPDATE_UPGRADE=true
+UPDATE_SNAPSHOT=true
+UPDATE_STATESYNC=true
+UPDATE_LIVE_PEERS=true
+UPDATE_CLI_CHEATSHEET=true

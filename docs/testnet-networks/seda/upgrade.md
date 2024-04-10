@@ -1,0 +1,32 @@
+---
+hide_table_of_contents: false
+title: Upgrade
+sidebar_position: 3
+---
+
+<div class="h1-with-icon icon-seda">
+# Upgrade
+</div>
+###### Chain ID: `seda-1-testnet` | Current Node Version: `0.0.7`
+
+
+# Clone Seda repository
+```js
+cd $HOME
+rm -rf sedaprotocol
+git clone https://github.com/sedaprotocol.git
+cd sedaprotocol
+git checkout 0.0.7
+ ```
+
+# Build binaries
+```js
+make build
+ ```
+
+# Prepare binaries for Cosmovisor
+```js
+mkdir -p ~/.sedad/cosmovisor/upgrades/0.0.7/bin
+mv build/sedad ~/.sedad/cosmovisor/upgrades/0.0.7/bin/
+rm -rf build
+```

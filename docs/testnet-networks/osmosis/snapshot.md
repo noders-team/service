@@ -4,12 +4,12 @@ title: Snapshot*
 sidebar_position: 3
 ---
 
-<div class="h1-with-icon icon-[CHAIN_SYSTEM_NAME]">
+<div class="h1-with-icon icon-osmosis">
 # Node Snapshot
 </div>
-###### Chain ID: `[CHAIN_ID]` | Current Node Version: `[DAEMON_VERSION]`
+###### Chain ID: `osmosis-1` | Current Node Version: `23.0.0`
 
-## Our [CHAIN_NAME] Snapshot Server Setup
+## Our Osmosis Snapshot Server Setup
 
 | Block height | Size | Timestamp | Download                                                                                         |
 |--------------|------|-----------|--------------------------------------------------------------------------------------------------|
@@ -18,7 +18,7 @@ sidebar_position: 3
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
 
-The snapshot is designed for node opeartors to run an efficient node on [CHAIN_NAME] chain. To make the snapshot as small as possible while still viable as a validator, we use the following setting to save on the disk space. It might be helpful for you to sync with our snapshot periodically because Tendermint chain storage grows over time regardless of the pruning. Since we periodically state-sync our snapshot nodes, you might notice that sometimes the size of our snapshot is surprisingly small.
+The snapshot is designed for node opeartors to run an efficient node on Osmosis chain. To make the snapshot as small as possible while still viable as a validator, we use the following setting to save on the disk space. It might be helpful for you to sync with our snapshot periodically because Tendermint chain storage grows over time regardless of the pruning. Since we periodically state-sync our snapshot nodes, you might notice that sometimes the size of our snapshot is surprisingly small.
 
 ```bash title="app.toml"
 # Prune Type
@@ -34,7 +34,7 @@ pruning-interval = "10"
 indexer = "null"
 ```
 
-## How To Process [CHAIN_NAME] Snapshot
+## How To Process Osmosis Snapshot
 ```bash
 sudo apt update
 sudo apt install snapd -y
@@ -46,7 +46,7 @@ wget -O osmosis_14249428.tar.lz4 https://snapshots.polkachu.com/snapshots/osmosi
 ```
 Stop your node
 ```bash
-sudo systemctl stop [DAEMON_NAME]
+sudo systemctl stop osmosisd
 ```
 Reset your node. This will erase your node database. If you are already running validator, be sure you backed up your `priv_validator_key.json` prior to running the command. The command does not wipe the file. However, you should have a backup of it already in a safe location.
 
@@ -58,15 +58,15 @@ If you use this snapshot on a validator node during a chain halt, make sure you 
 
 ```bash
 # Back up priv_validator_state.json if needed
-cp [DAEMON_HOME]/data/priv_validator_state.json  [DAEMON_HOME]/priv_validator_state.json
+cp ~/.osmosisd/data/priv_validator_state.json  ~/.osmosisd/priv_validator_state.json
 
-[DAEMON_NAME] tendermint unsafe-reset-all --home [DAEMON_HOME] --keep-addr-book
+osmosisd tendermint unsafe-reset-all --home ~/.osmosisd --keep-addr-book
 ```
 
-Decompress the snapshot to your database location. You database location will be something to the effect of `[DAEMON_HOME]` depending on your node implemention.
+Decompress the snapshot to your database location. You database location will be something to the effect of `~/.osmosisd` depending on your node implemention.
 
 ```bash
-lz4 -c -d celestia_971453.tar.lz4  | tar -x -C [DAEMON_HOME]
+lz4 -c -d celestia_971453.tar.lz4  | tar -x -C ~/.osmosisd
 ```
 
 :::warning WARNING
@@ -76,13 +76,13 @@ If you run a validator node and the chain is in halt, it is time to replace the 
 
 ```bash
 # Replace with the backed-up priv_validator_state.json
-cp [DAEMON_HOME]/priv_validator_state.json  [DAEMON_HOME]/data/priv_validator_state.json
+cp ~/.osmosisd/priv_validator_state.json  ~/.osmosisd/data/priv_validator_state.json
 ```
 
 If everything is good, now restart your node
 
 ```bash
-sudo systemctl restart [DAEMON_SERVICE]
+sudo systemctl restart osmosisd.service
 ```
 
 Remove downloaded snapshot to free up space
@@ -94,15 +94,15 @@ rm -v celestia_971453.tar.lz4
 Make sure that your node is running
 
 ```bash
-sudo systemctl restart [DAEMON_SERVICE]
-sudo journalctl -fu [DAEMON_SERVICE] --no-hostname -o cat
+sudo systemctl restart osmosisd.service
+sudo journalctl -fu osmosisd.service --no-hostname -o cat
 ```
 
 :::note ADVANCED ROUTE
 
 The above solution requires you to download the compressed file, uncompressed it and then delete the original file. This requires extra storage space on your server. You can run the following combo command to stream the snapshot into your database location. For advanced users only:
 ```bash
-curl -o - -L https://snapshots.polkachu.com/snapshots/celestia/celestia_971453.tar.lz4 | lz4 -c -d - | tar -x -C [DAEMON_HOME]
+curl -o - -L https://snapshots.polkachu.com/snapshots/celestia/celestia_971453.tar.lz4 | lz4 -c -d - | tar -x -C ~/.osmosisd
 ```
 
 :::
@@ -110,6 +110,6 @@ curl -o - -L https://snapshots.polkachu.com/snapshots/celestia/celestia_971453.t
 
 :::info ADVANCED ROUTE
 
-We also have [CHAIN_NAME] state-sync service to help you bootstrap a node.
+We also have Osmosis state-sync service to help you bootstrap a node.
 
 :::

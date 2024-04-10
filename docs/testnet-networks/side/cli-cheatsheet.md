@@ -1,0 +1,275 @@
+---
+hide_table_of_contents: false
+title: CLI Cheatsheet
+sidebar_position: 8
+---
+
+<div class="h1-with-icon icon-side">
+# CLI Cheatsheet
+</div>
+###### Chain ID: `` | Current Node Version: ``
+
+This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
+
+- Capitalized words indicate placeholders
+- Always use our own [NODERS]TEAM RPC endpoints
+- Always specify `--chain-id` and `--node` flags even when they are unnecessary
+- Query CLI command always uses `--output json` flag and pipes result through `jq`
+
+## Wallet generate and recover
+### Add new key
+```js
+sided keys add KEY
+```
+
+### Recover key (via existing mnemonic)
+```js
+sided keys add KEY --recover
+```
+
+### List all keys
+```js
+sided keys list
+```
+
+### Delete key
+```js
+sided keys delete KEY
+```
+
+## Wallet
+### Wallet balance
+```js
+sided q bank balances $(sided keys show KEY -a) --node :443
+```
+
+### Send
+```js
+sided tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uside \
+  --chain-id  \
+  --node :443 --fees 3000uside \
+  --from KEY
+```
+
+### Withdraw rewards from all validators
+```js
+sided tx distribution withdraw-all-rewards \
+  --chain-id  \
+  --node :443 --fees 3000uside \
+  --from KEY
+```
+
+### Withdraw Rewards including Commission
+```js
+sided tx distribution withdraw-rewards VALIDATOR_ADRESS \
+  --commission \
+  --chain-id  \
+  --node :443 --fees 3000uside \
+  --from KEY
+```
+
+### Delegate tokens to yourself
+```js
+sided tx staking delegate $(sided keys show KEY --bech val -a) 1000000uside \
+--chain-id  \
+--node :443 --fees 3000uside \
+--from KEY
+```
+
+### Delegate tokens to validator
+```js
+sided tx staking delegate VALIDATOR_ADDRESS 1000000uside \
+--chain-id  \
+--node :443 --fees 3000uside \
+--from KEY
+```
+
+### Redelegate tokens to another validator
+```js
+sided tx staking redelegate $(sided keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000uside \
+  --chain-id  \
+  --node :443 --fees 3000uside \
+  --from KEY
+```
+
+### Unbond tokens from your validator
+```js
+sided tx staking unbond $(sided keys show KEY --bech val -a) uside \
+  --chain-id andromeda-1 \
+  --node :443 --fees 3000uside \
+  --from KEY
+```
+
+## Governance
+### List of all proposals
+```js
+sided query gov proposals --node :443
+```
+### Check vote
+```js
+sided query gov proposal PROPOSAL_NUMBER \
+  --chain-id  \
+  --node :443 --fees 3000uside \
+  --output json | jq
+```
+
+### Vote
+#### Vote options:
+* yes
+* no
+* no_with_veto
+* abstain
+```js
+sided tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
+  --chain-id  \
+  --node :443 --fees 3000uside \
+  --from KEY
+```
+
+## Validator management
+### Create Validator
+:::note
+We use example filed values instead of capitalized dummy words for demo purpose in this command. Please make sure to adjust accordingly for your use.
+:::
+```js
+sided tx staking create-validator \
+  --amount 1000000uside \
+  --commission-max-change-rate "0.05" \
+  --commission-max-rate "0.10" \
+  --commission-rate "0.05" \
+  --min-self-delegation "1" \
+  --pubkey=$(sided tendermint show-validator) \
+  --moniker '[NODERS]TEAM SERVICE' \
+  --website "https://noders.team" \
+  --identity "220491ADDD660741" \
+  --details "Trusted blockchain validator and web3 developer team" \
+  --security-contact="office@noders.team" \
+  --chain-id  \
+  --node :443 --fees 3000uside \
+  --from KEY
+```
+
+### Edit validator
+```js
+sided tx staking edit-validator \
+--new-moniker "YOUR_MONIKER_NAME" \
+--identity "YOUR_KEYBASE_ID" \
+--details "YOUR_DETAILS" \
+--website "YOUR_WEBSITE_URL" \
+--chain-id  \
+--commission-rate 0.05 \
+--from KEY \
+--node :443 --fees 3000uside \
+```
+
+### Unjail
+```js
+sided tx slashing unjail \
+  --chain-id  \
+  --node :443 --fees 3000uside \
+  --from KEY
+```
+
+### Jail reason
+```js
+sided query slashing signing-info $(sided tendermint show-validator)
+```
+
+### Validator details
+```js
+sided q staking validator $(sided keys show KEY --bech val -a)
+```
+
+## Maintenance
+### Get validator info
+```js
+sided status 2>&1 | jq .ValidatorInfo
+```
+
+### Get sync info
+```js
+sided status 2>&1 | jq .SyncInfo
+```
+
+### Get node peer
+```js
+echo $(sided tendermint show-node-id)'@'$(curl -s ifconfig.me)':'$(cat ~/.side/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
+```
+
+### Check if validator key is correct
+```js
+[[ $(sided q staking validator $(sided keys show KEY --bech val -a) -oj | jq -r .consensus_pubkey.key) = $(sided status | jq -r .ValidatorInfo.PubKey.value) ]] && echo -e "\n\e[1m\e[32mTrue\e[0m\n" || echo -e "\n\e[1m\e[31mFalse\e[0m\n"
+```
+
+### Get live peers
+```js
+curl -sS :443/net_info | jq -r '.result.peers[] | "\(.node_info.id)@\(.remote_ip):\(.node_info.listen_addr)"' | awk -F ':' '{print $1":"$(NF)}'
+```
+
+### Set minimum gas price
+```js
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.001uside\"/" ~/.side/config/app.toml
+```
+
+###Enable prometheus
+```js
+sed -i -e "s/prometheus = false/prometheus = true/" ~/.side/config/config.toml
+```
+
+### Reset chain data
+```js
+sided tendermint unsafe-reset-all --keep-addr-book --home ~/.side
+```
+
+## Service Management
+### Reload service configuration
+```js
+sudo systemctl daemon-reload
+```
+
+### Enable service
+```js
+sudo systemctl enable sided.service
+```
+
+### Disable service
+```js
+sudo systemctl disable sided.service
+```
+
+### Start service
+```js
+sudo systemctl start sided.service
+```
+
+### Stop service
+```js
+sudo systemctl stop sided.service
+```
+
+### Restart service
+```js
+sudo systemctl restart sided.service
+```
+
+### Check service status
+```js
+sudo systemctl status sided.service
+```
+
+### Check service logs
+```js
+sudo journalctl -u sided.service -f --no-hostname -o cat
+```
+
+## Remove node
+```js
+cd $HOME
+sudo systemctl stop sided.service
+sudo systemctl disable sided.service
+sudo rm /etc/systemd/system/sided.service
+sudo systemctl daemon-reload
+rm -f $(which sided)
+rm -rf ~/.side
+rm -rf $HOME/sideprotocol
+```

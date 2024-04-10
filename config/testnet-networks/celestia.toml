@@ -1,0 +1,48 @@
+# Blockchain
+CHAIN_NAME="Side"
+CHAIN_SYSTEM_NAME="side"
+CHAIN_ID="auto"
+VERSION="auto"
+CHAIN_DESCRIPTION="""# Side Protocol: Revolutionizing Web3 Exchanges
+
+Side Protocol emerges as a pivotal exchange layer for Web3, aiming to redefine decentralized finance (DeFi) by ensuring secure, transparent, and efficient cryptocurrency transactions. Embracing user-centric and developer-friendly approaches, it offers a robust platform that simplifies DeFi integration and usage. Through its commitment to innovation and reliability, Side Protocol is set to empower the digital asset space, facilitating a seamless exchange experience across the Web3 ecosystem.
+
+"""
+[CHAIN_DESCRIPTION_END]
+
+CHAIN_DENOM="uside"
+CHAIN_FEES="3000"
+
+# Binary
+DAEMON_NAME="sided"
+DAEMON_SERVICE="sided.service"
+DAEMON_HOME="~/.side"
+
+# Endpoints
+ENDPOINT_RPC="https://side-t-rpc.noders.services"
+ENDPOINT_API="https://side-t-api.noders.services"
+ENDPOINT_JRPC=""
+ENDPOINT_GRPC="https://side-t-grpc.noders.services"
+ENDPOINT_PEER="auto"
+
+# Social
+SOCIAL_WEBSITE="https://side.one/"
+SOCIAL_GITHUB="https://github.com/sideprotocol"
+SOCIAL_DISCORD="https://discord.gg/sideprotocol"
+SOCIAL_X="https://twitter.com/SideProtocol"
+SOCIAL_TELEGRAM="https://t.me/SideProtocolOfficial"
+
+# Other
+DOWNLOAD_URL="h"
+GITHUB_FOLDER_NAME="auto"
+VALIDATOR_LINK="https://explorer.stavr.tech/Side-Testnet/staking/bcvaloper17tn2zvychzan0v0ulakq596gczmjtw8pdqary7"
+
+# Updates
+UPDATE_MAIN=true
+UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
+UPDATE_UPGRADE=true
+UPDATE_SNAPSHOT=true
+UPDATE_STATESYNC=true
+UPDATE_LIVE_PEERS=true
+UPDATE_CLI_CHEATSHEET=true

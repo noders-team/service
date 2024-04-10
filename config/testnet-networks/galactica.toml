@@ -1,0 +1,48 @@
+# Blockchain
+CHAIN_NAME="Alignedlayer"
+CHAIN_SYSTEM_NAME="alignedlayer"
+CHAIN_ID="auto"
+VERSION="auto"
+CHAIN_DESCRIPTION="""# Aligned Layer: Pioneering Decentralized Data Orchestration
+
+Aligned Layer is at the forefront of decentralized data orchestration, offering a cutting-edge platform that streamlines the integration, management, and secure sharing of data across diverse blockchain ecosystems. By leveraging advanced cryptographic techniques and a user-centric design, Aligned Layer ensures data privacy, security, and interoperability. Its platform empowers developers to build more sophisticated and dynamic decentralized applications (dApps), fostering a new era of blockchain utility and innovation. Aligned Layer's commitment to removing barriers to data access and utilization marks a significant step towards a more interconnected and efficient decentralized world.
+
+"""
+[CHAIN_DESCRIPTION_END]
+
+CHAIN_DENOM="stake"
+CHAIN_FEES="3000"
+
+# Binary
+DAEMON_NAME="alignedlayerd"
+DAEMON_SERVICE="alignedlayerd.service"
+DAEMON_HOME="~/.alignedlayer"
+
+# Endpoints
+ENDPOINT_RPC="https://aligned-t-rpc.noders.services"
+ENDPOINT_API="https://aligned-t-api.noders.services"
+ENDPOINT_JRPC=""
+ENDPOINT_GRPC="https://aligned-t-grpc.noders.services"
+ENDPOINT_PEER="auto"
+
+# Social
+SOCIAL_WEBSITE="https://alignedlayer.com/"
+SOCIAL_GITHUB="https://github.com/yetanotherco/aligned_layer"
+SOCIAL_DISCORD=""
+SOCIAL_X="https://twitter.com/alignedlayer"
+SOCIAL_TELEGRAM="https://t.me/aligned_layer"
+
+# Other
+DOWNLOAD_URL="https://config-t.noders.services/alignedlayer"
+GITHUB_FOLDER_NAME="auto"
+VALIDATOR_LINK="https://testnet.alignedlayer.explorers.guru/validator/alignedvaloper1fu5vtujxarn3wuhhuqkz2dwd46feshdvt8frpr"
+
+# Updates
+UPDATE_MAIN=true
+UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
+UPDATE_UPGRADE=true
+UPDATE_SNAPSHOT=true
+UPDATE_STATESYNC=true
+UPDATE_LIVE_PEERS=true
+UPDATE_CLI_CHEATSHEET=true
