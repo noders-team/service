@@ -88,8 +88,8 @@ If everything is good, now restart your node
 Make sure that your node is running
 
 ```bash
-sudo systemctl restart [DAEMON_SERVICE]
-sudo journalctl -fu [DAEMON_SERVICE] --no-hostname -o cat
+sudo systemctl restart [DAEMON_NAME]
+sudo journalctl -fu [DAEMON_NAME] --no-hostname -o cat
 ```
 
 :::info ADVANCED ROUTE
