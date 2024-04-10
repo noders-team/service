@@ -1,6 +1,6 @@
 # Blockchain
-CHAIN_NAME="0g"
-CHAIN_SYSTEM_NAME="0g"
+CHAIN_NAME="ZeroGravity"
+CHAIN_SYSTEM_NAME="og"
 CHAIN_ID="auto"
 VERSION="auto"
 CHAIN_DESCRIPTION="""# ZeroGravity: the first data availability system with a built-in general purpose storage layer that is super scalable and decentralized.
