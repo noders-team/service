@@ -148,8 +148,8 @@ sudo systemctl enable [DAEMON_SERVICE].service
 
 ### Download genesis and addrbook
 ```js
-curl -Ls https://config-t.noders.services/[CHAIN_SYSTEM_NAME]/genesis.json > [DAEMON_HOME]/config/genesis.json
-curl -Ls https://config-t.noders.services/[CHAIN_SYSTEM_NAME]/addrbook.json > [DAEMON_HOME]/config/addrbook.json
+curl https://config-t.noders.services/[CHAIN_SYSTEM_NAME]/genesis.json -o [DAEMON_HOME]/config/genesis.json
+curl https://config-t.noders.services/[CHAIN_SYSTEM_NAME]/addrbook.json -o [DAEMON_HOME]/config/addrbook.json
 ```
 ### Add peers
 ```js
