@@ -171,9 +171,27 @@ sed -i \
 ```
 
 ### Set custom ports
+
+```bash
+echo "export [DAEMON_NAME]_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+```
+
 ```js
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:14758\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:14757\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:14760\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:14756\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":14766\"%" [DAEMON_HOME]/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:14717\"%; s%^address = \":8080\"%address = \":14780\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:14790\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:14791\"%; s%:8545%:14745%; s%:8546%:14746%; s%:6065%:14765%" [DAEMON_HOME]/config/app.toml
+# Set custom ports in app.toml
+sed -i.bak -e "s%:1317%:${[DAEMON_NAME]_PORT}317%g" \
+-e "s%:8080%:${[DAEMON_NAME]_PORT}080%g" \
+-e "s%:9090%:${[DAEMON_NAME]_PORT}090%g" \
+-e "s%:9091%:${[DAEMON_NAME]_PORT}091%g" \
+-e "s%:8545%:${[DAEMON_NAME]_PORT}545%g" \
+-e "s%:8546%:${[DAEMON_NAME]_PORT}546%g" \
+-e "s%:6065%:${[DAEMON_NAME]_PORT}065%g" [DAEMON_HOME]/config/app.toml
+
+# Set custom ports in config.toml file
+sed -i.bak -e "s%:26658%:${SWISS_PORT}658%g" \
+-e "s%:26657%:${[DAEMON_NAME]_PORT}657%g" \
+-e "s%:6060%:${[DAEMON_NAME]_PORT}060%g" \
+-e "s%:26656%:${[DAEMON_NAME]_PORT}656%g" \
+-e "s%:26660%:${[DAEMON_NAME]_PORT}660%g" [DAEMON_HOME]/config/config.toml
 ```
 
 ### Start node and check logs
