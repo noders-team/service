@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-band">
 # State sync
 </div>
-###### Chain ID: `` | Current Node Version: `2.5.4`
+###### Chain ID: `band-laozi-testnet6` | Current Node Version: `v2.5.4`
 
 ```bash
 SNAP_RPC=https://band-t-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop band.service && bandd tendermint unsafe-reset-all --home ~/.band --keep-addr-book
 ```
 ```bash
-peers="@band-t-rpc.noders.services:"
+peers="affbb71e130841e0c262efcd3d90ee71b16c59b2@band-t-rpc.noders.services:20656"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.band/config/config.toml
 ```
 ```bash

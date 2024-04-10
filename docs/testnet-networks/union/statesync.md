@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-union">
 # State sync
 </div>
-###### Chain ID: `union-testnet-6` | Current Node Version: `null`
+###### Chain ID: `union-testnet-6` | Current Node Version: `vnull`
 
 ```bash
 SNAP_RPC=https://union-t-rpc.noders.services:443 && \

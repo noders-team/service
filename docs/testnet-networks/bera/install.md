@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-bera">
 # Installation
 </div>
-###### Chain ID: `artio-80085` | Current Node Version: `v0.2.3-alpha-rc7`
+###### Chain ID: `` | Current Node Version: `v`
 
 ## Install dependencies
 
@@ -25,13 +25,19 @@ eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/gola
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
 
-## Download and build binaries
-### Clone Bera repo and build berad v0.2.3-alpha-rc7
+## Install with Cosmovisor
+:::note ADVANCED ROUTE
+
+Cosmosvisor is a process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If a proposal is approved, cosmosvisor can automatically download the new binary, stop the current one, switch to the new binary, and restart the node with the new binary.
+
+:::
+### Download and build binaries
+### Clone Bera repo and build berad v
 ```js
 cd $HOME
 git clone https://github.com/berachain.git
 cd berachain
-git checkout v0.2.3-alpha-rc7
+git checkout v
 ```
 
 ### Build binaries
@@ -41,8 +47,8 @@ make build
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.bera/cosmovisor/upgrades/v0.2.3-alpha-rc7/bin
-mv build/berad ~/.bera/cosmovisor/upgrades/v0.2.3-alpha-rc7/bin/
+mkdir -p ~/.bera/cosmovisor/upgrades/v/bin
+mv build/berad ~/.bera/cosmovisor/upgrades/v/bin/
 rm -rf build
 ```
 
@@ -81,6 +87,43 @@ WantedBy=multi-user.target
 EOF
 ```
 
+## Install without Cosmovisor
+
+### Download and build binaries
+### Clone Bera repo and build berad v
+```js
+cd $HOME
+git clone https://github.com/berachain.git
+cd berachain
+git checkout v
+```
+
+### Build binaries
+```js
+make install
+```
+
+## Run node
+### Create service
+```js
+sudo tee /etc/systemd/system/bera.service > /dev/null << EOF
+[Unit]
+Description=bera node service
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which berad) start
+Restart=on-failure
+RestartSec=10
+LimitNOFILE=65535
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
 ### Enable service
 ```js
 sudo systemctl daemon-reload
@@ -90,14 +133,14 @@ sudo systemctl enable bera.service.service
 ## Node configuration
 ### Set config
 ```js
-berad config chain-id artio-80085
+berad config chain-id 
 berad config keyring-backend os
 berad config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-berad init NAME_OF_YOUR_VALIDATOR --chain-id artio-80085
+berad init NAME_OF_YOUR_VALIDATOR --chain-id 
 ```
 
 ### Download genesis and addrbook
@@ -107,7 +150,7 @@ curl -Ls https://config-t.noders.services/bera/addrbook.json > ~/.bera/config/ad
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"f4f9dd773bad1363cbc85ce7534bfd172c2d83b4@berachain-t-rpc.noders.services:16656\"/" ~/.bera/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@berachain-t-rpc.noders.services:\"/" ~/.bera/config/config.toml
 ```
 
 ### Set minimum gas price

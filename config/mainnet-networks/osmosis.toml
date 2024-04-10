@@ -2,53 +2,47 @@
 CHAIN_NAME="Osmosis"
 CHAIN_SYSTEM_NAME="osmosis"
 CHAIN_ID="auto"
-CHAIN_DESCRIPTION="""Osmosis is a groundbreaking decentralized exchange (DEX) protocol that pioneers the concept of customizable liquidity pools, enabling users to control the parameters of their liquidity pools for optimized trading strategies. As the first IBC-native Cosmos DEX, Osmosis facilitates seamless cross-chain transactions, fostering a more interconnected and interoperable blockchain ecosystem.
+VERSION="auto"
+CHAIN_DESCRIPTION="""# Osmosis: DeFi Innovation on Cosmos
 
-Here's an overview of what makes Osmosis stand out:
+Osmosis is a leading decentralized exchange (DEX) and automated market maker (AMM) on the Cosmos blockchain, revolutionizing DeFi with unparalleled customization and interoperability. It enables advanced DeFi features for liquidity providers and traders, fostering cross-chain liquidity and novel financial products. With customizable AMM pools, Inter-Blockchain Communication (IBC) protocol integration, superfluid staking, and community-driven governance, Osmosis is at the forefront of DeFi innovation, offering dynamic yield farming and sophisticated trading strategies within the Cosmos ecosystem.
 
-Advanced Liquidity Pools: Osmosis allows users to create and customize their liquidity pools, adjusting parameters such as swap fees, slippage, and rewards. This level of customization is designed to optimize liquidity provision and trading strategies, catering to the unique needs of different tokens and trading pairs.
+Discover more about Osmosis and its innovative features by visiting their official site.
 
-Cross-Chain Interoperability: Built on the Cosmos SDK and utilizing the Inter-Blockchain Communication (IBC) protocol, Osmosis enables secure and efficient cross-chain swaps, allowing assets to flow freely across the Cosmos ecosystem and beyond. This interoperability expands the available market for traders and liquidity providers, connecting previously isolated blockchain networks.
+"""
+[CHAIN_DESCRIPTION_END]
 
-Decentralized Governance: Osmosis is governed by its community of token holders, who have the power to propose and vote on changes to the protocol. This decentralized governance model ensures that the platform evolves in alignment with the interests and needs of its users.
-
-Superfluid Staking: Osmosis introduces the innovative concept of superfluid staking, which allows liquidity providers to simultaneously earn trading fees and staking rewards, maximizing the capital efficiency for users who contribute to the protocol's security and liquidity.
-
-Enhanced User Experience: Despite its advanced features, Osmosis offers an intuitive and user-friendly interface, making it accessible to both novice and experienced traders. The platform emphasizes simplicity and ease of use, ensuring that users can easily navigate and utilize its features.
-
-Community and Ecosystem Growth: Osmosis places a strong emphasis on community engagement and ecosystem development. The project actively supports the growth of the Cosmos ecosystem by integrating with new chains, fostering collaboration, and funding initiatives that drive adoption and innovation.
-
-Osmosis is on a mission to revolutionize decentralized finance by offering a highly customizable, interoperable, and user-centric trading platform. It aims to empower users with the tools they need to tailor their trading and liquidity provision strategies, all while contributing to the broader vision of a more interconnected and efficient blockchain ecosystem."""
 CHAIN_DENOM="uosmo"
 CHAIN_FEES="3000"
 
 # Binary
 DAEMON_NAME="osmosisd"
-DAEMON_VERSION="v23.0.0"
 DAEMON_SERVICE="osmosisd.service"
 DAEMON_HOME="~/.osmosisd"
 
 # Endpoints
-ENDPOINT_RPC="https://osmosis.rpc.mainnet.noders.team"
-ENDPOINT_API="https://osmosis.api.mainnet.noders.team"
-ENDPOINT_GRPCWEB="https://osmosis.grpc.mainnet.noders.team"
-ENDPOINT_GRPC=""
+ENDPOINT_RPC="https://osmosis-rpc.noders.services"
+ENDPOINT_API="https://osmosis-api.noders.services"
+ENDPOINT_JRPC=""
+ENDPOINT_GRPC="https://osmosis-grpc.noders.services"
 ENDPOINT_PEER="auto"
 
 # Social
-SOCIAL_WEBSITE="#"
+SOCIAL_WEBSITE="https://app.osmosis.zone/"
 SOCIAL_GITHUB="https://github.com/osmosis-labs/osmosis"
-SOCIAL_DISCORD="#"
-SOCIAL_X="#"
+SOCIAL_DISCORD="https://discord.com/invite/osmosis"
+SOCIAL_X="https://twitter.com/osmosiszone"
 SOCIAL_TELEGRAM="https://t.me/osmosiszone"
 
 # Other
-DOWNLOAD_URL="https://snapshots.mainnet.noders.team/osmosis/"
+DOWNLOAD_URL="https://config.noders.services/osmosis"
 GITHUB_FOLDER_NAME="auto"
+VALIDATOR_LINK=""
 
 # Updates
 UPDATE_MAIN=true
 UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
 UPDATE_UPGRADE=true
 UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true

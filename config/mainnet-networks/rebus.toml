@@ -1,38 +1,46 @@
 # Blockchain
-CHAIN_NAME="Osmosis"
-CHAIN_SYSTEM_NAME="osmosis"
+CHAIN_NAME="Rebus"
+CHAIN_SYSTEM_NAME="rebus"
 CHAIN_ID="auto"
-CHAIN_DESCRIPTION="Osmosis is a decentralized peer-to-peer blockchain that people can use to create liquidity and trade IBC enabled tokens. The Osmosis blockchain is made up of free, public, and open-source software."
-CHAIN_DENOM="uosmo"
+VERSION="auto"
+CHAIN_DESCRIPTION="""# Rebuschain: Bridging TradFi and DeFi
+
+Rebuschain innovatively connects traditional finance with decentralized finance, enabling digitization and free movement of financial assets across blockchain ecosystems. It emphasizes interoperability, asset tokenization, decentralized governance, compliance, security, and cross-chain liquidity. This facilitates DeFi integration for traditional assets, cross-chain financial services, and enhanced market access, aiming for a more inclusive and interconnected financial ecosystem, fostering new opportunities in asset management and financial services.
+
+"""
+[CHAIN_DESCRIPTION_END]
+
+CHAIN_DENOM="arebus"
 CHAIN_FEES="3000"
 
 # Binary
-DAEMON_NAME="osmosisd"
-DAEMON_VERSION="v23.0.0"
-DAEMON_SERVICE="osmosisd.service"
-DAEMON_HOME="~/.osmosisd"
+DAEMON_NAME="rebusd"
+DAEMON_SERVICE="rebusd.service"
+DAEMON_HOME="~/.rebusd"
 
 # Endpoints
-ENDPOINT_RPC="https://osmosis.rpc.mainnet.noders.team"
-ENDPOINT_API="https://osmosis.api.mainnet.noders.team"
-ENDPOINT_GRPCWEB="https://osmosis.grpc.mainnet.noders.team"
-ENDPOINT_GRPC=""
+ENDPOINT_RPC="https://rebus-rpc.noders.services"
+ENDPOINT_API="https://rebus-api.noders.services"
+ENDPOINT_JRPC="https://rebus-jsonrpc.noders.services"
+ENDPOINT_GRPC="https://rebus-grpc.noders.services"
 ENDPOINT_PEER="auto"
 
 # Social
-SOCIAL_WEBSITE="#"
-SOCIAL_GITHUB="https://github.com/osmosis-labs/osmosis"
-SOCIAL_DISCORD="#"
-SOCIAL_X="#"
-SOCIAL_TELEGRAM="https://t.me/osmosiszone"
+SOCIAL_WEBSITE="https://www.rebuschain.com/"
+SOCIAL_GITHUB="https://github.com/rebuschain"
+SOCIAL_DISCORD="https://discord.com/invite/rebuschain"
+SOCIAL_X="https://twitter.com/RebusChain"
+SOCIAL_TELEGRAM="https://t.me/RebusChain"
 
 # Other
-DOWNLOAD_URL="https://snapshots.mainnet.noders.team/osmosis/"
+DOWNLOAD_URL="https://config.noders.services/rebus"
 GITHUB_FOLDER_NAME="auto"
+VALIDATOR_LINK="https://rebus.explorers.guru/validator/rebusvaloper1ssvn4vrw8c40r6zgyhhxclhp36n75sulca02pl"
 
 # Updates
 UPDATE_MAIN=true
 UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
 UPDATE_UPGRADE=true
 UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true

@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-band">
 # Installation
 </div>
-###### Chain ID: `` | Current Node Version: `2.5.4`
+###### Chain ID: `band-laozi-testnet6` | Current Node Version: `v2.5.4`
 
 ## Install dependencies
 
@@ -25,13 +25,19 @@ eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/gola
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
 
-## Download and build binaries
-### Clone Band repo and build bandd 2.5.4
+## Install with Cosmovisor
+:::note ADVANCED ROUTE
+
+Cosmosvisor is a process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If a proposal is approved, cosmosvisor can automatically download the new binary, stop the current one, switch to the new binary, and restart the node with the new binary.
+
+:::
+### Download and build binaries
+### Clone Band repo and build bandd v2.5.4
 ```js
 cd $HOME
 git clone https://github.com/bandprotocol/chain.git
 cd chain
-git checkout 2.5.4
+git checkout v2.5.4
 ```
 
 ### Build binaries
@@ -41,8 +47,8 @@ make build
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.band/cosmovisor/upgrades/2.5.4/bin
-mv build/bandd ~/.band/cosmovisor/upgrades/2.5.4/bin/
+mkdir -p ~/.band/cosmovisor/upgrades/v2.5.4/bin
+mv build/bandd ~/.band/cosmovisor/upgrades/v2.5.4/bin/
 rm -rf build
 ```
 
@@ -81,6 +87,43 @@ WantedBy=multi-user.target
 EOF
 ```
 
+## Install without Cosmovisor
+
+### Download and build binaries
+### Clone Band repo and build bandd v2.5.4
+```js
+cd $HOME
+git clone https://github.com/bandprotocol/chain.git
+cd chain
+git checkout v2.5.4
+```
+
+### Build binaries
+```js
+make install
+```
+
+## Run node
+### Create service
+```js
+sudo tee /etc/systemd/system/band.service > /dev/null << EOF
+[Unit]
+Description=band node service
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which bandd) start
+Restart=on-failure
+RestartSec=10
+LimitNOFILE=65535
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
 ### Enable service
 ```js
 sudo systemctl daemon-reload
@@ -90,14 +133,14 @@ sudo systemctl enable band.service.service
 ## Node configuration
 ### Set config
 ```js
-bandd config chain-id 
+bandd config chain-id band-laozi-testnet6
 bandd config keyring-backend os
 bandd config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-bandd init NAME_OF_YOUR_VALIDATOR --chain-id 
+bandd init NAME_OF_YOUR_VALIDATOR --chain-id band-laozi-testnet6
 ```
 
 ### Download genesis and addrbook
@@ -107,7 +150,7 @@ curl -Ls https://config-t.noders.services/band/addrbook.json > ~/.band/config/ad
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@band-t-rpc.noders.services:\"/" ~/.band/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"affbb71e130841e0c262efcd3d90ee71b16c59b2@band-t-rpc.noders.services:20656\"/" ~/.band/config/config.toml
 ```
 
 ### Set minimum gas price

@@ -10,17 +10,17 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-pylons">
 # Pylons
 </div>
-###### Chain ID: `` | Current Node Version: ``
+###### Chain ID: `pylons-mainnet-1` | Current Node Version: `v1.1.4`
 
 
-The Andromeda Protocol heralds a new era in decentralized technology with its Andromeda Operating System (aOS), the first decentralized, on-chain operating system. It facilitates seamless development across blockchains, offering a unique suite of Web3 tools and utilities. Key features include multi-chain support, IBC for easy data transport, accessible tools for creators, rapid development with Andromeda Digital Objects (ADOs), and extensive integration with major blockchain platforms. Andromeda aims to enhance Web3 accessibility, efficiency, and scalability, fostering a rich ecosystem for developers and creators globally.
+Pylons.tech is at the forefront of blockchain development, specializing in digital items and NFTs. It streamlines the creation of freemium DApps, marrying mobile Web3 experiences with traditional in-app purchases. Designed to facilitate easy onboarding, Pylons removes barriers like KYC and initial token buys, making on-chain gaming as accessible as its mainstream counterpart. Its innovative fiat bridge furthers this mission, ensuring direct purchases of digital assets, thereby democratizing access to the blockchain ecosystem.
 
 # Social resources
 Official links of social networks of projects
 
 <CardLayout autoFitEnabled={false}>
     <SmallCard to="https://www.pylons.tech/home/" header={{label: "Website", translateId: "social-telegram"}} iconPath="img/website-icon.svg"/>
-    
+    <SmallCard to="https://github.com/Pylons-tech/pylons" header={{label: "GitHub", translateId: "social-telegram"}} iconPath="img/github-icon.svg"/>
     <SmallCard to="https://discord.gg/pylons" header={{label: "Discord", translateId: "social-telegram"}} iconPath="img/discord-icon.svg"/>
     <SmallCard to="https://twitter.com/pylonstech" header={{label: "X", translateId: "social-telegram"}} iconPath="img/x-icon.svg"/>
     
@@ -45,10 +45,10 @@ Official links of social networks of projects
 # Public endpoints 
 
 <CardLayout autoFitEnabled={true}>
-    <SmallCard to="pylons-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
-    <SmallCard to="pylons-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
+    <SmallCard to="https://pylons-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
+    <SmallCard to="https://pylons-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     
-    <SmallCard to="pylons-grpc.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="https://pylons-grpc.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
 </CardLayout>
 
 

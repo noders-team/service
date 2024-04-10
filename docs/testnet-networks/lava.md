@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-lava">
 # Lava
 </div>
-###### Chain ID: `lava-testnet-2` | Current Node Version: `1.0.1`
+###### Chain ID: `lava-testnet-2` | Current Node Version: `v1.2.0`
 
 
 LavaNet is set to redefine the landscape of decentralized networks by introducing a high-speed, secure, and scalable blockchain infrastructure. Aimed at facilitating seamless and efficient communication across the digital world, LavaNet leverages state-of-the-art cryptographic techniques to ensure data integrity and privacy. With a focus on user empowerment, LavaNet offers a decentralized platform for applications that require reliable data exchange and connectivity. By integrating advanced consensus mechanisms and smart contract functionality, LavaNet provides a robust foundation for developing decentralized applications (dApps) that can operate across multiple industries, including finance, healthcare, and entertainment. LavaNet's vision is to create a fully decentralized internet where users have complete control over their data and digital interactions.

@@ -1,38 +1,49 @@
 # Blockchain
-CHAIN_NAME="Osmosis"
-CHAIN_SYSTEM_NAME="osmosis"
+CHAIN_NAME="Stratos"
+CHAIN_SYSTEM_NAME="stratos"
 CHAIN_ID="auto"
-CHAIN_DESCRIPTION="Osmosis is a decentralized peer-to-peer blockchain that people can use to create liquidity and trade IBC enabled tokens. The Osmosis blockchain is made up of free, public, and open-source software."
-CHAIN_DENOM="uosmo"
+VERSION="auto"
+CHAIN_DESCRIPTION="""# Stratos: Future-Proof Decentralized Data Storage
+
+Stratos is transforming data storage for the web with its blockchain-based, decentralized platform. Offering enhanced security, scalability, and data sovereignty, it challenges conventional cloud storage paradigms. Stratos is designed for rapid data access, a token economy rewarding users, and seamless interoperability for diverse applications. Ideal for dApps, analytics, content distribution, and secure archiving, Stratos is paving the way towards a user-driven digital era.
+
+Explore Stratos for a decentralized data storage solution.
+
+"""
+[CHAIN_DESCRIPTION_END]
+
+
+CHAIN_DENOM="wei"
 CHAIN_FEES="3000"
 
 # Binary
-DAEMON_NAME="osmosisd"
-DAEMON_VERSION="v23.0.0"
-DAEMON_SERVICE="osmosisd.service"
-DAEMON_HOME="~/.osmosisd"
+DAEMON_NAME="stchaind"
+DAEMON_SERVICE="stchaind.service"
+DAEMON_HOME="~/.stchaind"
 
 # Endpoints
-ENDPOINT_RPC="https://osmosis.rpc.mainnet.noders.team"
-ENDPOINT_API="https://osmosis.api.mainnet.noders.team"
-ENDPOINT_GRPCWEB="https://osmosis.grpc.mainnet.noders.team"
-ENDPOINT_GRPC=""
+ENDPOINT_RPC="https://stratos-rpc.noders.services"
+ENDPOINT_API="https://stratos-api.noders.services"
+ENDPOINT_JRPC="https://stratos-jsonrpc.noders.services "
+ENDPOINT_GRPC="https://stratos-grpc.noders.services"
 ENDPOINT_PEER="auto"
 
 # Social
-SOCIAL_WEBSITE="#"
-SOCIAL_GITHUB="https://github.com/osmosis-labs/osmosis"
-SOCIAL_DISCORD="#"
-SOCIAL_X="#"
-SOCIAL_TELEGRAM="https://t.me/osmosiszone"
+SOCIAL_WEBSITE="https://www.thestratos.org/"
+SOCIAL_GITHUB="https://github.com/stratosnet/stratos-chain"
+SOCIAL_DISCORD="https://discord.gg/79dMCCyjAM"
+SOCIAL_X="https://twitter.com/Stratos_Network"
+SOCIAL_TELEGRAM="https://t.me/StratosOfficial"
 
 # Other
-DOWNLOAD_URL="https://snapshots.mainnet.noders.team/osmosis/"
+DOWNLOAD_URL="https://config.noders.services/stratos"
 GITHUB_FOLDER_NAME="auto"
+VALIDATOR_LINK="https://explorer.thestratos.org/stratos/validators/stvaloper1ghkn8ra63422mcepdk0zzglzy6qax637g6fhzm"
 
 # Updates
 UPDATE_MAIN=true
 UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
 UPDATE_UPGRADE=true
 UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true

@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-crossfi">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `crossfi-evm-testnet-1` | Current Node Version: `0.3.0-prebuild3`
+###### Chain ID: `crossfi-evm-testnet-1` | Current Node Version: `v0.3.0-prebuild3`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 

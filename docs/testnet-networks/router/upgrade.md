@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-router">
 # Upgrade
 </div>
-###### Chain ID: `router_9601-1` | Current Node Version: `null`
+###### Chain ID: `router_9601-1` | Current Node Version: `vnull`
 
 
 # Clone Rrouter repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf router-protocol
 git clone https://github.com/router-protocol.git
 cd router-protocol
-git checkout null
+git checkout vnull
  ```
 
 # Build binaries
@@ -26,7 +26,7 @@ make build
 
 # Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.routerd/cosmovisor/upgrades/null/bin
-mv build/routerd ~/.routerd/cosmovisor/upgrades/null/bin/
+mkdir -p ~/.routerd/cosmovisor/upgrades/vnull/bin
+mv build/routerd ~/.routerd/cosmovisor/upgrades/vnull/bin/
 rm -rf build
 ```

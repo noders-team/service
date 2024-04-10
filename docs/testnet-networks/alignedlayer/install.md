@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-alignedlayer">
 # Installation
 </div>
-###### Chain ID: `alignedlayer` | Current Node Version: `0.1.0`
+###### Chain ID: `alignedlayer` | Current Node Version: `v0.1.0`
 
 ## Install dependencies
 
@@ -25,13 +25,19 @@ eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/gola
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
 
-## Download and build binaries
-### Clone Alignedlayer repo and build alignedlayerd 0.1.0
+## Install with Cosmovisor
+:::note ADVANCED ROUTE
+
+Cosmosvisor is a process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If a proposal is approved, cosmosvisor can automatically download the new binary, stop the current one, switch to the new binary, and restart the node with the new binary.
+
+:::
+### Download and build binaries
+### Clone Alignedlayer repo and build alignedlayerd v0.1.0
 ```js
 cd $HOME
 git clone https://github.com/yetanotherco/aligned_layer.git
 cd aligned_layer
-git checkout 0.1.0
+git checkout v0.1.0
 ```
 
 ### Build binaries
@@ -41,8 +47,8 @@ make build
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.alignedlayer/cosmovisor/upgrades/0.1.0/bin
-mv build/alignedlayerd ~/.alignedlayer/cosmovisor/upgrades/0.1.0/bin/
+mkdir -p ~/.alignedlayer/cosmovisor/upgrades/v0.1.0/bin
+mv build/alignedlayerd ~/.alignedlayer/cosmovisor/upgrades/v0.1.0/bin/
 rm -rf build
 ```
 
@@ -75,6 +81,43 @@ Environment="DAEMON_HOME=~/.alignedlayer"
 Environment="DAEMON_NAME=alignedlayerd"
 Environment="UNSAFE_SKIP_BACKUP=true"
 Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/.alignedlayer/cosmovisor/current/bin"
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
+## Install without Cosmovisor
+
+### Download and build binaries
+### Clone Alignedlayer repo and build alignedlayerd v0.1.0
+```js
+cd $HOME
+git clone https://github.com/yetanotherco/aligned_layer.git
+cd aligned_layer
+git checkout v0.1.0
+```
+
+### Build binaries
+```js
+make install
+```
+
+## Run node
+### Create service
+```js
+sudo tee /etc/systemd/system/alignedlayerd.service > /dev/null << EOF
+[Unit]
+Description=alignedlayer node service
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which alignedlayerd) start
+Restart=on-failure
+RestartSec=10
+LimitNOFILE=65535
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
 
 [Install]
 WantedBy=multi-user.target

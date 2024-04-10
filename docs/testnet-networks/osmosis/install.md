@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-osmosis">
 # Installation
 </div>
-###### Chain ID: `osmosis-1` | Current Node Version: `23.0.0`
+###### Chain ID: `osmo-test-5` | Current Node Version: `v24.0.0-rc0`
 
 ## Install dependencies
 
@@ -25,13 +25,19 @@ eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/gola
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
 
-## Download and build binaries
-### Clone Osmosis repo and build osmosisd 23.0.0
+## Install with Cosmovisor
+:::note ADVANCED ROUTE
+
+Cosmosvisor is a process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If a proposal is approved, cosmosvisor can automatically download the new binary, stop the current one, switch to the new binary, and restart the node with the new binary.
+
+:::
+### Download and build binaries
+### Clone Osmosis repo and build osmosisd v24.0.0-rc0
 ```js
 cd $HOME
 git clone https://github.com/osmosis-labs/osmosis.git
 cd osmosis
-git checkout 23.0.0
+git checkout v24.0.0-rc0
 ```
 
 ### Build binaries
@@ -41,8 +47,8 @@ make build
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.osmosisd/cosmovisor/upgrades/23.0.0/bin
-mv build/osmosisd ~/.osmosisd/cosmovisor/upgrades/23.0.0/bin/
+mkdir -p ~/.osmosisd/cosmovisor/upgrades/v24.0.0-rc0/bin
+mv build/osmosisd ~/.osmosisd/cosmovisor/upgrades/v24.0.0-rc0/bin/
 rm -rf build
 ```
 
@@ -81,6 +87,43 @@ WantedBy=multi-user.target
 EOF
 ```
 
+## Install without Cosmovisor
+
+### Download and build binaries
+### Clone Osmosis repo and build osmosisd v24.0.0-rc0
+```js
+cd $HOME
+git clone https://github.com/osmosis-labs/osmosis.git
+cd osmosis
+git checkout v24.0.0-rc0
+```
+
+### Build binaries
+```js
+make install
+```
+
+## Run node
+### Create service
+```js
+sudo tee /etc/systemd/system/osmosisd.service > /dev/null << EOF
+[Unit]
+Description=osmosis node service
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which osmosisd) start
+Restart=on-failure
+RestartSec=10
+LimitNOFILE=65535
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
 ### Enable service
 ```js
 sudo systemctl daemon-reload
@@ -90,24 +133,24 @@ sudo systemctl enable osmosisd.service.service
 ## Node configuration
 ### Set config
 ```js
-osmosisd config chain-id osmosis-1
+osmosisd config chain-id osmo-test-5
 osmosisd config keyring-backend os
 osmosisd config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-osmosisd init NAME_OF_YOUR_VALIDATOR --chain-id osmosis-1
+osmosisd init NAME_OF_YOUR_VALIDATOR --chain-id osmo-test-5
 ```
 
 ### Download genesis and addrbook
 ```js
-curl -Ls https://config.noders.services/osmosis/genesis.json > ~/.osmosisd/config/genesis.json
-curl -Ls https://config.noders.services/osmosis/addrbook.json > ~/.osmosisd/config/addrbook.json
+curl -Ls https://config-t.noders.services/osmosis/genesis.json > ~/.osmosisd/config/genesis.json
+curl -Ls https://config-t.noders.services/osmosis/addrbook.json > ~/.osmosisd/config/addrbook.json
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"91570c5f4e2a54ce53996475aea4f530e0669a2e@osmosis.rpc.mainnet.noders.team:10656\"/" ~/.osmosisd/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"e789336ddac0a5801c454b44fca13c4ba5701a4a@osmosis-t-rpc.noders.services:10656\"/" ~/.osmosisd/config/config.toml
 ```
 
 ### Set minimum gas price

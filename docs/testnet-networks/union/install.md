@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-union">
 # Installation
 </div>
-###### Chain ID: `union-testnet-6` | Current Node Version: `null`
+###### Chain ID: `union-testnet-6` | Current Node Version: `vnull`
 
 ## Install dependencies
 
@@ -25,13 +25,19 @@ eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/gola
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
 
-## Download and build binaries
-### Clone Union repo and build uniond null
+## Install with Cosmovisor
+:::note ADVANCED ROUTE
+
+Cosmosvisor is a process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If a proposal is approved, cosmosvisor can automatically download the new binary, stop the current one, switch to the new binary, and restart the node with the new binary.
+
+:::
+### Download and build binaries
+### Clone Union repo and build uniond vnull
 ```js
 cd $HOME
 git clone https://github.com/unionlabs.git
 cd unionlabs
-git checkout null
+git checkout vnull
 ```
 
 ### Build binaries
@@ -41,8 +47,8 @@ make build
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.union/cosmovisor/upgrades/null/bin
-mv build/uniond ~/.union/cosmovisor/upgrades/null/bin/
+mkdir -p ~/.union/cosmovisor/upgrades/vnull/bin
+mv build/uniond ~/.union/cosmovisor/upgrades/vnull/bin/
 rm -rf build
 ```
 
@@ -75,6 +81,43 @@ Environment="DAEMON_HOME=~/.union"
 Environment="DAEMON_NAME=uniond"
 Environment="UNSAFE_SKIP_BACKUP=true"
 Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/.union/cosmovisor/current/bin"
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
+## Install without Cosmovisor
+
+### Download and build binaries
+### Clone Union repo and build uniond vnull
+```js
+cd $HOME
+git clone https://github.com/unionlabs.git
+cd unionlabs
+git checkout vnull
+```
+
+### Build binaries
+```js
+make install
+```
+
+## Run node
+### Create service
+```js
+sudo tee /etc/systemd/system/union.service > /dev/null << EOF
+[Unit]
+Description=union node service
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which uniond) start
+Restart=on-failure
+RestartSec=10
+LimitNOFILE=65535
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
 
 [Install]
 WantedBy=multi-user.target

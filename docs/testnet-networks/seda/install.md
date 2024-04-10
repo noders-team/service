@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-seda">
 # Installation
 </div>
-###### Chain ID: `seda-1-testnet` | Current Node Version: `0.0.7`
+###### Chain ID: `seda-1-testnet` | Current Node Version: `v0.0.7`
 
 ## Install dependencies
 
@@ -25,13 +25,19 @@ eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/gola
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
 
-## Download and build binaries
-### Clone Seda repo and build sedad 0.0.7
+## Install with Cosmovisor
+:::note ADVANCED ROUTE
+
+Cosmosvisor is a process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If a proposal is approved, cosmosvisor can automatically download the new binary, stop the current one, switch to the new binary, and restart the node with the new binary.
+
+:::
+### Download and build binaries
+### Clone Seda repo and build sedad v0.0.7
 ```js
 cd $HOME
 git clone https://github.com/sedaprotocol.git
 cd sedaprotocol
-git checkout 0.0.7
+git checkout v0.0.7
 ```
 
 ### Build binaries
@@ -41,8 +47,8 @@ make build
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.sedad/cosmovisor/upgrades/0.0.7/bin
-mv build/sedad ~/.sedad/cosmovisor/upgrades/0.0.7/bin/
+mkdir -p ~/.sedad/cosmovisor/upgrades/v0.0.7/bin
+mv build/sedad ~/.sedad/cosmovisor/upgrades/v0.0.7/bin/
 rm -rf build
 ```
 
@@ -75,6 +81,43 @@ Environment="DAEMON_HOME=~/.sedad"
 Environment="DAEMON_NAME=sedad"
 Environment="UNSAFE_SKIP_BACKUP=true"
 Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/.sedad/cosmovisor/current/bin"
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
+## Install without Cosmovisor
+
+### Download and build binaries
+### Clone Seda repo and build sedad v0.0.7
+```js
+cd $HOME
+git clone https://github.com/sedaprotocol.git
+cd sedaprotocol
+git checkout v0.0.7
+```
+
+### Build binaries
+```js
+make install
+```
+
+## Run node
+### Create service
+```js
+sudo tee /etc/systemd/system/seda.service > /dev/null << EOF
+[Unit]
+Description=seda node service
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which sedad) start
+Restart=on-failure
+RestartSec=10
+LimitNOFILE=65535
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
 
 [Install]
 WantedBy=multi-user.target

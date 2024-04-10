@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-celestia">
 # State sync
 </div>
-###### Chain ID: `mocha-4` | Current Node Version: `1.7.0`
+###### Chain ID: `mocha-4` | Current Node Version: `v1.7.0`
 
 ```bash
 SNAP_RPC=https://celestia-t-rpc.noders.services:443 && \
@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop celestai.service && celestia-appd tendermint unsafe-reset-all --home ~/.celestia-app --keep-addr-book
+sudo systemctl stop celestia.service && celestia-appd tendermint unsafe-reset-all --home ~/.celestia-app --keep-addr-book
 ```
 ```bash
 peers="6c3f75284e4bb6a31e54d531bb72dad2aeb76a60@celestia-t-rpc.noders.services:21656"
@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.celestia-app/config/config.toml
 ```
 ```bash
-sudo systemctl restart celestai.service && sudo journalctl -fu celestai.service --no-hostname -o cat
+sudo systemctl restart celestia.service && sudo journalctl -fu celestia.service --no-hostname -o cat
 ```

@@ -1,41 +1,41 @@
 # Blockchain
-CHAIN_NAME="Andromeda"
-CHAIN_SYSTEM_NAME="andromeda"
+CHAIN_NAME="Pylons"
+CHAIN_SYSTEM_NAME="pylons"
 CHAIN_ID="auto"
 VERSION="auto"
-CHAIN_DESCRIPTION="""# Andromeda Protocol: Unveiling the aOS
+CHAIN_DESCRIPTION="""# Pylons: Enabling Seamless Blockchain Integration for Digital Assets
 
-The Andromeda Protocol heralds a new era in decentralized technology with its Andromeda Operating System (aOS), the first decentralized, on-chain operating system. It facilitates seamless development across blockchains, offering a unique suite of Web3 tools and utilities. Key features include multi-chain support, IBC for easy data transport, accessible tools for creators, rapid development with Andromeda Digital Objects (ADOs), and extensive integration with major blockchain platforms. Andromeda aims to enhance Web3 accessibility, efficiency, and scalability, fostering a rich ecosystem for developers and creators globally.
+Pylons.tech is at the forefront of blockchain development, specializing in digital items and NFTs. It streamlines the creation of freemium DApps, marrying mobile Web3 experiences with traditional in-app purchases. Designed to facilitate easy onboarding, Pylons removes barriers like KYC and initial token buys, making on-chain gaming as accessible as its mainstream counterpart. Its innovative fiat bridge furthers this mission, ensuring direct purchases of digital assets, thereby democratizing access to the blockchain ecosystem.
 
 """
 [CHAIN_DESCRIPTION_END]
 
-CHAIN_DENOM="uandr"
+CHAIN_DENOM="ubedrock"
 CHAIN_FEES="3000"
 
 # Binary
-DAEMON_NAME="andromedad"
-DAEMON_SERVICE="andromedad.service"
-DAEMON_HOME="~/.andromeda"
+DAEMON_NAME="pylonsd"
+DAEMON_SERVICE="pylons.service"
+DAEMON_HOME="~/.pylonsd"
 
 # Endpoints
-ENDPOINT_RPC=""
-ENDPOINT_API=""
+ENDPOINT_RPC="https://pylons-rpc.noders.services"
+ENDPOINT_API="https://pylons-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC=""
+ENDPOINT_GRPC="https://pylons-grpc.noders.services"
 ENDPOINT_PEER="auto"
 
 # Social
-SOCIAL_WEBSITE="https://www.andromedaprotocol.io/"
-SOCIAL_GITHUB="https://github.com/andromedaprotocol"
-SOCIAL_DISCORD="https://discord.gg/GBd6buKYyZ"
-SOCIAL_X="https://twitter.com/andromedaprot"
-SOCIAL_TELEGRAM="https://t.me/andromedaprotocol"
+SOCIAL_WEBSITE="https://www.pylons.tech/home/"
+SOCIAL_GITHUB="https://github.com/Pylons-tech/pylons"
+SOCIAL_DISCORD="https://discord.gg/pylons"
+SOCIAL_X="https://twitter.com/pylonstech"
+SOCIAL_TELEGRAM=""
 
 # Other
-DOWNLOAD_URL="h"
+DOWNLOAD_URL="https://config.noders.services/pylons"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://andromeda.explorers.guru/validator/andrvaloper1t8zsecgzc5025k3s0mthdm6vt82p5p0v48p2ry"
+VALIDATOR_LINK="https://pylons.explorers.guru/validator/pylovaloper1yc06qqa99vz50jrh64fctt0gvjj7pp7n7029c7"
 
 # Updates
 UPDATE_MAIN=true

@@ -25,13 +25,13 @@ eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/gola
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
 
-# Install with Cosmovisor
+## Install with Cosmovisor
 :::note ADVANCED ROUTE
 
 Cosmosvisor is a process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If a proposal is approved, cosmosvisor can automatically download the new binary, stop the current one, switch to the new binary, and restart the node with the new binary.
 
 :::
-## Download and build binaries
+### Download and build binaries
 ### Clone 0g repo and build evmosd v1.0.0-testnet
 ```js
 cd $HOME
@@ -87,9 +87,9 @@ WantedBy=multi-user.target
 EOF
 ```
 
-# Install without Cosmovisor
+## Install without Cosmovisor
 
-## Download and build binaries
+### Download and build binaries
 ### Clone 0g repo and build evmosd v1.0.0-testnet
 ```js
 cd $HOME

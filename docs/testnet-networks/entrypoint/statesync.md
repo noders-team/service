@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-entrypoint">
 # State sync
 </div>
-###### Chain ID: `entrypoint-pubtest-2` | Current Node Version: `1.3.0`
+###### Chain ID: `entrypoint-pubtest-2` | Current Node Version: `v1.3.0`
 
 ```bash
 SNAP_RPC=https://entrypoint-t-rpc.noders.services:443 && \

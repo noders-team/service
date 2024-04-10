@@ -1,6 +1,6 @@
 ---
 hide_table_of_contents: false
-title: template
+title: "Aura"
 ---
 
 import SmallCard from "../../src/components/SmallCard"
@@ -10,55 +10,13 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-aura">
 # Aura
 </div>
-###### Chain ID: `` | Current Node Version: `v0.7.2`
+###### Chain ID: `xstaxy-1` | Current Node Version: `v0.7.3`
 
-Aura Network is a scalable, agile and effortless Layer-1 blockchain with a comprehensive ecosystem built to accelerate global NFTs adoption.
 
-Built with a focus on interoperability, user experience, and developer friendliness, Aura aims to address some of the most pressing challenges facing the blockchain industry today, including scalability, ease of use, and cross-chain communication.
+Aura Network, a Layer-1 blockchain, focuses on scalability, interoperability, and user experience to drive NFT adoption. It offers high transaction efficiency, seamless cross-chain communication, developer-friendly tools, intuitive user interfaces, and an energy-efficient consensus mechanism. Ideal for dApps, NFT marketplaces, gaming, and social media, Aura Network aims to enhance blockchain accessibility and foster a sustainable, interconnected digital ecosystem.
 
-Key Features of Aura Network:
-Scalability: One of the core strengths of Aura Network is its ability to process a high volume of transactions efficiently, thanks to its advanced consensus mechanism and blockchain architecture. This makes it an attractive platform for developers looking to build scalable dApps that can accommodate a growing number of users.
-
-Interoperability: Aura Network emphasizes seamless interoperability with other blockchains, allowing for the free flow of assets and data across different ecosystems. This interoperability is crucial for building complex applications that leverage the strengths of multiple blockchain networks.
-
-Developer Friendly: The platform offers a range of tools and resources designed to simplify the development process. This includes comprehensive documentation, SDKs, and APIs that enable developers to quickly build, test, and deploy their applications on the Aura Network.
-
-Enhanced User Experience: Recognizing the importance of user experience in driving blockchain adoption, Aura Network focuses on creating a user-friendly environment. This includes intuitive interfaces, fast transaction times, and minimal fees, making it accessible for both seasoned blockchain users and newcomers.
-
-Sustainability: Aura Network is committed to sustainability and environmental responsibility. The network's consensus mechanism is designed to be energy-efficient, reducing the carbon footprint associated with blockchain operations.
-
-Applications of Aura Network:
-Aura Network is versatile and can support a wide range of applications, from decentralized finance (DeFi) platforms and non-fungible token (NFT) marketplaces to gaming and social media applications. Its scalability and interoperability make it an ideal platform for projects looking to offer a seamless experience across different blockchains.
-
-Conclusion:
-Aura Network represents a significant step forward in the development of blockchain infrastructure. By focusing on scalability, interoperability, and a positive user experience, Aura aims to broaden the appeal of blockchain technology and foster the development of a more connected and accessible digital ecosystem. Its commitment to sustainability and developer support further positions Aura Network as a forward-thinking platform ready to meet the evolving needs of the blockchain community.
-
-## Public endpoints 
-
-<CardLayout autoFitEnabled={true}>
-    
-    
-    
-</CardLayout>
-
-## Our validator
-
-<CardLayout autoFitEnabled={true}>
-    <Card
-        to="#"
-        header={{
-            label: "[NODERS]TEAM",
-            translateId: "development-setup",
-        }}
-        body={{
-            label: "Trusted blockchain validator",
-        }}
-        iconPath="img/kotlin-icon-32.svg"
-    />
-</CardLayout>
-
-## Social resources
-See the API for the various client libraries implemented for.
+# Social resources
+Official links of social networks of projects
 
 <CardLayout autoFitEnabled={false}>
     <SmallCard to="https://aura.network/" header={{label: "Website", translateId: "social-telegram"}} iconPath="img/website-icon.svg"/>
@@ -67,3 +25,30 @@ See the API for the various client libraries implemented for.
     <SmallCard to="https://twitter.com/AuraNetworkHQ" header={{label: "X", translateId: "social-telegram"}} iconPath="img/x-icon.svg"/>
     <SmallCard to="https://t.me/AuraNetworkOfficial" header={{label: "Telegram", translateId: "social-telegram"}} iconPath="img/telegram-icon.svg"/>
 </CardLayout>
+
+# Our validator in Aura network
+
+<CardLayout autoFitEnabled={true}>
+    <Card
+        to="https://aurascan.io/validators/auravaloper1vvqz6j3ucxr6n0ejdz4ck602lnyjew93cgcw4m"
+        header={{
+            label: "[NODERS]TEAM",
+            translateId: "development-setup",
+        }}
+        body={{
+            label: "Trusted blockchain validator",
+        }}
+        iconPath="img/kotlin-icon.svg"
+    />
+</CardLayout>
+
+# Public endpoints 
+
+<CardLayout autoFitEnabled={true}>
+    <SmallCard to="https://aura-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
+    <SmallCard to="https://aura-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
+    
+    <SmallCard to="https://aura-grpc.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+</CardLayout>
+
+

@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-alignedlayer">
 # State sync
 </div>
-###### Chain ID: `alignedlayer` | Current Node Version: `0.1.0`
+###### Chain ID: `alignedlayer` | Current Node Version: `v0.1.0`
 
 ```bash
 SNAP_RPC=https://aligned-t-rpc.noders.services:443 && \

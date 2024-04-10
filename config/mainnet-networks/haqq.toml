@@ -1,38 +1,47 @@
 # Blockchain
-CHAIN_NAME="Osmosis"
-CHAIN_SYSTEM_NAME="osmosis"
+CHAIN_NAME="Haqq"
+CHAIN_SYSTEM_NAME="haqq"
 CHAIN_ID="auto"
-CHAIN_DESCRIPTION="Osmosis is a decentralized peer-to-peer blockchain that people can use to create liquidity and trade IBC enabled tokens. The Osmosis blockchain is made up of free, public, and open-source software."
-CHAIN_DENOM="uosmo"
+VERSION="auto"
+CHAIN_DESCRIPTION="""
+# IslamicCoin: A Shariah-Compliant Digital Currency
+
+IslamicCoin is designed for the Islamic community, ensuring Shariah compliance, promoting ethical investments, and supporting financial inclusion. It leverages blockchain for transparency and security, incorporates charitable mechanisms for Zakat and Sadaqah, and facilitates investments with a positive social impact. IslamicCoin aims to bridge traditional Islamic finance with modern digital currencies, offering a platform for global accessibility and ethical financial practices, appealing to Muslims and ethical investors alike.
+
+"""
+[CHAIN_DESCRIPTION_END]
+
+CHAIN_DENOM="aISLM"
 CHAIN_FEES="3000"
 
 # Binary
-DAEMON_NAME="osmosisd"
-DAEMON_VERSION="v23.0.0"
-DAEMON_SERVICE="osmosisd.service"
-DAEMON_HOME="~/.osmosisd"
+DAEMON_NAME="haqqd"
+DAEMON_SERVICE="haqqd.service"
+DAEMON_HOME="~/.haqqd"
 
 # Endpoints
-ENDPOINT_RPC="https://osmosis.rpc.mainnet.noders.team"
-ENDPOINT_API="https://osmosis.api.mainnet.noders.team"
-ENDPOINT_GRPCWEB="https://osmosis.grpc.mainnet.noders.team"
-ENDPOINT_GRPC=""
+ENDPOINT_RPC="https://haqq-rpc.noders.services"
+ENDPOINT_API="https://haqq-api.noders.services"
+ENDPOINT_JRPC="https://haqq-jsonrpc.noders.services"
+ENDPOINT_GRPC="https://haqq-grpc.noders.services"
 ENDPOINT_PEER="auto"
 
 # Social
-SOCIAL_WEBSITE="#"
-SOCIAL_GITHUB="https://github.com/osmosis-labs/osmosis"
-SOCIAL_DISCORD="#"
-SOCIAL_X="#"
-SOCIAL_TELEGRAM="https://t.me/osmosiszone"
+SOCIAL_WEBSITE="https://haqq.network/"
+SOCIAL_GITHUB="https://github.com/haqq-network"
+SOCIAL_DISCORD="https://discord.gg/CDtXuQG3Vd"
+SOCIAL_X="https://twitter.com/The_HaqqNetwork"
+SOCIAL_TELEGRAM="https://t.me/islamiccoin_int"
 
 # Other
-DOWNLOAD_URL="https://snapshots.mainnet.noders.team/osmosis/"
+DOWNLOAD_URL="https://config.noders.services/haqq"
 GITHUB_FOLDER_NAME="auto"
+VALIDATOR_LINK="https://haqq.explorers.guru/validator/haqqvaloper1hgggrfgjeu4d5nveh03c6w37magsuqcy84p44t"
 
 # Updates
 UPDATE_MAIN=true
 UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
 UPDATE_UPGRADE=true
 UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true

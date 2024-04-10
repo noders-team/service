@@ -1,41 +1,41 @@
 # Blockchain
-CHAIN_NAME="Celestia"
-CHAIN_SYSTEM_NAME="celestia"
+CHAIN_NAME="Artela"
+CHAIN_SYSTEM_NAME="artela"
 CHAIN_ID="auto"
 VERSION="auto"
-CHAIN_DESCRIPTION="""# Celestia: Revolutionizing Blockchain with Modularity
+CHAIN_DESCRIPTION="""# Artela Network: Empowering Digital Art and Creators with Blockchain
 
-Celestia introduces a modular data availability network to enhance blockchain scalability and flexibility. It features a minimal design focusing on transaction ordering and data availability, decoupling consensus from execution for improved scalability. This approach allows for customized execution layers, powered by a secure Proof of Stake mechanism. Celestia's innovation lies in its ability to ensure transaction data is verifiable without downloading the entire chain, offering a foundation for scalable, efficient blockchain applications.
+Artela Network revolutionizes the digital art space by leveraging blockchain technology to empower artists and creators. This innovative platform offers a decentralized marketplace for digital artworks, ensuring authenticity, ownership, and provenance through secure NFTs. Artela Network enables artists to monetize their creations directly, fostering a vibrant community where art enthusiasts can discover, buy, and collect unique digital pieces. By integrating blockchain's transparency and security, Artela Network is setting a new standard for digital art, making it accessible and rewarding for creators and collectors alike.
 
 """
 [CHAIN_DESCRIPTION_END]
 
-CHAIN_DENOM="utia"
+CHAIN_DENOM="uart"
 CHAIN_FEES="3000"
 
 # Binary
-DAEMON_NAME="celestia-appd"
-DAEMON_SERVICE="celestai.service"
-DAEMON_HOME="~/.celestia-app"
+DAEMON_NAME="artelad"
+DAEMON_SERVICE="artela.service"
+DAEMON_HOME="~/.artelad"
 
 # Endpoints
-ENDPOINT_RPC="https://celestia-t-rpc.noders.services"
-ENDPOINT_API="https://celestia-t-api.noders.services"
+ENDPOINT_RPC="https://artela-t-rpc.noders.services"
+ENDPOINT_API="https://artela-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://celestia-t-grpc.noders.services"
+ENDPOINT_GRPC="https://artela-t-grpc.noders.services"
 ENDPOINT_PEER="auto"
 
 # Social
-SOCIAL_WEBSITE="https://celestia.org/"
-SOCIAL_GITHUB="https://github.com/celestiaorg"
-SOCIAL_DISCORD="https://discord.gg/celestiacommunity"
-SOCIAL_X="https://twitter.com/CelestiaOrg"
-SOCIAL_TELEGRAM="https://t.me/celestiaru"
+SOCIAL_WEBSITE="https://artela.network/"
+SOCIAL_GITHUB="https://github.com/artela-network"
+SOCIAL_DISCORD="https://discord.com/invite/artela"
+SOCIAL_X="https://twitter.com/artela_network"
+SOCIAL_TELEGRAM=""
 
 # Other
-DOWNLOAD_URL="h"
+DOWNLOAD_URL="https://config-t.noders.services/artela"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://testnet.celestia.explorers.guru/validator/celestiavaloper1zzxrq7tjlsqvv0jtqtlt8gjaa68racukf5n9xh"
+VALIDATOR_LINK="https://testnet.itrocket.net/artela/staking/artvaloper1gjju20vjss6a5w0w3nz575637wg0mrw0rvqujq"
 
 # Updates
 UPDATE_MAIN=true

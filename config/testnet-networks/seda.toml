@@ -1,41 +1,43 @@
 # Blockchain
-CHAIN_NAME="Celestia"
-CHAIN_SYSTEM_NAME="celestia"
+CHAIN_NAME="Seda"
+CHAIN_SYSTEM_NAME="seda"
 CHAIN_ID="auto"
 VERSION="auto"
-CHAIN_DESCRIPTION="""# Celestia: Revolutionizing Blockchain with Modularity
+CHAIN_DESCRIPTION="""# SEDA: Simplifying Decentralized Finance
 
-Celestia introduces a modular data availability network to enhance blockchain scalability and flexibility. It features a minimal design focusing on transaction ordering and data availability, decoupling consensus from execution for improved scalability. This approach allows for customized execution layers, powered by a secure Proof of Stake mechanism. Celestia's innovation lies in its ability to ensure transaction data is verifiable without downloading the entire chain, offering a foundation for scalable, efficient blockchain applications.
+SEDA is at the forefront of the decentralized finance revolution, offering a comprehensive platform designed to democratize access to financial services. By leveraging blockchain technology, SEDA introduces a transparent, secure, and accessible ecosystem where users can engage in lending, borrowing, and trading without the need for traditional financial intermediaries.
+
+This platform is built with the user in mind, featuring an intuitive interface that makes navigating the complexities of DeFi straightforward. SEDA's innovative protocols ensure high liquidity, low slippage, and competitive yields across a variety of digital assets.
 
 """
 [CHAIN_DESCRIPTION_END]
 
-CHAIN_DENOM="utia"
+CHAIN_DENOM="useda"
 CHAIN_FEES="3000"
 
 # Binary
-DAEMON_NAME="celestia-appd"
-DAEMON_SERVICE="celestai.service"
-DAEMON_HOME="~/.celestia-app"
+DAEMON_NAME="sedad"
+DAEMON_SERVICE="seda.service"
+DAEMON_HOME="~/.sedad"
 
 # Endpoints
-ENDPOINT_RPC="https://celestia-t-rpc.noders.services"
-ENDPOINT_API="https://celestia-t-api.noders.services"
+ENDPOINT_RPC="https://seda-t-rpc.noders.services"
+ENDPOINT_API="https://seda-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://celestia-t-grpc.noders.services"
+ENDPOINT_GRPC="https://seda-t-grpc.noders.services"
 ENDPOINT_PEER="auto"
 
 # Social
-SOCIAL_WEBSITE="https://celestia.org/"
-SOCIAL_GITHUB="https://github.com/celestiaorg"
-SOCIAL_DISCORD="https://discord.gg/celestiacommunity"
-SOCIAL_X="https://twitter.com/CelestiaOrg"
-SOCIAL_TELEGRAM="https://t.me/celestiaru"
+SOCIAL_WEBSITE="https://www.seda.xyz/"
+SOCIAL_GITHUB="https://github.com/sedaprotocol"
+SOCIAL_DISCORD="https://discord.gg/Ae4V6y6qrW"
+SOCIAL_X="https://twitter.com/sedaprotocol"
+SOCIAL_TELEGRAM="https://t.me/sedaprotocol"
 
 # Other
-DOWNLOAD_URL="h"
+DOWNLOAD_URL="https://config-t.noders.services/seda"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://testnet.celestia.explorers.guru/validator/celestiavaloper1zzxrq7tjlsqvv0jtqtlt8gjaa68racukf5n9xh"
+VALIDATOR_LINK=""
 
 # Updates
 UPDATE_MAIN=true

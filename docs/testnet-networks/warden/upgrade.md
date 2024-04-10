@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-warden">
 # Upgrade
 </div>
-###### Chain ID: `alfama` | Current Node Version: `0.2.0`
+###### Chain ID: `alfama` | Current Node Version: `v0.2.0`
 
 
 # Clone Warden repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf wardenprotocol
 git clone https://github.com/warden-protocol/wardenprotocol.git
 cd wardenprotocol
-git checkout 0.2.0
+git checkout v0.2.0
  ```
 
 # Build binaries
@@ -26,7 +26,7 @@ make build
 
 # Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.warden/cosmovisor/upgrades/0.2.0/bin
-mv build/wardend ~/.warden/cosmovisor/upgrades/0.2.0/bin/
+mkdir -p ~/.warden/cosmovisor/upgrades/v0.2.0/bin
+mv build/wardend ~/.warden/cosmovisor/upgrades/v0.2.0/bin/
 rm -rf build
 ```

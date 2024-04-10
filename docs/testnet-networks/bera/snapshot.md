@@ -7,13 +7,13 @@ sidebar_position: 3
 <div class="h1-with-icon icon-bera">
 # Node Snapshot
 </div>
-###### Chain ID: `artio-80085` | Current Node Version: `v0.2.3-alpha-rc7`
+###### Chain ID: `` | Current Node Version: `v`
 
 ## Our Bera Snapshot Server Setup
 
-| Block height | Size | Timestamp | Download                                                                                         |
-|--------------|------|-----------|--------------------------------------------------------------------------------------------------|
-| 971453       | 3 GB |9 hours ago| [osmosis_latest.tar.lz4](https://google.com) with sha256sum [`ABCDEF`](https://google.com)       |
+| Size   | Timestamp    |
+|--------|--------------|
+|  GB |   |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -40,10 +40,7 @@ sudo apt update
 sudo apt install snapd -y
 sudo snap install lz4
 ```
-Download the snapshot
-```bash
-wget -O osmosis_14249428.tar.lz4 https://snapshots.polkachu.com/snapshots/osmosis/osmosis_14249428.tar.lz4 --inet4-only
-```
+
 Stop your node
 ```bash
 sudo systemctl stop berad
@@ -60,13 +57,21 @@ If you use this snapshot on a validator node during a chain halt, make sure you 
 # Back up priv_validator_state.json if needed
 cp ~/.bera/data/priv_validator_state.json  ~/.bera/priv_validator_state.json
 
-berad tendermint unsafe-reset-all --home ~/.bera --keep-addr-book
+cd $HOME
+sudo rm -rf ~/.bera/data
+sudo rm -rf ~/.bera/wasm
 ```
 
 Decompress the snapshot to your database location. You database location will be something to the effect of `~/.bera` depending on your node implemention.
 
+The above solution requires you to download the compressed file, uncompressed it and then delete the original file. This requires extra storage space on your server. You can run the following combo command to stream the snapshot into your database location. For advanced users only:
+### Data
 ```bash
-lz4 -c -d celestia_971453.tar.lz4  | tar -x -C ~/.bera
+curl -o - -L https://config-t.noders.services/bera/data.tar.lz4 | lz4 -d | tar -x -C ~/.bera
+```
+### Wasm
+```bash
+Not supported
 ```
 
 :::warning WARNING
@@ -80,33 +85,12 @@ cp ~/.bera/priv_validator_state.json  ~/.bera/data/priv_validator_state.json
 ```
 
 If everything is good, now restart your node
-
-```bash
-sudo systemctl restart bera.service
-```
-
-Remove downloaded snapshot to free up space
-
-```bash
-rm -v celestia_971453.tar.lz4
-```
-
 Make sure that your node is running
 
 ```bash
 sudo systemctl restart bera.service
 sudo journalctl -fu bera.service --no-hostname -o cat
 ```
-
-:::note ADVANCED ROUTE
-
-The above solution requires you to download the compressed file, uncompressed it and then delete the original file. This requires extra storage space on your server. You can run the following combo command to stream the snapshot into your database location. For advanced users only:
-```bash
-curl -o - -L https://snapshots.polkachu.com/snapshots/celestia/celestia_971453.tar.lz4 | lz4 -c -d - | tar -x -C ~/.bera
-```
-
-:::
-
 
 :::info ADVANCED ROUTE
 

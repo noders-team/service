@@ -11,9 +11,9 @@ sidebar_position: 3
 
 ## Our 0g Snapshot Server Setup
 
-| Size   | Timestamp    | Download                           |
-|--------|--------------|------------------------------------|
-|  GB |   | [data.tar.lz4](https://google.com) |
+| Size   | Timestamp    |
+|--------|--------------|
+|  GB |   |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -40,10 +40,7 @@ sudo apt update
 sudo apt install snapd -y
 sudo snap install lz4
 ```
-Download the snapshot
-```bash
-wget -O data.tar.lz4 https://config-t.noders.services/0g/data.tar.lz4 --inet4-only
-```
+
 Stop your node
 ```bash
 sudo systemctl stop evmosd
@@ -60,13 +57,21 @@ If you use this snapshot on a validator node during a chain halt, make sure you 
 # Back up priv_validator_state.json if needed
 cp ~/.evmosd/data/priv_validator_state.json  ~/.evmosd/priv_validator_state.json
 
-evmosd tendermint unsafe-reset-all --home ~/.evmosd --keep-addr-book
+cd $HOME
+sudo rm -rf ~/.evmosd/data
+sudo rm -rf ~/.evmosd/wasm
 ```
 
 Decompress the snapshot to your database location. You database location will be something to the effect of `~/.evmosd` depending on your node implemention.
 
+The above solution requires you to download the compressed file, uncompressed it and then delete the original file. This requires extra storage space on your server. You can run the following combo command to stream the snapshot into your database location. For advanced users only:
+### Data
 ```bash
-lz4 -c -d data.tar.lz4  | tar -x -C ~/.evmosd
+curl -o - -L https://config-t.noders.services/0g/data.tar.lz4 | lz4 -d | tar -x -C ~/.evmosd
+```
+### Wasm
+```bash
+Not supported
 ```
 
 :::warning WARNING
@@ -80,33 +85,12 @@ cp ~/.evmosd/priv_validator_state.json  ~/.evmosd/data/priv_validator_state.json
 ```
 
 If everything is good, now restart your node
-
-```bash
-sudo systemctl restart 0g.service
-```
-
-Remove downloaded snapshot to free up space
-
-```bash
-rm -v data.tar.lz4
-```
-
 Make sure that your node is running
 
 ```bash
 sudo systemctl restart 0g.service
 sudo journalctl -fu 0g.service --no-hostname -o cat
 ```
-
-:::note ADVANCED ROUTE
-
-The above solution requires you to download the compressed file, uncompressed it and then delete the original file. This requires extra storage space on your server. You can run the following combo command to stream the snapshot into your database location. For advanced users only:
-```bash
-curl -o - -L https://config-t.noders.services/0g/data.tar.lz4 | lz4 -d | tar -x -C ~/.evmosd
-```
-
-:::
-
 
 :::info ADVANCED ROUTE
 

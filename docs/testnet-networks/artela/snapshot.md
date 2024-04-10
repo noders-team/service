@@ -11,9 +11,9 @@ sidebar_position: 3
 
 ## Our Artela Snapshot Server Setup
 
-| Block height | Size | Timestamp | Download                                                                                         |
-|--------------|------|-----------|--------------------------------------------------------------------------------------------------|
-| 971453       | 3 GB |9 hours ago| [osmosis_latest.tar.lz4](https://google.com) with sha256sum [`ABCDEF`](https://google.com)       |
+| Size   | Timestamp    |
+|--------|--------------|
+| 18.68 GB | Wed, 10 Apr 2024 12:10:24 GMT  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -40,10 +40,7 @@ sudo apt update
 sudo apt install snapd -y
 sudo snap install lz4
 ```
-Download the snapshot
-```bash
-wget -O osmosis_14249428.tar.lz4 https://snapshots.polkachu.com/snapshots/osmosis/osmosis_14249428.tar.lz4 --inet4-only
-```
+
 Stop your node
 ```bash
 sudo systemctl stop artelad
@@ -60,13 +57,21 @@ If you use this snapshot on a validator node during a chain halt, make sure you 
 # Back up priv_validator_state.json if needed
 cp ~/.artelad/data/priv_validator_state.json  ~/.artelad/priv_validator_state.json
 
-artelad tendermint unsafe-reset-all --home ~/.artelad --keep-addr-book
+cd $HOME
+sudo rm -rf ~/.artelad/data
+sudo rm -rf ~/.artelad/wasm
 ```
 
 Decompress the snapshot to your database location. You database location will be something to the effect of `~/.artelad` depending on your node implemention.
 
+The above solution requires you to download the compressed file, uncompressed it and then delete the original file. This requires extra storage space on your server. You can run the following combo command to stream the snapshot into your database location. For advanced users only:
+### Data
 ```bash
-lz4 -c -d celestia_971453.tar.lz4  | tar -x -C ~/.artelad
+curl -o - -L https://config-t.noders.services/artela/data.tar.lz4 | lz4 -d | tar -x -C ~/.artelad
+```
+### Wasm
+```bash
+Not supported
 ```
 
 :::warning WARNING
@@ -80,33 +85,12 @@ cp ~/.artelad/priv_validator_state.json  ~/.artelad/data/priv_validator_state.js
 ```
 
 If everything is good, now restart your node
-
-```bash
-sudo systemctl restart artela.service
-```
-
-Remove downloaded snapshot to free up space
-
-```bash
-rm -v celestia_971453.tar.lz4
-```
-
 Make sure that your node is running
 
 ```bash
 sudo systemctl restart artela.service
 sudo journalctl -fu artela.service --no-hostname -o cat
 ```
-
-:::note ADVANCED ROUTE
-
-The above solution requires you to download the compressed file, uncompressed it and then delete the original file. This requires extra storage space on your server. You can run the following combo command to stream the snapshot into your database location. For advanced users only:
-```bash
-curl -o - -L https://snapshots.polkachu.com/snapshots/celestia/celestia_971453.tar.lz4 | lz4 -c -d - | tar -x -C ~/.artelad
-```
-
-:::
-
 
 :::info ADVANCED ROUTE
 

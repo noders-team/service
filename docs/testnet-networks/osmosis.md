@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-osmosis">
 # Osmosis
 </div>
-###### Chain ID: `osmosis-1` | Current Node Version: `23.0.0`
+###### Chain ID: `osmo-test-5` | Current Node Version: `v24.0.0-rc0`
 
 
 Osmosis is a leading decentralized exchange (DEX) and automated market maker (AMM) on the Cosmos blockchain, revolutionizing DeFi with unparalleled customization and interoperability. It enables advanced DeFi features for liquidity providers and traders, fostering cross-chain liquidity and novel financial products. With customizable AMM pools, Inter-Blockchain Communication (IBC) protocol integration, superfluid staking, and community-driven governance, Osmosis is at the forefront of DeFi innovation, offering dynamic yield farming and sophisticated trading strategies within the Cosmos ecosystem.
@@ -47,8 +47,8 @@ Official links of social networks of projects
 # Public endpoints
 
 <CardLayout autoFitEnabled={true}>
-    <SmallCard to="https://osmosis.rpc.mainnet.noders.team" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
-    <SmallCard to="https://osmosis.api.mainnet.noders.team" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
+    <SmallCard to="https://osmosis-t-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
+    <SmallCard to="https://osmosis-t-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     
-    <SmallCard to="https://osmosis.grpc.mainnet.noders.team" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="https://osmosis-t-grpc.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
 </CardLayout>

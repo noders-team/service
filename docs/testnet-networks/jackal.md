@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-jackal">
 # Jackal
 </div>
-###### Chain ID: `` | Current Node Version: `null`
+###### Chain ID: `mesomelas-1` | Current Node Version: `vnull`
 
 
 Jackal Protocol introduces a decentralized file storage solution, enhancing security, efficiency, and cost-effectiveness. It emphasizes privacy, data sovereignty, and global access, decentralizing storage across numerous nodes for enhanced security and redundancy. Features include advanced encryption for privacy, reduced costs by utilizing unused storage space, scalability, and interoperability with various blockchain networks. Jackal Protocol supports a wide range of applications, including secure data backup, decentralized web hosting, and content delivery, marking a significant shift towards a more secure, user-controlled internet.
@@ -48,7 +48,7 @@ Official links of social networks of projects
 
 <CardLayout autoFitEnabled={true}>
     <SmallCard to="https://jackal-t-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
-    <SmallCard to="https://jackal-t-grpc.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
+    <SmallCard to="https://jackal-t-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     
-    <SmallCard to="https://jackal-t-api.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="https://jackal-t-grpc.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
 </CardLayout>

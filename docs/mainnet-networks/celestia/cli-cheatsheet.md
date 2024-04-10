@@ -1,13 +1,13 @@
 ---
 hide_table_of_contents: false
-title: CLI Cheatsheet*
-sidebar_position: 7
+title: CLI Cheatsheet
+sidebar_position: 8
 ---
 
 <div class="h1-with-icon icon-celestia">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `` | Current Node Version: `v1.6.0`
+###### Chain ID: `celestia` | Current Node Version: `v1.6.0`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -16,51 +16,122 @@ This cheatsheet collects commonly used CLI commands for node operators to easily
 - Always specify `--chain-id` and `--node` flags even when they are unnecessary
 - Query CLI command always uses `--output json` flag and pipes result through `jq`
 
-### Bank: Send
-```bash
-celestia-appd tx bank send KEY RECEIVER_ADDRESS 1000000utia \
-  --chain-id  \
-  --node :443 --fees 3000utia \
+## Wallet generate and recover
+### Add new key
+```js
+celestia-appd keys add KEY
+```
+
+### Recover key (via existing mnemonic)
+```js
+celestia-appd keys add KEY --recover
+```
+
+### List all keys
+```js
+celestia-appd keys list
+```
+
+### Delete key
+```js
+celestia-appd keys delete KEY
+```
+
+## Wallet
+### Wallet balance
+```js
+celestia-appd q bank balances $(celestia-appd keys show KEY -a) --node https://celestia-rpc.noders.services:443
+```
+
+### Send
+```js
+celestia-appd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000utia \
+  --chain-id celestia \
+  --node https://celestia-rpc.noders.services:443 --fees 3000utia \
   --from KEY
 ```
 
-### Distribution: Withdraw Rewards including Commission
-```bash
-celestia-appd tx distribution withdraw-rewards VALIDATOR_OPERATOR \
+### Withdraw rewards from all validators
+```js
+celestia-appd tx distribution withdraw-all-rewards \
+  --chain-id celestia \
+  --node https://celestia-rpc.noders.services:443 --fees 3000utia \
+  --from KEY
+```
+
+### Withdraw Rewards including Commission
+```js
+celestia-appd tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
-  --chain-id  \
-  --node :443 --fees 3000utia \
+  --chain-id celestia \
+  --node https://celestia-rpc.noders.services:443 --fees 3000utia \
   --from KEY
 ```
 
-### Gov: Query Proposal
-```bash
+### Delegate tokens to yourself
+```js
+celestia-appd tx staking delegate $(celestia-appd keys show KEY --bech val -a) 1000000utia \
+--chain-id celestia \
+--node https://celestia-rpc.noders.services:443 --fees 3000utia \
+--from KEY
+```
+
+### Delegate tokens to validator
+```js
+celestia-appd tx staking delegate VALIDATOR_ADDRESS 1000000utia \
+--chain-id celestia \
+--node https://celestia-rpc.noders.services:443 --fees 3000utia \
+--from KEY
+```
+
+### Redelegate tokens to another validator
+```js
+celestia-appd tx staking redelegate $(celestia-appd keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000utia \
+  --chain-id celestia \
+  --node https://celestia-rpc.noders.services:443 --fees 3000utia \
+  --from KEY
+```
+
+### Unbond tokens from your validator
+```js
+celestia-appd tx staking unbond $(celestia-appd keys show KEY --bech val -a) utia \
+  --chain-id andromeda-1 \
+  --node https://celestia-rpc.noders.services:443 --fees 3000utia \
+  --from KEY
+```
+
+## Governance
+### List of all proposals
+```js
+celestia-appd query gov proposals --node https://celestia-rpc.noders.services:443
+```
+### Check vote
+```js
 celestia-appd query gov proposal PROPOSAL_NUMBER \
-  --chain-id  \
-  --node :443 --fees 3000utia \
+  --chain-id celestia \
+  --node https://celestia-rpc.noders.services:443 --fees 3000utia \
   --output json | jq
 ```
 
-### Gov: Vote
-###### VOTE_OPTION: `yes`, `no`, `no_with_veto` and `abstain`.
-```bash
+### Vote
+#### Vote options:
+* yes
+* no 
+* no_with_veto
+* abstain
+```js
 celestia-appd tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
-  --chain-id  \
-  --node :443 --fees 3000utia \
+  --chain-id celestia \
+  --node https://celestia-rpc.noders.services:443 --fees 3000utia \
   --from KEY
 ```
 
-### Slashing: Unjail
-```bash
-celestia-appd tx slashing unjail \
-  --chain-id  \
-  --node :443 --fees 3000utia \
-  --from KEY
-```
-
-### Staking: Create Validator
-###### Note: We use example filed values instead of capitalized dummy words for demo purpose in this command. Please make sure to adjust accordingly for your use.
-```bash
+## Validator management
+### Create Validator
+:::note
+We use example filed values instead of capitalized dummy words for demo purpose in this command. Please make sure to adjust accordingly for your use.
+:::
+```js
 celestia-appd tx staking create-validator \
   --amount 1000000utia \
   --commission-max-change-rate "0.05" \
@@ -73,7 +144,132 @@ celestia-appd tx staking create-validator \
   --identity "220491ADDD660741" \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
-  --chain-id  \
-  --node :443 --fees 3000utia \
+  --chain-id celestia \
+  --node https://celestia-rpc.noders.services:443 --fees 3000utia \
   --from KEY
+```
+
+### Edit validator
+```js
+celestia-appd tx staking edit-validator \
+--new-moniker "YOUR_MONIKER_NAME" \
+--identity "YOUR_KEYBASE_ID" \
+--details "YOUR_DETAILS" \
+--website "YOUR_WEBSITE_URL" \
+--chain-id celestia \
+--commission-rate 0.05 \
+--from KEY \
+--node https://celestia-rpc.noders.services:443 --fees 3000utia \
+```
+
+### Unjail
+```js
+celestia-appd tx slashing unjail \
+  --chain-id celestia \
+  --node https://celestia-rpc.noders.services:443 --fees 3000utia \
+  --from KEY
+```
+
+### Jail reason
+```js
+celestia-appd query slashing signing-info $(celestia-appd tendermint show-validator)
+```
+
+### Validator details
+```js
+celestia-appd q staking validator $(celestia-appd keys show KEY --bech val -a)
+```
+
+## Maintenance
+### Get validator info
+```js
+celestia-appd status 2>&1 | jq .ValidatorInfo
+```
+
+### Get sync info
+```js
+celestia-appd status 2>&1 | jq .SyncInfo
+```
+
+### Get node peer
+```js
+echo $(celestia-appd tendermint show-node-id)'@'$(curl -s ifconfig.me)':'$(cat ~/.celestia-app/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
+```
+
+### Check if validator key is correct
+```js
+[[ $(celestia-appd q staking validator $(celestia-appd keys show KEY --bech val -a) -oj | jq -r .consensus_pubkey.key) = $(celestia-appd status | jq -r .ValidatorInfo.PubKey.value) ]] && echo -e "\n\e[1m\e[32mTrue\e[0m\n" || echo -e "\n\e[1m\e[31mFalse\e[0m\n"
+```
+
+### Get live peers
+```js
+curl -sS https://celestia-rpc.noders.services:443/net_info | jq -r '.result.peers[] | "\(.node_info.id)@\(.remote_ip):\(.node_info.listen_addr)"' | awk -F ':' '{print $1":"$(NF)}'
+```
+
+### Set minimum gas price
+```js
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.001utia\"/" ~/.celestia-app/config/app.toml
+```
+
+###Enable prometheus
+```js
+sed -i -e "s/prometheus = false/prometheus = true/" ~/.celestia-app/config/config.toml
+```
+
+### Reset chain data
+```js
+celestia-appd tendermint unsafe-reset-all --keep-addr-book --home ~/.celestia-app
+```
+
+## Service Management
+### Reload service configuration
+```js
+sudo systemctl daemon-reload
+```
+
+### Enable service
+```js
+sudo systemctl enable celestia-appd.service
+```
+
+### Disable service
+```js
+sudo systemctl disable celestia-appd.service
+```
+
+### Start service
+```js
+sudo systemctl start celestia-appd.service
+```
+
+### Stop service
+```js
+sudo systemctl stop celestia-appd.service
+```
+
+### Restart service
+```js
+sudo systemctl restart celestia-appd.service
+```
+
+### Check service status
+```js
+sudo systemctl status celestia-appd.service
+```
+
+### Check service logs
+```js
+sudo journalctl -u celestia-appd.service -f --no-hostname -o cat
+```
+
+## Remove node
+```js
+cd $HOME
+sudo systemctl stop celestia-appd.service
+sudo systemctl disable celestia-appd.service
+sudo rm /etc/systemd/system/celestia-appd.service
+sudo systemctl daemon-reload
+rm -f $(which celestia-appd)
+rm -rf ~/.celestia-app
+rm -rf $HOME/celestiaorg
 ```

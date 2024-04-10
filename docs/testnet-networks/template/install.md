@@ -25,7 +25,13 @@ eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/gola
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
 
-## Download and build binaries
+## Install with Cosmovisor
+:::note ADVANCED ROUTE
+
+Cosmosvisor is a process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If a proposal is approved, cosmosvisor can automatically download the new binary, stop the current one, switch to the new binary, and restart the node with the new binary.
+
+:::
+### Download and build binaries
 ### Clone [CHAIN_NAME] repo and build [DAEMON_NAME] [VERSION]
 ```js
 cd $HOME
@@ -81,6 +87,43 @@ WantedBy=multi-user.target
 EOF
 ```
 
+## Install without Cosmovisor
+
+### Download and build binaries
+### Clone [CHAIN_NAME] repo and build [DAEMON_NAME] [VERSION]
+```js
+cd $HOME
+git clone [SOCIAL_GITHUB].git
+cd [GITHUB_FOLDER_NAME]
+git checkout [VERSION]
+```
+
+### Build binaries
+```js
+make install
+```
+
+## Run node
+### Create service
+```js
+sudo tee /etc/systemd/system/[DAEMON_SERVICE] > /dev/null << EOF
+[Unit]
+Description=[CHAIN_SYSTEM_NAME] node service
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which [DAEMON_NAME]) start
+Restart=on-failure
+RestartSec=10
+LimitNOFILE=65535
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
 ### Enable service
 ```js
 sudo systemctl daemon-reload
@@ -102,8 +145,8 @@ sudo systemctl enable [DAEMON_SERVICE].service
 
 ### Download genesis and addrbook
 ```js
-curl -Ls https://config.noders.services/[CHAIN_SYSTEM_NAME]/genesis.json > [DAEMON_HOME]/config/genesis.json
-curl -Ls https://config.noders.services/[CHAIN_SYSTEM_NAME]/addrbook.json > [DAEMON_HOME]/config/addrbook.json
+curl -Ls https://config-t.noders.services/[CHAIN_SYSTEM_NAME]/genesis.json > [DAEMON_HOME]/config/genesis.json
+curl -Ls https://config-t.noders.services/[CHAIN_SYSTEM_NAME]/addrbook.json > [DAEMON_HOME]/config/addrbook.json
 ```
 ### Add peers
 ```js

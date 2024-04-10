@@ -2,33 +2,27 @@
 CHAIN_NAME="Archway"
 CHAIN_SYSTEM_NAME="archway"
 CHAIN_ID="auto"
-CHAIN_DESCRIPTION="""Archway is a dynamic project designed to empower developers by integrating innovative economic models with blockchain technology.
+VERSION="auto"
+CHAIN_DESCRIPTION="""# Archway: Empowering dApp Development
 
-                   It functions as a multi-chain launchpad for decentralized applications (dApps), offering a suite of tools and modules that facilitate the development, deployment, and monetization of dApps. Here's a concise overview of its key features:
+Archway is redefining dApp development by integrating innovative economic models with blockchain technology. It provides a multi-chain launchpad with tools for creating, deploying, and monetizing dApps. Key features include smart contract premiums, an inflationary yield engine, gas fee rebates, and a robust framework built on Cosmos for scalability and interoperability. Archway's platform is designed for developers seeking a seamless development process with new monetization avenues, promoting a sustainable ecosystem for both creators and validators.
 
-                   Smart Contract Premiums: Archway allows developers to embed a fee mechanism directly into their dApp's smart contracts, ensuring that developers receive 100% of these fees as revenue.
+"""
+[CHAIN_DESCRIPTION_END]
 
-                   Inflationary Yield Engine: A portion of the network's token inflation is shared with dApps. Specifically, 25% of this inflation goes to dApp developers, while the remaining 75% is allocated to validators, supporting the network's security and efficiency.
-
-                   Gas Fee Rebates: To incentivize usage and development on the platform, Archway offers gas fee rebates, where developers earn tokens each time their contract is executed. These tokens are distributed evenly between the developers and validators, fostering a balanced ecosystem.
-
-                   Technical and Economic Framework: Archway's infrastructure is built on top of the Cosmos network, leveraging Tendermint consensus for scalability and interoperability. The project emphasizes a sustainable growth model, with detailed documentation available on its tech stack, economic principles, and intuitive tooling options.
-
-                   For developers and stakeholders interested in blockchain and dApp development, Archway presents a comprehensive platform that not only simplifies the development process but also introduces a novel approach to dApp monetization and network participation rewards."""
 CHAIN_DENOM="aarch"
 CHAIN_FEES="3000000000"
 
 # Binary
 DAEMON_NAME="archwayd"
-DAEMON_VERSION="v4.0.3"
-DAEMON_SERVICE="aurad.service"
+DAEMON_SERVICE="archway.service"
 DAEMON_HOME="~/.archwayd"
 
 # Endpoints
-ENDPOINT_RPC=""
-ENDPOINT_API=""
-ENDPOINT_GRPCWEB=""
-ENDPOINT_GRPC=""
+ENDPOINT_RPC="https://archway-rpc.noders.services"
+ENDPOINT_API="https://archway-api.noders.services"
+ENDPOINT_JRPC=""
+ENDPOINT_GRPC="https://archway-grpc.noders.services"
 ENDPOINT_PEER="auto"
 
 # Social
@@ -39,12 +33,14 @@ SOCIAL_X="https://twitter.com/archwayhq"
 SOCIAL_TELEGRAM="https://t.me/archway_hq"
 
 # Other
-DOWNLOAD_URL="h"
+DOWNLOAD_URL="https://config.noders.services/archway"
 GITHUB_FOLDER_NAME="auto"
+VALIDATOR_LINK="https://archway.explorers.guru/validator/archwayvaloper173zlk665f6f4hl8rnmelhql9qkttc2e79z5xn6"
 
 # Updates
 UPDATE_MAIN=true
 UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
 UPDATE_UPGRADE=true
 UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true

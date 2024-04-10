@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-zetachain">
 # Installation
 </div>
-###### Chain ID: `athens_7001-1` | Current Node Version: `15`
+###### Chain ID: `athens_7001-1` | Current Node Version: `v15`
 
 ## Install dependencies
 
@@ -25,13 +25,19 @@ eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/gola
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
 
-## Download and build binaries
-### Clone Zetachain repo and build zetacored 15
+## Install with Cosmovisor
+:::note ADVANCED ROUTE
+
+Cosmosvisor is a process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If a proposal is approved, cosmosvisor can automatically download the new binary, stop the current one, switch to the new binary, and restart the node with the new binary.
+
+:::
+### Download and build binaries
+### Clone Zetachain repo and build zetacored v15
 ```js
 cd $HOME
 git clone https://github.com/zeta-chain.git
 cd zeta-chain
-git checkout 15
+git checkout v15
 ```
 
 ### Build binaries
@@ -41,8 +47,8 @@ make build
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.zetacored/cosmovisor/upgrades/15/bin
-mv build/zetacored ~/.zetacored/cosmovisor/upgrades/15/bin/
+mkdir -p ~/.zetacored/cosmovisor/upgrades/v15/bin
+mv build/zetacored ~/.zetacored/cosmovisor/upgrades/v15/bin/
 rm -rf build
 ```
 
@@ -75,6 +81,43 @@ Environment="DAEMON_HOME=~/.zetacored"
 Environment="DAEMON_NAME=zetacored"
 Environment="UNSAFE_SKIP_BACKUP=true"
 Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/.zetacored/cosmovisor/current/bin"
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
+## Install without Cosmovisor
+
+### Download and build binaries
+### Clone Zetachain repo and build zetacored v15
+```js
+cd $HOME
+git clone https://github.com/zeta-chain.git
+cd zeta-chain
+git checkout v15
+```
+
+### Build binaries
+```js
+make install
+```
+
+## Run node
+### Create service
+```js
+sudo tee /etc/systemd/system/zetacore.service > /dev/null << EOF
+[Unit]
+Description=zetachain node service
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which zetacored) start
+Restart=on-failure
+RestartSec=10
+LimitNOFILE=65535
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
 
 [Install]
 WantedBy=multi-user.target

@@ -1,13 +1,13 @@
 ---
 hide_table_of_contents: false
-title: State sync*
+title: State sync
 sidebar_position: 4
 ---
 
 <div class="h1-with-icon icon-andromeda">
 # State sync
 </div>
-###### Chain ID: `` | Current Node Version: `andromeda-1-v0.1.0`
+###### Chain ID: `` | Current Node Version: `v`
 
 ```bash
 SNAP_RPC=:443 && \

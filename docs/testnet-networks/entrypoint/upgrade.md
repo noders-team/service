@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-entrypoint">
 # Upgrade
 </div>
-###### Chain ID: `entrypoint-pubtest-2` | Current Node Version: `1.3.0`
+###### Chain ID: `entrypoint-pubtest-2` | Current Node Version: `v1.3.0`
 
 
 # Clone Entrypoint repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf entrypoint-zone
 git clone https://github.com/entrypoint-zone.git
 cd entrypoint-zone
-git checkout 1.3.0
+git checkout v1.3.0
  ```
 
 # Build binaries
@@ -26,7 +26,7 @@ make build
 
 # Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.entrypoint/cosmovisor/upgrades/1.3.0/bin
-mv build/entrypointd ~/.entrypoint/cosmovisor/upgrades/1.3.0/bin/
+mkdir -p ~/.entrypoint/cosmovisor/upgrades/v1.3.0/bin
+mv build/entrypointd ~/.entrypoint/cosmovisor/upgrades/v1.3.0/bin/
 rm -rf build
 ```

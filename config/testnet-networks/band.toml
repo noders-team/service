@@ -1,41 +1,41 @@
 # Blockchain
-CHAIN_NAME="Celestia"
-CHAIN_SYSTEM_NAME="celestia"
+CHAIN_NAME="Band"
+CHAIN_SYSTEM_NAME="band"
 CHAIN_ID="auto"
 VERSION="auto"
-CHAIN_DESCRIPTION="""# Celestia: Revolutionizing Blockchain with Modularity
+CHAIN_DESCRIPTION="""# Band Protocol: Powering Smart Contracts with Real-World Data
 
-Celestia introduces a modular data availability network to enhance blockchain scalability and flexibility. It features a minimal design focusing on transaction ordering and data availability, decoupling consensus from execution for improved scalability. This approach allows for customized execution layers, powered by a secure Proof of Stake mechanism. Celestia's innovation lies in its ability to ensure transaction data is verifiable without downloading the entire chain, offering a foundation for scalable, efficient blockchain applications.
+Band Protocol offers a cross-chain data oracle platform, enabling smart contracts to access real-world data and APIs efficiently. It emphasizes decentralized data governance, cross-chain compatibility, scalability, flexible oracle design, and security. Band Protocol supports a broad range of applications, including DeFi, prediction markets, and gaming, by providing timely and reliable data access, making it a critical tool for developing complex decentralized applications without relying on centralized oracles.
 
 """
 [CHAIN_DESCRIPTION_END]
 
-CHAIN_DENOM="utia"
+CHAIN_DENOM="uband"
 CHAIN_FEES="3000"
 
 # Binary
-DAEMON_NAME="celestia-appd"
-DAEMON_SERVICE="celestai.service"
-DAEMON_HOME="~/.celestia-app"
+DAEMON_NAME="bandd"
+DAEMON_SERVICE="band.service"
+DAEMON_HOME="~/.band"
 
 # Endpoints
-ENDPOINT_RPC="https://celestia-t-rpc.noders.services"
-ENDPOINT_API="https://celestia-t-api.noders.services"
+ENDPOINT_RPC="https://band-t-rpc.noders.services"
+ENDPOINT_API="https://band-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://celestia-t-grpc.noders.services"
+ENDPOINT_GRPC="https://band-t-grpc.noders.services"
 ENDPOINT_PEER="auto"
 
 # Social
-SOCIAL_WEBSITE="https://celestia.org/"
-SOCIAL_GITHUB="https://github.com/celestiaorg"
-SOCIAL_DISCORD="https://discord.gg/celestiacommunity"
-SOCIAL_X="https://twitter.com/CelestiaOrg"
-SOCIAL_TELEGRAM="https://t.me/celestiaru"
+SOCIAL_WEBSITE="https://www.bandprotocol.com/"
+SOCIAL_GITHUB="https://github.com/bandprotocol/chain"
+SOCIAL_DISCORD="https://discord.com/invite/3t4bsY7"
+SOCIAL_X="https://twitter.com/BandProtocol"
+SOCIAL_TELEGRAM="https://t.me/bandprotocol"
 
 # Other
-DOWNLOAD_URL="h"
+DOWNLOAD_URL="https://config-t.noders.services/band"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://testnet.celestia.explorers.guru/validator/celestiavaloper1zzxrq7tjlsqvv0jtqtlt8gjaa68racukf5n9xh"
+VALIDATOR_LINK="https://laozi-testnet6.cosmoscan.io/validator/bandvaloper1wy08smy5xpwrm3xju7z9usnat90vvp39etv7gh#reports"
 
 # Updates
 UPDATE_MAIN=true

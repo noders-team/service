@@ -70,7 +70,7 @@
 }
 
 .android-native.sidebar-header::before {
-  content: url(../../static/img/kotlin-icon-32.svg);
+  content: url(../../static/img/kotlin-icon.svg);
   vertical-align: middle;
   margin-right: 6px;
 }
@@ -207,7 +207,156 @@ code .variable {
 
 /* Icons */
 
+.icon-andromeda {
+    background-image: url('../../static/img/andromeda-icon.svg');
+}
+
+.icon-archway {
+    background-image: url('../../static/img/archway-icon.svg');
+}
+
+.icon-aura {
+    background-image: url('../../static/img/aura-icon.svg');
+}
+
+.icon-cosmos {
+    background-image: url('../../static/img/cosmos-icon.svg');
+}
+
+.icon-band {
+    background-image: url('../../static/img/band-icon.svg');
+}
+
+.icon-bitsong {
+    background-image: url('../../static/img/bitsong-icon.svg');
+}
+
+.icon-celestia {
+    background-image: url('../../static/img/celestia-icon.svg');
+}
+
+.icon-desmos {
+    background-image: url('../../static/img/desmos-icon.svg');
+}
+
+.icon-dymension {
+    background-image: url('../../static/img/dymension-icon.svg');
+}
+
+.icon-gitopia {
+    background-image: url('../../static/img/gitopia-icon.svg');
+}
+
+.icon-haqq {
+    background-image: url('../../static/img/haqq-icon.svg');
+}
+
+.icon-humans {
+    background-image: url('../../static/img/humans-icon.svg');
+}
+
+.icon-injective {
+    background-image: url('../../static/img/injective-icon.svg');
+}
+
+.icon-jackal {
+    background-image: url('../../static/img/jackal-icon.svg');
+}
+
+.icon-kyve {
+    background-image: url('../../static/img/kyve-icon.svg');
+}
+
+.icon-lambda {
+    background-image: url('../../static/img/lambda-icon.svg');
+}
+
 .icon-osmosis {
     background-image: url('../../static/img/osmosis-icon.svg');
 }
+
+.icon-quicksilver {
+    background-image: url('../../static/img/quicksilver-icon.svg');
+}
+
+.icon-rebus {
+    background-image: url('../../static/img/rebus-icon.svg');
+}
+
+.icon-stratos {
+    background-image: url('../../static/img/stratos-icon.svg');
+}
+
+.icon-uptick {
+    background-image: url('../../static/img/uptick-icon.svg');
+}
+
+.icon-ux {
+    background-image: url('../../static/img/umee-icon.svg');
+}
+
+.icon-side {
+    background-image: url('../../static/img/side-icon.svg');
+}
+
+.icon-pylons {
+    background-image: url('../../static/img/pylons-icon.svg');
+}
+
+.icon-pylons {
+    background-image: url('../../static/img/pylons-icon.svg');
+}
+.icon-alignedlayer {
+    background-image: url('../../static/img/alygnedlayer-icon.svg');
+}
+.icon-artela {
+    background-image: url('../../static/img/artela-icon.svg');
+}
+.icon-berachain {
+    background-image: url('../../static/img/bera-icon.svg');
+}
+.icon-crossfi {
+    background-image: url('../../static/img/crossfi-icon.svg');
+}
+.icon-entrypoint {
+    background-image: url('../../static/img/entrypoint-icon.svg');
+}
+.icon-lava {
+    background-image: url('../../static/img/lava-icon.svg');
+}
+.icon-pryzm {
+    background-image: url('../../static/img/pryzm-icon.svg');
+}
+.icon-router {
+    background-image: url('../../static/img/router-icon.svg');
+}
+.icon-seda {
+    background-image: url('../../static/img/seda-icon.svg');
+}
+
+.icon-swisstronic {
+    background-image: url('../../static/img/swisstronic-icon.svg');
+}
+.icon-union {
+    background-image: url('../../static/img/union-icon.svg');
+}
+
+.icon-warden {
+    background-image: url('../../static/img/warden-icon.svg');
+}
+
+.icon-zetachain {
+    background-image: url('../../static/img/zeta-icon.svg');
+}
+
+.icon-og {
+    background-image: url('../../static/img/og-icon.svg');
+}
+
+.icon-galactica {
+    background-image: url('../../static/img/galactica-icon.svg');
+}
+
+
+
 

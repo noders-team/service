@@ -1,6 +1,6 @@
 ---
 hide_table_of_contents: false
-title: template
+title: "Haqq"
 ---
 
 import SmallCard from "../../src/components/SmallCard"
@@ -10,36 +10,14 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-haqq">
 # Haqq
 </div>
-###### Chain ID: `` | Current Node Version: `1.7.2`
+###### Chain ID: `haqq_11235-1` | Current Node Version: `v1.7.3`
 
+# IslamicCoin: A Shariah-Compliant Digital Currency
 
+IslamicCoin is designed for the Islamic community, ensuring Shariah compliance, promoting ethical investments, and supporting financial inclusion. It leverages blockchain for transparency and security, incorporates charitable mechanisms for Zakat and Sadaqah, and facilitates investments with a positive social impact. IslamicCoin aims to bridge traditional Islamic finance with modern digital currencies, offering a platform for global accessibility and ethical financial practices, appealing to Muslims and ethical investors alike.
 
-## Public endpoints 
-
-<CardLayout autoFitEnabled={true}>
-    
-    
-    
-</CardLayout>
-
-## Our validator
-
-<CardLayout autoFitEnabled={true}>
-    <Card
-        to="#"
-        header={{
-            label: "[NODERS]TEAM",
-            translateId: "development-setup",
-        }}
-        body={{
-            label: "Trusted blockchain validator",
-        }}
-        iconPath="img/kotlin-icon-32.svg"
-    />
-</CardLayout>
-
-## Social resources
-See the API for the various client libraries implemented for.
+# Social resources
+Official links of social networks of projects
 
 <CardLayout autoFitEnabled={false}>
     <SmallCard to="https://haqq.network/" header={{label: "Website", translateId: "social-telegram"}} iconPath="img/website-icon.svg"/>
@@ -48,3 +26,30 @@ See the API for the various client libraries implemented for.
     <SmallCard to="https://twitter.com/The_HaqqNetwork" header={{label: "X", translateId: "social-telegram"}} iconPath="img/x-icon.svg"/>
     <SmallCard to="https://t.me/islamiccoin_int" header={{label: "Telegram", translateId: "social-telegram"}} iconPath="img/telegram-icon.svg"/>
 </CardLayout>
+
+# Our validator in Haqq network
+
+<CardLayout autoFitEnabled={true}>
+    <Card
+        to="https://haqq.explorers.guru/validator/haqqvaloper1hgggrfgjeu4d5nveh03c6w37magsuqcy84p44t"
+        header={{
+            label: "[NODERS]TEAM",
+            translateId: "development-setup",
+        }}
+        body={{
+            label: "Trusted blockchain validator",
+        }}
+        iconPath="img/kotlin-icon.svg"
+    />
+</CardLayout>
+
+# Public endpoints 
+
+<CardLayout autoFitEnabled={true}>
+    <SmallCard to="https://haqq-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
+    <SmallCard to="https://haqq-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
+    <SmallCard to="https://haqq-jsonrpc.noders.services" header={{label: "json-RPC Endpoint", translateId: "jrpc-endpoint"}}/>
+    <SmallCard to="https://haqq-grpc.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+</CardLayout>
+
+

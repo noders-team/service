@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-side">
 # Installation
 </div>
-###### Chain ID: `` | Current Node Version: ``
+###### Chain ID: `side-testnet-3` | Current Node Version: `v0.7.0-rc2`
 
 ## Install dependencies
 
@@ -25,13 +25,19 @@ eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/gola
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
 
-## Download and build binaries
-### Clone Side repo and build sided 
+## Install with Cosmovisor
+:::note ADVANCED ROUTE
+
+Cosmosvisor is a process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If a proposal is approved, cosmosvisor can automatically download the new binary, stop the current one, switch to the new binary, and restart the node with the new binary.
+
+:::
+### Download and build binaries
+### Clone Side repo and build sided v0.7.0-rc2
 ```js
 cd $HOME
 git clone https://github.com/sideprotocol.git
 cd sideprotocol
-git checkout 
+git checkout v0.7.0-rc2
 ```
 
 ### Build binaries
@@ -41,8 +47,8 @@ make build
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.side/cosmovisor/upgrades//bin
-mv build/sided ~/.side/cosmovisor/upgrades//bin/
+mkdir -p ~/.side/cosmovisor/upgrades/v0.7.0-rc2/bin
+mv build/sided ~/.side/cosmovisor/upgrades/v0.7.0-rc2/bin/
 rm -rf build
 ```
 
@@ -81,6 +87,43 @@ WantedBy=multi-user.target
 EOF
 ```
 
+## Install without Cosmovisor
+
+### Download and build binaries
+### Clone Side repo and build sided v0.7.0-rc2
+```js
+cd $HOME
+git clone https://github.com/sideprotocol.git
+cd sideprotocol
+git checkout v0.7.0-rc2
+```
+
+### Build binaries
+```js
+make install
+```
+
+## Run node
+### Create service
+```js
+sudo tee /etc/systemd/system/sided.service > /dev/null << EOF
+[Unit]
+Description=side node service
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which sided) start
+Restart=on-failure
+RestartSec=10
+LimitNOFILE=65535
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
 ### Enable service
 ```js
 sudo systemctl daemon-reload
@@ -90,24 +133,24 @@ sudo systemctl enable sided.service.service
 ## Node configuration
 ### Set config
 ```js
-sided config chain-id 
+sided config chain-id side-testnet-3
 sided config keyring-backend os
 sided config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-sided init NAME_OF_YOUR_VALIDATOR --chain-id 
+sided init NAME_OF_YOUR_VALIDATOR --chain-id side-testnet-3
 ```
 
 ### Download genesis and addrbook
 ```js
-curl -Ls https://config.noders.services/side/genesis.json > ~/.side/config/genesis.json
-curl -Ls https://config.noders.services/side/addrbook.json > ~/.side/config/addrbook.json
+curl -Ls https://config-t.noders.services/side/genesis.json > ~/.side/config/genesis.json
+curl -Ls https://config-t.noders.services/side/addrbook.json > ~/.side/config/addrbook.json
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@:\"/" ~/.side/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"4a02056469cdfd852fe736719b56ae22e84d729e@side-t-rpc.noders.services:26656\"/" ~/.side/config/config.toml
 ```
 
 ### Set minimum gas price

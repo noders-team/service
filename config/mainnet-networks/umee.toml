@@ -1,38 +1,48 @@
 # Blockchain
-CHAIN_NAME="Osmosis"
-CHAIN_SYSTEM_NAME="osmosis"
+CHAIN_NAME="UX"
+CHAIN_SYSTEM_NAME="umee"
 CHAIN_ID="auto"
-CHAIN_DESCRIPTION="Osmosis is a decentralized peer-to-peer blockchain that people can use to create liquidity and trade IBC enabled tokens. The Osmosis blockchain is made up of free, public, and open-source software."
-CHAIN_DENOM="uosmo"
+VERSION="auto"
+CHAIN_DESCRIPTION="""# UX.XYZ: Elevating Blockchain Usability
+
+UX.XYZ pioneers integrating UX design with blockchain to enhance dApp accessibility and engagement. It focuses on user-centric design, interoperability, accessibility, customizable experiences, and robust security. This initiative aims to simplify blockchain for wider adoption, impacting areas like DeFi, NFT marketplaces, decentralized social media, and e-commerce. By prioritizing user experience, UX.XYZ strives to make decentralized applications more intuitive and accessible, encouraging broader participation in the blockchain ecosystem.
+
+Discover how UX.XYZ is reshaping blockchain usability.
+
+"""
+[CHAIN_DESCRIPTION_END]
+
+CHAIN_DENOM="uumee"
 CHAIN_FEES="3000"
 
 # Binary
-DAEMON_NAME="osmosisd"
-DAEMON_VERSION="v23.0.0"
-DAEMON_SERVICE="osmosisd.service"
-DAEMON_HOME="~/.osmosisd"
+DAEMON_NAME="umeed"
+DAEMON_SERVICE="umeed.service"
+DAEMON_HOME="~/.umee"
 
 # Endpoints
-ENDPOINT_RPC="https://osmosis.rpc.mainnet.noders.team"
-ENDPOINT_API="https://osmosis.api.mainnet.noders.team"
-ENDPOINT_GRPCWEB="https://osmosis.grpc.mainnet.noders.team"
-ENDPOINT_GRPC=""
+ENDPOINT_RPC="https://umee-rpc.noders.services"
+ENDPOINT_API="https://umee-api.noders.services"
+ENDPOINT_JRPC=""
+ENDPOINT_GRPC="https://umee-grpc.noders.services"
 ENDPOINT_PEER="auto"
 
 # Social
-SOCIAL_WEBSITE="#"
-SOCIAL_GITHUB="https://github.com/osmosis-labs/osmosis"
-SOCIAL_DISCORD="#"
-SOCIAL_X="#"
-SOCIAL_TELEGRAM="https://t.me/osmosiszone"
+SOCIAL_WEBSITE="https://www.ux.xyz/"
+SOCIAL_GITHUB="https://github.com/umee-network"
+SOCIAL_DISCORD="https://discord.com/invite/uxchain"
+SOCIAL_X="https://x.com/ux_xyz"
+SOCIAL_TELEGRAM="https://t.me/uxuxchain"
 
 # Other
-DOWNLOAD_URL="https://snapshots.mainnet.noders.team/osmosis/"
+DOWNLOAD_URL="https://config.noders.services/umee"
 GITHUB_FOLDER_NAME="auto"
+VALIDATOR_LINK="https://ux.explorers.guru/validator/umeevaloper1wwl9f8wcc0am9wruvmx4hjzdv7ewfcex0lz9vp"
 
 # Updates
 UPDATE_MAIN=true
 UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
 UPDATE_UPGRADE=true
 UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true

@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-celestia">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `mocha-4` | Current Node Version: `1.7.0`
+###### Chain ID: `mocha-4` | Current Node Version: `v1.7.0`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -229,45 +229,45 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable celestai.service
+sudo systemctl enable celestia.service
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable celestai.service
+sudo systemctl disable celestia.service
 ```
 
 ### Start service
 ```js
-sudo systemctl start celestai.service
+sudo systemctl start celestia.service
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop celestai.service
+sudo systemctl stop celestia.service
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart celestai.service
+sudo systemctl restart celestia.service
 ```
 
 ### Check service status
 ```js
-sudo systemctl status celestai.service
+sudo systemctl status celestia.service
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u celestai.service -f --no-hostname -o cat
+sudo journalctl -u celestia.service -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop celestai.service
-sudo systemctl disable celestai.service
-sudo rm /etc/systemd/system/celestai.service
+sudo systemctl stop celestia.service
+sudo systemctl disable celestia.service
+sudo rm /etc/systemd/system/celestia.service
 sudo systemctl daemon-reload
 rm -f $(which celestia-appd)
 rm -rf ~/.celestia-app

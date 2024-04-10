@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-warden">
 # State sync
 </div>
-###### Chain ID: `alfama` | Current Node Version: `0.2.0`
+###### Chain ID: `alfama` | Current Node Version: `v0.2.0`
 
 ```bash
 SNAP_RPC=https://warden-t-rpc.noders.services:443 && \

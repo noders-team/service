@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-pylons">
 # Installation
 </div>
-###### Chain ID: `` | Current Node Version: ``
+###### Chain ID: `pylons-mainnet-1` | Current Node Version: `v1.1.4`
 
 ## Install dependencies
 
@@ -25,13 +25,19 @@ eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/gola
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
 
-## Download and build binaries
-### Clone Pylons repo and build pylonsd 
+## Install with Cosmovisor
+:::note ADVANCED ROUTE
+
+Cosmosvisor is a process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If a proposal is approved, cosmosvisor can automatically download the new binary, stop the current one, switch to the new binary, and restart the node with the new binary.
+
+:::
+### Download and build binaries
+### Clone Pylons repo and build pylonsd v1.1.4
 ```js
 cd $HOME
-git clone .git
-cd 
-git checkout 
+git clone https://github.com/Pylons-tech/pylons.git
+cd pylons
+git checkout v1.1.4
 ```
 
 ### Build binaries
@@ -41,8 +47,8 @@ make build
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.pylonsd/cosmovisor/upgrades//bin
-mv build/pylonsd ~/.pylonsd/cosmovisor/upgrades//bin/
+mkdir -p ~/.pylonsd/cosmovisor/upgrades/v1.1.4/bin
+mv build/pylonsd ~/.pylonsd/cosmovisor/upgrades/v1.1.4/bin/
 rm -rf build
 ```
 
@@ -81,6 +87,43 @@ WantedBy=multi-user.target
 EOF
 ```
 
+## Install without Cosmovisor
+
+### Download and build binaries
+### Clone Pylons repo and build pylonsd v1.1.4
+```js
+cd $HOME
+git clone https://github.com/Pylons-tech/pylons.git
+cd pylons
+git checkout v1.1.4
+```
+
+### Build binaries
+```js
+make install
+```
+
+## Run node
+### Create service
+```js
+sudo tee /etc/systemd/system/pylons.service > /dev/null << EOF
+[Unit]
+Description=pylons node service
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which pylonsd) start
+Restart=on-failure
+RestartSec=10
+LimitNOFILE=65535
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
 ### Enable service
 ```js
 sudo systemctl daemon-reload
@@ -90,14 +133,14 @@ sudo systemctl enable pylons.service.service
 ## Node configuration
 ### Set config
 ```js
-pylonsd config chain-id 
+pylonsd config chain-id pylons-mainnet-1
 pylonsd config keyring-backend os
 pylonsd config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-pylonsd init NAME_OF_YOUR_VALIDATOR --chain-id 
+pylonsd init NAME_OF_YOUR_VALIDATOR --chain-id pylons-mainnet-1
 ```
 
 ### Download genesis and addrbook
@@ -107,7 +150,7 @@ curl -Ls https://config.noders.services/pylons/addrbook.json > ~/.pylonsd/config
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@pylons-rpc.noders.services:\"/" ~/.pylonsd/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"ae94eb20e73c0ad93dbb980338eb313320c56194@pylons-rpc.noders.services:23656\"/" ~/.pylonsd/config/config.toml
 ```
 
 ### Set minimum gas price

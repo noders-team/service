@@ -7,10 +7,10 @@ sidebar_position: 4
 <div class="h1-with-icon icon-pylons">
 # State sync
 </div>
-###### Chain ID: `` | Current Node Version: ``
+###### Chain ID: `pylons-mainnet-1` | Current Node Version: `v1.1.4`
 
 ```bash
-SNAP_RPC=pylons-rpc.noders.services:443 && \
+SNAP_RPC=https://pylons-rpc.noders.services:443 && \
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
 TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash) && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop pylons.service && pylonsd tendermint unsafe-reset-all --home ~/.pylonsd --keep-addr-book
 ```
 ```bash
-peers="@pylons-rpc.noders.services:"
+peers="ae94eb20e73c0ad93dbb980338eb313320c56194@pylons-rpc.noders.services:23656"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.pylonsd/config/config.toml
 ```
 ```bash

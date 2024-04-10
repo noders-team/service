@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-entrypoint">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `entrypoint-pubtest-2` | Current Node Version: `1.3.0`
+###### Chain ID: `entrypoint-pubtest-2` | Current Node Version: `v1.3.0`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 

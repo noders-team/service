@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-lava">
 # Installation
 </div>
-###### Chain ID: `lava-testnet-2` | Current Node Version: `1.0.1`
+###### Chain ID: `lava-testnet-2` | Current Node Version: `v1.2.0`
 
 ## Install dependencies
 
@@ -25,13 +25,19 @@ eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/gola
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
 
-## Download and build binaries
-### Clone Lava repo and build lavad 1.0.1
+## Install with Cosmovisor
+:::note ADVANCED ROUTE
+
+Cosmosvisor is a process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If a proposal is approved, cosmosvisor can automatically download the new binary, stop the current one, switch to the new binary, and restart the node with the new binary.
+
+:::
+### Download and build binaries
+### Clone Lava repo and build lavad v1.2.0
 ```js
 cd $HOME
 git clone https://github.com/lavanet.git
 cd lavanet
-git checkout 1.0.1
+git checkout v1.2.0
 ```
 
 ### Build binaries
@@ -41,8 +47,8 @@ make build
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.lava/cosmovisor/upgrades/1.0.1/bin
-mv build/lavad ~/.lava/cosmovisor/upgrades/1.0.1/bin/
+mkdir -p ~/.lava/cosmovisor/upgrades/v1.2.0/bin
+mv build/lavad ~/.lava/cosmovisor/upgrades/v1.2.0/bin/
 rm -rf build
 ```
 
@@ -75,6 +81,43 @@ Environment="DAEMON_HOME=~/.lava"
 Environment="DAEMON_NAME=lavad"
 Environment="UNSAFE_SKIP_BACKUP=true"
 Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/.lava/cosmovisor/current/bin"
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
+## Install without Cosmovisor
+
+### Download and build binaries
+### Clone Lava repo and build lavad v1.2.0
+```js
+cd $HOME
+git clone https://github.com/lavanet.git
+cd lavanet
+git checkout v1.2.0
+```
+
+### Build binaries
+```js
+make install
+```
+
+## Run node
+### Create service
+```js
+sudo tee /etc/systemd/system/lava.service > /dev/null << EOF
+[Unit]
+Description=lava node service
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which lavad) start
+Restart=on-failure
+RestartSec=10
+LimitNOFILE=65535
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
 
 [Install]
 WantedBy=multi-user.target

@@ -1,38 +1,46 @@
 # Blockchain
-CHAIN_NAME="Osmosis"
-CHAIN_SYSTEM_NAME="osmosis"
+CHAIN_NAME="Gitopia"
+CHAIN_SYSTEM_NAME="gitopia"
 CHAIN_ID="auto"
-CHAIN_DESCRIPTION="Osmosis is a decentralized peer-to-peer blockchain that people can use to create liquidity and trade IBC enabled tokens. The Osmosis blockchain is made up of free, public, and open-source software."
-CHAIN_DENOM="uosmo"
+VERSION="auto"
+CHAIN_DESCRIPTION="""# Gitopia: Empowering Developer Collaboration
+
+Gitopia leverages blockchain to offer a decentralized code hosting platform, ensuring transparency, security, and immutability. It addresses centralization issues, promoting open-source development and community-driven projects. Features include decentralized governance, collaboration tools, and incentive mechanisms to reward contributions. Ideal for projects valuing transparency and community involvement, Gitopia fosters a secure, collaborative environment for developers globally.
+
+"""
+[CHAIN_DESCRIPTION_END]
+
+CHAIN_DENOM="ulore"
 CHAIN_FEES="3000"
 
 # Binary
-DAEMON_NAME="osmosisd"
-DAEMON_VERSION="v23.0.0"
-DAEMON_SERVICE="osmosisd.service"
-DAEMON_HOME="~/.osmosisd"
+DAEMON_NAME="gitopiad"
+DAEMON_SERVICE="gitopiad.service"
+DAEMON_HOME="~/.gitopia"
 
 # Endpoints
-ENDPOINT_RPC="https://osmosis.rpc.mainnet.noders.team"
-ENDPOINT_API="https://osmosis.api.mainnet.noders.team"
-ENDPOINT_GRPCWEB="https://osmosis.grpc.mainnet.noders.team"
-ENDPOINT_GRPC=""
+ENDPOINT_RPC="https://gitopia-rpc.noders.services"
+ENDPOINT_API="https://gitopia-api.noders.services"
+ENDPOINT_JRPC=""
+ENDPOINT_GRPC="https://gitopia-grpc.noders.services"
 ENDPOINT_PEER="auto"
 
 # Social
-SOCIAL_WEBSITE="#"
-SOCIAL_GITHUB="https://github.com/osmosis-labs/osmosis"
-SOCIAL_DISCORD="#"
-SOCIAL_X="#"
-SOCIAL_TELEGRAM="https://t.me/osmosiszone"
+SOCIAL_WEBSITE="https://gitopia.com/"
+SOCIAL_GITHUB="https://github.com/gitopia"
+SOCIAL_DISCORD="https://discord.com/invite/aqsKW3hUHD"
+SOCIAL_X="https://twitter.com/gitopiaDAO"
+SOCIAL_TELEGRAM="https://t.me/Gitopia"
 
 # Other
-DOWNLOAD_URL="https://snapshots.mainnet.noders.team/osmosis/"
+DOWNLOAD_URL="https://config.noders.services/gitopia"
 GITHUB_FOLDER_NAME="auto"
+VALIDATOR_LINK="https://ping.pub/gitopia/staking/gitopiavaloper1fpwhn7tevwz657rg00mc7zcf9eq4tg0a703dw8"
 
 # Updates
 UPDATE_MAIN=true
 UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
 UPDATE_UPGRADE=true
 UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true

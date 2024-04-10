@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-jackal">
 # Installation
 </div>
-###### Chain ID: `` | Current Node Version: `null`
+###### Chain ID: `mesomelas-1` | Current Node Version: `vnull`
 
 ## Install dependencies
 
@@ -25,13 +25,19 @@ eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/gola
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
 
-## Download and build binaries
-### Clone Jackal repo and build canined null
+## Install with Cosmovisor
+:::note ADVANCED ROUTE
+
+Cosmosvisor is a process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If a proposal is approved, cosmosvisor can automatically download the new binary, stop the current one, switch to the new binary, and restart the node with the new binary.
+
+:::
+### Download and build binaries
+### Clone Jackal repo and build canined vnull
 ```js
 cd $HOME
 git clone https://github.com/JackalLabs/canine-chain.git
 cd canine-chain
-git checkout null
+git checkout vnull
 ```
 
 ### Build binaries
@@ -41,8 +47,8 @@ make build
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.canine/cosmovisor/upgrades/null/bin
-mv build/canined ~/.canine/cosmovisor/upgrades/null/bin/
+mkdir -p ~/.canine/cosmovisor/upgrades/vnull/bin
+mv build/canined ~/.canine/cosmovisor/upgrades/vnull/bin/
 rm -rf build
 ```
 
@@ -81,6 +87,43 @@ WantedBy=multi-user.target
 EOF
 ```
 
+## Install without Cosmovisor
+
+### Download and build binaries
+### Clone Jackal repo and build canined vnull
+```js
+cd $HOME
+git clone https://github.com/JackalLabs/canine-chain.git
+cd canine-chain
+git checkout vnull
+```
+
+### Build binaries
+```js
+make install
+```
+
+## Run node
+### Create service
+```js
+sudo tee /etc/systemd/system/canined.service > /dev/null << EOF
+[Unit]
+Description=jackal node service
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which canined) start
+Restart=on-failure
+RestartSec=10
+LimitNOFILE=65535
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
 ### Enable service
 ```js
 sudo systemctl daemon-reload
@@ -90,14 +133,14 @@ sudo systemctl enable canined.service.service
 ## Node configuration
 ### Set config
 ```js
-canined config chain-id 
+canined config chain-id mesomelas-1
 canined config keyring-backend os
 canined config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-canined init NAME_OF_YOUR_VALIDATOR --chain-id 
+canined init NAME_OF_YOUR_VALIDATOR --chain-id mesomelas-1
 ```
 
 ### Download genesis and addrbook
@@ -107,7 +150,7 @@ curl -Ls https://config-t.noders.services/jackal/addrbook.json > ~/.canine/confi
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@jackal-t-rpc.noders.services:\"/" ~/.canine/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"687a7185b8310900fa0a176f913e6996d591c95d@jackal-t-rpc.noders.services:14656\"/" ~/.canine/config/config.toml
 ```
 
 ### Set minimum gas price

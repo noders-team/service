@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-entrypoint">
 # Entrypoint
 </div>
-###### Chain ID: `entrypoint-pubtest-2` | Current Node Version: `1.3.0`
+###### Chain ID: `entrypoint-pubtest-2` | Current Node Version: `v1.3.0`
 
 
 EntryPoint revolutionizes the way users interact with blockchain ecosystems by providing a seamless, user-friendly portal for accessing decentralized applications (dApps) and services. It aims to simplify the blockchain experience, making it more accessible to a broader audience, from crypto enthusiasts to newcomers. By integrating various blockchain networks, EntryPoint offers a unified interface that enables easy transactions, asset management, and cross-chain interoperability. Its platform is designed to support a wide range of blockchain functionalities, including DeFi, NFTs, and more, ensuring users have a one-stop solution for their decentralized needs. With security, scalability, and user experience at its core, EntryPoint is set to become a cornerstone in the blockchain community, fostering adoption and innovation.

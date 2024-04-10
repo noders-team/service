@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-router">
 # State sync
 </div>
-###### Chain ID: `router_9601-1` | Current Node Version: `null`
+###### Chain ID: `router_9601-1` | Current Node Version: `vnull`
 
 ```bash
 SNAP_RPC=https://router-t-rpc.noders.services:443 && \

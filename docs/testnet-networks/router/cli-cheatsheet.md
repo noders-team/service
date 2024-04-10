@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-router">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `router_9601-1` | Current Node Version: `null`
+###### Chain ID: `router_9601-1` | Current Node Version: `vnull`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 

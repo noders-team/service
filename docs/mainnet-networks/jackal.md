@@ -1,6 +1,6 @@
 ---
 hide_table_of_contents: false
-title: template
+title: "Jackal"
 ---
 
 import SmallCard from "../../src/components/SmallCard"
@@ -10,36 +10,15 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-jackal">
 # Jackal
 </div>
-###### Chain ID: `` | Current Node Version: `v3.1.2`
+###### Chain ID: `jackal-1` | Current Node Version: `vnull`
 
-Jackal Protocol: Decentralizing Data Storage
 
-## Public endpoints 
+Jackal Protocol introduces a decentralized file storage solution, enhancing security, efficiency, and cost-effectiveness. It emphasizes privacy, data sovereignty, and global access, decentralizing storage across numerous nodes for enhanced security and redundancy. Features include advanced encryption for privacy, reduced costs by utilizing unused storage space, scalability, and interoperability with various blockchain networks. Jackal Protocol supports a wide range of applications, including secure data backup, decentralized web hosting, and content delivery, marking a significant shift towards a more secure, user-controlled internet.
 
-<CardLayout autoFitEnabled={true}>
-    
-    
-    
-</CardLayout>
+Explore Jackal Protocol's vision for a decentralized web.
 
-## Our validator
-
-<CardLayout autoFitEnabled={true}>
-    <Card
-        to="#"
-        header={{
-            label: "[NODERS]TEAM",
-            translateId: "development-setup",
-        }}
-        body={{
-            label: "Trusted blockchain validator",
-        }}
-        iconPath="img/kotlin-icon-32.svg"
-    />
-</CardLayout>
-
-## Social resources
-See the API for the various client libraries implemented for.
+# Social resources
+Official links of social networks of projects
 
 <CardLayout autoFitEnabled={false}>
     <SmallCard to="https://www.jackalprotocol.com/" header={{label: "Website", translateId: "social-telegram"}} iconPath="img/website-icon.svg"/>
@@ -48,3 +27,30 @@ See the API for the various client libraries implemented for.
     <SmallCard to="https://twitter.com/Jackal_Protocol" header={{label: "X", translateId: "social-telegram"}} iconPath="img/x-icon.svg"/>
     <SmallCard to="https://t.me/+rtuZnbTlHaIzNjVh" header={{label: "Telegram", translateId: "social-telegram"}} iconPath="img/telegram-icon.svg"/>
 </CardLayout>
+
+# Our validator in Jackal network
+
+<CardLayout autoFitEnabled={true}>
+    <Card
+        to="https://ping.pub/jackal/staking/jklvaloper132k95jan8ju92jtmkzr49vnusv5xvwvju27kpq"
+        header={{
+            label: "[NODERS]TEAM",
+            translateId: "development-setup",
+        }}
+        body={{
+            label: "Trusted blockchain validator",
+        }}
+        iconPath="img/kotlin-icon.svg"
+    />
+</CardLayout>
+
+# Public endpoints 
+
+<CardLayout autoFitEnabled={true}>
+    <SmallCard to="https://jackal-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
+    <SmallCard to="https://jackal-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
+    
+    <SmallCard to="https://jackal-grpc.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+</CardLayout>
+
+

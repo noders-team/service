@@ -1,6 +1,6 @@
 ---
 hide_table_of_contents: false
-title: template
+title: "Desmos"
 ---
 
 import SmallCard from "../../src/components/SmallCard"
@@ -10,36 +10,13 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-desmos">
 # Desmos
 </div>
-###### Chain ID: `` | Current Node Version: `v6.2.1`
+###### Chain ID: `desmos-mainnet` | Current Node Version: `v7.0.1`
 
-Desmos is a decentralized social networking platform that aims to redefine social media by empowering users with control over their data and interactions. Built on blockchain technology, Desmos focuses on creating a transparent, user-centric, and censorship-resistant environment where users can freely express themselves, create content, and engage with others without the oversight of centralized authorities.
 
-## Public endpoints 
+Desmos revolutionizes social media, focusing on user empowerment, data sovereignty, and censorship resistance. It features decentralized identities for user privacy, content monetization through cryptocurrencies, and community-driven governance. Ensuring interoperability with other DApps, Desmos fosters an open ecosystem for diverse social interactions, challenging traditional social platforms by prioritizing privacy, freedom of expression, and direct creator compensation.
 
-<CardLayout autoFitEnabled={true}>
-    
-    
-    
-</CardLayout>
-
-## Our validator
-
-<CardLayout autoFitEnabled={true}>
-    <Card
-        to="#"
-        header={{
-            label: "[NODERS]TEAM",
-            translateId: "development-setup",
-        }}
-        body={{
-            label: "Trusted blockchain validator",
-        }}
-        iconPath="img/kotlin-icon-32.svg"
-    />
-</CardLayout>
-
-## Social resources
-See the API for the various client libraries implemented for.
+# Social resources
+Official links of social networks of projects
 
 <CardLayout autoFitEnabled={false}>
     <SmallCard to="https://desmos.network/" header={{label: "Website", translateId: "social-telegram"}} iconPath="img/website-icon.svg"/>
@@ -48,3 +25,30 @@ See the API for the various client libraries implemented for.
     <SmallCard to="https://twitter.com/desmosnetwork" header={{label: "X", translateId: "social-telegram"}} iconPath="img/x-icon.svg"/>
     <SmallCard to="https://t.me/desmosnetwork" header={{label: "Telegram", translateId: "social-telegram"}} iconPath="img/telegram-icon.svg"/>
 </CardLayout>
+
+# Our validator in Desmos network
+
+<CardLayout autoFitEnabled={true}>
+    <Card
+        to="https://www.mintscan.io/desmos/validators/desmosvaloper1pequu0gsvh9ay5rx2xyg6j7eratwufu560dpnu"
+        header={{
+            label: "[NODERS]TEAM",
+            translateId: "development-setup",
+        }}
+        body={{
+            label: "Trusted blockchain validator",
+        }}
+        iconPath="img/kotlin-icon.svg"
+    />
+</CardLayout>
+
+# Public endpoints 
+
+<CardLayout autoFitEnabled={true}>
+    <SmallCard to="https://desmos-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
+    <SmallCard to="https://desmos-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
+    
+    <SmallCard to="https://desmos-grpc.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+</CardLayout>
+
+

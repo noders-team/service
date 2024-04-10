@@ -1,6 +1,6 @@
 ---
 hide_table_of_contents: false
-title: template
+title: "Kyve"
 ---
 
 import SmallCard from "../../src/components/SmallCard"
@@ -10,36 +10,15 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-kyve">
 # Kyve
 </div>
-###### Chain ID: `` | Current Node Version: `v1.4.0`
+###### Chain ID: `kyve-1` | Current Node Version: `v1.4.0`
 
-KYVE Network: Redefining Data Storage and Validation on the Blockchain
 
-## Public endpoints 
+KYVE Network transforms data storage and validation across blockchains, ensuring data remains unchanged and accessible. It emphasizes decentralized storage, accurate data validation, interoperability, customizable data pools, and a token-based incentive mechanism. KYVE supports diverse applications, from enhancing blockchain scalability to enabling secure cross-chain bridges, making it pivotal for future decentralized data ecosystems.
 
-<CardLayout autoFitEnabled={true}>
-    
-    
-    
-</CardLayout>
+Discover how KYVE is shaping the future of data integrity on the blockchain.
 
-## Our validator
-
-<CardLayout autoFitEnabled={true}>
-    <Card
-        to="#"
-        header={{
-            label: "[NODERS]TEAM",
-            translateId: "development-setup",
-        }}
-        body={{
-            label: "Trusted blockchain validator",
-        }}
-        iconPath="img/kotlin-icon-32.svg"
-    />
-</CardLayout>
-
-## Social resources
-See the API for the various client libraries implemented for.
+# Social resources
+Official links of social networks of projects
 
 <CardLayout autoFitEnabled={false}>
     <SmallCard to="https://www.kyve.network/" header={{label: "Website", translateId: "social-telegram"}} iconPath="img/website-icon.svg"/>
@@ -48,3 +27,30 @@ See the API for the various client libraries implemented for.
     <SmallCard to="https://twitter.com/KYVENetwork" header={{label: "X", translateId: "social-telegram"}} iconPath="img/x-icon.svg"/>
     <SmallCard to="https://t.me/kyvenet" header={{label: "Telegram", translateId: "social-telegram"}} iconPath="img/telegram-icon.svg"/>
 </CardLayout>
+
+# Our validator in Kyve network
+
+<CardLayout autoFitEnabled={true}>
+    <Card
+        to="https://kyve.explorers.guru/validator/kyvevaloper1sfwfat9p9k7datgy0kzge7pv0szcd5ycc0jxre"
+        header={{
+            label: "[NODERS]TEAM",
+            translateId: "development-setup",
+        }}
+        body={{
+            label: "Trusted blockchain validator",
+        }}
+        iconPath="img/kotlin-icon.svg"
+    />
+</CardLayout>
+
+# Public endpoints 
+
+<CardLayout autoFitEnabled={true}>
+    <SmallCard to="https://kyve-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
+    <SmallCard to="https://kyve-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
+    
+    <SmallCard to="https://kyve-grpc.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+</CardLayout>
+
+

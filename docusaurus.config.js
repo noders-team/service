@@ -5,7 +5,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '[NODERS]TEAM Services',
+  title: 'VALIDATOR SERVICES | NODERS',
   tagline: 'Trusted blockchain validator and web3 developer team',
   favicon: 'img/favicon.svg',
 
@@ -82,11 +82,6 @@ const config = {
             label: 'Cosmos List',
             position: 'right',
           },
-        ],
-      },
-      footer: {
-        style: 'dark',
-        links: [
         ],
       },
       prism: {

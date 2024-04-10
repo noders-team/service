@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-band">
 # Band
 </div>
-###### Chain ID: `` | Current Node Version: `2.5.4`
+###### Chain ID: `band-laozi-testnet6` | Current Node Version: `v2.5.4`
 
 
 Band Protocol offers a cross-chain data oracle platform, enabling smart contracts to access real-world data and APIs efficiently. It emphasizes decentralized data governance, cross-chain compatibility, scalability, flexible oracle design, and security. Band Protocol supports a broad range of applications, including DeFi, prediction markets, and gaming, by providing timely and reliable data access, making it a critical tool for developing complex decentralized applications without relying on centralized oracles.
@@ -46,7 +46,7 @@ Official links of social networks of projects
 
 <CardLayout autoFitEnabled={true}>
     <SmallCard to="https://band-t-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
-    <SmallCard to="https://band-t-grpc.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
+    <SmallCard to="https://band-t-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     
-    <SmallCard to="https://band-t-api.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="https://band-t-grpc.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
 </CardLayout>

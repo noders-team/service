@@ -1,13 +1,13 @@
 ---
 hide_table_of_contents: false
 title: CLI Cheatsheet
-sidebar_position: 7
+sidebar_position: 8
 ---
 
 <div class="h1-with-icon icon-haqq">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `` | Current Node Version: `1.7.2`
+###### Chain ID: `haqq_11235-1` | Current Node Version: `v1.7.3`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -16,51 +16,122 @@ This cheatsheet collects commonly used CLI commands for node operators to easily
 - Always specify `--chain-id` and `--node` flags even when they are unnecessary
 - Query CLI command always uses `--output json` flag and pipes result through `jq`
 
-### Bank: Send
-```bash
-haqqd tx bank send KEY RECEIVER_ADDRESS 1000000aISLM \
-  --chain-id  \
-  --node :443 --fees 3000aISLM \
+## Wallet generate and recover
+### Add new key
+```js
+haqqd keys add KEY
+```
+
+### Recover key (via existing mnemonic)
+```js
+haqqd keys add KEY --recover
+```
+
+### List all keys
+```js
+haqqd keys list
+```
+
+### Delete key
+```js
+haqqd keys delete KEY
+```
+
+## Wallet
+### Wallet balance
+```js
+haqqd q bank balances $(haqqd keys show KEY -a) --node https://haqq-rpc.noders.services:443
+```
+
+### Send
+```js
+haqqd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000aISLM \
+  --chain-id haqq_11235-1 \
+  --node https://haqq-rpc.noders.services:443 --fees 3000aISLM \
   --from KEY
 ```
 
-### Distribution: Withdraw Rewards including Commission
-```bash
-haqqd tx distribution withdraw-rewards VALIDATOR_OPERATOR \
+### Withdraw rewards from all validators
+```js
+haqqd tx distribution withdraw-all-rewards \
+  --chain-id haqq_11235-1 \
+  --node https://haqq-rpc.noders.services:443 --fees 3000aISLM \
+  --from KEY
+```
+
+### Withdraw Rewards including Commission
+```js
+haqqd tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
-  --chain-id  \
-  --node :443 --fees 3000aISLM \
+  --chain-id haqq_11235-1 \
+  --node https://haqq-rpc.noders.services:443 --fees 3000aISLM \
   --from KEY
 ```
 
-### Gov: Query Proposal
-```bash
+### Delegate tokens to yourself
+```js
+haqqd tx staking delegate $(haqqd keys show KEY --bech val -a) 1000000aISLM \
+--chain-id haqq_11235-1 \
+--node https://haqq-rpc.noders.services:443 --fees 3000aISLM \
+--from KEY
+```
+
+### Delegate tokens to validator
+```js
+haqqd tx staking delegate VALIDATOR_ADDRESS 1000000aISLM \
+--chain-id haqq_11235-1 \
+--node https://haqq-rpc.noders.services:443 --fees 3000aISLM \
+--from KEY
+```
+
+### Redelegate tokens to another validator
+```js
+haqqd tx staking redelegate $(haqqd keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000aISLM \
+  --chain-id haqq_11235-1 \
+  --node https://haqq-rpc.noders.services:443 --fees 3000aISLM \
+  --from KEY
+```
+
+### Unbond tokens from your validator
+```js
+haqqd tx staking unbond $(haqqd keys show KEY --bech val -a) aISLM \
+  --chain-id andromeda-1 \
+  --node https://haqq-rpc.noders.services:443 --fees 3000aISLM \
+  --from KEY
+```
+
+## Governance
+### List of all proposals
+```js
+haqqd query gov proposals --node https://haqq-rpc.noders.services:443
+```
+### Check vote
+```js
 haqqd query gov proposal PROPOSAL_NUMBER \
-  --chain-id  \
-  --node :443 --fees 3000aISLM \
+  --chain-id haqq_11235-1 \
+  --node https://haqq-rpc.noders.services:443 --fees 3000aISLM \
   --output json | jq
 ```
 
-### Gov: Vote
-###### VOTE_OPTION: `yes`, `no`, `no_with_veto` and `abstain`.
-```bash
+### Vote
+#### Vote options:
+* yes
+* no 
+* no_with_veto
+* abstain
+```js
 haqqd tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
-  --chain-id  \
-  --node :443 --fees 3000aISLM \
+  --chain-id haqq_11235-1 \
+  --node https://haqq-rpc.noders.services:443 --fees 3000aISLM \
   --from KEY
 ```
 
-### Slashing: Unjail
-```bash
-haqqd tx slashing unjail \
-  --chain-id  \
-  --node :443 --fees 3000aISLM \
-  --from KEY
-```
-
-### Staking: Create Validator
-###### Note: We use example filed values instead of capitalized dummy words for demo purpose in this command. Please make sure to adjust accordingly for your use.
-```bash
+## Validator management
+### Create Validator
+:::note
+We use example filed values instead of capitalized dummy words for demo purpose in this command. Please make sure to adjust accordingly for your use.
+:::
+```js
 haqqd tx staking create-validator \
   --amount 1000000aISLM \
   --commission-max-change-rate "0.05" \
@@ -73,7 +144,132 @@ haqqd tx staking create-validator \
   --identity "220491ADDD660741" \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
-  --chain-id  \
-  --node :443 --fees 3000aISLM \
+  --chain-id haqq_11235-1 \
+  --node https://haqq-rpc.noders.services:443 --fees 3000aISLM \
   --from KEY
+```
+
+### Edit validator
+```js
+haqqd tx staking edit-validator \
+--new-moniker "YOUR_MONIKER_NAME" \
+--identity "YOUR_KEYBASE_ID" \
+--details "YOUR_DETAILS" \
+--website "YOUR_WEBSITE_URL" \
+--chain-id haqq_11235-1 \
+--commission-rate 0.05 \
+--from KEY \
+--node https://haqq-rpc.noders.services:443 --fees 3000aISLM \
+```
+
+### Unjail
+```js
+haqqd tx slashing unjail \
+  --chain-id haqq_11235-1 \
+  --node https://haqq-rpc.noders.services:443 --fees 3000aISLM \
+  --from KEY
+```
+
+### Jail reason
+```js
+haqqd query slashing signing-info $(haqqd tendermint show-validator)
+```
+
+### Validator details
+```js
+haqqd q staking validator $(haqqd keys show KEY --bech val -a)
+```
+
+## Maintenance
+### Get validator info
+```js
+haqqd status 2>&1 | jq .ValidatorInfo
+```
+
+### Get sync info
+```js
+haqqd status 2>&1 | jq .SyncInfo
+```
+
+### Get node peer
+```js
+echo $(haqqd tendermint show-node-id)'@'$(curl -s ifconfig.me)':'$(cat ~/.haqqd/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
+```
+
+### Check if validator key is correct
+```js
+[[ $(haqqd q staking validator $(haqqd keys show KEY --bech val -a) -oj | jq -r .consensus_pubkey.key) = $(haqqd status | jq -r .ValidatorInfo.PubKey.value) ]] && echo -e "\n\e[1m\e[32mTrue\e[0m\n" || echo -e "\n\e[1m\e[31mFalse\e[0m\n"
+```
+
+### Get live peers
+```js
+curl -sS https://haqq-rpc.noders.services:443/net_info | jq -r '.result.peers[] | "\(.node_info.id)@\(.remote_ip):\(.node_info.listen_addr)"' | awk -F ':' '{print $1":"$(NF)}'
+```
+
+### Set minimum gas price
+```js
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.001aISLM\"/" ~/.haqqd/config/app.toml
+```
+
+###Enable prometheus
+```js
+sed -i -e "s/prometheus = false/prometheus = true/" ~/.haqqd/config/config.toml
+```
+
+### Reset chain data
+```js
+haqqd tendermint unsafe-reset-all --keep-addr-book --home ~/.haqqd
+```
+
+## Service Management
+### Reload service configuration
+```js
+sudo systemctl daemon-reload
+```
+
+### Enable service
+```js
+sudo systemctl enable haqqd.service
+```
+
+### Disable service
+```js
+sudo systemctl disable haqqd.service
+```
+
+### Start service
+```js
+sudo systemctl start haqqd.service
+```
+
+### Stop service
+```js
+sudo systemctl stop haqqd.service
+```
+
+### Restart service
+```js
+sudo systemctl restart haqqd.service
+```
+
+### Check service status
+```js
+sudo systemctl status haqqd.service
+```
+
+### Check service logs
+```js
+sudo journalctl -u haqqd.service -f --no-hostname -o cat
+```
+
+## Remove node
+```js
+cd $HOME
+sudo systemctl stop haqqd.service
+sudo systemctl disable haqqd.service
+sudo rm /etc/systemd/system/haqqd.service
+sudo systemctl daemon-reload
+rm -f $(which haqqd)
+rm -rf ~/.haqqd
+rm -rf $HOME/haqq-network
 ```

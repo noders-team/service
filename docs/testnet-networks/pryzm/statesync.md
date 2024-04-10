@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-pryzm">
 # State sync
 </div>
-###### Chain ID: `indigo-1` | Current Node Version: `0.11.1`
+###### Chain ID: `indigo-1` | Current Node Version: `v0.11.1`
 
 ```bash
 SNAP_RPC=https://pryzm-t-rpc.noders.services:443 && \

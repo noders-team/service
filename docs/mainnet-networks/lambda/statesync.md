@@ -7,10 +7,10 @@ sidebar_position: 4
 <div class="h1-with-icon icon-lambda">
 # State sync
 </div>
-###### Chain ID: `` | Current Node Version: `v1.0.1`
+###### Chain ID: `` | Current Node Version: `v`
 
 ```bash
-SNAP_RPC=:443 && \
+SNAP_RPC=lambda-rpc.noders.services:443 && \
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
 TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash) && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop lambdavm.service && lambdavm tendermint unsafe-reset-all --home ~/.lambdavm --keep-addr-book
 ```
 ```bash
-peers="@:"
+peers="@lambda-rpc.noders.services:"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.lambdavm/config/config.toml
 ```
 ```bash

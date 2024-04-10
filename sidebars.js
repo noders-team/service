@@ -35,7 +35,7 @@ const sidebars = {
         {
           type: 'doc',
           id: 'testnet-networks/template',
-          label: 'Introduction to Solana'
+          label: 'Introduction to Testnet'
         },
       ]
     },
@@ -52,14 +52,14 @@ const sidebars = {
         {
           type: 'doc',
           id: 'mainnet-networks/template',
-          label: 'Introduction to Solana'
+          label: 'Introduction to Mainnet'
         }
       ]
     },
   ],
 
   ...require("./sidebars/mainnetSidebar.js"),
-  ...require("./sidebars/testnetSidebar.js"), // Убедитесь, что этот файл существует и структурирован правильно
+  ...require("./sidebars/testnetSidebar.js"),
 
 };
 

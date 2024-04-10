@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-alignedlayer">
 # Alignedlayer
 </div>
-###### Chain ID: `alignedlayer` | Current Node Version: `0.1.0`
+###### Chain ID: `alignedlayer` | Current Node Version: `v0.1.0`
 
 
 Aligned Layer is at the forefront of decentralized data orchestration, offering a cutting-edge platform that streamlines the integration, management, and secure sharing of data across diverse blockchain ecosystems. By leveraging advanced cryptographic techniques and a user-centric design, Aligned Layer ensures data privacy, security, and interoperability. Its platform empowers developers to build more sophisticated and dynamic decentralized applications (dApps), fostering a new era of blockchain utility and innovation. Aligned Layer's commitment to removing barriers to data access and utilization marks a significant step towards a more interconnected and efficient decentralized world.
@@ -21,7 +21,7 @@ Official links of social networks of projects
 <CardLayout autoFitEnabled={false}>
     <SmallCard to="https://alignedlayer.com/" header={{label: "Website", translateId: "social-telegram"}} iconPath="img/website-icon.svg"/>
     <SmallCard to="https://github.com/yetanotherco/aligned_layer" header={{label: "GitHub", translateId: "social-telegram"}} iconPath="img/github-icon.svg"/>
-    <SmallCard to="https://discord.com/invite/teqX78VZUV" header={{label: "Discord", translateId: "social-telegram"}} iconPath="img/discord-icon.svg"/>
+    <SmallCard to="http://discord.gg/0glabs" header={{label: "Discord", translateId: "social-telegram"}} iconPath="img/discord-icon.svg"/>
     <SmallCard to="https://twitter.com/alignedlayer" header={{label: "X", translateId: "social-telegram"}} iconPath="img/x-icon.svg"/>
     <SmallCard to="https://t.me/aligned_layer" header={{label: "Telegram", translateId: "social-telegram"}} iconPath="img/telegram-icon.svg"/>
 </CardLayout>

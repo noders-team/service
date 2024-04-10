@@ -1,26 +1,26 @@
 ---
 hide_table_of_contents: false
-title: State sync*
+title: State sync
 sidebar_position: 4
 ---
 
 <div class="h1-with-icon icon-archway">
 # State sync
 </div>
-###### Chain ID: `` | Current Node Version: `v4.0.3`
+###### Chain ID: `archway-1` | Current Node Version: `v6.0.2`
 
 ```bash
-SNAP_RPC=:443 && \
+SNAP_RPC=https://archway-rpc.noders.services:443 && \
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
 TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash) && \
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop aurad.service && archwayd tendermint unsafe-reset-all --home ~/.archwayd --keep-addr-book
+sudo systemctl stop archway.service && archwayd tendermint unsafe-reset-all --home ~/.archwayd --keep-addr-book
 ```
 ```bash
-peers="@:"
+peers="c4b36b605667e3896eb6f57c5d731519b89dfc6f@archway-rpc.noders.services:13656"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.archwayd/config/config.toml
 ```
 ```bash
@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.archwayd/config/config.toml
 ```
 ```bash
-sudo systemctl restart aurad.service && sudo journalctl -fu aurad.service --no-hostname -o cat
+sudo systemctl restart archway.service && sudo journalctl -fu archway.service --no-hostname -o cat
 ```

@@ -1,41 +1,41 @@
 # Blockchain
-CHAIN_NAME="Alignedlayer"
-CHAIN_SYSTEM_NAME="alignedlayer"
+CHAIN_NAME="Galactica"
+CHAIN_SYSTEM_NAME="galactica"
 CHAIN_ID="auto"
 VERSION="auto"
-CHAIN_DESCRIPTION="""# Aligned Layer: Pioneering Decentralized Data Orchestration
+CHAIN_DESCRIPTION="""# Galactica: We need to solve Identity, Compliance & Privacy
 
-Aligned Layer is at the forefront of decentralized data orchestration, offering a cutting-edge platform that streamlines the integration, management, and secure sharing of data across diverse blockchain ecosystems. By leveraging advanced cryptographic techniques and a user-centric design, Aligned Layer ensures data privacy, security, and interoperability. Its platform empowers developers to build more sophisticated and dynamic decentralized applications (dApps), fostering a new era of blockchain utility and innovation. Aligned Layer's commitment to removing barriers to data access and utilization marks a significant step towards a more interconnected and efficient decentralized world.
+Galactica Network presents itself as a pioneering platform in the Web3 space, aiming to establish the first on-chain nation-state. It's focused on fostering Sybil-resistant, reputation-based systems and decentralized societies (DeSoc), enhancing DeFi and DAOs for a more accountable and compliant future. Galactica emphasizes a community-driven approach, seeking builders to create a better future through innovative DeFi solutions, DAO structures, and a comprehensive DeSoc stack
 
 """
 [CHAIN_DESCRIPTION_END]
 
-CHAIN_DENOM="stake"
-CHAIN_FEES="3000"
+CHAIN_DENOM="agnet"
+CHAIN_FEES="300000"
 
 # Binary
-DAEMON_NAME="alignedlayerd"
-DAEMON_SERVICE="alignedlayerd.service"
-DAEMON_HOME="~/.alignedlayer"
+DAEMON_NAME="galacticad"
+DAEMON_SERVICE="galactica.service"
+DAEMON_HOME="~/.galactica"
 
 # Endpoints
-ENDPOINT_RPC="https://aligned-t-rpc.noders.services"
-ENDPOINT_API="https://aligned-t-api.noders.services"
-ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://aligned-t-grpc.noders.services"
+ENDPOINT_RPC="https://galactica-t-rpc.noders.services"
+ENDPOINT_API="https://galactica-t-api.noders.services"
+ENDPOINT_JRPC="https://galactica-t-json.noders.services"
+ENDPOINT_GRPC="https://galactica-t-grpc.noders.services"
 ENDPOINT_PEER="auto"
 
 # Social
-SOCIAL_WEBSITE="https://alignedlayer.com/"
-SOCIAL_GITHUB="https://github.com/yetanotherco/aligned_layer"
-SOCIAL_DISCORD=""
-SOCIAL_X="https://twitter.com/alignedlayer"
-SOCIAL_TELEGRAM="https://t.me/aligned_layer"
+SOCIAL_WEBSITE="https://galactica.com/"
+SOCIAL_GITHUB="https://github.com/Galactica-corp/networks"
+SOCIAL_DISCORD="https://discord.gg/galactica"
+SOCIAL_X="https://twitter.com/GalacticaNet"
+SOCIAL_TELEGRAM="https://t.me/TheCypherState"
 
 # Other
-DOWNLOAD_URL="https://config-t.noders.services/alignedlayer"
+DOWNLOAD_URL="https://config-t.noders.services/galactica"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://testnet.alignedlayer.explorers.guru/validator/alignedvaloper1fu5vtujxarn3wuhhuqkz2dwd46feshdvt8frpr"
+VALIDATOR_LINK="https://ping.pfc.zone/galactica-testnet/staking/galavaloper1p0gs5uq44usv2fnx0qcw785jj2ey76svjtlgx7"
 
 # Updates
 UPDATE_MAIN=true

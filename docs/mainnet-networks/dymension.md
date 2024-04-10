@@ -1,6 +1,6 @@
 ---
 hide_table_of_contents: false
-title: template
+title: "Dymension"
 ---
 
 import SmallCard from "../../src/components/SmallCard"
@@ -10,36 +10,13 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-dymension">
 # Dymension
 </div>
-###### Chain ID: `` | Current Node Version: `v3.0.0`
+###### Chain ID: `dymension_1100-1` | Current Node Version: `v3.0.0`
 
-Dymension is a pioneering blockchain project designed to revolutionize the way we think about scalability and interoperability in the blockchain ecosystem. Positioned as a Layer 2 scaling solution, Dymension leverages rollup technology to enhance the performance of existing Layer 1 blockchains, such as Ethereum, by providing faster transaction throughput, reduced gas fees, and improved scalability without compromising on security or decentralization.
 
-## Public endpoints 
+Dymension introduces a Layer 2 scaling solution using rollup technology to boost Layer 1 blockchains like Ethereum. It emphasizes scalability, interoperability, reduced transaction costs, enhanced security, and developer support. Ideal for high-throughput applications in DeFi, gaming, and NFTs, Dymension facilitates efficient, cost-effective transactions and cross-chain interactions, advancing the blockchain ecosystem towards greater adoption and innovation.
 
-<CardLayout autoFitEnabled={true}>
-    
-    
-    
-</CardLayout>
-
-## Our validator
-
-<CardLayout autoFitEnabled={true}>
-    <Card
-        to="#"
-        header={{
-            label: "[NODERS]TEAM",
-            translateId: "development-setup",
-        }}
-        body={{
-            label: "Trusted blockchain validator",
-        }}
-        iconPath="img/kotlin-icon-32.svg"
-    />
-</CardLayout>
-
-## Social resources
-See the API for the various client libraries implemented for.
+# Social resources
+Official links of social networks of projects
 
 <CardLayout autoFitEnabled={false}>
     <SmallCard to="https://dymension.xyz/" header={{label: "Website", translateId: "social-telegram"}} iconPath="img/website-icon.svg"/>
@@ -48,3 +25,30 @@ See the API for the various client libraries implemented for.
     <SmallCard to="https://twitter.com/dymension" header={{label: "X", translateId: "social-telegram"}} iconPath="img/x-icon.svg"/>
     <SmallCard to="https://t.me/dymensionXYZ" header={{label: "Telegram", translateId: "social-telegram"}} iconPath="img/telegram-icon.svg"/>
 </CardLayout>
+
+# Our validator in Dymension network
+
+<CardLayout autoFitEnabled={true}>
+    <Card
+        to="https://dymension.explorers.guru/validator/dymvaloper1ta56hcqaxj55wu8emarnw090gk5uq4366uz572"
+        header={{
+            label: "[NODERS]TEAM",
+            translateId: "development-setup",
+        }}
+        body={{
+            label: "Trusted blockchain validator",
+        }}
+        iconPath="img/kotlin-icon.svg"
+    />
+</CardLayout>
+
+# Public endpoints 
+
+<CardLayout autoFitEnabled={true}>
+    <SmallCard to="https://dymension-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
+    <SmallCard to="https://dymension-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
+    <SmallCard to="https://dymension-jsonrpc.noders.services" header={{label: "json-RPC Endpoint", translateId: "jrpc-endpoint"}}/>
+    <SmallCard to="https://dymension-grpc.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+</CardLayout>
+
+

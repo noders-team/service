@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-osmosis">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `osmosis-1` | Current Node Version: `23.0.0`
+###### Chain ID: `osmo-test-5` | Current Node Version: `v24.0.0-rc0`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -40,22 +40,22 @@ osmosisd keys delete KEY
 ## Wallet
 ### Wallet balance
 ```js
-osmosisd q bank balances $(osmosisd keys show KEY -a) --node https://osmosis.rpc.mainnet.noders.team:443
+osmosisd q bank balances $(osmosisd keys show KEY -a) --node https://osmosis-t-rpc.noders.services:443
 ```
 
 ### Send
 ```js
 osmosisd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uosmo \
-  --chain-id osmosis-1 \
-  --node https://osmosis.rpc.mainnet.noders.team:443 --fees 3000uosmo \
+  --chain-id osmo-test-5 \
+  --node https://osmosis-t-rpc.noders.services:443 --fees 3000uosmo \
   --from KEY
 ```
 
 ### Withdraw rewards from all validators
 ```js
 osmosisd tx distribution withdraw-all-rewards \
-  --chain-id osmosis-1 \
-  --node https://osmosis.rpc.mainnet.noders.team:443 --fees 3000uosmo \
+  --chain-id osmo-test-5 \
+  --node https://osmosis-t-rpc.noders.services:443 --fees 3000uosmo \
   --from KEY
 ```
 
@@ -63,32 +63,32 @@ osmosisd tx distribution withdraw-all-rewards \
 ```js
 osmosisd tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
-  --chain-id osmosis-1 \
-  --node https://osmosis.rpc.mainnet.noders.team:443 --fees 3000uosmo \
+  --chain-id osmo-test-5 \
+  --node https://osmosis-t-rpc.noders.services:443 --fees 3000uosmo \
   --from KEY
 ```
 
 ### Delegate tokens to yourself
 ```js
 osmosisd tx staking delegate $(osmosisd keys show KEY --bech val -a) 1000000uosmo \
---chain-id osmosis-1 \
---node https://osmosis.rpc.mainnet.noders.team:443 --fees 3000uosmo \
+--chain-id osmo-test-5 \
+--node https://osmosis-t-rpc.noders.services:443 --fees 3000uosmo \
 --from KEY
 ```
 
 ### Delegate tokens to validator
 ```js
 osmosisd tx staking delegate VALIDATOR_ADDRESS 1000000uosmo \
---chain-id osmosis-1 \
---node https://osmosis.rpc.mainnet.noders.team:443 --fees 3000uosmo \
+--chain-id osmo-test-5 \
+--node https://osmosis-t-rpc.noders.services:443 --fees 3000uosmo \
 --from KEY
 ```
 
 ### Redelegate tokens to another validator
 ```js
 osmosisd tx staking redelegate $(osmosisd keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000uosmo \
-  --chain-id osmosis-1 \
-  --node https://osmosis.rpc.mainnet.noders.team:443 --fees 3000uosmo \
+  --chain-id osmo-test-5 \
+  --node https://osmosis-t-rpc.noders.services:443 --fees 3000uosmo \
   --from KEY
 ```
 
@@ -96,20 +96,20 @@ osmosisd tx staking redelegate $(osmosisd keys show KEY --bech val -a) VALIDATOR
 ```js
 osmosisd tx staking unbond $(osmosisd keys show KEY --bech val -a) uosmo \
   --chain-id andromeda-1 \
-  --node https://osmosis.rpc.mainnet.noders.team:443 --fees 3000uosmo \
+  --node https://osmosis-t-rpc.noders.services:443 --fees 3000uosmo \
   --from KEY
 ```
 
 ## Governance
 ### List of all proposals
 ```js
-osmosisd query gov proposals --node https://osmosis.rpc.mainnet.noders.team:443
+osmosisd query gov proposals --node https://osmosis-t-rpc.noders.services:443
 ```
 ### Check vote
 ```js
 osmosisd query gov proposal PROPOSAL_NUMBER \
-  --chain-id osmosis-1 \
-  --node https://osmosis.rpc.mainnet.noders.team:443 --fees 3000uosmo \
+  --chain-id osmo-test-5 \
+  --node https://osmosis-t-rpc.noders.services:443 --fees 3000uosmo \
   --output json | jq
 ```
 
@@ -121,8 +121,8 @@ osmosisd query gov proposal PROPOSAL_NUMBER \
 * abstain
 ```js
 osmosisd tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
-  --chain-id osmosis-1 \
-  --node https://osmosis.rpc.mainnet.noders.team:443 --fees 3000uosmo \
+  --chain-id osmo-test-5 \
+  --node https://osmosis-t-rpc.noders.services:443 --fees 3000uosmo \
   --from KEY
 ```
 
@@ -144,8 +144,8 @@ osmosisd tx staking create-validator \
   --identity "220491ADDD660741" \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
-  --chain-id osmosis-1 \
-  --node https://osmosis.rpc.mainnet.noders.team:443 --fees 3000uosmo \
+  --chain-id osmo-test-5 \
+  --node https://osmosis-t-rpc.noders.services:443 --fees 3000uosmo \
   --from KEY
 ```
 
@@ -156,17 +156,17 @@ osmosisd tx staking edit-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id osmosis-1 \
+--chain-id osmo-test-5 \
 --commission-rate 0.05 \
 --from KEY \
---node https://osmosis.rpc.mainnet.noders.team:443 --fees 3000uosmo \
+--node https://osmosis-t-rpc.noders.services:443 --fees 3000uosmo \
 ```
 
 ### Unjail
 ```js
 osmosisd tx slashing unjail \
-  --chain-id osmosis-1 \
-  --node https://osmosis.rpc.mainnet.noders.team:443 --fees 3000uosmo \
+  --chain-id osmo-test-5 \
+  --node https://osmosis-t-rpc.noders.services:443 --fees 3000uosmo \
   --from KEY
 ```
 
@@ -203,7 +203,7 @@ echo $(osmosisd tendermint show-node-id)'@'$(curl -s ifconfig.me)':'$(cat ~/.osm
 
 ### Get live peers
 ```js
-curl -sS https://osmosis.rpc.mainnet.noders.team:443/net_info | jq -r '.result.peers[] | "\(.node_info.id)@\(.remote_ip):\(.node_info.listen_addr)"' | awk -F ':' '{print $1":"$(NF)}'
+curl -sS https://osmosis-t-rpc.noders.services:443/net_info | jq -r '.result.peers[] | "\(.node_info.id)@\(.remote_ip):\(.node_info.listen_addr)"' | awk -F ':' '{print $1":"$(NF)}'
 ```
 
 ### Set minimum gas price

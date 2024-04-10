@@ -1,27 +1,32 @@
 ---
 hide_table_of_contents: false
 title: Upgrade
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 <div class="h1-with-icon icon-desmos">
 # Upgrade
 </div>
-###### Chain ID: `` | Current Node Version: `v6.2.1`
+###### Chain ID: `desmos-mainnet` | Current Node Version: `v7.0.1`
 
-```bash
-# Clone project repository
+
+# Clone Desmos repository
+```js
 cd $HOME
 rm -rf desmos-labs
 git clone https://github.com/desmos-labs.git
 cd desmos-labs
-git checkout v6.2.1
+git checkout v7.0.1
+ ```
 
 # Build binaries
+```js
 make build
+ ```
 
 # Prepare binaries for Cosmovisor
-mkdir -p ~/.desmos/cosmovisor/upgrades/v6.2.1/bin
-mv build/desmos ~/.desmos/cosmovisor/upgrades/v6.2.1/bin/
+```js
+mkdir -p ~/.desmos/cosmovisor/upgrades/v7.0.1/bin
+mv build/desmos ~/.desmos/cosmovisor/upgrades/v7.0.1/bin/
 rm -rf build
 ```

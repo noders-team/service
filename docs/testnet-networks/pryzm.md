@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-pryzm">
 # Pryzm
 </div>
-###### Chain ID: `indigo-1` | Current Node Version: `0.11.1`
+###### Chain ID: `indigo-1` | Current Node Version: `v0.11.1`
 
 
 Pryzm is revolutionizing the digital world by providing a secure and decentralized identity management platform. It empowers users with self-sovereign identities, enabling them to control their personal data and digital footprints. By harnessing blockchain technology, Pryzm ensures unmatched security, privacy, and interoperability across various applications and services. This platform facilitates seamless authentication, verification, and data exchange processes, eliminating the need for centralized identity repositories. Pryzm is paving the way for a future where digital interactions are more authentic, private, and user-controlled, fostering trust and efficiency in the digital ecosystem.

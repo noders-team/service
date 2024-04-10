@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-celestia">
 # Installation
 </div>
-###### Chain ID: `mocha-4` | Current Node Version: `1.7.0`
+###### Chain ID: `mocha-4` | Current Node Version: `v1.7.0`
 
 ## Install dependencies
 
@@ -25,13 +25,19 @@ eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/gola
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
 
-## Download and build binaries
-### Clone Celestia repo and build celestia-appd 1.7.0
+## Install with Cosmovisor
+:::note ADVANCED ROUTE
+
+Cosmosvisor is a process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If a proposal is approved, cosmosvisor can automatically download the new binary, stop the current one, switch to the new binary, and restart the node with the new binary.
+
+:::
+### Download and build binaries
+### Clone Celestia repo and build celestia-appd v1.7.0
 ```js
 cd $HOME
 git clone https://github.com/celestiaorg.git
 cd celestiaorg
-git checkout 1.7.0
+git checkout v1.7.0
 ```
 
 ### Build binaries
@@ -41,8 +47,8 @@ make build
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.celestia-app/cosmovisor/upgrades/1.7.0/bin
-mv build/celestia-appd ~/.celestia-app/cosmovisor/upgrades/1.7.0/bin/
+mkdir -p ~/.celestia-app/cosmovisor/upgrades/v1.7.0/bin
+mv build/celestia-appd ~/.celestia-app/cosmovisor/upgrades/v1.7.0/bin/
 rm -rf build
 ```
 
@@ -60,7 +66,7 @@ go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
 ## Run node
 ### Create service
 ```js
-sudo tee /etc/systemd/system/celestai.service > /dev/null << EOF
+sudo tee /etc/systemd/system/celestia.service > /dev/null << EOF
 [Unit]
 Description=celestia node service
 After=network-online.target
@@ -81,10 +87,47 @@ WantedBy=multi-user.target
 EOF
 ```
 
+## Install without Cosmovisor
+
+### Download and build binaries
+### Clone Celestia repo and build celestia-appd v1.7.0
+```js
+cd $HOME
+git clone https://github.com/celestiaorg.git
+cd celestiaorg
+git checkout v1.7.0
+```
+
+### Build binaries
+```js
+make install
+```
+
+## Run node
+### Create service
+```js
+sudo tee /etc/systemd/system/celestia.service > /dev/null << EOF
+[Unit]
+Description=celestia node service
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which celestia-appd) start
+Restart=on-failure
+RestartSec=10
+LimitNOFILE=65535
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
 ### Enable service
 ```js
 sudo systemctl daemon-reload
-sudo systemctl enable celestai.service.service
+sudo systemctl enable celestia.service.service
 ```
 
 ## Node configuration
@@ -102,8 +145,8 @@ celestia-appd init NAME_OF_YOUR_VALIDATOR --chain-id mocha-4
 
 ### Download genesis and addrbook
 ```js
-curl -Ls https://config.noders.services/celestia/genesis.json > ~/.celestia-app/config/genesis.json
-curl -Ls https://config.noders.services/celestia/addrbook.json > ~/.celestia-app/config/addrbook.json
+curl -Ls https://config-t.noders.services/celestia/genesis.json > ~/.celestia-app/config/genesis.json
+curl -Ls https://config-t.noders.services/celestia/addrbook.json > ~/.celestia-app/config/addrbook.json
 ```
 ### Add peers
 ```js
@@ -132,5 +175,5 @@ sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:14717\"
 
 ### Start node and check logs
 ```js
-sudo systemctl start celestai.service.service && sudo journalctl -u celestai.service.service -f --no-hostname -o cat
+sudo systemctl start celestia.service.service && sudo journalctl -u celestia.service.service -f --no-hostname -o cat
 ```

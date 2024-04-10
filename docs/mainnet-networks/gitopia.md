@@ -1,6 +1,6 @@
 ---
 hide_table_of_contents: false
-title: template
+title: "Gitopia"
 ---
 
 import SmallCard from "../../src/components/SmallCard"
@@ -10,36 +10,13 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-gitopia">
 # Gitopia
 </div>
-###### Chain ID: `` | Current Node Version: `v3.3.0`
+###### Chain ID: `gitopia` | Current Node Version: `v3.3.0`
 
-Gitopia is an innovative decentralized platform designed to revolutionize the way developers collaborate and share code, leveraging blockchain technology to ensure transparency, security, and immutability of code repositories. By addressing the centralization issues prevalent in existing code hosting platforms, Gitopia empowers developers with a censorship-resistant and collaborative environment, fostering open-source development and community-driven projects.
 
-## Public endpoints 
+Gitopia leverages blockchain to offer a decentralized code hosting platform, ensuring transparency, security, and immutability. It addresses centralization issues, promoting open-source development and community-driven projects. Features include decentralized governance, collaboration tools, and incentive mechanisms to reward contributions. Ideal for projects valuing transparency and community involvement, Gitopia fosters a secure, collaborative environment for developers globally.
 
-<CardLayout autoFitEnabled={true}>
-    
-    
-    
-</CardLayout>
-
-## Our validator
-
-<CardLayout autoFitEnabled={true}>
-    <Card
-        to="#"
-        header={{
-            label: "[NODERS]TEAM",
-            translateId: "development-setup",
-        }}
-        body={{
-            label: "Trusted blockchain validator",
-        }}
-        iconPath="img/kotlin-icon-32.svg"
-    />
-</CardLayout>
-
-## Social resources
-See the API for the various client libraries implemented for.
+# Social resources
+Official links of social networks of projects
 
 <CardLayout autoFitEnabled={false}>
     <SmallCard to="https://gitopia.com/" header={{label: "Website", translateId: "social-telegram"}} iconPath="img/website-icon.svg"/>
@@ -48,3 +25,30 @@ See the API for the various client libraries implemented for.
     <SmallCard to="https://twitter.com/gitopiaDAO" header={{label: "X", translateId: "social-telegram"}} iconPath="img/x-icon.svg"/>
     <SmallCard to="https://t.me/Gitopia" header={{label: "Telegram", translateId: "social-telegram"}} iconPath="img/telegram-icon.svg"/>
 </CardLayout>
+
+# Our validator in Gitopia network
+
+<CardLayout autoFitEnabled={true}>
+    <Card
+        to="https://ping.pub/gitopia/staking/gitopiavaloper1fpwhn7tevwz657rg00mc7zcf9eq4tg0a703dw8"
+        header={{
+            label: "[NODERS]TEAM",
+            translateId: "development-setup",
+        }}
+        body={{
+            label: "Trusted blockchain validator",
+        }}
+        iconPath="img/kotlin-icon.svg"
+    />
+</CardLayout>
+
+# Public endpoints 
+
+<CardLayout autoFitEnabled={true}>
+    <SmallCard to="https://gitopia-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
+    <SmallCard to="https://gitopia-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
+    
+    <SmallCard to="https://gitopia-grpc.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+</CardLayout>
+
+

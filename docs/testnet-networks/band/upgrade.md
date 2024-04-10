@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-band">
 # Upgrade
 </div>
-###### Chain ID: `` | Current Node Version: `2.5.4`
+###### Chain ID: `band-laozi-testnet6` | Current Node Version: `v2.5.4`
 
 
 # Clone Band repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf chain
 git clone https://github.com/bandprotocol/chain.git
 cd chain
-git checkout 2.5.4
+git checkout v2.5.4
  ```
 
 # Build binaries
@@ -26,7 +26,7 @@ make build
 
 # Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.band/cosmovisor/upgrades/2.5.4/bin
-mv build/bandd ~/.band/cosmovisor/upgrades/2.5.4/bin/
+mkdir -p ~/.band/cosmovisor/upgrades/v2.5.4/bin
+mv build/bandd ~/.band/cosmovisor/upgrades/v2.5.4/bin/
 rm -rf build
 ```

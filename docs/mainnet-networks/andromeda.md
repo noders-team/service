@@ -1,6 +1,6 @@
 ---
 hide_table_of_contents: false
-title: template
+title: "Andromeda"
 ---
 
 import SmallCard from "../../src/components/SmallCard"
@@ -10,54 +10,13 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-andromeda">
 # Andromeda
 </div>
-###### Chain ID: `` | Current Node Version: `andromeda-1-v0.1.0`
+###### Chain ID: `` | Current Node Version: `v`
 
-Andromeda Protocol introduces a groundbreaking innovation in the realm of decentralized technology with its Andromeda Operating System (aOS).
 
-Positioned as the first decentralized, on-chain operating system, aOS serves as the foundation for a comprehensive suite of products, tools, and utilities across multiple blockchains. Here's an overview of what makes Andromeda stand out:
+The Andromeda Protocol heralds a new era in decentralized technology with its Andromeda Operating System (aOS), the first decentralized, on-chain operating system. It facilitates seamless development across blockchains, offering a unique suite of Web3 tools and utilities. Key features include multi-chain support, IBC for easy data transport, accessible tools for creators, rapid development with Andromeda Digital Objects (ADOs), and extensive integration with major blockchain platforms. Andromeda aims to enhance Web3 accessibility, efficiency, and scalability, fostering a rich ecosystem for developers and creators globally.
 
-Multi-Chain and On-Chain Suite: Andromeda is designed to operate seamlessly across various blockchains, providing an all-encompassing environment for the development and deployment of Web3 applications.
-
-Decentralized Operating System (aOS): At the heart of Andromeda is the Andromeda Operating System (aOS), which is described as the starting point for Web3. This innovative platform facilitates the creation, management, and execution of decentralized applications (dApps) on a scale never seen before.
-
-Inter-Blockchain Communication (IBC): Utilizing IBC, Andromeda enhances connectivity across the blockchain ecosystem. This feature allows for the efficient transport of lightweight configuration data between chains, facilitating seamless interaction and integration between different projects within the Cosmos network and beyond.
-
-Accessibility for Creators and Developers: Andromeda lowers the entry barrier for creators and developers of all skill levels. With its suite of intuitive tools and interfaces, individuals can easily navigate and leverage the vast design space offered by the platform.
-
-Rapid Development with ADOs: The introduction of Andromeda Digital Objects (ADOs) revolutionizes the development process, reducing timeframes from months to minutes. ADOs are unique tools that enable quick creation and composition of Web3 apps, significantly accelerating the development cycle.
-
-Integration and Partnerships: Andromeda boasts integrations with several key blockchain platforms such as Juno, Archway, Sei, Oraichain, Injective, Terra, Stargaze, Secret, Axelar, and more, demonstrating its commitment to fostering a connected and cooperative blockchain ecosystem.
-
-Community and Engagement: The project places a strong emphasis on community interaction and engagement, inviting users to connect across various channels to explore how Andromeda can facilitate their Web3 endeavors.
-
-Andromeda Protocol is on a mission to make Web3 more accessible, efficient, and scalable by providing an innovative platform that bridges the gap between various blockchain networks and simplifies the development process for creators and developers worldwide.
-
-## Public endpoints 
-
-<CardLayout autoFitEnabled={true}>
-    
-    
-    
-</CardLayout>
-
-## Our validator
-
-<CardLayout autoFitEnabled={true}>
-    <Card
-        to="#"
-        header={{
-            label: "[NODERS]TEAM",
-            translateId: "development-setup",
-        }}
-        body={{
-            label: "Trusted blockchain validator",
-        }}
-        iconPath="img/kotlin-icon-32.svg"
-    />
-</CardLayout>
-
-## Social resources
-See the API for the various client libraries implemented for.
+# Social resources
+Official links of social networks of projects
 
 <CardLayout autoFitEnabled={false}>
     <SmallCard to="https://www.andromedaprotocol.io/" header={{label: "Website", translateId: "social-telegram"}} iconPath="img/website-icon.svg"/>
@@ -66,3 +25,30 @@ See the API for the various client libraries implemented for.
     <SmallCard to="https://twitter.com/andromedaprot" header={{label: "X", translateId: "social-telegram"}} iconPath="img/x-icon.svg"/>
     <SmallCard to="https://t.me/andromedaprotocol" header={{label: "Telegram", translateId: "social-telegram"}} iconPath="img/telegram-icon.svg"/>
 </CardLayout>
+
+# Our validator in Andromeda network
+
+<CardLayout autoFitEnabled={true}>
+    <Card
+        to="https://andromeda.explorers.guru/validator/andrvaloper1t8zsecgzc5025k3s0mthdm6vt82p5p0v48p2ry"
+        header={{
+            label: "[NODERS]TEAM",
+            translateId: "development-setup",
+        }}
+        body={{
+            label: "Trusted blockchain validator",
+        }}
+        iconPath="img/kotlin-icon.svg"
+    />
+</CardLayout>
+
+# Public endpoints 
+
+<CardLayout autoFitEnabled={true}>
+    
+    
+    
+    
+</CardLayout>
+
+

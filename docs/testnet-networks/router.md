@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-router">
 # Rrouter
 </div>
-###### Chain ID: `router_9601-1` | Current Node Version: `null`
+###### Chain ID: `router_9601-1` | Current Node Version: `vnull`
 
 
 Router Protocol is at the forefront of enabling seamless interoperability across diverse blockchain networks. By developing a cutting-edge infrastructure, Router Protocol facilitates the transfer of information and assets between otherwise isolated blockchains, fostering a more connected and efficient decentralized ecosystem. This innovative platform addresses the critical challenge of interoperability, allowing for enhanced liquidity, greater accessibility, and expanded functionalities across the crypto space. Router Protocol's commitment to breaking down barriers between blockchains paves the way for a truly interconnected digital asset environment.

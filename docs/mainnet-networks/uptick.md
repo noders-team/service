@@ -1,6 +1,6 @@
 ---
 hide_table_of_contents: false
-title: template
+title: "Uptick"
 ---
 
 import SmallCard from "../../src/components/SmallCard"
@@ -10,36 +10,15 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-uptick">
 # Uptick
 </div>
-###### Chain ID: `` | Current Node Version: `v0.2.19`
+###### Chain ID: `uptick_117-1` | Current Node Version: `v0.2.19`
 
-Uptick Project: Revolutionizing Digital Collectibles with Blockchain Technology
 
-## Public endpoints 
+The Uptick Project leverages blockchain to transform digital collectibles and NFTs, offering a secure and transparent platform for artists, creators, and collectors. Key features include a comprehensive NFT marketplace, intuitive creator tools for minting NFTs, decentralized operations for enhanced security, cross-chain functionality for broad accessibility, and a strong focus on community engagement through social features and collaboration tools. Uptick is redefining digital ownership and creativity, bridging diverse blockchain networks to enrich the digital art, gaming, and entertainment sectors.
 
-<CardLayout autoFitEnabled={true}>
-    
-    
-    
-</CardLayout>
+Explore the future of digital collectibles with Uptick Project.
 
-## Our validator
-
-<CardLayout autoFitEnabled={true}>
-    <Card
-        to="#"
-        header={{
-            label: "[NODERS]TEAM",
-            translateId: "development-setup",
-        }}
-        body={{
-            label: "Trusted blockchain validator",
-        }}
-        iconPath="img/kotlin-icon-32.svg"
-    />
-</CardLayout>
-
-## Social resources
-See the API for the various client libraries implemented for.
+# Social resources
+Official links of social networks of projects
 
 <CardLayout autoFitEnabled={false}>
     <SmallCard to="https://www.uptickproject.com/" header={{label: "Website", translateId: "social-telegram"}} iconPath="img/website-icon.svg"/>
@@ -48,3 +27,30 @@ See the API for the various client libraries implemented for.
     <SmallCard to="https://twitter.com/Uptickproject" header={{label: "X", translateId: "social-telegram"}} iconPath="img/x-icon.svg"/>
     <SmallCard to="https://t.me/uptickproject" header={{label: "Telegram", translateId: "social-telegram"}} iconPath="img/telegram-icon.svg"/>
 </CardLayout>
+
+# Our validator in Uptick network
+
+<CardLayout autoFitEnabled={true}>
+    <Card
+        to="https://uptick.explorers.guru/validator/uptickvaloper1fl3426k0avvergm7ejzczqy6rfzxk5ma93mqwj"
+        header={{
+            label: "[NODERS]TEAM",
+            translateId: "development-setup",
+        }}
+        body={{
+            label: "Trusted blockchain validator",
+        }}
+        iconPath="img/kotlin-icon.svg"
+    />
+</CardLayout>
+
+# Public endpoints 
+
+<CardLayout autoFitEnabled={true}>
+    <SmallCard to="https://uptick-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
+    <SmallCard to="https://uptick-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
+    <SmallCard to="https://uptick-jsonrpc.noders.services" header={{label: "json-RPC Endpoint", translateId: "jrpc-endpoint"}}/>
+    <SmallCard to="https://uptick-rpc.grpc.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+</CardLayout>
+
+

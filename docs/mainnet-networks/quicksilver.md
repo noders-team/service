@@ -1,6 +1,6 @@
 ---
 hide_table_of_contents: false
-title: template
+title: "Quicksilver"
 ---
 
 import SmallCard from "../../src/components/SmallCard"
@@ -10,36 +10,13 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-quicksilver">
 # Quicksilver
 </div>
-###### Chain ID: `` | Current Node Version: `v1.5.3`
+###### Chain ID: `` | Current Node Version: `v`
 
-Quicksilver: Accelerating DeFi with Liquid Staking on Cosmos
 
-## Public endpoints 
+Quicksilver introduces liquid staking to the Cosmos ecosystem, unlocking liquidity for staked assets while maintaining network security participation. It features liquid staking derivatives, cross-chain functionality through the IBC protocol, decentralized governance, high security, and yield optimization. This protocol enables greater capital efficiency and a vibrant DeFi ecosystem, offering opportunities for lending, borrowing, and trading staked assets across chains, thus innovating within DeFi and Cosmos.
 
-<CardLayout autoFitEnabled={true}>
-    
-    
-    
-</CardLayout>
-
-## Our validator
-
-<CardLayout autoFitEnabled={true}>
-    <Card
-        to="#"
-        header={{
-            label: "[NODERS]TEAM",
-            translateId: "development-setup",
-        }}
-        body={{
-            label: "Trusted blockchain validator",
-        }}
-        iconPath="img/kotlin-icon-32.svg"
-    />
-</CardLayout>
-
-## Social resources
-See the API for the various client libraries implemented for.
+# Social resources
+Official links of social networks of projects
 
 <CardLayout autoFitEnabled={false}>
     <SmallCard to="https://quicksilver.zone/" header={{label: "Website", translateId: "social-telegram"}} iconPath="img/website-icon.svg"/>
@@ -48,3 +25,30 @@ See the API for the various client libraries implemented for.
     <SmallCard to="https://twitter.com/quicksilverzone" header={{label: "X", translateId: "social-telegram"}} iconPath="img/x-icon.svg"/>
     <SmallCard to="https://t.me/quicksilverzone" header={{label: "Telegram", translateId: "social-telegram"}} iconPath="img/telegram-icon.svg"/>
 </CardLayout>
+
+# Our validator in Quicksilver network
+
+<CardLayout autoFitEnabled={true}>
+    <Card
+        to="https://quicksilver.explorers.guru/validator/quickvaloper17gwfcceyvcw53r6cclrhwk5jksmtd96xfjwrcv"
+        header={{
+            label: "[NODERS]TEAM",
+            translateId: "development-setup",
+        }}
+        body={{
+            label: "Trusted blockchain validator",
+        }}
+        iconPath="img/kotlin-icon.svg"
+    />
+</CardLayout>
+
+# Public endpoints 
+
+<CardLayout autoFitEnabled={true}>
+    <SmallCard to="https://quicksilver-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
+    <SmallCard to="https://quicksilver-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
+    
+    <SmallCard to="https://quicksilver-grpc.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+</CardLayout>
+
+

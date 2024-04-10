@@ -1,27 +1,32 @@
 ---
 hide_table_of_contents: false
 title: Upgrade
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 <div class="h1-with-icon icon-quicksilver">
 # Upgrade
 </div>
-###### Chain ID: `` | Current Node Version: `v1.5.3`
+###### Chain ID: `` | Current Node Version: `v`
 
-```bash
-# Clone project repository
+
+# Clone Quicksilver repository
+```js
 cd $HOME
 rm -rf quicksilver-zone
 git clone https://github.com/quicksilver-zone.git
 cd quicksilver-zone
-git checkout v1.5.3
+git checkout v
+ ```
 
 # Build binaries
+```js
 make build
+ ```
 
 # Prepare binaries for Cosmovisor
-mkdir -p ~/.quicksilverd/cosmovisor/upgrades/v1.5.3/bin
-mv build/quicksilverd ~/.quicksilverd/cosmovisor/upgrades/v1.5.3/bin/
+```js
+mkdir -p ~/.quicksilverd/cosmovisor/upgrades/v/bin
+mv build/quicksilverd ~/.quicksilverd/cosmovisor/upgrades/v/bin/
 rm -rf build
 ```

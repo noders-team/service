@@ -34,13 +34,13 @@ function HomeCallToAction() {
     <>
       <ActionButton
         type="primary"
-        href={useBaseUrl('mainnet-networks/osmosis')}
+        href={useBaseUrl('mainnet-networks/overview')}
         target="_self">
         Mainnet Networks
       </ActionButton>
       <ActionButton
         type="secondary"
-        href={useBaseUrl('testnet-networks/osmosis')}
+        href={useBaseUrl('testnet-networks/overview')}
         target="_self">
         Testnet Networks
       </ActionButton>

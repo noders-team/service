@@ -1,38 +1,48 @@
 # Blockchain
-CHAIN_NAME="Osmosis"
-CHAIN_SYSTEM_NAME="osmosis"
+CHAIN_NAME="Uptick"
+CHAIN_SYSTEM_NAME="uptick"
 CHAIN_ID="auto"
-CHAIN_DESCRIPTION="Osmosis is a decentralized peer-to-peer blockchain that people can use to create liquidity and trade IBC enabled tokens. The Osmosis blockchain is made up of free, public, and open-source software."
-CHAIN_DENOM="uosmo"
+VERSION="auto"
+CHAIN_DESCRIPTION="""# Uptick Project: Revolutionizing Digital Collectibles
+
+The Uptick Project leverages blockchain to transform digital collectibles and NFTs, offering a secure and transparent platform for artists, creators, and collectors. Key features include a comprehensive NFT marketplace, intuitive creator tools for minting NFTs, decentralized operations for enhanced security, cross-chain functionality for broad accessibility, and a strong focus on community engagement through social features and collaboration tools. Uptick is redefining digital ownership and creativity, bridging diverse blockchain networks to enrich the digital art, gaming, and entertainment sectors.
+
+Explore the future of digital collectibles with Uptick Project.
+
+"""
+[CHAIN_DESCRIPTION_END]
+
+CHAIN_DENOM="auptick"
 CHAIN_FEES="3000"
 
 # Binary
-DAEMON_NAME="osmosisd"
-DAEMON_VERSION="v23.0.0"
-DAEMON_SERVICE="osmosisd.service"
-DAEMON_HOME="~/.osmosisd"
+DAEMON_NAME="uptickd"
+DAEMON_SERVICE="uptickd.service"
+DAEMON_HOME="~/.uptickd"
 
 # Endpoints
-ENDPOINT_RPC="https://osmosis.rpc.mainnet.noders.team"
-ENDPOINT_API="https://osmosis.api.mainnet.noders.team"
-ENDPOINT_GRPCWEB="https://osmosis.grpc.mainnet.noders.team"
-ENDPOINT_GRPC=""
+ENDPOINT_RPC="https://uptick-rpc.noders.services"
+ENDPOINT_API="https://uptick-api.noders.services"
+ENDPOINT_JRPC="https://uptick-jsonrpc.noders.services"
+ENDPOINT_GRPC="https://uptick-rpc.grpc.noders.services"
 ENDPOINT_PEER="auto"
 
 # Social
-SOCIAL_WEBSITE="#"
-SOCIAL_GITHUB="https://github.com/osmosis-labs/osmosis"
-SOCIAL_DISCORD="#"
-SOCIAL_X="#"
-SOCIAL_TELEGRAM="https://t.me/osmosiszone"
+SOCIAL_WEBSITE="https://www.uptickproject.com/"
+SOCIAL_GITHUB="https://github.com/UptickNetwork"
+SOCIAL_DISCORD="https://discord.com/invite/teqX78VZUV"
+SOCIAL_X="https://twitter.com/Uptickproject"
+SOCIAL_TELEGRAM="https://t.me/uptickproject"
 
 # Other
-DOWNLOAD_URL="https://snapshots.mainnet.noders.team/osmosis/"
+DOWNLOAD_URL="https://config.noders.services/uptick"
 GITHUB_FOLDER_NAME="auto"
+VALIDATOR_LINK="https://uptick.explorers.guru/validator/uptickvaloper1fl3426k0avvergm7ejzczqy6rfzxk5ma93mqwj"
 
 # Updates
 UPDATE_MAIN=true
 UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
 UPDATE_UPGRADE=true
 UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true

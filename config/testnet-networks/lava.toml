@@ -1,41 +1,41 @@
 # Blockchain
-CHAIN_NAME="Celestia"
-CHAIN_SYSTEM_NAME="celestia"
+CHAIN_NAME="Lava"
+CHAIN_SYSTEM_NAME="lava"
 CHAIN_ID="auto"
 VERSION="auto"
-CHAIN_DESCRIPTION="""# Celestia: Revolutionizing Blockchain with Modularity
+CHAIN_DESCRIPTION="""# LavaNet: Igniting the Future of Decentralized Connectivity
 
-Celestia introduces a modular data availability network to enhance blockchain scalability and flexibility. It features a minimal design focusing on transaction ordering and data availability, decoupling consensus from execution for improved scalability. This approach allows for customized execution layers, powered by a secure Proof of Stake mechanism. Celestia's innovation lies in its ability to ensure transaction data is verifiable without downloading the entire chain, offering a foundation for scalable, efficient blockchain applications.
+LavaNet is set to redefine the landscape of decentralized networks by introducing a high-speed, secure, and scalable blockchain infrastructure. Aimed at facilitating seamless and efficient communication across the digital world, LavaNet leverages state-of-the-art cryptographic techniques to ensure data integrity and privacy. With a focus on user empowerment, LavaNet offers a decentralized platform for applications that require reliable data exchange and connectivity. By integrating advanced consensus mechanisms and smart contract functionality, LavaNet provides a robust foundation for developing decentralized applications (dApps) that can operate across multiple industries, including finance, healthcare, and entertainment. LavaNet's vision is to create a fully decentralized internet where users have complete control over their data and digital interactions.
 
 """
 [CHAIN_DESCRIPTION_END]
 
-CHAIN_DENOM="utia"
+CHAIN_DENOM="ulava"
 CHAIN_FEES="3000"
 
 # Binary
-DAEMON_NAME="celestia-appd"
-DAEMON_SERVICE="celestai.service"
-DAEMON_HOME="~/.celestia-app"
+DAEMON_NAME="lavad"
+DAEMON_SERVICE="lava.service"
+DAEMON_HOME="~/.lava"
 
 # Endpoints
-ENDPOINT_RPC="https://celestia-t-rpc.noders.services"
-ENDPOINT_API="https://celestia-t-api.noders.services"
+ENDPOINT_RPC="https://lava-t-rpc.noders.services"
+ENDPOINT_API="https://lava-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://celestia-t-grpc.noders.services"
+ENDPOINT_GRPC="https://lava-t-grpc.noders.services"
 ENDPOINT_PEER="auto"
 
 # Social
-SOCIAL_WEBSITE="https://celestia.org/"
-SOCIAL_GITHUB="https://github.com/celestiaorg"
-SOCIAL_DISCORD="https://discord.gg/celestiacommunity"
-SOCIAL_X="https://twitter.com/CelestiaOrg"
-SOCIAL_TELEGRAM="https://t.me/celestiaru"
+SOCIAL_WEBSITE="https://www.lavanet.xyz/"
+SOCIAL_GITHUB="https://github.com/lavanet"
+SOCIAL_DISCORD="https://discord.gg/Tbk5NxTCdA"
+SOCIAL_X="https://twitter.com/lavanetxyz"
+SOCIAL_TELEGRAM=""
 
 # Other
-DOWNLOAD_URL="h"
+DOWNLOAD_URL="https://config-t.noders.services/lava"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://testnet.celestia.explorers.guru/validator/celestiavaloper1zzxrq7tjlsqvv0jtqtlt8gjaa68racukf5n9xh"
+VALIDATOR_LINK="https://lava.explorers.guru/validator/lava@valoper1tkhehvca5uur6svd2l83lp704mlhc7xu32r2j4"
 
 # Updates
 UPDATE_MAIN=true

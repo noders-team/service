@@ -7,10 +7,10 @@ sidebar_position: 4
 <div class="h1-with-icon icon-kyve">
 # State sync
 </div>
-###### Chain ID: `` | Current Node Version: `v1.4.0`
+###### Chain ID: `kyve-1` | Current Node Version: `v1.4.0`
 
 ```bash
-SNAP_RPC=:443 && \
+SNAP_RPC=https://kyve-rpc.noders.services:443 && \
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
 TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash) && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop kyved.service && kyved tendermint unsafe-reset-all --home ~/.kyve --keep-addr-book
 ```
 ```bash
-peers="@:"
+peers="9150bbb576e81cfe6776987bc6bc47be3c1a6b89@kyve-rpc.noders.services:15656"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.kyve/config/config.toml
 ```
 ```bash

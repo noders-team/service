@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-seda">
 # State sync
 </div>
-###### Chain ID: `seda-1-testnet` | Current Node Version: `0.0.7`
+###### Chain ID: `seda-1-testnet` | Current Node Version: `v0.0.7`
 
 ```bash
 SNAP_RPC=https://seda-t-rpc.noders.services:443 && \
