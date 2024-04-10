@@ -69,7 +69,7 @@ go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
 ## Run node
 ### Create service
 ```js
-sudo tee /etc/systemd/system/[DAEMON_SERVICE] > /dev/null << EOF
+sudo tee /etc/systemd/system/[DAEMON_NAME].service > /dev/null << EOF
 [Unit]
 Description=[CHAIN_SYSTEM_NAME] node service
 After=network-online.target
@@ -109,7 +109,7 @@ make install
 ## Run node
 ### Create service
 ```js
-sudo tee /etc/systemd/system/[DAEMON_SERVICE] > /dev/null << EOF
+sudo tee /etc/systemd/system/[DAEMON_NAME].service > /dev/null << EOF
 [Unit]
 Description=[CHAIN_SYSTEM_NAME] node service
 After=network-online.target
@@ -130,7 +130,7 @@ EOF
 ### Enable service
 ```js
 sudo systemctl daemon-reload
-sudo systemctl enable [DAEMON_SERVICE].service
+sudo systemctl enable [DAEMON_NAME]
 ```
 
 ## Node configuration
@@ -178,5 +178,5 @@ sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:14717\"
 
 ### Start node and check logs
 ```js
-sudo systemctl start [DAEMON_SERVICE].service && sudo journalctl -u [DAEMON_SERVICE].service -f --no-hostname -o cat
+sudo systemctl start [DAEMON_NAME] && sudo journalctl -u [DAEMON_NAME] -f --no-hostname -o cat
 ```
