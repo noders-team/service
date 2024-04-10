@@ -46,14 +46,13 @@ git checkout [VERSION]
 
 ### Build binaries
 ```js
-make build
+make install
 ```
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
 mkdir -p [DAEMON_HOME]/cosmovisor/upgrades/[VERSION]/bin
-mv build/[DAEMON_NAME] [DAEMON_HOME]/cosmovisor/upgrades/[VERSION]/bin/
-rm -rf build
+mv $HOME/go/bin/[DAEMON_NAME] [DAEMON_HOME]/cosmovisor/upgrades/[VERSION]/bin/
 ```
 
 ### Create symlinks
