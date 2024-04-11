@@ -13,7 +13,7 @@ sidebar_position: 3
 
 | Size   | Timestamp    |
 |--------|--------------|
-| 25.83 GB | Wed, 10 Apr 2024 12:02:36 GMT  |
+| 22.43 GB | Thu, 11 Apr 2024 00:02:39 GMT  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -88,8 +88,8 @@ If everything is good, now restart your node
 Make sure that your node is running
 
 ```bash
-sudo systemctl restart zetacore.service
-sudo journalctl -fu zetacore.service --no-hostname -o cat
+sudo systemctl restart zetacored
+sudo journalctl -fu zetacored --no-hostname -o cat
 ```
 
 :::info ADVANCED ROUTE

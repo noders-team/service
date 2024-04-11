@@ -7,10 +7,10 @@ sidebar_position: 4
 <div class="h1-with-icon icon-andromeda">
 # State sync
 </div>
-###### Chain ID: `` | Current Node Version: `v`
+###### Chain ID: `` | Current Node Version: `vandromeda-1-v0.1.0`
 
 ```bash
-SNAP_RPC=:443 && \
+SNAP_RPC=https://andromeda-rpc.noders.services:443 && \
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
 TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash) && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop andromedad.service && andromedad tendermint unsafe-reset-all --home ~/.andromeda --keep-addr-book
 ```
 ```bash
-peers="@:"
+peers="@andromeda-rpc.noders.services:"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.andromeda/config/config.toml
 ```
 ```bash

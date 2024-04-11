@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-band">
 # Node Snapshot
 </div>
-###### Chain ID: `null` | Current Node Version: `v2.5.4`
+###### Chain ID: `laozi-mainnet` | Current Node Version: `v2.5.4`
 
 ## Our Band Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 2.65 GB | Wed, 10 Apr 2024 12:18:29 GMT |
+| 15.62 GB | Thu, 11 Apr 2024 00:06:37 GMT |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -88,8 +88,8 @@ If everything is good, now restart your node
 Make sure that your node is running
 
 ```bash
-sudo systemctl restart band.service
-sudo journalctl -fu band.service --no-hostname -o cat
+sudo systemctl restart bandd
+sudo journalctl -fu bandd --no-hostname -o cat
 ```
 
 :::info ADVANCED ROUTE

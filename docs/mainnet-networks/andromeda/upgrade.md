@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-andromeda">
 # Upgrade
 </div>
-###### Chain ID: `` | Current Node Version: `v`
+###### Chain ID: `` | Current Node Version: `vandromeda-1-v0.1.0`
 
 
 # Clone Andromeda repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf andromedaprotocol
 git clone https://github.com/andromedaprotocol.git
 cd andromedaprotocol
-git checkout v
+git checkout vandromeda-1-v0.1.0
  ```
 
 # Build binaries
@@ -26,7 +26,7 @@ make build
 
 # Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.andromeda/cosmovisor/upgrades/v/bin
-mv build/andromedad ~/.andromeda/cosmovisor/upgrades/v/bin/
+mkdir -p ~/.andromeda/cosmovisor/upgrades/vandromeda-1-v0.1.0/bin
+mv build/andromedad ~/.andromeda/cosmovisor/upgrades/vandromeda-1-v0.1.0/bin/
 rm -rf build
 ```

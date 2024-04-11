@@ -19,10 +19,14 @@ sudo apt -qy upgrade
 
 ## Install GO
 ```js
-sudo rm -rf /usr/local/go
-curl -Ls https://go.dev/dl/go1.21.3.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
-eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
-eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
+ver="1.21.3" &&
+wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" &&
+sudo rm -rf /usr/local/go &&
+sudo tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz" &&
+rm "go$ver.linux-amd64.tar.gz" &&
+echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> $HOME/.bash_profile &&
+source $HOME/.bash_profile &&
+go version
 ```
 
 ## Install with Cosmovisor
@@ -42,14 +46,13 @@ git checkout v1.7.3
 
 ### Build binaries
 ```js
-make build
+make install
 ```
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
 mkdir -p ~/.haqqd/cosmovisor/upgrades/v1.7.3/bin
-mv build/haqqd ~/.haqqd/cosmovisor/upgrades/v1.7.3/bin/
-rm -rf build
+mv $HOME/go/bin/haqqd ~/.haqqd/cosmovisor/upgrades/v1.7.3/bin/
 ```
 
 ### Create symlinks
@@ -127,7 +130,7 @@ EOF
 ### Enable service
 ```js
 sudo systemctl daemon-reload
-sudo systemctl enable haqqd.service.service
+sudo systemctl enable haqqd
 ```
 
 ## Node configuration
@@ -145,8 +148,8 @@ haqqd init NAME_OF_YOUR_VALIDATOR --chain-id haqq_11235-1
 
 ### Download genesis and addrbook
 ```js
-curl -Ls https://config.noders.services/haqq/genesis.json > ~/.haqqd/config/genesis.json
-curl -Ls https://config.noders.services/haqq/addrbook.json > ~/.haqqd/config/addrbook.json
+curl https://config.noders.services/haqq/genesis.json -o ~/.haqqd/config/genesis.json
+curl https://config.noders.services/haqq/addrbook.json -o ~/.haqqd/config/addrbook.json
 ```
 ### Add peers
 ```js
@@ -168,12 +171,30 @@ sed -i \
 ```
 
 ### Set custom ports
+
+```bash
+echo "export haqqd_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+```
+
 ```js
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:14758\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:14757\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:14760\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:14756\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":14766\"%" ~/.haqqd/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:14717\"%; s%^address = \":8080\"%address = \":14780\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:14790\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:14791\"%; s%:8545%:14745%; s%:8546%:14746%; s%:6065%:14765%" ~/.haqqd/config/app.toml
+# Set custom ports in app.toml
+sed -i.bak -e "s%:1317%:${haqqd_PORT}317%g" \
+-e "s%:8080%:${haqqd_PORT}080%g" \
+-e "s%:9090%:${haqqd_PORT}090%g" \
+-e "s%:9091%:${haqqd_PORT}091%g" \
+-e "s%:8545%:${haqqd_PORT}545%g" \
+-e "s%:8546%:${haqqd_PORT}546%g" \
+-e "s%:6065%:${haqqd_PORT}065%g" ~/.haqqd/config/app.toml
+
+# Set custom ports in config.toml file
+sed -i.bak -e "s%:26658%:${SWISS_PORT}658%g" \
+-e "s%:26657%:${haqqd_PORT}657%g" \
+-e "s%:6060%:${haqqd_PORT}060%g" \
+-e "s%:26656%:${haqqd_PORT}656%g" \
+-e "s%:26660%:${haqqd_PORT}660%g" ~/.haqqd/config/config.toml
 ```
 
 ### Start node and check logs
 ```js
-sudo systemctl start haqqd.service.service && sudo journalctl -u haqqd.service.service -f --no-hostname -o cat
+sudo systemctl start haqqd && sudo journalctl -u haqqd -f --no-hostname -o cat
 ```

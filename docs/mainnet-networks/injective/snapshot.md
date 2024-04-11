@@ -13,7 +13,7 @@ sidebar_position: 4
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 17.13 GB | Wed, 10 Apr 2024 12:22:51 GMT |
+| 27.03 GB | Thu, 11 Apr 2024 00:14:30 GMT |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -88,8 +88,8 @@ If everything is good, now restart your node
 Make sure that your node is running
 
 ```bash
-sudo systemctl restart injectived.service
-sudo journalctl -fu injectived.service --no-hostname -o cat
+sudo systemctl restart injectived
+sudo journalctl -fu injectived --no-hostname -o cat
 ```
 
 :::info ADVANCED ROUTE

@@ -13,7 +13,7 @@ sidebar_position: 3
 
 | Size   | Timestamp    |
 |--------|--------------|
-| 59.58 GB | Wed, 10 Apr 2024 12:23:51 GMT  |
+| 52.93 GB | Thu, 11 Apr 2024 00:42:03 GMT  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -88,8 +88,8 @@ If everything is good, now restart your node
 Make sure that your node is running
 
 ```bash
-sudo systemctl restart osmosisd.service
-sudo journalctl -fu osmosisd.service --no-hostname -o cat
+sudo systemctl restart osmosisd
+sudo journalctl -fu osmosisd --no-hostname -o cat
 ```
 
 :::info ADVANCED ROUTE

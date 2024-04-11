@@ -21,7 +21,7 @@ Official links of social networks of projects
 <CardLayout autoFitEnabled={false}>
     <SmallCard to="https://alignedlayer.com/" header={{label: "Website", translateId: "social-telegram"}} iconPath="img/website-icon.svg"/>
     <SmallCard to="https://github.com/yetanotherco/aligned_layer" header={{label: "GitHub", translateId: "social-telegram"}} iconPath="img/github-icon.svg"/>
-    <SmallCard to="http://discord.gg/0glabs" header={{label: "Discord", translateId: "social-telegram"}} iconPath="img/discord-icon.svg"/>
+    <SmallCard to="https://discord.com/invite/teqX78VZUV" header={{label: "Discord", translateId: "social-telegram"}} iconPath="img/discord-icon.svg"/>
     <SmallCard to="https://twitter.com/alignedlayer" header={{label: "X", translateId: "social-telegram"}} iconPath="img/x-icon.svg"/>
     <SmallCard to="https://t.me/aligned_layer" header={{label: "Telegram", translateId: "social-telegram"}} iconPath="img/telegram-icon.svg"/>
 </CardLayout>

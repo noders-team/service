@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-andromeda">
 # Node Snapshot
 </div>
-###### Chain ID: `` | Current Node Version: `v`
+###### Chain ID: `` | Current Node Version: `vandromeda-1-v0.1.0`
 
 ## Our Andromeda Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-|  GB |  |
+| 1.03 GB | Thu, 11 Apr 2024 00:42:43 GMT |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -88,8 +88,8 @@ If everything is good, now restart your node
 Make sure that your node is running
 
 ```bash
-sudo systemctl restart andromedad.service
-sudo journalctl -fu andromedad.service --no-hostname -o cat
+sudo systemctl restart andromedad
+sudo journalctl -fu andromedad --no-hostname -o cat
 ```
 
 :::info ADVANCED ROUTE

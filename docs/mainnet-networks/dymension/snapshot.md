@@ -13,7 +13,7 @@ sidebar_position: 4
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 28.22 GB | Wed, 10 Apr 2024 08:49:23 GMT |
+| 7.77 GB | Thu, 11 Apr 2024 00:30:11 GMT |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -88,8 +88,8 @@ If everything is good, now restart your node
 Make sure that your node is running
 
 ```bash
-sudo systemctl restart dymd.service
-sudo journalctl -fu dymd.service --no-hostname -o cat
+sudo systemctl restart dymd
+sudo journalctl -fu dymd --no-hostname -o cat
 ```
 
 :::info ADVANCED ROUTE

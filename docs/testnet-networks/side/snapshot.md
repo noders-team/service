@@ -13,7 +13,7 @@ sidebar_position: 3
 
 | Size   | Timestamp    |
 |--------|--------------|
-| 37.23 GB | Wed, 10 Apr 2024 12:05:24 GMT  |
+| 5.86 GB | Thu, 11 Apr 2024 00:03:03 GMT  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -88,8 +88,8 @@ If everything is good, now restart your node
 Make sure that your node is running
 
 ```bash
-sudo systemctl restart sided.service
-sudo journalctl -fu sided.service --no-hostname -o cat
+sudo systemctl restart sided
+sudo journalctl -fu sided --no-hostname -o cat
 ```
 
 :::info ADVANCED ROUTE

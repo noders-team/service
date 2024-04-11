@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-lambda">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `` | Current Node Version: `v`
+###### Chain ID: `lambda_92000-1` | Current Node Version: `v1.0.1`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -40,22 +40,22 @@ lambdavm keys delete KEY
 ## Wallet
 ### Wallet balance
 ```js
-lambdavm q bank balances $(lambdavm keys show KEY -a) --node lambda-rpc.noders.services:443
+lambdavm q bank balances $(lambdavm keys show KEY -a) --node https://lambda-rpc.noders.services:443
 ```
 
 ### Send
 ```js
 lambdavm tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000ulamb \
-  --chain-id  \
-  --node lambda-rpc.noders.services:443 --fees 3000ulamb \
+  --chain-id lambda_92000-1 \
+  --node https://lambda-rpc.noders.services:443 --fees 3000ulamb \
   --from KEY
 ```
 
 ### Withdraw rewards from all validators
 ```js
 lambdavm tx distribution withdraw-all-rewards \
-  --chain-id  \
-  --node lambda-rpc.noders.services:443 --fees 3000ulamb \
+  --chain-id lambda_92000-1 \
+  --node https://lambda-rpc.noders.services:443 --fees 3000ulamb \
   --from KEY
 ```
 
@@ -63,32 +63,32 @@ lambdavm tx distribution withdraw-all-rewards \
 ```js
 lambdavm tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
-  --chain-id  \
-  --node lambda-rpc.noders.services:443 --fees 3000ulamb \
+  --chain-id lambda_92000-1 \
+  --node https://lambda-rpc.noders.services:443 --fees 3000ulamb \
   --from KEY
 ```
 
 ### Delegate tokens to yourself
 ```js
 lambdavm tx staking delegate $(lambdavm keys show KEY --bech val -a) 1000000ulamb \
---chain-id  \
---node lambda-rpc.noders.services:443 --fees 3000ulamb \
+--chain-id lambda_92000-1 \
+--node https://lambda-rpc.noders.services:443 --fees 3000ulamb \
 --from KEY
 ```
 
 ### Delegate tokens to validator
 ```js
 lambdavm tx staking delegate VALIDATOR_ADDRESS 1000000ulamb \
---chain-id  \
---node lambda-rpc.noders.services:443 --fees 3000ulamb \
+--chain-id lambda_92000-1 \
+--node https://lambda-rpc.noders.services:443 --fees 3000ulamb \
 --from KEY
 ```
 
 ### Redelegate tokens to another validator
 ```js
 lambdavm tx staking redelegate $(lambdavm keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000ulamb \
-  --chain-id  \
-  --node lambda-rpc.noders.services:443 --fees 3000ulamb \
+  --chain-id lambda_92000-1 \
+  --node https://lambda-rpc.noders.services:443 --fees 3000ulamb \
   --from KEY
 ```
 
@@ -96,20 +96,20 @@ lambdavm tx staking redelegate $(lambdavm keys show KEY --bech val -a) VALIDATOR
 ```js
 lambdavm tx staking unbond $(lambdavm keys show KEY --bech val -a) ulamb \
   --chain-id andromeda-1 \
-  --node lambda-rpc.noders.services:443 --fees 3000ulamb \
+  --node https://lambda-rpc.noders.services:443 --fees 3000ulamb \
   --from KEY
 ```
 
 ## Governance
 ### List of all proposals
 ```js
-lambdavm query gov proposals --node lambda-rpc.noders.services:443
+lambdavm query gov proposals --node https://lambda-rpc.noders.services:443
 ```
 ### Check vote
 ```js
 lambdavm query gov proposal PROPOSAL_NUMBER \
-  --chain-id  \
-  --node lambda-rpc.noders.services:443 --fees 3000ulamb \
+  --chain-id lambda_92000-1 \
+  --node https://lambda-rpc.noders.services:443 --fees 3000ulamb \
   --output json | jq
 ```
 
@@ -121,8 +121,8 @@ lambdavm query gov proposal PROPOSAL_NUMBER \
 * abstain
 ```js
 lambdavm tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
-  --chain-id  \
-  --node lambda-rpc.noders.services:443 --fees 3000ulamb \
+  --chain-id lambda_92000-1 \
+  --node https://lambda-rpc.noders.services:443 --fees 3000ulamb \
   --from KEY
 ```
 
@@ -144,8 +144,8 @@ lambdavm tx staking create-validator \
   --identity "220491ADDD660741" \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
-  --chain-id  \
-  --node lambda-rpc.noders.services:443 --fees 3000ulamb \
+  --chain-id lambda_92000-1 \
+  --node https://lambda-rpc.noders.services:443 --fees 3000ulamb \
   --from KEY
 ```
 
@@ -156,17 +156,17 @@ lambdavm tx staking edit-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id  \
+--chain-id lambda_92000-1 \
 --commission-rate 0.05 \
 --from KEY \
---node lambda-rpc.noders.services:443 --fees 3000ulamb \
+--node https://lambda-rpc.noders.services:443 --fees 3000ulamb \
 ```
 
 ### Unjail
 ```js
 lambdavm tx slashing unjail \
-  --chain-id  \
-  --node lambda-rpc.noders.services:443 --fees 3000ulamb \
+  --chain-id lambda_92000-1 \
+  --node https://lambda-rpc.noders.services:443 --fees 3000ulamb \
   --from KEY
 ```
 
@@ -203,7 +203,7 @@ echo $(lambdavm tendermint show-node-id)'@'$(curl -s ifconfig.me)':'$(cat ~/.lam
 
 ### Get live peers
 ```js
-curl -sS lambda-rpc.noders.services:443/net_info | jq -r '.result.peers[] | "\(.node_info.id)@\(.remote_ip):\(.node_info.listen_addr)"' | awk -F ':' '{print $1":"$(NF)}'
+curl -sS https://lambda-rpc.noders.services:443/net_info | jq -r '.result.peers[] | "\(.node_info.id)@\(.remote_ip):\(.node_info.listen_addr)"' | awk -F ':' '{print $1":"$(NF)}'
 ```
 
 ### Set minimum gas price

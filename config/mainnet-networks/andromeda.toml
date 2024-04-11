@@ -19,10 +19,10 @@ DAEMON_SERVICE="andromedad.service"
 DAEMON_HOME="~/.andromeda"
 
 # Endpoints
-ENDPOINT_RPC=""
-ENDPOINT_API=""
+ENDPOINT_RPC="https://andromeda-rpc.noders.services"
+ENDPOINT_API="https://andromeda-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC=""
+ENDPOINT_GRPC="https://andromeda-grpc.noders.services"
 ENDPOINT_PEER="auto"
 
 # Social

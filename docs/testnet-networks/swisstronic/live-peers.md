@@ -19,7 +19,7 @@ Here is a list of 10 active peers as observed by [NODERS]TEAM in real-time. Add 
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=08dd07a1d78fc127caf43aa877f437d2bd01a8fe@148.113.16.236:26656,5cada5d76c6fddab74981b4ca430e0771b6ec35e@57.129.28.235:26656,30a48cb6e669c1a6e1b46af6b5b27aa79d3db63b@148.113.9.115:26656,1f35bf4128576d94c99297a2e33b06b7ee0ae3d2@146.59.111.161:26656,38b85901aa0eccb8c3219ca75ec02761cea26746@198.244.215.142:26656
+PEERS=3cb2105b9ae008f0711ca5d2e285485b6c3ad1ec@148.113.8.228:26656,b368e2232e4cdec602c96b77505401f94a643847@148.113.1.150:17156,30a48cb6e669c1a6e1b46af6b5b27aa79d3db63b@148.113.9.115:26656,38b85901aa0eccb8c3219ca75ec02761cea26746@198.244.215.142:26656,79a61fe7d8dfe68d3a3b7abf8b96db708ab4cf14@148.113.9.130:26656
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.swisstronik/config/config.toml
 
 sudo systemctl restart swisstronik.service

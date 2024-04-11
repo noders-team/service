@@ -13,7 +13,7 @@ sidebar_position: 4
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 2.58 GB | Wed, 10 Apr 2024 09:10:10 GMT |
+| 2.71 GB | Thu, 11 Apr 2024 00:33:03 GMT |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -88,8 +88,8 @@ If everything is good, now restart your node
 Make sure that your node is running
 
 ```bash
-sudo systemctl restart stchaind.service
-sudo journalctl -fu stchaind.service --no-hostname -o cat
+sudo systemctl restart stchaind
+sudo journalctl -fu stchaind --no-hostname -o cat
 ```
 
 :::info ADVANCED ROUTE

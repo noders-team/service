@@ -13,7 +13,7 @@ sidebar_position: 3
 
 | Size   | Timestamp    |
 |--------|--------------|
-| 15.64 GB | Wed, 10 Apr 2024 12:18:03 GMT  |
+| 17.03 GB | Thu, 11 Apr 2024 00:36:23 GMT  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -88,8 +88,8 @@ If everything is good, now restart your node
 Make sure that your node is running
 
 ```bash
-sudo systemctl restart alignedlayerd.service
-sudo journalctl -fu alignedlayerd.service --no-hostname -o cat
+sudo systemctl restart alignedlayerd
+sudo journalctl -fu alignedlayerd --no-hostname -o cat
 ```
 
 :::info ADVANCED ROUTE

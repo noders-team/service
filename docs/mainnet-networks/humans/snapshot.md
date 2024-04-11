@@ -13,7 +13,7 @@ sidebar_position: 4
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 7.24 GB | Wed, 10 Apr 2024 08:01:14 GMT |
+| 0.40 GB | Thu, 11 Apr 2024 00:18:45 GMT |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -88,8 +88,8 @@ If everything is good, now restart your node
 Make sure that your node is running
 
 ```bash
-sudo systemctl restart humansd.service
-sudo journalctl -fu humansd.service --no-hostname -o cat
+sudo systemctl restart humansd
+sudo journalctl -fu humansd --no-hostname -o cat
 ```
 
 :::info ADVANCED ROUTE

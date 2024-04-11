@@ -88,8 +88,8 @@ If everything is good, now restart your node
 Make sure that your node is running
 
 ```bash
-sudo systemctl restart swisstronik.service
-sudo journalctl -fu swisstronik.service --no-hostname -o cat
+sudo systemctl restart swisstronikd
+sudo journalctl -fu swisstronikd --no-hostname -o cat
 ```
 
 :::info ADVANCED ROUTE

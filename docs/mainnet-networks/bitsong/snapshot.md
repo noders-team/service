@@ -13,7 +13,7 @@ sidebar_position: 4
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 8.68 GB | Wed, 10 Apr 2024 10:05:55 GMT |
+| 1.09 GB | Thu, 11 Apr 2024 00:43:59 GMT |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -88,8 +88,8 @@ If everything is good, now restart your node
 Make sure that your node is running
 
 ```bash
-sudo systemctl restart bitsongd.service
-sudo journalctl -fu bitsongd.service --no-hostname -o cat
+sudo systemctl restart bitsongd
+sudo journalctl -fu bitsongd --no-hostname -o cat
 ```
 
 :::info ADVANCED ROUTE

@@ -19,10 +19,14 @@ sudo apt -qy upgrade
 
 ## Install GO
 ```js
-sudo rm -rf /usr/local/go
-curl -Ls https://go.dev/dl/go1.21.3.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
-eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
-eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
+ver="1.21.3" &&
+wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" &&
+sudo rm -rf /usr/local/go &&
+sudo tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz" &&
+rm "go$ver.linux-amd64.tar.gz" &&
+echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> $HOME/.bash_profile &&
+source $HOME/.bash_profile &&
+go version
 ```
 
 ## Install with Cosmovisor
@@ -42,14 +46,13 @@ git checkout vnull
 
 ### Build binaries
 ```js
-make build
+make install
 ```
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
 mkdir -p ~/.routerd/cosmovisor/upgrades/vnull/bin
-mv build/routerd ~/.routerd/cosmovisor/upgrades/vnull/bin/
-rm -rf build
+mv $HOME/go/bin/routerd ~/.routerd/cosmovisor/upgrades/vnull/bin/
 ```
 
 ### Create symlinks
@@ -66,7 +69,7 @@ go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
 ## Run node
 ### Create service
 ```js
-sudo tee /etc/systemd/system/router.service > /dev/null << EOF
+sudo tee /etc/systemd/system/routerd.service > /dev/null << EOF
 [Unit]
 Description=router node service
 After=network-online.target
@@ -106,7 +109,7 @@ make install
 ## Run node
 ### Create service
 ```js
-sudo tee /etc/systemd/system/router.service > /dev/null << EOF
+sudo tee /etc/systemd/system/routerd.service > /dev/null << EOF
 [Unit]
 Description=router node service
 After=network-online.target
@@ -127,7 +130,7 @@ EOF
 ### Enable service
 ```js
 sudo systemctl daemon-reload
-sudo systemctl enable router.service.service
+sudo systemctl enable routerd
 ```
 
 ## Node configuration
@@ -145,8 +148,8 @@ routerd init NAME_OF_YOUR_VALIDATOR --chain-id router_9601-1
 
 ### Download genesis and addrbook
 ```js
-curl -Ls https://config-t.noders.services/router/genesis.json > ~/.routerd/config/genesis.json
-curl -Ls https://config-t.noders.services/router/addrbook.json > ~/.routerd/config/addrbook.json
+curl https://config-t.noders.services/router/genesis.json -o ~/.routerd/config/genesis.json
+curl https://config-t.noders.services/router/addrbook.json -o ~/.routerd/config/addrbook.json
 ```
 ### Add peers
 ```js
@@ -168,12 +171,30 @@ sed -i \
 ```
 
 ### Set custom ports
+
+```bash
+echo "export routerd_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+```
+
 ```js
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:14758\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:14757\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:14760\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:14756\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":14766\"%" ~/.routerd/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:14717\"%; s%^address = \":8080\"%address = \":14780\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:14790\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:14791\"%; s%:8545%:14745%; s%:8546%:14746%; s%:6065%:14765%" ~/.routerd/config/app.toml
+# Set custom ports in app.toml
+sed -i.bak -e "s%:1317%:${routerd_PORT}317%g" \
+-e "s%:8080%:${routerd_PORT}080%g" \
+-e "s%:9090%:${routerd_PORT}090%g" \
+-e "s%:9091%:${routerd_PORT}091%g" \
+-e "s%:8545%:${routerd_PORT}545%g" \
+-e "s%:8546%:${routerd_PORT}546%g" \
+-e "s%:6065%:${routerd_PORT}065%g" ~/.routerd/config/app.toml
+
+# Set custom ports in config.toml file
+sed -i.bak -e "s%:26658%:${SWISS_PORT}658%g" \
+-e "s%:26657%:${routerd_PORT}657%g" \
+-e "s%:6060%:${routerd_PORT}060%g" \
+-e "s%:26656%:${routerd_PORT}656%g" \
+-e "s%:26660%:${routerd_PORT}660%g" ~/.routerd/config/config.toml
 ```
 
 ### Start node and check logs
 ```js
-sudo systemctl start router.service.service && sudo journalctl -u router.service.service -f --no-hostname -o cat
+sudo systemctl start routerd && sudo journalctl -u routerd -f --no-hostname -o cat
 ```

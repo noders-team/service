@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-lambda">
 # Lambda
 </div>
-###### Chain ID: `` | Current Node Version: `v`
+###### Chain ID: `lambda_92000-1` | Current Node Version: `v1.0.1`
 
 
 Lambda introduces a cutting-edge blockchain infrastructure for secure, scalable, and decentralized data storage. It offers a solution that prioritizes data integrity and privacy through distributed storage and Proof of Space-Time. Designed to support the expansive data needs of dApps, Lambda ensures efficient data processing and accessibility. With its emphasis on privacy, scalability, and a marketplace for storage resources, Lambda is setting new standards for decentralized storage, paving the way for a future where data sovereignty and security are paramount.
@@ -47,10 +47,10 @@ Official links of social networks of projects
 # Public endpoints 
 
 <CardLayout autoFitEnabled={true}>
-    <SmallCard to="lambda-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
-    <SmallCard to="lambda-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
+    <SmallCard to="https://lambda-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
+    <SmallCard to="https://lambda-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     
-    <SmallCard to="lambda-grpc.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="https://lambda-grpc.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
 </CardLayout>
 
 

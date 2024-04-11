@@ -13,7 +13,7 @@ sidebar_position: 3
 
 | Size   | Timestamp    |
 |--------|--------------|
-| 14.76 GB | Wed, 10 Apr 2024 12:16:50 GMT  |
+| 15.07 GB | Thu, 11 Apr 2024 00:34:52 GMT  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -88,8 +88,8 @@ If everything is good, now restart your node
 Make sure that your node is running
 
 ```bash
-sudo systemctl restart pryzm.service
-sudo journalctl -fu pryzm.service --no-hostname -o cat
+sudo systemctl restart pryzmd
+sudo journalctl -fu pryzmd --no-hostname -o cat
 ```
 
 :::info ADVANCED ROUTE

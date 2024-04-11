@@ -13,7 +13,7 @@ sidebar_position: 4
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 28.10 GB | Wed, 10 Apr 2024 12:09:02 GMT |
+| 4.15 GB | Thu, 11 Apr 2024 00:01:13 GMT |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -88,8 +88,8 @@ If everything is good, now restart your node
 Make sure that your node is running
 
 ```bash
-sudo systemctl restart umeed.service
-sudo journalctl -fu umeed.service --no-hostname -o cat
+sudo systemctl restart umeed
+sudo journalctl -fu umeed --no-hostname -o cat
 ```
 
 :::info ADVANCED ROUTE

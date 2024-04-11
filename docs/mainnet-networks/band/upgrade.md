@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-band">
 # Upgrade
 </div>
-###### Chain ID: `null` | Current Node Version: `v2.5.4`
+###### Chain ID: `laozi-mainnet` | Current Node Version: `v2.5.4`
 
 
 # Clone Band repository

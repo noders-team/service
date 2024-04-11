@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-lambda">
 # Node Snapshot
 </div>
-###### Chain ID: `` | Current Node Version: `v`
+###### Chain ID: `lambda_92000-1` | Current Node Version: `v1.0.1`
 
 ## Our Lambda Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-|  GB |  |
+| 5.32 GB | Thu, 11 Apr 2024 00:18:26 GMT |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -88,8 +88,8 @@ If everything is good, now restart your node
 Make sure that your node is running
 
 ```bash
-sudo systemctl restart lambdavm.service
-sudo journalctl -fu lambdavm.service --no-hostname -o cat
+sudo systemctl restart lambdavm
+sudo journalctl -fu lambdavm --no-hostname -o cat
 ```
 
 :::info ADVANCED ROUTE

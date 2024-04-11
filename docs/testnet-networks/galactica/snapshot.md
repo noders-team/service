@@ -13,7 +13,7 @@ sidebar_position: 3
 
 | Size   | Timestamp    |
 |--------|--------------|
-| 0.65 GB | Wed, 10 Apr 2024 12:10:33 GMT  |
+| 0.95 GB | Thu, 11 Apr 2024 00:09:02 GMT  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -88,8 +88,8 @@ If everything is good, now restart your node
 Make sure that your node is running
 
 ```bash
-sudo systemctl restart galactica.service
-sudo journalctl -fu galactica.service --no-hostname -o cat
+sudo systemctl restart galacticad
+sudo journalctl -fu galacticad --no-hostname -o cat
 ```
 
 :::info ADVANCED ROUTE

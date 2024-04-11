@@ -13,7 +13,7 @@ sidebar_position: 4
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 57.88 GB | Wed, 10 Apr 2024 09:06:41 GMT |
+| 7.58 GB | Thu, 11 Apr 2024 00:31:47 GMT |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -88,8 +88,8 @@ If everything is good, now restart your node
 Make sure that your node is running
 
 ```bash
-sudo systemctl restart celestia-appd.service
-sudo journalctl -fu celestia-appd.service --no-hostname -o cat
+sudo systemctl restart celestia-appd
+sudo journalctl -fu celestia-appd --no-hostname -o cat
 ```
 
 :::info ADVANCED ROUTE

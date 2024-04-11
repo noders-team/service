@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-andromeda">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `` | Current Node Version: `v`
+###### Chain ID: `` | Current Node Version: `vandromeda-1-v0.1.0`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -40,14 +40,14 @@ andromedad keys delete KEY
 ## Wallet
 ### Wallet balance
 ```js
-andromedad q bank balances $(andromedad keys show KEY -a) --node :443
+andromedad q bank balances $(andromedad keys show KEY -a) --node https://andromeda-rpc.noders.services:443
 ```
 
 ### Send
 ```js
 andromedad tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uandr \
   --chain-id  \
-  --node :443 --fees 3000uandr \
+  --node https://andromeda-rpc.noders.services:443 --fees 3000uandr \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ andromedad tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uandr \
 ```js
 andromedad tx distribution withdraw-all-rewards \
   --chain-id  \
-  --node :443 --fees 3000uandr \
+  --node https://andromeda-rpc.noders.services:443 --fees 3000uandr \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ andromedad tx distribution withdraw-all-rewards \
 andromedad tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id  \
-  --node :443 --fees 3000uandr \
+  --node https://andromeda-rpc.noders.services:443 --fees 3000uandr \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ andromedad tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 andromedad tx staking delegate $(andromedad keys show KEY --bech val -a) 1000000uandr \
 --chain-id  \
---node :443 --fees 3000uandr \
+--node https://andromeda-rpc.noders.services:443 --fees 3000uandr \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ andromedad tx staking delegate $(andromedad keys show KEY --bech val -a) 1000000
 ```js
 andromedad tx staking delegate VALIDATOR_ADDRESS 1000000uandr \
 --chain-id  \
---node :443 --fees 3000uandr \
+--node https://andromeda-rpc.noders.services:443 --fees 3000uandr \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ andromedad tx staking delegate VALIDATOR_ADDRESS 1000000uandr \
 ```js
 andromedad tx staking redelegate $(andromedad keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000uandr \
   --chain-id  \
-  --node :443 --fees 3000uandr \
+  --node https://andromeda-rpc.noders.services:443 --fees 3000uandr \
   --from KEY
 ```
 
@@ -96,20 +96,20 @@ andromedad tx staking redelegate $(andromedad keys show KEY --bech val -a) VALID
 ```js
 andromedad tx staking unbond $(andromedad keys show KEY --bech val -a) uandr \
   --chain-id andromeda-1 \
-  --node :443 --fees 3000uandr \
+  --node https://andromeda-rpc.noders.services:443 --fees 3000uandr \
   --from KEY
 ```
 
 ## Governance
 ### List of all proposals
 ```js
-andromedad query gov proposals --node :443
+andromedad query gov proposals --node https://andromeda-rpc.noders.services:443
 ```
 ### Check vote
 ```js
 andromedad query gov proposal PROPOSAL_NUMBER \
   --chain-id  \
-  --node :443 --fees 3000uandr \
+  --node https://andromeda-rpc.noders.services:443 --fees 3000uandr \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ andromedad query gov proposal PROPOSAL_NUMBER \
 ```js
 andromedad tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id  \
-  --node :443 --fees 3000uandr \
+  --node https://andromeda-rpc.noders.services:443 --fees 3000uandr \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ andromedad tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id  \
-  --node :443 --fees 3000uandr \
+  --node https://andromeda-rpc.noders.services:443 --fees 3000uandr \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ andromedad tx staking edit-validator \
 --chain-id  \
 --commission-rate 0.05 \
 --from KEY \
---node :443 --fees 3000uandr \
+--node https://andromeda-rpc.noders.services:443 --fees 3000uandr \
 ```
 
 ### Unjail
 ```js
 andromedad tx slashing unjail \
   --chain-id  \
-  --node :443 --fees 3000uandr \
+  --node https://andromeda-rpc.noders.services:443 --fees 3000uandr \
   --from KEY
 ```
 
@@ -203,7 +203,7 @@ echo $(andromedad tendermint show-node-id)'@'$(curl -s ifconfig.me)':'$(cat ~/.a
 
 ### Get live peers
 ```js
-curl -sS :443/net_info | jq -r '.result.peers[] | "\(.node_info.id)@\(.remote_ip):\(.node_info.listen_addr)"' | awk -F ':' '{print $1":"$(NF)}'
+curl -sS https://andromeda-rpc.noders.services:443/net_info | jq -r '.result.peers[] | "\(.node_info.id)@\(.remote_ip):\(.node_info.listen_addr)"' | awk -F ':' '{print $1":"$(NF)}'
 ```
 
 ### Set minimum gas price

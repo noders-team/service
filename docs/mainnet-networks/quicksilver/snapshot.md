@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-quicksilver">
 # Node Snapshot
 </div>
-###### Chain ID: `` | Current Node Version: `v`
+###### Chain ID: `quicksilver-2` | Current Node Version: `v1.5.4`
 
 ## Our Quicksilver Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 26.45 GB | Wed, 10 Apr 2024 12:31:23 GMT |
+| 4.94 GB | Thu, 11 Apr 2024 00:16:55 GMT |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -88,8 +88,8 @@ If everything is good, now restart your node
 Make sure that your node is running
 
 ```bash
-sudo systemctl restart quicksilverd.service
-sudo journalctl -fu quicksilverd.service --no-hostname -o cat
+sudo systemctl restart quicksilverd
+sudo journalctl -fu quicksilverd --no-hostname -o cat
 ```
 
 :::info ADVANCED ROUTE

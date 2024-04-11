@@ -13,7 +13,7 @@ sidebar_position: 3
 
 | Size   | Timestamp    |
 |--------|--------------|
-| 9.81 GB | Wed, 10 Apr 2024 12:00:48 GMT  |
+| 10.86 GB | Thu, 11 Apr 2024 00:01:00 GMT  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -88,8 +88,8 @@ If everything is good, now restart your node
 Make sure that your node is running
 
 ```bash
-sudo systemctl restart band.service
-sudo journalctl -fu band.service --no-hostname -o cat
+sudo systemctl restart bandd
+sudo journalctl -fu bandd --no-hostname -o cat
 ```
 
 :::info ADVANCED ROUTE

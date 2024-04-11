@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-bera">
 # Installation
 </div>
-###### Chain ID: `` | Current Node Version: `v`
+###### Chain ID: `artio-80085` | Current Node Version: `v0.2.3-alpha-rc7`
 
 ## Install dependencies
 
@@ -19,10 +19,14 @@ sudo apt -qy upgrade
 
 ## Install GO
 ```js
-sudo rm -rf /usr/local/go
-curl -Ls https://go.dev/dl/go1.21.3.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
-eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
-eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
+ver="1.21.3" &&
+wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" &&
+sudo rm -rf /usr/local/go &&
+sudo tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz" &&
+rm "go$ver.linux-amd64.tar.gz" &&
+echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> $HOME/.bash_profile &&
+source $HOME/.bash_profile &&
+go version
 ```
 
 ## Install with Cosmovisor
@@ -32,24 +36,23 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Bera repo and build berad v
+### Clone Bera repo and build berad v0.2.3-alpha-rc7
 ```js
 cd $HOME
 git clone https://github.com/berachain.git
 cd berachain
-git checkout v
+git checkout v0.2.3-alpha-rc7
 ```
 
 ### Build binaries
 ```js
-make build
+make install
 ```
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.bera/cosmovisor/upgrades/v/bin
-mv build/berad ~/.bera/cosmovisor/upgrades/v/bin/
-rm -rf build
+mkdir -p ~/.bera/cosmovisor/upgrades/v0.2.3-alpha-rc7/bin
+mv $HOME/go/bin/berad ~/.bera/cosmovisor/upgrades/v0.2.3-alpha-rc7/bin/
 ```
 
 ### Create symlinks
@@ -66,7 +69,7 @@ go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
 ## Run node
 ### Create service
 ```js
-sudo tee /etc/systemd/system/bera.service > /dev/null << EOF
+sudo tee /etc/systemd/system/berad.service > /dev/null << EOF
 [Unit]
 Description=bera node service
 After=network-online.target
@@ -90,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Bera repo and build berad v
+### Clone Bera repo and build berad v0.2.3-alpha-rc7
 ```js
 cd $HOME
 git clone https://github.com/berachain.git
 cd berachain
-git checkout v
+git checkout v0.2.3-alpha-rc7
 ```
 
 ### Build binaries
@@ -106,7 +109,7 @@ make install
 ## Run node
 ### Create service
 ```js
-sudo tee /etc/systemd/system/bera.service > /dev/null << EOF
+sudo tee /etc/systemd/system/berad.service > /dev/null << EOF
 [Unit]
 Description=bera node service
 After=network-online.target
@@ -127,30 +130,30 @@ EOF
 ### Enable service
 ```js
 sudo systemctl daemon-reload
-sudo systemctl enable bera.service.service
+sudo systemctl enable berad
 ```
 
 ## Node configuration
 ### Set config
 ```js
-berad config chain-id 
+berad config chain-id artio-80085
 berad config keyring-backend os
 berad config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-berad init NAME_OF_YOUR_VALIDATOR --chain-id 
+berad init NAME_OF_YOUR_VALIDATOR --chain-id artio-80085
 ```
 
 ### Download genesis and addrbook
 ```js
-curl -Ls https://config-t.noders.services/bera/genesis.json > ~/.bera/config/genesis.json
-curl -Ls https://config-t.noders.services/bera/addrbook.json > ~/.bera/config/addrbook.json
+curl https://config-t.noders.services/bera/genesis.json -o ~/.bera/config/genesis.json
+curl https://config-t.noders.services/bera/addrbook.json -o ~/.bera/config/addrbook.json
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@berachain-t-rpc.noders.services:\"/" ~/.bera/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"f4f9dd773bad1363cbc85ce7534bfd172c2d83b4@berachain-t-rpc.noders.services:16656\"/" ~/.bera/config/config.toml
 ```
 
 ### Set minimum gas price
@@ -168,12 +171,30 @@ sed -i \
 ```
 
 ### Set custom ports
+
+```bash
+echo "export berad_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+```
+
 ```js
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:14758\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:14757\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:14760\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:14756\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":14766\"%" ~/.bera/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:14717\"%; s%^address = \":8080\"%address = \":14780\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:14790\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:14791\"%; s%:8545%:14745%; s%:8546%:14746%; s%:6065%:14765%" ~/.bera/config/app.toml
+# Set custom ports in app.toml
+sed -i.bak -e "s%:1317%:${berad_PORT}317%g" \
+-e "s%:8080%:${berad_PORT}080%g" \
+-e "s%:9090%:${berad_PORT}090%g" \
+-e "s%:9091%:${berad_PORT}091%g" \
+-e "s%:8545%:${berad_PORT}545%g" \
+-e "s%:8546%:${berad_PORT}546%g" \
+-e "s%:6065%:${berad_PORT}065%g" ~/.bera/config/app.toml
+
+# Set custom ports in config.toml file
+sed -i.bak -e "s%:26658%:${SWISS_PORT}658%g" \
+-e "s%:26657%:${berad_PORT}657%g" \
+-e "s%:6060%:${berad_PORT}060%g" \
+-e "s%:26656%:${berad_PORT}656%g" \
+-e "s%:26660%:${berad_PORT}660%g" ~/.bera/config/config.toml
 ```
 
 ### Start node and check logs
 ```js
-sudo systemctl start bera.service.service && sudo journalctl -u bera.service.service -f --no-hostname -o cat
+sudo systemctl start berad && sudo journalctl -u berad -f --no-hostname -o cat
 ```

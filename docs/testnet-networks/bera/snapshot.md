@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-bera">
 # Node Snapshot
 </div>
-###### Chain ID: `` | Current Node Version: `v`
+###### Chain ID: `artio-80085` | Current Node Version: `v0.2.3-alpha-rc7`
 
 ## Our Bera Snapshot Server Setup
 
@@ -88,8 +88,8 @@ If everything is good, now restart your node
 Make sure that your node is running
 
 ```bash
-sudo systemctl restart bera.service
-sudo journalctl -fu bera.service --no-hostname -o cat
+sudo systemctl restart berad
+sudo journalctl -fu berad --no-hostname -o cat
 ```
 
 :::info ADVANCED ROUTE

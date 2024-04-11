@@ -13,7 +13,7 @@ sidebar_position: 3
 
 | Size   | Timestamp    |
 |--------|--------------|
-| 0.63 GB | Wed, 10 Apr 2024 12:18:11 GMT  |
+| 0.68 GB | Thu, 11 Apr 2024 00:36:32 GMT  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -88,8 +88,8 @@ If everything is good, now restart your node
 Make sure that your node is running
 
 ```bash
-sudo systemctl restart canined.service
-sudo journalctl -fu canined.service --no-hostname -o cat
+sudo systemctl restart canined
+sudo journalctl -fu canined --no-hostname -o cat
 ```
 
 :::info ADVANCED ROUTE

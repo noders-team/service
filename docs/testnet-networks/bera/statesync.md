@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-bera">
 # State sync
 </div>
-###### Chain ID: `` | Current Node Version: `v`
+###### Chain ID: `artio-80085` | Current Node Version: `v0.2.3-alpha-rc7`
 
 ```bash
 SNAP_RPC=https://berachain-t-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop bera.service && berad tendermint unsafe-reset-all --home ~/.bera --keep-addr-book
 ```
 ```bash
-peers="@berachain-t-rpc.noders.services:"
+peers="f4f9dd773bad1363cbc85ce7534bfd172c2d83b4@berachain-t-rpc.noders.services:16656"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.bera/config/config.toml
 ```
 ```bash
