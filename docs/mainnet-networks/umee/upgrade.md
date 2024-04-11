@@ -30,3 +30,23 @@ mkdir -p ~/.umee/cosmovisor/upgrades/v6.4.0/bin
 mv build/umeed ~/.umee/cosmovisor/upgrades/v6.4.0/bin/
 rm -rf build
 ```
+
+# Without Cosmovisor
+## Clone UX repository
+```js
+cd $HOME
+rm -rf umee-network
+git clone https://github.com/umee-network.git
+cd umee-network
+git checkout v6.4.0
+ ```
+
+## Build binaries
+```js
+make install
+ ```
+
+## Restart node and check logs
+```js
+sudo systemctl restart umeed && sudo journalctl -u umeed -f --no-hostname -o cat
+```

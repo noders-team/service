@@ -19,7 +19,7 @@ Here is a list of 12 active peers as observed by [NODERS]TEAM in real-time. Add 
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=aa4a797eba8800513965091222e74c1b81e20277@176.241.136.91:26656,b7dda02b53b7d9e70baa2721a3e054ba9f989b17@144.91.66.143:26706,833539b808a53149267f72e0447c3af41a445e99@78.46.45.174:28656,8d42c1da1a4f348df4fddcc2862663434c7587c6@65.109.64.50:26656,042268baf43bcce4f19640fbadb1c7b406ee71c4@135.181.212.139:46656
+PEERS=cd09e3f305544b557ab2b919400afa5c63e8dac2@65.108.226.120:13756,aa4a797eba8800513965091222e74c1b81e20277@176.241.136.91:26656,e01035ce1ba113e22afdb97981d3b1179d6dca41@173.249.56.120:32456,385d0023677379fe17763e13497f3861809353de@65.109.92.241:19126,833539b808a53149267f72e0447c3af41a445e99@78.46.45.174:28656
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.canine/config/config.toml
 
 sudo systemctl restart canined.service

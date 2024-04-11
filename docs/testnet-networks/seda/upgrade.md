@@ -9,8 +9,8 @@ sidebar_position: 3
 </div>
 ###### Chain ID: `seda-1-testnet` | Current Node Version: `v0.0.7`
 
-
-# Clone Seda repository
+# With Cosmovisor
+## Clone Seda repository
 ```js
 cd $HOME
 rm -rf sedaprotocol
@@ -19,14 +19,34 @@ cd sedaprotocol
 git checkout v0.0.7
  ```
 
-# Build binaries
+## Build binaries
 ```js
 make build
  ```
 
-# Prepare binaries for Cosmovisor
+## Prepare binaries for Cosmovisor
 ```js
 mkdir -p ~/.sedad/cosmovisor/upgrades/v0.0.7/bin
 mv build/sedad ~/.sedad/cosmovisor/upgrades/v0.0.7/bin/
 rm -rf build
+```
+
+# Without Cosmovisor
+## Clone Seda repository
+```js
+cd $HOME
+rm -rf sedaprotocol
+git clone https://github.com/sedaprotocol.git
+cd sedaprotocol
+git checkout v0.0.7
+ ```
+
+## Build binaries
+```js
+make install
+ ```
+
+### Restart node and check logs
+```js
+sudo systemctl restart sedad && sudo journalctl -u sedad -f --no-hostname -o cat
 ```

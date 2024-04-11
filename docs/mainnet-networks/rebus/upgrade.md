@@ -30,3 +30,23 @@ mkdir -p ~/.rebusd/cosmovisor/upgrades/v0.4.0/bin
 mv build/rebusd ~/.rebusd/cosmovisor/upgrades/v0.4.0/bin/
 rm -rf build
 ```
+
+# Without Cosmovisor
+## Clone Rebus repository
+```js
+cd $HOME
+rm -rf rebuschain
+git clone https://github.com/rebuschain.git
+cd rebuschain
+git checkout v0.4.0
+ ```
+
+## Build binaries
+```js
+make install
+ ```
+
+## Restart node and check logs
+```js
+sudo systemctl restart rebusd && sudo journalctl -u rebusd -f --no-hostname -o cat
+```

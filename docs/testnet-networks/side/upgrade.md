@@ -9,8 +9,8 @@ sidebar_position: 3
 </div>
 ###### Chain ID: `side-testnet-3` | Current Node Version: `v0.7.0-rc2`
 
-
-# Clone Side repository
+# With Cosmovisor
+## Clone Side repository
 ```js
 cd $HOME
 rm -rf sideprotocol
@@ -19,14 +19,34 @@ cd sideprotocol
 git checkout v0.7.0-rc2
  ```
 
-# Build binaries
+## Build binaries
 ```js
 make build
  ```
 
-# Prepare binaries for Cosmovisor
+## Prepare binaries for Cosmovisor
 ```js
 mkdir -p ~/.side/cosmovisor/upgrades/v0.7.0-rc2/bin
 mv build/sided ~/.side/cosmovisor/upgrades/v0.7.0-rc2/bin/
 rm -rf build
+```
+
+# Without Cosmovisor
+## Clone Side repository
+```js
+cd $HOME
+rm -rf sideprotocol
+git clone https://github.com/sideprotocol.git
+cd sideprotocol
+git checkout v0.7.0-rc2
+ ```
+
+## Build binaries
+```js
+make install
+ ```
+
+### Restart node and check logs
+```js
+sudo systemctl restart sided && sudo journalctl -u sided -f --no-hostname -o cat
 ```

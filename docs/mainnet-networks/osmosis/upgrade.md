@@ -30,3 +30,23 @@ mkdir -p ~/.osmosisd/cosmovisor/upgrades/v23.0.8-iavl-v1/bin
 mv build/osmosisd ~/.osmosisd/cosmovisor/upgrades/v23.0.8-iavl-v1/bin/
 rm -rf build
 ```
+
+# Without Cosmovisor
+## Clone Osmosis repository
+```js
+cd $HOME
+rm -rf osmosis
+git clone https://github.com/osmosis-labs/osmosis.git
+cd osmosis
+git checkout v23.0.8-iavl-v1
+ ```
+
+## Build binaries
+```js
+make install
+ ```
+
+## Restart node and check logs
+```js
+sudo systemctl restart osmosisd && sudo journalctl -u osmosisd -f --no-hostname -o cat
+```

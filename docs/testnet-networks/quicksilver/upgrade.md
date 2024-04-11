@@ -9,8 +9,8 @@ sidebar_position: 3
 </div>
 ###### Chain ID: `rhye-2` | Current Node Version: `v1.5.4`
 
-
-# Clone Quicksilver repository
+# With Cosmovisor
+## Clone Quicksilver repository
 ```js
 cd $HOME
 rm -rf quicksilver-zone
@@ -19,14 +19,34 @@ cd quicksilver-zone
 git checkout v1.5.4
  ```
 
-# Build binaries
+## Build binaries
 ```js
 make build
  ```
 
-# Prepare binaries for Cosmovisor
+## Prepare binaries for Cosmovisor
 ```js
 mkdir -p ~/.quicksilverd/cosmovisor/upgrades/v1.5.4/bin
 mv build/quicksilverd ~/.quicksilverd/cosmovisor/upgrades/v1.5.4/bin/
 rm -rf build
+```
+
+# Without Cosmovisor
+## Clone Quicksilver repository
+```js
+cd $HOME
+rm -rf quicksilver-zone
+git clone https://github.com/quicksilver-zone.git
+cd quicksilver-zone
+git checkout v1.5.4
+ ```
+
+## Build binaries
+```js
+make install
+ ```
+
+### Restart node and check logs
+```js
+sudo systemctl restart quicksilverd && sudo journalctl -u quicksilverd -f --no-hostname -o cat
 ```

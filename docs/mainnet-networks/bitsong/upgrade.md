@@ -30,3 +30,23 @@ mkdir -p ~/.bitsongd/cosmovisor/upgrades/v0.15.0/bin
 mv build/bitsongd ~/.bitsongd/cosmovisor/upgrades/v0.15.0/bin/
 rm -rf build
 ```
+
+# Without Cosmovisor
+## Clone BitSong repository
+```js
+cd $HOME
+rm -rf bitsongofficial
+git clone https://github.com/bitsongofficial.git
+cd bitsongofficial
+git checkout v0.15.0
+ ```
+
+## Build binaries
+```js
+make install
+ ```
+
+## Restart node and check logs
+```js
+sudo systemctl restart bitsongd && sudo journalctl -u bitsongd -f --no-hostname -o cat
+```

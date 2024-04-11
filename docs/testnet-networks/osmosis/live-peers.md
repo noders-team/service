@@ -19,7 +19,7 @@ ab191486c327b9c04384987c0ee61b6e2a53caea@65.109.25.113:12556,3e23c48e435cd84121c
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=2774970f8aca1a258bb66149c571cc609f93dae8@54.202.87.239:26656,cd832550b8d07cb2047ce436f7d3ddc46f6685b9@136.243.94.41:26656,18a1ffa3be6ccba06f93d7185bf3edafc13a331e@18.237.26.214:26656,22d58b9368ba3f8738858d8982702ed94b9c7776@34.213.188.156:26656,3e23c48e435cd84121cc61f9bbbf85e285b9d6aa@65.109.30.37:11656
+PEERS=e79d69600b2bae5c219ae9845c746251515fc2a0@142.93.175.50:26656,3343f4c061d9910110518b047464f060636a1139@167.71.37.30:26656,f98be4ab0eb48ab495c183aa7c9a01751901a2f7@80.64.208.115:26656,9ee720447a1b7f068d0158dae6592ef71d52d497@212.126.35.132:26656,f440c4980357d8b56db87ddd50f06bd551f1319a@5.78.98.19:26856
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.osmosisd/config/config.toml
 
 sudo systemctl restart osmosisd.service

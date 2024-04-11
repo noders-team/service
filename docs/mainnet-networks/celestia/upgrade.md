@@ -30,3 +30,23 @@ mkdir -p ~/.celestia-app/cosmovisor/upgrades/v1.6.0/bin
 mv build/celestia-appd ~/.celestia-app/cosmovisor/upgrades/v1.6.0/bin/
 rm -rf build
 ```
+
+# Without Cosmovisor
+## Clone Celestia repository
+```js
+cd $HOME
+rm -rf celestiaorg
+git clone https://github.com/celestiaorg.git
+cd celestiaorg
+git checkout v1.6.0
+ ```
+
+## Build binaries
+```js
+make install
+ ```
+
+## Restart node and check logs
+```js
+sudo systemctl restart celestia-appd && sudo journalctl -u celestia-appd -f --no-hostname -o cat
+```

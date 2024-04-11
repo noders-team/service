@@ -9,8 +9,8 @@ sidebar_position: 3
 </div>
 ###### Chain ID: `mesomelas-1` | Current Node Version: `vnull`
 
-
-# Clone Jackal repository
+# With Cosmovisor
+## Clone Jackal repository
 ```js
 cd $HOME
 rm -rf canine-chain
@@ -19,14 +19,34 @@ cd canine-chain
 git checkout vnull
  ```
 
-# Build binaries
+## Build binaries
 ```js
 make build
  ```
 
-# Prepare binaries for Cosmovisor
+## Prepare binaries for Cosmovisor
 ```js
 mkdir -p ~/.canine/cosmovisor/upgrades/vnull/bin
 mv build/canined ~/.canine/cosmovisor/upgrades/vnull/bin/
 rm -rf build
+```
+
+# Without Cosmovisor
+## Clone Jackal repository
+```js
+cd $HOME
+rm -rf canine-chain
+git clone https://github.com/JackalLabs/canine-chain.git
+cd canine-chain
+git checkout vnull
+ ```
+
+## Build binaries
+```js
+make install
+ ```
+
+### Restart node and check logs
+```js
+sudo systemctl restart canined && sudo journalctl -u canined -f --no-hostname -o cat
 ```

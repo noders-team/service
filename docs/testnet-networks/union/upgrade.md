@@ -9,8 +9,8 @@ sidebar_position: 3
 </div>
 ###### Chain ID: `union-testnet-6` | Current Node Version: `vnull`
 
-
-# Clone Union repository
+# With Cosmovisor
+## Clone Union repository
 ```js
 cd $HOME
 rm -rf unionlabs
@@ -19,14 +19,34 @@ cd unionlabs
 git checkout vnull
  ```
 
-# Build binaries
+## Build binaries
 ```js
 make build
  ```
 
-# Prepare binaries for Cosmovisor
+## Prepare binaries for Cosmovisor
 ```js
 mkdir -p ~/.union/cosmovisor/upgrades/vnull/bin
 mv build/uniond ~/.union/cosmovisor/upgrades/vnull/bin/
 rm -rf build
+```
+
+# Without Cosmovisor
+## Clone Union repository
+```js
+cd $HOME
+rm -rf unionlabs
+git clone https://github.com/unionlabs.git
+cd unionlabs
+git checkout vnull
+ ```
+
+## Build binaries
+```js
+make install
+ ```
+
+### Restart node and check logs
+```js
+sudo systemctl restart uniond && sudo journalctl -u uniond -f --no-hostname -o cat
 ```

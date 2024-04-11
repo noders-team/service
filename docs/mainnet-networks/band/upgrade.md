@@ -30,3 +30,23 @@ mkdir -p ~/.band/cosmovisor/upgrades/v2.5.4/bin
 mv build/bandd ~/.band/cosmovisor/upgrades/v2.5.4/bin/
 rm -rf build
 ```
+
+# Without Cosmovisor
+## Clone Band repository
+```js
+cd $HOME
+rm -rf chain
+git clone https://github.com/bandprotocol/chain.git
+cd chain
+git checkout v2.5.4
+ ```
+
+## Build binaries
+```js
+make install
+ ```
+
+## Restart node and check logs
+```js
+sudo systemctl restart bandd && sudo journalctl -u bandd -f --no-hostname -o cat
+```

@@ -30,3 +30,23 @@ mkdir -p ~/.archwayd/cosmovisor/upgrades/v6.0.2/bin
 mv build/archwayd ~/.archwayd/cosmovisor/upgrades/v6.0.2/bin/
 rm -rf build
 ```
+
+# Without Cosmovisor
+## Clone Archway repository
+```js
+cd $HOME
+rm -rf archway-network
+git clone https://github.com/archway-network.git
+cd archway-network
+git checkout v6.0.2
+ ```
+
+## Build binaries
+```js
+make install
+ ```
+
+## Restart node and check logs
+```js
+sudo systemctl restart archwayd && sudo journalctl -u archwayd -f --no-hostname -o cat
+```

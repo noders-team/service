@@ -30,3 +30,23 @@ mkdir -p ~/.humansd/cosmovisor/upgrades/v1.0.0/bin
 mv build/humansd ~/.humansd/cosmovisor/upgrades/v1.0.0/bin/
 rm -rf build
 ```
+
+# Without Cosmovisor
+## Clone Humans repository
+```js
+cd $HOME
+rm -rf humansdotai
+git clone https://github.com/humansdotai.git
+cd humansdotai
+git checkout v1.0.0
+ ```
+
+## Build binaries
+```js
+make install
+ ```
+
+## Restart node and check logs
+```js
+sudo systemctl restart humansd && sudo journalctl -u humansd -f --no-hostname -o cat
+```

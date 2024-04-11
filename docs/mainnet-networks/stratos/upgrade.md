@@ -30,3 +30,23 @@ mkdir -p ~/.stchaind/cosmovisor/upgrades/v0.11.2/bin
 mv build/stchaind ~/.stchaind/cosmovisor/upgrades/v0.11.2/bin/
 rm -rf build
 ```
+
+# Without Cosmovisor
+## Clone Stratos repository
+```js
+cd $HOME
+rm -rf stratos-chain
+git clone https://github.com/stratosnet/stratos-chain.git
+cd stratos-chain
+git checkout v0.11.2
+ ```
+
+## Build binaries
+```js
+make install
+ ```
+
+## Restart node and check logs
+```js
+sudo systemctl restart stchaind && sudo journalctl -u stchaind -f --no-hostname -o cat
+```

@@ -30,3 +30,23 @@ mkdir -p ~/.injectived/cosmovisor/upgrades/vnull/bin
 mv build/injectived ~/.injectived/cosmovisor/upgrades/vnull/bin/
 rm -rf build
 ```
+
+# Without Cosmovisor
+## Clone Injective repository
+```js
+cd $HOME
+rm -rf InjectiveLabs
+git clone https://github.com/InjectiveLabs.git
+cd InjectiveLabs
+git checkout vnull
+ ```
+
+## Build binaries
+```js
+make install
+ ```
+
+## Restart node and check logs
+```js
+sudo systemctl restart injectived && sudo journalctl -u injectived -f --no-hostname -o cat
+```

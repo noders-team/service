@@ -9,8 +9,8 @@ sidebar_position: 3
 </div>
 ###### Chain ID: `galactica_9302-1` | Current Node Version: `v0.1.2`
 
-
-# Clone Galactica repository
+# With Cosmovisor
+## Clone Galactica repository
 ```js
 cd $HOME
 rm -rf networks
@@ -19,14 +19,34 @@ cd networks
 git checkout v0.1.2
  ```
 
-# Build binaries
+## Build binaries
 ```js
 make build
  ```
 
-# Prepare binaries for Cosmovisor
+## Prepare binaries for Cosmovisor
 ```js
 mkdir -p ~/.galactica/cosmovisor/upgrades/v0.1.2/bin
 mv build/galacticad ~/.galactica/cosmovisor/upgrades/v0.1.2/bin/
 rm -rf build
+```
+
+# Without Cosmovisor
+## Clone Galactica repository
+```js
+cd $HOME
+rm -rf networks
+git clone https://github.com/Galactica-corp/networks.git
+cd networks
+git checkout v0.1.2
+ ```
+
+## Build binaries
+```js
+make install
+ ```
+
+### Restart node and check logs
+```js
+sudo systemctl restart galacticad && sudo journalctl -u galacticad -f --no-hostname -o cat
 ```

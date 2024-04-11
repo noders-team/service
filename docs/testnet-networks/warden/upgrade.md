@@ -9,8 +9,8 @@ sidebar_position: 3
 </div>
 ###### Chain ID: `alfama` | Current Node Version: `v0.2.0`
 
-
-# Clone Warden repository
+# With Cosmovisor
+## Clone Warden repository
 ```js
 cd $HOME
 rm -rf wardenprotocol
@@ -19,14 +19,34 @@ cd wardenprotocol
 git checkout v0.2.0
  ```
 
-# Build binaries
+## Build binaries
 ```js
 make build
  ```
 
-# Prepare binaries for Cosmovisor
+## Prepare binaries for Cosmovisor
 ```js
 mkdir -p ~/.warden/cosmovisor/upgrades/v0.2.0/bin
 mv build/wardend ~/.warden/cosmovisor/upgrades/v0.2.0/bin/
 rm -rf build
+```
+
+# Without Cosmovisor
+## Clone Warden repository
+```js
+cd $HOME
+rm -rf wardenprotocol
+git clone https://github.com/warden-protocol/wardenprotocol.git
+cd wardenprotocol
+git checkout v0.2.0
+ ```
+
+## Build binaries
+```js
+make install
+ ```
+
+### Restart node and check logs
+```js
+sudo systemctl restart wardend && sudo journalctl -u wardend -f --no-hostname -o cat
 ```

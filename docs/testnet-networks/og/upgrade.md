@@ -9,8 +9,8 @@ sidebar_position: 3
 </div>
 ###### Chain ID: `zgtendermint_9000-1` | Current Node Version: `v1.0.0-testnet`
 
-
-# Clone ZeroGravity repository
+# With Cosmovisor
+## Clone ZeroGravity repository
 ```js
 cd $HOME
 rm -rf 0g-evmos.git
@@ -19,14 +19,34 @@ cd 0g-evmos.git
 git checkout v1.0.0-testnet
  ```
 
-# Build binaries
+## Build binaries
 ```js
 make build
  ```
 
-# Prepare binaries for Cosmovisor
+## Prepare binaries for Cosmovisor
 ```js
 mkdir -p ~/.evmosd/cosmovisor/upgrades/v1.0.0-testnet/bin
 mv build/evmosd ~/.evmosd/cosmovisor/upgrades/v1.0.0-testnet/bin/
 rm -rf build
+```
+
+# Without Cosmovisor
+## Clone ZeroGravity repository
+```js
+cd $HOME
+rm -rf 0g-evmos.git
+git clone https://github.com/0glabs/0g-evmos.git.git
+cd 0g-evmos.git
+git checkout v1.0.0-testnet
+ ```
+
+## Build binaries
+```js
+make install
+ ```
+
+### Restart node and check logs
+```js
+sudo systemctl restart evmosd && sudo journalctl -u evmosd -f --no-hostname -o cat
 ```

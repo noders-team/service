@@ -30,3 +30,23 @@ mkdir -p ~/.quicksilverd/cosmovisor/upgrades/v1.5.4/bin
 mv build/quicksilverd ~/.quicksilverd/cosmovisor/upgrades/v1.5.4/bin/
 rm -rf build
 ```
+
+# Without Cosmovisor
+## Clone Quicksilver repository
+```js
+cd $HOME
+rm -rf quicksilver-zone
+git clone https://github.com/quicksilver-zone.git
+cd quicksilver-zone
+git checkout v1.5.4
+ ```
+
+## Build binaries
+```js
+make install
+ ```
+
+## Restart node and check logs
+```js
+sudo systemctl restart quicksilverd && sudo journalctl -u quicksilverd -f --no-hostname -o cat
+```

@@ -9,8 +9,8 @@ sidebar_position: 3
 </div>
 ###### Chain ID: `mocha-4` | Current Node Version: `v1.7.0`
 
-
-# Clone Celestia repository
+# With Cosmovisor
+## Clone Celestia repository
 ```js
 cd $HOME
 rm -rf celestiaorg
@@ -19,14 +19,34 @@ cd celestiaorg
 git checkout v1.7.0
  ```
 
-# Build binaries
+## Build binaries
 ```js
 make build
  ```
 
-# Prepare binaries for Cosmovisor
+## Prepare binaries for Cosmovisor
 ```js
 mkdir -p ~/.celestia-app/cosmovisor/upgrades/v1.7.0/bin
 mv build/celestia-appd ~/.celestia-app/cosmovisor/upgrades/v1.7.0/bin/
 rm -rf build
+```
+
+# Without Cosmovisor
+## Clone Celestia repository
+```js
+cd $HOME
+rm -rf celestiaorg
+git clone https://github.com/celestiaorg.git
+cd celestiaorg
+git checkout v1.7.0
+ ```
+
+## Build binaries
+```js
+make install
+ ```
+
+### Restart node and check logs
+```js
+sudo systemctl restart celestia-appd && sudo journalctl -u celestia-appd -f --no-hostname -o cat
 ```

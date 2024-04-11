@@ -30,3 +30,23 @@ mkdir -p ~/.uptickd/cosmovisor/upgrades/v0.2.19/bin
 mv build/uptickd ~/.uptickd/cosmovisor/upgrades/v0.2.19/bin/
 rm -rf build
 ```
+
+# Without Cosmovisor
+## Clone Uptick repository
+```js
+cd $HOME
+rm -rf UptickNetwork
+git clone https://github.com/UptickNetwork.git
+cd UptickNetwork
+git checkout v0.2.19
+ ```
+
+## Build binaries
+```js
+make install
+ ```
+
+## Restart node and check logs
+```js
+sudo systemctl restart uptickd && sudo journalctl -u uptickd -f --no-hostname -o cat
+```

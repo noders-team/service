@@ -30,3 +30,23 @@ mkdir -p ~/.haqqd/cosmovisor/upgrades/v1.7.3/bin
 mv build/haqqd ~/.haqqd/cosmovisor/upgrades/v1.7.3/bin/
 rm -rf build
 ```
+
+# Without Cosmovisor
+## Clone Haqq repository
+```js
+cd $HOME
+rm -rf haqq-network
+git clone https://github.com/haqq-network.git
+cd haqq-network
+git checkout v1.7.3
+ ```
+
+## Build binaries
+```js
+make install
+ ```
+
+## Restart node and check logs
+```js
+sudo systemctl restart haqqd && sudo journalctl -u haqqd -f --no-hostname -o cat
+```

@@ -30,3 +30,23 @@ mkdir -p ~/.aura/cosmovisor/upgrades/v0.7.3/bin
 mv build/aurad ~/.aura/cosmovisor/upgrades/v0.7.3/bin/
 rm -rf build
 ```
+
+# Without Cosmovisor
+## Clone Aura repository
+```js
+cd $HOME
+rm -rf aura-nw
+git clone https://github.com/aura-nw.git
+cd aura-nw
+git checkout v0.7.3
+ ```
+
+## Build binaries
+```js
+make install
+ ```
+
+## Restart node and check logs
+```js
+sudo systemctl restart aurad && sudo journalctl -u aurad -f --no-hostname -o cat
+```

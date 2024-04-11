@@ -30,3 +30,23 @@ mkdir -p ~/.kyve/cosmovisor/upgrades/v1.4.0/bin
 mv build/kyved ~/.kyve/cosmovisor/upgrades/v1.4.0/bin/
 rm -rf build
 ```
+
+# Without Cosmovisor
+## Clone Kyve repository
+```js
+cd $HOME
+rm -rf KYVENetwork
+git clone https://github.com/KYVENetwork.git
+cd KYVENetwork
+git checkout v1.4.0
+ ```
+
+## Build binaries
+```js
+make install
+ ```
+
+## Restart node and check logs
+```js
+sudo systemctl restart kyved && sudo journalctl -u kyved -f --no-hostname -o cat
+```

@@ -19,7 +19,7 @@ Here is a list of 58 active peers as observed by [NODERS]TEAM in real-time. Add 
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=24f1cf09366d3513769b3b7db426eb2001018f7b@45.77.247.64:26656,1f54698c889bc290bf7254318177bcd3578ee88f@65.109.107.172:56656,c593e93e1fb8be8b48d4e7bab514a227aa620bf8@139.180.222.29:26656,8c796dcb79beb976454b6c43e3880f00f453405e@167.235.39.5:36656,c45991e0098b9cacb8603caf4e1cdb7e6e5f87c0@199.247.24.172:26656
+PEERS=4fb4065fa83cb303794313065f118ef56d97f9dd@8.210.22.129:26656,c45991e0098b9cacb8603caf4e1cdb7e6e5f87c0@199.247.24.172:26656,63e05f9ecbaa8d1e89f3c38202471a7b5a3789ec@95.216.155.33:26656,c5bd8d0b4b879fedf07f3405c281b0728d61188c@31.24.56.54:60756,fa6066414fc19d7b9f4ce070bf1b83dfd644f80e@65.109.60.19:56656
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.haqqd/config/config.toml
 
 sudo systemctl restart haqqd.service

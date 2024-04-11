@@ -9,8 +9,8 @@ sidebar_position: 3
 </div>
 ###### Chain ID: `athens_7001-1` | Current Node Version: `v15`
 
-
-# Clone Zetachain repository
+# With Cosmovisor
+## Clone Zetachain repository
 ```js
 cd $HOME
 rm -rf zeta-chain
@@ -19,14 +19,34 @@ cd zeta-chain
 git checkout v15
  ```
 
-# Build binaries
+## Build binaries
 ```js
 make build
  ```
 
-# Prepare binaries for Cosmovisor
+## Prepare binaries for Cosmovisor
 ```js
 mkdir -p ~/.zetacored/cosmovisor/upgrades/v15/bin
 mv build/zetacored ~/.zetacored/cosmovisor/upgrades/v15/bin/
 rm -rf build
+```
+
+# Without Cosmovisor
+## Clone Zetachain repository
+```js
+cd $HOME
+rm -rf zeta-chain
+git clone https://github.com/zeta-chain.git
+cd zeta-chain
+git checkout v15
+ ```
+
+## Build binaries
+```js
+make install
+ ```
+
+### Restart node and check logs
+```js
+sudo systemctl restart zetacored && sudo journalctl -u zetacored -f --no-hostname -o cat
 ```

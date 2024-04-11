@@ -9,8 +9,8 @@ sidebar_position: 3
 </div>
 ###### Chain ID: `entrypoint-pubtest-2` | Current Node Version: `v1.3.0`
 
-
-# Clone Entrypoint repository
+# With Cosmovisor
+## Clone Entrypoint repository
 ```js
 cd $HOME
 rm -rf entrypoint-zone
@@ -19,14 +19,34 @@ cd entrypoint-zone
 git checkout v1.3.0
  ```
 
-# Build binaries
+## Build binaries
 ```js
 make build
  ```
 
-# Prepare binaries for Cosmovisor
+## Prepare binaries for Cosmovisor
 ```js
 mkdir -p ~/.entrypoint/cosmovisor/upgrades/v1.3.0/bin
 mv build/entrypointd ~/.entrypoint/cosmovisor/upgrades/v1.3.0/bin/
 rm -rf build
+```
+
+# Without Cosmovisor
+## Clone Entrypoint repository
+```js
+cd $HOME
+rm -rf entrypoint-zone
+git clone https://github.com/entrypoint-zone.git
+cd entrypoint-zone
+git checkout v1.3.0
+ ```
+
+## Build binaries
+```js
+make install
+ ```
+
+### Restart node and check logs
+```js
+sudo systemctl restart entrypointd && sudo journalctl -u entrypointd -f --no-hostname -o cat
 ```

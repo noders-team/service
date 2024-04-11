@@ -19,7 +19,7 @@ c52d1a11c97dfd609693b35ce63834bee140d5ef@185.254.97.211:26656,3f6c95a5e70ace8f17
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=f9ecfb7f72724ab9c12e2e4d711ff60247fefdd2@37.60.225.117:26656,bb99f6c4bbdfcc366ba8f7555d3112a5ca645c70@144.91.66.9:26656,8abda16310e84ee8ed2388807614a101ce38dd20@143.110.172.11:26656,41286d2ed4dcf1d67d1bac395f50d9ebab91a1b7@88.198.27.51:60556,cc5c8f39419c31e6afcbfafed0310423da52044b@113.160.226.254:26656
+PEERS=627e26010e3a3426f5d15d02349755d16cc4e57b@95.111.254.251:26656,28a30f824e6dc3125d3510303a1ca6f56d0647a7@185.207.250.234:26656,592259c5d9295252d2dc9662752553b783faa733@193.46.243.230:26656,c52d1a11c97dfd609693b35ce63834bee140d5ef@185.254.97.211:26656,50c0d2cd68dc9dddc4d99e0dc11bed3dff9ba0ca@118.71.116.40:24256
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.alignedlayer/config/config.toml
 
 sudo systemctl restart alignedlayerd.service
