@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable desmos.service
+sudo systemctl enable desmos
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable desmos.service
+sudo systemctl disable desmos
 ```
 
 ### Start service
 ```js
-sudo systemctl start desmos.service
+sudo systemctl start desmos
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop desmos.service
+sudo systemctl stop desmos
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart desmos.service
+sudo systemctl restart desmos
 ```
 
 ### Check service status
 ```js
-sudo systemctl status desmos.service
+sudo systemctl status desmos
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u desmos.service -f --no-hostname -o cat
+sudo journalctl -u desmos -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop desmos.service
-sudo systemctl disable desmos.service
+sudo systemctl stop desmos
+sudo systemctl disable desmos
 sudo rm /etc/systemd/system/desmos.service
 sudo systemctl daemon-reload
 rm -f $(which desmos)

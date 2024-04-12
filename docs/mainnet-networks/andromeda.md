@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-andromeda">
 # Andromeda
 </div>
-###### Chain ID: `` | Current Node Version: `vandromeda-1-v0.1.0`
+###### Chain ID: `andromeda-1` | Current Node Version: `vandromeda-1-v0.1.0`
 
 
 The Andromeda Protocol heralds a new era in decentralized technology with its Andromeda Operating System (aOS), the first decentralized, on-chain operating system. It facilitates seamless development across blockchains, offering a unique suite of Web3 tools and utilities. Key features include multi-chain support, IBC for easy data transport, accessible tools for creators, rapid development with Andromeda Digital Objects (ADOs), and extensive integration with major blockchain platforms. Andromeda aims to enhance Web3 accessibility, efficiency, and scalability, fostering a rich ecosystem for developers and creators globally.
@@ -48,7 +48,7 @@ Official links of social networks of projects
     <SmallCard to="https://andromeda-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
     <SmallCard to="https://andromeda-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     
-    <SmallCard to="https://andromeda-grpc.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="andromeda-grpc.noders.services:34090" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
 </CardLayout>
 
 

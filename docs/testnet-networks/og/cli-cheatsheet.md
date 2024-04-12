@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable 0g.service
+sudo systemctl enable evmosd
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable 0g.service
+sudo systemctl disable evmosd
 ```
 
 ### Start service
 ```js
-sudo systemctl start 0g.service
+sudo systemctl start evmosd
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop 0g.service
+sudo systemctl stop evmosd
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart 0g.service
+sudo systemctl restart evmosd
 ```
 
 ### Check service status
 ```js
-sudo systemctl status 0g.service
+sudo systemctl status evmosd
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u 0g.service -f --no-hostname -o cat
+sudo journalctl -u evmosd -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop 0g.service
-sudo systemctl disable 0g.service
+sudo systemctl stop evmosd
+sudo systemctl disable evmosd
 sudo rm /etc/systemd/system/0g.service
 sudo systemctl daemon-reload
 rm -f $(which evmosd)

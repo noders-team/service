@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop gitopiad.service && gitopiad tendermint unsafe-reset-all --home ~/.gitopia --keep-addr-book
+sudo systemctl stop gitopiad && gitopiad tendermint unsafe-reset-all --home ~/.gitopia --keep-addr-book
 ```
 ```bash
 peers="8bd48e54552f091c1d8f194515754ab6ed74f054@gitopia-rpc.noders.services:19656"
@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.gitopia/config/config.toml
 ```
 ```bash
-sudo systemctl restart gitopiad.service && sudo journalctl -fu gitopiad.service --no-hostname -o cat
+sudo systemctl restart gitopiad && sudo journalctl -fu gitopiad --no-hostname -o cat
 ```

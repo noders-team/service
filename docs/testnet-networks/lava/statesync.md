@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.lava/config/config.toml
 ```
 ```bash
-sudo systemctl restart lava.service && sudo journalctl -fu lava.service --no-hostname -o cat
+sudo systemctl restart lavad && sudo journalctl -fu lavad --no-hostname -o cat
 ```

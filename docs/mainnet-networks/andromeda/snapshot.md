@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-andromeda">
 # Node Snapshot
 </div>
-###### Chain ID: `` | Current Node Version: `vandromeda-1-v0.1.0`
+###### Chain ID: `andromeda-1` | Current Node Version: `vandromeda-1-v0.1.0`
 
 ## Our Andromeda Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 1.03 GB | Thu, 11 Apr 2024 00:42:43 GMT |
+| 1.14 GB | Thu, 11 Apr 2024 23:48:52 GMT |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

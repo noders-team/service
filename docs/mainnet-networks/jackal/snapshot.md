@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-jackal">
 # Node Snapshot
 </div>
-###### Chain ID: `jackal-1` | Current Node Version: `vnull`
+###### Chain ID: `jackal-1` | Current Node Version: `v3.2.1`
 
 ## Our Jackal Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 5.81 GB | Thu, 11 Apr 2024 00:02:41 GMT |
+| 7.65 GB | Thu, 11 Apr 2024 22:53:23 GMT |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

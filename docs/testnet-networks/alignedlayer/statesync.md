@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.alignedlayer/config/config.toml
 ```
 ```bash
-sudo systemctl restart alignedlayerd.service && sudo journalctl -fu alignedlayerd.service --no-hostname -o cat
+sudo systemctl restart alignedlayerd && sudo journalctl -fu alignedlayerd --no-hostname -o cat
 ```

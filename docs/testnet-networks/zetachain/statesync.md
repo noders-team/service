@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.zetacored/config/config.toml
 ```
 ```bash
-sudo systemctl restart zetacore.service && sudo journalctl -fu zetacore.service --no-hostname -o cat
+sudo systemctl restart zetacored && sudo journalctl -fu zetacored --no-hostname -o cat
 ```

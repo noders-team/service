@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable uptickd.service
+sudo systemctl enable uptickd
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable uptickd.service
+sudo systemctl disable uptickd
 ```
 
 ### Start service
 ```js
-sudo systemctl start uptickd.service
+sudo systemctl start uptickd
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop uptickd.service
+sudo systemctl stop uptickd
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart uptickd.service
+sudo systemctl restart uptickd
 ```
 
 ### Check service status
 ```js
-sudo systemctl status uptickd.service
+sudo systemctl status uptickd
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u uptickd.service -f --no-hostname -o cat
+sudo journalctl -u uptickd -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop uptickd.service
-sudo systemctl disable uptickd.service
+sudo systemctl stop uptickd
+sudo systemctl disable uptickd
 sudo rm /etc/systemd/system/uptickd.service
 sudo systemctl daemon-reload
 rm -f $(which uptickd)

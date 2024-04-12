@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop archway.service && archwayd tendermint unsafe-reset-all --home ~/.archwayd --keep-addr-book
+sudo systemctl stop archwayd && archwayd tendermint unsafe-reset-all --home ~/.archwayd --keep-addr-book
 ```
 ```bash
 peers="c4b36b605667e3896eb6f57c5d731519b89dfc6f@archway-rpc.noders.services:13656"
@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.archwayd/config/config.toml
 ```
 ```bash
-sudo systemctl restart archway.service && sudo journalctl -fu archway.service --no-hostname -o cat
+sudo systemctl restart archwayd && sudo journalctl -fu archwayd --no-hostname -o cat
 ```

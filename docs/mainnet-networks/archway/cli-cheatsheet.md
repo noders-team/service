@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable archway.service
+sudo systemctl enable archwayd
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable archway.service
+sudo systemctl disable archwayd
 ```
 
 ### Start service
 ```js
-sudo systemctl start archway.service
+sudo systemctl start archwayd
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop archway.service
+sudo systemctl stop archwayd
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart archway.service
+sudo systemctl restart archwayd
 ```
 
 ### Check service status
 ```js
-sudo systemctl status archway.service
+sudo systemctl status archwayd
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u archway.service -f --no-hostname -o cat
+sudo journalctl -u archwayd -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop archway.service
-sudo systemctl disable archway.service
+sudo systemctl stop archwayd
+sudo systemctl disable archwayd
 sudo rm /etc/systemd/system/archway.service
 sudo systemctl daemon-reload
 rm -f $(which archwayd)

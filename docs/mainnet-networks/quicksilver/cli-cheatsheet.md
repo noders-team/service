@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable quicksilverd.service
+sudo systemctl enable quicksilverd
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable quicksilverd.service
+sudo systemctl disable quicksilverd
 ```
 
 ### Start service
 ```js
-sudo systemctl start quicksilverd.service
+sudo systemctl start quicksilverd
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop quicksilverd.service
+sudo systemctl stop quicksilverd
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart quicksilverd.service
+sudo systemctl restart quicksilverd
 ```
 
 ### Check service status
 ```js
-sudo systemctl status quicksilverd.service
+sudo systemctl status quicksilverd
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u quicksilverd.service -f --no-hostname -o cat
+sudo journalctl -u quicksilverd -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop quicksilverd.service
-sudo systemctl disable quicksilverd.service
+sudo systemctl stop quicksilverd
+sudo systemctl disable quicksilverd
 sudo rm /etc/systemd/system/quicksilverd.service
 sudo systemctl daemon-reload
 rm -f $(which quicksilverd)

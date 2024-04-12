@@ -56,6 +56,7 @@ function readBlockchainConfig {
   SIZE=""
   WASM=""
   WASM_URL=""
+  VERSION_HAND=$(grep -oE '^VERSION_HAND=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
 
 
   # Updates
@@ -85,12 +86,24 @@ function enrichBlockchainConfig {
 
 # Enrich binary version
 if [ "${VERSION}" == "auto" ]; then
-  VERSION=$(curl -s "${ENDPOINT_RPC}/abci_info?" | jq -r '.result.response.version' | tr -d '"')
+  version_response=$(curl -s "${ENDPOINT_RPC}/abci_info?" | jq -r '.result.response.version' | tr -d '"')
 
-  # Check if the version starts with a "v"
-  if [[ ! ${VERSION} == v* ]]; then
-    VERSION="v${VERSION}"
+  if [[ $version_response == null || -z $version_response ]]; then
+    # Read version from the config file if the API call returns null or is empty
+    if [ -n "${VERSION_HAND}" ]; then
+      VERSION=${VERSION_HAND}
+    else
+      echo "Version hand (VERSION_HAND) is not set in the configuration file."
+      # Handle the case where VERSION_HAND is also not set or found
+    fi
+  else
+    VERSION=$version_response
   fi
+fi
+
+# Ensure the version starts with "v"
+if [[ ! ${VERSION} == v* ]]; then
+  VERSION="v${VERSION}"
 fi
 
   # Enrich github
@@ -159,6 +172,7 @@ function replacePageVariables {
   sed -i'' "s#\[WASM_URL\]#${wasm_url}#g" "$1"
   sed -i'' "s|\[LIVE_PEERS_RANDOM\]|${LIVE_PEERS_RANDOM}|g" $1
   sed -i'' "s|\[VALIDATOR_LINK\]|${VALIDATOR_LINK}|g" $1
+  sed -i'' "s|\[VERSION_HAND\]|${VERSION_HAND}|g" $1
 
 }
 

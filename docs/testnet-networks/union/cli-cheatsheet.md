@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-union">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `union-testnet-6` | Current Node Version: `vnull`
+###### Chain ID: `union-testnet-6` | Current Node Version: `v0.19.0`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable union.service
+sudo systemctl enable uniond
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable union.service
+sudo systemctl disable uniond
 ```
 
 ### Start service
 ```js
-sudo systemctl start union.service
+sudo systemctl start uniond
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop union.service
+sudo systemctl stop uniond
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart union.service
+sudo systemctl restart uniond
 ```
 
 ### Check service status
 ```js
-sudo systemctl status union.service
+sudo systemctl status uniond
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u union.service -f --no-hostname -o cat
+sudo journalctl -u uniond -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop union.service
-sudo systemctl disable union.service
+sudo systemctl stop uniond
+sudo systemctl disable uniond
 sudo rm /etc/systemd/system/union.service
 sudo systemctl daemon-reload
 rm -f $(which uniond)

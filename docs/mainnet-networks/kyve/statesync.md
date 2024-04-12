@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop kyved.service && kyved tendermint unsafe-reset-all --home ~/.kyve --keep-addr-book
+sudo systemctl stop kyved && kyved tendermint unsafe-reset-all --home ~/.kyve --keep-addr-book
 ```
 ```bash
 peers="9150bbb576e81cfe6776987bc6bc47be3c1a6b89@kyve-rpc.noders.services:15656"
@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.kyve/config/config.toml
 ```
 ```bash
-sudo systemctl restart kyved.service && sudo journalctl -fu kyved.service --no-hostname -o cat
+sudo systemctl restart kyved && sudo journalctl -fu kyved --no-hostname -o cat
 ```

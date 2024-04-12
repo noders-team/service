@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable swisstronik.service
+sudo systemctl enable swisstronikd
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable swisstronik.service
+sudo systemctl disable swisstronikd
 ```
 
 ### Start service
 ```js
-sudo systemctl start swisstronik.service
+sudo systemctl start swisstronikd
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop swisstronik.service
+sudo systemctl stop swisstronikd
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart swisstronik.service
+sudo systemctl restart swisstronikd
 ```
 
 ### Check service status
 ```js
-sudo systemctl status swisstronik.service
+sudo systemctl status swisstronikd
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u swisstronik.service -f --no-hostname -o cat
+sudo journalctl -u swisstronikd -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop swisstronik.service
-sudo systemctl disable swisstronik.service
+sudo systemctl stop swisstronikd
+sudo systemctl disable swisstronikd
 sudo rm /etc/systemd/system/swisstronik.service
 sudo systemctl daemon-reload
 rm -f $(which swisstronikd)

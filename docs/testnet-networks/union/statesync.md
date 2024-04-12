@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-union">
 # State sync
 </div>
-###### Chain ID: `union-testnet-6` | Current Node Version: `vnull`
+###### Chain ID: `union-testnet-6` | Current Node Version: `v0.19.0`
 
 ```bash
 SNAP_RPC=https://union-t-rpc.noders.services:443 && \
@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.union/config/config.toml
 ```
 ```bash
-sudo systemctl restart union.service && sudo journalctl -fu union.service --no-hostname -o cat
+sudo systemctl restart uniond && sudo journalctl -fu uniond --no-hostname -o cat
 ```

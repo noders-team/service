@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop bitsongd.service && bitsongd tendermint unsafe-reset-all --home ~/.bitsongd --keep-addr-book
+sudo systemctl stop bitsongd && bitsongd tendermint unsafe-reset-all --home ~/.bitsongd --keep-addr-book
 ```
 ```bash
 peers="b347b47a650981b2e12782e92cf26ba8aa0148c9@bitsong-rpc.noders.services:20656"
@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.bitsongd/config/config.toml
 ```
 ```bash
-sudo systemctl restart bitsongd.service && sudo journalctl -fu bitsongd.service --no-hostname -o cat
+sudo systemctl restart bitsongd && sudo journalctl -fu bitsongd --no-hostname -o cat
 ```

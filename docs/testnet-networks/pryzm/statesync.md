@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-pryzm">
 # State sync
 </div>
-###### Chain ID: `indigo-1` | Current Node Version: `v0.11.1`
+###### Chain ID: `indigo-1` | Current Node Version: `v0.13.0`
 
 ```bash
 SNAP_RPC=https://pryzm-t-rpc.noders.services:443 && \
@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.pryzm/config/config.toml
 ```
 ```bash
-sudo systemctl restart pryzm.service && sudo journalctl -fu pryzm.service --no-hostname -o cat
+sudo systemctl restart pryzmd && sudo journalctl -fu pryzmd --no-hostname -o cat
 ```

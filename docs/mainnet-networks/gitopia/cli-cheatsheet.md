@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable gitopiad.service
+sudo systemctl enable gitopiad
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable gitopiad.service
+sudo systemctl disable gitopiad
 ```
 
 ### Start service
 ```js
-sudo systemctl start gitopiad.service
+sudo systemctl start gitopiad
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop gitopiad.service
+sudo systemctl stop gitopiad
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart gitopiad.service
+sudo systemctl restart gitopiad
 ```
 
 ### Check service status
 ```js
-sudo systemctl status gitopiad.service
+sudo systemctl status gitopiad
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u gitopiad.service -f --no-hostname -o cat
+sudo journalctl -u gitopiad -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop gitopiad.service
-sudo systemctl disable gitopiad.service
+sudo systemctl stop gitopiad
+sudo systemctl disable gitopiad
 sudo rm /etc/systemd/system/gitopiad.service
 sudo systemctl daemon-reload
 rm -f $(which gitopiad)

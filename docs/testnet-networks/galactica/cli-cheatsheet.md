@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable galactica.service
+sudo systemctl enable galacticad
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable galactica.service
+sudo systemctl disable galacticad
 ```
 
 ### Start service
 ```js
-sudo systemctl start galactica.service
+sudo systemctl start galacticad
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop galactica.service
+sudo systemctl stop galacticad
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart galactica.service
+sudo systemctl restart galacticad
 ```
 
 ### Check service status
 ```js
-sudo systemctl status galactica.service
+sudo systemctl status galacticad
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u galactica.service -f --no-hostname -o cat
+sudo journalctl -u galacticad -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop galactica.service
-sudo systemctl disable galactica.service
+sudo systemctl stop galacticad
+sudo systemctl disable galacticad
 sudo rm /etc/systemd/system/galactica.service
 sudo systemctl daemon-reload
 rm -f $(which galacticad)

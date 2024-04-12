@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop lambdavm.service && lambdavm tendermint unsafe-reset-all --home ~/.lambdavm --keep-addr-book
+sudo systemctl stop lambdavm && lambdavm tendermint unsafe-reset-all --home ~/.lambdavm --keep-addr-book
 ```
 ```bash
 peers="fd29375cb1bc8ed6088e65885a8d77eb15dfd272@lambda-rpc.noders.services:31656"
@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.lambdavm/config/config.toml
 ```
 ```bash
-sudo systemctl restart lambdavm.service && sudo journalctl -fu lambdavm.service --no-hostname -o cat
+sudo systemctl restart lambdavm && sudo journalctl -fu lambdavm --no-hostname -o cat
 ```

@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable band.service
+sudo systemctl enable bandd
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable band.service
+sudo systemctl disable bandd
 ```
 
 ### Start service
 ```js
-sudo systemctl start band.service
+sudo systemctl start bandd
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop band.service
+sudo systemctl stop bandd
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart band.service
+sudo systemctl restart bandd
 ```
 
 ### Check service status
 ```js
-sudo systemctl status band.service
+sudo systemctl status bandd
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u band.service -f --no-hostname -o cat
+sudo journalctl -u bandd -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop band.service
-sudo systemctl disable band.service
+sudo systemctl stop bandd
+sudo systemctl disable bandd
 sudo rm /etc/systemd/system/band.service
 sudo systemctl daemon-reload
 rm -f $(which bandd)

@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable bitsongd.service
+sudo systemctl enable bitsongd
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable bitsongd.service
+sudo systemctl disable bitsongd
 ```
 
 ### Start service
 ```js
-sudo systemctl start bitsongd.service
+sudo systemctl start bitsongd
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop bitsongd.service
+sudo systemctl stop bitsongd
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart bitsongd.service
+sudo systemctl restart bitsongd
 ```
 
 ### Check service status
 ```js
-sudo systemctl status bitsongd.service
+sudo systemctl status bitsongd
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u bitsongd.service -f --no-hostname -o cat
+sudo journalctl -u bitsongd -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop bitsongd.service
-sudo systemctl disable bitsongd.service
+sudo systemctl stop bitsongd
+sudo systemctl disable bitsongd
 sudo rm /etc/systemd/system/bitsongd.service
 sudo systemctl daemon-reload
 rm -f $(which bitsongd)

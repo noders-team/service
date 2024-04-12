@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop stchaind.service && stchaind tendermint unsafe-reset-all --home ~/.stchaind --keep-addr-book
+sudo systemctl stop stchaind && stchaind tendermint unsafe-reset-all --home ~/.stchaind --keep-addr-book
 ```
 ```bash
 peers="71f6b523df0c5cbb1995a14e7eac46a9befcad37@stratos-rpc.noders.services:29656"
@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.stchaind/config/config.toml
 ```
 ```bash
-sudo systemctl restart stchaind.service && sudo journalctl -fu stchaind.service --no-hostname -o cat
+sudo systemctl restart stchaind && sudo journalctl -fu stchaind --no-hostname -o cat
 ```

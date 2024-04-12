@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop pylons.service && pylonsd tendermint unsafe-reset-all --home ~/.pylonsd --keep-addr-book
+sudo systemctl stop pylonsd && pylonsd tendermint unsafe-reset-all --home ~/.pylonsd --keep-addr-book
 ```
 ```bash
 peers="ae94eb20e73c0ad93dbb980338eb313320c56194@pylons-rpc.noders.services:23656"
@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.pylonsd/config/config.toml
 ```
 ```bash
-sudo systemctl restart pylons.service && sudo journalctl -fu pylons.service --no-hostname -o cat
+sudo systemctl restart pylonsd && sudo journalctl -fu pylonsd --no-hostname -o cat
 ```

@@ -22,7 +22,7 @@ DAEMON_HOME="~/.pryzm"
 ENDPOINT_RPC="https://pryzm-t-rpc.noders.services"
 ENDPOINT_API="https://pryzm-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://pryzm-t-grpc.noders.services"
+ENDPOINT_GRPC="pryzm-t-grpc.noders.services:25090"
 ENDPOINT_PEER="auto"
 
 # Social

@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable stchaind.service
+sudo systemctl enable stchaind
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable stchaind.service
+sudo systemctl disable stchaind
 ```
 
 ### Start service
 ```js
-sudo systemctl start stchaind.service
+sudo systemctl start stchaind
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop stchaind.service
+sudo systemctl stop stchaind
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart stchaind.service
+sudo systemctl restart stchaind
 ```
 
 ### Check service status
 ```js
-sudo systemctl status stchaind.service
+sudo systemctl status stchaind
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u stchaind.service -f --no-hostname -o cat
+sudo journalctl -u stchaind -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop stchaind.service
-sudo systemctl disable stchaind.service
+sudo systemctl stop stchaind
+sudo systemctl disable stchaind
 sudo rm /etc/systemd/system/stchaind.service
 sudo systemctl daemon-reload
 rm -f $(which stchaind)

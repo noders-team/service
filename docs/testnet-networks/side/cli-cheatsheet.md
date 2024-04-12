@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable sided.service
+sudo systemctl enable sided
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable sided.service
+sudo systemctl disable sided
 ```
 
 ### Start service
 ```js
-sudo systemctl start sided.service
+sudo systemctl start sided
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop sided.service
+sudo systemctl stop sided
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart sided.service
+sudo systemctl restart sided
 ```
 
 ### Check service status
 ```js
-sudo systemctl status sided.service
+sudo systemctl status sided
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u sided.service -f --no-hostname -o cat
+sudo journalctl -u sided -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop sided.service
-sudo systemctl disable sided.service
+sudo systemctl stop sided
+sudo systemctl disable sided
 sudo rm /etc/systemd/system/sided.service
 sudo systemctl daemon-reload
 rm -f $(which sided)

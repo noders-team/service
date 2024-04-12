@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-pryzm">
 # Installation
 </div>
-###### Chain ID: `indigo-1` | Current Node Version: `v0.11.1`
+###### Chain ID: `indigo-1` | Current Node Version: `v0.13.0`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Pryzm repo and build pryzmd v0.11.1
+### Clone Pryzm repo and build pryzmd v0.13.0
 ```js
 cd $HOME
 git clone https://github.com/pryzm-finance.git
 cd pryzm-finance
-git checkout v0.11.1
+git checkout v0.13.0
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.pryzm/cosmovisor/upgrades/v0.11.1/bin
-mv $HOME/go/bin/pryzmd ~/.pryzm/cosmovisor/upgrades/v0.11.1/bin/
+mkdir -p ~/.pryzm/cosmovisor/upgrades/v0.13.0/bin
+mv $HOME/go/bin/pryzmd ~/.pryzm/cosmovisor/upgrades/v0.13.0/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Pryzm repo and build pryzmd v0.11.1
+### Clone Pryzm repo and build pryzmd v0.13.0
 ```js
 cd $HOME
 git clone https://github.com/pryzm-finance.git
 cd pryzm-finance
-git checkout v0.11.1
+git checkout v0.13.0
 ```
 
 ### Build binaries

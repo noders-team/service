@@ -22,7 +22,7 @@ DAEMON_HOME="~/.desmos"
 ENDPOINT_RPC="https://desmos-rpc.noders.services"
 ENDPOINT_API="https://desmos-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://desmos-grpc.noders.services"
+ENDPOINT_GRPC="desmos-grpc.noders.services:27090"
 ENDPOINT_PEER="auto"
 
 # Social

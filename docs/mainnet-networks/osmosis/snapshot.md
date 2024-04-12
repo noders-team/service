@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-osmosis">
 # Node Snapshot
 </div>
-###### Chain ID: `osmosis-1` | Current Node Version: `v23.0.8-iavl-v1`
+###### Chain ID: `osmosis-1` | Current Node Version: `v24.0.0`
 
 ## Our Osmosis Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 27.70 GB | Thu, 11 Apr 2024 00:28:27 GMT |
+| 22.75 GB | Thu, 11 Apr 2024 23:29:50 GMT |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

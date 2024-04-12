@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.entrypoint/config/config.toml
 ```
 ```bash
-sudo systemctl restart entrypoint.service && sudo journalctl -fu entrypoint.service --no-hostname -o cat
+sudo systemctl restart entrypointd && sudo journalctl -fu entrypointd --no-hostname -o cat
 ```

@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-router">
 # State sync
 </div>
-###### Chain ID: `router_9601-1` | Current Node Version: `vnull`
+###### Chain ID: `router_9601-1` | Current Node Version: `v1.0.0-rc1`
 
 ```bash
 SNAP_RPC=https://router-t-rpc.noders.services:443 && \
@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.routerd/config/config.toml
 ```
 ```bash
-sudo systemctl restart router.service && sudo journalctl -fu router.service --no-hostname -o cat
+sudo systemctl restart routerd && sudo journalctl -fu routerd --no-hostname -o cat
 ```

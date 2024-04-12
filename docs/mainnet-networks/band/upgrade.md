@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-band">
 # Upgrade
 </div>
-###### Chain ID: `laozi-mainnet` | Current Node Version: `v2.5.4`
+###### Chain ID: `` | Current Node Version: `vauto`
 
 
 # Clone Band repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf chain
 git clone https://github.com/bandprotocol/chain.git
 cd chain
-git checkout v2.5.4
+git checkout vauto
  ```
 
 # Build binaries
@@ -26,8 +26,8 @@ make build
 
 # Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.band/cosmovisor/upgrades/v2.5.4/bin
-mv build/bandd ~/.band/cosmovisor/upgrades/v2.5.4/bin/
+mkdir -p ~/.band/cosmovisor/upgrades/vauto/bin
+mv build/bandd ~/.band/cosmovisor/upgrades/vauto/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf chain
 git clone https://github.com/bandprotocol/chain.git
 cd chain
-git checkout v2.5.4
+git checkout vauto
  ```
 
 ## Build binaries

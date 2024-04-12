@@ -25,7 +25,7 @@ DAEMON_HOME="~/.stchaind"
 ENDPOINT_RPC="https://stratos-rpc.noders.services"
 ENDPOINT_API="https://stratos-api.noders.services"
 ENDPOINT_JRPC="https://stratos-jsonrpc.noders.services "
-ENDPOINT_GRPC="https://stratos-grpc.noders.services"
+ENDPOINT_GRPC="stratos-grpc.noders.services:29090"
 ENDPOINT_PEER="auto"
 
 # Social

@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop haqqd.service && haqqd tendermint unsafe-reset-all --home ~/.haqqd --keep-addr-book
+sudo systemctl stop haqqd && haqqd tendermint unsafe-reset-all --home ~/.haqqd --keep-addr-book
 ```
 ```bash
 peers="acbd4ad54449c6e762628f957dd25f99955daa6c@haqq-rpc.noders.services:14656"
@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.haqqd/config/config.toml
 ```
 ```bash
-sudo systemctl restart haqqd.service && sudo journalctl -fu haqqd.service --no-hostname -o cat
+sudo systemctl restart haqqd && sudo journalctl -fu haqqd --no-hostname -o cat
 ```

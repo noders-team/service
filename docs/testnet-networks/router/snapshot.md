@@ -7,13 +7,13 @@ sidebar_position: 3
 <div class="h1-with-icon icon-router">
 # Node Snapshot
 </div>
-###### Chain ID: `router_9601-1` | Current Node Version: `vnull`
+###### Chain ID: `router_9601-1` | Current Node Version: `v1.0.0-rc1`
 
 ## Our Rrouter Snapshot Server Setup
 
 | Size   | Timestamp    |
 |--------|--------------|
-| 9.87 GB | Thu, 11 Apr 2024 00:03:58 GMT  |
+| 7.49 GB | Thu, 11 Apr 2024 23:13:15 GMT  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

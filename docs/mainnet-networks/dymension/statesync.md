@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop dymd.service && dymd tendermint unsafe-reset-all --home ~/.dymension --keep-addr-book
+sudo systemctl stop dymd && dymd tendermint unsafe-reset-all --home ~/.dymension --keep-addr-book
 ```
 ```bash
 peers="11900c7a3a6bdeaef5eb0b6837fe4efdbad91625@dymension-rpc.noders.services:12656"
@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.dymension/config/config.toml
 ```
 ```bash
-sudo systemctl restart dymd.service && sudo journalctl -fu dymd.service --no-hostname -o cat
+sudo systemctl restart dymd && sudo journalctl -fu dymd --no-hostname -o cat
 ```

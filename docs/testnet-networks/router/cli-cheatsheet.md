@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-router">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `router_9601-1` | Current Node Version: `vnull`
+###### Chain ID: `router_9601-1` | Current Node Version: `v1.0.0-rc1`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable router.service
+sudo systemctl enable routerd
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable router.service
+sudo systemctl disable routerd
 ```
 
 ### Start service
 ```js
-sudo systemctl start router.service
+sudo systemctl start routerd
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop router.service
+sudo systemctl stop routerd
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart router.service
+sudo systemctl restart routerd
 ```
 
 ### Check service status
 ```js
-sudo systemctl status router.service
+sudo systemctl status routerd
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u router.service -f --no-hostname -o cat
+sudo journalctl -u routerd -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop router.service
-sudo systemctl disable router.service
+sudo systemctl stop routerd
+sudo systemctl disable routerd
 sudo rm /etc/systemd/system/router.service
 sudo systemctl daemon-reload
 rm -f $(which routerd)

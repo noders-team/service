@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop quicksilverd.service && quicksilverd tendermint unsafe-reset-all --home ~/.quicksilverd --keep-addr-book
+sudo systemctl stop quicksilverd && quicksilverd tendermint unsafe-reset-all --home ~/.quicksilverd --keep-addr-book
 ```
 ```bash
 peers="38963fa3e12cebc1e56c05d3c0f0acdb9ef17e6f@quicksilver-rpc.noders.services:16656"
@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.quicksilverd/config/config.toml
 ```
 ```bash
-sudo systemctl restart quicksilverd.service && sudo journalctl -fu quicksilverd.service --no-hostname -o cat
+sudo systemctl restart quicksilverd && sudo journalctl -fu quicksilverd --no-hostname -o cat
 ```

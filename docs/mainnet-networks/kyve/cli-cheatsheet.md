@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable kyved.service
+sudo systemctl enable kyved
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable kyved.service
+sudo systemctl disable kyved
 ```
 
 ### Start service
 ```js
-sudo systemctl start kyved.service
+sudo systemctl start kyved
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop kyved.service
+sudo systemctl stop kyved
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart kyved.service
+sudo systemctl restart kyved
 ```
 
 ### Check service status
 ```js
-sudo systemctl status kyved.service
+sudo systemctl status kyved
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u kyved.service -f --no-hostname -o cat
+sudo journalctl -u kyved -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop kyved.service
-sudo systemctl disable kyved.service
+sudo systemctl stop kyved
+sudo systemctl disable kyved
 sudo rm /etc/systemd/system/kyved.service
 sudo systemctl daemon-reload
 rm -f $(which kyved)

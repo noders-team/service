@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.swisstronik/config/config.toml
 ```
 ```bash
-sudo systemctl restart swisstronik.service && sudo journalctl -fu swisstronik.service --no-hostname -o cat
+sudo systemctl restart swisstronikd && sudo journalctl -fu swisstronikd --no-hostname -o cat
 ```

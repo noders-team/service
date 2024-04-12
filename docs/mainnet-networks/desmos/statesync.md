@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop desmos.service && desmos tendermint unsafe-reset-all --home ~/.desmos --keep-addr-book
+sudo systemctl stop desmos && desmos tendermint unsafe-reset-all --home ~/.desmos --keep-addr-book
 ```
 ```bash
 peers="7c4620e42e2d2a7ad2bdbe00511b66995235ee6a@desmos-rpc.noders.services:27656"
@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.desmos/config/config.toml
 ```
 ```bash
-sudo systemctl restart desmos.service && sudo journalctl -fu desmos.service --no-hostname -o cat
+sudo systemctl restart desmos && sudo journalctl -fu desmos --no-hostname -o cat
 ```

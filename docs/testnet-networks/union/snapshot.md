@@ -7,13 +7,13 @@ sidebar_position: 3
 <div class="h1-with-icon icon-union">
 # Node Snapshot
 </div>
-###### Chain ID: `union-testnet-6` | Current Node Version: `vnull`
+###### Chain ID: `union-testnet-6` | Current Node Version: `v0.19.0`
 
 ## Our Union Snapshot Server Setup
 
 | Size   | Timestamp    |
 |--------|--------------|
-| 10.90 GB | Thu, 11 Apr 2024 00:33:23 GMT  |
+| 7.03 GB | Thu, 11 Apr 2024 23:37:35 GMT  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

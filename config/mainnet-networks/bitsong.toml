@@ -22,7 +22,7 @@ DAEMON_HOME="~/.bitsongd"
 ENDPOINT_RPC="https://bitsong-rpc.noders.services"
 ENDPOINT_API="https://bitsong-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://bitsong-grpc.noders.services"
+ENDPOINT_GRPC="bitsong-grpc.noders.services:20090"
 ENDPOINT_PEER="auto"
 
 # Social

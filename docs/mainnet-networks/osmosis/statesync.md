@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-osmosis">
 # State sync
 </div>
-###### Chain ID: `osmosis-1` | Current Node Version: `v23.0.8-iavl-v1`
+###### Chain ID: `osmosis-1` | Current Node Version: `v24.0.0`
 
 ```bash
 SNAP_RPC=https://osmosis-rpc.noders.services:443 && \
@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop osmosisd.service && osmosisd tendermint unsafe-reset-all --home ~/.osmosisd --keep-addr-book
+sudo systemctl stop osmosisd && osmosisd tendermint unsafe-reset-all --home ~/.osmosisd --keep-addr-book
 ```
 ```bash
 peers="91570c5f4e2a54ce53996475aea4f530e0669a2e@osmosis-rpc.noders.services:10656"
@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.osmosisd/config/config.toml
 ```
 ```bash
-sudo systemctl restart osmosisd.service && sudo journalctl -fu osmosisd.service --no-hostname -o cat
+sudo systemctl restart osmosisd && sudo journalctl -fu osmosisd --no-hostname -o cat
 ```

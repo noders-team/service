@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable lava.service
+sudo systemctl enable lavad
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable lava.service
+sudo systemctl disable lavad
 ```
 
 ### Start service
 ```js
-sudo systemctl start lava.service
+sudo systemctl start lavad
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop lava.service
+sudo systemctl stop lavad
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart lava.service
+sudo systemctl restart lavad
 ```
 
 ### Check service status
 ```js
-sudo systemctl status lava.service
+sudo systemctl status lavad
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u lava.service -f --no-hostname -o cat
+sudo journalctl -u lavad -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop lava.service
-sudo systemctl disable lava.service
+sudo systemctl stop lavad
+sudo systemctl disable lavad
 sudo rm /etc/systemd/system/lava.service
 sudo systemctl daemon-reload
 rm -f $(which lavad)

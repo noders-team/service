@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop [DAEMON_SERVICE] && [DAEMON_NAME] tendermint unsafe-reset-all --home [DAEMON_HOME] --keep-addr-book
+sudo systemctl stop [DAEMON_NAME] && [DAEMON_NAME] tendermint unsafe-reset-all --home [DAEMON_HOME] --keep-addr-book
 ```
 ```bash
 peers="[ENDPOINT_PEER]"
@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" [DAEMON_HOME]/config/config.toml
 ```
 ```bash
-sudo systemctl restart [DAEMON_SERVICE] && sudo journalctl -fu [DAEMON_SERVICE] --no-hostname -o cat
+sudo systemctl restart [DAEMON_NAME] && sudo journalctl -fu [DAEMON_NAME] --no-hostname -o cat
 ```

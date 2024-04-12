@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-router">
 # Installation
 </div>
-###### Chain ID: `router_9601-1` | Current Node Version: `vnull`
+###### Chain ID: `router_9601-1` | Current Node Version: `v1.0.0-rc1`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Rrouter repo and build routerd vnull
+### Clone Rrouter repo and build routerd v1.0.0-rc1
 ```js
 cd $HOME
 git clone https://github.com/router-protocol.git
 cd router-protocol
-git checkout vnull
+git checkout v1.0.0-rc1
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.routerd/cosmovisor/upgrades/vnull/bin
-mv $HOME/go/bin/routerd ~/.routerd/cosmovisor/upgrades/vnull/bin/
+mkdir -p ~/.routerd/cosmovisor/upgrades/v1.0.0-rc1/bin
+mv $HOME/go/bin/routerd ~/.routerd/cosmovisor/upgrades/v1.0.0-rc1/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Rrouter repo and build routerd vnull
+### Clone Rrouter repo and build routerd v1.0.0-rc1
 ```js
 cd $HOME
 git clone https://github.com/router-protocol.git
 cd router-protocol
-git checkout vnull
+git checkout v1.0.0-rc1
 ```
 
 ### Build binaries

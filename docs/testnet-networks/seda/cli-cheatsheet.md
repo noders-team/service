@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable seda.service
+sudo systemctl enable sedad
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable seda.service
+sudo systemctl disable sedad
 ```
 
 ### Start service
 ```js
-sudo systemctl start seda.service
+sudo systemctl start sedad
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop seda.service
+sudo systemctl stop sedad
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart seda.service
+sudo systemctl restart sedad
 ```
 
 ### Check service status
 ```js
-sudo systemctl status seda.service
+sudo systemctl status sedad
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u seda.service -f --no-hostname -o cat
+sudo journalctl -u sedad -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop seda.service
-sudo systemctl disable seda.service
+sudo systemctl stop sedad
+sudo systemctl disable sedad
 sudo rm /etc/systemd/system/seda.service
 sudo systemctl daemon-reload
 rm -f $(which sedad)

@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.quicksilverd/config/config.toml
 ```
 ```bash
-sudo systemctl restart quicksilverd.service && sudo journalctl -fu quicksilverd.service --no-hostname -o cat
+sudo systemctl restart quicksilverd && sudo journalctl -fu quicksilverd --no-hostname -o cat
 ```

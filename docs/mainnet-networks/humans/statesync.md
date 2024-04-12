@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop humansd.service && humansd tendermint unsafe-reset-all --home ~/.humansd --keep-addr-book
+sudo systemctl stop humansd && humansd tendermint unsafe-reset-all --home ~/.humansd --keep-addr-book
 ```
 ```bash
 peers="284fa3bdcdfd0d5aba7047db88f26d7a8ef38ed7@humans-rpc.noders.services:21656"
@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.humansd/config/config.toml
 ```
 ```bash
-sudo systemctl restart humansd.service && sudo journalctl -fu humansd.service --no-hostname -o cat
+sudo systemctl restart humansd && sudo journalctl -fu humansd --no-hostname -o cat
 ```

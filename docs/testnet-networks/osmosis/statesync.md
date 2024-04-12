@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.osmosisd/config/config.toml
 ```
 ```bash
-sudo systemctl restart osmosisd.service && sudo journalctl -fu osmosisd.service --no-hostname -o cat
+sudo systemctl restart osmosisd && sudo journalctl -fu osmosisd --no-hostname -o cat
 ```

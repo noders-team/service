@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.warden/config/config.toml
 ```
 ```bash
-sudo systemctl restart warden.service && sudo journalctl -fu warden.service --no-hostname -o cat
+sudo systemctl restart wardend && sudo journalctl -fu wardend --no-hostname -o cat
 ```

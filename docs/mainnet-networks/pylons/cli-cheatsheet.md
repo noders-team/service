@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable pylons.service
+sudo systemctl enable pylonsd
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable pylons.service
+sudo systemctl disable pylonsd
 ```
 
 ### Start service
 ```js
-sudo systemctl start pylons.service
+sudo systemctl start pylonsd
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop pylons.service
+sudo systemctl stop pylonsd
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart pylons.service
+sudo systemctl restart pylonsd
 ```
 
 ### Check service status
 ```js
-sudo systemctl status pylons.service
+sudo systemctl status pylonsd
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u pylons.service -f --no-hostname -o cat
+sudo journalctl -u pylonsd -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop pylons.service
-sudo systemctl disable pylons.service
+sudo systemctl stop pylonsd
+sudo systemctl disable pylonsd
 sudo rm /etc/systemd/system/pylons.service
 sudo systemctl daemon-reload
 rm -f $(which pylonsd)

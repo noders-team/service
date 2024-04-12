@@ -4,7 +4,7 @@ title: CLI Cheatsheet
 sidebar_position: 8
 ---
 
-<div class="h1-with-icon icon-bera">
+<div class="h1-with-icon icon-berachain">
 # CLI Cheatsheet
 </div>
 ###### Chain ID: `artio-80085` | Current Node Version: `v0.2.3-alpha-rc7`
@@ -193,7 +193,7 @@ berad status 2>&1 | jq .SyncInfo
 
 ### Get node peer
 ```js
-echo $(berad tendermint show-node-id)'@'$(curl -s ifconfig.me)':'$(cat ~/.bera/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
+echo $(berad tendermint show-node-id)'@'$(curl -s ifconfig.me)':'$(cat ~/.berad/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
 ```
 
 ### Check if validator key is correct
@@ -208,17 +208,17 @@ curl -sS https://berachain-t-rpc.noders.services:443/net_info | jq -r '.result.p
 
 ### Set minimum gas price
 ```js
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.001uabgt\"/" ~/.bera/config/app.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.001uabgt\"/" ~/.berad/config/app.toml
 ```
 
 ###Enable prometheus
 ```js
-sed -i -e "s/prometheus = false/prometheus = true/" ~/.bera/config/config.toml
+sed -i -e "s/prometheus = false/prometheus = true/" ~/.berad/config/config.toml
 ```
 
 ### Reset chain data
 ```js
-berad tendermint unsafe-reset-all --keep-addr-book --home ~/.bera
+berad tendermint unsafe-reset-all --keep-addr-book --home ~/.berad
 ```
 
 ## Service Management
@@ -229,47 +229,47 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable bera.service
+sudo systemctl enable berad
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable bera.service
+sudo systemctl disable berad
 ```
 
 ### Start service
 ```js
-sudo systemctl start bera.service
+sudo systemctl start berad
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop bera.service
+sudo systemctl stop berad
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart bera.service
+sudo systemctl restart berad
 ```
 
 ### Check service status
 ```js
-sudo systemctl status bera.service
+sudo systemctl status berad
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u bera.service -f --no-hostname -o cat
+sudo journalctl -u berad -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop bera.service
-sudo systemctl disable bera.service
+sudo systemctl stop berad
+sudo systemctl disable berad
 sudo rm /etc/systemd/system/bera.service
 sudo systemctl daemon-reload
 rm -f $(which berad)
-rm -rf ~/.bera
+rm -rf ~/.berad
 rm -rf $HOME/berachain
 ```

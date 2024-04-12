@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop uptickd.service && uptickd tendermint unsafe-reset-all --home ~/.uptickd --keep-addr-book
+sudo systemctl stop uptickd && uptickd tendermint unsafe-reset-all --home ~/.uptickd --keep-addr-book
 ```
 ```bash
 peers="d9de9af4a4e9092dd29ea833ef4960b97798ba18@uptick-rpc.noders.services:24656"
@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.uptickd/config/config.toml
 ```
 ```bash
-sudo systemctl restart uptickd.service && sudo journalctl -fu uptickd.service --no-hostname -o cat
+sudo systemctl restart uptickd && sudo journalctl -fu uptickd --no-hostname -o cat
 ```

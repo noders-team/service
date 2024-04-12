@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.galactica/config/config.toml
 ```
 ```bash
-sudo systemctl restart galactica.service && sudo journalctl -fu galactica.service --no-hostname -o cat
+sudo systemctl restart galacticad && sudo journalctl -fu galacticad --no-hostname -o cat
 ```

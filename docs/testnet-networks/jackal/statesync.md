@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-jackal">
 # State sync
 </div>
-###### Chain ID: `mesomelas-1` | Current Node Version: `vnull`
+###### Chain ID: `mesomelas-1` | Current Node Version: `vcanary-17-gb6ed8056`
 
 ```bash
 SNAP_RPC=https://jackal-t-rpc.noders.services:443 && \
@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.canine/config/config.toml
 ```
 ```bash
-sudo systemctl restart canined.service && sudo journalctl -fu canined.service --no-hostname -o cat
+sudo systemctl restart canined && sudo journalctl -fu canined --no-hostname -o cat
 ```

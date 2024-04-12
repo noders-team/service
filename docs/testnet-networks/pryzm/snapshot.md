@@ -7,13 +7,13 @@ sidebar_position: 3
 <div class="h1-with-icon icon-pryzm">
 # Node Snapshot
 </div>
-###### Chain ID: `indigo-1` | Current Node Version: `v0.11.1`
+###### Chain ID: `indigo-1` | Current Node Version: `v0.13.0`
 
 ## Our Pryzm Snapshot Server Setup
 
 | Size   | Timestamp    |
 |--------|--------------|
-| 15.07 GB | Thu, 11 Apr 2024 00:34:52 GMT  |
+| 10.05 GB | Thu, 11 Apr 2024 23:38:29 GMT  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

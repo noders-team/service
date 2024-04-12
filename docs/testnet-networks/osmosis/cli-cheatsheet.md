@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable osmosisd.service
+sudo systemctl enable osmosisd
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable osmosisd.service
+sudo systemctl disable osmosisd
 ```
 
 ### Start service
 ```js
-sudo systemctl start osmosisd.service
+sudo systemctl start osmosisd
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop osmosisd.service
+sudo systemctl stop osmosisd
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart osmosisd.service
+sudo systemctl restart osmosisd
 ```
 
 ### Check service status
 ```js
-sudo systemctl status osmosisd.service
+sudo systemctl status osmosisd
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u osmosisd.service -f --no-hostname -o cat
+sudo journalctl -u osmosisd -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop osmosisd.service
-sudo systemctl disable osmosisd.service
+sudo systemctl stop osmosisd
+sudo systemctl disable osmosisd
 sudo rm /etc/systemd/system/osmosisd.service
 sudo systemctl daemon-reload
 rm -f $(which osmosisd)

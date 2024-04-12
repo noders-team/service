@@ -1,14 +1,14 @@
 ---
 hide_table_of_contents: false
-title: "Bera"
+title: "BeraChain"
 ---
 
 import SmallCard from "../../src/components/SmallCard"
 import Card from "../../src/components/Card"
 import CardLayout from "../../src/layouts/CardLayout"
 
-<div class="h1-with-icon icon-bera">
-# Bera
+<div class="h1-with-icon icon-berachain">
+# BeraChain
 </div>
 ###### Chain ID: `artio-80085` | Current Node Version: `v0.2.3-alpha-rc7`
 
@@ -26,7 +26,7 @@ Official links of social networks of projects
     <SmallCard to="https://t.me/BerachainPortal" header={{label: "Telegram", translateId: "social-telegram"}} iconPath="img/telegram-icon.svg"/>
 </CardLayout>
 
-# Our validator in Bera network
+# Our validator in BeraChain network
 
 <CardLayout autoFitEnabled={true}>
     <Card

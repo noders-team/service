@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-jackal">
 # Installation
 </div>
-###### Chain ID: `jackal-1` | Current Node Version: `vnull`
+###### Chain ID: `jackal-1` | Current Node Version: `v3.2.1`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Jackal repo and build canined vnull
+### Clone Jackal repo and build canined v3.2.1
 ```js
 cd $HOME
 git clone https://github.com/JackalLabs/canine-chain.git
 cd canine-chain
-git checkout vnull
+git checkout v3.2.1
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.canine/cosmovisor/upgrades/vnull/bin
-mv $HOME/go/bin/canined ~/.canine/cosmovisor/upgrades/vnull/bin/
+mkdir -p ~/.canine/cosmovisor/upgrades/v3.2.1/bin
+mv $HOME/go/bin/canined ~/.canine/cosmovisor/upgrades/v3.2.1/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Jackal repo and build canined vnull
+### Clone Jackal repo and build canined v3.2.1
 ```js
 cd $HOME
 git clone https://github.com/JackalLabs/canine-chain.git
 cd canine-chain
-git checkout vnull
+git checkout v3.2.1
 ```
 
 ### Build binaries

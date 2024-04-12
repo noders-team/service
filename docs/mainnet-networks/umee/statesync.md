@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop umeed.service && umeed tendermint unsafe-reset-all --home ~/.umee --keep-addr-book
+sudo systemctl stop umeed && umeed tendermint unsafe-reset-all --home ~/.umee --keep-addr-book
 ```
 ```bash
 peers="8349a4ab1d96f63cd0c9ff603c9869810e4a8e15@umee-rpc.noders.services:32656"
@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.umee/config/config.toml
 ```
 ```bash
-sudo systemctl restart umeed.service && sudo journalctl -fu umeed.service --no-hostname -o cat
+sudo systemctl restart umeed && sudo journalctl -fu umeed --no-hostname -o cat
 ```

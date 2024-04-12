@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.sedad/config/config.toml
 ```
 ```bash
-sudo systemctl restart seda.service && sudo journalctl -fu seda.service --no-hostname -o cat
+sudo systemctl restart sedad && sudo journalctl -fu sedad --no-hostname -o cat
 ```

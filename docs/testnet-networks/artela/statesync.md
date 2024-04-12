@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.artelad/config/config.toml
 ```
 ```bash
-sudo systemctl restart artela.service && sudo journalctl -fu artela.service --no-hostname -o cat
+sudo systemctl restart artelad && sudo journalctl -fu artelad --no-hostname -o cat
 ```

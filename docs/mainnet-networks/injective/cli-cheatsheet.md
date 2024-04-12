@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-injective">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `injective-1` | Current Node Version: `vnull`
+###### Chain ID: `injective-1` | Current Node Version: `v1.12.1`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable injectived.service
+sudo systemctl enable injectived
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable injectived.service
+sudo systemctl disable injectived
 ```
 
 ### Start service
 ```js
-sudo systemctl start injectived.service
+sudo systemctl start injectived
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop injectived.service
+sudo systemctl stop injectived
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart injectived.service
+sudo systemctl restart injectived
 ```
 
 ### Check service status
 ```js
-sudo systemctl status injectived.service
+sudo systemctl status injectived
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u injectived.service -f --no-hostname -o cat
+sudo journalctl -u injectived -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop injectived.service
-sudo systemctl disable injectived.service
+sudo systemctl stop injectived
+sudo systemctl disable injectived
 sudo rm /etc/systemd/system/injectived.service
 sudo systemctl daemon-reload
 rm -f $(which injectived)

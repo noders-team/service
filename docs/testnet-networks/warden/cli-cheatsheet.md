@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable warden.service
+sudo systemctl enable wardend
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable warden.service
+sudo systemctl disable wardend
 ```
 
 ### Start service
 ```js
-sudo systemctl start warden.service
+sudo systemctl start wardend
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop warden.service
+sudo systemctl stop wardend
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart warden.service
+sudo systemctl restart wardend
 ```
 
 ### Check service status
 ```js
-sudo systemctl status warden.service
+sudo systemctl status wardend
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u warden.service -f --no-hostname -o cat
+sudo journalctl -u wardend -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop warden.service
-sudo systemctl disable warden.service
+sudo systemctl stop wardend
+sudo systemctl disable wardend
 sudo rm /etc/systemd/system/warden.service
 sudo systemctl daemon-reload
 rm -f $(which wardend)

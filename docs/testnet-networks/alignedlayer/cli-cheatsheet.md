@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable alignedlayerd.service
+sudo systemctl enable alignedlayerd
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable alignedlayerd.service
+sudo systemctl disable alignedlayerd
 ```
 
 ### Start service
 ```js
-sudo systemctl start alignedlayerd.service
+sudo systemctl start alignedlayerd
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop alignedlayerd.service
+sudo systemctl stop alignedlayerd
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart alignedlayerd.service
+sudo systemctl restart alignedlayerd
 ```
 
 ### Check service status
 ```js
-sudo systemctl status alignedlayerd.service
+sudo systemctl status alignedlayerd
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u alignedlayerd.service -f --no-hostname -o cat
+sudo journalctl -u alignedlayerd -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop alignedlayerd.service
-sudo systemctl disable alignedlayerd.service
+sudo systemctl stop alignedlayerd
+sudo systemctl disable alignedlayerd
 sudo rm /etc/systemd/system/alignedlayerd.service
 sudo systemctl daemon-reload
 rm -f $(which alignedlayerd)

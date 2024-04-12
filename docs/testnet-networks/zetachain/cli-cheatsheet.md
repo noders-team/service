@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable zetacore.service
+sudo systemctl enable zetacored
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable zetacore.service
+sudo systemctl disable zetacored
 ```
 
 ### Start service
 ```js
-sudo systemctl start zetacore.service
+sudo systemctl start zetacored
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop zetacore.service
+sudo systemctl stop zetacored
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart zetacore.service
+sudo systemctl restart zetacored
 ```
 
 ### Check service status
 ```js
-sudo systemctl status zetacore.service
+sudo systemctl status zetacored
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u zetacore.service -f --no-hostname -o cat
+sudo journalctl -u zetacored -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop zetacore.service
-sudo systemctl disable zetacore.service
+sudo systemctl stop zetacored
+sudo systemctl disable zetacored
 sudo rm /etc/systemd/system/zetacore.service
 sudo systemctl daemon-reload
 rm -f $(which zetacored)

@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.celestia-app/config/config.toml
 ```
 ```bash
-sudo systemctl restart celestia.service && sudo journalctl -fu celestia.service --no-hostname -o cat
+sudo systemctl restart celestia-appd && sudo journalctl -fu celestia-appd --no-hostname -o cat
 ```

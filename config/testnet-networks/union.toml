@@ -1,6 +1,7 @@
 # Blockchain
 CHAIN_NAME="Union"
 CHAIN_SYSTEM_NAME="union"
+VERSION_HAND="v0.19.0"
 CHAIN_ID="auto"
 VERSION="auto"
 CHAIN_DESCRIPTION="""# Union: Building Bridges in DeFi Ecosystems
@@ -22,7 +23,7 @@ DAEMON_HOME="~/.union"
 ENDPOINT_RPC="https://union-t-rpc.noders.services"
 ENDPOINT_API="https://union-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://union-t-grpc.noders.services"
+ENDPOINT_GRPC="union-t-grpc.noders.services:11090"
 ENDPOINT_PEER="auto"
 
 # Social

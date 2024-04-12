@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.band/config/config.toml
 ```
 ```bash
-sudo systemctl restart band.service && sudo journalctl -fu band.service --no-hostname -o cat
+sudo systemctl restart bandd && sudo journalctl -fu bandd --no-hostname -o cat
 ```

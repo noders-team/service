@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-andromeda">
 # Installation
 </div>
-###### Chain ID: `` | Current Node Version: `vandromeda-1-v0.1.0`
+###### Chain ID: `andromeda-1` | Current Node Version: `vandromeda-1-v0.1.0`
 
 ## Install dependencies
 
@@ -136,14 +136,14 @@ sudo systemctl enable andromedad
 ## Node configuration
 ### Set config
 ```js
-andromedad config chain-id 
+andromedad config chain-id andromeda-1
 andromedad config keyring-backend os
 andromedad config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-andromedad init NAME_OF_YOUR_VALIDATOR --chain-id 
+andromedad init NAME_OF_YOUR_VALIDATOR --chain-id andromeda-1
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config.noders.services/andromeda/addrbook.json -o ~/.andromeda/conf
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@andromeda-rpc.noders.services:\"/" ~/.andromeda/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"c1cde7020a3f96c7480702ede7ce470f4140bb8f@andromeda-rpc.noders.services:34656\"/" ~/.andromeda/config/config.toml
 ```
 
 ### Set minimum gas price

@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable entrypoint.service
+sudo systemctl enable entrypointd
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable entrypoint.service
+sudo systemctl disable entrypointd
 ```
 
 ### Start service
 ```js
-sudo systemctl start entrypoint.service
+sudo systemctl start entrypointd
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop entrypoint.service
+sudo systemctl stop entrypointd
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart entrypoint.service
+sudo systemctl restart entrypointd
 ```
 
 ### Check service status
 ```js
-sudo systemctl status entrypoint.service
+sudo systemctl status entrypointd
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u entrypoint.service -f --no-hostname -o cat
+sudo journalctl -u entrypointd -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop entrypoint.service
-sudo systemctl disable entrypoint.service
+sudo systemctl stop entrypointd
+sudo systemctl disable entrypointd
 sudo rm /etc/systemd/system/entrypoint.service
 sudo systemctl daemon-reload
 rm -f $(which entrypointd)

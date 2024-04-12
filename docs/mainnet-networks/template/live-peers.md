@@ -22,8 +22,8 @@ Here is a script for you to update `persistent_peers` setting in `config.toml`. 
 PEERS=[LIVE_PEERS_RANDOM]
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" [DAEMON_HOME]/config/config.toml
 
-sudo systemctl restart [DAEMON_SERVICE]
-sudo journalctl -fu [DAEMON_SERVICE] --no-hostname -o cat
+sudo systemctl restart [DAEMON_NAME]
+sudo journalctl -fu [DAEMON_NAME] --no-hostname -o cat
 ```
 
 ## Our peer for [CHAIN_NAME]

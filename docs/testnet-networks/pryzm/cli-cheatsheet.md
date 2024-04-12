@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-pryzm">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `indigo-1` | Current Node Version: `v0.11.1`
+###### Chain ID: `indigo-1` | Current Node Version: `v0.13.0`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable pryzm.service
+sudo systemctl enable pryzmd
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable pryzm.service
+sudo systemctl disable pryzmd
 ```
 
 ### Start service
 ```js
-sudo systemctl start pryzm.service
+sudo systemctl start pryzmd
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop pryzm.service
+sudo systemctl stop pryzmd
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart pryzm.service
+sudo systemctl restart pryzmd
 ```
 
 ### Check service status
 ```js
-sudo systemctl status pryzm.service
+sudo systemctl status pryzmd
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u pryzm.service -f --no-hostname -o cat
+sudo journalctl -u pryzmd -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop pryzm.service
-sudo systemctl disable pryzm.service
+sudo systemctl stop pryzmd
+sudo systemctl disable pryzmd
 sudo rm /etc/systemd/system/pryzm.service
 sudo systemctl daemon-reload
 rm -f $(which pryzmd)

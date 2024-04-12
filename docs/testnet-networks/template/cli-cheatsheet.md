@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable [DAEMON_SERVICE]
+sudo systemctl enable [DAEMON_NAME]
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable [DAEMON_SERVICE]
+sudo systemctl disable [DAEMON_NAME]
 ```
 
 ### Start service
 ```js
-sudo systemctl start [DAEMON_SERVICE]
+sudo systemctl start [DAEMON_NAME]
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop [DAEMON_SERVICE]
+sudo systemctl stop [DAEMON_NAME]
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart [DAEMON_SERVICE]
+sudo systemctl restart [DAEMON_NAME]
 ```
 
 ### Check service status
 ```js
-sudo systemctl status [DAEMON_SERVICE]
+sudo systemctl status [DAEMON_NAME]
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u [DAEMON_SERVICE] -f --no-hostname -o cat
+sudo journalctl -u [DAEMON_NAME] -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop [DAEMON_SERVICE]
-sudo systemctl disable [DAEMON_SERVICE]
+sudo systemctl stop [DAEMON_NAME]
+sudo systemctl disable [DAEMON_NAME]
 sudo rm /etc/systemd/system/[DAEMON_SERVICE]
 sudo systemctl daemon-reload
 rm -f $(which [DAEMON_NAME])

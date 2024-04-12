@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-injective">
 # State sync
 </div>
-###### Chain ID: `injective-1` | Current Node Version: `vnull`
+###### Chain ID: `injective-1` | Current Node Version: `v1.12.1`
 
 ```bash
 SNAP_RPC=https://injective-rpc.noders.services:443 && \
@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop injectived.service && injectived tendermint unsafe-reset-all --home ~/.injectived --keep-addr-book
+sudo systemctl stop injectived && injectived tendermint unsafe-reset-all --home ~/.injectived --keep-addr-book
 ```
 ```bash
 peers="b96ce37010e0b3baa5020b536822ccba511c8f5f@injective-rpc.noders.services:33656"
@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.injectived/config/config.toml
 ```
 ```bash
-sudo systemctl restart injectived.service && sudo journalctl -fu injectived.service --no-hostname -o cat
+sudo systemctl restart injectived && sudo journalctl -fu injectived --no-hostname -o cat
 ```

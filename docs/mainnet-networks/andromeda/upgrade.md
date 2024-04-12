@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-andromeda">
 # Upgrade
 </div>
-###### Chain ID: `` | Current Node Version: `vandromeda-1-v0.1.0`
+###### Chain ID: `andromeda-1` | Current Node Version: `vandromeda-1-v0.1.0`
 
 
 # Clone Andromeda repository

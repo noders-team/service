@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop rebusd.service && rebusd tendermint unsafe-reset-all --home ~/.rebusd --keep-addr-book
+sudo systemctl stop rebusd && rebusd tendermint unsafe-reset-all --home ~/.rebusd --keep-addr-book
 ```
 ```bash
 peers="5e2cec275c80ad800e7c071235a37f87ec0ec9ff@rebus-rpc.noders.services:18656"
@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.rebusd/config/config.toml
 ```
 ```bash
-sudo systemctl restart rebusd.service && sudo journalctl -fu rebusd.service --no-hostname -o cat
+sudo systemctl restart rebusd && sudo journalctl -fu rebusd --no-hostname -o cat
 ```

@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable artela.service
+sudo systemctl enable artelad
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable artela.service
+sudo systemctl disable artelad
 ```
 
 ### Start service
 ```js
-sudo systemctl start artela.service
+sudo systemctl start artelad
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop artela.service
+sudo systemctl stop artelad
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart artela.service
+sudo systemctl restart artelad
 ```
 
 ### Check service status
 ```js
-sudo systemctl status artela.service
+sudo systemctl status artelad
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u artela.service -f --no-hostname -o cat
+sudo journalctl -u artelad -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop artela.service
-sudo systemctl disable artela.service
+sudo systemctl stop artelad
+sudo systemctl disable artelad
 sudo rm /etc/systemd/system/artela.service
 sudo systemctl daemon-reload
 rm -f $(which artelad)

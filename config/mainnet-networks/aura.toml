@@ -22,7 +22,7 @@ DAEMON_HOME="~/.aura"
 ENDPOINT_RPC="https://aura-rpc.noders.services"
 ENDPOINT_API="https://aura-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://aura-grpc.noders.services"
+ENDPOINT_GRPC="aura-grpc.noders.services:17090"
 ENDPOINT_PEER="auto"
 
 # Social

@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-injective">
 # Upgrade
 </div>
-###### Chain ID: `injective-1` | Current Node Version: `vnull`
+###### Chain ID: `injective-1` | Current Node Version: `v1.12.1`
 
 
 # Clone Injective repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf InjectiveLabs
 git clone https://github.com/InjectiveLabs.git
 cd InjectiveLabs
-git checkout vnull
+git checkout v1.12.1
  ```
 
 # Build binaries
@@ -26,8 +26,8 @@ make build
 
 # Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.injectived/cosmovisor/upgrades/vnull/bin
-mv build/injectived ~/.injectived/cosmovisor/upgrades/vnull/bin/
+mkdir -p ~/.injectived/cosmovisor/upgrades/v1.12.1/bin
+mv build/injectived ~/.injectived/cosmovisor/upgrades/v1.12.1/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf InjectiveLabs
 git clone https://github.com/InjectiveLabs.git
 cd InjectiveLabs
-git checkout vnull
+git checkout v1.12.1
  ```
 
 ## Build binaries

@@ -2,6 +2,7 @@
 CHAIN_NAME="Rrouter"
 CHAIN_SYSTEM_NAME="router"
 CHAIN_ID="auto"
+VERSION_HAND="v1.0.0-rc1"
 VERSION="auto"
 CHAIN_DESCRIPTION="""# Router Protocol: Bridging the Gap in Multi-Chain Connectivity
 
@@ -22,7 +23,7 @@ DAEMON_HOME="~/.routerd"
 ENDPOINT_RPC="https://router-t-rpc.noders.services"
 ENDPOINT_API="https://router-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://router-t-grpc.noders.services"
+ENDPOINT_GRPC="router-t-grpc.noders.services:22090"
 ENDPOINT_PEER="auto"
 
 # Social

@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable aurad.service
+sudo systemctl enable aurad
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable aurad.service
+sudo systemctl disable aurad
 ```
 
 ### Start service
 ```js
-sudo systemctl start aurad.service
+sudo systemctl start aurad
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop aurad.service
+sudo systemctl stop aurad
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart aurad.service
+sudo systemctl restart aurad
 ```
 
 ### Check service status
 ```js
-sudo systemctl status aurad.service
+sudo systemctl status aurad
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u aurad.service -f --no-hostname -o cat
+sudo journalctl -u aurad -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop aurad.service
-sudo systemctl disable aurad.service
+sudo systemctl stop aurad
+sudo systemctl disable aurad
 sudo rm /etc/systemd/system/aurad.service
 sudo systemctl daemon-reload
 rm -f $(which aurad)

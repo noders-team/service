@@ -22,7 +22,7 @@ DAEMON_HOME="~/.artelad"
 ENDPOINT_RPC="https://artela-t-rpc.noders.services"
 ENDPOINT_API="https://artela-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://artela-t-grpc.noders.services"
+ENDPOINT_GRPC="artela-t-grpc.noders.services:18090"
 ENDPOINT_PEER="auto"
 
 # Social

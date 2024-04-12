@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-jackal">
 # State sync
 </div>
-###### Chain ID: `jackal-1` | Current Node Version: `vnull`
+###### Chain ID: `jackal-1` | Current Node Version: `v3.2.1`
 
 ```bash
 SNAP_RPC=https://jackal-rpc.noders.services:443 && \
@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop canined.service && canined tendermint unsafe-reset-all --home ~/.canine --keep-addr-book
+sudo systemctl stop canined && canined tendermint unsafe-reset-all --home ~/.canine --keep-addr-book
 ```
 ```bash
 peers="5b622b13c4b0bdeea993bc3ec4d9cf269819893e@jackal-rpc.noders.services:26656"
@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.canine/config/config.toml
 ```
 ```bash
-sudo systemctl restart canined.service && sudo journalctl -fu canined.service --no-hostname -o cat
+sudo systemctl restart canined && sudo journalctl -fu canined --no-hostname -o cat
 ```

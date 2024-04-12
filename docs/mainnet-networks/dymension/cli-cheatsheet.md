@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable dymd.service
+sudo systemctl enable dymd
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable dymd.service
+sudo systemctl disable dymd
 ```
 
 ### Start service
 ```js
-sudo systemctl start dymd.service
+sudo systemctl start dymd
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop dymd.service
+sudo systemctl stop dymd
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart dymd.service
+sudo systemctl restart dymd
 ```
 
 ### Check service status
 ```js
-sudo systemctl status dymd.service
+sudo systemctl status dymd
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u dymd.service -f --no-hostname -o cat
+sudo journalctl -u dymd -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop dymd.service
-sudo systemctl disable dymd.service
+sudo systemctl stop dymd
+sudo systemctl disable dymd
 sudo rm /etc/systemd/system/dymd.service
 sudo systemctl daemon-reload
 rm -f $(which dymd)

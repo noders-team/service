@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop celestia-appd.service && celestia-appd tendermint unsafe-reset-all --home ~/.celestia-app --keep-addr-book
+sudo systemctl stop celestia-appd && celestia-appd tendermint unsafe-reset-all --home ~/.celestia-app --keep-addr-book
 ```
 ```bash
 peers="27f6bac8492b1597146b6c4aeddc4d328fa8ac28@celestia-rpc.noders.services:11656"
@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.celestia-app/config/config.toml
 ```
 ```bash
-sudo systemctl restart celestia-appd.service && sudo journalctl -fu celestia-appd.service --no-hostname -o cat
+sudo systemctl restart celestia-appd && sudo journalctl -fu celestia-appd --no-hostname -o cat
 ```

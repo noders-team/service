@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-union">
 # Installation
 </div>
-###### Chain ID: `union-testnet-6` | Current Node Version: `vnull`
+###### Chain ID: `union-testnet-6` | Current Node Version: `v0.19.0`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Union repo and build uniond vnull
+### Clone Union repo and build uniond v0.19.0
 ```js
 cd $HOME
 git clone https://github.com/unionlabs.git
 cd unionlabs
-git checkout vnull
+git checkout v0.19.0
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.union/cosmovisor/upgrades/vnull/bin
-mv $HOME/go/bin/uniond ~/.union/cosmovisor/upgrades/vnull/bin/
+mkdir -p ~/.union/cosmovisor/upgrades/v0.19.0/bin
+mv $HOME/go/bin/uniond ~/.union/cosmovisor/upgrades/v0.19.0/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Union repo and build uniond vnull
+### Clone Union repo and build uniond v0.19.0
 ```js
 cd $HOME
 git clone https://github.com/unionlabs.git
 cd unionlabs
-git checkout vnull
+git checkout v0.19.0
 ```
 
 ### Build binaries

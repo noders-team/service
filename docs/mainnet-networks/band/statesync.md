@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-band">
 # State sync
 </div>
-###### Chain ID: `laozi-mainnet` | Current Node Version: `v2.5.4`
+###### Chain ID: `` | Current Node Version: `vauto`
 
 ```bash
 SNAP_RPC=https://band-rpc.noders.services:443 && \
@@ -17,10 +17,10 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop band.service && bandd tendermint unsafe-reset-all --home ~/.band --keep-addr-book
+sudo systemctl stop bandd && bandd tendermint unsafe-reset-all --home ~/.band --keep-addr-book
 ```
 ```bash
-peers="9bb1dc1d54ad290b7b17960bb0313dfd14426b68@band-rpc.noders.services:30656"
+peers="@band-rpc.noders.services:"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.band/config/config.toml
 ```
 ```bash
@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.band/config/config.toml
 ```
 ```bash
-sudo systemctl restart band.service && sudo journalctl -fu band.service --no-hostname -o cat
+sudo systemctl restart bandd && sudo journalctl -fu bandd --no-hostname -o cat
 ```

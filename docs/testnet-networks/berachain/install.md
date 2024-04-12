@@ -4,7 +4,7 @@ title: Installation
 sidebar_position: 2
 ---
 
-<div class="h1-with-icon icon-bera">
+<div class="h1-with-icon icon-berachain">
 # Installation
 </div>
 ###### Chain ID: `artio-80085` | Current Node Version: `v0.2.3-alpha-rc7`
@@ -36,7 +36,7 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Bera repo and build berad v0.2.3-alpha-rc7
+### Clone BeraChain repo and build berad v0.2.3-alpha-rc7
 ```js
 cd $HOME
 git clone https://github.com/berachain.git
@@ -51,14 +51,14 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.bera/cosmovisor/upgrades/v0.2.3-alpha-rc7/bin
-mv $HOME/go/bin/berad ~/.bera/cosmovisor/upgrades/v0.2.3-alpha-rc7/bin/
+mkdir -p ~/.berad/cosmovisor/upgrades/v0.2.3-alpha-rc7/bin
+mv $HOME/go/bin/berad ~/.berad/cosmovisor/upgrades/v0.2.3-alpha-rc7/bin/
 ```
 
 ### Create symlinks
 ```js
-sudo ln -s ~/.bera/cosmovisor/genesis ~/.bera/cosmovisor/current -f
-sudo ln -s ~/.bera/cosmovisor/current/bin/berad /usr/local/bin/berad -f
+sudo ln -s ~/.berad/cosmovisor/genesis ~/.berad/cosmovisor/current -f
+sudo ln -s ~/.berad/cosmovisor/current/bin/berad /usr/local/bin/berad -f
 ```
 
 ## Download and install Cosmovisor
@@ -71,7 +71,7 @@ go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
 ```js
 sudo tee /etc/systemd/system/berad.service > /dev/null << EOF
 [Unit]
-Description=bera node service
+Description=berachain node service
 After=network-online.target
 
 [Service]
@@ -80,10 +80,10 @@ ExecStart=$(which cosmovisor) run start
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
-Environment="DAEMON_HOME=~/.bera"
+Environment="DAEMON_HOME=~/.berad"
 Environment="DAEMON_NAME=berad"
 Environment="UNSAFE_SKIP_BACKUP=true"
-Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/.bera/cosmovisor/current/bin"
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/.berad/cosmovisor/current/bin"
 
 [Install]
 WantedBy=multi-user.target
@@ -93,7 +93,7 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Bera repo and build berad v0.2.3-alpha-rc7
+### Clone BeraChain repo and build berad v0.2.3-alpha-rc7
 ```js
 cd $HOME
 git clone https://github.com/berachain.git
@@ -111,7 +111,7 @@ make install
 ```js
 sudo tee /etc/systemd/system/berad.service > /dev/null << EOF
 [Unit]
-Description=bera node service
+Description=berachain node service
 After=network-online.target
 
 [Service]
@@ -148,17 +148,17 @@ berad init NAME_OF_YOUR_VALIDATOR --chain-id artio-80085
 
 ### Download genesis and addrbook
 ```js
-curl https://config-t.noders.services/bera/genesis.json -o ~/.bera/config/genesis.json
-curl https://config-t.noders.services/bera/addrbook.json -o ~/.bera/config/addrbook.json
+curl https://config-t.noders.services/berachain/genesis.json -o ~/.berad/config/genesis.json
+curl https://config-t.noders.services/berachain/addrbook.json -o ~/.berad/config/addrbook.json
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"f4f9dd773bad1363cbc85ce7534bfd172c2d83b4@berachain-t-rpc.noders.services:16656\"/" ~/.bera/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"f4f9dd773bad1363cbc85ce7534bfd172c2d83b4@berachain-t-rpc.noders.services:16656\"/" ~/.berad/config/config.toml
 ```
 
 ### Set minimum gas price
 ```js
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001uabgt\"|" ~/.bera/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001uabgt\"|" ~/.berad/config/app.toml
 ```
 ### Set pruning
 ```js
@@ -167,7 +167,7 @@ sed -i \
   -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
   -e 's|^pruning-keep-every *=.*|pruning-keep-every = "0"|' \
   -e 's|^pruning-interval *=.*|pruning-interval = "19"|' \
-  ~/.bera/config/app.toml
+  ~/.berad/config/app.toml
 ```
 
 ### Set custom ports
@@ -184,14 +184,14 @@ sed -i.bak -e "s%:1317%:${berad_PORT}317%g" \
 -e "s%:9091%:${berad_PORT}091%g" \
 -e "s%:8545%:${berad_PORT}545%g" \
 -e "s%:8546%:${berad_PORT}546%g" \
--e "s%:6065%:${berad_PORT}065%g" ~/.bera/config/app.toml
+-e "s%:6065%:${berad_PORT}065%g" ~/.berad/config/app.toml
 
 # Set custom ports in config.toml file
 sed -i.bak -e "s%:26658%:${SWISS_PORT}658%g" \
 -e "s%:26657%:${berad_PORT}657%g" \
 -e "s%:6060%:${berad_PORT}060%g" \
 -e "s%:26656%:${berad_PORT}656%g" \
--e "s%:26660%:${berad_PORT}660%g" ~/.bera/config/config.toml
+-e "s%:26660%:${berad_PORT}660%g" ~/.berad/config/config.toml
 ```
 
 ### Start node and check logs

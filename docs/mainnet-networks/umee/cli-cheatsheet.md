@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable umeed.service
+sudo systemctl enable umeed
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable umeed.service
+sudo systemctl disable umeed
 ```
 
 ### Start service
 ```js
-sudo systemctl start umeed.service
+sudo systemctl start umeed
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop umeed.service
+sudo systemctl stop umeed
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart umeed.service
+sudo systemctl restart umeed
 ```
 
 ### Check service status
 ```js
-sudo systemctl status umeed.service
+sudo systemctl status umeed
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u umeed.service -f --no-hostname -o cat
+sudo journalctl -u umeed -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop umeed.service
-sudo systemctl disable umeed.service
+sudo systemctl stop umeed
+sudo systemctl disable umeed
 sudo rm /etc/systemd/system/umeed.service
 sudo systemctl daemon-reload
 rm -f $(which umeed)

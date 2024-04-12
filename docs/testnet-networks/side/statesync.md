@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.side/config/config.toml
 ```
 ```bash
-sudo systemctl restart sided.service && sudo journalctl -fu sided.service --no-hostname -o cat
+sudo systemctl restart sided && sudo journalctl -fu sided --no-hostname -o cat
 ```

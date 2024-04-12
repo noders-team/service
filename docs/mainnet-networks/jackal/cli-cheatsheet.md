@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-jackal">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `jackal-1` | Current Node Version: `vnull`
+###### Chain ID: `jackal-1` | Current Node Version: `v3.2.1`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable canined.service
+sudo systemctl enable canined
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable canined.service
+sudo systemctl disable canined
 ```
 
 ### Start service
 ```js
-sudo systemctl start canined.service
+sudo systemctl start canined
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop canined.service
+sudo systemctl stop canined
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart canined.service
+sudo systemctl restart canined
 ```
 
 ### Check service status
 ```js
-sudo systemctl status canined.service
+sudo systemctl status canined
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u canined.service -f --no-hostname -o cat
+sudo journalctl -u canined -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop canined.service
-sudo systemctl disable canined.service
+sudo systemctl stop canined
+sudo systemctl disable canined
 sudo rm /etc/systemd/system/canined.service
 sudo systemctl daemon-reload
 rm -f $(which canined)

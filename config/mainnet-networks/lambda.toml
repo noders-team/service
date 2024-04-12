@@ -24,7 +24,7 @@ DAEMON_HOME="~/.lambdavm"
 ENDPOINT_RPC="https://lambda-rpc.noders.services"
 ENDPOINT_API="https://lambda-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://lambda-grpc.noders.services"
+ENDPOINT_GRPC="lambda-grpc.noders.services:31090"
 ENDPOINT_PEER="auto"
 
 # Social

@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-union">
 # Union
 </div>
-###### Chain ID: `union-testnet-6` | Current Node Version: `vnull`
+###### Chain ID: `union-testnet-6` | Current Node Version: `v0.19.0`
 
 
 Union is poised to transform the decentralized finance landscape by introducing a comprehensive platform designed to enhance connectivity, security, and functionality across various DeFi ecosystems. By leveraging cutting-edge blockchain technology, Union aims to provide a unified framework that addresses the current challenges of interoperability, liquidity, and user experience in DeFi. The platform offers a suite of tools and services, including cross-chain asset swaps, integrated liquidity pools, and advanced security protocols, to empower users and developers alike. Union's mission is to foster a more accessible, efficient, and inclusive financial system by connecting disparate blockchain networks and enabling seamless interaction among diverse DeFi applications.

@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable celestia.service
+sudo systemctl enable celestia-appd
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable celestia.service
+sudo systemctl disable celestia-appd
 ```
 
 ### Start service
 ```js
-sudo systemctl start celestia.service
+sudo systemctl start celestia-appd
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop celestia.service
+sudo systemctl stop celestia-appd
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart celestia.service
+sudo systemctl restart celestia-appd
 ```
 
 ### Check service status
 ```js
-sudo systemctl status celestia.service
+sudo systemctl status celestia-appd
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u celestia.service -f --no-hostname -o cat
+sudo journalctl -u celestia-appd -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop celestia.service
-sudo systemctl disable celestia.service
+sudo systemctl stop celestia-appd
+sudo systemctl disable celestia-appd
 sudo rm /etc/systemd/system/celestia.service
 sudo systemctl daemon-reload
 rm -f $(which celestia-appd)

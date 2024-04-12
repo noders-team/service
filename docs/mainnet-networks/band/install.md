@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-band">
 # Installation
 </div>
-###### Chain ID: `laozi-mainnet` | Current Node Version: `v2.5.4`
+###### Chain ID: `` | Current Node Version: `vauto`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Band repo and build bandd v2.5.4
+### Clone Band repo and build bandd vauto
 ```js
 cd $HOME
 git clone https://github.com/bandprotocol/chain.git
 cd chain
-git checkout v2.5.4
+git checkout vauto
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.band/cosmovisor/upgrades/v2.5.4/bin
-mv $HOME/go/bin/bandd ~/.band/cosmovisor/upgrades/v2.5.4/bin/
+mkdir -p ~/.band/cosmovisor/upgrades/vauto/bin
+mv $HOME/go/bin/bandd ~/.band/cosmovisor/upgrades/vauto/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Band repo and build bandd v2.5.4
+### Clone Band repo and build bandd vauto
 ```js
 cd $HOME
 git clone https://github.com/bandprotocol/chain.git
 cd chain
-git checkout v2.5.4
+git checkout vauto
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable bandd
 ## Node configuration
 ### Set config
 ```js
-bandd config chain-id laozi-mainnet
+bandd config chain-id 
 bandd config keyring-backend os
 bandd config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-bandd init NAME_OF_YOUR_VALIDATOR --chain-id laozi-mainnet
+bandd init NAME_OF_YOUR_VALIDATOR --chain-id 
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config.noders.services/band/addrbook.json -o ~/.band/config/addrboo
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"9bb1dc1d54ad290b7b17960bb0313dfd14426b68@band-rpc.noders.services:30656\"/" ~/.band/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@band-rpc.noders.services:\"/" ~/.band/config/config.toml
 ```
 
 ### Set minimum gas price

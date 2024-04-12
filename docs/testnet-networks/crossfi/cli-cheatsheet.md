@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable crossfi.service
+sudo systemctl enable crossfid
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable crossfi.service
+sudo systemctl disable crossfid
 ```
 
 ### Start service
 ```js
-sudo systemctl start crossfi.service
+sudo systemctl start crossfid
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop crossfi.service
+sudo systemctl stop crossfid
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart crossfi.service
+sudo systemctl restart crossfid
 ```
 
 ### Check service status
 ```js
-sudo systemctl status crossfi.service
+sudo systemctl status crossfid
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u crossfi.service -f --no-hostname -o cat
+sudo journalctl -u crossfid -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop crossfi.service
-sudo systemctl disable crossfi.service
+sudo systemctl stop crossfid
+sudo systemctl disable crossfid
 sudo rm /etc/systemd/system/crossfi.service
 sudo systemctl daemon-reload
 rm -f $(which crossfid)

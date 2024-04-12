@@ -2,6 +2,7 @@
 CHAIN_NAME="Jackal"
 CHAIN_SYSTEM_NAME="jackal"
 CHAIN_ID="auto"
+VERSION_HAND="v3.2.1"
 VERSION="auto"
 CHAIN_DESCRIPTION="""# Jackal Protocol: Pioneering Decentralized Data Storage
 
@@ -24,7 +25,7 @@ DAEMON_HOME="~/.canine"
 ENDPOINT_RPC="https://jackal-rpc.noders.services"
 ENDPOINT_API="https://jackal-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://jackal-grpc.noders.services"
+ENDPOINT_GRPC="jackal-grpc.noders.services:26090"
 ENDPOINT_PEER="auto"
 
 # Social

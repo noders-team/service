@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable humansd.service
+sudo systemctl enable humansd
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable humansd.service
+sudo systemctl disable humansd
 ```
 
 ### Start service
 ```js
-sudo systemctl start humansd.service
+sudo systemctl start humansd
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop humansd.service
+sudo systemctl stop humansd
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart humansd.service
+sudo systemctl restart humansd
 ```
 
 ### Check service status
 ```js
-sudo systemctl status humansd.service
+sudo systemctl status humansd
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u humansd.service -f --no-hostname -o cat
+sudo journalctl -u humansd -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop humansd.service
-sudo systemctl disable humansd.service
+sudo systemctl stop humansd
+sudo systemctl disable humansd
 sudo rm /etc/systemd/system/humansd.service
 sudo systemctl daemon-reload
 rm -f $(which humansd)

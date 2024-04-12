@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable lambdavm.service
+sudo systemctl enable lambdavm
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable lambdavm.service
+sudo systemctl disable lambdavm
 ```
 
 ### Start service
 ```js
-sudo systemctl start lambdavm.service
+sudo systemctl start lambdavm
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop lambdavm.service
+sudo systemctl stop lambdavm
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart lambdavm.service
+sudo systemctl restart lambdavm
 ```
 
 ### Check service status
 ```js
-sudo systemctl status lambdavm.service
+sudo systemctl status lambdavm
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u lambdavm.service -f --no-hostname -o cat
+sudo journalctl -u lambdavm -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop lambdavm.service
-sudo systemctl disable lambdavm.service
+sudo systemctl stop lambdavm
+sudo systemctl disable lambdavm
 sudo rm /etc/systemd/system/lambdavm.service
 sudo systemctl daemon-reload
 rm -f $(which lambdavm)

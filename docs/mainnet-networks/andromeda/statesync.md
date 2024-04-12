@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-andromeda">
 # State sync
 </div>
-###### Chain ID: `` | Current Node Version: `vandromeda-1-v0.1.0`
+###### Chain ID: `andromeda-1` | Current Node Version: `vandromeda-1-v0.1.0`
 
 ```bash
 SNAP_RPC=https://andromeda-rpc.noders.services:443 && \
@@ -17,10 +17,10 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop andromedad.service && andromedad tendermint unsafe-reset-all --home ~/.andromeda --keep-addr-book
+sudo systemctl stop andromedad && andromedad tendermint unsafe-reset-all --home ~/.andromeda --keep-addr-book
 ```
 ```bash
-peers="@andromeda-rpc.noders.services:"
+peers="c1cde7020a3f96c7480702ede7ce470f4140bb8f@andromeda-rpc.noders.services:34656"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.andromeda/config/config.toml
 ```
 ```bash
@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.andromeda/config/config.toml
 ```
 ```bash
-sudo systemctl restart andromedad.service && sudo journalctl -fu andromedad.service --no-hostname -o cat
+sudo systemctl restart andromedad && sudo journalctl -fu andromedad --no-hostname -o cat
 ```

@@ -22,7 +22,7 @@ DAEMON_HOME="~/.entrypoint"
 ENDPOINT_RPC="https://entrypoint-t-rpc.noders.services"
 ENDPOINT_API="https://entrypoint-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://entrypoint-t-grpc.noders.services"
+ENDPOINT_GRPC="entrypoint-t-grpc.noders.services:15090"
 ENDPOINT_PEER="auto"
 
 # Social

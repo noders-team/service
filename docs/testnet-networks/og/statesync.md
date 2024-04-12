@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.evmosd/config/config.toml
 ```
 ```bash
-sudo systemctl restart 0g.service && sudo journalctl -fu 0g.service --no-hostname -o cat
+sudo systemctl restart evmosd && sudo journalctl -fu evmosd --no-hostname -o cat
 ```

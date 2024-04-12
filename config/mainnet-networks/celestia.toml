@@ -22,7 +22,7 @@ DAEMON_HOME="~/.celestia-app"
 ENDPOINT_RPC="https://celestia-rpc.noders.services"
 ENDPOINT_API="https://celestia-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://celestia-grpc.noders.services"
+ENDPOINT_GRPC="celestia-grpc.noders.services:11090"
 ENDPOINT_PEER="auto"
 
 # Social

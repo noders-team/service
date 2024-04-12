@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable haqqd.service
+sudo systemctl enable haqqd
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable haqqd.service
+sudo systemctl disable haqqd
 ```
 
 ### Start service
 ```js
-sudo systemctl start haqqd.service
+sudo systemctl start haqqd
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop haqqd.service
+sudo systemctl stop haqqd
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart haqqd.service
+sudo systemctl restart haqqd
 ```
 
 ### Check service status
 ```js
-sudo systemctl status haqqd.service
+sudo systemctl status haqqd
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u haqqd.service -f --no-hostname -o cat
+sudo journalctl -u haqqd -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop haqqd.service
-sudo systemctl disable haqqd.service
+sudo systemctl stop haqqd
+sudo systemctl disable haqqd
 sudo rm /etc/systemd/system/haqqd.service
 sudo systemctl daemon-reload
 rm -f $(which haqqd)

@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.mineplex-chain/config/config.toml
 ```
 ```bash
-sudo systemctl restart crossfi.service && sudo journalctl -fu crossfi.service --no-hostname -o cat
+sudo systemctl restart crossfid && sudo journalctl -fu crossfid --no-hostname -o cat
 ```

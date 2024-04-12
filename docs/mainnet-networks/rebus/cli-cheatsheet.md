@@ -229,44 +229,44 @@ sudo systemctl daemon-reload
 
 ### Enable service
 ```js
-sudo systemctl enable rebusd.service
+sudo systemctl enable rebusd
 ```
 
 ### Disable service
 ```js
-sudo systemctl disable rebusd.service
+sudo systemctl disable rebusd
 ```
 
 ### Start service
 ```js
-sudo systemctl start rebusd.service
+sudo systemctl start rebusd
 ```
 
 ### Stop service
 ```js
-sudo systemctl stop rebusd.service
+sudo systemctl stop rebusd
 ```
 
 ### Restart service
 ```js
-sudo systemctl restart rebusd.service
+sudo systemctl restart rebusd
 ```
 
 ### Check service status
 ```js
-sudo systemctl status rebusd.service
+sudo systemctl status rebusd
 ```
 
 ### Check service logs
 ```js
-sudo journalctl -u rebusd.service -f --no-hostname -o cat
+sudo journalctl -u rebusd -f --no-hostname -o cat
 ```
 
 ## Remove node
 ```js
 cd $HOME
-sudo systemctl stop rebusd.service
-sudo systemctl disable rebusd.service
+sudo systemctl stop rebusd
+sudo systemctl disable rebusd
 sudo rm /etc/systemd/system/rebusd.service
 sudo systemctl daemon-reload
 rm -f $(which rebusd)

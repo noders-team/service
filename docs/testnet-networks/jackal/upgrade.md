@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-jackal">
 # Upgrade
 </div>
-###### Chain ID: `mesomelas-1` | Current Node Version: `vnull`
+###### Chain ID: `mesomelas-1` | Current Node Version: `vcanary-17-gb6ed8056`
 
 # With Cosmovisor
 ## Clone Jackal repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf canine-chain
 git clone https://github.com/JackalLabs/canine-chain.git
 cd canine-chain
-git checkout vnull
+git checkout vcanary-17-gb6ed8056
  ```
 
 ## Build binaries
@@ -26,8 +26,8 @@ make build
 
 ## Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.canine/cosmovisor/upgrades/vnull/bin
-mv build/canined ~/.canine/cosmovisor/upgrades/vnull/bin/
+mkdir -p ~/.canine/cosmovisor/upgrades/vcanary-17-gb6ed8056/bin
+mv build/canined ~/.canine/cosmovisor/upgrades/vcanary-17-gb6ed8056/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf canine-chain
 git clone https://github.com/JackalLabs/canine-chain.git
 cd canine-chain
-git checkout vnull
+git checkout vcanary-17-gb6ed8056
  ```
 
 ## Build binaries

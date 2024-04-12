@@ -4,21 +4,21 @@ title: Snapshot
 sidebar_position: 3
 ---
 
-<div class="h1-with-icon icon-bera">
+<div class="h1-with-icon icon-berachain">
 # Node Snapshot
 </div>
 ###### Chain ID: `artio-80085` | Current Node Version: `v0.2.3-alpha-rc7`
 
-## Our Bera Snapshot Server Setup
+## Our BeraChain Snapshot Server Setup
 
 | Size   | Timestamp    |
 |--------|--------------|
-|  GB |   |
+| 236.68 GB | Thu, 11 Apr 2024 23:36:53 GMT  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
 
-The snapshot is designed for node opeartors to run an efficient node on Bera chain. To make the snapshot as small as possible while still viable as a validator, we use the following setting to save on the disk space. It might be helpful for you to sync with our snapshot periodically because Tendermint chain storage grows over time regardless of the pruning. Since we periodically state-sync our snapshot nodes, you might notice that sometimes the size of our snapshot is surprisingly small.
+The snapshot is designed for node opeartors to run an efficient node on BeraChain chain. To make the snapshot as small as possible while still viable as a validator, we use the following setting to save on the disk space. It might be helpful for you to sync with our snapshot periodically because Tendermint chain storage grows over time regardless of the pruning. Since we periodically state-sync our snapshot nodes, you might notice that sometimes the size of our snapshot is surprisingly small.
 
 ```bash title="app.toml"
 # Prune Type
@@ -34,7 +34,7 @@ pruning-interval = "10"
 indexer = "null"
 ```
 
-## How To Process Bera Snapshot
+## How To Process BeraChain Snapshot
 ```bash
 sudo apt update
 sudo apt install snapd -y
@@ -55,19 +55,19 @@ If you use this snapshot on a validator node during a chain halt, make sure you 
 
 ```bash
 # Back up priv_validator_state.json if needed
-cp ~/.bera/data/priv_validator_state.json  ~/.bera/priv_validator_state.json
+cp ~/.berad/data/priv_validator_state.json  ~/.berad/priv_validator_state.json
 
 cd $HOME
-sudo rm -rf ~/.bera/data
-sudo rm -rf ~/.bera/wasm
+sudo rm -rf ~/.berad/data
+sudo rm -rf ~/.berad/wasm
 ```
 
-Decompress the snapshot to your database location. You database location will be something to the effect of `~/.bera` depending on your node implemention.
+Decompress the snapshot to your database location. You database location will be something to the effect of `~/.berad` depending on your node implemention.
 
 The above solution requires you to download the compressed file, uncompressed it and then delete the original file. This requires extra storage space on your server. You can run the following combo command to stream the snapshot into your database location. For advanced users only:
 ### Data
 ```bash
-curl -o - -L https://config-t.noders.services/bera/data.tar.lz4 | lz4 -d | tar -x -C ~/.bera
+curl -o - -L https://config-t.noders.services/berachain/data.tar.lz4 | lz4 -d | tar -x -C ~/.berad
 ```
 ### Wasm
 ```bash
@@ -81,7 +81,7 @@ If you run a validator node and the chain is in halt, it is time to replace the 
 
 ```bash
 # Replace with the backed-up priv_validator_state.json
-cp ~/.bera/priv_validator_state.json  ~/.bera/data/priv_validator_state.json
+cp ~/.berad/priv_validator_state.json  ~/.berad/data/priv_validator_state.json
 ```
 
 If everything is good, now restart your node
@@ -94,6 +94,6 @@ sudo journalctl -fu berad --no-hostname -o cat
 
 :::info ADVANCED ROUTE
 
-We also have Bera state-sync service to help you bootstrap a node.
+We also have BeraChain state-sync service to help you bootstrap a node.
 
 :::

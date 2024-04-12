@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-union">
 # Upgrade
 </div>
-###### Chain ID: `union-testnet-6` | Current Node Version: `vnull`
+###### Chain ID: `union-testnet-6` | Current Node Version: `v0.19.0`
 
 # With Cosmovisor
 ## Clone Union repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf unionlabs
 git clone https://github.com/unionlabs.git
 cd unionlabs
-git checkout vnull
+git checkout v0.19.0
  ```
 
 ## Build binaries
@@ -26,8 +26,8 @@ make build
 
 ## Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.union/cosmovisor/upgrades/vnull/bin
-mv build/uniond ~/.union/cosmovisor/upgrades/vnull/bin/
+mkdir -p ~/.union/cosmovisor/upgrades/v0.19.0/bin
+mv build/uniond ~/.union/cosmovisor/upgrades/v0.19.0/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf unionlabs
 git clone https://github.com/unionlabs.git
 cd unionlabs
-git checkout vnull
+git checkout v0.19.0
  ```
 
 ## Build binaries

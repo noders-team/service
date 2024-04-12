@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" [DAEMON_HOME]/config/config.toml
 ```
 ```bash
-sudo systemctl restart [DAEMON_SERVICE] && sudo journalctl -fu [DAEMON_SERVICE] --no-hostname -o cat
+sudo systemctl restart [DAEMON_NAME] && sudo journalctl -fu [DAEMON_NAME] --no-hostname -o cat
 ```

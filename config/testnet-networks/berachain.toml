@@ -1,6 +1,6 @@
 # Blockchain
-CHAIN_NAME="Bera"
-CHAIN_SYSTEM_NAME="bera"
+CHAIN_NAME="BeraChain"
+CHAIN_SYSTEM_NAME="berachain"
 CHAIN_ID="auto"
 VERSION="auto"
 CHAIN_DESCRIPTION="""# Berachain: Bridging Traditional Finance and DeFi with Seamless Integration
@@ -16,13 +16,13 @@ CHAIN_FEES="3000"
 # Binary
 DAEMON_NAME="berad"
 DAEMON_SERVICE="bera.service"
-DAEMON_HOME="~/.bera"
+DAEMON_HOME="~/.berad"
 
 # Endpoints
 ENDPOINT_RPC="https://berachain-t-rpc.noders.services"
 ENDPOINT_API="https://berachain-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://berachain-t-grpc.noders.services"
+ENDPOINT_GRPC="berachain-t-grpc.noders.services:16090"
 ENDPOINT_PEER="auto"
 
 # Social

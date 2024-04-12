@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-band">
 # Node Snapshot
 </div>
-###### Chain ID: `laozi-mainnet` | Current Node Version: `v2.5.4`
+###### Chain ID: `` | Current Node Version: `vauto`
 
 ## Our Band Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 15.62 GB | Thu, 11 Apr 2024 00:06:37 GMT |
+| 16.91 GB | Thu, 11 Apr 2024 22:59:18 GMT |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

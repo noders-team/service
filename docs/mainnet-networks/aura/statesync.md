@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop aurad.service && aurad tendermint unsafe-reset-all --home ~/.aura --keep-addr-book
+sudo systemctl stop aurad && aurad tendermint unsafe-reset-all --home ~/.aura --keep-addr-book
 ```
 ```bash
 peers="e038fb068587bfe9b67e23df287aabad352577d9@aura-rpc.noders.services:17656"
@@ -31,5 +31,5 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.aura/config/config.toml
 ```
 ```bash
-sudo systemctl restart aurad.service && sudo journalctl -fu aurad.service --no-hostname -o cat
+sudo systemctl restart aurad && sudo journalctl -fu aurad --no-hostname -o cat
 ```
