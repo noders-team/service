@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-injective">
 # Upgrade
 </div>
-###### Chain ID: `injective-1` | Current Node Version: `v1.12.1`
+###### Chain ID: `` | Current Node Version: `v1.12.1`
 
 
 # Clone Injective repository

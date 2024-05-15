@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-celestia">
 # Celestia
 </div>
-###### Chain ID: `mocha-4` | Current Node Version: `v1.7.0`
+###### Chain ID: `mocha-4` | Current Node Version: `v1.8.0`
 
 
 Celestia introduces a modular data availability network to enhance blockchain scalability and flexibility. It features a minimal design focusing on transaction ordering and data availability, decoupling consensus from execution for improved scalability. This approach allows for customized execution layers, powered by a secure Proof of Stake mechanism. Celestia's innovation lies in its ability to ensure transaction data is verifiable without downloading the entire chain, offering a foundation for scalable, efficient blockchain applications.
@@ -48,5 +48,5 @@ Official links of social networks of projects
     <SmallCard to="https://celestia-t-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
     <SmallCard to="https://celestia-t-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     
-    <SmallCard to="https://celestia-t-grpc.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="http://celestia-t-grpc.noders.services:21090" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
 </CardLayout>

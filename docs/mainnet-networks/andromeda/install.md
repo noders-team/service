@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-andromeda">
 # Installation
 </div>
-###### Chain ID: `andromeda-1` | Current Node Version: `vandromeda-1-v0.1.0`
+###### Chain ID: `andromeda-1` | Current Node Version: `v0.1.1-fix-gov`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Andromeda repo and build andromedad vandromeda-1-v0.1.0
+### Clone Andromeda repo and build andromedad v0.1.1-fix-gov
 ```js
 cd $HOME
 git clone https://github.com/andromedaprotocol.git
 cd andromedaprotocol
-git checkout vandromeda-1-v0.1.0
+git checkout v0.1.1-fix-gov
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.andromeda/cosmovisor/upgrades/vandromeda-1-v0.1.0/bin
-mv $HOME/go/bin/andromedad ~/.andromeda/cosmovisor/upgrades/vandromeda-1-v0.1.0/bin/
+mkdir -p ~/.andromeda/cosmovisor/upgrades/v0.1.1-fix-gov/bin
+mv $HOME/go/bin/andromedad ~/.andromeda/cosmovisor/upgrades/v0.1.1-fix-gov/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Andromeda repo and build andromedad vandromeda-1-v0.1.0
+### Clone Andromeda repo and build andromedad v0.1.1-fix-gov
 ```js
 cd $HOME
 git clone https://github.com/andromedaprotocol.git
 cd andromedaprotocol
-git checkout vandromeda-1-v0.1.0
+git checkout v0.1.1-fix-gov
 ```
 
 ### Build binaries
@@ -187,7 +187,7 @@ sed -i.bak -e "s%:1317%:${andromedad_PORT}317%g" \
 -e "s%:6065%:${andromedad_PORT}065%g" ~/.andromeda/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${SWISS_PORT}658%g" \
+sed -i.bak -e "s%:26658%:${andromedad_PORT}658%g" \
 -e "s%:26657%:${andromedad_PORT}657%g" \
 -e "s%:6060%:${andromedad_PORT}060%g" \
 -e "s%:26656%:${andromedad_PORT}656%g" \

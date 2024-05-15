@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop bera.service && berad tendermint unsafe-reset-all --home ~/.berad --keep-addr-book
+sudo systemctl stop berad && berad tendermint unsafe-reset-all --home ~/.berad --keep-addr-book
 ```
 ```bash
 peers="f4f9dd773bad1363cbc85ce7534bfd172c2d83b4@berachain-t-rpc.noders.services:16656"

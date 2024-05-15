@@ -7,13 +7,13 @@ sidebar_position: 3
 <div class="h1-with-icon icon-warden">
 # Node Snapshot
 </div>
-###### Chain ID: `alfama` | Current Node Version: `v0.2.0`
+###### Chain ID: `` | Current Node Version: `vauto`
 
 ## Our Warden Snapshot Server Setup
 
 | Size   | Timestamp    |
 |--------|--------------|
-| 8.84 GB | Thu, 11 Apr 2024 23:40:48 GMT  |
+| 10.72 GB | Wed, 15 May 2024 13:06:14 GMT  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -71,7 +71,7 @@ curl -o - -L https://config-t.noders.services/warden/data.tar.lz4 | lz4 -d | tar
 ```
 ### Wasm
 ```bash
-Not supported
+curl -o - -L https://config-t.noders.services/warden/wasm.tar.lz4 | lz4 -d | tar -x -C ~/.warden
 ```
 
 :::warning WARNING

@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-celestia">
 # Installation
 </div>
-###### Chain ID: `mocha-4` | Current Node Version: `v1.7.0`
+###### Chain ID: `mocha-4` | Current Node Version: `v1.8.0`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Celestia repo and build celestia-appd v1.7.0
+### Clone Celestia repo and build celestia-appd v1.8.0
 ```js
 cd $HOME
 git clone https://github.com/celestiaorg.git
 cd celestiaorg
-git checkout v1.7.0
+git checkout v1.8.0
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.celestia-app/cosmovisor/upgrades/v1.7.0/bin
-mv $HOME/go/bin/celestia-appd ~/.celestia-app/cosmovisor/upgrades/v1.7.0/bin/
+mkdir -p ~/.celestia-app/cosmovisor/upgrades/v1.8.0/bin
+mv $HOME/go/bin/celestia-appd ~/.celestia-app/cosmovisor/upgrades/v1.8.0/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Celestia repo and build celestia-appd v1.7.0
+### Clone Celestia repo and build celestia-appd v1.8.0
 ```js
 cd $HOME
 git clone https://github.com/celestiaorg.git
 cd celestiaorg
-git checkout v1.7.0
+git checkout v1.8.0
 ```
 
 ### Build binaries
@@ -187,7 +187,7 @@ sed -i.bak -e "s%:1317%:${celestia-appd_PORT}317%g" \
 -e "s%:6065%:${celestia-appd_PORT}065%g" ~/.celestia-app/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${SWISS_PORT}658%g" \
+sed -i.bak -e "s%:26658%:${celestia-appd_PORT}658%g" \
 -e "s%:26657%:${celestia-appd_PORT}657%g" \
 -e "s%:6060%:${celestia-appd_PORT}060%g" \
 -e "s%:26656%:${celestia-appd_PORT}656%g" \

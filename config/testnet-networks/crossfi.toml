@@ -21,8 +21,8 @@ DAEMON_HOME="~/.mineplex-chain"
 # Endpoints
 ENDPOINT_RPC="https://crossfi-t-rpc.noders.services"
 ENDPOINT_API="https://crossfi-t-api.noders.services"
-ENDPOINT_JRPC=""
-ENDPOINT_GRPC="crossfi-t-grpc.noders.services:12090"
+ENDPOINT_JRPC="https://crossfi-t-jsonrpc.noders.services"
+ENDPOINT_GRPC="http://crossfi-t-grpc.noders.services:12090"
 ENDPOINT_PEER="auto"
 
 # Social

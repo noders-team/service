@@ -1,6 +1,7 @@
 # Blockchain
 CHAIN_NAME="Celestia"
 CHAIN_SYSTEM_NAME="celestia"
+VERSION_HAND="v1.9.0"
 CHAIN_ID="auto"
 VERSION="auto"
 CHAIN_DESCRIPTION="""# Celestia: Revolutionizing Blockchain with Modularity
@@ -22,7 +23,7 @@ DAEMON_HOME="~/.celestia-app"
 ENDPOINT_RPC="https://celestia-rpc.noders.services"
 ENDPOINT_API="https://celestia-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="celestia-grpc.noders.services:11090"
+ENDPOINT_GRPC="http://celestia-grpc.noders.services:11090"
 ENDPOINT_PEER="auto"
 
 # Social

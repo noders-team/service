@@ -271,5 +271,5 @@ sudo rm /etc/systemd/system/alignedlayerd.service
 sudo systemctl daemon-reload
 rm -f $(which alignedlayerd)
 rm -rf ~/.alignedlayer
-rm -rf $HOME/aligned_layer
+rm -rf $HOME/aligned_layer_tendermint
 ```

@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-archway">
 # Installation
 </div>
-###### Chain ID: `archway-1` | Current Node Version: `v6.0.2`
+###### Chain ID: `archway-1` | Current Node Version: `v7.0.0`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Archway repo and build archwayd v6.0.2
+### Clone Archway repo and build archwayd v7.0.0
 ```js
 cd $HOME
 git clone https://github.com/archway-network.git
 cd archway-network
-git checkout v6.0.2
+git checkout v7.0.0
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.archwayd/cosmovisor/upgrades/v6.0.2/bin
-mv $HOME/go/bin/archwayd ~/.archwayd/cosmovisor/upgrades/v6.0.2/bin/
+mkdir -p ~/.archwayd/cosmovisor/upgrades/v7.0.0/bin
+mv $HOME/go/bin/archwayd ~/.archwayd/cosmovisor/upgrades/v7.0.0/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Archway repo and build archwayd v6.0.2
+### Clone Archway repo and build archwayd v7.0.0
 ```js
 cd $HOME
 git clone https://github.com/archway-network.git
 cd archway-network
-git checkout v6.0.2
+git checkout v7.0.0
 ```
 
 ### Build binaries
@@ -187,7 +187,7 @@ sed -i.bak -e "s%:1317%:${archwayd_PORT}317%g" \
 -e "s%:6065%:${archwayd_PORT}065%g" ~/.archwayd/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${SWISS_PORT}658%g" \
+sed -i.bak -e "s%:26658%:${archwayd_PORT}658%g" \
 -e "s%:26657%:${archwayd_PORT}657%g" \
 -e "s%:6060%:${archwayd_PORT}060%g" \
 -e "s%:26656%:${archwayd_PORT}656%g" \

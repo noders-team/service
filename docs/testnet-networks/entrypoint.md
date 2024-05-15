@@ -48,5 +48,5 @@ Official links of social networks of projects
     <SmallCard to="https://entrypoint-t-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
     <SmallCard to="https://entrypoint-t-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     
-    <SmallCard to="https://entrypoint-t-grpc.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="http://entrypoint-t-grpc.noders.services:15090" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
 </CardLayout>

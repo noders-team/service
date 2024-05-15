@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-pryzm">
 # Upgrade
 </div>
-###### Chain ID: `indigo-1` | Current Node Version: `v0.13.0`
+###### Chain ID: `indigo-1` | Current Node Version: `v0.15.0`
 
 # With Cosmovisor
 ## Clone Pryzm repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf pryzm-finance
 git clone https://github.com/pryzm-finance.git
 cd pryzm-finance
-git checkout v0.13.0
+git checkout v0.15.0
  ```
 
 ## Build binaries
@@ -26,8 +26,8 @@ make build
 
 ## Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.pryzm/cosmovisor/upgrades/v0.13.0/bin
-mv build/pryzmd ~/.pryzm/cosmovisor/upgrades/v0.13.0/bin/
+mkdir -p ~/.pryzm/cosmovisor/upgrades/v0.15.0/bin
+mv build/pryzmd ~/.pryzm/cosmovisor/upgrades/v0.15.0/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf pryzm-finance
 git clone https://github.com/pryzm-finance.git
 cd pryzm-finance
-git checkout v0.13.0
+git checkout v0.15.0
  ```
 
 ## Build binaries

@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-desmos">
 # Installation
 </div>
-###### Chain ID: `desmos-mainnet` | Current Node Version: `v7.0.1`
+###### Chain ID: `desmos-mainnet` | Current Node Version: `v7.1.0`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Desmos repo and build desmos v7.0.1
+### Clone Desmos repo and build desmos v7.1.0
 ```js
 cd $HOME
 git clone https://github.com/desmos-labs.git
 cd desmos-labs
-git checkout v7.0.1
+git checkout v7.1.0
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.desmos/cosmovisor/upgrades/v7.0.1/bin
-mv $HOME/go/bin/desmos ~/.desmos/cosmovisor/upgrades/v7.0.1/bin/
+mkdir -p ~/.desmos/cosmovisor/upgrades/v7.1.0/bin
+mv $HOME/go/bin/desmos ~/.desmos/cosmovisor/upgrades/v7.1.0/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Desmos repo and build desmos v7.0.1
+### Clone Desmos repo and build desmos v7.1.0
 ```js
 cd $HOME
 git clone https://github.com/desmos-labs.git
 cd desmos-labs
-git checkout v7.0.1
+git checkout v7.1.0
 ```
 
 ### Build binaries
@@ -187,7 +187,7 @@ sed -i.bak -e "s%:1317%:${desmos_PORT}317%g" \
 -e "s%:6065%:${desmos_PORT}065%g" ~/.desmos/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${SWISS_PORT}658%g" \
+sed -i.bak -e "s%:26658%:${desmos_PORT}658%g" \
 -e "s%:26657%:${desmos_PORT}657%g" \
 -e "s%:6060%:${desmos_PORT}060%g" \
 -e "s%:26656%:${desmos_PORT}656%g" \

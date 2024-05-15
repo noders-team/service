@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-quicksilver">
 # Quicksilver
 </div>
-###### Chain ID: `rhye-2` | Current Node Version: `v1.5.4`
+###### Chain ID: `rhye-2` | Current Node Version: `v1.6.0-rc0`
 
 
 Quicksilver introduces liquid staking to the Cosmos ecosystem, unlocking liquidity for staked assets while maintaining network security participation. It features liquid staking derivatives, cross-chain functionality through the IBC protocol, decentralized governance, high security, and yield optimization. This protocol enables greater capital efficiency and a vibrant DeFi ecosystem, offering opportunities for lending, borrowing, and trading staked assets across chains, thus innovating within DeFi and Cosmos.
@@ -48,5 +48,5 @@ Official links of social networks of projects
     <SmallCard to="https://quicksilver-t-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
     <SmallCard to="https://quicksilver-t-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     
-    <SmallCard to="https://quicksilver-t-grpc.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="http://quicksilver-t-grpc.noders.services:13090" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
 </CardLayout>

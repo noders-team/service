@@ -22,7 +22,7 @@ DAEMON_HOME="~/.galactica"
 ENDPOINT_RPC="https://galactica-t-rpc.noders.services"
 ENDPOINT_API="https://galactica-t-api.noders.services"
 ENDPOINT_JRPC="https://galactica-t-json.noders.services"
-ENDPOINT_GRPC="galactica-t-grpc.noders.services:28090"
+ENDPOINT_GRPC="http://galactica-t-grpc.noders.services:28090"
 ENDPOINT_PEER="auto"
 
 # Social

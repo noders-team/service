@@ -271,5 +271,5 @@ sudo rm /etc/systemd/system/0g.service
 sudo systemctl daemon-reload
 rm -f $(which evmosd)
 rm -rf ~/.evmosd
-rm -rf $HOME/0g-evmos.git
+rm -rf $HOME/0g-evmos
 ```

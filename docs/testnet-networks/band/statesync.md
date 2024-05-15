@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop band.service && bandd tendermint unsafe-reset-all --home ~/.band --keep-addr-book
+sudo systemctl stop bandd && bandd tendermint unsafe-reset-all --home ~/.band --keep-addr-book
 ```
 ```bash
 peers="affbb71e130841e0c262efcd3d90ee71b16c59b2@band-t-rpc.noders.services:20656"

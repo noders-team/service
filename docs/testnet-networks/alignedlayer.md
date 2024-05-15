@@ -20,8 +20,8 @@ Official links of social networks of projects
 
 <CardLayout autoFitEnabled={false}>
     <SmallCard to="https://alignedlayer.com/" header={{label: "Website", translateId: "social-telegram"}} iconPath="img/website-icon.svg"/>
-    <SmallCard to="https://github.com/yetanotherco/aligned_layer" header={{label: "GitHub", translateId: "social-telegram"}} iconPath="img/github-icon.svg"/>
-    <SmallCard to="https://discord.com/invite/teqX78VZUV" header={{label: "Discord", translateId: "social-telegram"}} iconPath="img/discord-icon.svg"/>
+    <SmallCard to="https://github.com/yetanotherco/aligned_layer_tendermint" header={{label: "GitHub", translateId: "social-telegram"}} iconPath="img/github-icon.svg"/>
+    <SmallCard to="https://discord.com/invite/WrgR6YsS" header={{label: "Discord", translateId: "social-telegram"}} iconPath="img/discord-icon.svg"/>
     <SmallCard to="https://twitter.com/alignedlayer" header={{label: "X", translateId: "social-telegram"}} iconPath="img/x-icon.svg"/>
     <SmallCard to="https://t.me/aligned_layer" header={{label: "Telegram", translateId: "social-telegram"}} iconPath="img/telegram-icon.svg"/>
 </CardLayout>
@@ -48,5 +48,5 @@ Official links of social networks of projects
     <SmallCard to="https://aligned-t-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
     <SmallCard to="https://aligned-t-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     
-    <SmallCard to="https://aligned-t-grpc.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="http://aligned-t-grpc.noders.services:27090" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
 </CardLayout>

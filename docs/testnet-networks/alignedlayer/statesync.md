@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop alignedlayerd.service && alignedlayerd tendermint unsafe-reset-all --home ~/.alignedlayer --keep-addr-book
+sudo systemctl stop alignedlayerd && alignedlayerd tendermint unsafe-reset-all --home ~/.alignedlayer --keep-addr-book
 ```
 ```bash
 peers="b5da413b7882dc42172818914f55e661fcb88981@aligned-t-rpc.noders.services:27656"

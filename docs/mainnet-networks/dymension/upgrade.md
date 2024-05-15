@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-dymension">
 # Upgrade
 </div>
-###### Chain ID: `dymension_1100-1` | Current Node Version: `v3.0.0`
+###### Chain ID: `dymension_1100-1` | Current Node Version: `v3.1.0`
 
 
 # Clone Dymension repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf dymensionxyz
 git clone https://github.com/dymensionxyz.git
 cd dymensionxyz
-git checkout v3.0.0
+git checkout v3.1.0
  ```
 
 # Build binaries
@@ -26,8 +26,8 @@ make build
 
 # Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.dymension/cosmovisor/upgrades/v3.0.0/bin
-mv build/dymd ~/.dymension/cosmovisor/upgrades/v3.0.0/bin/
+mkdir -p ~/.dymension/cosmovisor/upgrades/v3.1.0/bin
+mv build/dymd ~/.dymension/cosmovisor/upgrades/v3.1.0/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf dymensionxyz
 git clone https://github.com/dymensionxyz.git
 cd dymensionxyz
-git checkout v3.0.0
+git checkout v3.1.0
  ```
 
 ## Build binaries

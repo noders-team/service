@@ -24,7 +24,7 @@ DAEMON_HOME="~/.sedad"
 ENDPOINT_RPC="https://seda-t-rpc.noders.services"
 ENDPOINT_API="https://seda-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="seda-t-grpc.noders.services:24090"
+ENDPOINT_GRPC="http://seda-t-grpc.noders.services:24090"
 ENDPOINT_PEER="auto"
 
 # Social

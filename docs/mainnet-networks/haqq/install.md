@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-haqq">
 # Installation
 </div>
-###### Chain ID: `haqq_11235-1` | Current Node Version: `v1.7.3`
+###### Chain ID: `haqq_11235-1` | Current Node Version: `v1.7.4`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Haqq repo and build haqqd v1.7.3
+### Clone Haqq repo and build haqqd v1.7.4
 ```js
 cd $HOME
 git clone https://github.com/haqq-network.git
 cd haqq-network
-git checkout v1.7.3
+git checkout v1.7.4
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.haqqd/cosmovisor/upgrades/v1.7.3/bin
-mv $HOME/go/bin/haqqd ~/.haqqd/cosmovisor/upgrades/v1.7.3/bin/
+mkdir -p ~/.haqqd/cosmovisor/upgrades/v1.7.4/bin
+mv $HOME/go/bin/haqqd ~/.haqqd/cosmovisor/upgrades/v1.7.4/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Haqq repo and build haqqd v1.7.3
+### Clone Haqq repo and build haqqd v1.7.4
 ```js
 cd $HOME
 git clone https://github.com/haqq-network.git
 cd haqq-network
-git checkout v1.7.3
+git checkout v1.7.4
 ```
 
 ### Build binaries
@@ -187,7 +187,7 @@ sed -i.bak -e "s%:1317%:${haqqd_PORT}317%g" \
 -e "s%:6065%:${haqqd_PORT}065%g" ~/.haqqd/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${SWISS_PORT}658%g" \
+sed -i.bak -e "s%:26658%:${haqqd_PORT}658%g" \
 -e "s%:26657%:${haqqd_PORT}657%g" \
 -e "s%:6060%:${haqqd_PORT}060%g" \
 -e "s%:26656%:${haqqd_PORT}656%g" \

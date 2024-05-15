@@ -1,0 +1,48 @@
+# Blockchain
+CHAIN_NAME="Zetachain"
+CHAIN_SYSTEM_NAME="zetachain"
+CHAIN_ID="auto"
+VERSION="auto"
+CHAIN_DESCRIPTION="""# ZetaChain: Unifying Chains for a Connected Blockchain World
+
+ZetaChain aims to revolutionize the blockchain landscape by offering a truly interoperable platform that connects disparate blockchain networks, enabling seamless communication and transactions across different ecosystems. As a multi-chain protocol, ZetaChain facilitates the transfer of data and value between all blockchains, whether they are public, private, or consortium, without requiring intermediaries. This open infrastructure supports smart contracts, allowing developers to build applications that can interact with any blockchain from a single platform. ZetaChain's innovative approach not only enhances efficiency and scalability but also opens up new possibilities for decentralized applications, fostering a more integrated and collaborative blockchain environment.
+
+"""
+[CHAIN_DESCRIPTION_END]
+
+CHAIN_DENOM="azeta"
+CHAIN_FEES="3000"
+
+# Binary
+DAEMON_NAME="zetacored"
+DAEMON_SERVICE="zetacore.service"
+DAEMON_HOME="~/.zetacored"
+
+# Endpoints
+ENDPOINT_RPC="https://zetachain-rpc.noders.services"
+ENDPOINT_API="https://zetachain-api.noders.services"
+ENDPOINT_JRPC="https://zetachain-jsonrpc.noders.services"
+ENDPOINT_GRPC="http://zetachain-grpc.noders.services:28090"
+ENDPOINT_PEER="auto"
+
+# Social
+SOCIAL_WEBSITE="https://www.zetachain.com/"
+SOCIAL_GITHUB="https://github.com/zeta-chain"
+SOCIAL_DISCORD="https://discord.gg/zetachain"
+SOCIAL_X="https://twitter.com/zetablockchain"
+SOCIAL_TELEGRAM="https://t.me/zetachainofficial"
+
+# Other
+DOWNLOAD_URL="https://config.noders.services/zwtachain"
+GITHUB_FOLDER_NAME="auto"
+VALIDATOR_LINK="https://zetachain.explorers.guru/validator/zetavaloper1r66jlz6qvq74apsx4r5696jkrusn5uvvvcgvn9"
+
+# Updates
+UPDATE_MAIN=true
+UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
+UPDATE_UPGRADE=true
+UPDATE_SNAPSHOT=true
+UPDATE_STATESYNC=true
+UPDATE_LIVE_PEERS=true
+UPDATE_CLI_CHEATSHEET=true

@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-injective">
 # State sync
 </div>
-###### Chain ID: `injective-1` | Current Node Version: `v1.12.1`
+###### Chain ID: `` | Current Node Version: `v1.12.1`
 
 ```bash
 SNAP_RPC=https://injective-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop injectived && injectived tendermint unsafe-reset-all --home ~/.injectived --keep-addr-book
 ```
 ```bash
-peers="b96ce37010e0b3baa5020b536822ccba511c8f5f@injective-rpc.noders.services:33656"
+peers="@injective-rpc.noders.services:"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.injectived/config/config.toml
 ```
 ```bash

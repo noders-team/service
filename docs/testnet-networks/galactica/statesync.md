@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop galactica.service && galacticad tendermint unsafe-reset-all --home ~/.galactica --keep-addr-book
+sudo systemctl stop galacticad && galacticad tendermint unsafe-reset-all --home ~/.galactica --keep-addr-book
 ```
 ```bash
 peers="707af7d29be8d3fff3c4f0cdc0b8986a6a8aff63@galactica-t-rpc.noders.services:28656"

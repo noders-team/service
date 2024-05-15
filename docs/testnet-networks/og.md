@@ -20,7 +20,7 @@ Official links of social networks of projects
 
 <CardLayout autoFitEnabled={false}>
     <SmallCard to="https://0g.ai/" header={{label: "Website", translateId: "social-telegram"}} iconPath="img/website-icon.svg"/>
-    <SmallCard to="https://github.com/0glabs/0g-evmos.git" header={{label: "GitHub", translateId: "social-telegram"}} iconPath="img/github-icon.svg"/>
+    <SmallCard to="https://github.com/0glabs/0g-evmos" header={{label: "GitHub", translateId: "social-telegram"}} iconPath="img/github-icon.svg"/>
     <SmallCard to="http://discord.gg/0glabs" header={{label: "Discord", translateId: "social-telegram"}} iconPath="img/discord-icon.svg"/>
     <SmallCard to="https://twitter.com/0G_labs" header={{label: "X", translateId: "social-telegram"}} iconPath="img/x-icon.svg"/>
     <SmallCard to="https://t.me/web3_0glabs" header={{label: "Telegram", translateId: "social-telegram"}} iconPath="img/telegram-icon.svg"/>
@@ -48,5 +48,5 @@ Official links of social networks of projects
     <SmallCard to="https://og-t-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
     <SmallCard to="https://og-t-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     <SmallCard to="https://og-t-json.noders.services" header={{label: "json-RPC Endpoint", translateId: "jrpc-endpoint"}}/>
-    <SmallCard to="https://og-t-grpc.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="http://og-t-grpc.noders.services:29090" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
 </CardLayout>

@@ -187,7 +187,7 @@ sed -i.bak -e "s%:1317%:${gitopiad_PORT}317%g" \
 -e "s%:6065%:${gitopiad_PORT}065%g" ~/.gitopia/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${SWISS_PORT}658%g" \
+sed -i.bak -e "s%:26658%:${gitopiad_PORT}658%g" \
 -e "s%:26657%:${gitopiad_PORT}657%g" \
 -e "s%:6060%:${gitopiad_PORT}060%g" \
 -e "s%:26656%:${gitopiad_PORT}656%g" \

@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-warden">
 # Installation
 </div>
-###### Chain ID: `alfama` | Current Node Version: `v0.2.0`
+###### Chain ID: `` | Current Node Version: `vauto`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Warden repo and build wardend v0.2.0
+### Clone Warden repo and build wardend vauto
 ```js
 cd $HOME
 git clone https://github.com/warden-protocol/wardenprotocol.git
 cd wardenprotocol
-git checkout v0.2.0
+git checkout vauto
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.warden/cosmovisor/upgrades/v0.2.0/bin
-mv $HOME/go/bin/wardend ~/.warden/cosmovisor/upgrades/v0.2.0/bin/
+mkdir -p ~/.warden/cosmovisor/upgrades/vauto/bin
+mv $HOME/go/bin/wardend ~/.warden/cosmovisor/upgrades/vauto/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Warden repo and build wardend v0.2.0
+### Clone Warden repo and build wardend vauto
 ```js
 cd $HOME
 git clone https://github.com/warden-protocol/wardenprotocol.git
 cd wardenprotocol
-git checkout v0.2.0
+git checkout vauto
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable wardend
 ## Node configuration
 ### Set config
 ```js
-wardend config chain-id alfama
+wardend config chain-id 
 wardend config keyring-backend os
 wardend config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-wardend init NAME_OF_YOUR_VALIDATOR --chain-id alfama
+wardend init NAME_OF_YOUR_VALIDATOR --chain-id 
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config-t.noders.services/warden/addrbook.json -o ~/.warden/config/a
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"85b6f8c6d7ac2e1e66e50af9825210d23eb1f806@warden-t-rpc.noders.services:23656\"/" ~/.warden/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@warden-t-rpc.noders.services:\"/" ~/.warden/config/config.toml
 ```
 
 ### Set minimum gas price
@@ -187,7 +187,7 @@ sed -i.bak -e "s%:1317%:${wardend_PORT}317%g" \
 -e "s%:6065%:${wardend_PORT}065%g" ~/.warden/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${SWISS_PORT}658%g" \
+sed -i.bak -e "s%:26658%:${wardend_PORT}658%g" \
 -e "s%:26657%:${wardend_PORT}657%g" \
 -e "s%:6060%:${wardend_PORT}060%g" \
 -e "s%:26656%:${wardend_PORT}656%g" \

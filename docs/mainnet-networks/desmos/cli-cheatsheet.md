@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-desmos">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `desmos-mainnet` | Current Node Version: `v7.0.1`
+###### Chain ID: `desmos-mainnet` | Current Node Version: `v7.1.0`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 

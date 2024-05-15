@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-desmos">
 # Desmos
 </div>
-###### Chain ID: `desmos-mainnet` | Current Node Version: `v7.0.1`
+###### Chain ID: `desmos-mainnet` | Current Node Version: `v7.1.0`
 
 
 Desmos revolutionizes social media, focusing on user empowerment, data sovereignty, and censorship resistance. It features decentralized identities for user privacy, content monetization through cryptocurrencies, and community-driven governance. Ensuring interoperability with other DApps, Desmos fosters an open ecosystem for diverse social interactions, challenging traditional social platforms by prioritizing privacy, freedom of expression, and direct creator compensation.
@@ -48,7 +48,7 @@ Official links of social networks of projects
     <SmallCard to="https://desmos-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
     <SmallCard to="https://desmos-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     
-    <SmallCard to="https://desmos-grpc.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="http://desmos-grpc.noders.services:27090" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
 </CardLayout>
 
 

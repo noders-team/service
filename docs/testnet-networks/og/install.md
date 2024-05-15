@@ -39,8 +39,8 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 ### Clone ZeroGravity repo and build evmosd v1.0.0-testnet
 ```js
 cd $HOME
-git clone https://github.com/0glabs/0g-evmos.git.git
-cd 0g-evmos.git
+git clone https://github.com/0glabs/0g-evmos.git
+cd 0g-evmos
 git checkout v1.0.0-testnet
 ```
 
@@ -96,8 +96,8 @@ EOF
 ### Clone ZeroGravity repo and build evmosd v1.0.0-testnet
 ```js
 cd $HOME
-git clone https://github.com/0glabs/0g-evmos.git.git
-cd 0g-evmos.git
+git clone https://github.com/0glabs/0g-evmos.git
+cd 0g-evmos
 git checkout v1.0.0-testnet
 ```
 
@@ -187,7 +187,7 @@ sed -i.bak -e "s%:1317%:${evmosd_PORT}317%g" \
 -e "s%:6065%:${evmosd_PORT}065%g" ~/.evmosd/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${SWISS_PORT}658%g" \
+sed -i.bak -e "s%:26658%:${evmosd_PORT}658%g" \
 -e "s%:26657%:${evmosd_PORT}657%g" \
 -e "s%:6060%:${evmosd_PORT}060%g" \
 -e "s%:26656%:${evmosd_PORT}656%g" \

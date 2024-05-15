@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-lava">
 # Installation
 </div>
-###### Chain ID: `lava-testnet-2` | Current Node Version: `v1.2.0`
+###### Chain ID: `lava-testnet-2` | Current Node Version: `v2.0.0`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Lava repo and build lavad v1.2.0
+### Clone Lava repo and build lavad v2.0.0
 ```js
 cd $HOME
 git clone https://github.com/lavanet.git
 cd lavanet
-git checkout v1.2.0
+git checkout v2.0.0
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.lava/cosmovisor/upgrades/v1.2.0/bin
-mv $HOME/go/bin/lavad ~/.lava/cosmovisor/upgrades/v1.2.0/bin/
+mkdir -p ~/.lava/cosmovisor/upgrades/v2.0.0/bin
+mv $HOME/go/bin/lavad ~/.lava/cosmovisor/upgrades/v2.0.0/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Lava repo and build lavad v1.2.0
+### Clone Lava repo and build lavad v2.0.0
 ```js
 cd $HOME
 git clone https://github.com/lavanet.git
 cd lavanet
-git checkout v1.2.0
+git checkout v2.0.0
 ```
 
 ### Build binaries
@@ -187,7 +187,7 @@ sed -i.bak -e "s%:1317%:${lavad_PORT}317%g" \
 -e "s%:6065%:${lavad_PORT}065%g" ~/.lava/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${SWISS_PORT}658%g" \
+sed -i.bak -e "s%:26658%:${lavad_PORT}658%g" \
 -e "s%:26657%:${lavad_PORT}657%g" \
 -e "s%:6060%:${lavad_PORT}060%g" \
 -e "s%:26656%:${lavad_PORT}656%g" \

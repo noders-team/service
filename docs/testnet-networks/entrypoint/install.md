@@ -187,7 +187,7 @@ sed -i.bak -e "s%:1317%:${entrypointd_PORT}317%g" \
 -e "s%:6065%:${entrypointd_PORT}065%g" ~/.entrypoint/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${SWISS_PORT}658%g" \
+sed -i.bak -e "s%:26658%:${entrypointd_PORT}658%g" \
 -e "s%:26657%:${entrypointd_PORT}657%g" \
 -e "s%:6060%:${entrypointd_PORT}060%g" \
 -e "s%:26656%:${entrypointd_PORT}656%g" \

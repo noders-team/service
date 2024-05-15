@@ -25,7 +25,7 @@ DAEMON_HOME="~/.canine"
 ENDPOINT_RPC="https://jackal-rpc.noders.services"
 ENDPOINT_API="https://jackal-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="jackal-grpc.noders.services:26090"
+ENDPOINT_GRPC="http://jackal-grpc.noders.services:26090"
 ENDPOINT_PEER="auto"
 
 # Social

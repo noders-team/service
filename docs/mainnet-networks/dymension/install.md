@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-dymension">
 # Installation
 </div>
-###### Chain ID: `dymension_1100-1` | Current Node Version: `v3.0.0`
+###### Chain ID: `dymension_1100-1` | Current Node Version: `v3.1.0`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Dymension repo and build dymd v3.0.0
+### Clone Dymension repo and build dymd v3.1.0
 ```js
 cd $HOME
 git clone https://github.com/dymensionxyz.git
 cd dymensionxyz
-git checkout v3.0.0
+git checkout v3.1.0
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.dymension/cosmovisor/upgrades/v3.0.0/bin
-mv $HOME/go/bin/dymd ~/.dymension/cosmovisor/upgrades/v3.0.0/bin/
+mkdir -p ~/.dymension/cosmovisor/upgrades/v3.1.0/bin
+mv $HOME/go/bin/dymd ~/.dymension/cosmovisor/upgrades/v3.1.0/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Dymension repo and build dymd v3.0.0
+### Clone Dymension repo and build dymd v3.1.0
 ```js
 cd $HOME
 git clone https://github.com/dymensionxyz.git
 cd dymensionxyz
-git checkout v3.0.0
+git checkout v3.1.0
 ```
 
 ### Build binaries
@@ -158,7 +158,7 @@ sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"11900c7a3a6bdeaef5e
 
 ### Set minimum gas price
 ```js
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001udsm\"|" ~/.dymension/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001adym\"|" ~/.dymension/config/app.toml
 ```
 ### Set pruning
 ```js
@@ -187,7 +187,7 @@ sed -i.bak -e "s%:1317%:${dymd_PORT}317%g" \
 -e "s%:6065%:${dymd_PORT}065%g" ~/.dymension/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${SWISS_PORT}658%g" \
+sed -i.bak -e "s%:26658%:${dymd_PORT}658%g" \
 -e "s%:26657%:${dymd_PORT}657%g" \
 -e "s%:6060%:${dymd_PORT}060%g" \
 -e "s%:26656%:${dymd_PORT}656%g" \

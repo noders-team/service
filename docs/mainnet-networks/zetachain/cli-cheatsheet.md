@@ -1,0 +1,275 @@
+---
+hide_table_of_contents: false
+title: CLI Cheatsheet
+sidebar_position: 8
+---
+
+<div class="h1-with-icon icon-zetachain">
+# CLI Cheatsheet
+</div>
+###### Chain ID: `zetachain_7000-1` | Current Node Version: `v14.0.1`
+
+This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
+
+- Capitalized words indicate placeholders
+- Always use our own [NODERS]TEAM RPC endpoints
+- Always specify `--chain-id` and `--node` flags even when they are unnecessary
+- Query CLI command always uses `--output json` flag and pipes result through `jq`
+
+## Wallet generate and recover
+### Add new key
+```js
+zetacored keys add KEY
+```
+
+### Recover key (via existing mnemonic)
+```js
+zetacored keys add KEY --recover
+```
+
+### List all keys
+```js
+zetacored keys list
+```
+
+### Delete key
+```js
+zetacored keys delete KEY
+```
+
+## Wallet
+### Wallet balance
+```js
+zetacored q bank balances $(zetacored keys show KEY -a) --node https://zetachain-rpc.noders.services:443
+```
+
+### Send
+```js
+zetacored tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000azeta \
+  --chain-id zetachain_7000-1 \
+  --node https://zetachain-rpc.noders.services:443 --fees 3000azeta \
+  --from KEY
+```
+
+### Withdraw rewards from all validators
+```js
+zetacored tx distribution withdraw-all-rewards \
+  --chain-id zetachain_7000-1 \
+  --node https://zetachain-rpc.noders.services:443 --fees 3000azeta \
+  --from KEY
+```
+
+### Withdraw Rewards including Commission
+```js
+zetacored tx distribution withdraw-rewards VALIDATOR_ADRESS \
+  --commission \
+  --chain-id zetachain_7000-1 \
+  --node https://zetachain-rpc.noders.services:443 --fees 3000azeta \
+  --from KEY
+```
+
+### Delegate tokens to yourself
+```js
+zetacored tx staking delegate $(zetacored keys show KEY --bech val -a) 1000000azeta \
+--chain-id zetachain_7000-1 \
+--node https://zetachain-rpc.noders.services:443 --fees 3000azeta \
+--from KEY
+```
+
+### Delegate tokens to validator
+```js
+zetacored tx staking delegate VALIDATOR_ADDRESS 1000000azeta \
+--chain-id zetachain_7000-1 \
+--node https://zetachain-rpc.noders.services:443 --fees 3000azeta \
+--from KEY
+```
+
+### Redelegate tokens to another validator
+```js
+zetacored tx staking redelegate $(zetacored keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000azeta \
+  --chain-id zetachain_7000-1 \
+  --node https://zetachain-rpc.noders.services:443 --fees 3000azeta \
+  --from KEY
+```
+
+### Unbond tokens from your validator
+```js
+zetacored tx staking unbond $(zetacored keys show KEY --bech val -a) azeta \
+  --chain-id andromeda-1 \
+  --node https://zetachain-rpc.noders.services:443 --fees 3000azeta \
+  --from KEY
+```
+
+## Governance
+### List of all proposals
+```js
+zetacored query gov proposals --node https://zetachain-rpc.noders.services:443
+```
+### Check vote
+```js
+zetacored query gov proposal PROPOSAL_NUMBER \
+  --chain-id zetachain_7000-1 \
+  --node https://zetachain-rpc.noders.services:443 --fees 3000azeta \
+  --output json | jq
+```
+
+### Vote
+#### Vote options:
+* yes
+* no 
+* no_with_veto
+* abstain
+```js
+zetacored tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
+  --chain-id zetachain_7000-1 \
+  --node https://zetachain-rpc.noders.services:443 --fees 3000azeta \
+  --from KEY
+```
+
+## Validator management
+### Create Validator
+:::note
+We use example filed values instead of capitalized dummy words for demo purpose in this command. Please make sure to adjust accordingly for your use.
+:::
+```js
+zetacored tx staking create-validator \
+  --amount 1000000azeta \
+  --commission-max-change-rate "0.05" \
+  --commission-max-rate "0.10" \
+  --commission-rate "0.05" \
+  --min-self-delegation "1" \
+  --pubkey=$(zetacored tendermint show-validator) \
+  --moniker '[NODERS]TEAM SERVICE' \
+  --website "https://noders.team" \
+  --identity "220491ADDD660741" \
+  --details "Trusted blockchain validator and web3 developer team" \
+  --security-contact="office@noders.team" \
+  --chain-id zetachain_7000-1 \
+  --node https://zetachain-rpc.noders.services:443 --fees 3000azeta \
+  --from KEY
+```
+
+### Edit validator
+```js
+zetacored tx staking edit-validator \
+--new-moniker "YOUR_MONIKER_NAME" \
+--identity "YOUR_KEYBASE_ID" \
+--details "YOUR_DETAILS" \
+--website "YOUR_WEBSITE_URL" \
+--chain-id zetachain_7000-1 \
+--commission-rate 0.05 \
+--from KEY \
+--node https://zetachain-rpc.noders.services:443 --fees 3000azeta \
+```
+
+### Unjail
+```js
+zetacored tx slashing unjail \
+  --chain-id zetachain_7000-1 \
+  --node https://zetachain-rpc.noders.services:443 --fees 3000azeta \
+  --from KEY
+```
+
+### Jail reason
+```js
+zetacored query slashing signing-info $(zetacored tendermint show-validator)
+```
+
+### Validator details
+```js
+zetacored q staking validator $(zetacored keys show KEY --bech val -a)
+```
+
+## Maintenance
+### Get validator info
+```js
+zetacored status 2>&1 | jq .ValidatorInfo
+```
+
+### Get sync info
+```js
+zetacored status 2>&1 | jq .SyncInfo
+```
+
+### Get node peer
+```js
+echo $(zetacored tendermint show-node-id)'@'$(curl -s ifconfig.me)':'$(cat ~/.zetacored/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
+```
+
+### Check if validator key is correct
+```js
+[[ $(zetacored q staking validator $(zetacored keys show KEY --bech val -a) -oj | jq -r .consensus_pubkey.key) = $(zetacored status | jq -r .ValidatorInfo.PubKey.value) ]] && echo -e "\n\e[1m\e[32mTrue\e[0m\n" || echo -e "\n\e[1m\e[31mFalse\e[0m\n"
+```
+
+### Get live peers
+```js
+curl -sS https://zetachain-rpc.noders.services:443/net_info | jq -r '.result.peers[] | "\(.node_info.id)@\(.remote_ip):\(.node_info.listen_addr)"' | awk -F ':' '{print $1":"$(NF)}'
+```
+
+### Set minimum gas price
+```js
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.001azeta\"/" ~/.zetacored/config/app.toml
+```
+
+###Enable prometheus
+```js
+sed -i -e "s/prometheus = false/prometheus = true/" ~/.zetacored/config/config.toml
+```
+
+### Reset chain data
+```js
+zetacored tendermint unsafe-reset-all --keep-addr-book --home ~/.zetacored
+```
+
+## Service Management
+### Reload service configuration
+```js
+sudo systemctl daemon-reload
+```
+
+### Enable service
+```js
+sudo systemctl enable zetacored
+```
+
+### Disable service
+```js
+sudo systemctl disable zetacored
+```
+
+### Start service
+```js
+sudo systemctl start zetacored
+```
+
+### Stop service
+```js
+sudo systemctl stop zetacored
+```
+
+### Restart service
+```js
+sudo systemctl restart zetacored
+```
+
+### Check service status
+```js
+sudo systemctl status zetacored
+```
+
+### Check service logs
+```js
+sudo journalctl -u zetacored -f --no-hostname -o cat
+```
+
+## Remove node
+```js
+cd $HOME
+sudo systemctl stop zetacored
+sudo systemctl disable zetacored
+sudo rm /etc/systemd/system/zetacore.service
+sudo systemctl daemon-reload
+rm -f $(which zetacored)
+rm -rf ~/.zetacored
+rm -rf $HOME/zeta-chain
+```

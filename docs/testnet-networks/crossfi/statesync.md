@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop crossfi.service && crossfid tendermint unsafe-reset-all --home ~/.mineplex-chain --keep-addr-book
+sudo systemctl stop crossfid && crossfid tendermint unsafe-reset-all --home ~/.mineplex-chain --keep-addr-book
 ```
 ```bash
 peers="81000f9c5c412477c6ca442e9ead247e6118a515@crossfi-t-rpc.noders.services:12656"

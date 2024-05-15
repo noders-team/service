@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-band">
 # Installation
 </div>
-###### Chain ID: `` | Current Node Version: `vauto`
+###### Chain ID: `` | Current Node Version: `v2.5.4`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Band repo and build bandd vauto
+### Clone Band repo and build bandd v2.5.4
 ```js
 cd $HOME
 git clone https://github.com/bandprotocol/chain.git
 cd chain
-git checkout vauto
+git checkout v2.5.4
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.band/cosmovisor/upgrades/vauto/bin
-mv $HOME/go/bin/bandd ~/.band/cosmovisor/upgrades/vauto/bin/
+mkdir -p ~/.band/cosmovisor/upgrades/v2.5.4/bin
+mv $HOME/go/bin/bandd ~/.band/cosmovisor/upgrades/v2.5.4/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Band repo and build bandd vauto
+### Clone Band repo and build bandd v2.5.4
 ```js
 cd $HOME
 git clone https://github.com/bandprotocol/chain.git
 cd chain
-git checkout vauto
+git checkout v2.5.4
 ```
 
 ### Build binaries
@@ -187,7 +187,7 @@ sed -i.bak -e "s%:1317%:${bandd_PORT}317%g" \
 -e "s%:6065%:${bandd_PORT}065%g" ~/.band/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${SWISS_PORT}658%g" \
+sed -i.bak -e "s%:26658%:${bandd_PORT}658%g" \
 -e "s%:26657%:${bandd_PORT}657%g" \
 -e "s%:6060%:${bandd_PORT}060%g" \
 -e "s%:26656%:${bandd_PORT}656%g" \

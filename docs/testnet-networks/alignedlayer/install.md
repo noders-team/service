@@ -39,8 +39,8 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 ### Clone Alignedlayer repo and build alignedlayerd v0.1.0
 ```js
 cd $HOME
-git clone https://github.com/yetanotherco/aligned_layer.git
-cd aligned_layer
+git clone https://github.com/yetanotherco/aligned_layer_tendermint.git
+cd aligned_layer_tendermint
 git checkout v0.1.0
 ```
 
@@ -96,8 +96,8 @@ EOF
 ### Clone Alignedlayer repo and build alignedlayerd v0.1.0
 ```js
 cd $HOME
-git clone https://github.com/yetanotherco/aligned_layer.git
-cd aligned_layer
+git clone https://github.com/yetanotherco/aligned_layer_tendermint.git
+cd aligned_layer_tendermint
 git checkout v0.1.0
 ```
 
@@ -187,7 +187,7 @@ sed -i.bak -e "s%:1317%:${alignedlayerd_PORT}317%g" \
 -e "s%:6065%:${alignedlayerd_PORT}065%g" ~/.alignedlayer/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${SWISS_PORT}658%g" \
+sed -i.bak -e "s%:26658%:${alignedlayerd_PORT}658%g" \
 -e "s%:26657%:${alignedlayerd_PORT}657%g" \
 -e "s%:6060%:${alignedlayerd_PORT}060%g" \
 -e "s%:26656%:${alignedlayerd_PORT}656%g" \

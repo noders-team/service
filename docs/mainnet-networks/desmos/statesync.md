@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-desmos">
 # State sync
 </div>
-###### Chain ID: `desmos-mainnet` | Current Node Version: `v7.0.1`
+###### Chain ID: `desmos-mainnet` | Current Node Version: `v7.1.0`
 
 ```bash
 SNAP_RPC=https://desmos-rpc.noders.services:443 && \

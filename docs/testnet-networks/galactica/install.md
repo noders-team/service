@@ -187,7 +187,7 @@ sed -i.bak -e "s%:1317%:${galacticad_PORT}317%g" \
 -e "s%:6065%:${galacticad_PORT}065%g" ~/.galactica/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${SWISS_PORT}658%g" \
+sed -i.bak -e "s%:26658%:${galacticad_PORT}658%g" \
 -e "s%:26657%:${galacticad_PORT}657%g" \
 -e "s%:6060%:${galacticad_PORT}060%g" \
 -e "s%:26656%:${galacticad_PORT}656%g" \

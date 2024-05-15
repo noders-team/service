@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-celestia">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `celestia` | Current Node Version: `v1.6.0`
+###### Chain ID: `` | Current Node Version: `v1.9.0`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -46,7 +46,7 @@ celestia-appd q bank balances $(celestia-appd keys show KEY -a) --node https://c
 ### Send
 ```js
 celestia-appd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000utia \
-  --chain-id celestia \
+  --chain-id  \
   --node https://celestia-rpc.noders.services:443 --fees 3000utia \
   --from KEY
 ```
@@ -54,7 +54,7 @@ celestia-appd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000utia \
 ### Withdraw rewards from all validators
 ```js
 celestia-appd tx distribution withdraw-all-rewards \
-  --chain-id celestia \
+  --chain-id  \
   --node https://celestia-rpc.noders.services:443 --fees 3000utia \
   --from KEY
 ```
@@ -63,7 +63,7 @@ celestia-appd tx distribution withdraw-all-rewards \
 ```js
 celestia-appd tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
-  --chain-id celestia \
+  --chain-id  \
   --node https://celestia-rpc.noders.services:443 --fees 3000utia \
   --from KEY
 ```
@@ -71,7 +71,7 @@ celestia-appd tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ### Delegate tokens to yourself
 ```js
 celestia-appd tx staking delegate $(celestia-appd keys show KEY --bech val -a) 1000000utia \
---chain-id celestia \
+--chain-id  \
 --node https://celestia-rpc.noders.services:443 --fees 3000utia \
 --from KEY
 ```
@@ -79,7 +79,7 @@ celestia-appd tx staking delegate $(celestia-appd keys show KEY --bech val -a) 1
 ### Delegate tokens to validator
 ```js
 celestia-appd tx staking delegate VALIDATOR_ADDRESS 1000000utia \
---chain-id celestia \
+--chain-id  \
 --node https://celestia-rpc.noders.services:443 --fees 3000utia \
 --from KEY
 ```
@@ -87,7 +87,7 @@ celestia-appd tx staking delegate VALIDATOR_ADDRESS 1000000utia \
 ### Redelegate tokens to another validator
 ```js
 celestia-appd tx staking redelegate $(celestia-appd keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000utia \
-  --chain-id celestia \
+  --chain-id  \
   --node https://celestia-rpc.noders.services:443 --fees 3000utia \
   --from KEY
 ```
@@ -108,7 +108,7 @@ celestia-appd query gov proposals --node https://celestia-rpc.noders.services:44
 ### Check vote
 ```js
 celestia-appd query gov proposal PROPOSAL_NUMBER \
-  --chain-id celestia \
+  --chain-id  \
   --node https://celestia-rpc.noders.services:443 --fees 3000utia \
   --output json | jq
 ```
@@ -121,7 +121,7 @@ celestia-appd query gov proposal PROPOSAL_NUMBER \
 * abstain
 ```js
 celestia-appd tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
-  --chain-id celestia \
+  --chain-id  \
   --node https://celestia-rpc.noders.services:443 --fees 3000utia \
   --from KEY
 ```
@@ -144,7 +144,7 @@ celestia-appd tx staking create-validator \
   --identity "220491ADDD660741" \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
-  --chain-id celestia \
+  --chain-id  \
   --node https://celestia-rpc.noders.services:443 --fees 3000utia \
   --from KEY
 ```
@@ -156,7 +156,7 @@ celestia-appd tx staking edit-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id celestia \
+--chain-id  \
 --commission-rate 0.05 \
 --from KEY \
 --node https://celestia-rpc.noders.services:443 --fees 3000utia \
@@ -165,7 +165,7 @@ celestia-appd tx staking edit-validator \
 ### Unjail
 ```js
 celestia-appd tx slashing unjail \
-  --chain-id celestia \
+  --chain-id  \
   --node https://celestia-rpc.noders.services:443 --fees 3000utia \
   --from KEY
 ```

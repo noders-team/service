@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-quicksilver">
 # State sync
 </div>
-###### Chain ID: `quicksilver-2` | Current Node Version: `v1.5.4`
+###### Chain ID: `quicksilver-2` | Current Node Version: `v1.5.5`
 
 ```bash
 SNAP_RPC=https://quicksilver-rpc.noders.services:443 && \

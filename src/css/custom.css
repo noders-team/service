@@ -357,6 +357,14 @@ code .variable {
     background-image: url('../../static/img/galactica-icon.svg');
 }
 
+.icon-nibiru {
+    background-image: url('../../static/img/nibiru-icon.svg');
+}
 
+.icon-mantra {
+    background-image: url('../../static/img/mantra-icon.svg');
+}
 
-
+.icon-airchains {
+    background-image: url('../../static/img/airchains-icon.svg');
+}

@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-osmosis">
 # Installation
 </div>
-###### Chain ID: `osmo-test-5` | Current Node Version: `v24.0.0-rc0`
+###### Chain ID: `osmo-test-5` | Current Node Version: `v25.0.0-rc0`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Osmosis repo and build osmosisd v24.0.0-rc0
+### Clone Osmosis repo and build osmosisd v25.0.0-rc0
 ```js
 cd $HOME
 git clone https://github.com/osmosis-labs/osmosis.git
 cd osmosis
-git checkout v24.0.0-rc0
+git checkout v25.0.0-rc0
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.osmosisd/cosmovisor/upgrades/v24.0.0-rc0/bin
-mv $HOME/go/bin/osmosisd ~/.osmosisd/cosmovisor/upgrades/v24.0.0-rc0/bin/
+mkdir -p ~/.osmosisd/cosmovisor/upgrades/v25.0.0-rc0/bin
+mv $HOME/go/bin/osmosisd ~/.osmosisd/cosmovisor/upgrades/v25.0.0-rc0/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Osmosis repo and build osmosisd v24.0.0-rc0
+### Clone Osmosis repo and build osmosisd v25.0.0-rc0
 ```js
 cd $HOME
 git clone https://github.com/osmosis-labs/osmosis.git
 cd osmosis
-git checkout v24.0.0-rc0
+git checkout v25.0.0-rc0
 ```
 
 ### Build binaries
@@ -187,7 +187,7 @@ sed -i.bak -e "s%:1317%:${osmosisd_PORT}317%g" \
 -e "s%:6065%:${osmosisd_PORT}065%g" ~/.osmosisd/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${SWISS_PORT}658%g" \
+sed -i.bak -e "s%:26658%:${osmosisd_PORT}658%g" \
 -e "s%:26657%:${osmosisd_PORT}657%g" \
 -e "s%:6060%:${osmosisd_PORT}060%g" \
 -e "s%:26656%:${osmosisd_PORT}656%g" \

@@ -1,0 +1,50 @@
+# Blockchain
+CHAIN_NAME="Airchains"
+CHAIN_SYSTEM_NAME="airchains"
+VERSION_HAND="v0.1.0"
+CHAIN_ID="auto"
+VERSION="auto"
+CHAIN_DESCRIPTION=""" # Airchains
+
+
+Airchains is a platform that provides tools for creating modular blockchain solutions. It enables developers to quickly deploy blockchains with integration across various networks, enhancing interoperability and scalability. The platform offers automated deployment processes, chain and bridge management, and supports various protocols and standards. Airchains aims to reduce complexity and accelerate the time to market for blockchain applications. For more detailed information, visit Airchains.
+
+"""
+[CHAIN_DESCRIPTION_END]
+
+CHAIN_DENOM="uamf"
+CHAIN_FEES="3000"
+
+# Binary
+DAEMON_NAME="junctiond"
+DAEMON_SERVICE="junctiond.service"
+DAEMON_HOME="~/.junction"
+
+# Endpoints
+ENDPOINT_RPC="https://airchain-t-rpc.noders.services"
+ENDPOINT_API="https://airchain-t-api.noders.services"
+ENDPOINT_JRPC=""
+ENDPOINT_GRPC="http://airchain-t-grpc.noders.services:31090"
+ENDPOINT_PEER="auto"
+
+# Social
+SOCIAL_WEBSITE="https://www.airchains.io/"
+SOCIAL_GITHUB="https://github.com/airchains-network/junction"
+SOCIAL_DISCORD="https://discord.gg/airchains"
+SOCIAL_X="https://twitter.com/airchains_io"
+SOCIAL_TELEGRAM=""
+
+# Other
+DOWNLOAD_URL="https://config-t.noders.services/airchain"
+GITHUB_FOLDER_NAME="auto"
+VALIDATOR_LINK="https://testnet.airchains.io/validator/airvaloper15n0pesc7ggllax6medkfv6pqjszpc40qps5au8"
+
+# Updates
+UPDATE_MAIN=true
+UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
+UPDATE_UPGRADE=true
+UPDATE_SNAPSHOT=true
+UPDATE_STATESYNC=true
+UPDATE_LIVE_PEERS=true
+UPDATE_CLI_CHEATSHEET=true

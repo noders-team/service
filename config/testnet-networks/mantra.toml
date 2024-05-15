@@ -1,0 +1,48 @@
+# Blockchain
+CHAIN_NAME="Mantra"
+CHAIN_SYSTEM_NAME="mantra"
+CHAIN_ID="auto"
+VERSION="auto"
+CHAIN_DESCRIPTION="""# Mantra Chain: The Gateway for Regulated Real-World Asset Tokenization
+
+Mantra Chain emerges as a pioneering Layer 1 blockchain, strategically crafted to bridge traditional finance (TradFi) and decentralized finance (DeFi). Its foundation rests on a solid infrastructure built for the tokenization of real-world assets (RWAs), ensuring adherence to regulatory requirements essential for institutional trust and security. This platform serves as a compliant framework that empowers institutions, businesses, developers, and users to seamlessly create, trade, and manage RWAs at the protocol level.
+
+"""
+[CHAIN_DESCRIPTION_END]
+
+CHAIN_DENOM="uom"
+CHAIN_FEES="3000"
+
+# Binary
+DAEMON_NAME="mantrachaind"
+DAEMON_SERVICE="mantrachaind.service"
+DAEMON_HOME="~/.mantrachaind"
+
+# Endpoints
+ENDPOINT_RPC="https://mantra-t-rpc.noders.services"
+ENDPOINT_API="https://mantra-t-api.noders.services"
+ENDPOINT_JRPC=""
+ENDPOINT_GRPC="http://mantra-t-grpc.noders.services:30090"
+ENDPOINT_PEER="auto"
+
+# Social
+SOCIAL_WEBSITE="https://www.mantrachain.io/"
+SOCIAL_GITHUB="https://github.com/MANTRA-Finance/public"
+SOCIAL_DISCORD="https://discord.gg/gfks4TwAJV"
+SOCIAL_X="https://twitter.com/MANTRA_Chain"
+SOCIAL_TELEGRAM="https://t.me/MANTRA_Chain"
+
+# Other
+DOWNLOAD_URL="https://config-t.noders.services/mantra"
+GITHUB_FOLDER_NAME="auto"
+VALIDATOR_LINK="https://explorer.stavr.tech/Mantra-Testnet/staking/mantravaloper1aysxyetv0y7sfe0v70akyjn3kkjc6qyt5dlewa"
+
+# Updates
+UPDATE_MAIN=true
+UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
+UPDATE_UPGRADE=true
+UPDATE_SNAPSHOT=true
+UPDATE_STATESYNC=true
+UPDATE_LIVE_PEERS=true
+UPDATE_CLI_CHEATSHEET=true

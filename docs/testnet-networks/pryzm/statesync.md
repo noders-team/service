@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-pryzm">
 # State sync
 </div>
-###### Chain ID: `indigo-1` | Current Node Version: `v0.13.0`
+###### Chain ID: `indigo-1` | Current Node Version: `v0.15.0`
 
 ```bash
 SNAP_RPC=https://pryzm-t-rpc.noders.services:443 && \
@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop pryzm.service && pryzmd tendermint unsafe-reset-all --home ~/.pryzm --keep-addr-book
+sudo systemctl stop pryzmd && pryzmd tendermint unsafe-reset-all --home ~/.pryzm --keep-addr-book
 ```
 ```bash
 peers="8a863ae1b1b5f840eafd93d4712fe88c4656f188@pryzm-t-rpc.noders.services:25656"

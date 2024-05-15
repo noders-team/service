@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop artela.service && artelad tendermint unsafe-reset-all --home ~/.artelad --keep-addr-book
+sudo systemctl stop artelad && artelad tendermint unsafe-reset-all --home ~/.artelad --keep-addr-book
 ```
 ```bash
 peers="301d46637a338c2855ede5d2a587ad1f366f3813@artela-t-rpc.noders.services:18656"

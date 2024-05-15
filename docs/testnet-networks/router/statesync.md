@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop router.service && routerd tendermint unsafe-reset-all --home ~/.routerd --keep-addr-book
+sudo systemctl stop routerd && routerd tendermint unsafe-reset-all --home ~/.routerd --keep-addr-book
 ```
 ```bash
 peers="a3f0955784de782dc3cc40cc559c8c0c79bfce3e@router-t-rpc.noders.services:22656"

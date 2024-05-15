@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-quicksilver">
 # Installation
 </div>
-###### Chain ID: `rhye-2` | Current Node Version: `v1.5.4`
+###### Chain ID: `rhye-2` | Current Node Version: `v1.6.0-rc0`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Quicksilver repo and build quicksilverd v1.5.4
+### Clone Quicksilver repo and build quicksilverd v1.6.0-rc0
 ```js
 cd $HOME
 git clone https://github.com/quicksilver-zone.git
 cd quicksilver-zone
-git checkout v1.5.4
+git checkout v1.6.0-rc0
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.quicksilverd/cosmovisor/upgrades/v1.5.4/bin
-mv $HOME/go/bin/quicksilverd ~/.quicksilverd/cosmovisor/upgrades/v1.5.4/bin/
+mkdir -p ~/.quicksilverd/cosmovisor/upgrades/v1.6.0-rc0/bin
+mv $HOME/go/bin/quicksilverd ~/.quicksilverd/cosmovisor/upgrades/v1.6.0-rc0/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Quicksilver repo and build quicksilverd v1.5.4
+### Clone Quicksilver repo and build quicksilverd v1.6.0-rc0
 ```js
 cd $HOME
 git clone https://github.com/quicksilver-zone.git
 cd quicksilver-zone
-git checkout v1.5.4
+git checkout v1.6.0-rc0
 ```
 
 ### Build binaries
@@ -187,7 +187,7 @@ sed -i.bak -e "s%:1317%:${quicksilverd_PORT}317%g" \
 -e "s%:6065%:${quicksilverd_PORT}065%g" ~/.quicksilverd/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${SWISS_PORT}658%g" \
+sed -i.bak -e "s%:26658%:${quicksilverd_PORT}658%g" \
 -e "s%:26657%:${quicksilverd_PORT}657%g" \
 -e "s%:6060%:${quicksilverd_PORT}060%g" \
 -e "s%:26656%:${quicksilverd_PORT}656%g" \

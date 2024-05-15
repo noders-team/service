@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-band">
 # State sync
 </div>
-###### Chain ID: `` | Current Node Version: `vauto`
+###### Chain ID: `` | Current Node Version: `v2.5.4`
 
 ```bash
 SNAP_RPC=https://band-rpc.noders.services:443 && \

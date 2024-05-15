@@ -187,7 +187,7 @@ sed -i.bak -e "s%:1317%:${uptickd_PORT}317%g" \
 -e "s%:6065%:${uptickd_PORT}065%g" ~/.uptickd/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${SWISS_PORT}658%g" \
+sed -i.bak -e "s%:26658%:${uptickd_PORT}658%g" \
 -e "s%:26657%:${uptickd_PORT}657%g" \
 -e "s%:6060%:${uptickd_PORT}060%g" \
 -e "s%:26656%:${uptickd_PORT}656%g" \

@@ -187,7 +187,7 @@ sed -i.bak -e "s%:1317%:${bitsongd_PORT}317%g" \
 -e "s%:6065%:${bitsongd_PORT}065%g" ~/.bitsongd/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${SWISS_PORT}658%g" \
+sed -i.bak -e "s%:26658%:${bitsongd_PORT}658%g" \
 -e "s%:26657%:${bitsongd_PORT}657%g" \
 -e "s%:6060%:${bitsongd_PORT}060%g" \
 -e "s%:26656%:${bitsongd_PORT}656%g" \

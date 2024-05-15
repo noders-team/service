@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-dymension">
 # Dymension
 </div>
-###### Chain ID: `dymension_1100-1` | Current Node Version: `v3.0.0`
+###### Chain ID: `dymension_1100-1` | Current Node Version: `v3.1.0`
 
 
 Dymension introduces a Layer 2 scaling solution using rollup technology to boost Layer 1 blockchains like Ethereum. It emphasizes scalability, interoperability, reduced transaction costs, enhanced security, and developer support. Ideal for high-throughput applications in DeFi, gaming, and NFTs, Dymension facilitates efficient, cost-effective transactions and cross-chain interactions, advancing the blockchain ecosystem towards greater adoption and innovation.
@@ -48,7 +48,7 @@ Official links of social networks of projects
     <SmallCard to="https://dymension-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
     <SmallCard to="https://dymension-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     <SmallCard to="https://dymension-jsonrpc.noders.services" header={{label: "json-RPC Endpoint", translateId: "jrpc-endpoint"}}/>
-    <SmallCard to="https://dymension-grpc.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="http://dymension-grpc.noders.services:12090" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
 </CardLayout>
 
 

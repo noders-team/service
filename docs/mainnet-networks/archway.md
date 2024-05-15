@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-archway">
 # Archway
 </div>
-###### Chain ID: `archway-1` | Current Node Version: `v6.0.2`
+###### Chain ID: `archway-1` | Current Node Version: `v7.0.0`
 
 
 Archway is redefining dApp development by integrating innovative economic models with blockchain technology. It provides a multi-chain launchpad with tools for creating, deploying, and monetizing dApps. Key features include smart contract premiums, an inflationary yield engine, gas fee rebates, and a robust framework built on Cosmos for scalability and interoperability. Archway's platform is designed for developers seeking a seamless development process with new monetization avenues, promoting a sustainable ecosystem for both creators and validators.
@@ -48,7 +48,7 @@ Official links of social networks of projects
     <SmallCard to="https://archway-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
     <SmallCard to="https://archway-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     
-    <SmallCard to="https://archway-grpc.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="http://archway-grpc.noders.services:13090" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
 </CardLayout>
 
 

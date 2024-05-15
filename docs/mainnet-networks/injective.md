@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-injective">
 # Injective
 </div>
-###### Chain ID: `injective-1` | Current Node Version: `v1.12.1`
+###### Chain ID: `` | Current Node Version: `v1.12.1`
 
 
 Injective Protocol revolutionizes DeFi by offering a decentralized, permissionless, and scalable trading platform for spot and derivatives across blockchains. Key features include fully decentralized trading, cross-chain capabilities, zero gas fees, high performance, customizable market creation, and robust security measures. Catering to a broad audience, it supports diverse trading strategies and assets, making it a versatile choice for traders and investors seeking an inclusive, efficient, and secure trading experience in the DeFi ecosystem.
@@ -48,7 +48,7 @@ Official links of social networks of projects
     <SmallCard to="https://injective-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
     <SmallCard to="https://injective-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     
-    <SmallCard to="https://injective-grpc.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="http://injective-grpc.noders.services:33090" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
 </CardLayout>
 
 

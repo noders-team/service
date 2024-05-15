@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop [DAEMON_SERVICE] && [DAEMON_NAME] tendermint unsafe-reset-all --home [DAEMON_HOME] --keep-addr-book
+sudo systemctl stop [DAEMON_NAME] && [DAEMON_NAME] tendermint unsafe-reset-all --home [DAEMON_HOME] --keep-addr-book
 ```
 ```bash
 peers="[ENDPOINT_PEER]"

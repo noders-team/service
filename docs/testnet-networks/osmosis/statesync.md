@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-osmosis">
 # State sync
 </div>
-###### Chain ID: `osmo-test-5` | Current Node Version: `v24.0.0-rc0`
+###### Chain ID: `osmo-test-5` | Current Node Version: `v25.0.0-rc0`
 
 ```bash
 SNAP_RPC=https://osmosis-t-rpc.noders.services:443 && \
@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop osmosisd.service && osmosisd tendermint unsafe-reset-all --home ~/.osmosisd --keep-addr-book
+sudo systemctl stop osmosisd && osmosisd tendermint unsafe-reset-all --home ~/.osmosisd --keep-addr-book
 ```
 ```bash
 peers="e789336ddac0a5801c454b44fca13c4ba5701a4a@osmosis-t-rpc.noders.services:10656"

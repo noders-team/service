@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-lava">
 # State sync
 </div>
-###### Chain ID: `lava-testnet-2` | Current Node Version: `v1.2.0`
+###### Chain ID: `lava-testnet-2` | Current Node Version: `v2.0.0`
 
 ```bash
 SNAP_RPC=https://lava-t-rpc.noders.services:443 && \
@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop lava.service && lavad tendermint unsafe-reset-all --home ~/.lava --keep-addr-book
+sudo systemctl stop lavad && lavad tendermint unsafe-reset-all --home ~/.lava --keep-addr-book
 ```
 ```bash
 peers="e33ea4c7611bfee8160ad577890a9ae158a9a3ac@lava-t-rpc.noders.services:19656"

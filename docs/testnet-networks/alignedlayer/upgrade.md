@@ -13,9 +13,9 @@ sidebar_position: 3
 ## Clone Alignedlayer repository
 ```js
 cd $HOME
-rm -rf aligned_layer
-git clone https://github.com/yetanotherco/aligned_layer.git
-cd aligned_layer
+rm -rf aligned_layer_tendermint
+git clone https://github.com/yetanotherco/aligned_layer_tendermint.git
+cd aligned_layer_tendermint
 git checkout v0.1.0
  ```
 
@@ -35,9 +35,9 @@ rm -rf build
 ## Clone Alignedlayer repository
 ```js
 cd $HOME
-rm -rf aligned_layer
-git clone https://github.com/yetanotherco/aligned_layer.git
-cd aligned_layer
+rm -rf aligned_layer_tendermint
+git clone https://github.com/yetanotherco/aligned_layer_tendermint.git
+cd aligned_layer_tendermint
 git checkout v0.1.0
  ```
 

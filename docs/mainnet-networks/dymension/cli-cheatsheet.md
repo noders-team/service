@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-dymension">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `dymension_1100-1` | Current Node Version: `v3.0.0`
+###### Chain ID: `dymension_1100-1` | Current Node Version: `v3.1.0`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -45,9 +45,9 @@ dymd q bank balances $(dymd keys show KEY -a) --node https://dymension-rpc.noder
 
 ### Send
 ```js
-dymd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000udsm \
+dymd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000adym \
   --chain-id dymension_1100-1 \
-  --node https://dymension-rpc.noders.services:443 --fees 3000udsm \
+  --node https://dymension-rpc.noders.services:443 --fees 300000000adym \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ dymd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000udsm \
 ```js
 dymd tx distribution withdraw-all-rewards \
   --chain-id dymension_1100-1 \
-  --node https://dymension-rpc.noders.services:443 --fees 3000udsm \
+  --node https://dymension-rpc.noders.services:443 --fees 300000000adym \
   --from KEY
 ```
 
@@ -64,39 +64,39 @@ dymd tx distribution withdraw-all-rewards \
 dymd tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id dymension_1100-1 \
-  --node https://dymension-rpc.noders.services:443 --fees 3000udsm \
+  --node https://dymension-rpc.noders.services:443 --fees 300000000adym \
   --from KEY
 ```
 
 ### Delegate tokens to yourself
 ```js
-dymd tx staking delegate $(dymd keys show KEY --bech val -a) 1000000udsm \
+dymd tx staking delegate $(dymd keys show KEY --bech val -a) 1000000adym \
 --chain-id dymension_1100-1 \
---node https://dymension-rpc.noders.services:443 --fees 3000udsm \
+--node https://dymension-rpc.noders.services:443 --fees 300000000adym \
 --from KEY
 ```
 
 ### Delegate tokens to validator
 ```js
-dymd tx staking delegate VALIDATOR_ADDRESS 1000000udsm \
+dymd tx staking delegate VALIDATOR_ADDRESS 1000000adym \
 --chain-id dymension_1100-1 \
---node https://dymension-rpc.noders.services:443 --fees 3000udsm \
+--node https://dymension-rpc.noders.services:443 --fees 300000000adym \
 --from KEY
 ```
 
 ### Redelegate tokens to another validator
 ```js
-dymd tx staking redelegate $(dymd keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000udsm \
+dymd tx staking redelegate $(dymd keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000adym \
   --chain-id dymension_1100-1 \
-  --node https://dymension-rpc.noders.services:443 --fees 3000udsm \
+  --node https://dymension-rpc.noders.services:443 --fees 300000000adym \
   --from KEY
 ```
 
 ### Unbond tokens from your validator
 ```js
-dymd tx staking unbond $(dymd keys show KEY --bech val -a) udsm \
+dymd tx staking unbond $(dymd keys show KEY --bech val -a) adym \
   --chain-id andromeda-1 \
-  --node https://dymension-rpc.noders.services:443 --fees 3000udsm \
+  --node https://dymension-rpc.noders.services:443 --fees 300000000adym \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ dymd query gov proposals --node https://dymension-rpc.noders.services:443
 ```js
 dymd query gov proposal PROPOSAL_NUMBER \
   --chain-id dymension_1100-1 \
-  --node https://dymension-rpc.noders.services:443 --fees 3000udsm \
+  --node https://dymension-rpc.noders.services:443 --fees 300000000adym \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ dymd query gov proposal PROPOSAL_NUMBER \
 ```js
 dymd tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id dymension_1100-1 \
-  --node https://dymension-rpc.noders.services:443 --fees 3000udsm \
+  --node https://dymension-rpc.noders.services:443 --fees 300000000adym \
   --from KEY
 ```
 
@@ -133,7 +133,7 @@ We use example filed values instead of capitalized dummy words for demo purpose 
 :::
 ```js
 dymd tx staking create-validator \
-  --amount 1000000udsm \
+  --amount 1000000adym \
   --commission-max-change-rate "0.05" \
   --commission-max-rate "0.10" \
   --commission-rate "0.05" \
@@ -145,7 +145,7 @@ dymd tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id dymension_1100-1 \
-  --node https://dymension-rpc.noders.services:443 --fees 3000udsm \
+  --node https://dymension-rpc.noders.services:443 --fees 300000000adym \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ dymd tx staking edit-validator \
 --chain-id dymension_1100-1 \
 --commission-rate 0.05 \
 --from KEY \
---node https://dymension-rpc.noders.services:443 --fees 3000udsm \
+--node https://dymension-rpc.noders.services:443 --fees 300000000adym \
 ```
 
 ### Unjail
 ```js
 dymd tx slashing unjail \
   --chain-id dymension_1100-1 \
-  --node https://dymension-rpc.noders.services:443 --fees 3000udsm \
+  --node https://dymension-rpc.noders.services:443 --fees 300000000adym \
   --from KEY
 ```
 
@@ -208,7 +208,7 @@ curl -sS https://dymension-rpc.noders.services:443/net_info | jq -r '.result.pee
 
 ### Set minimum gas price
 ```js
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.001udsm\"/" ~/.dymension/config/app.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.001adym\"/" ~/.dymension/config/app.toml
 ```
 
 ###Enable prometheus

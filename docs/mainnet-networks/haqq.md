@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-haqq">
 # Haqq
 </div>
-###### Chain ID: `haqq_11235-1` | Current Node Version: `v1.7.3`
+###### Chain ID: `haqq_11235-1` | Current Node Version: `v1.7.4`
 
 # IslamicCoin: A Shariah-Compliant Digital Currency
 
@@ -49,7 +49,7 @@ Official links of social networks of projects
     <SmallCard to="https://haqq-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
     <SmallCard to="https://haqq-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     <SmallCard to="https://haqq-jsonrpc.noders.services" header={{label: "json-RPC Endpoint", translateId: "jrpc-endpoint"}}/>
-    <SmallCard to="https://haqq-grpc.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="http://haqq-grpc.noders.services:14090" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
 </CardLayout>
 
 

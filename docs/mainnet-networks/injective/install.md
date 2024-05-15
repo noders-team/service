@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-injective">
 # Installation
 </div>
-###### Chain ID: `injective-1` | Current Node Version: `v1.12.1`
+###### Chain ID: `` | Current Node Version: `v1.12.1`
 
 ## Install dependencies
 
@@ -136,14 +136,14 @@ sudo systemctl enable injectived
 ## Node configuration
 ### Set config
 ```js
-injectived config chain-id injective-1
+injectived config chain-id 
 injectived config keyring-backend os
 injectived config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-injectived init NAME_OF_YOUR_VALIDATOR --chain-id injective-1
+injectived init NAME_OF_YOUR_VALIDATOR --chain-id 
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config.noders.services/injective/addrbook.json -o ~/.injectived/con
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"b96ce37010e0b3baa5020b536822ccba511c8f5f@injective-rpc.noders.services:33656\"/" ~/.injectived/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@injective-rpc.noders.services:\"/" ~/.injectived/config/config.toml
 ```
 
 ### Set minimum gas price
@@ -187,7 +187,7 @@ sed -i.bak -e "s%:1317%:${injectived_PORT}317%g" \
 -e "s%:6065%:${injectived_PORT}065%g" ~/.injectived/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${SWISS_PORT}658%g" \
+sed -i.bak -e "s%:26658%:${injectived_PORT}658%g" \
 -e "s%:26657%:${injectived_PORT}657%g" \
 -e "s%:6060%:${injectived_PORT}060%g" \
 -e "s%:26656%:${injectived_PORT}656%g" \

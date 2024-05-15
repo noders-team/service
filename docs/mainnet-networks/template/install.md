@@ -187,7 +187,7 @@ sed -i.bak -e "s%:1317%:${[DAEMON_NAME]_PORT}317%g" \
 -e "s%:6065%:${[DAEMON_NAME]_PORT}065%g" [DAEMON_HOME]/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${SWISS_PORT}658%g" \
+sed -i.bak -e "s%:26658%:${[DAEMON_NAME]_PORT}658%g" \
 -e "s%:26657%:${[DAEMON_NAME]_PORT}657%g" \
 -e "s%:6060%:${[DAEMON_NAME]_PORT}060%g" \
 -e "s%:26656%:${[DAEMON_NAME]_PORT}656%g" \

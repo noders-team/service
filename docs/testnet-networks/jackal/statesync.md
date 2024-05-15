@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop canined.service && canined tendermint unsafe-reset-all --home ~/.canine --keep-addr-book
+sudo systemctl stop canined && canined tendermint unsafe-reset-all --home ~/.canine --keep-addr-book
 ```
 ```bash
 peers="687a7185b8310900fa0a176f913e6996d591c95d@jackal-t-rpc.noders.services:14656"

@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-quicksilver">
 # State sync
 </div>
-###### Chain ID: `rhye-2` | Current Node Version: `v1.5.4`
+###### Chain ID: `rhye-2` | Current Node Version: `v1.6.0-rc0`
 
 ```bash
 SNAP_RPC=https://quicksilver-t-rpc.noders.services:443 && \
@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop quicksilverd.service && quicksilverd tendermint unsafe-reset-all --home ~/.quicksilverd --keep-addr-book
+sudo systemctl stop quicksilverd && quicksilverd tendermint unsafe-reset-all --home ~/.quicksilverd --keep-addr-book
 ```
 ```bash
 peers="74c596b4b7b15543933623a314749d28a9cac703@quicksilver-t-rpc.noders.services:13656"

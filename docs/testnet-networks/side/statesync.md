@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-side">
 # State sync
 </div>
-###### Chain ID: `side-testnet-3` | Current Node Version: `v0.7.0-rc2`
+###### Chain ID: `S2-testnet-2` | Current Node Version: `v0.8.1`
 
 ```bash
 SNAP_RPC=https://side-t-rpc.noders.services:443 && \
@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop sided.service && sided tendermint unsafe-reset-all --home ~/.side --keep-addr-book
+sudo systemctl stop sided && sided tendermint unsafe-reset-all --home ~/.side --keep-addr-book
 ```
 ```bash
 peers="4a02056469cdfd852fe736719b56ae22e84d729e@side-t-rpc.noders.services:26656"

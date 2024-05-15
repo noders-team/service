@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-band">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `` | Current Node Version: `vauto`
+###### Chain ID: `` | Current Node Version: `v2.5.4`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 

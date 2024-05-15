@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop zetacore.service && zetacored tendermint unsafe-reset-all --home ~/.zetacored --keep-addr-book
+sudo systemctl stop zetacored && zetacored tendermint unsafe-reset-all --home ~/.zetacored --keep-addr-book
 ```
 ```bash
 peers="f1a9255d4dd4de7c0e070266c072cdbe0f023918@zetachain-t-rpc.noders.services:17656"

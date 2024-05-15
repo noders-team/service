@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-archway">
 # Upgrade
 </div>
-###### Chain ID: `archway-1` | Current Node Version: `v6.0.2`
+###### Chain ID: `archway-1` | Current Node Version: `v7.0.0`
 
 
 # Clone Archway repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf archway-network
 git clone https://github.com/archway-network.git
 cd archway-network
-git checkout v6.0.2
+git checkout v7.0.0
  ```
 
 # Build binaries
@@ -26,8 +26,8 @@ make build
 
 # Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.archwayd/cosmovisor/upgrades/v6.0.2/bin
-mv build/archwayd ~/.archwayd/cosmovisor/upgrades/v6.0.2/bin/
+mkdir -p ~/.archwayd/cosmovisor/upgrades/v7.0.0/bin
+mv build/archwayd ~/.archwayd/cosmovisor/upgrades/v7.0.0/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf archway-network
 git clone https://github.com/archway-network.git
 cd archway-network
-git checkout v6.0.2
+git checkout v7.0.0
  ```
 
 ## Build binaries

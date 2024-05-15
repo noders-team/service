@@ -187,7 +187,7 @@ sed -i.bak -e "s%:1317%:${berad_PORT}317%g" \
 -e "s%:6065%:${berad_PORT}065%g" ~/.berad/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${SWISS_PORT}658%g" \
+sed -i.bak -e "s%:26658%:${berad_PORT}658%g" \
 -e "s%:26657%:${berad_PORT}657%g" \
 -e "s%:6060%:${berad_PORT}060%g" \
 -e "s%:26656%:${berad_PORT}656%g" \

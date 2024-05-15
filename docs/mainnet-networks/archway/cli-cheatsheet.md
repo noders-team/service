@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-archway">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `archway-1` | Current Node Version: `v6.0.2`
+###### Chain ID: `archway-1` | Current Node Version: `v7.0.0`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 

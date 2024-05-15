@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop 0g.service && evmosd tendermint unsafe-reset-all --home ~/.evmosd --keep-addr-book
+sudo systemctl stop evmosd && evmosd tendermint unsafe-reset-all --home ~/.evmosd --keep-addr-book
 ```
 ```bash
 peers="3e2f5e57e0f8eb4475982a08e39e76629731ce7d@og-t-rpc.noders.services:29656"

@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop union.service && uniond tendermint unsafe-reset-all --home ~/.union --keep-addr-book
+sudo systemctl stop uniond && uniond tendermint unsafe-reset-all --home ~/.union --keep-addr-book
 ```
 ```bash
 peers="d9967a42d574c59a66af1a25dade03af6a41b979@union-t-rpc.noders.services:11656"

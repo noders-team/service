@@ -22,7 +22,7 @@ DAEMON_HOME="~/.band"
 ENDPOINT_RPC="https://band-t-rpc.noders.services"
 ENDPOINT_API="https://band-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="band-t-grpc.noders.services:20090"
+ENDPOINT_GRPC="http://band-t-grpc.noders.services:20090"
 ENDPOINT_PEER="auto"
 
 # Social

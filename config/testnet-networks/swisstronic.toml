@@ -22,7 +22,7 @@ DAEMON_HOME="~/.swisstronik"
 ENDPOINT_RPC="https://swisstronik-t-rpc.noders.services"
 ENDPOINT_API="https://swisstronik-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="swisstronik-t-grpc.noders.services:26090"
+ENDPOINT_GRPC="http://swisstronik-t-grpc.noders.services:26090"
 ENDPOINT_PEER="auto"
 
 # Social

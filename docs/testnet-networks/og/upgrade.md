@@ -13,9 +13,9 @@ sidebar_position: 3
 ## Clone ZeroGravity repository
 ```js
 cd $HOME
-rm -rf 0g-evmos.git
-git clone https://github.com/0glabs/0g-evmos.git.git
-cd 0g-evmos.git
+rm -rf 0g-evmos
+git clone https://github.com/0glabs/0g-evmos.git
+cd 0g-evmos
 git checkout v1.0.0-testnet
  ```
 
@@ -35,9 +35,9 @@ rm -rf build
 ## Clone ZeroGravity repository
 ```js
 cd $HOME
-rm -rf 0g-evmos.git
-git clone https://github.com/0glabs/0g-evmos.git.git
-cd 0g-evmos.git
+rm -rf 0g-evmos
+git clone https://github.com/0glabs/0g-evmos.git
+cd 0g-evmos
 git checkout v1.0.0-testnet
  ```
 

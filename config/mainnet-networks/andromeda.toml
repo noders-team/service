@@ -22,7 +22,7 @@ DAEMON_HOME="~/.andromeda"
 ENDPOINT_RPC="https://andromeda-rpc.noders.services"
 ENDPOINT_API="https://andromeda-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="andromeda-grpc.noders.services:34090"
+ENDPOINT_GRPC="http://andromeda-grpc.noders.services:34090"
 ENDPOINT_PEER="auto"
 
 # Social

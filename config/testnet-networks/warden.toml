@@ -22,7 +22,7 @@ DAEMON_HOME="~/.warden"
 ENDPOINT_RPC="https://warden-t-rpc.noders.services"
 ENDPOINT_API="https://warden-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="warden-t-grpc.noders.services:23090"
+ENDPOINT_GRPC="http://warden-t-grpc.noders.services:23090"
 ENDPOINT_PEER="auto"
 
 # Social

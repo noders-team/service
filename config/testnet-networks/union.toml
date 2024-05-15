@@ -23,7 +23,7 @@ DAEMON_HOME="~/.union"
 ENDPOINT_RPC="https://union-t-rpc.noders.services"
 ENDPOINT_API="https://union-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="union-t-grpc.noders.services:11090"
+ENDPOINT_GRPC="http://union-t-grpc.noders.services:11090"
 ENDPOINT_PEER="auto"
 
 # Social

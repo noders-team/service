@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-quicksilver">
 # Node Snapshot
 </div>
-###### Chain ID: `quicksilver-2` | Current Node Version: `v1.5.4`
+###### Chain ID: `quicksilver-2` | Current Node Version: `v1.5.5`
 
 ## Our Quicksilver Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 5.11 GB | Thu, 11 Apr 2024 23:17:19 GMT |
+| 119.05 GB | Wed, 15 May 2024 08:38:55 GMT |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

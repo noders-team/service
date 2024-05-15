@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-archway">
 # State sync
 </div>
-###### Chain ID: `archway-1` | Current Node Version: `v6.0.2`
+###### Chain ID: `archway-1` | Current Node Version: `v7.0.0`
 
 ```bash
 SNAP_RPC=https://archway-rpc.noders.services:443 && \

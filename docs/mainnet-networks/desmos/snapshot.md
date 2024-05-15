@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-desmos">
 # Node Snapshot
 </div>
-###### Chain ID: `desmos-mainnet` | Current Node Version: `v7.0.1`
+###### Chain ID: `desmos-mainnet` | Current Node Version: `v7.1.0`
 
 ## Our Desmos Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 2.81 GB | Thu, 11 Apr 2024 23:36:11 GMT |
+| 15.53 GB | Wed, 15 May 2024 10:51:58 GMT |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

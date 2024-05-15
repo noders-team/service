@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-andromeda">
 # State sync
 </div>
-###### Chain ID: `andromeda-1` | Current Node Version: `vandromeda-1-v0.1.0`
+###### Chain ID: `andromeda-1` | Current Node Version: `v0.1.1-fix-gov`
 
 ```bash
 SNAP_RPC=https://andromeda-rpc.noders.services:443 && \

@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-side">
 # Side
 </div>
-###### Chain ID: `side-testnet-3` | Current Node Version: `v0.7.0-rc2`
+###### Chain ID: `S2-testnet-2` | Current Node Version: `v0.8.1`
 
 
 Side Protocol emerges as a pivotal exchange layer for Web3, aiming to redefine decentralized finance (DeFi) by ensuring secure, transparent, and efficient cryptocurrency transactions. Embracing user-centric and developer-friendly approaches, it offers a robust platform that simplifies DeFi integration and usage. Through its commitment to innovation and reliability, Side Protocol is set to empower the digital asset space, facilitating a seamless exchange experience across the Web3 ecosystem.
@@ -48,5 +48,5 @@ Official links of social networks of projects
     <SmallCard to="https://side-t-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
     <SmallCard to="https://side-t-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     
-    <SmallCard to="https://side-t-grpc.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="http://side-t-grpc.noders.services:26090" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
 </CardLayout>

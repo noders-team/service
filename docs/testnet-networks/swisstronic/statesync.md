@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop swisstronik.service && swisstronikd tendermint unsafe-reset-all --home ~/.swisstronik --keep-addr-book
+sudo systemctl stop swisstronikd && swisstronikd tendermint unsafe-reset-all --home ~/.swisstronik --keep-addr-book
 ```
 ```bash
 peers="1db22294bec0fd095eaa4a3f2381aef5105b538c@swisstronik-t-rpc.noders.services:26656"

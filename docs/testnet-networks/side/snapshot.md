@@ -7,13 +7,13 @@ sidebar_position: 3
 <div class="h1-with-icon icon-side">
 # Node Snapshot
 </div>
-###### Chain ID: `side-testnet-3` | Current Node Version: `v0.7.0-rc2`
+###### Chain ID: `S2-testnet-2` | Current Node Version: `v0.8.1`
 
 ## Our Side Snapshot Server Setup
 
 | Size   | Timestamp    |
 |--------|--------------|
-| 6.33 GB | Thu, 11 Apr 2024 23:12:33 GMT  |
+| 4.76 GB | Wed, 15 May 2024 12:04:14 GMT  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

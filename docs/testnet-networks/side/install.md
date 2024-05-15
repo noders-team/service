@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-side">
 # Installation
 </div>
-###### Chain ID: `side-testnet-3` | Current Node Version: `v0.7.0-rc2`
+###### Chain ID: `S2-testnet-2` | Current Node Version: `v0.8.1`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Side repo and build sided v0.7.0-rc2
+### Clone Side repo and build sided v0.8.1
 ```js
 cd $HOME
 git clone https://github.com/sideprotocol.git
 cd sideprotocol
-git checkout v0.7.0-rc2
+git checkout v0.8.1
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.side/cosmovisor/upgrades/v0.7.0-rc2/bin
-mv $HOME/go/bin/sided ~/.side/cosmovisor/upgrades/v0.7.0-rc2/bin/
+mkdir -p ~/.side/cosmovisor/upgrades/v0.8.1/bin
+mv $HOME/go/bin/sided ~/.side/cosmovisor/upgrades/v0.8.1/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Side repo and build sided v0.7.0-rc2
+### Clone Side repo and build sided v0.8.1
 ```js
 cd $HOME
 git clone https://github.com/sideprotocol.git
 cd sideprotocol
-git checkout v0.7.0-rc2
+git checkout v0.8.1
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable sided
 ## Node configuration
 ### Set config
 ```js
-sided config chain-id side-testnet-3
+sided config chain-id S2-testnet-2
 sided config keyring-backend os
 sided config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-sided init NAME_OF_YOUR_VALIDATOR --chain-id side-testnet-3
+sided init NAME_OF_YOUR_VALIDATOR --chain-id S2-testnet-2
 ```
 
 ### Download genesis and addrbook
@@ -187,7 +187,7 @@ sed -i.bak -e "s%:1317%:${sided_PORT}317%g" \
 -e "s%:6065%:${sided_PORT}065%g" ~/.side/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${SWISS_PORT}658%g" \
+sed -i.bak -e "s%:26658%:${sided_PORT}658%g" \
 -e "s%:26657%:${sided_PORT}657%g" \
 -e "s%:6060%:${sided_PORT}060%g" \
 -e "s%:26656%:${sided_PORT}656%g" \

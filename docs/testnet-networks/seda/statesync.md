@@ -17,7 +17,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 ```bash
-sudo systemctl stop seda.service && sedad tendermint unsafe-reset-all --home ~/.sedad --keep-addr-book
+sudo systemctl stop sedad && sedad tendermint unsafe-reset-all --home ~/.sedad --keep-addr-book
 ```
 ```bash
 peers="3bae0d27a2e2889ebcc4c84918dda1df950ec694@seda-t-rpc.noders.services:24656"
