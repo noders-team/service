@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-og">
 # State sync
 </div>
-###### Chain ID: `zgtendermint_9000-1` | Current Node Version: `v1.0.0-testnet`
+###### Chain ID: `zgtendermint_16600-1` | Current Node Version: `v0.1.0`
 
 ```bash
 SNAP_RPC=https://og-t-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop evmosd && evmosd tendermint unsafe-reset-all --home ~/.evmosd --keep-addr-book
 ```
 ```bash
-peers="3e2f5e57e0f8eb4475982a08e39e76629731ce7d@og-t-rpc.noders.services:29656"
+peers="986ff891360c0c1c5ead8cf498383e832e34ca89@og-t-rpc.noders.services:29656"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.evmosd/config/config.toml
 ```
 ```bash

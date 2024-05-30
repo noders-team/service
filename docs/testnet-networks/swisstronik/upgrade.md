@@ -4,13 +4,13 @@ title: Upgrade
 sidebar_position: 3
 ---
 
-<div class="h1-with-icon icon-swisstronic">
+<div class="h1-with-icon icon-swisstronik">
 # Upgrade
 </div>
 ###### Chain ID: `swisstronik_1291-1` | Current Node Version: `v1.0.1`
 
 # With Cosmovisor
-## Clone Swisstronic repository
+## Clone Swisstronik repository
 ```js
 cd $HOME
 rm -rf SigmaGmbH
@@ -32,7 +32,7 @@ rm -rf build
 ```
 
 # Without Cosmovisor
-## Clone Swisstronic repository
+## Clone Swisstronik repository
 ```js
 cd $HOME
 rm -rf SigmaGmbH

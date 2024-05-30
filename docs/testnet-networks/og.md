@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-og">
 # ZeroGravity
 </div>
-###### Chain ID: `zgtendermint_9000-1` | Current Node Version: `v1.0.0-testnet`
+###### Chain ID: `zgtendermint_16600-1` | Current Node Version: `v0.1.0`
 
 
 The scalability of 0G hinges on the idea of separating the workflow of data availability into data publishing lane and data storage lane. Large volume of data transfers happen on the data storage lane that is supported by the storage layer which achieves the horizontal scalability through well designed partitioning, while the data publishing lane guarantees the data availability property through consensus of data availability sampling which only requires tiny data flowing through the consensus protocol to avoid the broadcasting bottleneck. Data storage is an integral part of data availability because it must answer the question of where the data is published.

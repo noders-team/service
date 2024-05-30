@@ -13,7 +13,7 @@ sidebar_position: 3
 
 | Size   | Timestamp    |
 |--------|--------------|
-| 4.76 GB | Wed, 15 May 2024 12:04:14 GMT  |
+| 14.33 GB | Thu, 30 May 2024 06:05:54 GMT  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

@@ -4,7 +4,7 @@ title: Installation
 sidebar_position: 2
 ---
 
-<div class="h1-with-icon icon-swisstronic">
+<div class="h1-with-icon icon-swisstronik">
 # Installation
 </div>
 ###### Chain ID: `swisstronik_1291-1` | Current Node Version: `v1.0.1`
@@ -36,7 +36,7 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Swisstronic repo and build swisstronikd v1.0.1
+### Clone Swisstronik repo and build swisstronikd v1.0.1
 ```js
 cd $HOME
 git clone https://github.com/SigmaGmbH.git
@@ -71,7 +71,7 @@ go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
 ```js
 sudo tee /etc/systemd/system/swisstronikd.service > /dev/null << EOF
 [Unit]
-Description=swisstronic node service
+Description=swisstronik node service
 After=network-online.target
 
 [Service]
@@ -93,7 +93,7 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Swisstronic repo and build swisstronikd v1.0.1
+### Clone Swisstronik repo and build swisstronikd v1.0.1
 ```js
 cd $HOME
 git clone https://github.com/SigmaGmbH.git
@@ -111,7 +111,7 @@ make install
 ```js
 sudo tee /etc/systemd/system/swisstronikd.service > /dev/null << EOF
 [Unit]
-Description=swisstronic node service
+Description=swisstronik node service
 After=network-online.target
 
 [Service]
@@ -148,8 +148,8 @@ swisstronikd init NAME_OF_YOUR_VALIDATOR --chain-id swisstronik_1291-1
 
 ### Download genesis and addrbook
 ```js
-curl https://config-t.noders.services/swisstronic/genesis.json -o ~/.swisstronik/config/genesis.json
-curl https://config-t.noders.services/swisstronic/addrbook.json -o ~/.swisstronik/config/addrbook.json
+curl https://config-t.noders.services/swisstronik/genesis.json -o ~/.swisstronik/config/genesis.json
+curl https://config-t.noders.services/swisstronik/addrbook.json -o ~/.swisstronik/config/addrbook.json
 ```
 ### Add peers
 ```js

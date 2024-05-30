@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-celestia">
 # Upgrade
 </div>
-###### Chain ID: `` | Current Node Version: `v1.9.0`
+###### Chain ID: `celestia` | Current Node Version: `v1.9.0`
 
 
 # Clone Celestia repository

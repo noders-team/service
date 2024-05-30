@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-berachain">
 # Upgrade
 </div>
-###### Chain ID: `artio-80085` | Current Node Version: `v0.2.3-alpha-rc7`
+###### Chain ID: `` | Current Node Version: `vauto`
 
 # With Cosmovisor
 ## Clone BeraChain repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf berachain
 git clone https://github.com/berachain.git
 cd berachain
-git checkout v0.2.3-alpha-rc7
+git checkout vauto
  ```
 
 ## Build binaries
@@ -26,8 +26,8 @@ make build
 
 ## Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.berad/cosmovisor/upgrades/v0.2.3-alpha-rc7/bin
-mv build/berad ~/.berad/cosmovisor/upgrades/v0.2.3-alpha-rc7/bin/
+mkdir -p ~/.berad/cosmovisor/upgrades/vauto/bin
+mv build/berad ~/.berad/cosmovisor/upgrades/vauto/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf berachain
 git clone https://github.com/berachain.git
 cd berachain
-git checkout v0.2.3-alpha-rc7
+git checkout vauto
  ```
 
 ## Build binaries

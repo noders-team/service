@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-stratos">
 # Stratos
 </div>
-###### Chain ID: `stratos-1` | Current Node Version: `v0.11.2`
+###### Chain ID: `` | Current Node Version: `vauto`
 
 
 Stratos is transforming data storage for the web with its blockchain-based, decentralized platform. Offering enhanced security, scalability, and data sovereignty, it challenges conventional cloud storage paradigms. Stratos is designed for rapid data access, a token economy rewarding users, and seamless interoperability for diverse applications. Ideal for dApps, analytics, content distribution, and secure archiving, Stratos is paving the way towards a user-driven digital era.

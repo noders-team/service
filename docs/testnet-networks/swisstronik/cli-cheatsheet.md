@@ -4,7 +4,7 @@ title: CLI Cheatsheet
 sidebar_position: 8
 ---
 
-<div class="h1-with-icon icon-swisstronic">
+<div class="h1-with-icon icon-swisstronik">
 # CLI Cheatsheet
 </div>
 ###### Chain ID: `swisstronik_1291-1` | Current Node Version: `v1.0.1`

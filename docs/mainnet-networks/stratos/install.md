@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-stratos">
 # Installation
 </div>
-###### Chain ID: `stratos-1` | Current Node Version: `v0.11.2`
+###### Chain ID: `` | Current Node Version: `vauto`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Stratos repo and build stchaind v0.11.2
+### Clone Stratos repo and build stchaind vauto
 ```js
 cd $HOME
 git clone https://github.com/stratosnet/stratos-chain.git
 cd stratos-chain
-git checkout v0.11.2
+git checkout vauto
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.stchaind/cosmovisor/upgrades/v0.11.2/bin
-mv $HOME/go/bin/stchaind ~/.stchaind/cosmovisor/upgrades/v0.11.2/bin/
+mkdir -p ~/.stchaind/cosmovisor/upgrades/vauto/bin
+mv $HOME/go/bin/stchaind ~/.stchaind/cosmovisor/upgrades/vauto/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Stratos repo and build stchaind v0.11.2
+### Clone Stratos repo and build stchaind vauto
 ```js
 cd $HOME
 git clone https://github.com/stratosnet/stratos-chain.git
 cd stratos-chain
-git checkout v0.11.2
+git checkout vauto
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable stchaind
 ## Node configuration
 ### Set config
 ```js
-stchaind config chain-id stratos-1
+stchaind config chain-id 
 stchaind config keyring-backend os
 stchaind config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-stchaind init NAME_OF_YOUR_VALIDATOR --chain-id stratos-1
+stchaind init NAME_OF_YOUR_VALIDATOR --chain-id 
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config.noders.services/stratos/addrbook.json -o ~/.stchaind/config/
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"71f6b523df0c5cbb1995a14e7eac46a9befcad37@stratos-rpc.noders.services:29656\"/" ~/.stchaind/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@stratos-rpc.noders.services:\"/" ~/.stchaind/config/config.toml
 ```
 
 ### Set minimum gas price

@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-quicksilver">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `rhye-2` | Current Node Version: `v1.6.0-rc0`
+###### Chain ID: `rhye-2` | Current Node Version: `v1.6.1-rc2`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 

@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-berachain">
 # Installation
 </div>
-###### Chain ID: `artio-80085` | Current Node Version: `v0.2.3-alpha-rc7`
+###### Chain ID: `` | Current Node Version: `vauto`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone BeraChain repo and build berad v0.2.3-alpha-rc7
+### Clone BeraChain repo and build berad vauto
 ```js
 cd $HOME
 git clone https://github.com/berachain.git
 cd berachain
-git checkout v0.2.3-alpha-rc7
+git checkout vauto
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.berad/cosmovisor/upgrades/v0.2.3-alpha-rc7/bin
-mv $HOME/go/bin/berad ~/.berad/cosmovisor/upgrades/v0.2.3-alpha-rc7/bin/
+mkdir -p ~/.berad/cosmovisor/upgrades/vauto/bin
+mv $HOME/go/bin/berad ~/.berad/cosmovisor/upgrades/vauto/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone BeraChain repo and build berad v0.2.3-alpha-rc7
+### Clone BeraChain repo and build berad vauto
 ```js
 cd $HOME
 git clone https://github.com/berachain.git
 cd berachain
-git checkout v0.2.3-alpha-rc7
+git checkout vauto
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable berad
 ## Node configuration
 ### Set config
 ```js
-berad config chain-id artio-80085
+berad config chain-id 
 berad config keyring-backend os
 berad config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-berad init NAME_OF_YOUR_VALIDATOR --chain-id artio-80085
+berad init NAME_OF_YOUR_VALIDATOR --chain-id 
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config-t.noders.services/berachain/addrbook.json -o ~/.berad/config
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"f4f9dd773bad1363cbc85ce7534bfd172c2d83b4@berachain-t-rpc.noders.services:16656\"/" ~/.berad/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@berachain-t-rpc.noders.services:\"/" ~/.berad/config/config.toml
 ```
 
 ### Set minimum gas price

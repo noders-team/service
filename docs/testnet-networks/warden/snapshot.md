@@ -7,13 +7,13 @@ sidebar_position: 3
 <div class="h1-with-icon icon-warden">
 # Node Snapshot
 </div>
-###### Chain ID: `` | Current Node Version: `vauto`
+###### Chain ID: `buenavista-1` | Current Node Version: `v0.3.0`
 
 ## Our Warden Snapshot Server Setup
 
 | Size   | Timestamp    |
 |--------|--------------|
-| 10.72 GB | Wed, 15 May 2024 13:06:14 GMT  |
+| 29.97 GB | Thu, 30 May 2024 01:08:13 GMT  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

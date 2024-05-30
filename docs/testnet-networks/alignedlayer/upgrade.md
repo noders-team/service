@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-alignedlayer">
 # Upgrade
 </div>
-###### Chain ID: `alignedlayer` | Current Node Version: `v0.1.0`
+###### Chain ID: `` | Current Node Version: `vauto`
 
 # With Cosmovisor
 ## Clone Alignedlayer repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf aligned_layer_tendermint
 git clone https://github.com/yetanotherco/aligned_layer_tendermint.git
 cd aligned_layer_tendermint
-git checkout v0.1.0
+git checkout vauto
  ```
 
 ## Build binaries
@@ -26,8 +26,8 @@ make build
 
 ## Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.alignedlayer/cosmovisor/upgrades/v0.1.0/bin
-mv build/alignedlayerd ~/.alignedlayer/cosmovisor/upgrades/v0.1.0/bin/
+mkdir -p ~/.alignedlayer/cosmovisor/upgrades/vauto/bin
+mv build/alignedlayerd ~/.alignedlayer/cosmovisor/upgrades/vauto/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf aligned_layer_tendermint
 git clone https://github.com/yetanotherco/aligned_layer_tendermint.git
 cd aligned_layer_tendermint
-git checkout v0.1.0
+git checkout vauto
  ```
 
 ## Build binaries

@@ -4,21 +4,21 @@ title: Snapshot
 sidebar_position: 3
 ---
 
-<div class="h1-with-icon icon-swisstronic">
+<div class="h1-with-icon icon-initia">
 # Node Snapshot
 </div>
-###### Chain ID: `swisstronik_1291-1` | Current Node Version: `v1.0.1`
+###### Chain ID: `initiation-1` | Current Node Version: `v0.2.14`
 
-## Our Swisstronic Snapshot Server Setup
+## Our Initia Snapshot Server Setup
 
 | Size   | Timestamp    |
 |--------|--------------|
-|  GB |   |
+| 576.73 GB | Thu, 30 May 2024 01:54:43 GMT  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
 
-The snapshot is designed for node opeartors to run an efficient node on Swisstronic chain. To make the snapshot as small as possible while still viable as a validator, we use the following setting to save on the disk space. It might be helpful for you to sync with our snapshot periodically because Tendermint chain storage grows over time regardless of the pruning. Since we periodically state-sync our snapshot nodes, you might notice that sometimes the size of our snapshot is surprisingly small.
+The snapshot is designed for node opeartors to run an efficient node on Initia chain. To make the snapshot as small as possible while still viable as a validator, we use the following setting to save on the disk space. It might be helpful for you to sync with our snapshot periodically because Tendermint chain storage grows over time regardless of the pruning. Since we periodically state-sync our snapshot nodes, you might notice that sometimes the size of our snapshot is surprisingly small.
 
 ```bash title="app.toml"
 # Prune Type
@@ -34,7 +34,7 @@ pruning-interval = "10"
 indexer = "null"
 ```
 
-## How To Process Swisstronic Snapshot
+## How To Process Initia Snapshot
 ```bash
 sudo apt update
 sudo apt install snapd -y
@@ -43,7 +43,7 @@ sudo snap install lz4
 
 Stop your node
 ```bash
-sudo systemctl stop swisstronikd
+sudo systemctl stop initiad
 ```
 Reset your node. This will erase your node database. If you are already running validator, be sure you backed up your `priv_validator_key.json` prior to running the command. The command does not wipe the file. However, you should have a backup of it already in a safe location.
 
@@ -55,19 +55,19 @@ If you use this snapshot on a validator node during a chain halt, make sure you 
 
 ```bash
 # Back up priv_validator_state.json if needed
-cp ~/.swisstronik/data/priv_validator_state.json  ~/.swisstronik/priv_validator_state.json
+cp ~/.initiad/data/priv_validator_state.json  ~/.initiad/priv_validator_state.json
 
 cd $HOME
-sudo rm -rf ~/.swisstronik/data
-sudo rm -rf ~/.swisstronik/wasm
+sudo rm -rf ~/.initiad/data
+sudo rm -rf ~/.initiad/wasm
 ```
 
-Decompress the snapshot to your database location. You database location will be something to the effect of `~/.swisstronik` depending on your node implemention.
+Decompress the snapshot to your database location. You database location will be something to the effect of `~/.initiad` depending on your node implemention.
 
 The above solution requires you to download the compressed file, uncompressed it and then delete the original file. This requires extra storage space on your server. You can run the following combo command to stream the snapshot into your database location. For advanced users only:
 ### Data
 ```bash
-curl -o - -L https://config-t.noders.services/swisstronic/data.tar.lz4 | lz4 -d | tar -x -C ~/.swisstronik
+curl -o - -L https://config-t.noders.services/initia/data.tar.lz4 | lz4 -d | tar -x -C ~/.initiad
 ```
 ### Wasm
 ```bash
@@ -81,19 +81,19 @@ If you run a validator node and the chain is in halt, it is time to replace the 
 
 ```bash
 # Replace with the backed-up priv_validator_state.json
-cp ~/.swisstronik/priv_validator_state.json  ~/.swisstronik/data/priv_validator_state.json
+cp ~/.initiad/priv_validator_state.json  ~/.initiad/data/priv_validator_state.json
 ```
 
 If everything is good, now restart your node
 Make sure that your node is running
 
 ```bash
-sudo systemctl restart swisstronikd
-sudo journalctl -fu swisstronikd --no-hostname -o cat
+sudo systemctl restart initiad
+sudo journalctl -fu initiad --no-hostname -o cat
 ```
 
 :::info ADVANCED ROUTE
 
-We also have Swisstronic state-sync service to help you bootstrap a node.
+We also have Initia state-sync service to help you bootstrap a node.
 
 :::

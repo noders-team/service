@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-celestia">
 # Installation
 </div>
-###### Chain ID: `` | Current Node Version: `v1.9.0`
+###### Chain ID: `celestia` | Current Node Version: `v1.9.0`
 
 ## Install dependencies
 
@@ -136,14 +136,14 @@ sudo systemctl enable celestia-appd
 ## Node configuration
 ### Set config
 ```js
-celestia-appd config chain-id 
+celestia-appd config chain-id celestia
 celestia-appd config keyring-backend os
 celestia-appd config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-celestia-appd init NAME_OF_YOUR_VALIDATOR --chain-id 
+celestia-appd init NAME_OF_YOUR_VALIDATOR --chain-id celestia
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config.noders.services/celestia/addrbook.json -o ~/.celestia-app/co
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@celestia-rpc.noders.services:\"/" ~/.celestia-app/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"27f6bac8492b1597146b6c4aeddc4d328fa8ac28@celestia-rpc.noders.services:11656\"/" ~/.celestia-app/config/config.toml
 ```
 
 ### Set minimum gas price

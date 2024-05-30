@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-jackal">
 # State sync
 </div>
-###### Chain ID: `jackal-1` | Current Node Version: `v3.2.1`
+###### Chain ID: `` | Current Node Version: `v3.2.1`
 
 ```bash
 SNAP_RPC=https://jackal-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop canined && canined tendermint unsafe-reset-all --home ~/.canine --keep-addr-book
 ```
 ```bash
-peers="5b622b13c4b0bdeea993bc3ec4d9cf269819893e@jackal-rpc.noders.services:26656"
+peers="@jackal-rpc.noders.services:"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.canine/config/config.toml
 ```
 ```bash

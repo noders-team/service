@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-quicksilver">
 # Installation
 </div>
-###### Chain ID: `rhye-2` | Current Node Version: `v1.6.0-rc0`
+###### Chain ID: `rhye-2` | Current Node Version: `v1.6.1-rc2`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Quicksilver repo and build quicksilverd v1.6.0-rc0
+### Clone Quicksilver repo and build quicksilverd v1.6.1-rc2
 ```js
 cd $HOME
 git clone https://github.com/quicksilver-zone.git
 cd quicksilver-zone
-git checkout v1.6.0-rc0
+git checkout v1.6.1-rc2
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.quicksilverd/cosmovisor/upgrades/v1.6.0-rc0/bin
-mv $HOME/go/bin/quicksilverd ~/.quicksilverd/cosmovisor/upgrades/v1.6.0-rc0/bin/
+mkdir -p ~/.quicksilverd/cosmovisor/upgrades/v1.6.1-rc2/bin
+mv $HOME/go/bin/quicksilverd ~/.quicksilverd/cosmovisor/upgrades/v1.6.1-rc2/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Quicksilver repo and build quicksilverd v1.6.0-rc0
+### Clone Quicksilver repo and build quicksilverd v1.6.1-rc2
 ```js
 cd $HOME
 git clone https://github.com/quicksilver-zone.git
 cd quicksilver-zone
-git checkout v1.6.0-rc0
+git checkout v1.6.1-rc2
 ```
 
 ### Build binaries

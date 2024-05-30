@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-quicksilver">
 # Upgrade
 </div>
-###### Chain ID: `rhye-2` | Current Node Version: `v1.6.0-rc0`
+###### Chain ID: `rhye-2` | Current Node Version: `v1.6.1-rc2`
 
 # With Cosmovisor
 ## Clone Quicksilver repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf quicksilver-zone
 git clone https://github.com/quicksilver-zone.git
 cd quicksilver-zone
-git checkout v1.6.0-rc0
+git checkout v1.6.1-rc2
  ```
 
 ## Build binaries
@@ -26,8 +26,8 @@ make build
 
 ## Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.quicksilverd/cosmovisor/upgrades/v1.6.0-rc0/bin
-mv build/quicksilverd ~/.quicksilverd/cosmovisor/upgrades/v1.6.0-rc0/bin/
+mkdir -p ~/.quicksilverd/cosmovisor/upgrades/v1.6.1-rc2/bin
+mv build/quicksilverd ~/.quicksilverd/cosmovisor/upgrades/v1.6.1-rc2/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf quicksilver-zone
 git clone https://github.com/quicksilver-zone.git
 cd quicksilver-zone
-git checkout v1.6.0-rc0
+git checkout v1.6.1-rc2
  ```
 
 ## Build binaries

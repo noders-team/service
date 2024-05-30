@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-warden">
 # Installation
 </div>
-###### Chain ID: `` | Current Node Version: `vauto`
+###### Chain ID: `buenavista-1` | Current Node Version: `v0.3.0`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Warden repo and build wardend vauto
+### Clone Warden repo and build wardend v0.3.0
 ```js
 cd $HOME
 git clone https://github.com/warden-protocol/wardenprotocol.git
 cd wardenprotocol
-git checkout vauto
+git checkout v0.3.0
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.warden/cosmovisor/upgrades/vauto/bin
-mv $HOME/go/bin/wardend ~/.warden/cosmovisor/upgrades/vauto/bin/
+mkdir -p ~/.warden/cosmovisor/upgrades/v0.3.0/bin
+mv $HOME/go/bin/wardend ~/.warden/cosmovisor/upgrades/v0.3.0/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Warden repo and build wardend vauto
+### Clone Warden repo and build wardend v0.3.0
 ```js
 cd $HOME
 git clone https://github.com/warden-protocol/wardenprotocol.git
 cd wardenprotocol
-git checkout vauto
+git checkout v0.3.0
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable wardend
 ## Node configuration
 ### Set config
 ```js
-wardend config chain-id 
+wardend config chain-id buenavista-1
 wardend config keyring-backend os
 wardend config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-wardend init NAME_OF_YOUR_VALIDATOR --chain-id 
+wardend init NAME_OF_YOUR_VALIDATOR --chain-id buenavista-1
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config-t.noders.services/warden/addrbook.json -o ~/.warden/config/a
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@warden-t-rpc.noders.services:\"/" ~/.warden/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"64fc01489d8fda6b6aa859aef438e4131df6bcda@warden-t-rpc.noders.services:23656\"/" ~/.warden/config/config.toml
 ```
 
 ### Set minimum gas price

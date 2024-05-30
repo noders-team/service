@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-injective">
 # Installation
 </div>
-###### Chain ID: `` | Current Node Version: `v1.12.1`
+###### Chain ID: `injective-1` | Current Node Version: `v1.12.1`
 
 ## Install dependencies
 
@@ -136,14 +136,14 @@ sudo systemctl enable injectived
 ## Node configuration
 ### Set config
 ```js
-injectived config chain-id 
+injectived config chain-id injective-1
 injectived config keyring-backend os
 injectived config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-injectived init NAME_OF_YOUR_VALIDATOR --chain-id 
+injectived init NAME_OF_YOUR_VALIDATOR --chain-id injective-1
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config.noders.services/injective/addrbook.json -o ~/.injectived/con
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@injective-rpc.noders.services:\"/" ~/.injectived/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"b96ce37010e0b3baa5020b536822ccba511c8f5f@injective-rpc.noders.services:33656\"/" ~/.injectived/config/config.toml
 ```
 
 ### Set minimum gas price

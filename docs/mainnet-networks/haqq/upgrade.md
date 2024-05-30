@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-haqq">
 # Upgrade
 </div>
-###### Chain ID: `haqq_11235-1` | Current Node Version: `v1.7.4`
+###### Chain ID: `haqq_11235-1` | Current Node Version: `v1.7.5`
 
 
 # Clone Haqq repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf haqq-network
 git clone https://github.com/haqq-network.git
 cd haqq-network
-git checkout v1.7.4
+git checkout v1.7.5
  ```
 
 # Build binaries
@@ -26,8 +26,8 @@ make build
 
 # Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.haqqd/cosmovisor/upgrades/v1.7.4/bin
-mv build/haqqd ~/.haqqd/cosmovisor/upgrades/v1.7.4/bin/
+mkdir -p ~/.haqqd/cosmovisor/upgrades/v1.7.5/bin
+mv build/haqqd ~/.haqqd/cosmovisor/upgrades/v1.7.5/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf haqq-network
 git clone https://github.com/haqq-network.git
 cd haqq-network
-git checkout v1.7.4
+git checkout v1.7.5
  ```
 
 ## Build binaries

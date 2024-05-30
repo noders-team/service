@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-warden">
 # Upgrade
 </div>
-###### Chain ID: `` | Current Node Version: `vauto`
+###### Chain ID: `buenavista-1` | Current Node Version: `v0.3.0`
 
 # With Cosmovisor
 ## Clone Warden repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf wardenprotocol
 git clone https://github.com/warden-protocol/wardenprotocol.git
 cd wardenprotocol
-git checkout vauto
+git checkout v0.3.0
  ```
 
 ## Build binaries
@@ -26,8 +26,8 @@ make build
 
 ## Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.warden/cosmovisor/upgrades/vauto/bin
-mv build/wardend ~/.warden/cosmovisor/upgrades/vauto/bin/
+mkdir -p ~/.warden/cosmovisor/upgrades/v0.3.0/bin
+mv build/wardend ~/.warden/cosmovisor/upgrades/v0.3.0/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf wardenprotocol
 git clone https://github.com/warden-protocol/wardenprotocol.git
 cd wardenprotocol
-git checkout vauto
+git checkout v0.3.0
  ```
 
 ## Build binaries

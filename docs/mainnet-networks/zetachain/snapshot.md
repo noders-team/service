@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-zetachain">
 # Node Snapshot
 </div>
-###### Chain ID: `zetachain_7000-1` | Current Node Version: `v14.0.1`
+###### Chain ID: `` | Current Node Version: `vauto`
 
 ## Our Zetachain Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 191.54 GB | Wed, 15 May 2024 11:28:38 GMT |
+| 49.91 GB | Thu, 30 May 2024 07:01:01 GMT |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

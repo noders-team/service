@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-og">
 # Installation
 </div>
-###### Chain ID: `zgtendermint_9000-1` | Current Node Version: `v1.0.0-testnet`
+###### Chain ID: `zgtendermint_16600-1` | Current Node Version: `v0.1.0`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone ZeroGravity repo and build evmosd v1.0.0-testnet
+### Clone ZeroGravity repo and build evmosd v0.1.0
 ```js
 cd $HOME
 git clone https://github.com/0glabs/0g-evmos.git
 cd 0g-evmos
-git checkout v1.0.0-testnet
+git checkout v0.1.0
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.evmosd/cosmovisor/upgrades/v1.0.0-testnet/bin
-mv $HOME/go/bin/evmosd ~/.evmosd/cosmovisor/upgrades/v1.0.0-testnet/bin/
+mkdir -p ~/.evmosd/cosmovisor/upgrades/v0.1.0/bin
+mv $HOME/go/bin/evmosd ~/.evmosd/cosmovisor/upgrades/v0.1.0/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone ZeroGravity repo and build evmosd v1.0.0-testnet
+### Clone ZeroGravity repo and build evmosd v0.1.0
 ```js
 cd $HOME
 git clone https://github.com/0glabs/0g-evmos.git
 cd 0g-evmos
-git checkout v1.0.0-testnet
+git checkout v0.1.0
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable evmosd
 ## Node configuration
 ### Set config
 ```js
-evmosd config chain-id zgtendermint_9000-1
+evmosd config chain-id zgtendermint_16600-1
 evmosd config keyring-backend os
 evmosd config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-evmosd init NAME_OF_YOUR_VALIDATOR --chain-id zgtendermint_9000-1
+evmosd init NAME_OF_YOUR_VALIDATOR --chain-id zgtendermint_16600-1
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config-t.noders.services/og/addrbook.json -o ~/.evmosd/config/addrb
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"3e2f5e57e0f8eb4475982a08e39e76629731ce7d@og-t-rpc.noders.services:29656\"/" ~/.evmosd/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"986ff891360c0c1c5ead8cf498383e832e34ca89@og-t-rpc.noders.services:29656\"/" ~/.evmosd/config/config.toml
 ```
 
 ### Set minimum gas price

@@ -1,14 +1,14 @@
 ---
 hide_table_of_contents: false
-title: "Swisstronic"
+title: "Swisstronik"
 ---
 
 import SmallCard from "../../src/components/SmallCard"
 import Card from "../../src/components/Card"
 import CardLayout from "../../src/layouts/CardLayout"
 
-<div class="h1-with-icon icon-swisstronic">
-# Swisstronic
+<div class="h1-with-icon icon-swisstronik">
+# Swisstronik
 </div>
 ###### Chain ID: `swisstronik_1291-1` | Current Node Version: `v1.0.1`
 
@@ -26,7 +26,7 @@ Official links of social networks of projects
     <SmallCard to="https://t.me/swisstronik" header={{label: "Telegram", translateId: "social-telegram"}} iconPath="img/telegram-icon.svg"/>
 </CardLayout>
 
-# Our validator in Swisstronic network
+# Our validator in Swisstronik network
 
 <CardLayout autoFitEnabled={true}>
     <Card

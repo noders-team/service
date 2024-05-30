@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-injective">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `` | Current Node Version: `v1.12.1`
+###### Chain ID: `injective-1` | Current Node Version: `v1.12.1`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -46,7 +46,7 @@ injectived q bank balances $(injectived keys show KEY -a) --node https://injecti
 ### Send
 ```js
 injectived tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000inj \
-  --chain-id  \
+  --chain-id injective-1 \
   --node https://injective-rpc.noders.services:443 --fees 3000inj \
   --from KEY
 ```
@@ -54,7 +54,7 @@ injectived tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000inj \
 ### Withdraw rewards from all validators
 ```js
 injectived tx distribution withdraw-all-rewards \
-  --chain-id  \
+  --chain-id injective-1 \
   --node https://injective-rpc.noders.services:443 --fees 3000inj \
   --from KEY
 ```
@@ -63,7 +63,7 @@ injectived tx distribution withdraw-all-rewards \
 ```js
 injectived tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
-  --chain-id  \
+  --chain-id injective-1 \
   --node https://injective-rpc.noders.services:443 --fees 3000inj \
   --from KEY
 ```
@@ -71,7 +71,7 @@ injectived tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ### Delegate tokens to yourself
 ```js
 injectived tx staking delegate $(injectived keys show KEY --bech val -a) 1000000inj \
---chain-id  \
+--chain-id injective-1 \
 --node https://injective-rpc.noders.services:443 --fees 3000inj \
 --from KEY
 ```
@@ -79,7 +79,7 @@ injectived tx staking delegate $(injectived keys show KEY --bech val -a) 1000000
 ### Delegate tokens to validator
 ```js
 injectived tx staking delegate VALIDATOR_ADDRESS 1000000inj \
---chain-id  \
+--chain-id injective-1 \
 --node https://injective-rpc.noders.services:443 --fees 3000inj \
 --from KEY
 ```
@@ -87,7 +87,7 @@ injectived tx staking delegate VALIDATOR_ADDRESS 1000000inj \
 ### Redelegate tokens to another validator
 ```js
 injectived tx staking redelegate $(injectived keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000inj \
-  --chain-id  \
+  --chain-id injective-1 \
   --node https://injective-rpc.noders.services:443 --fees 3000inj \
   --from KEY
 ```
@@ -108,7 +108,7 @@ injectived query gov proposals --node https://injective-rpc.noders.services:443
 ### Check vote
 ```js
 injectived query gov proposal PROPOSAL_NUMBER \
-  --chain-id  \
+  --chain-id injective-1 \
   --node https://injective-rpc.noders.services:443 --fees 3000inj \
   --output json | jq
 ```
@@ -121,7 +121,7 @@ injectived query gov proposal PROPOSAL_NUMBER \
 * abstain
 ```js
 injectived tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
-  --chain-id  \
+  --chain-id injective-1 \
   --node https://injective-rpc.noders.services:443 --fees 3000inj \
   --from KEY
 ```
@@ -144,7 +144,7 @@ injectived tx staking create-validator \
   --identity "220491ADDD660741" \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
-  --chain-id  \
+  --chain-id injective-1 \
   --node https://injective-rpc.noders.services:443 --fees 3000inj \
   --from KEY
 ```
@@ -156,7 +156,7 @@ injectived tx staking edit-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id  \
+--chain-id injective-1 \
 --commission-rate 0.05 \
 --from KEY \
 --node https://injective-rpc.noders.services:443 --fees 3000inj \
@@ -165,7 +165,7 @@ injectived tx staking edit-validator \
 ### Unjail
 ```js
 injectived tx slashing unjail \
-  --chain-id  \
+  --chain-id injective-1 \
   --node https://injective-rpc.noders.services:443 --fees 3000inj \
   --from KEY
 ```

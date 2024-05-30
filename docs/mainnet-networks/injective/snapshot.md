@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-injective">
 # Node Snapshot
 </div>
-###### Chain ID: `` | Current Node Version: `v1.12.1`
+###### Chain ID: `injective-1` | Current Node Version: `v1.12.1`
 
 ## Our Injective Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-|  GB |  |
+| 100.91 GB | Thu, 30 May 2024 02:52:43 GMT |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

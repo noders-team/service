@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-stratos">
 # State sync
 </div>
-###### Chain ID: `stratos-1` | Current Node Version: `v0.11.2`
+###### Chain ID: `` | Current Node Version: `vauto`
 
 ```bash
 SNAP_RPC=https://stratos-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop stchaind && stchaind tendermint unsafe-reset-all --home ~/.stchaind --keep-addr-book
 ```
 ```bash
-peers="71f6b523df0c5cbb1995a14e7eac46a9befcad37@stratos-rpc.noders.services:29656"
+peers="@stratos-rpc.noders.services:"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.stchaind/config/config.toml
 ```
 ```bash

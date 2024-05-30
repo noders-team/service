@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-warden">
 # State sync
 </div>
-###### Chain ID: `` | Current Node Version: `vauto`
+###### Chain ID: `buenavista-1` | Current Node Version: `v0.3.0`
 
 ```bash
 SNAP_RPC=https://warden-t-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop wardend && wardend tendermint unsafe-reset-all --home ~/.warden --keep-addr-book
 ```
 ```bash
-peers="@warden-t-rpc.noders.services:"
+peers="64fc01489d8fda6b6aa859aef438e4131df6bcda@warden-t-rpc.noders.services:23656"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.warden/config/config.toml
 ```
 ```bash

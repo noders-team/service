@@ -1,6 +1,6 @@
 # Blockchain
-CHAIN_NAME="Swisstronic"
-CHAIN_SYSTEM_NAME="swisstronic"
+CHAIN_NAME="Swisstronik"
+CHAIN_SYSTEM_NAME="swisstronik"
 CHAIN_ID="auto"
 VERSION="auto"
 CHAIN_DESCRIPTION="""# Swisstronik: Pioneering the Fusion of Electronics and Blockchain

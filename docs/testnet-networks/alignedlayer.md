@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-alignedlayer">
 # Alignedlayer
 </div>
-###### Chain ID: `alignedlayer` | Current Node Version: `v0.1.0`
+###### Chain ID: `` | Current Node Version: `vauto`
 
 
 Aligned Layer is at the forefront of decentralized data orchestration, offering a cutting-edge platform that streamlines the integration, management, and secure sharing of data across diverse blockchain ecosystems. By leveraging advanced cryptographic techniques and a user-centric design, Aligned Layer ensures data privacy, security, and interoperability. Its platform empowers developers to build more sophisticated and dynamic decentralized applications (dApps), fostering a new era of blockchain utility and innovation. Aligned Layer's commitment to removing barriers to data access and utilization marks a significant step towards a more interconnected and efficient decentralized world.

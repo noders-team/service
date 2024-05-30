@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-dymension">
 # Node Snapshot
 </div>
-###### Chain ID: `dymension_1100-1` | Current Node Version: `v3.1.0`
+###### Chain ID: `` | Current Node Version: `vauto`
 
 ## Our Dymension Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 128.24 GB | Wed, 15 May 2024 09:42:48 GMT |
+|  GB |  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

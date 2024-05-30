@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-alignedlayer">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `alignedlayer` | Current Node Version: `v0.1.0`
+###### Chain ID: `` | Current Node Version: `vauto`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -46,7 +46,7 @@ alignedlayerd q bank balances $(alignedlayerd keys show KEY -a) --node https://a
 ### Send
 ```js
 alignedlayerd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000stake \
-  --chain-id alignedlayer \
+  --chain-id  \
   --node https://aligned-t-rpc.noders.services:443 --fees 3000stake \
   --from KEY
 ```
@@ -54,7 +54,7 @@ alignedlayerd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000stake \
 ### Withdraw rewards from all validators
 ```js
 alignedlayerd tx distribution withdraw-all-rewards \
-  --chain-id alignedlayer \
+  --chain-id  \
   --node https://aligned-t-rpc.noders.services:443 --fees 3000stake \
   --from KEY
 ```
@@ -63,7 +63,7 @@ alignedlayerd tx distribution withdraw-all-rewards \
 ```js
 alignedlayerd tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
-  --chain-id alignedlayer \
+  --chain-id  \
   --node https://aligned-t-rpc.noders.services:443 --fees 3000stake \
   --from KEY
 ```
@@ -71,7 +71,7 @@ alignedlayerd tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ### Delegate tokens to yourself
 ```js
 alignedlayerd tx staking delegate $(alignedlayerd keys show KEY --bech val -a) 1000000stake \
---chain-id alignedlayer \
+--chain-id  \
 --node https://aligned-t-rpc.noders.services:443 --fees 3000stake \
 --from KEY
 ```
@@ -79,7 +79,7 @@ alignedlayerd tx staking delegate $(alignedlayerd keys show KEY --bech val -a) 1
 ### Delegate tokens to validator
 ```js
 alignedlayerd tx staking delegate VALIDATOR_ADDRESS 1000000stake \
---chain-id alignedlayer \
+--chain-id  \
 --node https://aligned-t-rpc.noders.services:443 --fees 3000stake \
 --from KEY
 ```
@@ -87,7 +87,7 @@ alignedlayerd tx staking delegate VALIDATOR_ADDRESS 1000000stake \
 ### Redelegate tokens to another validator
 ```js
 alignedlayerd tx staking redelegate $(alignedlayerd keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000stake \
-  --chain-id alignedlayer \
+  --chain-id  \
   --node https://aligned-t-rpc.noders.services:443 --fees 3000stake \
   --from KEY
 ```
@@ -108,7 +108,7 @@ alignedlayerd query gov proposals --node https://aligned-t-rpc.noders.services:4
 ### Check vote
 ```js
 alignedlayerd query gov proposal PROPOSAL_NUMBER \
-  --chain-id alignedlayer \
+  --chain-id  \
   --node https://aligned-t-rpc.noders.services:443 --fees 3000stake \
   --output json | jq
 ```
@@ -121,7 +121,7 @@ alignedlayerd query gov proposal PROPOSAL_NUMBER \
 * abstain
 ```js
 alignedlayerd tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
-  --chain-id alignedlayer \
+  --chain-id  \
   --node https://aligned-t-rpc.noders.services:443 --fees 3000stake \
   --from KEY
 ```
@@ -144,7 +144,7 @@ alignedlayerd tx staking create-validator \
   --identity "220491ADDD660741" \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
-  --chain-id alignedlayer \
+  --chain-id  \
   --node https://aligned-t-rpc.noders.services:443 --fees 3000stake \
   --from KEY
 ```
@@ -156,7 +156,7 @@ alignedlayerd tx staking edit-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id alignedlayer \
+--chain-id  \
 --commission-rate 0.05 \
 --from KEY \
 --node https://aligned-t-rpc.noders.services:443 --fees 3000stake \
@@ -165,7 +165,7 @@ alignedlayerd tx staking edit-validator \
 ### Unjail
 ```js
 alignedlayerd tx slashing unjail \
-  --chain-id alignedlayer \
+  --chain-id  \
   --node https://aligned-t-rpc.noders.services:443 --fees 3000stake \
   --from KEY
 ```

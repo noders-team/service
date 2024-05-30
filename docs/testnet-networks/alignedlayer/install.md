@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-alignedlayer">
 # Installation
 </div>
-###### Chain ID: `alignedlayer` | Current Node Version: `v0.1.0`
+###### Chain ID: `` | Current Node Version: `vauto`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Alignedlayer repo and build alignedlayerd v0.1.0
+### Clone Alignedlayer repo and build alignedlayerd vauto
 ```js
 cd $HOME
 git clone https://github.com/yetanotherco/aligned_layer_tendermint.git
 cd aligned_layer_tendermint
-git checkout v0.1.0
+git checkout vauto
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.alignedlayer/cosmovisor/upgrades/v0.1.0/bin
-mv $HOME/go/bin/alignedlayerd ~/.alignedlayer/cosmovisor/upgrades/v0.1.0/bin/
+mkdir -p ~/.alignedlayer/cosmovisor/upgrades/vauto/bin
+mv $HOME/go/bin/alignedlayerd ~/.alignedlayer/cosmovisor/upgrades/vauto/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Alignedlayer repo and build alignedlayerd v0.1.0
+### Clone Alignedlayer repo and build alignedlayerd vauto
 ```js
 cd $HOME
 git clone https://github.com/yetanotherco/aligned_layer_tendermint.git
 cd aligned_layer_tendermint
-git checkout v0.1.0
+git checkout vauto
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable alignedlayerd
 ## Node configuration
 ### Set config
 ```js
-alignedlayerd config chain-id alignedlayer
+alignedlayerd config chain-id 
 alignedlayerd config keyring-backend os
 alignedlayerd config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-alignedlayerd init NAME_OF_YOUR_VALIDATOR --chain-id alignedlayer
+alignedlayerd init NAME_OF_YOUR_VALIDATOR --chain-id 
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config-t.noders.services/alignedlayer/addrbook.json -o ~/.alignedla
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"b5da413b7882dc42172818914f55e661fcb88981@aligned-t-rpc.noders.services:27656\"/" ~/.alignedlayer/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@aligned-t-rpc.noders.services:\"/" ~/.alignedlayer/config/config.toml
 ```
 
 ### Set minimum gas price

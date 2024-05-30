@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-alignedlayer">
 # State sync
 </div>
-###### Chain ID: `alignedlayer` | Current Node Version: `v0.1.0`
+###### Chain ID: `` | Current Node Version: `vauto`
 
 ```bash
 SNAP_RPC=https://aligned-t-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop alignedlayerd && alignedlayerd tendermint unsafe-reset-all --home ~/.alignedlayer --keep-addr-book
 ```
 ```bash
-peers="b5da413b7882dc42172818914f55e661fcb88981@aligned-t-rpc.noders.services:27656"
+peers="@aligned-t-rpc.noders.services:"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.alignedlayer/config/config.toml
 ```
 ```bash

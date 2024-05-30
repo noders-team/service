@@ -7,13 +7,13 @@ sidebar_position: 3
 <div class="h1-with-icon icon-berachain">
 # Node Snapshot
 </div>
-###### Chain ID: `artio-80085` | Current Node Version: `v0.2.3-alpha-rc7`
+###### Chain ID: `` | Current Node Version: `vauto`
 
 ## Our BeraChain Snapshot Server Setup
 
 | Size   | Timestamp    |
 |--------|--------------|
-| 298.19 GB | Wed, 15 May 2024 12:47:32 GMT  |
+| 319.25 GB | Thu, 30 May 2024 07:01:11 GMT  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

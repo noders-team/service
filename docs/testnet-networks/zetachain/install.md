@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-zetachain">
 # Installation
 </div>
-###### Chain ID: `athens_7001-1` | Current Node Version: `v15`
+###### Chain ID: `athens_7001-1` | Current Node Version: `v16`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Zetachain repo and build zetacored v15
+### Clone Zetachain repo and build zetacored v16
 ```js
 cd $HOME
 git clone https://github.com/zeta-chain.git
 cd zeta-chain
-git checkout v15
+git checkout v16
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.zetacored/cosmovisor/upgrades/v15/bin
-mv $HOME/go/bin/zetacored ~/.zetacored/cosmovisor/upgrades/v15/bin/
+mkdir -p ~/.zetacored/cosmovisor/upgrades/v16/bin
+mv $HOME/go/bin/zetacored ~/.zetacored/cosmovisor/upgrades/v16/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Zetachain repo and build zetacored v15
+### Clone Zetachain repo and build zetacored v16
 ```js
 cd $HOME
 git clone https://github.com/zeta-chain.git
 cd zeta-chain
-git checkout v15
+git checkout v16
 ```
 
 ### Build binaries

@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-berachain">
 # BeraChain
 </div>
-###### Chain ID: `artio-80085` | Current Node Version: `v0.2.3-alpha-rc7`
+###### Chain ID: `` | Current Node Version: `vauto`
 
 
 Berachain is at the forefront of blending traditional financial systems with decentralized finance (DeFi), offering a seamless integration platform. It aims to remove barriers between conventional finance and the blockchain world, facilitating easy access to DeFi solutions without compromising on security or efficiency. Berachain's innovative approach ensures compliance with regulatory standards, making it a trustworthy bridge for institutions and individuals alike. By enabling smooth transactions and interoperability between diverse financial realms, Berachain is paving the way for a unified financial ecosystem that combines the best of both worlds.

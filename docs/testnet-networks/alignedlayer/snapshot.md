@@ -7,13 +7,13 @@ sidebar_position: 3
 <div class="h1-with-icon icon-alignedlayer">
 # Node Snapshot
 </div>
-###### Chain ID: `alignedlayer` | Current Node Version: `v0.1.0`
+###### Chain ID: `` | Current Node Version: `vauto`
 
 ## Our Alignedlayer Snapshot Server Setup
 
 | Size   | Timestamp    |
 |--------|--------------|
-| 183.66 GB | Wed, 15 May 2024 13:04:55 GMT  |
+| 211.56 GB | Tue, 21 May 2024 01:09:16 GMT  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
