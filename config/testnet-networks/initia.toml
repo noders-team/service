@@ -16,7 +16,7 @@ CHAIN_FEES="3000"
 # Binary
 DAEMON_NAME="initiad"
 DAEMON_SERVICE="initiad.service"
-DAEMON_HOME="~/.initiad"
+DAEMON_HOME="~/.initia"
 
 # Endpoints
 ENDPOINT_RPC="https://initia-t-rpc.noders.services"

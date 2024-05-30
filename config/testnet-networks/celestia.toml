@@ -27,7 +27,7 @@ ENDPOINT_PEER="auto"
 
 # Social
 SOCIAL_WEBSITE="https://celestia.org/"
-SOCIAL_GITHUB="https://github.com/celestiaorg"
+SOCIAL_GITHUB="https://github.com/celestiaorg/celestia-app"
 SOCIAL_DISCORD="https://discord.gg/celestiacommunity"
 SOCIAL_X="https://twitter.com/CelestiaOrg"
 SOCIAL_TELEGRAM="https://t.me/celestiaru"

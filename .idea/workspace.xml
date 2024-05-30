@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="609d9c4d-607e-4257-a03b-37575134f343" name="Changes" comment="Source code changes">
-      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_03_2024,_21_06_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_03_2024__21_06__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/mainnet-networks/celestia.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/mainnet-networks/celestia.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/testnet-networks/celestia.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/testnet-networks/celestia.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/testnet-networks/initia.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/testnet-networks/initia.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/testnet-networks/alignedlayer/_category_.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/testnet-networks/alignedlayer/cli-cheatsheet.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/testnet-networks/alignedlayer/install.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/testnet-networks/alignedlayer/live-peers.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/testnet-networks/alignedlayer/snapshot.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/testnet-networks/alignedlayer/statesync.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/testnet-networks/alignedlayer/upgrade.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidebars/testnetSidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidebars/testnetSidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/custom.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +31,13 @@
       <option value="directory" />
     </option>
   </component>
+  <component name="GOROOT" url="file://$PROJECT_DIR$/../../../../../../Program Files/Go" />
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
@@ -27,13 +47,14 @@
     &quot;assignee&quot;: &quot;nodersteam&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="25846dc9-29c6-48eb-a173-f5d07814b2da" />
-        <option name="url" value="https://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@github.com/nodersteam/services-docusaurus" />
-      </UrlAndAccount>
-    </option>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AlexMoskaleu/services&quot;,
+    &quot;accountId&quot;: &quot;77c9f707-92aa-4b9c-bde4-f1a2b350e192&quot;
+  }
+}</component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -53,9 +74,18 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
     "Shell Script.sync.sh.executor": "Run",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/slazarev/Documents/GitHub/services-docusaurus/static/img"
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "C:/Users/dudav/go/src/services/services",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "ts.external.directory.path": "C:\\Users\\dudav\\go\\src\\services\\services\\node_modules\\typescript\\lib"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -74,10 +104,23 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="services" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="PACKAGE" />
+      <package value="services/services" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-7a29c1521ef0-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.11799.298" />
+        <option value="bundled-gosdk-33c477a475b1-b97fc8a1e17c-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-241.14494.238" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-GO-241.14494.238" />
       </set>
     </attachedChunks>
   </component>
@@ -485,8 +528,27 @@
     <option name="localTasksCounter" value="218" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/theme/Footer/Links/MultiColumn/index.js" />
+        <option value="$PROJECT_DIR$/src/theme/Footer/Links/Simple/index.js" />
+        <option value="$PROJECT_DIR$/src/theme/Footer/Links/index.js" />
+        <option value="$PROJECT_DIR$/src/theme/Footer/Logo/index.js" />
+        <option value="$PROJECT_DIR$/src/theme/Footer/index.js" />
+        <option value="$PROJECT_DIR$/src/theme/Footer/LinkItem/index.js" />
+        <option value="$PROJECT_DIR$/src/theme/Footer/Layout/index.js" />
+        <option value="$PROJECT_DIR$/src/theme/Footer/Copyright/index.js" />
+      </list>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Source code changes" />
     <option name="LAST_COMMIT_MESSAGE" value="Source code changes" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>false</integration-enabled>
+    <settings-migrated>true</settings-migrated>
   </component>
 </project>

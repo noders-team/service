@@ -306,9 +306,7 @@ code .variable {
 .icon-pylons {
     background-image: url('../../static/img/pylons-icon.svg');
 }
-.icon-alignedlayer {
-    background-image: url('../../static/img/alygnedlayer-icon.svg');
-}
+
 .icon-artela {
     background-image: url('../../static/img/artela-icon.svg');
 }
