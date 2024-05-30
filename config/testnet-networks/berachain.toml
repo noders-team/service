@@ -3,7 +3,7 @@ CHAIN_NAME="BeraChain"
 CHAIN_SYSTEM_NAME="berachain"
 CHAIN_ID="auto"
 VERSION="auto"
-CHAIN_DESCRIPTION="""# Berachain: Bridging Traditional Finance and DeFi with Seamless Integration
+CHAIN_DESCRIPTION=""" (PRIVATE TESTNET) # Berachain: Bridging Traditional Finance and DeFi with Seamless Integration
 
 Berachain is at the forefront of blending traditional financial systems with decentralized finance (DeFi), offering a seamless integration platform. It aims to remove barriers between conventional finance and the blockchain world, facilitating easy access to DeFi solutions without compromising on security or efficiency. Berachain's innovative approach ensures compliance with regulatory standards, making it a trustworthy bridge for institutions and individuals alike. By enabling smooth transactions and interoperability between diverse financial realms, Berachain is paving the way for a unified financial ecosystem that combines the best of both worlds.
 

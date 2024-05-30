@@ -5,21 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="609d9c4d-607e-4257-a03b-37575134f343" name="Changes" comment="Source code changes">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_03_2024,_21_06_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_03_2024__21_06__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/mainnet-networks/celestia.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/mainnet-networks/celestia.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/testnet-networks/celestia.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/testnet-networks/celestia.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/testnet-networks/airchains.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/testnet-networks/airchains.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/testnet-networks/alignedlayer.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/testnet-networks/berachain.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/testnet-networks/berachain.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/testnet-networks/entrypoint.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/testnet-networks/entrypoint.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/testnet-networks/initia.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/testnet-networks/initia.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/testnet-networks/alignedlayer/_category_.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/testnet-networks/alignedlayer/cli-cheatsheet.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/testnet-networks/alignedlayer/install.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/testnet-networks/alignedlayer/live-peers.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/testnet-networks/alignedlayer/snapshot.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/testnet-networks/alignedlayer/statesync.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/testnet-networks/alignedlayer/upgrade.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidebars/testnetSidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidebars/testnetSidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/testnet-networks/mantra.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/testnet-networks/mantra.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/testnet-networks/og.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/testnet-networks/og.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/testnet-networks/router.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/testnet-networks/router.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/testnet-networks/union.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/testnet-networks/union.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

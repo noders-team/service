@@ -4,7 +4,7 @@ CHAIN_SYSTEM_NAME="union"
 VERSION_HAND="v0.19.0"
 CHAIN_ID="auto"
 VERSION="auto"
-CHAIN_DESCRIPTION="""# Union: Building Bridges in DeFi Ecosystems
+CHAIN_DESCRIPTION=""" (PRIVATE TESTNET) # Union: Building Bridges in DeFi Ecosystems
 
 Union is poised to transform the decentralized finance landscape by introducing a comprehensive platform designed to enhance connectivity, security, and functionality across various DeFi ecosystems. By leveraging cutting-edge blockchain technology, Union aims to provide a unified framework that addresses the current challenges of interoperability, liquidity, and user experience in DeFi. The platform offers a suite of tools and services, including cross-chain asset swaps, integrated liquidity pools, and advanced security protocols, to empower users and developers alike. Union's mission is to foster a more accessible, efficient, and inclusive financial system by connecting disparate blockchain networks and enabling seamless interaction among diverse DeFi applications.
 

@@ -4,7 +4,7 @@ CHAIN_SYSTEM_NAME="router"
 CHAIN_ID="auto"
 VERSION_HAND="v1.0.0-rc1"
 VERSION="auto"
-CHAIN_DESCRIPTION="""# Router Protocol: Bridging the Gap in Multi-Chain Connectivity
+CHAIN_DESCRIPTION=""" (PRIVATE TESTNET) # Router Protocol: Bridging the Gap in Multi-Chain Connectivity
 
 Router Protocol is at the forefront of enabling seamless interoperability across diverse blockchain networks. By developing a cutting-edge infrastructure, Router Protocol facilitates the transfer of information and assets between otherwise isolated blockchains, fostering a more connected and efficient decentralized ecosystem. This innovative platform addresses the critical challenge of interoperability, allowing for enhanced liquidity, greater accessibility, and expanded functionalities across the crypto space. Router Protocol's commitment to breaking down barriers between blockchains paves the way for a truly interconnected digital asset environment.
 

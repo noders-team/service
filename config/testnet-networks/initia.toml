@@ -3,7 +3,7 @@ CHAIN_NAME="Initia"
 CHAIN_SYSTEM_NAME="initia"
 CHAIN_ID="auto"
 VERSION="auto"
-CHAIN_DESCRIPTION="""# Initia: Is a network
+CHAIN_DESCRIPTION=""" (PRIVATE TESTNET) # Initia: Is a network
 
 Initia is a cutting-edge network for interwoven rollups, creating a highly integrated system of modular networks. It combines architectural ownership of the Layer 1 (L1) orchestration layer, Layer 2 (L2) network, and communication protocol to achieve universal consistency. The project aims to enhance scalability, security, and interoperability within the blockchain ecosystem, offering a robust platform for decentralized applications and services.
 

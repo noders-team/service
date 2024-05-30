@@ -3,7 +3,7 @@ CHAIN_NAME="Mantra"
 CHAIN_SYSTEM_NAME="mantra"
 CHAIN_ID="auto"
 VERSION="auto"
-CHAIN_DESCRIPTION="""# Mantra Chain: The Gateway for Regulated Real-World Asset Tokenization
+CHAIN_DESCRIPTION=""" (PRIVATE TESTNET) # Mantra Chain: The Gateway for Regulated Real-World Asset Tokenization
 
 Mantra Chain emerges as a pioneering Layer 1 blockchain, strategically crafted to bridge traditional finance (TradFi) and decentralized finance (DeFi). Its foundation rests on a solid infrastructure built for the tokenization of real-world assets (RWAs), ensuring adherence to regulatory requirements essential for institutional trust and security. This platform serves as a compliant framework that empowers institutions, businesses, developers, and users to seamlessly create, trade, and manage RWAs at the protocol level.
 
