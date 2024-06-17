@@ -61,7 +61,7 @@ function HeaderHero() {
         <Section background="dark" className={styles.HeaderHero}>
             <SolanaMobileStackLogo />
             <>
-                <h1 className={styles.title}>VALIDATOR SERVICES</h1>
+                <h1 className={styles.title}>123VALIDATOR SERVICES</h1>
                 <p className={styles.tagline}>Trusted blockchain validator and web3 developer team</p>
                 <div className={styles.buttons}>
                     <HomeCallToAction />

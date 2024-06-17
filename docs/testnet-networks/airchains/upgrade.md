@@ -13,37 +13,24 @@ sidebar_position: 3
 ## Clone Airchains repository
 ```js
 cd $HOME
-rm -rf junction
-git clone https://github.com/airchains-network/junction.git
-cd junction
-git checkout v0.1.0
- ```
-
-## Build binaries
-```js
-make build
+wget -O junctiond https://github.com/airchains-network/junction/releases/download/v0.1.0/junctiond
+chmod +x junctiond
  ```
 
 ## Prepare binaries for Cosmovisor
 ```js
+cd $HOME
 mkdir -p ~/.junction/cosmovisor/upgrades/v0.1.0/bin
-mv build/junctiond ~/.junction/cosmovisor/upgrades/v0.1.0/bin/
-rm -rf build
+mv $HOME/junctiond ~/.junction/cosmovisor/upgrades/v0.1.0/bin/
 ```
 
 # Without Cosmovisor
 ## Clone Airchains repository
 ```js
 cd $HOME
-rm -rf junction
-git clone https://github.com/airchains-network/junction.git
-cd junction
-git checkout v0.1.0
- ```
-
-## Build binaries
-```js
-make install
+wget -O junctiond https://github.com/airchains-network/junction/releases/download/v0.1.0/junctiond
+chmod +x junctiond
+mv $HOME/junctiond $HOME/go/bin/
  ```
 
 ### Restart node and check logs

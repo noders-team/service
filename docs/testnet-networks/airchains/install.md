@@ -27,83 +27,16 @@ rm "go$ver.linux-amd64.tar.gz" &&
 echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> $HOME/.bash_profile &&
 source $HOME/.bash_profile &&
 go version
+
+mkdir -p $HOME/go/bin
 ```
 
-## Install with Cosmovisor
-:::note ADVANCED ROUTE
-
-Cosmosvisor is a process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If a proposal is approved, cosmosvisor can automatically download the new binary, stop the current one, switch to the new binary, and restart the node with the new binary.
-
-:::
-### Download and build binaries
-### Clone Airchains repo and build junctiond v0.1.0
+### Download binaries
 ```js
 cd $HOME
-git clone https://github.com/airchains-network/junction.git
-cd junction
-git checkout v0.1.0
-```
-
-### Build binaries
-```js
-make install
-```
-### Prepare binaries for Cosmovisor
-```js
-cd $HOME
-mkdir -p ~/.junction/cosmovisor/upgrades/v0.1.0/bin
-mv $HOME/go/bin/junctiond ~/.junction/cosmovisor/upgrades/v0.1.0/bin/
-```
-
-### Create symlinks
-```js
-sudo ln -s ~/.junction/cosmovisor/genesis ~/.junction/cosmovisor/current -f
-sudo ln -s ~/.junction/cosmovisor/current/bin/junctiond /usr/local/bin/junctiond -f
-```
-
-## Download and install Cosmovisor
-```js
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
-```
-
-## Run node
-### Create service
-```js
-sudo tee /etc/systemd/system/junctiond.service > /dev/null << EOF
-[Unit]
-Description=airchains node service
-After=network-online.target
-
-[Service]
-User=$USER
-ExecStart=$(which cosmovisor) run start
-Restart=on-failure
-RestartSec=10
-LimitNOFILE=65535
-Environment="DAEMON_HOME=~/.junction"
-Environment="DAEMON_NAME=junctiond"
-Environment="UNSAFE_SKIP_BACKUP=true"
-Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/.junction/cosmovisor/current/bin"
-
-[Install]
-WantedBy=multi-user.target
-EOF
-```
-
-## Install without Cosmovisor
-
-### Download and build binaries
-### Clone Airchains repo and build junctiond v0.1.0
-```js
-cd $HOME
-git clone https://github.com/airchains-network/junction.git
-cd junction
-git checkout v0.1.0
-```
-
-### Build binaries
-```js
-make install
+wget -O junctiond https://github.com/airchains-network/junction/releases/download/v0.1.0/junctiond
+chmod +x junctiond
+mv junctiond $HOME/go/bin/
 ```
 
 ## Run node

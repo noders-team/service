@@ -71,9 +71,18 @@ function readBlockchainConfig {
 }
 
 function enrichBlockchainConfig {
+  # Temporary variables to store current values
+  local current_chain_id="${CHAIN_ID}"
+  local current_version="${VERSION}"
+
   # Enrich chain id
   if [ "${CHAIN_ID}" == "auto" ]; then
-    CHAIN_ID=$(curl -s "${ENDPOINT_API}/cosmos/base/tendermint/v1beta1/node_info" | jq -r '.default_node_info.network')
+    new_chain_id=$(curl -s "${ENDPOINT_API}/cosmos/base/tendermint/v1beta1/node_info" | jq -r '.default_node_info.network')
+    if [[ -n "${new_chain_id}" ]]; then
+      CHAIN_ID="${new_chain_id}"
+    else
+      CHAIN_ID="${current_chain_id}"
+    fi
   fi
 
   # Enrich endpoint peer
@@ -84,33 +93,27 @@ function enrichBlockchainConfig {
     ENDPOINT_PEER="${peer_id}@${peer_address}:${peer_addr}"
   fi
 
-# Enrich binary version
-if [ "${VERSION}" == "auto" ]; then
-  version_response=$(curl -s "${ENDPOINT_RPC}/abci_info?" | jq -r '.result.response.version' | tr -d '"')
-
-  if [[ $version_response == null || -z $version_response ]]; then
-    # Read version from the config file if the API call returns null or is empty
-    if [ -n "${VERSION_HAND}" ]; then
-      VERSION=${VERSION_HAND}
+  # Enrich binary version
+  if [ "${VERSION}" == "auto" ]; then
+    new_version=$(curl -s "${ENDPOINT_RPC}/abci_info?" | jq -r '.result.response.version' | tr -d '"')
+    if [[ -n "${new_version}" && "${new_version}" != "null" ]]; then
+      VERSION="${new_version}"
+    elif [ -n "${VERSION_HAND}" ]; then
+      VERSION="${VERSION_HAND}"
     else
-      echo "Version hand (VERSION_HAND) is not set in the configuration file."
-      # Handle the case where VERSION_HAND is also not set or found
+      VERSION="${current_version}"
     fi
-  else
-    VERSION=$version_response
   fi
-fi
 
-# Ensure the version starts with "v"
-if [[ ! ${VERSION} == v* ]]; then
-  VERSION="v${VERSION}"
-fi
+  # Ensure the version starts with "v"
+  if [[ ! ${VERSION} == v* && ${VERSION} =~ ^[0-9]+(\.[0-9]+)*$ ]]; then
+    VERSION="v${VERSION}"
+  fi
 
   # Enrich github
   if [ "${GITHUB_FOLDER_NAME}" == "auto" ]; then
     GITHUB_FOLDER_NAME=$(echo "${SOCIAL_GITHUB##*/}")
   fi
-
 }
 
 function escapeSpecialChars {

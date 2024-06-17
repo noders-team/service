@@ -6,15 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="609d9c4d-607e-4257-a03b-37575134f343" name="Changes" comment="Source code changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/sync.sh" beforeDir="false" afterPath="$PROJECT_DIR$/config/sync.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/testnet-networks/airchains.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/testnet-networks/airchains.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/testnet-networks/alignedlayer.toml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/config/testnet-networks/berachain.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/testnet-networks/berachain.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/testnet-networks/entrypoint.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/testnet-networks/entrypoint.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/testnet-networks/initia.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/testnet-networks/initia.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/testnet-networks/mantra.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/testnet-networks/mantra.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/testnet-networks/og.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/testnet-networks/og.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/testnet-networks/router.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/testnet-networks/router.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/testnet-networks/union.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/testnet-networks/union.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/testnet-networks/airchains/install.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/testnet-networks/airchains/install.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/testnet-networks/airchains/upgrade.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/testnet-networks/airchains/upgrade.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,24 +63,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "Shell Script.sync.sh.executor": "Run",
-    "git-widget-placeholder": "main",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "C:/Users/dudav/go/src/services/services",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "ts.external.directory.path": "C:\\Users\\dudav\\go\\src\\services\\services\\node_modules\\typescript\\lib"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;Shell Script.sync.sh.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dudav/go/src/services/services&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\dudav\\go\\src\\services\\services\\node_modules\\typescript\\lib&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static/img" />
