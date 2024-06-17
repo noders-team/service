@@ -61,8 +61,8 @@ function HeaderHero() {
         <Section background="dark" className={styles.HeaderHero}>
             <SolanaMobileStackLogo />
             <>
-                <h1 className={styles.title}>123VALIDATOR SERVICES</h1>
-                <p className={styles.tagline}>Trusted blockchain validator and web3 developer team</p>
+                <h1 className={styles.title}>VALIDATOR SERVICES</h1>
+                <p className={styles.tagline}>Professional blockchain validator and web3 developer team</p>
                 <div className={styles.buttons}>
                     <HomeCallToAction />
                 </div>
@@ -76,7 +76,7 @@ export default function Home(): JSX.Element {
     return (
         <Layout
             title={`${siteConfig.title}`}
-            description="Trusted blockchain validator and web3 developer team">
+            description="Professional blockchain validator and web3 developer team">
             <HeaderHero />
         </Layout>
     );
