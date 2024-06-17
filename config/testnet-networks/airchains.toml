@@ -21,10 +21,10 @@ DAEMON_SERVICE="junctiond.service"
 DAEMON_HOME="~/.junction"
 
 # Endpoints
-ENDPOINT_RPC="https://airchain-t-rpc.noders.services"
-ENDPOINT_API="https://airchain-t-api.noders.services"
+ENDPOINT_RPC="https://airchains-t-rpc.noders.services"
+ENDPOINT_API="https://airchains-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://airchain-t-grpc.noders.services:31090"
+ENDPOINT_GRPC="http://airchains-t-grpc.noders.services:31090"
 ENDPOINT_PEER="auto"
 
 # Social
