@@ -1,7 +1,6 @@
 # Blockchain
 CHAIN_NAME="Celestia"
 CHAIN_SYSTEM_NAME="celestia"
-VERSION_HAND="v1.9.0"
 CHAIN_ID="auto"
 VERSION="auto"
 CHAIN_DESCRIPTION="""# Celestia: Revolutionizing Blockchain with Modularity
