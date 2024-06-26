@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="609d9c4d-607e-4257-a03b-37575134f343" name="Changes" comment="Source code changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/mainnet-networks/celestia.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/mainnet-networks/celestia.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/sync.sh" beforeDir="false" afterPath="$PROJECT_DIR$/config/sync.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/testnet-networks/celestia.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/testnet-networks/celestia.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/mainnet-networks/celestia/install.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mainnet-networks/celestia/install.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/testnet-networks/celestia/install.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/testnet-networks/celestia/install.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

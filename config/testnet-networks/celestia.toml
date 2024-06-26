@@ -40,7 +40,7 @@ VALIDATOR_LINK="https://testnet.celestia.explorers.guru/validator/celestiavalope
 # Updates
 UPDATE_MAIN=true
 UPDATE_CATEGORY=true
-UPDATE_INSTALL=true
+UPDATE_INSTALL=false
 UPDATE_UPGRADE=true
 UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true

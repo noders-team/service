@@ -41,7 +41,7 @@ VALIDATOR_LINK="https://celestia.explorers.guru/validator/celestiavaloper139mu0a
 # Updates
 UPDATE_MAIN=true
 UPDATE_CATEGORY=true
-UPDATE_INSTALL=true
+UPDATE_INSTALL=false
 UPDATE_UPGRADE=true
 UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true

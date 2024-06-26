@@ -198,3 +198,106 @@ sed -i.bak -e "s%:26658%:${celestia-appd_PORT}658%g" \
 ```js
 sudo systemctl start celestia-appd && sudo journalctl -u celestia-appd -f --no-hostname -o cat
 ```
+
+## Install Bridge Node
+
+# Official documentation: https://docs.celestia.org/nodes/bridge-node
+
+## Download and build binaries
+```js
+cd $HOME
+rm -rf celestia-node
+git clone https://github.com/celestiaorg/celestia-node.git
+cd celestia-node
+git checkout v0.13.7
+make build
+sudo mv build/celestia /usr/local/bin
+make cel-key
+sudo mv cel-key /usr/local/bin
+```
+
+## Add Bridge wallet
+### GENERATE NEW WALLET
+```js
+cel-key add bridge-wallet --node.type bridge --p2p.network celestia
+```
+
+### RECOVER EXISTING WALLET
+```js
+cel-key add bridge-wallet --node.type bridge --p2p.network celestia --recover
+```
+
+## Fund the wallet with testnet tokens
+Once you start the Bridge Node, a wallet key will be generated for you. You will need to fund that address with Testnet tokens to pay for PayForBlob transactions
+
+## Initialize Bridge node
+
+```js
+celestia bridge init \
+  --keyring.accname bridge-wallet \
+  --core.ip <PUBLIC OR YOUR NODE IP> \
+  --core.rpc.port <PORT> \
+  --core.grpc.port <PORT> \
+  --p2p.network celestia \
+  --rpc.port <PORT> \
+  --gateway.port <PORT>
+```
+
+## Create service
+
+```js
+sudo tee /etc/systemd/system/celestia-bridge.service > /dev/null << EOF
+[Unit]
+Description=Celestia Bridge Node service
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which celestia) bridge start \
+--keyring.accname bridge-wallet \
+--core.ip <PUBLIC OR YOUR NODE IP> \
+--core.rpc.port <PORT> \
+--core.grpc.port <PORT> \
+--p2p.network celestia \
+--rpc.port <PORT> \
+--gateway.port <PORT> \
+--metrics.tls=true \
+--metrics \
+--metrics.endpoint otel.celestia.observer 
+Restart=on-failure
+RestartSec=10
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
+EOF
+sudo systemctl daemon-reload
+sudo systemctl enable celestia-bridge.service
+```
+
+## Start Bridge node
+```js
+systemctl restart celestia-bridge.service
+```
+
+## Check Bridge node logs
+```js
+journalctl -fu celestia-bridge.service -o cat
+```
+
+## Useful commands
+`Get Bridge Node ID`
+```js
+AUTH_TOKEN=$(celestia bridge auth admin --p2p.network celestia)
+curl -s -X POST -H "Authorization: Bearer $AUTH_TOKEN" -H 'Content-Type: application/json' -d '{"jsonrpc":"2.0","id":0,"method":"p2p.Info","params":[]}' http://localhost:12058 | jq -r .result.ID
+```
+
+## Get Bridge node key
+```js
+cel-key show bridge-wallet --node.type bridge --p2p.network celestia -a | tail -1
+```
+
+## Check Bridge node wallet balance
+```js
+celestia-appd q bank balances $(cel-key show bridge-wallet --node.type bridge --p2p.network celestia -a | tail -1)
+```

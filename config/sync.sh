@@ -78,7 +78,7 @@ function enrichBlockchainConfig {
   # Enrich chain id
   if [ "${CHAIN_ID}" == "auto" ]; then
     new_chain_id=$(curl -s "${ENDPOINT_API}/cosmos/base/tendermint/v1beta1/node_info" | jq -r '.default_node_info.network')
-    if [[ -n "${new_chain_id}" ]]; then
+    if [[ -n "${new_chain_id}" && "${new_chain_id}" != "auto" ]]; then
       CHAIN_ID="${new_chain_id}"
     else
       CHAIN_ID="${current_chain_id}"
@@ -96,7 +96,7 @@ function enrichBlockchainConfig {
   # Enrich binary version
   if [ "${VERSION}" == "auto" ]; then
     new_version=$(curl -s "${ENDPOINT_RPC}/abci_info?" | jq -r '.result.response.version' | tr -d '"')
-    if [[ -n "${new_version}" && "${new_version}" != "null" ]]; then
+    if [[ -n "${new_version}" && "${new_version}" != "null" && "${new_version}" != "auto" ]]; then
       VERSION="${new_version}"
     elif [ -n "${VERSION_HAND}" ]; then
       VERSION="${VERSION_HAND}"
