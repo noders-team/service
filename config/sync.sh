@@ -75,15 +75,21 @@ function enrichBlockchainConfig {
   local current_chain_id="${CHAIN_ID}"
   local current_version="${VERSION}"
 
+  echo "Initial CHAIN_ID: ${CHAIN_ID}"
+  echo "Initial VERSION: ${VERSION}"
+
   # Enrich chain id
   if [ "${CHAIN_ID}" == "auto" ]; then
     new_chain_id=$(curl -s "${ENDPOINT_API}/cosmos/base/tendermint/v1beta1/node_info" | jq -r '.default_node_info.network')
+    echo "Fetched new_chain_id: ${new_chain_id}"
     if [[ -n "${new_chain_id}" && "${new_chain_id}" != "auto" ]]; then
       CHAIN_ID="${new_chain_id}"
     else
       CHAIN_ID="${current_chain_id}"
     fi
   fi
+
+  echo "Updated CHAIN_ID: ${CHAIN_ID}"
 
   # Enrich endpoint peer
   if [ "${ENDPOINT_PEER}" == "auto" ]; then
@@ -93,9 +99,12 @@ function enrichBlockchainConfig {
     ENDPOINT_PEER="${peer_id}@${peer_address}:${peer_addr}"
   fi
 
+  echo "Updated ENDPOINT_PEER: ${ENDPOINT_PEER}"
+
   # Enrich binary version
   if [ "${VERSION}" == "auto" ]; then
     new_version=$(curl -s "${ENDPOINT_RPC}/abci_info?" | jq -r '.result.response.version' | tr -d '"')
+    echo "Fetched new_version: ${new_version}"
     if [[ -n "${new_version}" && "${new_version}" != "null" && "${new_version}" != "auto" ]]; then
       VERSION="${new_version}"
     elif [ -n "${VERSION_HAND}" ]; then
@@ -110,10 +119,14 @@ function enrichBlockchainConfig {
     VERSION="v${VERSION}"
   fi
 
+  echo "Updated VERSION: ${VERSION}"
+
   # Enrich github
   if [ "${GITHUB_FOLDER_NAME}" == "auto" ]; then
     GITHUB_FOLDER_NAME=$(echo "${SOCIAL_GITHUB##*/}")
   fi
+
+  echo "Updated GITHUB_FOLDER_NAME: ${GITHUB_FOLDER_NAME}"
 }
 
 
