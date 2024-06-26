@@ -116,6 +116,7 @@ function enrichBlockchainConfig {
   fi
 }
 
+
 function escapeSpecialChars {
   echo "$1" | sed 's/[&/\]/\\&/g' | sed 's|#|\\#|g'
 }
