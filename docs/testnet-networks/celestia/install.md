@@ -200,8 +200,7 @@ sudo systemctl start celestia-appd && sudo journalctl -u celestia-appd -f --no-h
 ```
 
 ## Install Bridge Node
-
-# Official documentation: https://docs.celestia.org/nodes/bridge-node
+# Official documentation: `https://docs.celestia.org/nodes/bridge-node`
 
 ## Download and build binaries
 ```js
@@ -217,20 +216,23 @@ sudo mv cel-key /usr/local/bin
 ```
 
 ## Add Bridge wallet
-### GENERATE NEW WALLET
+### Generate new wallet
 ```js
 cel-key add bridge-wallet --node.type bridge --p2p.network celestia
 ```
 
-### RECOVER EXISTING WALLET
+### Recover existing wallet
 ```js
 cel-key add bridge-wallet --node.type bridge --p2p.network celestia --recover
 ```
 
-## Fund the wallet with testnet tokens
+### Fund the wallet with testnet tokens
+:::info
+
 Once you start the Bridge Node, a wallet key will be generated for you. You will need to fund that address with Testnet tokens to pay for PayForBlob transactions
 
-## Initialize Bridge node
+:::
+### Initialize Bridge node
 
 ```js
 celestia bridge init \
@@ -243,7 +245,7 @@ celestia bridge init \
   --gateway.port <PORT>
 ```
 
-## Create service
+### Create service
 
 ```js
 sudo tee /etc/systemd/system/celestia-bridge.service > /dev/null << EOF
@@ -275,18 +277,18 @@ sudo systemctl daemon-reload
 sudo systemctl enable celestia-bridge.service
 ```
 
-## Start Bridge node
+### Start Bridge node
 ```js
 systemctl restart celestia-bridge.service
 ```
 
-## Check Bridge node logs
+### Check Bridge node logs
 ```js
 journalctl -fu celestia-bridge.service -o cat
 ```
 
 ## Useful commands
-`Get Bridge Node ID`
+### Get Bridge Node ID
 ```js
 AUTH_TOKEN=$(celestia bridge auth admin --p2p.network celestia)
 curl -s -X POST -H "Authorization: Bearer $AUTH_TOKEN" -H 'Content-Type: application/json' -d '{"jsonrpc":"2.0","id":0,"method":"p2p.Info","params":[]}' http://localhost:12058 | jq -r .result.ID
