@@ -277,12 +277,12 @@ sudo systemctl enable celestia-bridge.service
 
 ### Start Bridge node
 ```js
-systemctl restart celestia-bridge.service
+sudo systemctl restart celestia-bridge.service
 ```
 
 ### Check Bridge node logs
 ```js
-journalctl -fu celestia-bridge.service -o cat
+sudo journalctl -fu celestia-bridge.service -o cat
 ```
 
 ## Useful commands
