@@ -289,7 +289,7 @@ sudo journalctl -fu celestia-bridge.service -o cat
 ### Get Bridge Node ID
 ```js
 AUTH_TOKEN=$(celestia bridge auth admin --p2p.network celestia)
-curl -s -X POST -H "Authorization: Bearer $AUTH_TOKEN" -H 'Content-Type: application/json' -d '{"jsonrpc":"2.0","id":0,"method":"p2p.Info","params":[]}' http://localhost:12058 | jq -r .result.ID
+curl -s -X POST -H "Authorization: Bearer $AUTH_TOKEN" -H 'Content-Type: application/json' -d '{"jsonrpc":"2.0","id":0,"method":"p2p.Info","params":[]}' http://localhost:<PORT> | jq -r .result.ID
 ```
 
 ## Get Bridge node key
