@@ -208,7 +208,7 @@ cd $HOME
 rm -rf celestia-node
 git clone https://github.com/celestiaorg/celestia-node.git
 cd celestia-node
-git checkout v0.13.7
+git checkout v0.14.0
 make build
 sudo mv build/celestia /usr/local/bin
 make cel-key
@@ -279,27 +279,27 @@ sudo systemctl enable celestia-bridge.service
 
 ### Start Bridge node
 ```js
-systemctl restart celestia-bridge.service
+sudo systemctl restart celestia-bridge.service
 ```
 
 ### Check Bridge node logs
 ```js
-journalctl -fu celestia-bridge.service -o cat
+sudo journalctl -fu celestia-bridge.service -o cat
 ```
 
 ## Useful commands
 ### Get Bridge Node ID
 ```js
-AUTH_TOKEN=$(celestia bridge auth admin --p2p.network celestia)
-curl -s -X POST -H "Authorization: Bearer $AUTH_TOKEN" -H 'Content-Type: application/json' -d '{"jsonrpc":"2.0","id":0,"method":"p2p.Info","params":[]}' http://localhost:12058 | jq -r .result.ID
+AUTH_TOKEN=$(celestia bridge auth admin --p2p.network mocha-4)
+curl -s -X POST -H "Authorization: Bearer $AUTH_TOKEN" -H 'Content-Type: application/json' -d '{"jsonrpc":"2.0","id":0,"method":"p2p.Info","params":[]}' http://localhost:<PORT> | jq -r .result.ID
 ```
 
 ## Get Bridge node key
 ```js
-cel-key show bridge-wallet --node.type bridge --p2p.network celestia -a | tail -1
+cel-key show bridge-wallet --node.type bridge --p2p.network mocha-4 -a | tail -1
 ```
 
 ## Check Bridge node wallet balance
 ```js
-celestia-appd q bank balances $(cel-key show bridge-wallet --node.type bridge --p2p.network celestia -a | tail -1)
+celestia-appd q bank balances $(cel-key show bridge-wallet --node.type bridge --p2p.network mocha-4 -a | tail -1)
 ```
