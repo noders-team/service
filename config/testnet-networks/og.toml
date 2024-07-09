@@ -10,13 +10,12 @@ The scalability of 0G hinges on the idea of separating the workflow of data avai
 """
 [CHAIN_DESCRIPTION_END]
 
-CHAIN_DENOM="evmos"
+CHAIN_DENOM="ua0gi"
 CHAIN_FEES="3000"
 
 # Binary
-DAEMON_NAME="evmosd"
-DAEMON_SERVICE="0g.service"
-DAEMON_HOME="~/.evmosd"
+DAEMON_NAME="0gchaind"
+DAEMON_HOME="~/.0gchain"
 
 # Endpoints
 ENDPOINT_RPC="https://og-t-rpc.noders.services"
