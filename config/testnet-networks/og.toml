@@ -26,7 +26,7 @@ ENDPOINT_PEER="auto"
 
 # Social
 SOCIAL_WEBSITE="https://0g.ai/"
-SOCIAL_GITHUB="https://github.com/0glabs/0g-evmos"
+SOCIAL_GITHUB="https://github.com/0glabs/0g-chain"
 SOCIAL_DISCORD="http://discord.gg/0glabs"
 SOCIAL_X="https://twitter.com/0G_labs"
 SOCIAL_TELEGRAM="https://t.me/web3_0glabs"
