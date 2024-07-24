@@ -299,16 +299,6 @@ code .variable {
     background-image: url('../../static/img/pylons-icon.svg');
 }
 
-.icon-pylons {
-    background-image: url('../../static/img/pylons-icon.svg');
-}
-
-.icon-artela {
-    background-image: url('../../static/img/artela-icon.svg');
-}
-.icon-berachain {
-    background-image: url('../../static/img/berachain-icon.svg');
-}
 .icon-crossfi {
     background-image: url('../../static/img/crossfi-icon.svg');
 }
@@ -318,12 +308,7 @@ code .variable {
 .icon-lava {
     background-image: url('../../static/img/lava-icon.svg');
 }
-.icon-pryzm {
-    background-image: url('../../static/img/pryzm-icon.svg');
-}
-.icon-router {
-    background-image: url('../../static/img/router-icon.svg');
-}
+
 .icon-seda {
     background-image: url('../../static/img/seda-icon.svg');
 }
@@ -361,8 +346,4 @@ code .variable {
 
 .icon-airchains {
     background-image: url('../../static/img/airchains-icon.svg');
-}
-
-.icon-initia {
-    background-image: url('../../static/img/initia-icon.svg');
 }
