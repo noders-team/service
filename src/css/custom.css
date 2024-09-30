@@ -211,20 +211,12 @@ code .variable {
     background-image: url('../../static/img/andromeda-icon.svg');
 }
 
-.icon-archway {
-    background-image: url('../../static/img/archway-icon.svg');
-}
-
 .icon-aura {
     background-image: url('../../static/img/aura-icon.svg');
 }
 
 .icon-cosmos {
     background-image: url('../../static/img/cosmos-icon.svg');
-}
-
-.icon-band {
-    background-image: url('../../static/img/band-icon.svg');
 }
 
 .icon-bitsong {
@@ -253,10 +245,6 @@ code .variable {
 
 .icon-humans {
     background-image: url('../../static/img/humans-icon.svg');
-}
-
-.icon-injective {
-    background-image: url('../../static/img/injective-icon.svg');
 }
 
 .icon-jackal {
@@ -334,10 +322,6 @@ code .variable {
 
 .icon-galactica {
     background-image: url('../../static/img/galactica-icon.svg');
-}
-
-.icon-nibiru {
-    background-image: url('../../static/img/nibiru-icon.svg');
 }
 
 .icon-mantra {
