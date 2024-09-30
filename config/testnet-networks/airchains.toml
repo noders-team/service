@@ -1,11 +1,9 @@
 # Blockchain
 CHAIN_NAME="Airchains"
 CHAIN_SYSTEM_NAME="airchains"
-VERSION_HAND="v0.1.0"
 CHAIN_ID="auto"
 VERSION="auto"
-CHAIN_DESCRIPTION=""" (PRIVATE TESTNET) # Airchains
-
+CHAIN_DESCRIPTION=""" # Airchains
 
 Airchains is a platform that provides tools for creating modular blockchain solutions. It enables developers to quickly deploy blockchains with integration across various networks, enhancing interoperability and scalability. The platform offers automated deployment processes, chain and bridge management, and supports various protocols and standards. Airchains aims to reduce complexity and accelerate the time to market for blockchain applications. For more detailed information, visit Airchains.
 
@@ -42,8 +40,8 @@ VALIDATOR_LINK="https://testnet.airchains.io/validator/airvaloper15n0pesc7ggllax
 # Updates
 UPDATE_MAIN=true
 UPDATE_CATEGORY=true
-UPDATE_INSTALL=false
-UPDATE_UPGRADE=false
+UPDATE_INSTALL=true
+UPDATE_UPGRADE=true
 UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true
 UPDATE_LIVE_PEERS=true
