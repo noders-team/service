@@ -1,0 +1,48 @@
+# Blockchain
+CHAIN_NAME="Berachain"
+CHAIN_SYSTEM_NAME="berachain"
+CHAIN_ID="auto"
+VERSION="auto"
+CHAIN_DESCRIPTION=""" # Berachain
+
+Berachain is a high-performance EVM-compatible blockchain built on Proof-of-Liquidity consensus.
+
+"""
+[CHAIN_DESCRIPTION_END]
+
+CHAIN_DENOM="abgt"
+CHAIN_FEES="3000"
+
+# Binary
+DAEMON_NAME="beacond"
+DAEMON_SERVICE="beacond.service"
+DAEMON_HOME="~/.beacond"
+
+# Endpoints
+ENDPOINT_RPC="https://berachain-t-rpc.noders.services"
+ENDPOINT_API="https://berachain-t-api.noders.services"
+ENDPOINT_JRPC="https://berachain-t-jsonrpc.noders.services"
+ENDPOINT_GRPC="http://berachain-t-grpc.noders.services:31090"
+ENDPOINT_PEER="auto"
+
+# Social
+SOCIAL_WEBSITE="https://www.berachain.com/"
+SOCIAL_GITHUB="https://github.com/berachain"
+SOCIAL_DISCORD="https://discord.com/invite/berachain"
+SOCIAL_X="https://twitter.com/berachain"
+SOCIAL_TELEGRAM="https://t.me/BerachainPortal"
+
+# Other
+DOWNLOAD_URL="https://config-t.noders.services/berachain"
+GITHUB_FOLDER_NAME="auto"
+VALIDATOR_LINK="https://bartio.station.berachain.com/validators/0x7d0f205f4a7F10B7B1c6282193aA202dC16fBbbe"
+
+# Updates
+UPDATE_MAIN=true
+UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
+UPDATE_UPGRADE=true
+UPDATE_SNAPSHOT=true
+UPDATE_STATESYNC=true
+UPDATE_LIVE_PEERS=true
+UPDATE_CLI_CHEATSHEET=true
