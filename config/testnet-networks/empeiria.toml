@@ -1,0 +1,48 @@
+# Blockchain
+CHAIN_NAME="Empeiria"
+CHAIN_SYSTEM_NAME="empeiria"
+CHAIN_ID="auto"
+VERSION="auto"
+CHAIN_DESCRIPTION=""" # Empeiria
+
+Empeiria is the first End-to-End Verifiable Data Infrastructure (EVDI). It enables seamless web3 adoption through one-click deployment, empowering organizations with the data of the future.
+
+"""
+[CHAIN_DESCRIPTION_END]
+
+CHAIN_DENOM="uempe"
+CHAIN_FEES="3000"
+
+# Binary
+DAEMON_NAME="emped"
+DAEMON_SERVICE="empeiria.service"
+DAEMON_HOME="~/.empe-chain"
+
+# Endpoints
+ENDPOINT_RPC="https://empeiria-t-rpc.noders.services"
+ENDPOINT_API="https://empeiria-t-api.noders.services"
+ENDPOINT_JRPC=""
+ENDPOINT_GRPC="http://empeiria-t-grpc.noders.services:31090"
+ENDPOINT_PEER="auto"
+
+# Social
+SOCIAL_WEBSITE="https://empe.io/"
+SOCIAL_GITHUB="https://github.com/empe-io"
+SOCIAL_DISCORD=""
+SOCIAL_X="https://twitter.com/empe_io"
+SOCIAL_TELEGRAM="https://t.me/web3Empeiria"
+
+# Other
+DOWNLOAD_URL="https://config-t.noders.services/empeiria"
+GITHUB_FOLDER_NAME="auto"
+VALIDATOR_LINK="https://explorer.stavr.tech/Empeiria-Testnet/staking/empevaloper1wmqc6ak6st207q69qdatp6fpr0x6r6ekk4km9v"
+
+# Updates
+UPDATE_MAIN=true
+UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
+UPDATE_UPGRADE=true
+UPDATE_SNAPSHOT=true
+UPDATE_STATESYNC=true
+UPDATE_LIVE_PEERS=true
+UPDATE_CLI_CHEATSHEET=true

@@ -1,0 +1,48 @@
+# Blockchain
+CHAIN_NAME="Axone"
+CHAIN_SYSTEM_NAME="axone"
+CHAIN_ID="auto"
+VERSION="auto"
+CHAIN_DESCRIPTION=""" # Axone
+
+Axone's intuitive protocol lets you orchestrate sophisticated AI processes with ease. Seamlessly link resources, models, and data. Create powerful AI workflows with trust-minimized collaboration. Ensure fair rewards for every contribution. That's the Axone promise.
+
+"""
+[CHAIN_DESCRIPTION_END]
+
+CHAIN_DENOM="uaxone"
+CHAIN_FEES="3000"
+
+# Binary
+DAEMON_NAME="axoned"
+DAEMON_SERVICE="axone.service"
+DAEMON_HOME="~/.axoned"
+
+# Endpoints
+ENDPOINT_RPC="https://axone-t-rpc.noders.services"
+ENDPOINT_API="https://axone-t-api.noders.services"
+ENDPOINT_JRPC=""
+ENDPOINT_GRPC="http://axone-t-grpc.noders.services:31090"
+ENDPOINT_PEER="auto"
+
+# Social
+SOCIAL_WEBSITE="https://www.axone.xyz/"
+SOCIAL_GITHUB="https://github.com/axone-protocol"
+SOCIAL_DISCORD="https://discord.gg/axone"
+SOCIAL_X="https://x.com/axonexyz"
+SOCIAL_TELEGRAM=""
+
+# Other
+DOWNLOAD_URL="https://config-t.noders.services/axone"
+GITHUB_FOLDER_NAME="auto"
+VALIDATOR_LINK="https://testnet.axone.explorers.guru/validator/axonevaloper1zux0q0unnu9s0sz9kfy074e0rp7cj909yf4hc8"
+
+# Updates
+UPDATE_MAIN=true
+UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
+UPDATE_UPGRADE=true
+UPDATE_SNAPSHOT=true
+UPDATE_STATESYNC=true
+UPDATE_LIVE_PEERS=true
+UPDATE_CLI_CHEATSHEET=true

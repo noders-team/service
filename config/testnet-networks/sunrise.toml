@@ -1,0 +1,48 @@
+# Blockchain
+CHAIN_NAME="Sunrise"
+CHAIN_SYSTEM_NAME="sunrise"
+CHAIN_ID="auto"
+VERSION="auto"
+CHAIN_DESCRIPTION=""" # Sunrise
+
+Sunrise is a specialized Data Availability Layer for Proof of Liquidity.
+
+"""
+[CHAIN_DESCRIPTION_END]
+
+CHAIN_DENOM="uvrise"
+CHAIN_FEES="3000"
+
+# Binary
+DAEMON_NAME="sunrised"
+DAEMON_SERVICE="sunrise.service"
+DAEMON_HOME="~/.sunrise"
+
+# Endpoints
+ENDPOINT_RPC="https://sunrise-t-rpc.noders.services"
+ENDPOINT_API="https://sunrise-t-api.noders.services"
+ENDPOINT_JRPC=""
+ENDPOINT_GRPC="http://sunrise-t-grpc.noders.services:31090"
+ENDPOINT_PEER="auto"
+
+# Social
+SOCIAL_WEBSITE="https://sunriselayer.io/"
+SOCIAL_GITHUB="https://github.com/sunriselayer/sunrise"
+SOCIAL_DISCORD="https://discord.gg/sunrise"
+SOCIAL_X="https://twitter.com/SunriseLayer"
+SOCIAL_TELEGRAM=""
+
+# Other
+DOWNLOAD_URL="https://config-t.noders.services/sunrise"
+GITHUB_FOLDER_NAME="auto"
+VALIDATOR_LINK="https://testnet.sunrise.explorers.guru/validator/sunrisevaloper1knkwlqqxky07f7vu6vgxna49m2tf9aa9j7fnkt"
+
+# Updates
+UPDATE_MAIN=true
+UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
+UPDATE_UPGRADE=true
+UPDATE_SNAPSHOT=true
+UPDATE_STATESYNC=true
+UPDATE_LIVE_PEERS=true
+UPDATE_CLI_CHEATSHEET=true

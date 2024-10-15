@@ -21,7 +21,7 @@ DAEMON_HOME="~/.beacond"
 # Endpoints
 ENDPOINT_RPC="https://berachain-t-rpc.noders.services"
 ENDPOINT_API="https://berachain-t-api.noders.services"
-ENDPOINT_JRPC="https://berachain-t-jsonrpc.noders.services"
+ENDPOINT_JRPC=""
 ENDPOINT_GRPC="http://berachain-t-grpc.noders.services:31090"
 ENDPOINT_PEER="auto"
 
