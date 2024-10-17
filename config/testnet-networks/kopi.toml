@@ -22,7 +22,7 @@ DAEMON_HOME="~/.kopid"
 ENDPOINT_RPC="https://kopi-t-rpc.noders.services"
 ENDPOINT_API="https://kopi-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://kopi-t-grpc.noders.services:31090"
+ENDPOINT_GRPC="http://kopi-t-grpc.noders.services:27690"
 ENDPOINT_PEER="auto"
 
 # Social

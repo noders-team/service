@@ -22,7 +22,7 @@ DAEMON_HOME="~/.axoned"
 ENDPOINT_RPC="https://axone-t-rpc.noders.services"
 ENDPOINT_API="https://axone-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://axone-t-grpc.noders.services:31090"
+ENDPOINT_GRPC="http://axone-t-grpc.noders.services:20090"
 ENDPOINT_PEER="auto"
 
 # Social

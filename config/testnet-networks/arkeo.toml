@@ -22,7 +22,7 @@ DAEMON_HOME="~/.arkeo"
 ENDPOINT_RPC="https://arkeo-t-rpc.noders.services"
 ENDPOINT_API="https://arkeo-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://arkeo-t-grpc.noders.services:31090"
+ENDPOINT_GRPC="http://arkeo-t-grpc.noders.services:22890"
 ENDPOINT_PEER="auto"
 
 # Social
