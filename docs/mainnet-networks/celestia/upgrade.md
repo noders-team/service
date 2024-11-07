@@ -7,16 +7,16 @@ sidebar_position: 3
 <div class="h1-with-icon icon-celestia">
 # Upgrade
 </div>
-###### Chain ID: `celestia` | Current Node Version: `v1.9.0`
+###### Chain ID: `celestia` | Current Node Version: `v2.1.2`
 
 
 # Clone Celestia repository
 ```js
 cd $HOME
-rm -rf celestiaorg
-git clone https://github.com/celestiaorg.git
-cd celestiaorg
-git checkout v1.9.0
+rm -rf celestia-app
+git clone https://github.com/celestiaorg/celestia-app.git
+cd celestia-app
+git checkout v2.1.2
  ```
 
 # Build binaries
@@ -26,8 +26,8 @@ make build
 
 # Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.celestia-app/cosmovisor/upgrades/v1.9.0/bin
-mv build/celestia-appd ~/.celestia-app/cosmovisor/upgrades/v1.9.0/bin/
+mkdir -p ~/.celestia-app/cosmovisor/upgrades/v2.1.2/bin
+mv build/celestia-appd ~/.celestia-app/cosmovisor/upgrades/v2.1.2/bin/
 rm -rf build
 ```
 
@@ -35,10 +35,10 @@ rm -rf build
 ## Clone Celestia repository
 ```js
 cd $HOME
-rm -rf celestiaorg
-git clone https://github.com/celestiaorg.git
-cd celestiaorg
-git checkout v1.9.0
+rm -rf celestia-app
+git clone https://github.com/celestiaorg/celestia-app.git
+cd celestia-app
+git checkout v2.1.2
  ```
 
 ## Build binaries

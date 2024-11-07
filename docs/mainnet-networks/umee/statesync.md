@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-umee">
 # State sync
 </div>
-###### Chain ID: `umee-1` | Current Node Version: `v6.4.0`
+###### Chain ID: `umee-1` | Current Node Version: `v6.6.0`
 
 ```bash
 SNAP_RPC=https://umee-rpc.noders.services:443 && \

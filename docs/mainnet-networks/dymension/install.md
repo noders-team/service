@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-dymension">
 # Installation
 </div>
-###### Chain ID: `` | Current Node Version: `vauto`
+###### Chain ID: `dymension_1100-1` | Current Node Version: `v3.1.0`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Dymension repo and build dymd vauto
+### Clone Dymension repo and build dymd v3.1.0
 ```js
 cd $HOME
 git clone https://github.com/dymensionxyz.git
 cd dymensionxyz
-git checkout vauto
+git checkout v3.1.0
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.dymension/cosmovisor/upgrades/vauto/bin
-mv $HOME/go/bin/dymd ~/.dymension/cosmovisor/upgrades/vauto/bin/
+mkdir -p ~/.dymension/cosmovisor/upgrades/v3.1.0/bin
+mv $HOME/go/bin/dymd ~/.dymension/cosmovisor/upgrades/v3.1.0/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Dymension repo and build dymd vauto
+### Clone Dymension repo and build dymd v3.1.0
 ```js
 cd $HOME
 git clone https://github.com/dymensionxyz.git
 cd dymensionxyz
-git checkout vauto
+git checkout v3.1.0
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable dymd
 ## Node configuration
 ### Set config
 ```js
-dymd config chain-id 
+dymd config chain-id dymension_1100-1
 dymd config keyring-backend os
 dymd config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-dymd init NAME_OF_YOUR_VALIDATOR --chain-id 
+dymd init NAME_OF_YOUR_VALIDATOR --chain-id dymension_1100-1
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config.noders.services/dymension/addrbook.json -o ~/.dymension/conf
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@dymension-rpc.noders.services:\"/" ~/.dymension/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"90a04aa30a26d38bc79e71d7ff7c7a89ffd91c66@dymension-rpc.noders.services:20556\"/" ~/.dymension/config/config.toml
 ```
 
 ### Set minimum gas price

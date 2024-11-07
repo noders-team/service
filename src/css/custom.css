@@ -356,6 +356,10 @@ code .variable {
     background-image: url('../../static/img/story-icon.svg');
 }
 
+.icon-namada {
+    background-image: url('../../static/img/namada-icon.svg');
+}
+
 .icon-sunrise {
     background-image: url('../../static/img/sunrise-icon.svg');
 }

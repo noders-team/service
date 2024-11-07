@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-bitsong">
 # Upgrade
 </div>
-###### Chain ID: `bitsong-2b` | Current Node Version: `v0.15.0`
+###### Chain ID: `bitsong-2b` | Current Node Version: `v0.17.0`
 
 
 # Clone BitSong repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf bitsongofficial
 git clone https://github.com/bitsongofficial.git
 cd bitsongofficial
-git checkout v0.15.0
+git checkout v0.17.0
  ```
 
 # Build binaries
@@ -26,8 +26,8 @@ make build
 
 # Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.bitsongd/cosmovisor/upgrades/v0.15.0/bin
-mv build/bitsongd ~/.bitsongd/cosmovisor/upgrades/v0.15.0/bin/
+mkdir -p ~/.bitsongd/cosmovisor/upgrades/v0.17.0/bin
+mv build/bitsongd ~/.bitsongd/cosmovisor/upgrades/v0.17.0/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf bitsongofficial
 git clone https://github.com/bitsongofficial.git
 cd bitsongofficial
-git checkout v0.15.0
+git checkout v0.17.0
  ```
 
 ## Build binaries

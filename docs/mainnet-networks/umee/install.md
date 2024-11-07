@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-umee">
 # Installation
 </div>
-###### Chain ID: `umee-1` | Current Node Version: `v6.4.0`
+###### Chain ID: `umee-1` | Current Node Version: `v6.6.0`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone UX repo and build umeed v6.4.0
+### Clone UX repo and build umeed v6.6.0
 ```js
 cd $HOME
 git clone https://github.com/umee-network.git
 cd umee-network
-git checkout v6.4.0
+git checkout v6.6.0
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.umee/cosmovisor/upgrades/v6.4.0/bin
-mv $HOME/go/bin/umeed ~/.umee/cosmovisor/upgrades/v6.4.0/bin/
+mkdir -p ~/.umee/cosmovisor/upgrades/v6.6.0/bin
+mv $HOME/go/bin/umeed ~/.umee/cosmovisor/upgrades/v6.6.0/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone UX repo and build umeed v6.4.0
+### Clone UX repo and build umeed v6.6.0
 ```js
 cd $HOME
 git clone https://github.com/umee-network.git
 cd umee-network
-git checkout v6.4.0
+git checkout v6.6.0
 ```
 
 ### Build binaries

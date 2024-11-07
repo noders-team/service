@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-rebus">
 # Node Snapshot
 </div>
-###### Chain ID: `reb_1111-1` | Current Node Version: `v0.4.0`
+###### Chain ID: `reb_1111-1` | Current Node Version: `v0.5.0`
 
 ## Our Rebus Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 63.37 GB | Thu, 30 May 2024 02:25:05 GMT |
+| 4.73 GB | Thu, 07 Nov 2024 06:14:28 GMT |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

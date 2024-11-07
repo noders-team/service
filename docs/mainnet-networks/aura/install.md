@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-aura">
 # Installation
 </div>
-###### Chain ID: `xstaxy-1` | Current Node Version: `v0.7.3`
+###### Chain ID: `aura_6322-2` | Current Node Version: `v0.9.3`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Aura repo and build aurad v0.7.3
+### Clone Aura repo and build aurad v0.9.3
 ```js
 cd $HOME
 git clone https://github.com/aura-nw.git
 cd aura-nw
-git checkout v0.7.3
+git checkout v0.9.3
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.aura/cosmovisor/upgrades/v0.7.3/bin
-mv $HOME/go/bin/aurad ~/.aura/cosmovisor/upgrades/v0.7.3/bin/
+mkdir -p ~/.aura/cosmovisor/upgrades/v0.9.3/bin
+mv $HOME/go/bin/aurad ~/.aura/cosmovisor/upgrades/v0.9.3/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Aura repo and build aurad v0.7.3
+### Clone Aura repo and build aurad v0.9.3
 ```js
 cd $HOME
 git clone https://github.com/aura-nw.git
 cd aura-nw
-git checkout v0.7.3
+git checkout v0.9.3
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable aurad
 ## Node configuration
 ### Set config
 ```js
-aurad config chain-id xstaxy-1
+aurad config chain-id aura_6322-2
 aurad config keyring-backend os
 aurad config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-aurad init NAME_OF_YOUR_VALIDATOR --chain-id xstaxy-1
+aurad init NAME_OF_YOUR_VALIDATOR --chain-id aura_6322-2
 ```
 
 ### Download genesis and addrbook

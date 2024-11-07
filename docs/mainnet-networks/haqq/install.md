@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-haqq">
 # Installation
 </div>
-###### Chain ID: `haqq_11235-1` | Current Node Version: `v1.7.5`
+###### Chain ID: `haqq_11235-1` | Current Node Version: `v1.8.2`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Haqq repo and build haqqd v1.7.5
+### Clone Haqq repo and build haqqd v1.8.2
 ```js
 cd $HOME
 git clone https://github.com/haqq-network.git
 cd haqq-network
-git checkout v1.7.5
+git checkout v1.8.2
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.haqqd/cosmovisor/upgrades/v1.7.5/bin
-mv $HOME/go/bin/haqqd ~/.haqqd/cosmovisor/upgrades/v1.7.5/bin/
+mkdir -p ~/.haqqd/cosmovisor/upgrades/v1.8.2/bin
+mv $HOME/go/bin/haqqd ~/.haqqd/cosmovisor/upgrades/v1.8.2/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Haqq repo and build haqqd v1.7.5
+### Clone Haqq repo and build haqqd v1.8.2
 ```js
 cd $HOME
 git clone https://github.com/haqq-network.git
 cd haqq-network
-git checkout v1.7.5
+git checkout v1.8.2
 ```
 
 ### Build binaries

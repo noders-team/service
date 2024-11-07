@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-kyve">
 # Installation
 </div>
-###### Chain ID: `kyve-1` | Current Node Version: `v1.4.0`
+###### Chain ID: `kyve-1` | Current Node Version: `v1.5.0`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Kyve repo and build kyved v1.4.0
+### Clone Kyve repo and build kyved v1.5.0
 ```js
 cd $HOME
 git clone https://github.com/KYVENetwork.git
 cd KYVENetwork
-git checkout v1.4.0
+git checkout v1.5.0
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.kyve/cosmovisor/upgrades/v1.4.0/bin
-mv $HOME/go/bin/kyved ~/.kyve/cosmovisor/upgrades/v1.4.0/bin/
+mkdir -p ~/.kyve/cosmovisor/upgrades/v1.5.0/bin
+mv $HOME/go/bin/kyved ~/.kyve/cosmovisor/upgrades/v1.5.0/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Kyve repo and build kyved v1.4.0
+### Clone Kyve repo and build kyved v1.5.0
 ```js
 cd $HOME
 git clone https://github.com/KYVENetwork.git
 cd KYVENetwork
-git checkout v1.4.0
+git checkout v1.5.0
 ```
 
 ### Build binaries
@@ -153,7 +153,7 @@ curl https://config.noders.services/kyve/addrbook.json -o ~/.kyve/config/addrboo
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"9150bbb576e81cfe6776987bc6bc47be3c1a6b89@kyve-rpc.noders.services:15656\"/" ~/.kyve/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"a3780bb3c6eb953dfd0019e61a37e054a18dd197@kyve-rpc.noders.services:11056\"/" ~/.kyve/config/config.toml
 ```
 
 ### Set minimum gas price

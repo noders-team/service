@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-gitopia">
 # Upgrade
 </div>
-###### Chain ID: `gitopia` | Current Node Version: `v3.3.0`
+###### Chain ID: `gitopia` | Current Node Version: `v4.0.0`
 
 
 # Clone Gitopia repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf gitopia
 git clone https://github.com/gitopia.git
 cd gitopia
-git checkout v3.3.0
+git checkout v4.0.0
  ```
 
 # Build binaries
@@ -26,8 +26,8 @@ make build
 
 # Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.gitopia/cosmovisor/upgrades/v3.3.0/bin
-mv build/gitopiad ~/.gitopia/cosmovisor/upgrades/v3.3.0/bin/
+mkdir -p ~/.gitopia/cosmovisor/upgrades/v4.0.0/bin
+mv build/gitopiad ~/.gitopia/cosmovisor/upgrades/v4.0.0/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf gitopia
 git clone https://github.com/gitopia.git
 cd gitopia
-git checkout v3.3.0
+git checkout v4.0.0
  ```
 
 ## Build binaries

@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-celestia">
 # Celestia
 </div>
-###### Chain ID: `celestia` | Current Node Version: `v1.9.0`
+###### Chain ID: `celestia` | Current Node Version: `v2.1.2`
 
 
 Celestia introduces a modular data availability network to enhance blockchain scalability and flexibility. It features a minimal design focusing on transaction ordering and data availability, decoupling consensus from execution for improved scalability. This approach allows for customized execution layers, powered by a secure Proof of Stake mechanism. Celestia's innovation lies in its ability to ensure transaction data is verifiable without downloading the entire chain, offering a foundation for scalable, efficient blockchain applications.
@@ -20,7 +20,7 @@ Official links of social networks of projects
 
 <CardLayout autoFitEnabled={false}>
     <SmallCard to="https://celestia.org/" header={{label: "Website", translateId: "social-telegram"}} iconPath="img/website-icon.svg"/>
-    <SmallCard to="https://github.com/celestiaorg" header={{label: "GitHub", translateId: "social-telegram"}} iconPath="img/github-icon.svg"/>
+    <SmallCard to="https://github.com/celestiaorg/celestia-app" header={{label: "GitHub", translateId: "social-telegram"}} iconPath="img/github-icon.svg"/>
     <SmallCard to="https://discord.gg/celestiacommunity" header={{label: "Discord", translateId: "social-telegram"}} iconPath="img/discord-icon.svg"/>
     <SmallCard to="https://twitter.com/CelestiaOrg" header={{label: "X", translateId: "social-telegram"}} iconPath="img/x-icon.svg"/>
     <SmallCard to="https://t.me/celestiaru" header={{label: "Telegram", translateId: "social-telegram"}} iconPath="img/telegram-icon.svg"/>

@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-rebus">
 # State sync
 </div>
-###### Chain ID: `reb_1111-1` | Current Node Version: `v0.4.0`
+###### Chain ID: `reb_1111-1` | Current Node Version: `v0.5.0`
 
 ```bash
 SNAP_RPC=https://rebus-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop rebusd && rebusd tendermint unsafe-reset-all --home ~/.rebusd --keep-addr-book
 ```
 ```bash
-peers="5e2cec275c80ad800e7c071235a37f87ec0ec9ff@rebus-rpc.noders.services:18656"
+peers="b24161930ca5caa47a3dc7ba202629ade832a839@rebus-rpc.noders.services:14056"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.rebusd/config/config.toml
 ```
 ```bash

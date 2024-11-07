@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-stratos">
 # Upgrade
 </div>
-###### Chain ID: `` | Current Node Version: `vauto`
+###### Chain ID: `stratos-1` | Current Node Version: `v0.12.0`
 
 
 # Clone Stratos repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf stratos-chain
 git clone https://github.com/stratosnet/stratos-chain.git
 cd stratos-chain
-git checkout vauto
+git checkout v0.12.0
  ```
 
 # Build binaries
@@ -26,8 +26,8 @@ make build
 
 # Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.stchaind/cosmovisor/upgrades/vauto/bin
-mv build/stchaind ~/.stchaind/cosmovisor/upgrades/vauto/bin/
+mkdir -p ~/.stchaind/cosmovisor/upgrades/v0.12.0/bin
+mv build/stchaind ~/.stchaind/cosmovisor/upgrades/v0.12.0/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf stratos-chain
 git clone https://github.com/stratosnet/stratos-chain.git
 cd stratos-chain
-git checkout vauto
+git checkout v0.12.0
  ```
 
 ## Build binaries

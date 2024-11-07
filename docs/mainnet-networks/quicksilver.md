@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-quicksilver">
 # Quicksilver
 </div>
-###### Chain ID: `quicksilver-2` | Current Node Version: `v1.5.5`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 
 Quicksilver introduces liquid staking to the Cosmos ecosystem, unlocking liquidity for staked assets while maintaining network security participation. It features liquid staking derivatives, cross-chain functionality through the IBC protocol, decentralized governance, high security, and yield optimization. This protocol enables greater capital efficiency and a vibrant DeFi ecosystem, offering opportunities for lending, borrowing, and trading staked assets across chains, thus innovating within DeFi and Cosmos.

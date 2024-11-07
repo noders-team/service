@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-celestia">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `celestia` | Current Node Version: `v1.9.0`
+###### Chain ID: `celestia` | Current Node Version: `v2.1.2`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -271,5 +271,5 @@ sudo rm /etc/systemd/system/celestia-appd.service
 sudo systemctl daemon-reload
 rm -f $(which celestia-appd)
 rm -rf ~/.celestia-app
-rm -rf $HOME/celestiaorg
+rm -rf $HOME/celestia-app
 ```

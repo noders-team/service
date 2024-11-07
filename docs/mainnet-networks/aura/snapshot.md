@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-aura">
 # Node Snapshot
 </div>
-###### Chain ID: `xstaxy-1` | Current Node Version: `v0.7.3`
+###### Chain ID: `aura_6322-2` | Current Node Version: `v0.9.3`
 
 ## Our Aura Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 15.60 GB | Thu, 30 May 2024 05:38:14 GMT |
+| 1.82 GB | Thu, 07 Nov 2024 06:06:12 GMT |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

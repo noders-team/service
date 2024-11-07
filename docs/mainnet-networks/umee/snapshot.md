@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-umee">
 # Node Snapshot
 </div>
-###### Chain ID: `umee-1` | Current Node Version: `v6.4.0`
+###### Chain ID: `umee-1` | Current Node Version: `v6.6.0`
 
 ## Our UX Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 75.74 GB | Thu, 30 May 2024 06:41:56 GMT |
+| 1.89 GB | Thu, 07 Nov 2024 06:01:40 GMT |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

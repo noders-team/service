@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-gitopia">
 # State sync
 </div>
-###### Chain ID: `gitopia` | Current Node Version: `v3.3.0`
+###### Chain ID: `gitopia` | Current Node Version: `v4.0.0`
 
 ```bash
 SNAP_RPC=https://gitopia-rpc.noders.services:443 && \

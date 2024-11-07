@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-osmosis">
 # State sync
 </div>
-###### Chain ID: `osmosis-1` | Current Node Version: `v25.0.0`
+###### Chain ID: `osmosis-1` | Current Node Version: `v26.0.1`
 
 ```bash
 SNAP_RPC=https://osmosis-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop osmosisd && osmosisd tendermint unsafe-reset-all --home ~/.osmosisd --keep-addr-book
 ```
 ```bash
-peers="91570c5f4e2a54ce53996475aea4f530e0669a2e@osmosis-rpc.noders.services:10656"
+peers="0f6a353576feb940625e43fa86ab4611a348b8e2@osmosis-rpc.noders.services:12556"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.osmosisd/config/config.toml
 ```
 ```bash

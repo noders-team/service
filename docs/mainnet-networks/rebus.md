@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-rebus">
 # Rebus
 </div>
-###### Chain ID: `reb_1111-1` | Current Node Version: `v0.4.0`
+###### Chain ID: `reb_1111-1` | Current Node Version: `v0.5.0`
 
 
 Rebuschain innovatively connects traditional finance with decentralized finance, enabling digitization and free movement of financial assets across blockchain ecosystems. It emphasizes interoperability, asset tokenization, decentralized governance, compliance, security, and cross-chain liquidity. This facilitates DeFi integration for traditional assets, cross-chain financial services, and enhanced market access, aiming for a more inclusive and interconnected financial ecosystem, fostering new opportunities in asset management and financial services.

@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-gitopia">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `gitopia` | Current Node Version: `v3.3.0`
+###### Chain ID: `gitopia` | Current Node Version: `v4.0.0`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 

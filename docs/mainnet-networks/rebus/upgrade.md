@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-rebus">
 # Upgrade
 </div>
-###### Chain ID: `reb_1111-1` | Current Node Version: `v0.4.0`
+###### Chain ID: `reb_1111-1` | Current Node Version: `v0.5.0`
 
 
 # Clone Rebus repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf rebuschain
 git clone https://github.com/rebuschain.git
 cd rebuschain
-git checkout v0.4.0
+git checkout v0.5.0
  ```
 
 # Build binaries
@@ -26,8 +26,8 @@ make build
 
 # Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.rebusd/cosmovisor/upgrades/v0.4.0/bin
-mv build/rebusd ~/.rebusd/cosmovisor/upgrades/v0.4.0/bin/
+mkdir -p ~/.rebusd/cosmovisor/upgrades/v0.5.0/bin
+mv build/rebusd ~/.rebusd/cosmovisor/upgrades/v0.5.0/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf rebuschain
 git clone https://github.com/rebuschain.git
 cd rebuschain
-git checkout v0.4.0
+git checkout v0.5.0
  ```
 
 ## Build binaries

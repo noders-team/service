@@ -1,0 +1,48 @@
+# Blockchain
+CHAIN_NAME="Namada"
+CHAIN_SYSTEM_NAME="namada"
+CHAIN_ID="auto"
+VERSION="auto"
+CHAIN_DESCRIPTION=""" # Namada
+
+is a Proof-of-Stake L1 for interchain asset-agnostic privacy. Namada uses CometBFT consensus and enables multi-asset shielded transfers for any native or non-native asset. Namada features full IBC protocol support, a natively integrated Ethereum bridge, a modern proof-of-stake system with automatic reward compounding and cubic slashing, and a stake-weighted governance signalling mechanism. Users of shielded transfers are rewarded for their contributions to the privacy set in the form of native protocol tokens. A multi-asset shielded transfer wallet is provided in order to facilitate safe and private user interaction with the protocol.
+
+"""
+[CHAIN_DESCRIPTION_END]
+
+CHAIN_DENOM="NAM"
+CHAIN_FEES="1"
+
+# Binary
+DAEMON_NAME="namadad"
+DAEMON_SERVICE="namada.service"
+DAEMON_HOME="~/.local"
+
+# Endpoints
+ENDPOINT_RPC="https://namada-t-rpc.noders.services/"
+ENDPOINT_API=""
+ENDPOINT_JRPC=""
+ENDPOINT_GRPC=""
+ENDPOINT_PEER="auto"
+
+# Social
+SOCIAL_WEBSITE="https://namada.net/"
+SOCIAL_GITHUB="https://github.com/anoma/namada"
+SOCIAL_DISCORD="https://discord.com/invite/namada"
+SOCIAL_X="https://twitter.com/namada"
+SOCIAL_TELEGRAM="https://t.me/+pjXZFdE9s-s2OGVi"
+
+# Other
+DOWNLOAD_URL=""
+GITHUB_FOLDER_NAME="auto"
+VALIDATOR_LINK=""
+
+# Updates
+UPDATE_MAIN=false
+UPDATE_CATEGORY=false
+UPDATE_INSTALL=false
+UPDATE_UPGRADE=false
+UPDATE_SNAPSHOT=false
+UPDATE_STATESYNC=false
+UPDATE_LIVE_PEERS=false
+UPDATE_CLI_CHEATSHEET=false

@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-aura">
 # Upgrade
 </div>
-###### Chain ID: `xstaxy-1` | Current Node Version: `v0.7.3`
+###### Chain ID: `aura_6322-2` | Current Node Version: `v0.9.3`
 
 
 # Clone Aura repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf aura-nw
 git clone https://github.com/aura-nw.git
 cd aura-nw
-git checkout v0.7.3
+git checkout v0.9.3
  ```
 
 # Build binaries
@@ -26,8 +26,8 @@ make build
 
 # Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.aura/cosmovisor/upgrades/v0.7.3/bin
-mv build/aurad ~/.aura/cosmovisor/upgrades/v0.7.3/bin/
+mkdir -p ~/.aura/cosmovisor/upgrades/v0.9.3/bin
+mv build/aurad ~/.aura/cosmovisor/upgrades/v0.9.3/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf aura-nw
 git clone https://github.com/aura-nw.git
 cd aura-nw
-git checkout v0.7.3
+git checkout v0.9.3
  ```
 
 ## Build binaries

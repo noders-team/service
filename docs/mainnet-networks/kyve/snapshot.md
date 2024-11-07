@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-kyve">
 # Node Snapshot
 </div>
-###### Chain ID: `kyve-1` | Current Node Version: `v1.4.0`
+###### Chain ID: `kyve-1` | Current Node Version: `v1.5.0`
 
 ## Our Kyve Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 31.94 GB | Thu, 30 May 2024 01:55:45 GMT |
+| 2.65 GB | Thu, 07 Nov 2024 06:12:51 GMT |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

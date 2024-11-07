@@ -13,7 +13,6 @@ import CardLayout from "../../src/layouts/CardLayout"
 ###### Chain ID: `junction` | Current Node Version: `v0.1.0`
 
 
-
 Airchains is a platform that provides tools for creating modular blockchain solutions. It enables developers to quickly deploy blockchains with integration across various networks, enhancing interoperability and scalability. The platform offers automated deployment processes, chain and bridge management, and supports various protocols and standards. Airchains aims to reduce complexity and accelerate the time to market for blockchain applications. For more detailed information, visit Airchains.
 
 # Social resources
@@ -46,8 +45,8 @@ Official links of social networks of projects
 # Public endpoints
 
 <CardLayout autoFitEnabled={true}>
-    <SmallCard to="https://airchain-t-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
-    <SmallCard to="https://airchain-t-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
+    <SmallCard to="https://airchains-t-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
+    <SmallCard to="https://airchains-t-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     
-    <SmallCard to="http://airchain-t-grpc.noders.services:31090" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="http://airchains-t-grpc.noders.services:31090" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
 </CardLayout>

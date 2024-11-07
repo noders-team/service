@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-haqq">
 # State sync
 </div>
-###### Chain ID: `haqq_11235-1` | Current Node Version: `v1.7.5`
+###### Chain ID: `haqq_11235-1` | Current Node Version: `v1.8.2`
 
 ```bash
 SNAP_RPC=https://haqq-rpc.noders.services:443 && \

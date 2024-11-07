@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-aura">
 # Aura
 </div>
-###### Chain ID: `xstaxy-1` | Current Node Version: `v0.7.3`
+###### Chain ID: `aura_6322-2` | Current Node Version: `v0.9.3`
 
 
 Aura Network, a Layer-1 blockchain, focuses on scalability, interoperability, and user experience to drive NFT adoption. It offers high transaction efficiency, seamless cross-chain communication, developer-friendly tools, intuitive user interfaces, and an energy-efficient consensus mechanism. Ideal for dApps, NFT marketplaces, gaming, and social media, Aura Network aims to enhance blockchain accessibility and foster a sustainable, interconnected digital ecosystem.

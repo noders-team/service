@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-umee">
 # Upgrade
 </div>
-###### Chain ID: `umee-1` | Current Node Version: `v6.4.0`
+###### Chain ID: `umee-1` | Current Node Version: `v6.6.0`
 
 
 # Clone UX repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf umee-network
 git clone https://github.com/umee-network.git
 cd umee-network
-git checkout v6.4.0
+git checkout v6.6.0
  ```
 
 # Build binaries
@@ -26,8 +26,8 @@ make build
 
 # Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.umee/cosmovisor/upgrades/v6.4.0/bin
-mv build/umeed ~/.umee/cosmovisor/upgrades/v6.4.0/bin/
+mkdir -p ~/.umee/cosmovisor/upgrades/v6.6.0/bin
+mv build/umeed ~/.umee/cosmovisor/upgrades/v6.6.0/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf umee-network
 git clone https://github.com/umee-network.git
 cd umee-network
-git checkout v6.4.0
+git checkout v6.6.0
  ```
 
 ## Build binaries

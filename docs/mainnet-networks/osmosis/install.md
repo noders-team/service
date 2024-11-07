@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-osmosis">
 # Installation
 </div>
-###### Chain ID: `osmosis-1` | Current Node Version: `v25.0.0`
+###### Chain ID: `osmosis-1` | Current Node Version: `v26.0.1`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Osmosis repo and build osmosisd v25.0.0
+### Clone Osmosis repo and build osmosisd v26.0.1
 ```js
 cd $HOME
 git clone https://github.com/osmosis-labs/osmosis.git
 cd osmosis
-git checkout v25.0.0
+git checkout v26.0.1
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.osmosisd/cosmovisor/upgrades/v25.0.0/bin
-mv $HOME/go/bin/osmosisd ~/.osmosisd/cosmovisor/upgrades/v25.0.0/bin/
+mkdir -p ~/.osmosisd/cosmovisor/upgrades/v26.0.1/bin
+mv $HOME/go/bin/osmosisd ~/.osmosisd/cosmovisor/upgrades/v26.0.1/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Osmosis repo and build osmosisd v25.0.0
+### Clone Osmosis repo and build osmosisd v26.0.1
 ```js
 cd $HOME
 git clone https://github.com/osmosis-labs/osmosis.git
 cd osmosis
-git checkout v25.0.0
+git checkout v26.0.1
 ```
 
 ### Build binaries
@@ -153,7 +153,7 @@ curl https://config.noders.services/osmosis/addrbook.json -o ~/.osmosisd/config/
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"91570c5f4e2a54ce53996475aea4f530e0669a2e@osmosis-rpc.noders.services:10656\"/" ~/.osmosisd/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"0f6a353576feb940625e43fa86ab4611a348b8e2@osmosis-rpc.noders.services:12556\"/" ~/.osmosisd/config/config.toml
 ```
 
 ### Set minimum gas price

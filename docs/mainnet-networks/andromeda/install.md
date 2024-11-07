@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-andromeda">
 # Installation
 </div>
-###### Chain ID: `andromeda-1` | Current Node Version: `v0.1.1-fix-gov`
+###### Chain ID: `andromeda-1` | Current Node Version: `v2.0.0`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Andromeda repo and build andromedad v0.1.1-fix-gov
+### Clone Andromeda repo and build andromedad v2.0.0
 ```js
 cd $HOME
 git clone https://github.com/andromedaprotocol.git
 cd andromedaprotocol
-git checkout v0.1.1-fix-gov
+git checkout v2.0.0
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.andromeda/cosmovisor/upgrades/v0.1.1-fix-gov/bin
-mv $HOME/go/bin/andromedad ~/.andromeda/cosmovisor/upgrades/v0.1.1-fix-gov/bin/
+mkdir -p ~/.andromeda/cosmovisor/upgrades/v2.0.0/bin
+mv $HOME/go/bin/andromedad ~/.andromeda/cosmovisor/upgrades/v2.0.0/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Andromeda repo and build andromedad v0.1.1-fix-gov
+### Clone Andromeda repo and build andromedad v2.0.0
 ```js
 cd $HOME
 git clone https://github.com/andromedaprotocol.git
 cd andromedaprotocol
-git checkout v0.1.1-fix-gov
+git checkout v2.0.0
 ```
 
 ### Build binaries

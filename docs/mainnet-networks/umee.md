@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-umee">
 # UX
 </div>
-###### Chain ID: `umee-1` | Current Node Version: `v6.4.0`
+###### Chain ID: `umee-1` | Current Node Version: `v6.6.0`
 
 
 UX.XYZ pioneers integrating UX design with blockchain to enhance dApp accessibility and engagement. It focuses on user-centric design, interoperability, accessibility, customizable experiences, and robust security. This initiative aims to simplify blockchain for wider adoption, impacting areas like DeFi, NFT marketplaces, decentralized social media, and e-commerce. By prioritizing user experience, UX.XYZ strives to make decentralized applications more intuitive and accessible, encouraging broader participation in the blockchain ecosystem.

@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-dymension">
 # State sync
 </div>
-###### Chain ID: `` | Current Node Version: `vauto`
+###### Chain ID: `dymension_1100-1` | Current Node Version: `v3.1.0`
 
 ```bash
 SNAP_RPC=https://dymension-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop dymd && dymd tendermint unsafe-reset-all --home ~/.dymension --keep-addr-book
 ```
 ```bash
-peers="@dymension-rpc.noders.services:"
+peers="90a04aa30a26d38bc79e71d7ff7c7a89ffd91c66@dymension-rpc.noders.services:20556"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.dymension/config/config.toml
 ```
 ```bash

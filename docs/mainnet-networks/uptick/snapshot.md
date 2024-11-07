@@ -13,7 +13,7 @@ sidebar_position: 4
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 33.70 GB | Thu, 30 May 2024 05:22:06 GMT |
+| 2.66 GB | Thu, 07 Nov 2024 06:23:03 GMT |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -71,7 +71,7 @@ curl -o - -L https://config.noders.services/uptick/data.tar.lz4 | lz4 -d | tar -
 ```
 ### Wasm
 ```bash
-Not supported
+curl -o - -L https://config.noders.services/uptick/wasm.tar.lz4 | lz4 -d | tar -x -C ~/.uptickd
 ```
 
 :::warning WARNING

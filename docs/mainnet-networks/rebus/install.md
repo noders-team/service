@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-rebus">
 # Installation
 </div>
-###### Chain ID: `reb_1111-1` | Current Node Version: `v0.4.0`
+###### Chain ID: `reb_1111-1` | Current Node Version: `v0.5.0`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Rebus repo and build rebusd v0.4.0
+### Clone Rebus repo and build rebusd v0.5.0
 ```js
 cd $HOME
 git clone https://github.com/rebuschain.git
 cd rebuschain
-git checkout v0.4.0
+git checkout v0.5.0
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.rebusd/cosmovisor/upgrades/v0.4.0/bin
-mv $HOME/go/bin/rebusd ~/.rebusd/cosmovisor/upgrades/v0.4.0/bin/
+mkdir -p ~/.rebusd/cosmovisor/upgrades/v0.5.0/bin
+mv $HOME/go/bin/rebusd ~/.rebusd/cosmovisor/upgrades/v0.5.0/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Rebus repo and build rebusd v0.4.0
+### Clone Rebus repo and build rebusd v0.5.0
 ```js
 cd $HOME
 git clone https://github.com/rebuschain.git
 cd rebuschain
-git checkout v0.4.0
+git checkout v0.5.0
 ```
 
 ### Build binaries
@@ -153,7 +153,7 @@ curl https://config.noders.services/rebus/addrbook.json -o ~/.rebusd/config/addr
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"5e2cec275c80ad800e7c071235a37f87ec0ec9ff@rebus-rpc.noders.services:18656\"/" ~/.rebusd/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"b24161930ca5caa47a3dc7ba202629ade832a839@rebus-rpc.noders.services:14056\"/" ~/.rebusd/config/config.toml
 ```
 
 ### Set minimum gas price
