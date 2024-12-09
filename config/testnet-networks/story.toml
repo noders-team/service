@@ -1,8 +1,8 @@
 # Blockchain
 CHAIN_NAME="Story"
 CHAIN_SYSTEM_NAME="story"
-CHAIN_ID="auto"
-VERSION="auto"
+CHAIN_ID="odyssey-0"
+VERSION="v0.13.0"
 CHAIN_DESCRIPTION=""" # Story Protocol
 
 Story is the World’s IP Blockchain, onramping Programmable IP to power the next generation of AI, DeFi, and consumer applications.
@@ -27,7 +27,7 @@ ENDPOINT_PEER="auto"
 
 # Social
 SOCIAL_WEBSITE="https://www.story.foundation/"
-SOCIAL_GITHUB="https://github.com/storyprotocol"
+SOCIAL_GITHUB="https://github.com/piplabs/story"
 SOCIAL_DISCORD="https://discord.gg/storyprotocol"
 SOCIAL_X="https://x.com/StoryProtocol"
 SOCIAL_TELEGRAM=""
@@ -40,7 +40,7 @@ VALIDATOR_LINK=""
 # Updates
 UPDATE_MAIN=true
 UPDATE_CATEGORY=true
-UPDATE_INSTALL=true
+UPDATE_INSTALL=false
 UPDATE_UPGRADE=true
 UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true

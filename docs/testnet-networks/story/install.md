@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-story">
 # Installation
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `odyssey-0` | Current Node Version: `v0.13.0`
 
 ## Install dependencies
 
@@ -19,7 +19,7 @@ sudo apt -qy upgrade
 
 ## Install GO
 ```js
-ver="1.21.3" &&
+ver="1.22.3" &&
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" &&
 sudo rm -rf /usr/local/go &&
 sudo tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz" &&
@@ -36,17 +36,29 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
+
+### Download geth
+```js
+cd $HOME
+wget -O geth https://github.com/piplabs/story-geth/releases/download/v0.11.0/geth-linux-amd64
+chmod +x $HOME/geth
+mv $HOME/geth ~/go/bin/
+[ ! -d "$HOME/.story/story" ] && mkdir -p "$HOME/.story/story"
+[ ! -d "$HOME/.story/geth" ] && mkdir -p "$HOME/.story/geth"
+```
+
 ### Clone Story repo and build story auto
 ```js
 cd $HOME
-git clone https://github.com/storyprotocol.git
-cd storyprotocol
-git checkout auto
+git clone https://github.com/piplabs/story
+cd story
+git checkout v0.13.0
 ```
 
 ### Build binaries
 ```js
-make install
+go build -o story ./client 
+mv $HOME/story/story $HOME/go/bin/
 ```
 ### Prepare binaries for Cosmovisor
 ```js
@@ -96,18 +108,19 @@ EOF
 ### Clone Story repo and build story auto
 ```js
 cd $HOME
-git clone https://github.com/storyprotocol.git
-cd storyprotocol
-git checkout auto
+git clone https://github.com/piplabs/story
+    cd story
+git checkout v0.13.0
 ```
 
 ### Build binaries
 ```js
-make install
+go build -o story ./client 
+mv $HOME/story/story $HOME/go/bin/
 ```
 
 ## Run node
-### Create service
+### Create service for story
 ```js
 sudo tee /etc/systemd/system/story.service > /dev/null << EOF
 [Unit]
@@ -127,23 +140,42 @@ WantedBy=multi-user.target
 EOF
 ```
 
+### Create service for geth
+```js
+sudo tee /etc/systemd/system/story-geth.service > /dev/null <<EOF
+[Unit]
+Description=Story Geth daemon
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$HOME/go/bin/geth --odyssey --syncmode full --http --http.api eth,net,web3,engine --http.vhosts '*' --http.addr 0.0.0.0 --http.port 8545 --authrpc.port 6551 --ws --ws.api eth,web3,net,txpool --ws.addr 0.0.0.0 --ws.port 8546
+Restart=on-failure
+RestartSec=3
+LimitNOFILE=65535
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
 ### Enable service
 ```js
 sudo systemctl daemon-reload
 sudo systemctl enable story
+sudo systemctl enable story-geth
 ```
 
 ## Node configuration
 ### Set config
 ```js
-story config chain-id auto
+story config chain-id odyssey-0
 story config keyring-backend os
 story config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-story init NAME_OF_YOUR_VALIDATOR --chain-id auto
+story init --moniker NAME_OF_YOUR_VALIDATOR test --network odyssey-0
 ```
 
 ### Download genesis and addrbook
@@ -197,4 +229,5 @@ sed -i.bak -e "s%:26658%:${story_PORT}658%g" \
 ### Start node and check logs
 ```js
 sudo systemctl start story && sudo journalctl -u story -f --no-hostname -o cat
+sudo systemctl start story-geth && sudo journalctl -u story-geth -f --no-hostname -o cat
 ```
