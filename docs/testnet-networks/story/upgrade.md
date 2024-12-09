@@ -1,0 +1,52 @@
+---
+hide_table_of_contents: false
+title: Upgrade
+sidebar_position: 3
+---
+
+<div class="h1-with-icon icon-story">
+# Upgrade
+</div>
+###### Chain ID: `auto` | Current Node Version: `auto`
+
+# With Cosmovisor
+## Clone Story repository
+```js
+cd $HOME
+rm -rf storyprotocol
+git clone https://github.com/storyprotocol.git
+cd storyprotocol
+git checkout auto
+ ```
+
+## Build binaries
+```js
+make build
+ ```
+
+## Prepare binaries for Cosmovisor
+```js
+mkdir -p ~/.story/cosmovisor/upgrades/auto/bin
+mv build/story ~/.story/cosmovisor/upgrades/auto/bin/
+rm -rf build
+```
+
+# Without Cosmovisor
+## Clone Story repository
+```js
+cd $HOME
+rm -rf storyprotocol
+git clone https://github.com/storyprotocol.git
+cd storyprotocol
+git checkout auto
+ ```
+
+## Build binaries
+```js
+make install
+ ```
+
+### Restart node and check logs
+```js
+sudo systemctl restart story && sudo journalctl -u story -f --no-hostname -o cat
+```

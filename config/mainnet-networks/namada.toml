@@ -19,7 +19,7 @@ DAEMON_SERVICE="namada.service"
 DAEMON_HOME="~/.local"
 
 # Endpoints
-ENDPOINT_RPC="https://namada-t-rpc.noders.services/"
+ENDPOINT_RPC="https://namada-rpc.noders.services/"
 ENDPOINT_API=""
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC=""

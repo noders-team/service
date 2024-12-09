@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-celestia">
 # Installation
 </div>
-###### Chain ID: `celestia` | Current Node Version: `v1.10.1`
+###### Chain ID: `celestia` | Current Node Version: `v3.0.2`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Celestia repo and build celestia-appd v1.10.1
+### Clone Celestia repo and build celestia-appd v3.0.2
 ```js
 cd $HOME
 git clone https://github.com/celestiaorg/celestia-app.git
 cd celestia-app
-git checkout v1.10.1
+git checkout v3.0.2
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.celestia-app/cosmovisor/upgrades/v1.10.1/bin
-mv $HOME/go/bin/celestia-appd ~/.celestia-app/cosmovisor/upgrades/v1.10.1/bin/
+mkdir -p ~/.celestia-app/cosmovisor/upgrades/v3.0.2/bin
+mv $HOME/go/bin/celestia-appd ~/.celestia-app/cosmovisor/upgrades/v3.0.2/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Celestia repo and build celestia-appd v1.10.1
+### Clone Celestia repo and build celestia-appd v3.0.2
 ```js
 cd $HOME
 git clone https://github.com/celestiaorg.git
 cd celestiaorg
-git checkout v1.10.1
+git checkout v3.0.2
 ```
 
 ### Build binaries
@@ -206,7 +206,7 @@ cd $HOME
 rm -rf celestia-node
 git clone https://github.com/celestiaorg/celestia-node.git
 cd celestia-node
-git checkout v0.13.7
+git checkout v0.20.4
 make build
 sudo mv build/celestia /usr/local/bin
 make cel-key
