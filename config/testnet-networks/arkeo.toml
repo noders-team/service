@@ -10,7 +10,7 @@ Arkeo was created to provide decentralized applications with increased developme
 """
 [CHAIN_DESCRIPTION_END]
 
-CHAIN_DENOM="abgt"
+CHAIN_DENOM="uarkeo"
 CHAIN_FEES="3000"
 
 # Binary

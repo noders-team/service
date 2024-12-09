@@ -45,7 +45,7 @@ arkeod q bank balances $(arkeod keys show KEY -a) --node https://arkeo-t-rpc.nod
 
 ### Send
 ```js
-arkeod tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000abgt \
+arkeod tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uarkeo \
   --chain-id arkeo-testnet-3 \
   --node https://arkeo-t-rpc.noders.services:443 --fees 3000abgt \
   --from KEY
