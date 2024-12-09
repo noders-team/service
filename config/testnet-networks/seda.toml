@@ -29,7 +29,7 @@ ENDPOINT_PEER="auto"
 
 # Social
 SOCIAL_WEBSITE="https://www.seda.xyz/"
-SOCIAL_GITHUB="https://github.com/sedaprotocol"
+SOCIAL_GITHUB="https://github.com/sedaprotocol/seda-chain"
 SOCIAL_DISCORD="https://discord.gg/Ae4V6y6qrW"
 SOCIAL_X="https://twitter.com/sedaprotocol"
 SOCIAL_TELEGRAM="https://t.me/sedaprotocol"
