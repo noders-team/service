@@ -51,6 +51,11 @@ make build
 sudo cp $HOME/cometbft/build/cometbft /usr/local/bin/
 ```
 
+## Set custom configs server
+```js
+export NAMADA_NETWORK_CONFIGS_SERVER="https://github.com/anoma/namada-mainnet-genesis/releases/download/mainnet-genesis"
+```
+
 ## Join-network as Full Nodes or Post-Genesis Validator
 ```js
 namadac utils join-network --chain-id namada.5f5de2dd1b88cba30586420

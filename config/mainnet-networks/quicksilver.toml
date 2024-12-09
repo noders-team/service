@@ -22,7 +22,7 @@ DAEMON_HOME="~/.quicksilverd"
 ENDPOINT_RPC="https://quicksilver-rpc.noders.services"
 ENDPOINT_API="https://quicksilver-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://quicksilver-grpc.noders.services:16090"
+ENDPOINT_GRPC="http://quicksilver-grpc.noders.services:11190"
 ENDPOINT_PEER="auto"
 
 # Social
