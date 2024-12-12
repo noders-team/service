@@ -40,7 +40,6 @@ VALIDATOR_LINK="https://bartio.station.berachain.com/validators/0x7d0f205f4a7F10
 # Updates
 UPDATE_MAIN=true
 UPDATE_CATEGORY=true
-UPDATE_INSTALL=true
 UPDATE_UPGRADE=true
 UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true
