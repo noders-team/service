@@ -1,7 +1,7 @@
 # Blockchain
 CHAIN_NAME="Berachain"
 CHAIN_SYSTEM_NAME="berachain"
-CHAIN_ID="auto"
+CHAIN_ID="bartio-beacon-80084"
 VERSION="auto"
 CHAIN_DESCRIPTION=""" # Berachain
 
