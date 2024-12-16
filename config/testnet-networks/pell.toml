@@ -40,7 +40,7 @@ VALIDATOR_LINK="https://testnet.pell.explorers.guru/validator/pellvaloper1qkvwaa
 # Updates
 UPDATE_MAIN=true
 UPDATE_CATEGORY=true
-UPDATE_INSTALL=false
+UPDATE_INSTALL=true
 UPDATE_UPGRADE=true
 UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true
