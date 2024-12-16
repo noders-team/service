@@ -363,3 +363,7 @@ code .variable {
 .icon-sunrise {
     background-image: url('../../static/img/sunrise-icon.svg');
 }
+
+.icon-pell {
+    background-image: url('../../static/img/pell-icon.svg');
+}
