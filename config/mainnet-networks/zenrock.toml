@@ -1,0 +1,48 @@
+# Blockchain
+CHAIN_NAME="Zenrock"
+CHAIN_SYSTEM_NAME="zenrock"
+CHAIN_ID="auto"
+VERSION="auto"
+CHAIN_DESCRIPTION="""# Zenrock
+
+Zenrock enables decentralized key management for builders of cross-chain protocols and wallets to unlock omnichain security.
+
+"""
+[CHAIN_DESCRIPTION_END]
+
+CHAIN_DENOM="urock"
+CHAIN_FEES="3000"
+
+# Binary
+DAEMON_NAME="zenrockd"
+DAEMON_SERVICE="zenrock.service"
+DAEMON_HOME="~/.zrchain"
+
+# Endpoints
+ENDPOINT_RPC="https://zenrock-rpc.noders.services"
+ENDPOINT_API="https://zenrock-api.noders.services"
+ENDPOINT_JRPC=""
+ENDPOINT_GRPC="http://zenrock-grpc.noders.services:49590"
+ENDPOINT_PEER="auto"
+
+# Social
+SOCIAL_WEBSITE="https://www.zenrocklabs.io"
+SOCIAL_GITHUB="https://github.com/Zenrock-Foundation/zrchain"
+SOCIAL_DISCORD="https://discord.com/invite/zenrockfoundation"
+SOCIAL_X="https://x.com/OfficialZenrock"
+SOCIAL_TELEGRAM="https://t.me/officialZenrock"
+
+# Other
+DOWNLOAD_URL="https://config.noders.services/zenrock"
+GITHUB_FOLDER_NAME="auto"
+VALIDATOR_LINK=""
+
+# Updates
+UPDATE_MAIN=true
+UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
+UPDATE_UPGRADE=true
+UPDATE_SNAPSHOT=true
+UPDATE_STATESYNC=true
+UPDATE_LIVE_PEERS=true
+UPDATE_CLI_CHEATSHEET=true

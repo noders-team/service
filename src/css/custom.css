@@ -367,3 +367,7 @@ code .variable {
 .icon-pell {
     background-image: url('../../static/img/pell-icon.svg');
 }
+
+.icon-zenrock {
+    background-image: url('../../static/img/zenrock-icon.svg');
+}
