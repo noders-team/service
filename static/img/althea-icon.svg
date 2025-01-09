@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="0 0 50 51" version="1.1">
+<defs>
+<clipPath id="clip1">
+  <path d="M 0 0 L 50 0 L 50 50.269531 L 0 50.269531 Z M 0 0 "/>
+</clipPath>
+<linearGradient id="linear0" gradientUnits="userSpaceOnUse" x1="24.9953" y1="0.276821" x2="24.9953" y2="50.2674" >
+<stop offset="0" style="stop-color:rgb(100%,100%,100%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(0%,46.666667%,100%);stop-opacity:1;"/>
+</linearGradient>
+<filter id="alpha" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%">
+  <feColorMatrix type="matrix" in="SourceGraphic" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+</filter>
+<mask id="mask0">
+  <g filter="url(#alpha)">
+<rect x="0" y="0" width="50" height="51" style="fill:rgb(0%,0%,0%);fill-opacity:0.501961;stroke:none;"/>
+  </g>
+</mask>
+<clipPath id="clip2">
+  <rect x="0" y="0" width="50" height="51"/>
+</clipPath>
+<g id="surface5" clip-path="url(#clip2)">
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,46.666667%,100%);fill-opacity:1;" d="M 25.007812 50.019531 C 38.820312 50.019531 50.019531 38.820312 50.019531 25.007812 C 50.019531 11.195312 38.820312 0 25.007812 0 C 11.195312 0 0 11.195312 0 25.007812 C 0 38.820312 11.195312 50.019531 25.007812 50.019531 Z M 25.007812 50.019531 "/>
+</g>
+<clipPath id="clip3">
+  <path d="M 0 0 L 50 0 L 50 50.269531 L 0 50.269531 Z M 0 0 "/>
+</clipPath>
+<mask id="mask1">
+  <g filter="url(#alpha)">
+<rect x="0" y="0" width="50" height="51" style="fill:rgb(0%,0%,0%);fill-opacity:0.25098;stroke:none;"/>
+  </g>
+</mask>
+<linearGradient id="linear1" gradientUnits="userSpaceOnUse" x1="24.883" y1="29.4735" x2="19.6943" y2="27.3593" >
+<stop offset="0" style="stop-color:rgb(100%,100%,100%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(0%,46.666667%,100%);stop-opacity:1;"/>
+</linearGradient>
+<clipPath id="clip4">
+  <rect x="0" y="0" width="50" height="51"/>
+</clipPath>
+<g id="surface8" clip-path="url(#clip4)">
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear1);" d="M 17.285156 30.144531 L 18.875 26.292969 L 26.140625 26.234375 L 26.101562 30.164062 Z M 17.285156 30.144531 "/>
+</g>
+<mask id="mask2">
+  <g filter="url(#alpha)">
+<rect x="0" y="0" width="50" height="51" style="fill:rgb(0%,0%,0%);fill-opacity:0.25098;stroke:none;"/>
+  </g>
+</mask>
+<linearGradient id="linear2" gradientUnits="userSpaceOnUse" x1="32.9244" y1="15.3785" x2="26.0576" y2="12.5798" >
+<stop offset="0" style="stop-color:rgb(100%,100%,100%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(0%,46.666667%,100%);stop-opacity:1;"/>
+</linearGradient>
+<clipPath id="clip5">
+  <rect x="0" y="0" width="50" height="51"/>
+</clipPath>
+<g id="surface11" clip-path="url(#clip5)">
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear2);" d="M 25.144531 10.824219 L 27.347656 5.34375 L 33.117188 19.8125 L 29.398438 21.75 Z M 25.144531 10.824219 "/>
+</g>
+</defs>
+<g id="surface1">
+<g clip-path="url(#clip1)" clip-rule="nonzero">
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear0);" d="M 24.992188 50.269531 C 38.792969 50.269531 49.980469 39.082031 49.980469 25.28125 C 49.980469 11.476562 38.792969 0.289062 24.992188 0.289062 C 11.1875 0.289062 0 11.476562 0 25.28125 C 0 39.082031 11.1875 50.269531 24.992188 50.269531 Z M 24.992188 50.269531 "/>
+<use xlink:href="#surface5" mask="url(#mask0)"/>
+</g>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 36.238281 38.84375 L 40.703125 38.84375 L 31.199219 15.058594 C 31.199219 15.039062 31.179688 15.023438 31.179688 15.003906 L 27.347656 5.363281 L 27.347656 5.34375 L 22.878906 5.34375 L 9.292969 38.84375 L 13.757812 38.84375 L 17.304688 30.140625 L 26.523438 30.140625 C 27.59375 30.140625 28.476562 29.261719 28.476562 28.226562 C 28.476562 27.152344 27.59375 26.269531 26.523438 26.269531 L 18.894531 26.269531 L 25.160156 10.804688 "/>
+<g clip-path="url(#clip3)" clip-rule="nonzero">
+<use xlink:href="#surface8" mask="url(#mask1)"/>
+<use xlink:href="#surface11" mask="url(#mask2)"/>
+</g>
+</g>
+</svg>

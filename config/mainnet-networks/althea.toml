@@ -1,0 +1,45 @@
+# Blockchain
+CHAIN_NAME="Althea"
+CHAIN_SYSTEM_NAME="althea"
+CHAIN_ID="auto"
+VERSION="auto"
+CHAIN_DESCRIPTION="""# Althea L1 is a high-availability Hybrid EVM blockchain purpose-built for networked infrastructure and connectivity.
+"""
+[CHAIN_DESCRIPTION_END]
+
+CHAIN_DENOM="aalthea"
+CHAIN_FEES="30000000"
+
+# Binary
+DAEMON_NAME="althea"
+DAEMON_SERVICE="althea.service"
+DAEMON_HOME="~/.althea"
+
+# Endpoints
+ENDPOINT_RPC="https://althea-rpc.noders.services"
+ENDPOINT_API="https://althea-api.noders.services"
+ENDPOINT_JRPC=""
+ENDPOINT_GRPC="http://althea-grpc.noders.services:12490"
+ENDPOINT_PEER="auto"
+
+# Social
+SOCIAL_WEBSITE="https://www.althea.net/"
+SOCIAL_GITHUB="https://github.com/althea-net/althea-chain"
+SOCIAL_DISCORD="https://discord.gg/hHx7HxcycF"
+SOCIAL_X="https://twitter.com/AltheaNetwork"
+SOCIAL_TELEGRAM=""
+
+# Other
+DOWNLOAD_URL="https://config.noders.services/althea"
+GITHUB_FOLDER_NAME="auto"
+VALIDATOR_LINK=""
+
+# Updates
+UPDATE_MAIN=true
+UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
+UPDATE_UPGRADE=true
+UPDATE_SNAPSHOT=true
+UPDATE_STATESYNC=true
+UPDATE_LIVE_PEERS=true
+UPDATE_CLI_CHEATSHEET=true
