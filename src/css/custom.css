@@ -379,3 +379,7 @@ code .variable {
 .icon-atomone {
     background-image: url('../../static/img/atomone-icon.svg');
 }
+
+.icon-babylon {
+    background-image: url('../../static/img/babylon-icon.svg');
+}
