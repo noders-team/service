@@ -1,0 +1,48 @@
+# Blockchain
+CHAIN_NAME="XRPL EVM"
+CHAIN_SYSTEM_NAME="xrpl"
+CHAIN_ID="auto"
+VERSION="auto"
+CHAIN_DESCRIPTION=""" # XRPL EVM
+
+Sidechain is a fast and secure sidechain connected to XRP Ledger via an Axelar bridge. Powered by eXRP as its native token, it offers low-cost transactions and impressive speed.
+
+"""
+[CHAIN_DESCRIPTION_END]
+
+CHAIN_DENOM="apoa"
+CHAIN_FEES="3000000"
+
+# Binary
+DAEMON_NAME="exrpd"
+DAEMON_SERVICE="xrp.service"
+DAEMON_HOME="~/.exrpd"
+
+# Endpoints
+ENDPOINT_RPC="https://xrp-t-rpc.noders.services"
+ENDPOINT_API="https://xrp-t-api.noders.services"
+ENDPOINT_JRPC=""
+ENDPOINT_GRPC="http://xrp-t-grpc.noders.services"
+ENDPOINT_PEER="auto"
+
+# Social
+SOCIAL_WEBSITE="https://xrplevm.org/"
+SOCIAL_GITHUB="https://github.com/xrplevm/node"
+SOCIAL_DISCORD="https://discord.gg/xrplevm"
+SOCIAL_X=""
+SOCIAL_TELEGRAM=""
+
+# Other
+DOWNLOAD_URL="https://config-t.noders.services/xrp"
+GITHUB_FOLDER_NAME="auto"
+VALIDATOR_LINK=""
+
+# Updates
+UPDATE_MAIN=true
+UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
+UPDATE_UPGRADE=true
+UPDATE_SNAPSHOT=true
+UPDATE_STATESYNC=true
+UPDATE_LIVE_PEERS=true
+UPDATE_CLI_CHEATSHEET=true
