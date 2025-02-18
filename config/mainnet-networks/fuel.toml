@@ -1,0 +1,48 @@
+# Blockchain
+CHAIN_NAME="Fuel"
+CHAIN_SYSTEM_NAME="fuel"
+CHAIN_ID="auto"
+VERSION="auto"
+CHAIN_DESCRIPTION="""# Andromeda Protocol: Unveiling the aOS
+
+Fuel addresses a creeping centralization infecting the blockchain ecosystem, igniting a high-throughput architecture built for mass adoption, retaining low node requirements.
+
+"""
+[CHAIN_DESCRIPTION_END]
+
+CHAIN_DENOM="fuel"
+CHAIN_FEES="10"
+
+# Binary
+DAEMON_NAME="fuelsequencerd"
+DAEMON_SERVICE="fuel.service"
+DAEMON_HOME="~/.fuelsequencer"
+
+# Endpoints
+ENDPOINT_RPC="https://fuel-rpc.noders.services"
+ENDPOINT_API="https://fuel-api.noders.services"
+ENDPOINT_JRPC=""
+ENDPOINT_GRPC="https://fuel-grpc.noders.services"
+ENDPOINT_PEER="auto"
+
+# Social
+SOCIAL_WEBSITE="https://fuel.network/"
+SOCIAL_GITHUB="https://github.com/FuelLabs"
+SOCIAL_DISCORD="https://discord.com/invite/xfpK4Pe"
+SOCIAL_X="https://x.com/fuel_network"
+SOCIAL_TELEGRAM=""
+
+# Other
+DOWNLOAD_URL="https://config.noders.services/fuel"
+GITHUB_FOLDER_NAME="auto"
+VALIDATOR_LINK=""
+
+# Updates
+UPDATE_MAIN=true
+UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
+UPDATE_UPGRADE=true
+UPDATE_SNAPSHOT=true
+UPDATE_STATESYNC=true
+UPDATE_LIVE_PEERS=true
+UPDATE_CLI_CHEATSHEET=true

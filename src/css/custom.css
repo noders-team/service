@@ -387,3 +387,7 @@ code .variable {
 .icon-xrp {
     background-image: url('../../static/img/xrp-icon.svg');
 }
+
+.icon-fuel {
+    background-image: url('../../static/img/fuel-icon.svg');
+}
