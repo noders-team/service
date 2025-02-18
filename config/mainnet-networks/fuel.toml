@@ -35,7 +35,7 @@ SOCIAL_TELEGRAM=""
 # Other
 DOWNLOAD_URL="https://config.noders.services/fuel"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK=""
+VALIDATOR_LINK="https://mainnet.itrocket.net/fuel/staking/fuelsequencervaloper1hhzm5ud6a026lj84axxa98w258cgfxgkp6jr8l"
 
 # Updates
 UPDATE_MAIN=true
