@@ -19,7 +19,7 @@ e2eeb94a734de5d4cdca408ffb3ef675183105d5@65.109.83.40:29856,e5abfa9c78479a1ea35f
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=e5abfa9c78479a1ea35f54d7bfb1a25921b6f387@65.109.84.33:20056,1027bd6727dd50c4878594b7018396ec5a4cf1cf@195.201.197.246:31656,8e7dc1bc3c9dc2106e077e6bbd48f3790dd5c934@144.91.115.146:26656,adb5e004b95e6db7041e68af878cf8b8bada0ec3@141.94.143.203:55156,839bc9d8aea9a187b59df6f8e42a16f8e6d875a1@65.21.47.120:34656
+PEERS=582dbc3df1128a55a3ced347a6ad7e57d42e3d8c@136.243.13.36:17656,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@213.239.207.162:13656,a2b214a62451175b7e2017f6658a5859f9675255@43.157.124.149:26656,e8838b99dabdbc60d776b359f9929ecbaf7ba82f@65.109.93.58:20056,bed4fb66aa7badfc224dd6ccc4a3cc0ab214cd7d@74.220.23.137:26656
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.axoned/config/config.toml
 
 sudo systemctl restart axoned

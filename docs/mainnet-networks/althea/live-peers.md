@@ -19,7 +19,7 @@ Here is a list of 51 active peers as observed by [NODERS]TEAM in real-time. Add 
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=db983429b98c718b05a59c682222fb03266f4e58@65.108.126.147:14656,a6a562800a082d60f0f715798c28879b9091547b@168.119.38.90:13656,d37c0e3524e1cd30cc4d0b273babf9d5a68cf2f4@95.216.12.106:17886,305a1a022c0ee14519c320ae57496c30484bf9fb@138.201.84.237:21156,351aeca3e81ee22440485e6dc563ce44dd52e6d9@168.119.139.86:37656
+PEERS=eef0f916a13bd9652d1366c5cba7314bd961c76b@64.23.250.129:26656,2dccae872c5509615f6a57bba8a110b85c082feb@65.109.115.172:12456,fb604d40f49cc1f2fb97cfa0baa026b40fb1284c@37.150.245.31:32656,a6a562800a082d60f0f715798c28879b9091547b@168.119.38.90:13656,54ab55ca3c527c26abd208ec53cbaceb0fd14799@168.119.226.107:43556
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.althea/config/config.toml
 
 sudo systemctl restart althea
