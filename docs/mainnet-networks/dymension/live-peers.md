@@ -19,7 +19,7 @@ Here is a list of 139 active peers as observed by [NODERS]TEAM in real-time. Add
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=4492e0316b76ff1531eeb8ed51df1750cd5f8c1e@212.47.253.23:26656,97e4468ac589eac505a800411c635b14511a61bb@169.155.171.80:26656,471518432477e31ea348af246c0b54095d41352c@134.65.194.244:26656,79a7e14e2f495ccaad6058efd5a106b6661503a3@65.108.106.131:47656,12ae8ea8de41896372693d841f42d4850c46bd7e@195.201.218.47:26656
+PEERS=3b3f21e70f2d3932436db01af6b5631b06e635b4@2001:26656,34b1fcfccb0aa913878d86a217a446432e266d92@116.203.208.227:20556,3caaa5d7cfc005b6e13f51a77cf230117b84c30e@5.10.19.57:26656,89757803f40da51678451735445ad40d5b15e059@164.152.160.44:26656,0b86c45137b65941c2e780fb30f3122396f1ff1e@195.201.106.166:20556
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.dymension/config/config.toml
 
 sudo systemctl restart dymd

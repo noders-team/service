@@ -19,7 +19,7 @@ Here is a list of 140 active peers as observed by [NODERS]TEAM in real-time. Add
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=78c3042bac0eab984113d1a65c1e9b1f72f760b9@212.95.53.129:26656,8c20d5d59287f2c28692cd39596abedb027aeec4@135.181.92.165:26656,0e4dabd06828145d5748f9bbc22860eafac8321e@65.109.86.210:26656,8d62dfa437917bff46c18b650fab3cb7091554db@141.94.73.39:38656,140c455023c31ef06ac62969d9e04cdbd10cfb36@135.125.238.99:56656
+PEERS=c1c0cd0f32b0eaa10658cbc0fb564019800c779a@65.21.196.181:26656,71f2451869d7363ce5d91366143de63069641303@65.108.71.166:33656,9a585cfe4f426743a76fe2834d97f32463c464c1@141.94.207.148:56656,6628c6d16123cab2014bf97aa9fb5c0ab674183e@51.222.143.109:56656,929074edf1398938bb8c25fdf2d64ee21981d082@167.71.222.100:26656
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.osmosisd/config/config.toml
 
 sudo systemctl restart osmosisd

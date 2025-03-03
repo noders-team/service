@@ -19,7 +19,7 @@ Here is a list of 51 active peers as observed by [NODERS]TEAM in real-time. Add 
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=e3cc067e9d837d2a84ef171cdce1d6a83818d51f@15.204.96.26:36656,60a1b4f4fe0fc0dbd84e65999c24d56ec3f7d172@2a01:24656,1b920199be5b1d8f7e9fd8118f41c71b5dd4cf0a@195.3.223.78:55656,9acdc6977fe1f8fdaacc46bcc13a72371f24b437@65.108.71.92:55926,86a22aef01672e8f255bb06c945b44b2484097cf@2a01:14056
+PEERS=4275998a16f8f84a796b31ed285a7109eb54baa6@65.109.84.33:22856,709ae59c5e9098aeacf333e1ccbaf2827e07fd8d@65.109.23.114:22856,42f150b90e872064cb9aaf9ce34f6fe1adf11b6b@89.58.19.231:26756,4daa32def4f99706f5e621250096be65af1ccdf3@2a01:22856,12d1156d37b3e02f79c85ad6fe5bf97903001324@144.76.112.58:13656
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.arkeo/config/config.toml
 
 sudo systemctl restart arkeod
