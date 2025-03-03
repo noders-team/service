@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-stratos">
 # Node Snapshot
 </div>
-###### Chain ID: `stratos-1` | Current Node Version: `v0.12.0`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ## Our Stratos Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 1.69 GB | Thu, 07 Nov 2024 06:20:35 GMT |
+|  GB |  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

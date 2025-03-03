@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-side">
 # State sync
 </div>
-###### Chain ID: `sidechain-testnet-4` | Current Node Version: `v0.9.4`
+###### Chain ID: `sidechain-testnet-4` | Current Node Version: `v0.9.5`
 
 ```bash
 SNAP_RPC=https://side-t-rpc.noders.services:443 && \

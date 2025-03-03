@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-galactica">
 # Upgrade
 </div>
-###### Chain ID: `galactica_9302-1` | Current Node Version: `v0.2.4`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 # With Cosmovisor
 ## Clone Galactica repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf networks
 git clone https://github.com/Galactica-corp/networks.git
 cd networks
-git checkout v0.2.4
+git checkout auto
  ```
 
 ## Build binaries
@@ -26,8 +26,8 @@ make build
 
 ## Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.galactica/cosmovisor/upgrades/v0.2.4/bin
-mv build/galacticad ~/.galactica/cosmovisor/upgrades/v0.2.4/bin/
+mkdir -p ~/.galactica/cosmovisor/upgrades/auto/bin
+mv build/galacticad ~/.galactica/cosmovisor/upgrades/auto/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf networks
 git clone https://github.com/Galactica-corp/networks.git
 cd networks
-git checkout v0.2.4
+git checkout auto
  ```
 
 ## Build binaries

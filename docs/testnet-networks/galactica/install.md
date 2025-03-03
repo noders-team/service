@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-galactica">
 # Installation
 </div>
-###### Chain ID: `galactica_9302-1` | Current Node Version: `v0.2.4`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Galactica repo and build galacticad v0.2.4
+### Clone Galactica repo and build galacticad auto
 ```js
 cd $HOME
 git clone https://github.com/Galactica-corp/networks.git
 cd networks
-git checkout v0.2.4
+git checkout auto
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.galactica/cosmovisor/upgrades/v0.2.4/bin
-mv $HOME/go/bin/galacticad ~/.galactica/cosmovisor/upgrades/v0.2.4/bin/
+mkdir -p ~/.galactica/cosmovisor/upgrades/auto/bin
+mv $HOME/go/bin/galacticad ~/.galactica/cosmovisor/upgrades/auto/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Galactica repo and build galacticad v0.2.4
+### Clone Galactica repo and build galacticad auto
 ```js
 cd $HOME
 git clone https://github.com/Galactica-corp/networks.git
 cd networks
-git checkout v0.2.4
+git checkout auto
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable galacticad
 ## Node configuration
 ### Set config
 ```js
-galacticad config chain-id galactica_9302-1
+galacticad config chain-id auto
 galacticad config keyring-backend os
 galacticad config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-galacticad init NAME_OF_YOUR_VALIDATOR --chain-id galactica_9302-1
+galacticad init NAME_OF_YOUR_VALIDATOR --chain-id auto
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config-t.noders.services/galactica/addrbook.json -o ~/.galactica/co
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"e8e9b99df78bae2bf6c41a3006f6f3568230649b@galactica-t-rpc.noders.services:27456\"/" ~/.galactica/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@galactica-t-rpc.noders.services:\"/" ~/.galactica/config/config.toml
 ```
 
 ### Set minimum gas price

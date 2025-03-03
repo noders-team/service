@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-zetachain">
 # Zetachain
 </div>
-###### Chain ID: `athens_7001-1` | Current Node Version: `v22.0.0`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 
 ZetaChain aims to revolutionize the blockchain landscape by offering a truly interoperable platform that connects disparate blockchain networks, enabling seamless communication and transactions across different ecosystems. As a multi-chain protocol, ZetaChain facilitates the transfer of data and value between all blockchains, whether they are public, private, or consortium, without requiring intermediaries. This open infrastructure supports smart contracts, allowing developers to build applications that can interact with any blockchain from a single platform. ZetaChain's innovative approach not only enhances efficiency and scalability but also opens up new possibilities for decentralized applications, fostering a more integrated and collaborative blockchain environment.
@@ -48,5 +48,5 @@ Official links of social networks of projects
     <SmallCard to="https://zetachain-t-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
     <SmallCard to="https://zetachain-t-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     <SmallCard to="https://zetachain-t-jsonrpc.noders.services" header={{label: "json-RPC Endpoint", translateId: "jrpc-endpoint"}}/>
-    <SmallCard to="zetachain-t-grpc.noders.services:17090" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="http://zetachain-t-grpc.noders.services:17090" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
 </CardLayout>

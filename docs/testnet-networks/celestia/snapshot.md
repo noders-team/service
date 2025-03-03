@@ -7,13 +7,13 @@ sidebar_position: 3
 <div class="h1-with-icon icon-celestia">
 # Node Snapshot
 </div>
-###### Chain ID: `mocha-4` | Current Node Version: `v2.1.2`
+###### Chain ID: `mocha-4` | Current Node Version: `v3.2.0`
 
 ## Our Celestia Snapshot Server Setup
 
 | Size   | Timestamp    |
 |--------|--------------|
-| 1.12 GB | Thu, 07 Nov 2024 06:58:19 GMT  |
+|  GB |   |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

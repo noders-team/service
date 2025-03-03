@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-humans">
 # Installation
 </div>
-###### Chain ID: `humans_1089-1` | Current Node Version: `v1.0.0`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Humans repo and build humansd v1.0.0
+### Clone Humans repo and build humansd auto
 ```js
 cd $HOME
 git clone https://github.com/humansdotai.git
 cd humansdotai
-git checkout v1.0.0
+git checkout auto
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.humansd/cosmovisor/upgrades/v1.0.0/bin
-mv $HOME/go/bin/humansd ~/.humansd/cosmovisor/upgrades/v1.0.0/bin/
+mkdir -p ~/.humansd/cosmovisor/upgrades/auto/bin
+mv $HOME/go/bin/humansd ~/.humansd/cosmovisor/upgrades/auto/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Humans repo and build humansd v1.0.0
+### Clone Humans repo and build humansd auto
 ```js
 cd $HOME
 git clone https://github.com/humansdotai.git
 cd humansdotai
-git checkout v1.0.0
+git checkout auto
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable humansd
 ## Node configuration
 ### Set config
 ```js
-humansd config chain-id humans_1089-1
+humansd config chain-id auto
 humansd config keyring-backend os
 humansd config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-humansd init NAME_OF_YOUR_VALIDATOR --chain-id humans_1089-1
+humansd init NAME_OF_YOUR_VALIDATOR --chain-id auto
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config.noders.services/humans/addrbook.json -o ~/.humansd/config/ad
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"284fa3bdcdfd0d5aba7047db88f26d7a8ef38ed7@humans-rpc.noders.services:21656\"/" ~/.humansd/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@humans-rpc.noders.services:\"/" ~/.humansd/config/config.toml
 ```
 
 ### Set minimum gas price

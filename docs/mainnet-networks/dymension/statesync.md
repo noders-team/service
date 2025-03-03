@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-dymension">
 # State sync
 </div>
-###### Chain ID: `dymension_1100-1` | Current Node Version: `v3.1.0`
+###### Chain ID: `dymension_1100-1` | Current Node Version: `v3.2.0`
 
 ```bash
 SNAP_RPC=https://dymension-rpc.noders.services:443 && \

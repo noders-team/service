@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-jackal">
 # Jackal
 </div>
-###### Chain ID: `lupulella-2` | Current Node Version: `canary-17-gb6ed8056`
+###### Chain ID: `auto` | Current Node Version: `canary-17-gb6ed8056`
 
 
 Jackal Protocol introduces a decentralized file storage solution, enhancing security, efficiency, and cost-effectiveness. It emphasizes privacy, data sovereignty, and global access, decentralizing storage across numerous nodes for enhanced security and redundancy. Features include advanced encryption for privacy, reduced costs by utilizing unused storage space, scalability, and interoperability with various blockchain networks. Jackal Protocol supports a wide range of applications, including secure data backup, decentralized web hosting, and content delivery, marking a significant shift towards a more secure, user-controlled internet.

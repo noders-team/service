@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-uptick">
 # Uptick
 </div>
-###### Chain ID: `uptick_117-1` | Current Node Version: `v0.2.19`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 
 The Uptick Project leverages blockchain to transform digital collectibles and NFTs, offering a secure and transparent platform for artists, creators, and collectors. Key features include a comprehensive NFT marketplace, intuitive creator tools for minting NFTs, decentralized operations for enhanced security, cross-chain functionality for broad accessibility, and a strong focus on community engagement through social features and collaboration tools. Uptick is redefining digital ownership and creativity, bridging diverse blockchain networks to enrich the digital art, gaming, and entertainment sectors.

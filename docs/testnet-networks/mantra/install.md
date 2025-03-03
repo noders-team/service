@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-mantra">
 # Installation
 </div>
-###### Chain ID: `mantra-hongbai-1` | Current Node Version: `v3.0.0`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Mantra repo and build mantrachaind v3.0.0
+### Clone Mantra repo and build mantrachaind auto
 ```js
 cd $HOME
 git clone https://github.com/MANTRA-Finance/public.git
 cd public
-git checkout v3.0.0
+git checkout auto
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.mantrachaind/cosmovisor/upgrades/v3.0.0/bin
-mv $HOME/go/bin/mantrachaind ~/.mantrachaind/cosmovisor/upgrades/v3.0.0/bin/
+mkdir -p ~/.mantrachaind/cosmovisor/upgrades/auto/bin
+mv $HOME/go/bin/mantrachaind ~/.mantrachaind/cosmovisor/upgrades/auto/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Mantra repo and build mantrachaind v3.0.0
+### Clone Mantra repo and build mantrachaind auto
 ```js
 cd $HOME
 git clone https://github.com/MANTRA-Finance/public.git
 cd public
-git checkout v3.0.0
+git checkout auto
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable mantrachaind
 ## Node configuration
 ### Set config
 ```js
-mantrachaind config chain-id mantra-hongbai-1
+mantrachaind config chain-id auto
 mantrachaind config keyring-backend os
 mantrachaind config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-mantrachaind init NAME_OF_YOUR_VALIDATOR --chain-id mantra-hongbai-1
+mantrachaind init NAME_OF_YOUR_VALIDATOR --chain-id auto
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config-t.noders.services/mantra/addrbook.json -o ~/.mantrachaind/co
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"8ac264aa8af65b4363f98fcab3fbc58c81b2ca90@mantra-t-rpc.noders.services:30656\"/" ~/.mantrachaind/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@mantra-t-rpc.noders.services:\"/" ~/.mantrachaind/config/config.toml
 ```
 
 ### Set minimum gas price

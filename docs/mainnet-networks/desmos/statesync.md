@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop desmos && desmos tendermint unsafe-reset-all --home ~/.desmos --keep-addr-book
 ```
 ```bash
-peers="7c4620e42e2d2a7ad2bdbe00511b66995235ee6a@desmos-rpc.noders.services:27656"
+peers="d39816957bb0c94cc21bbf1ed2965f0d53661496@desmos-rpc.noders.services:16256"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.desmos/config/config.toml
 ```
 ```bash

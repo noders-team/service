@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-pylons">
 # Node Snapshot
 </div>
-###### Chain ID: `pylons-mainnet-1` | Current Node Version: `v1.1.4`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ## Our Pylons Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 1.05 GB | Thu, 07 Nov 2024 06:06:30 GMT |
+|  GB |  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

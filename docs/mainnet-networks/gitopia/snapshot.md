@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-gitopia">
 # Node Snapshot
 </div>
-###### Chain ID: `gitopia` | Current Node Version: `v4.0.0`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ## Our Gitopia Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 2.53 GB | Thu, 07 Nov 2024 06:21:59 GMT |
+|  GB |  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

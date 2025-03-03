@@ -7,19 +7,19 @@ sidebar_position: 6
 <div class="h1-with-icon icon-humans">
 # Live Peers
 </div>
-###### Chain ID: `humans_1089-1` | Current Node Version: `v1.0.0`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ## All Live Peers for Humans
-Here is a list of 28 active peers as observed by [NODERS]TEAM in real-time. Add them to your `config.toml` if you have trouble finding peers.
+Here is a list of 1 active peers as observed by [NODERS]TEAM in real-time. Add them to your `config.toml` if you have trouble finding peers.
 
 ```bash
-b2e6a64c646b60e3097082f32b942ee7247893c5@65.109.115.172:18456,d70c9343af28023a78aceb653e885666c12fec3b@138.201.121.185:26687,2f8a0bf63e23606dc85bdd11afbf34e68a9f3b74@46.38.232.86:40656,94a589700c3cdff4a3d74c57bfd5721dbcbcdf8c@148.251.235.130:12656,60aa6df96d45ffd74c45d15f7f5670f0009ca670@65.108.71.137:18456,2c794ee1f17095cb10773e8b0dc2f63a16d7ec37@157.143.106.66:33656,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:12256,f9344349e8435362bc7f21f67b9b61d2f1d6891b@152.32.174.173:26656,48e2576d3542b9362beb4112706f5667c3582078@88.99.140.176:26626,8204f0ddbb462749703a58ad6e4e57c5ea5a3379@193.34.212.99:26656,abd78601b249e56a0d88d8ea361bae8e36cbf804@103.180.28.92:26656,7889ee17b291451155190d40426e6154be4e1abc@135.181.142.60:15608,36dee3bb6e2233203997a21388d7b2888d7ec7ff@51.79.77.103:17656,fd09725dc4c9cc8430ae0a3037bb1ff322b30494@178.23.126.101:31304,93e26a797f0b1740e515187b0f9e02565d48d31c@65.109.112.170:33656,6d25070551f6f623b08fea5f6641c6a143492f61@65.108.236.5:18456,02daf8764bcb476c1091ea1cd85c8012f1f4d85a@94.130.32.7:26656,ca92abdc4599dd91dd63e689c64c468df5425f2c@95.216.100.99:12256,673b08b4c60eef8d0fdd90b42e2c84ae4f5e2b91@169.1.35.42:26656,1d9face4d74f4d65142fa966b8cd4bb6cb4e8a37@148.113.9.36:26656,635d9f546ee7e7ddafaed74177709ab51ef3ac4e@195.179.227.187:31656,d3f0d75b9729bf7321ba44d678bf17075cbf1ca8@5.161.110.13:26656,ebc272824924ea1a27ea3183dd0b9ba713494f83@193.34.212.188:27536,fbfcef080c6c631b03c6bb2832ae608931b1ce41@176.9.125.110:43616,3a54c653cbbaa13e3999051af12108e960995273@176.9.45.69:29056,7484a8e98f614b851e47c52b0b4c0c3d9713290f@65.109.18.169:18456,1d038d7318974ce6fe031161d5ed530c93844089@65.108.234.137:18456,f8006da7d742777eeca0194b94586c8f147be4f6@142.132.253.112:17656
+
 ```
 
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=ca92abdc4599dd91dd63e689c64c468df5425f2c@95.216.100.99:12256,94a589700c3cdff4a3d74c57bfd5721dbcbcdf8c@148.251.235.130:12656,d70c9343af28023a78aceb653e885666c12fec3b@138.201.121.185:26687,36dee3bb6e2233203997a21388d7b2888d7ec7ff@51.79.77.103:17656,f8006da7d742777eeca0194b94586c8f147be4f6@142.132.253.112:17656
+PEERS=
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.humansd/config/config.toml
 
 sudo systemctl restart humansd
@@ -30,5 +30,5 @@ sudo journalctl -fu humansd --no-hostname -o cat
 When you state-sync, you might also consider adding [NODERS]TEAM state-sync peer to your persistent_peers setting in `config.toml`.
 
 ```bash
-284fa3bdcdfd0d5aba7047db88f26d7a8ef38ed7@humans-rpc.noders.services:21656
+@humans-rpc.noders.services:
 ```

@@ -7,13 +7,13 @@ sidebar_position: 3
 <div class="h1-with-icon icon-og">
 # Node Snapshot
 </div>
-###### Chain ID: `zgtendermint_16600-2` | Current Node Version: `v0.4.0`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ## Our ZeroGravity Snapshot Server Setup
 
 | Size   | Timestamp    |
 |--------|--------------|
-| 3.61 GB | Thu, 07 Nov 2024 06:10:49 GMT  |
+|  GB |   |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

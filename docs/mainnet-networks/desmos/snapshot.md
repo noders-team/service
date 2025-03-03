@@ -13,7 +13,7 @@ sidebar_position: 4
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 0.85 GB | Thu, 07 Nov 2024 06:12:00 GMT |
+|  GB |  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -71,7 +71,7 @@ curl -o - -L https://config.noders.services/desmos/data.tar.lz4 | lz4 -d | tar -
 ```
 ### Wasm
 ```bash
-curl -o - -L https://config.noders.services/desmos/wasm.tar.lz4 | lz4 -d | tar -x -C ~/.desmos
+Not supported
 ```
 
 :::warning WARNING

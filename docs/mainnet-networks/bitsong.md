@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-bitsong">
 # BitSong
 </div>
-###### Chain ID: `bitsong-2b` | Current Node Version: `v0.17.0`
+###### Chain ID: `bitsong-2b` | Current Node Version: `v0.21.4`
 
 
 BitSong revolutionizes music streaming with blockchain, offering direct artist compensation, decentralized distribution, tokenization of music assets, fan engagement rewards, and transparent royalties management. It aims to solve industry inefficiencies, enhancing fairness and connection between artists and fans. BitSong opens up new investment opportunities, facilitates crowdfunding, and streamlines music licensing, marking a significant shift towards a more equitable and transparent music ecosystem.

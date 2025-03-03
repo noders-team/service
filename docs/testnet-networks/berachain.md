@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-berachain">
 # Berachain
 </div>
-###### Chain ID: `auto` | Current Node Version: `v0.2.0-alpha.8`
+###### Chain ID: `bartio-beacon-80084` | Current Node Version: `auto`
 
 
 Berachain is a high-performance EVM-compatible blockchain built on Proof-of-Liquidity consensus.
@@ -46,7 +46,7 @@ Official links of social networks of projects
 
 <CardLayout autoFitEnabled={true}>
     <SmallCard to="https://berachain-t-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
-    <SmallCard to="https://berachain-t-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     
-    <SmallCard to="http://berachain-t-grpc.noders.services:16090" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="http://berachain-t-jsonrpc.noders.services:80" header={{label: "json-RPC Endpoint", translateId: "jrpc-endpoint"}}/>
+    
 </CardLayout>

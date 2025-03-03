@@ -47,7 +47,7 @@ arkeod q bank balances $(arkeod keys show KEY -a) --node https://arkeo-t-rpc.nod
 ```js
 arkeod tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uarkeo \
   --chain-id arkeo-testnet-3 \
-  --node https://arkeo-t-rpc.noders.services:443 --fees 3000abgt \
+  --node https://arkeo-t-rpc.noders.services:443 --fees 3000uarkeo \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ arkeod tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uarkeo \
 ```js
 arkeod tx distribution withdraw-all-rewards \
   --chain-id arkeo-testnet-3 \
-  --node https://arkeo-t-rpc.noders.services:443 --fees 3000abgt \
+  --node https://arkeo-t-rpc.noders.services:443 --fees 3000uarkeo \
   --from KEY
 ```
 
@@ -64,39 +64,39 @@ arkeod tx distribution withdraw-all-rewards \
 arkeod tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id arkeo-testnet-3 \
-  --node https://arkeo-t-rpc.noders.services:443 --fees 3000abgt \
+  --node https://arkeo-t-rpc.noders.services:443 --fees 3000uarkeo \
   --from KEY
 ```
 
 ### Delegate tokens to yourself
 ```js
-arkeod tx staking delegate $(arkeod keys show KEY --bech val -a) 1000000abgt \
+arkeod tx staking delegate $(arkeod keys show KEY --bech val -a) 1000000uarkeo \
 --chain-id arkeo-testnet-3 \
---node https://arkeo-t-rpc.noders.services:443 --fees 3000abgt \
+--node https://arkeo-t-rpc.noders.services:443 --fees 3000uarkeo \
 --from KEY
 ```
 
 ### Delegate tokens to validator
 ```js
-arkeod tx staking delegate VALIDATOR_ADDRESS 1000000abgt \
+arkeod tx staking delegate VALIDATOR_ADDRESS 1000000uarkeo \
 --chain-id arkeo-testnet-3 \
---node https://arkeo-t-rpc.noders.services:443 --fees 3000abgt \
+--node https://arkeo-t-rpc.noders.services:443 --fees 3000uarkeo \
 --from KEY
 ```
 
 ### Redelegate tokens to another validator
 ```js
-arkeod tx staking redelegate $(arkeod keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000abgt \
+arkeod tx staking redelegate $(arkeod keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000uarkeo \
   --chain-id arkeo-testnet-3 \
-  --node https://arkeo-t-rpc.noders.services:443 --fees 3000abgt \
+  --node https://arkeo-t-rpc.noders.services:443 --fees 3000uarkeo \
   --from KEY
 ```
 
 ### Unbond tokens from your validator
 ```js
-arkeod tx staking unbond $(arkeod keys show KEY --bech val -a) abgt \
+arkeod tx staking unbond $(arkeod keys show KEY --bech val -a) uarkeo \
   --chain-id andromeda-1 \
-  --node https://arkeo-t-rpc.noders.services:443 --fees 3000abgt \
+  --node https://arkeo-t-rpc.noders.services:443 --fees 3000uarkeo \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ arkeod query gov proposals --node https://arkeo-t-rpc.noders.services:443
 ```js
 arkeod query gov proposal PROPOSAL_NUMBER \
   --chain-id arkeo-testnet-3 \
-  --node https://arkeo-t-rpc.noders.services:443 --fees 3000abgt \
+  --node https://arkeo-t-rpc.noders.services:443 --fees 3000uarkeo \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ arkeod query gov proposal PROPOSAL_NUMBER \
 ```js
 arkeod tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id arkeo-testnet-3 \
-  --node https://arkeo-t-rpc.noders.services:443 --fees 3000abgt \
+  --node https://arkeo-t-rpc.noders.services:443 --fees 3000uarkeo \
   --from KEY
 ```
 
@@ -133,7 +133,7 @@ We use example filed values instead of capitalized dummy words for demo purpose 
 :::
 ```js
 arkeod tx staking create-validator \
-  --amount 1000000abgt \
+  --amount 1000000uarkeo \
   --commission-max-change-rate "0.05" \
   --commission-max-rate "0.10" \
   --commission-rate "0.05" \
@@ -145,7 +145,7 @@ arkeod tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id arkeo-testnet-3 \
-  --node https://arkeo-t-rpc.noders.services:443 --fees 3000abgt \
+  --node https://arkeo-t-rpc.noders.services:443 --fees 3000uarkeo \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ arkeod tx staking edit-validator \
 --chain-id arkeo-testnet-3 \
 --commission-rate 0.05 \
 --from KEY \
---node https://arkeo-t-rpc.noders.services:443 --fees 3000abgt \
+--node https://arkeo-t-rpc.noders.services:443 --fees 3000uarkeo \
 ```
 
 ### Unjail
 ```js
 arkeod tx slashing unjail \
   --chain-id arkeo-testnet-3 \
-  --node https://arkeo-t-rpc.noders.services:443 --fees 3000abgt \
+  --node https://arkeo-t-rpc.noders.services:443 --fees 3000uarkeo \
   --from KEY
 ```
 
@@ -208,7 +208,7 @@ curl -sS https://arkeo-t-rpc.noders.services:443/net_info | jq -r '.result.peers
 
 ### Set minimum gas price
 ```js
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.001abgt\"/" ~/.arkeo/config/app.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.001uarkeo\"/" ~/.arkeo/config/app.toml
 ```
 
 ###Enable prometheus

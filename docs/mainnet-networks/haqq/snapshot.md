@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-haqq">
 # Node Snapshot
 </div>
-###### Chain ID: `haqq_11235-1` | Current Node Version: `v1.8.2`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ## Our Haqq Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 19.66 GB | Thu, 07 Nov 2024 06:18:39 GMT |
+|  GB |  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

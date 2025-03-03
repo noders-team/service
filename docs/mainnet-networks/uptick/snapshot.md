@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-uptick">
 # Node Snapshot
 </div>
-###### Chain ID: `uptick_117-1` | Current Node Version: `v0.2.19`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ## Our Uptick Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 2.66 GB | Thu, 07 Nov 2024 06:23:03 GMT |
+|  GB |  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -71,7 +71,7 @@ curl -o - -L https://config.noders.services/uptick/data.tar.lz4 | lz4 -d | tar -
 ```
 ### Wasm
 ```bash
-curl -o - -L https://config.noders.services/uptick/wasm.tar.lz4 | lz4 -d | tar -x -C ~/.uptickd
+Not supported
 ```
 
 :::warning WARNING

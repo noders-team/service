@@ -13,7 +13,7 @@ sidebar_position: 3
 
 | Size   | Timestamp    |
 |--------|--------------|
-| 0.40 GB | Thu, 07 Nov 2024 06:58:46 GMT  |
+|  GB |   |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -71,7 +71,7 @@ curl -o - -L https://config-t.noders.services/axone/data.tar.lz4 | lz4 -d | tar 
 ```
 ### Wasm
 ```bash
-curl -o - -L https://config-t.noders.services/axone/wasm.tar.lz4 | lz4 -d | tar -x -C ~/.axoned
+Not supported
 ```
 
 :::warning WARNING

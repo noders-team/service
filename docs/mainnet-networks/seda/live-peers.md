@@ -7,19 +7,19 @@ sidebar_position: 6
 <div class="h1-with-icon icon-seda">
 # Live Peers
 </div>
-###### Chain ID: `seda-1` | Current Node Version: `v0.1.1`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ## All Live Peers for Seda
-Here is a list of 30 active peers as observed by [NODERS]TEAM in real-time. Add them to your `config.toml` if you have trouble finding peers.
+Here is a list of 1 active peers as observed by [NODERS]TEAM in real-time. Add them to your `config.toml` if you have trouble finding peers.
 
 ```bash
-9b6d05c97e7ee1d04899402b76608fb76bca7cd9@135.125.74.49:57056,1a00b931ca6ad065ebb59b4047188c35c7247e5e@37.252.186.105:3000,f8846039206179880bdcaf371aa295f44f2af975@95.217.39.34:25856,7b7ea913f30016a16ae082492a1896ed4d3d1bf3@162.55.28.185:10156,f482ca37b63e53c06bb267cbb0f594d9560234bb@88.99.68.249:25856,fc3e716a2f0dad4f0fafb0297faa2c1ea33ffd68@136.243.104.103:12656,4548c6f9d838232e4b2ef69d5ef4dc91d4176d59@65.109.33.166:26656,8d887e7007696439a955e839d786532af746f697@94.130.13.186:25856,d60b25fe2c523893a739b81dca99b2ecf571c8d8@65.108.101.109:25856,a8cc0ef1a8b85317b571cc0b265aaeb3b0960081@185.246.87.73:26656,3a9b2d046e57d9e4194a4a2e552651bc8b732ded@46.4.29.231:3000,d81b682c58bcff94d142db931046234e99f878ca@162.19.169.74:46656,58c919e7b89b8c5b5a3024f5e7cec07d2e3b28d3@78.47.163.48:26656,78d052e44bd44ee4f019825d7bc1271f048e9111@94.130.77.170:26656,32aaa561eb4c2cf54f18b08e14b3c756eee44183@221.148.45.106:28656,513952875094fb4f26f6d26823b8390f626ac582@173.234.17.129:26656,1a87a68c8a03ecbf6d6e65d4ce780d72d5498c0f@65.108.71.137:25856,bbfc5d956a100d154014aeb47844bf8f8b6ca1f3@79.12.25.47:26656,490ad5578e440efc926c92954870b7dd75a22843@213.246.39.138:21656,3f33590cd6536b3b336120df6e642a1801777b10@49.13.127.180:26656,d4b0af2651d980d1a12267b8b936689120f39aef@195.201.10.252:17356,943fb3eb3726143e36e7e36455e3ab28d03d253d@176.9.53.156:26656,ea21689dd3d59a402f2d2a3479ac3c4cec7cc50f@149.50.127.210:26866,09ba537d6563018b97c502979c3478df4decf426@152.53.32.140:6656,f9ad00c49bf013e1f36707d87702073a52875c8b@65.109.18.169:25856,ebc272824924ea1a27ea3183dd0b9ba713494f83@193.34.212.188:26866,63be97b1dd84867fbdc2209765d9e0a553191872@1.55.114.187:26656,813060d74f33914cd5bcc5c0793d3ef177ffce69@176.9.124.173:26656,aa412fa9e8adc9794e26d6eafe4e887864dde595@51.210.223.72:25856,2e9ecccdeff4dc0e5e26cc9adf7ed6f46cc66833@65.108.234.137:25856
+
 ```
 
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=ea21689dd3d59a402f2d2a3479ac3c4cec7cc50f@149.50.127.210:26866,7b7ea913f30016a16ae082492a1896ed4d3d1bf3@162.55.28.185:10156,a8cc0ef1a8b85317b571cc0b265aaeb3b0960081@185.246.87.73:26656,3f33590cd6536b3b336120df6e642a1801777b10@49.13.127.180:26656,d60b25fe2c523893a739b81dca99b2ecf571c8d8@65.108.101.109:25856
+PEERS=
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.sedad/config/config.toml
 
 sudo systemctl restart sedad
@@ -30,5 +30,5 @@ sudo journalctl -fu sedad --no-hostname -o cat
 When you state-sync, you might also consider adding [NODERS]TEAM state-sync peer to your persistent_peers setting in `config.toml`.
 
 ```bash
-c9100af84ba8c9dbeb0c1c49837620bf447bf55c@seda-rpc.noders.services:36656
+@seda-rpc.noders.services:
 ```

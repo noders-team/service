@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-aura">
 # State sync
 </div>
-###### Chain ID: `aura_6322-2` | Current Node Version: `v0.9.3`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ```bash
 SNAP_RPC=https://aura-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop aurad && aurad tendermint unsafe-reset-all --home ~/.aura --keep-addr-book
 ```
 ```bash
-peers="e038fb068587bfe9b67e23df287aabad352577d9@aura-rpc.noders.services:17656"
+peers="@aura-rpc.noders.services:"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.aura/config/config.toml
 ```
 ```bash

@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-sunrise">
 # Upgrade
 </div>
-###### Chain ID: `sunrise-test-0.2` | Current Node Version: `v0.2.3`
+###### Chain ID: `sunrise-test-0.2` | Current Node Version: `v0.2.6`
 
 # With Cosmovisor
 ## Clone Sunrise repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf sunrise
 git clone https://github.com/sunriselayer/sunrise.git
 cd sunrise
-git checkout v0.2.3
+git checkout v0.2.6
  ```
 
 ## Build binaries
@@ -26,8 +26,8 @@ make build
 
 ## Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.sunrise/cosmovisor/upgrades/v0.2.3/bin
-mv build/sunrised ~/.sunrise/cosmovisor/upgrades/v0.2.3/bin/
+mkdir -p ~/.sunrise/cosmovisor/upgrades/v0.2.6/bin
+mv build/sunrised ~/.sunrise/cosmovisor/upgrades/v0.2.6/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf sunrise
 git clone https://github.com/sunriselayer/sunrise.git
 cd sunrise
-git checkout v0.2.3
+git checkout v0.2.6
  ```
 
 ## Build binaries

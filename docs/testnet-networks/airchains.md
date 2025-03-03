@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-airchains">
 # Airchains
 </div>
-###### Chain ID: `junction` | Current Node Version: `v0.1.0`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 
 Airchains is a platform that provides tools for creating modular blockchain solutions. It enables developers to quickly deploy blockchains with integration across various networks, enhancing interoperability and scalability. The platform offers automated deployment processes, chain and bridge management, and supports various protocols and standards. Airchains aims to reduce complexity and accelerate the time to market for blockchain applications. For more detailed information, visit Airchains.
@@ -21,7 +21,7 @@ Official links of social networks of projects
 <CardLayout autoFitEnabled={false}>
     <SmallCard to="https://www.airchains.io/" header={{label: "Website", translateId: "social-telegram"}} iconPath="img/website-icon.svg"/>
     <SmallCard to="https://github.com/airchains-network/junction" header={{label: "GitHub", translateId: "social-telegram"}} iconPath="img/github-icon.svg"/>
-    <SmallCard to="https://discord.gg/airchains" header={{label: "Discord", translateId: "social-telegram"}} iconPath="img/discord-icon.svg"/>
+    <SmallCard to="https://discord.gg/ERmFCQc22b" header={{label: "Discord", translateId: "social-telegram"}} iconPath="img/discord-icon.svg"/>
     <SmallCard to="https://twitter.com/airchains_io" header={{label: "X", translateId: "social-telegram"}} iconPath="img/x-icon.svg"/>
     
 </CardLayout>

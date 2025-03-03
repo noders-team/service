@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-quicksilver">
 # Installation
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `quicksilver-2` | Current Node Version: `v1.7.7`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Quicksilver repo and build quicksilverd auto
+### Clone Quicksilver repo and build quicksilverd v1.7.7
 ```js
 cd $HOME
 git clone https://github.com/quicksilver-zone.git
 cd quicksilver-zone
-git checkout auto
+git checkout v1.7.7
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.quicksilverd/cosmovisor/upgrades/auto/bin
-mv $HOME/go/bin/quicksilverd ~/.quicksilverd/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.quicksilverd/cosmovisor/upgrades/v1.7.7/bin
+mv $HOME/go/bin/quicksilverd ~/.quicksilverd/cosmovisor/upgrades/v1.7.7/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Quicksilver repo and build quicksilverd auto
+### Clone Quicksilver repo and build quicksilverd v1.7.7
 ```js
 cd $HOME
 git clone https://github.com/quicksilver-zone.git
 cd quicksilver-zone
-git checkout auto
+git checkout v1.7.7
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable quicksilverd
 ## Node configuration
 ### Set config
 ```js
-quicksilverd config chain-id auto
+quicksilverd config chain-id quicksilver-2
 quicksilverd config keyring-backend os
 quicksilverd config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-quicksilverd init NAME_OF_YOUR_VALIDATOR --chain-id auto
+quicksilverd init NAME_OF_YOUR_VALIDATOR --chain-id quicksilver-2
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config.noders.services/quicksilver/addrbook.json -o ~/.quicksilverd
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@quicksilver-rpc.noders.services:\"/" ~/.quicksilverd/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"f3ac1f863748202672ff9e34f2e6da92260f537e@quicksilver-rpc.noders.services:11156\"/" ~/.quicksilverd/config/config.toml
 ```
 
 ### Set minimum gas price

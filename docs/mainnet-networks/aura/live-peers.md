@@ -7,19 +7,19 @@ sidebar_position: 6
 <div class="h1-with-icon icon-aura">
 # Live Peers
 </div>
-###### Chain ID: `aura_6322-2` | Current Node Version: `v0.9.3`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ## All Live Peers for Aura
-Here is a list of 32 active peers as observed by [NODERS]TEAM in real-time. Add them to your `config.toml` if you have trouble finding peers.
+Here is a list of 1 active peers as observed by [NODERS]TEAM in real-time. Add them to your `config.toml` if you have trouble finding peers.
 
 ```bash
-7af7246752e0a9af497136eca5791d7dea613565@65.21.45.173:21756,564ca6e5b131c78bf8b8a943a2e150cf7458cda4@65.109.92.241:21056,e7899a228deb03334708aa95a960d5a9d8c33287@65.108.238.166:21756,7a117dd135ae5de17f924301629f66f7d7be4584@202.61.205.133:26656,3e7ef25f1c9829351936884618659167400eb0f1@142.132.149.171:26656,1e7d830fbee8e8cae8ba1aaf7d81dba6b061b05b@49.12.86.120:26676,b4964e4b95a37e71ab84071895940730dee40315@195.201.194.105:46656,690e0fca18e89118f096b48a4d615a4cc56cdddd@186.233.186.146:26656,d1706b956dd016421e701faa488b8a8f0240d02d@13.212.184.74:26656,6256e5cfce22cfeacb6df7ca348baa61f4b53093@57.128.20.163:21756,93d08f3e8fe739185e777681a350ced93ffdf922@5.9.147.138:27656,9dfe443e3eaecb5178b47c2d4aa52a94e394c3fa@95.217.62.174:26656,5e87d03a29ceca5e376e55588d9b099bb5d9524f@136.36.135.157:25656,310d60544edc798f46321411ed2dda6d83a141e9@65.108.141.109:54656,56b00a9e5a30e7323061a1cc1a73890d21ae306a@65.109.18.169:21756,45be5bfbeab490699cb783145a3d50913c630ad9@147.182.247.70:26656,63a90346040657406ddc48a2679e3bfbe17f717a@65.108.195.29:51656,ebc272824924ea1a27ea3183dd0b9ba713494f83@195.3.223.168:26966,4dbab01992059912ed4dd99bea02b9f64ea227b6@66.45.251.114:15756,c37d5dda0a2aa1d475fe00f2f4ece7536a05d50d@148.113.9.127:26656,a998e8db13523309dbee7241679058747a17d37e@212.23.222.175:27656,9048c795cf00f94329867435c2afbe567111b110@35.76.185.2:26656,1ef6e20da7f23c0d9981dc09c421206825dfb3cc@148.113.1.89:26656,ae0baeb831117dc079741a0141c2e5215b3ed055@57.128.22.214:21756,d2ea7c421c8bb552b84eba4c7924f9e78d3a79ae@176.9.158.219:41256,5c719d6c950943a6b0cbe592c9979703bd64f024@65.108.238.219:21756,2c303a2d7fc874beaefccc7fe355e5f8ebfc08cc@144.126.158.225:26656,95da8abac04d76e02ad175f0ed63d8fd89ab2dc6@65.109.97.249:21756,f5161247c9b33c10116d4aac3302a5c059d1e3f1@45.87.104.144:26656,4af61118ac11d04d93da14db768f328721ab0784@135.181.210.171:21056,7885a9e940b45b9a2183488ca3a901b043b6ed67@144.76.40.53:21756,ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@135.181.5.219:21756
+
 ```
 
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=1ef6e20da7f23c0d9981dc09c421206825dfb3cc@148.113.1.89:26656,4dbab01992059912ed4dd99bea02b9f64ea227b6@66.45.251.114:15756,7af7246752e0a9af497136eca5791d7dea613565@65.21.45.173:21756,690e0fca18e89118f096b48a4d615a4cc56cdddd@186.233.186.146:26656,45be5bfbeab490699cb783145a3d50913c630ad9@147.182.247.70:26656
+PEERS=
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.aura/config/config.toml
 
 sudo systemctl restart aurad
@@ -30,5 +30,5 @@ sudo journalctl -fu aurad --no-hostname -o cat
 When you state-sync, you might also consider adding [NODERS]TEAM state-sync peer to your persistent_peers setting in `config.toml`.
 
 ```bash
-e038fb068587bfe9b67e23df287aabad352577d9@aura-rpc.noders.services:17656
+@aura-rpc.noders.services:
 ```

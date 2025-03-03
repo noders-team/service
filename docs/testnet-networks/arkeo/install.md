@@ -158,7 +158,7 @@ sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"ebfc883c33943f24843
 
 ### Set minimum gas price
 ```js
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001abgt\"|" ~/.arkeo/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001uarkeo\"|" ~/.arkeo/config/app.toml
 ```
 ### Set pruning
 ```js

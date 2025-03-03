@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-crossfi">
 # Installation
 </div>
-###### Chain ID: `crossfi-evm-testnet-1` | Current Node Version: `0.3.0-prebuild9`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone CrossFI repo and build crossfid 0.3.0-prebuild9
+### Clone CrossFI repo and build crossfid auto
 ```js
 cd $HOME
 git clone https://github.com/crossfichain.git
 cd crossfichain
-git checkout 0.3.0-prebuild9
+git checkout auto
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.mineplex-chain/cosmovisor/upgrades/0.3.0-prebuild9/bin
-mv $HOME/go/bin/crossfid ~/.mineplex-chain/cosmovisor/upgrades/0.3.0-prebuild9/bin/
+mkdir -p ~/.mineplex-chain/cosmovisor/upgrades/auto/bin
+mv $HOME/go/bin/crossfid ~/.mineplex-chain/cosmovisor/upgrades/auto/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone CrossFI repo and build crossfid 0.3.0-prebuild9
+### Clone CrossFI repo and build crossfid auto
 ```js
 cd $HOME
 git clone https://github.com/crossfichain.git
 cd crossfichain
-git checkout 0.3.0-prebuild9
+git checkout auto
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable crossfid
 ## Node configuration
 ### Set config
 ```js
-crossfid config chain-id crossfi-evm-testnet-1
+crossfid config chain-id auto
 crossfid config keyring-backend os
 crossfid config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-crossfid init NAME_OF_YOUR_VALIDATOR --chain-id crossfi-evm-testnet-1
+crossfid init NAME_OF_YOUR_VALIDATOR --chain-id auto
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config-t.noders.services/crossfi/addrbook.json -o ~/.mineplex-chain
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"de9daabf7d001c44749bca2eab3085d40ef3accb@crossfi-t-rpc.noders.services:12656\"/" ~/.mineplex-chain/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@crossfi-t-rpc.noders.services:\"/" ~/.mineplex-chain/config/config.toml
 ```
 
 ### Set minimum gas price

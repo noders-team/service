@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-story">
 # Node Snapshot
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `odyssey-0` | Current Node Version: `v0.13.0`
 
 ## Our Story Snapshot Server Setup
 

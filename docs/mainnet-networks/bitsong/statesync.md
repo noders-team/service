@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-bitsong">
 # State sync
 </div>
-###### Chain ID: `bitsong-2b` | Current Node Version: `v0.17.0`
+###### Chain ID: `bitsong-2b` | Current Node Version: `v0.21.4`
 
 ```bash
 SNAP_RPC=https://bitsong-rpc.noders.services:443 && \

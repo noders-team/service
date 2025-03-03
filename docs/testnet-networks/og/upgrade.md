@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-og">
 # Upgrade
 </div>
-###### Chain ID: `zgtendermint_16600-2` | Current Node Version: `v0.4.0`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 # With Cosmovisor
 ## Clone ZeroGravity repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf 0g-chain
 git clone https://github.com/0glabs/0g-chain.git
 cd 0g-chain
-git checkout v0.4.0
+git checkout auto
  ```
 
 ## Build binaries
@@ -26,8 +26,8 @@ make build
 
 ## Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.0gchain/cosmovisor/upgrades/v0.4.0/bin
-mv build/0gchaind ~/.0gchain/cosmovisor/upgrades/v0.4.0/bin/
+mkdir -p ~/.0gchain/cosmovisor/upgrades/auto/bin
+mv build/0gchaind ~/.0gchain/cosmovisor/upgrades/auto/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf 0g-chain
 git clone https://github.com/0glabs/0g-chain.git
 cd 0g-chain
-git checkout v0.4.0
+git checkout auto
  ```
 
 ## Build binaries

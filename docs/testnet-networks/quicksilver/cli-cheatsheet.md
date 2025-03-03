@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-quicksilver">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `rhye-2` | Current Node Version: `v1.6.1-health`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -46,7 +46,7 @@ quicksilverd q bank balances $(quicksilverd keys show KEY -a) --node https://qui
 ### Send
 ```js
 quicksilverd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uqck \
-  --chain-id rhye-2 \
+  --chain-id auto \
   --node https://quicksilver-t-rpc.noders.services:443 --fees 3000uqck \
   --from KEY
 ```
@@ -54,7 +54,7 @@ quicksilverd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uqck \
 ### Withdraw rewards from all validators
 ```js
 quicksilverd tx distribution withdraw-all-rewards \
-  --chain-id rhye-2 \
+  --chain-id auto \
   --node https://quicksilver-t-rpc.noders.services:443 --fees 3000uqck \
   --from KEY
 ```
@@ -63,7 +63,7 @@ quicksilverd tx distribution withdraw-all-rewards \
 ```js
 quicksilverd tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
-  --chain-id rhye-2 \
+  --chain-id auto \
   --node https://quicksilver-t-rpc.noders.services:443 --fees 3000uqck \
   --from KEY
 ```
@@ -71,7 +71,7 @@ quicksilverd tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ### Delegate tokens to yourself
 ```js
 quicksilverd tx staking delegate $(quicksilverd keys show KEY --bech val -a) 1000000uqck \
---chain-id rhye-2 \
+--chain-id auto \
 --node https://quicksilver-t-rpc.noders.services:443 --fees 3000uqck \
 --from KEY
 ```
@@ -79,7 +79,7 @@ quicksilverd tx staking delegate $(quicksilverd keys show KEY --bech val -a) 100
 ### Delegate tokens to validator
 ```js
 quicksilverd tx staking delegate VALIDATOR_ADDRESS 1000000uqck \
---chain-id rhye-2 \
+--chain-id auto \
 --node https://quicksilver-t-rpc.noders.services:443 --fees 3000uqck \
 --from KEY
 ```
@@ -87,7 +87,7 @@ quicksilverd tx staking delegate VALIDATOR_ADDRESS 1000000uqck \
 ### Redelegate tokens to another validator
 ```js
 quicksilverd tx staking redelegate $(quicksilverd keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000uqck \
-  --chain-id rhye-2 \
+  --chain-id auto \
   --node https://quicksilver-t-rpc.noders.services:443 --fees 3000uqck \
   --from KEY
 ```
@@ -108,7 +108,7 @@ quicksilverd query gov proposals --node https://quicksilver-t-rpc.noders.service
 ### Check vote
 ```js
 quicksilverd query gov proposal PROPOSAL_NUMBER \
-  --chain-id rhye-2 \
+  --chain-id auto \
   --node https://quicksilver-t-rpc.noders.services:443 --fees 3000uqck \
   --output json | jq
 ```
@@ -121,7 +121,7 @@ quicksilverd query gov proposal PROPOSAL_NUMBER \
 * abstain
 ```js
 quicksilverd tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
-  --chain-id rhye-2 \
+  --chain-id auto \
   --node https://quicksilver-t-rpc.noders.services:443 --fees 3000uqck \
   --from KEY
 ```
@@ -144,7 +144,7 @@ quicksilverd tx staking create-validator \
   --identity "220491ADDD660741" \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
-  --chain-id rhye-2 \
+  --chain-id auto \
   --node https://quicksilver-t-rpc.noders.services:443 --fees 3000uqck \
   --from KEY
 ```
@@ -156,7 +156,7 @@ quicksilverd tx staking edit-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id rhye-2 \
+--chain-id auto \
 --commission-rate 0.05 \
 --from KEY \
 --node https://quicksilver-t-rpc.noders.services:443 --fees 3000uqck \
@@ -165,7 +165,7 @@ quicksilverd tx staking edit-validator \
 ### Unjail
 ```js
 quicksilverd tx slashing unjail \
-  --chain-id rhye-2 \
+  --chain-id auto \
   --node https://quicksilver-t-rpc.noders.services:443 --fees 3000uqck \
   --from KEY
 ```

@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-osmosis">
 # Node Snapshot
 </div>
-###### Chain ID: `osmosis-1` | Current Node Version: `v26.0.1`
+###### Chain ID: `osmosis-1` | Current Node Version: `v28.0.4`
 
 ## Our Osmosis Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 32.76 GB | Thu, 07 Nov 2024 06:04:47 GMT |
+|  GB |  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -71,7 +71,7 @@ curl -o - -L https://config.noders.services/osmosis/data.tar.lz4 | lz4 -d | tar 
 ```
 ### Wasm
 ```bash
-curl -o - -L https://config.noders.services/osmosis/wasm.tar.lz4 | lz4 -d | tar -x -C ~/.osmosisd
+Not supported
 ```
 
 :::warning WARNING

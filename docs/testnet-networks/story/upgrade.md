@@ -7,16 +7,16 @@ sidebar_position: 3
 <div class="h1-with-icon icon-story">
 # Upgrade
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `odyssey-0` | Current Node Version: `v0.13.0`
 
 # With Cosmovisor
 ## Clone Story repository
 ```js
 cd $HOME
-rm -rf storyprotocol
-git clone https://github.com/storyprotocol.git
-cd storyprotocol
-git checkout auto
+rm -rf story
+git clone https://github.com/piplabs/story.git
+cd story
+git checkout v0.13.0
  ```
 
 ## Build binaries
@@ -26,8 +26,8 @@ make build
 
 ## Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.story/cosmovisor/upgrades/auto/bin
-mv build/story ~/.story/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.story/cosmovisor/upgrades/v0.13.0/bin
+mv build/story ~/.story/cosmovisor/upgrades/v0.13.0/bin/
 rm -rf build
 ```
 
@@ -35,10 +35,10 @@ rm -rf build
 ## Clone Story repository
 ```js
 cd $HOME
-rm -rf storyprotocol
-git clone https://github.com/storyprotocol.git
-cd storyprotocol
-git checkout auto
+rm -rf story
+git clone https://github.com/piplabs/story.git
+cd story
+git checkout v0.13.0
  ```
 
 ## Build binaries

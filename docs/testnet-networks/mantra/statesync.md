@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-mantra">
 # State sync
 </div>
-###### Chain ID: `mantra-hongbai-1` | Current Node Version: `v3.0.0`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ```bash
 SNAP_RPC=https://mantra-t-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop mantrachaind && mantrachaind tendermint unsafe-reset-all --home ~/.mantrachaind --keep-addr-book
 ```
 ```bash
-peers="8ac264aa8af65b4363f98fcab3fbc58c81b2ca90@mantra-t-rpc.noders.services:30656"
+peers="@mantra-t-rpc.noders.services:"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.mantrachaind/config/config.toml
 ```
 ```bash

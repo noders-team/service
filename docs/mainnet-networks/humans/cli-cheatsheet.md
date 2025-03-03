@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-humans">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `humans_1089-1` | Current Node Version: `v1.0.0`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -46,7 +46,7 @@ humansd q bank balances $(humansd keys show KEY -a) --node https://humans-rpc.no
 ### Send
 ```js
 humansd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000aheart \
-  --chain-id humans_1089-1 \
+  --chain-id auto \
   --node https://humans-rpc.noders.services:443 --fees 3000aheart \
   --from KEY
 ```
@@ -54,7 +54,7 @@ humansd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000aheart \
 ### Withdraw rewards from all validators
 ```js
 humansd tx distribution withdraw-all-rewards \
-  --chain-id humans_1089-1 \
+  --chain-id auto \
   --node https://humans-rpc.noders.services:443 --fees 3000aheart \
   --from KEY
 ```
@@ -63,7 +63,7 @@ humansd tx distribution withdraw-all-rewards \
 ```js
 humansd tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
-  --chain-id humans_1089-1 \
+  --chain-id auto \
   --node https://humans-rpc.noders.services:443 --fees 3000aheart \
   --from KEY
 ```
@@ -71,7 +71,7 @@ humansd tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ### Delegate tokens to yourself
 ```js
 humansd tx staking delegate $(humansd keys show KEY --bech val -a) 1000000aheart \
---chain-id humans_1089-1 \
+--chain-id auto \
 --node https://humans-rpc.noders.services:443 --fees 3000aheart \
 --from KEY
 ```
@@ -79,7 +79,7 @@ humansd tx staking delegate $(humansd keys show KEY --bech val -a) 1000000aheart
 ### Delegate tokens to validator
 ```js
 humansd tx staking delegate VALIDATOR_ADDRESS 1000000aheart \
---chain-id humans_1089-1 \
+--chain-id auto \
 --node https://humans-rpc.noders.services:443 --fees 3000aheart \
 --from KEY
 ```
@@ -87,7 +87,7 @@ humansd tx staking delegate VALIDATOR_ADDRESS 1000000aheart \
 ### Redelegate tokens to another validator
 ```js
 humansd tx staking redelegate $(humansd keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000aheart \
-  --chain-id humans_1089-1 \
+  --chain-id auto \
   --node https://humans-rpc.noders.services:443 --fees 3000aheart \
   --from KEY
 ```
@@ -108,7 +108,7 @@ humansd query gov proposals --node https://humans-rpc.noders.services:443
 ### Check vote
 ```js
 humansd query gov proposal PROPOSAL_NUMBER \
-  --chain-id humans_1089-1 \
+  --chain-id auto \
   --node https://humans-rpc.noders.services:443 --fees 3000aheart \
   --output json | jq
 ```
@@ -121,7 +121,7 @@ humansd query gov proposal PROPOSAL_NUMBER \
 * abstain
 ```js
 humansd tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
-  --chain-id humans_1089-1 \
+  --chain-id auto \
   --node https://humans-rpc.noders.services:443 --fees 3000aheart \
   --from KEY
 ```
@@ -144,7 +144,7 @@ humansd tx staking create-validator \
   --identity "220491ADDD660741" \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
-  --chain-id humans_1089-1 \
+  --chain-id auto \
   --node https://humans-rpc.noders.services:443 --fees 3000aheart \
   --from KEY
 ```
@@ -156,7 +156,7 @@ humansd tx staking edit-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id humans_1089-1 \
+--chain-id auto \
 --commission-rate 0.05 \
 --from KEY \
 --node https://humans-rpc.noders.services:443 --fees 3000aheart \
@@ -165,7 +165,7 @@ humansd tx staking edit-validator \
 ### Unjail
 ```js
 humansd tx slashing unjail \
-  --chain-id humans_1089-1 \
+  --chain-id auto \
   --node https://humans-rpc.noders.services:443 --fees 3000aheart \
   --from KEY
 ```

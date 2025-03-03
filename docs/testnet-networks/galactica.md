@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-galactica">
 # Galactica
 </div>
-###### Chain ID: `galactica_9302-1` | Current Node Version: `v0.2.4`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 
 Galactica Network presents itself as a pioneering platform in the Web3 space, aiming to establish the first on-chain nation-state. It's focused on fostering Sybil-resistant, reputation-based systems and decentralized societies (DeSoc), enhancing DeFi and DAOs for a more accountable and compliant future. Galactica emphasizes a community-driven approach, seeking builders to create a better future through innovative DeFi solutions, DAO structures, and a comprehensive DeSoc stack

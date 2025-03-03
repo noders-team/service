@@ -7,19 +7,19 @@ sidebar_position: 6
 <div class="h1-with-icon icon-mantra">
 # Live Peers
 </div>
-###### Chain ID: `mantra-hongbai-1` | Current Node Version: `v3.0.0`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ## All Live Peers for Mantra
-Here is a list of 33 active peers as observed by [NODERS]TEAM in real-time. Add them to your `config.toml` if you have trouble finding peers.
+Here is a list of 1 active peers as observed by [NODERS]TEAM in real-time. Add them to your `config.toml` if you have trouble finding peers.
 
 ```bash
-95d6c946168bf42376a7a5b7a38189048ecb654a@45.159.220.90:22656,c6a28b964edbd6fe662bd07156cdb04b89886549@116.202.233.2:50056,2df175a07e23d38a9e7c8d19dc1662c96f079539@178.128.113.181:26656,7930aaec7bf488ee9e5cfc09659aa886e8561d77@51.77.20.209:27912,3f927a58d0483743300d314c376fafcc7068d86c@65.109.154.182:21656,195cc6dd355d0363e9c53c4dbc8210dfb98b1358@46.4.5.45:25156,ccd9c19b78e4a4075bd228b6d6d534f8c4fd54da@167.235.14.117:26656,58b906d9b9e9f614da10878bb34fb74c4a5f2595@136.243.59.103:29656,16a35e49a59c3715390dc629413ec272dd26d821@37.60.251.67:22656,30235fa097d100a14d2b534fdbf67e34e8d5f6cf@139.45.205.60:21656,a6c18ce43c91333adbdd8037e66346b7870830f4@49.12.168.108:4000,02172d11bde574d1ac38892cfda2530877a095e2@65.109.24.155:25156,fb47029956d2ec2c5c85acd515fa635a8f1c5b88@213.199.50.249:26656,467d3bc85d5ac2f1c2cdf66fc65fbc831bb91c82@135.181.216.54:3600,b8ddceb58d96fee516a835a694a05b6f155ae325@162.19.91.120:26656,638550d83f3918a2221713064f2b3a4f8f0414a5@198.27.70.81:26656,46598983ec8e816787fe0d7ab29de63bdb91b733@95.217.35.179:50056,ab0fe4831434f87bad987ca3083dd938f682b033@65.109.88.254:31656,20db08acbcac9b7114839e63539da2802b848982@34.72.148.3:26656,28dcca0ba822cc7a99ec5390da81d2f1bc9746a8@81.31.197.120:16656,005025067680ab6767e1b931306b0b83e526703d@65.109.30.147:23656,aafefdaaaf1f5dd54029628907bfa8f56834f720@15.204.163.111:26656,814eafcb9a05a8b74fd85424087d6dc5918e153b@185.197.195.160:22656,4ef544f6b009884b54cf4b547c54dddda8d72947@65.109.65.210:34656,630602a3d4dcb3ea16b0b766dfbb5698824da868@45.90.123.161:22656,178da83fe5553058c4fbe8879dd4cc537325683a@38.242.231.114:26656,0a2057d59f4dac1547fab839dc6b392a257e7129@89.117.30.184:16456,b7556ae422275e13eb82297b5179a1b189467a89@159.69.142.51:50056,7ba9e5051a1cb2542c2ecbfa12954bdbab3121f5@34.171.207.218:26656,a9a71700397ce950a9396421877196ac19e7cde0@65.108.231.124:22656,0175dd4d48b2b919c37f784eb512a05a0c7e6710@193.26.158.125:25156,7ab572034a2d1d9d67e31dbac43c4554e0e53ba5@104.198.160.158:26656,75855dec829d40f105299f09dc64f05b44057a3a@34.134.75.248:26656
+
 ```
 
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=58b906d9b9e9f614da10878bb34fb74c4a5f2595@136.243.59.103:29656,630602a3d4dcb3ea16b0b766dfbb5698824da868@45.90.123.161:22656,3f927a58d0483743300d314c376fafcc7068d86c@65.109.154.182:21656,ccd9c19b78e4a4075bd228b6d6d534f8c4fd54da@167.235.14.117:26656,2df175a07e23d38a9e7c8d19dc1662c96f079539@178.128.113.181:26656
+PEERS=
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.mantrachaind/config/config.toml
 
 sudo systemctl restart mantrachaind
@@ -30,5 +30,5 @@ sudo journalctl -fu mantrachaind --no-hostname -o cat
 When you state-sync, you might also consider adding [NODERS]TEAM state-sync peer to your persistent_peers setting in `config.toml`.
 
 ```bash
-8ac264aa8af65b4363f98fcab3fbc58c81b2ca90@mantra-t-rpc.noders.services:30656
+@mantra-t-rpc.noders.services:
 ```

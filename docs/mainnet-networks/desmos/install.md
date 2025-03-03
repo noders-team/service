@@ -153,7 +153,7 @@ curl https://config.noders.services/desmos/addrbook.json -o ~/.desmos/config/add
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"7c4620e42e2d2a7ad2bdbe00511b66995235ee6a@desmos-rpc.noders.services:27656\"/" ~/.desmos/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"d39816957bb0c94cc21bbf1ed2965f0d53661496@desmos-rpc.noders.services:16256\"/" ~/.desmos/config/config.toml
 ```
 
 ### Set minimum gas price

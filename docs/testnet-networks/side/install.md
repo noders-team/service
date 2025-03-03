@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-side">
 # Installation
 </div>
-###### Chain ID: `sidechain-testnet-4` | Current Node Version: `v0.9.4`
+###### Chain ID: `sidechain-testnet-4` | Current Node Version: `v0.9.5`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Side repo and build sided v0.9.4
+### Clone Side repo and build sided v0.9.5
 ```js
 cd $HOME
 git clone https://github.com/sideprotocol.git
 cd sideprotocol
-git checkout v0.9.4
+git checkout v0.9.5
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.side/cosmovisor/upgrades/v0.9.4/bin
-mv $HOME/go/bin/sided ~/.side/cosmovisor/upgrades/v0.9.4/bin/
+mkdir -p ~/.side/cosmovisor/upgrades/v0.9.5/bin
+mv $HOME/go/bin/sided ~/.side/cosmovisor/upgrades/v0.9.5/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Side repo and build sided v0.9.4
+### Clone Side repo and build sided v0.9.5
 ```js
 cd $HOME
 git clone https://github.com/sideprotocol.git
 cd sideprotocol
-git checkout v0.9.4
+git checkout v0.9.5
 ```
 
 ### Build binaries

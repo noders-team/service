@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-union">
 # State sync
 </div>
-###### Chain ID: `union-testnet-8` | Current Node Version: `v0.24.0`
+###### Chain ID: `union-testnet-9` | Current Node Version: `v0.25.0`
 
 ```bash
 SNAP_RPC=https://union-t-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop uniond && uniond tendermint unsafe-reset-all --home ~/.union --keep-addr-book
 ```
 ```bash
-peers="3d9c1c90a607c249a90a92c6542a457e234ca36a@union-t-rpc.noders.services:11656"
+peers="629ed307bbfeeaddb26d2ff48f377fa2bc8e7ffa@union-t-rpc.noders.services:22656"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.union/config/config.toml
 ```
 ```bash

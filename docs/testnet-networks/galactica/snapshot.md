@@ -7,13 +7,13 @@ sidebar_position: 3
 <div class="h1-with-icon icon-galactica">
 # Node Snapshot
 </div>
-###### Chain ID: `galactica_9302-1` | Current Node Version: `v0.2.4`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ## Our Galactica Snapshot Server Setup
 
 | Size   | Timestamp    |
 |--------|--------------|
-| 41.85 GB | Thu, 07 Nov 2024 07:02:56 GMT  |
+|  GB |   |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

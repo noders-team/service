@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-galactica">
 # State sync
 </div>
-###### Chain ID: `galactica_9302-1` | Current Node Version: `v0.2.4`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ```bash
 SNAP_RPC=https://galactica-t-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop galacticad && galacticad tendermint unsafe-reset-all --home ~/.galactica --keep-addr-book
 ```
 ```bash
-peers="e8e9b99df78bae2bf6c41a3006f6f3568230649b@galactica-t-rpc.noders.services:27456"
+peers="@galactica-t-rpc.noders.services:"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.galactica/config/config.toml
 ```
 ```bash

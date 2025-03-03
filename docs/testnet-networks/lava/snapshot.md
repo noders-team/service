@@ -7,13 +7,13 @@ sidebar_position: 3
 <div class="h1-with-icon icon-lava">
 # Node Snapshot
 </div>
-###### Chain ID: `lava-testnet-2` | Current Node Version: `v4.1.0`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ## Our Lava Snapshot Server Setup
 
 | Size   | Timestamp    |
 |--------|--------------|
-| 1.50 GB | Thu, 07 Nov 2024 06:10:05 GMT  |
+|  GB |   |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

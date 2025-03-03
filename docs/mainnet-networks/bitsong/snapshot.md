@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-bitsong">
 # Node Snapshot
 </div>
-###### Chain ID: `bitsong-2b` | Current Node Version: `v0.17.0`
+###### Chain ID: `bitsong-2b` | Current Node Version: `v0.21.4`
 
 ## Our BitSong Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 0.84 GB | Thu, 07 Nov 2024 06:05:44 GMT |
+|  GB |  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -71,7 +71,7 @@ curl -o - -L https://config.noders.services/bitsong/data.tar.lz4 | lz4 -d | tar 
 ```
 ### Wasm
 ```bash
-curl -o - -L https://config.noders.services/bitsong/wasm.tar.lz4 | lz4 -d | tar -x -C ~/.bitsongd
+Not supported
 ```
 
 :::warning WARNING

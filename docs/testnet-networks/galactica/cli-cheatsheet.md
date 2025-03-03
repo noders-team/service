@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-galactica">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `galactica_9302-1` | Current Node Version: `v0.2.4`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -46,7 +46,7 @@ galacticad q bank balances $(galacticad keys show KEY -a) --node https://galacti
 ### Send
 ```js
 galacticad tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000agnet \
-  --chain-id galactica_9302-1 \
+  --chain-id auto \
   --node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
   --from KEY
 ```
@@ -54,7 +54,7 @@ galacticad tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000agnet \
 ### Withdraw rewards from all validators
 ```js
 galacticad tx distribution withdraw-all-rewards \
-  --chain-id galactica_9302-1 \
+  --chain-id auto \
   --node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
   --from KEY
 ```
@@ -63,7 +63,7 @@ galacticad tx distribution withdraw-all-rewards \
 ```js
 galacticad tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
-  --chain-id galactica_9302-1 \
+  --chain-id auto \
   --node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
   --from KEY
 ```
@@ -71,7 +71,7 @@ galacticad tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ### Delegate tokens to yourself
 ```js
 galacticad tx staking delegate $(galacticad keys show KEY --bech val -a) 1000000agnet \
---chain-id galactica_9302-1 \
+--chain-id auto \
 --node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
 --from KEY
 ```
@@ -79,7 +79,7 @@ galacticad tx staking delegate $(galacticad keys show KEY --bech val -a) 1000000
 ### Delegate tokens to validator
 ```js
 galacticad tx staking delegate VALIDATOR_ADDRESS 1000000agnet \
---chain-id galactica_9302-1 \
+--chain-id auto \
 --node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
 --from KEY
 ```
@@ -87,7 +87,7 @@ galacticad tx staking delegate VALIDATOR_ADDRESS 1000000agnet \
 ### Redelegate tokens to another validator
 ```js
 galacticad tx staking redelegate $(galacticad keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000agnet \
-  --chain-id galactica_9302-1 \
+  --chain-id auto \
   --node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
   --from KEY
 ```
@@ -108,7 +108,7 @@ galacticad query gov proposals --node https://galactica-t-rpc.noders.services:44
 ### Check vote
 ```js
 galacticad query gov proposal PROPOSAL_NUMBER \
-  --chain-id galactica_9302-1 \
+  --chain-id auto \
   --node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
   --output json | jq
 ```
@@ -121,7 +121,7 @@ galacticad query gov proposal PROPOSAL_NUMBER \
 * abstain
 ```js
 galacticad tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
-  --chain-id galactica_9302-1 \
+  --chain-id auto \
   --node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
   --from KEY
 ```
@@ -144,7 +144,7 @@ galacticad tx staking create-validator \
   --identity "220491ADDD660741" \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
-  --chain-id galactica_9302-1 \
+  --chain-id auto \
   --node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
   --from KEY
 ```
@@ -156,7 +156,7 @@ galacticad tx staking edit-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id galactica_9302-1 \
+--chain-id auto \
 --commission-rate 0.05 \
 --from KEY \
 --node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
@@ -165,7 +165,7 @@ galacticad tx staking edit-validator \
 ### Unjail
 ```js
 galacticad tx slashing unjail \
-  --chain-id galactica_9302-1 \
+  --chain-id auto \
   --node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
   --from KEY
 ```

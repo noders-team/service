@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-zetachain">
 # Installation
 </div>
-###### Chain ID: `athens_7001-1` | Current Node Version: `v22.0.0`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Zetachain repo and build zetacored v22.0.0
+### Clone Zetachain repo and build zetacored auto
 ```js
 cd $HOME
 git clone https://github.com/zeta-chain.git
 cd zeta-chain
-git checkout v22.0.0
+git checkout auto
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.zetacored/cosmovisor/upgrades/v22.0.0/bin
-mv $HOME/go/bin/zetacored ~/.zetacored/cosmovisor/upgrades/v22.0.0/bin/
+mkdir -p ~/.zetacored/cosmovisor/upgrades/auto/bin
+mv $HOME/go/bin/zetacored ~/.zetacored/cosmovisor/upgrades/auto/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Zetachain repo and build zetacored v22.0.0
+### Clone Zetachain repo and build zetacored auto
 ```js
 cd $HOME
 git clone https://github.com/zeta-chain.git
 cd zeta-chain
-git checkout v22.0.0
+git checkout auto
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable zetacored
 ## Node configuration
 ### Set config
 ```js
-zetacored config chain-id athens_7001-1
+zetacored config chain-id auto
 zetacored config keyring-backend os
 zetacored config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-zetacored init NAME_OF_YOUR_VALIDATOR --chain-id athens_7001-1
+zetacored init NAME_OF_YOUR_VALIDATOR --chain-id auto
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config-t.noders.services/zetachain/addrbook.json -o ~/.zetacored/co
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"fdc0a43704510897ad55a611e3f0d6f2c888c40e@zetachain-t-rpc.noders.services:17656\"/" ~/.zetacored/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@zetachain-t-rpc.noders.services:\"/" ~/.zetacored/config/config.toml
 ```
 
 ### Set minimum gas price

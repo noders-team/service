@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-swisstronik">
 # Node Snapshot
 </div>
-###### Chain ID: `swisstronik_1291-1` | Current Node Version: `v1.0.6`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ## Our Swisstronik Snapshot Server Setup
 

@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-quicksilver">
 # Node Snapshot
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `quicksilver-2` | Current Node Version: `v1.7.7`
 
 ## Our Quicksilver Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 1.69 GB | Thu, 07 Nov 2024 06:12:36 GMT |
+|  GB |  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -71,7 +71,7 @@ curl -o - -L https://config.noders.services/quicksilver/data.tar.lz4 | lz4 -d | 
 ```
 ### Wasm
 ```bash
-curl -o - -L https://config.noders.services/quicksilver/wasm.tar.lz4 | lz4 -d | tar -x -C ~/.quicksilverd
+Not supported
 ```
 
 :::warning WARNING

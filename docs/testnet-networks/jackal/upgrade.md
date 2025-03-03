@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-jackal">
 # Upgrade
 </div>
-###### Chain ID: `lupulella-2` | Current Node Version: `canary-17-gb6ed8056`
+###### Chain ID: `auto` | Current Node Version: `canary-17-gb6ed8056`
 
 # With Cosmovisor
 ## Clone Jackal repository

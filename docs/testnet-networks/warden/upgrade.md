@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-warden">
 # Upgrade
 </div>
-###### Chain ID: `froopyland_100-1` | Current Node Version: `v0.5.3`
+###### Chain ID: `chiado_10010-1` | Current Node Version: `v0.5.4`
 
 # With Cosmovisor
 ## Clone Warden repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf wardenprotocol
 git clone https://github.com/warden-protocol/wardenprotocol.git
 cd wardenprotocol
-git checkout v0.5.3
+git checkout v0.5.4
  ```
 
 ## Build binaries
@@ -26,8 +26,8 @@ make build
 
 ## Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.warden/cosmovisor/upgrades/v0.5.3/bin
-mv build/wardend ~/.warden/cosmovisor/upgrades/v0.5.3/bin/
+mkdir -p ~/.warden/cosmovisor/upgrades/v0.5.4/bin
+mv build/wardend ~/.warden/cosmovisor/upgrades/v0.5.4/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf wardenprotocol
 git clone https://github.com/warden-protocol/wardenprotocol.git
 cd wardenprotocol
-git checkout v0.5.3
+git checkout v0.5.4
  ```
 
 ## Build binaries

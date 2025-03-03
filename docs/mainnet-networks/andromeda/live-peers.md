@@ -7,19 +7,19 @@ sidebar_position: 6
 <div class="h1-with-icon icon-andromeda">
 # Live Peers
 </div>
-###### Chain ID: `andromeda-1` | Current Node Version: `v2.0.0`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ## All Live Peers for Andromeda
-Here is a list of 28 active peers as observed by [NODERS]TEAM in real-time. Add them to your `config.toml` if you have trouble finding peers.
+Here is a list of 1 active peers as observed by [NODERS]TEAM in real-time. Add them to your `config.toml` if you have trouble finding peers.
 
 ```bash
-03c2a4016f0395795d89f7b8e37ac41407280549@65.21.45.173:21256,21c7f62f3967fdf813e12e18f176f013a798d2fe@46.105.71.12:26656,f4776a939d99d607ed835aa70c31406909b5bd56@109.228.61.221:26656,4925e9f239e2c2997416d757e3fa9387a33645c2@2a01:26656,97bda7b099814e1a90cd638ce1636afdf3e51efb@116.202.156.139:26746,3761e89198e3085a363ac504494948ee143344f6@142.132.158.9:21256,1085c1c44816a6d4941864ccc3253e82b6932e45@2001:26656,2b3c34c6d3c20c02d07f856d17707bf576319fa2@147.135.31.22:21256,d4f01074d73023dcadc4c650bedd0452b58e989a@5.79.98.1:26656,7d012c8d2cb87ec26b301136a77dc6ad2222f591@178.162.165.240:26656,762ad5023c9d1d22027e5e2944d870b7ea222d72@207.180.236.122:14756,2408f6ead903a81c2b5e4f3e2be70af35229f012@132.145.204.192:26656,34fedc09dc2194d08c1740287109360e98ac1229@65.109.112.148:4376,973f4096cb9fa61002998405b79d2f516b1f66af@65.108.111.236:55716,6daf253096a8d9acc693eded9df3a901c7f5aeb6@185.16.39.127:12156,d22c5d093231844f0e579fc1dc1f9fdd68fd5a09@164.132.207.78:21256,9c413b373cbb6532b63ed815be3778b4b454b910@51.210.223.80:21256,9025add124d9c8f4321efa1c2bfb8fc95b034f49@65.21.10.181:21256,9e480e0ee7a70859bd6a6a878527d41de64ae7b8@65.21.197.25:27656,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.108.233.103:14756,0a607ca589490863410285eed0ca66354912016e@206.125.34.196:26672,0a136caa589749e227b92593836da23135f04f96@178.162.165.151:26656,e12127dd797b2d5737b22ad7f1d643819b23ef2d@135.181.222.33:21256,2304dc55ead2651aec20c7b99adeda8e2c39e06b@148.251.53.110:26656,2c8bebf2b5666ba2b533434041bcc609961581e4@65.109.18.169:21256,9d6955d6661e00f609986706aa9458d310575efc@65.109.108.47:21256,69ab9e148f3406089b2f0895fb4c6b47f4a2a40a@2001:26656,20e1000e88125698264454a884812746c2eb4807@159.69.1.6:21256
+
 ```
 
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=20e1000e88125698264454a884812746c2eb4807@159.69.1.6:21256,2408f6ead903a81c2b5e4f3e2be70af35229f012@132.145.204.192:26656,762ad5023c9d1d22027e5e2944d870b7ea222d72@207.180.236.122:14756,e12127dd797b2d5737b22ad7f1d643819b23ef2d@135.181.222.33:21256,34fedc09dc2194d08c1740287109360e98ac1229@65.109.112.148:4376
+PEERS=
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.andromeda/config/config.toml
 
 sudo systemctl restart andromedad
@@ -30,5 +30,5 @@ sudo journalctl -fu andromedad --no-hostname -o cat
 When you state-sync, you might also consider adding [NODERS]TEAM state-sync peer to your persistent_peers setting in `config.toml`.
 
 ```bash
-c1cde7020a3f96c7480702ede7ce470f4140bb8f@andromeda-rpc.noders.services:34656
+@andromeda-rpc.noders.services:
 ```

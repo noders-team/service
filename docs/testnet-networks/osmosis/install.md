@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-osmosis">
 # Installation
 </div>
-###### Chain ID: `osmo-test-5` | Current Node Version: `26.0.0-rc3`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Osmosis repo and build osmosisd 26.0.0-rc3
+### Clone Osmosis repo and build osmosisd auto
 ```js
 cd $HOME
 git clone https://github.com/osmosis-labs/osmosis.git
 cd osmosis
-git checkout 26.0.0-rc3
+git checkout auto
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.osmosisd/cosmovisor/upgrades/26.0.0-rc3/bin
-mv $HOME/go/bin/osmosisd ~/.osmosisd/cosmovisor/upgrades/26.0.0-rc3/bin/
+mkdir -p ~/.osmosisd/cosmovisor/upgrades/auto/bin
+mv $HOME/go/bin/osmosisd ~/.osmosisd/cosmovisor/upgrades/auto/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Osmosis repo and build osmosisd 26.0.0-rc3
+### Clone Osmosis repo and build osmosisd auto
 ```js
 cd $HOME
 git clone https://github.com/osmosis-labs/osmosis.git
 cd osmosis
-git checkout 26.0.0-rc3
+git checkout auto
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable osmosisd
 ## Node configuration
 ### Set config
 ```js
-osmosisd config chain-id osmo-test-5
+osmosisd config chain-id auto
 osmosisd config keyring-backend os
 osmosisd config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-osmosisd init NAME_OF_YOUR_VALIDATOR --chain-id osmo-test-5
+osmosisd init NAME_OF_YOUR_VALIDATOR --chain-id auto
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config-t.noders.services/osmosis/addrbook.json -o ~/.osmosisd/confi
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"6147a54c107d366c4a1eb5196cb20b3498a31d83@osmosis-t-rpc.noders.services:10656\"/" ~/.osmosisd/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@osmosis-t-rpc.noders.services:\"/" ~/.osmosisd/config/config.toml
 ```
 
 ### Set minimum gas price

@@ -7,13 +7,13 @@ sidebar_position: 3
 <div class="h1-with-icon icon-sunrise">
 # Node Snapshot
 </div>
-###### Chain ID: `sunrise-test-0.2` | Current Node Version: `v0.2.3`
+###### Chain ID: `sunrise-test-0.2` | Current Node Version: `v0.2.6`
 
 ## Our Sunrise Snapshot Server Setup
 
 | Size   | Timestamp    |
 |--------|--------------|
-| 7.25 GB | Thu, 07 Nov 2024 06:13:58 GMT  |
+|  GB |   |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

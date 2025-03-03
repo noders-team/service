@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-warden">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `froopyland_100-1` | Current Node Version: `v0.5.3`
+###### Chain ID: `chiado_10010-1` | Current Node Version: `v0.5.4`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -46,7 +46,7 @@ wardend q bank balances $(wardend keys show KEY -a) --node https://warden-t-rpc.
 ### Send
 ```js
 wardend tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uward \
-  --chain-id froopyland_100-1 \
+  --chain-id chiado_10010-1 \
   --node https://warden-t-rpc.noders.services:443 --fees 3000uward \
   --from KEY
 ```
@@ -54,7 +54,7 @@ wardend tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uward \
 ### Withdraw rewards from all validators
 ```js
 wardend tx distribution withdraw-all-rewards \
-  --chain-id froopyland_100-1 \
+  --chain-id chiado_10010-1 \
   --node https://warden-t-rpc.noders.services:443 --fees 3000uward \
   --from KEY
 ```
@@ -63,7 +63,7 @@ wardend tx distribution withdraw-all-rewards \
 ```js
 wardend tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
-  --chain-id froopyland_100-1 \
+  --chain-id chiado_10010-1 \
   --node https://warden-t-rpc.noders.services:443 --fees 3000uward \
   --from KEY
 ```
@@ -71,7 +71,7 @@ wardend tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ### Delegate tokens to yourself
 ```js
 wardend tx staking delegate $(wardend keys show KEY --bech val -a) 1000000uward \
---chain-id froopyland_100-1 \
+--chain-id chiado_10010-1 \
 --node https://warden-t-rpc.noders.services:443 --fees 3000uward \
 --from KEY
 ```
@@ -79,7 +79,7 @@ wardend tx staking delegate $(wardend keys show KEY --bech val -a) 1000000uward 
 ### Delegate tokens to validator
 ```js
 wardend tx staking delegate VALIDATOR_ADDRESS 1000000uward \
---chain-id froopyland_100-1 \
+--chain-id chiado_10010-1 \
 --node https://warden-t-rpc.noders.services:443 --fees 3000uward \
 --from KEY
 ```
@@ -87,7 +87,7 @@ wardend tx staking delegate VALIDATOR_ADDRESS 1000000uward \
 ### Redelegate tokens to another validator
 ```js
 wardend tx staking redelegate $(wardend keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000uward \
-  --chain-id froopyland_100-1 \
+  --chain-id chiado_10010-1 \
   --node https://warden-t-rpc.noders.services:443 --fees 3000uward \
   --from KEY
 ```
@@ -108,7 +108,7 @@ wardend query gov proposals --node https://warden-t-rpc.noders.services:443
 ### Check vote
 ```js
 wardend query gov proposal PROPOSAL_NUMBER \
-  --chain-id froopyland_100-1 \
+  --chain-id chiado_10010-1 \
   --node https://warden-t-rpc.noders.services:443 --fees 3000uward \
   --output json | jq
 ```
@@ -121,7 +121,7 @@ wardend query gov proposal PROPOSAL_NUMBER \
 * abstain
 ```js
 wardend tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
-  --chain-id froopyland_100-1 \
+  --chain-id chiado_10010-1 \
   --node https://warden-t-rpc.noders.services:443 --fees 3000uward \
   --from KEY
 ```
@@ -144,7 +144,7 @@ wardend tx staking create-validator \
   --identity "220491ADDD660741" \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
-  --chain-id froopyland_100-1 \
+  --chain-id chiado_10010-1 \
   --node https://warden-t-rpc.noders.services:443 --fees 3000uward \
   --from KEY
 ```
@@ -156,7 +156,7 @@ wardend tx staking edit-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id froopyland_100-1 \
+--chain-id chiado_10010-1 \
 --commission-rate 0.05 \
 --from KEY \
 --node https://warden-t-rpc.noders.services:443 --fees 3000uward \
@@ -165,7 +165,7 @@ wardend tx staking edit-validator \
 ### Unjail
 ```js
 wardend tx slashing unjail \
-  --chain-id froopyland_100-1 \
+  --chain-id chiado_10010-1 \
   --node https://warden-t-rpc.noders.services:443 --fees 3000uward \
   --from KEY
 ```

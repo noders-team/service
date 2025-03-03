@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-dymension">
 # Dymension
 </div>
-###### Chain ID: `dymension_1100-1` | Current Node Version: `v3.1.0`
+###### Chain ID: `dymension_1100-1` | Current Node Version: `v3.2.0`
 
 
 Dymension introduces a Layer 2 scaling solution using rollup technology to boost Layer 1 blockchains like Ethereum. It emphasizes scalability, interoperability, reduced transaction costs, enhanced security, and developer support. Ideal for high-throughput applications in DeFi, gaming, and NFTs, Dymension facilitates efficient, cost-effective transactions and cross-chain interactions, advancing the blockchain ecosystem towards greater adoption and innovation.

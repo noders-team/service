@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-mantra">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `mantra-hongbai-1` | Current Node Version: `v3.0.0`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -46,7 +46,7 @@ mantrachaind q bank balances $(mantrachaind keys show KEY -a) --node https://man
 ### Send
 ```js
 mantrachaind tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uom \
-  --chain-id mantra-hongbai-1 \
+  --chain-id auto \
   --node https://mantra-t-rpc.noders.services:443 --fees 3000uom \
   --from KEY
 ```
@@ -54,7 +54,7 @@ mantrachaind tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uom \
 ### Withdraw rewards from all validators
 ```js
 mantrachaind tx distribution withdraw-all-rewards \
-  --chain-id mantra-hongbai-1 \
+  --chain-id auto \
   --node https://mantra-t-rpc.noders.services:443 --fees 3000uom \
   --from KEY
 ```
@@ -63,7 +63,7 @@ mantrachaind tx distribution withdraw-all-rewards \
 ```js
 mantrachaind tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
-  --chain-id mantra-hongbai-1 \
+  --chain-id auto \
   --node https://mantra-t-rpc.noders.services:443 --fees 3000uom \
   --from KEY
 ```
@@ -71,7 +71,7 @@ mantrachaind tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ### Delegate tokens to yourself
 ```js
 mantrachaind tx staking delegate $(mantrachaind keys show KEY --bech val -a) 1000000uom \
---chain-id mantra-hongbai-1 \
+--chain-id auto \
 --node https://mantra-t-rpc.noders.services:443 --fees 3000uom \
 --from KEY
 ```
@@ -79,7 +79,7 @@ mantrachaind tx staking delegate $(mantrachaind keys show KEY --bech val -a) 100
 ### Delegate tokens to validator
 ```js
 mantrachaind tx staking delegate VALIDATOR_ADDRESS 1000000uom \
---chain-id mantra-hongbai-1 \
+--chain-id auto \
 --node https://mantra-t-rpc.noders.services:443 --fees 3000uom \
 --from KEY
 ```
@@ -87,7 +87,7 @@ mantrachaind tx staking delegate VALIDATOR_ADDRESS 1000000uom \
 ### Redelegate tokens to another validator
 ```js
 mantrachaind tx staking redelegate $(mantrachaind keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000uom \
-  --chain-id mantra-hongbai-1 \
+  --chain-id auto \
   --node https://mantra-t-rpc.noders.services:443 --fees 3000uom \
   --from KEY
 ```
@@ -108,7 +108,7 @@ mantrachaind query gov proposals --node https://mantra-t-rpc.noders.services:443
 ### Check vote
 ```js
 mantrachaind query gov proposal PROPOSAL_NUMBER \
-  --chain-id mantra-hongbai-1 \
+  --chain-id auto \
   --node https://mantra-t-rpc.noders.services:443 --fees 3000uom \
   --output json | jq
 ```
@@ -121,7 +121,7 @@ mantrachaind query gov proposal PROPOSAL_NUMBER \
 * abstain
 ```js
 mantrachaind tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
-  --chain-id mantra-hongbai-1 \
+  --chain-id auto \
   --node https://mantra-t-rpc.noders.services:443 --fees 3000uom \
   --from KEY
 ```
@@ -144,7 +144,7 @@ mantrachaind tx staking create-validator \
   --identity "220491ADDD660741" \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
-  --chain-id mantra-hongbai-1 \
+  --chain-id auto \
   --node https://mantra-t-rpc.noders.services:443 --fees 3000uom \
   --from KEY
 ```
@@ -156,7 +156,7 @@ mantrachaind tx staking edit-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id mantra-hongbai-1 \
+--chain-id auto \
 --commission-rate 0.05 \
 --from KEY \
 --node https://mantra-t-rpc.noders.services:443 --fees 3000uom \
@@ -165,7 +165,7 @@ mantrachaind tx staking edit-validator \
 ### Unjail
 ```js
 mantrachaind tx slashing unjail \
-  --chain-id mantra-hongbai-1 \
+  --chain-id auto \
   --node https://mantra-t-rpc.noders.services:443 --fees 3000uom \
   --from KEY
 ```

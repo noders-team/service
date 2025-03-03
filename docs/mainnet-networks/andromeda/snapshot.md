@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-andromeda">
 # Node Snapshot
 </div>
-###### Chain ID: `andromeda-1` | Current Node Version: `v2.0.0`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ## Our Andromeda Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-| 3.02 GB | Thu, 07 Nov 2024 06:05:22 GMT |
+|  GB |  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -71,7 +71,7 @@ curl -o - -L https://config.noders.services/andromeda/data.tar.lz4 | lz4 -d | ta
 ```
 ### Wasm
 ```bash
-curl -o - -L https://config.noders.services/andromeda/wasm.tar.lz4 | lz4 -d | tar -x -C ~/.andromeda
+Not supported
 ```
 
 :::warning WARNING

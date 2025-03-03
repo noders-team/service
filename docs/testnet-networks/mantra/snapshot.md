@@ -7,13 +7,13 @@ sidebar_position: 3
 <div class="h1-with-icon icon-mantra">
 # Node Snapshot
 </div>
-###### Chain ID: `mantra-hongbai-1` | Current Node Version: `v3.0.0`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ## Our Mantra Snapshot Server Setup
 
 | Size   | Timestamp    |
 |--------|--------------|
-| 1.21 GB | Thu, 07 Nov 2024 06:16:58 GMT  |
+|  GB |   |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -71,7 +71,7 @@ curl -o - -L https://config-t.noders.services/mantra/data.tar.lz4 | lz4 -d | tar
 ```
 ### Wasm
 ```bash
-curl -o - -L https://config-t.noders.services/mantra/wasm.tar.lz4 | lz4 -d | tar -x -C ~/.mantrachaind
+Not supported
 ```
 
 :::warning WARNING

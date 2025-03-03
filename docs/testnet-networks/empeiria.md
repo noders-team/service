@@ -21,7 +21,7 @@ Official links of social networks of projects
 <CardLayout autoFitEnabled={false}>
     <SmallCard to="https://empe.io/" header={{label: "Website", translateId: "social-telegram"}} iconPath="img/website-icon.svg"/>
     <SmallCard to="https://github.com/empe-io" header={{label: "GitHub", translateId: "social-telegram"}} iconPath="img/github-icon.svg"/>
-    <SmallCard to="https://discord.gg/dymension" header={{label: "Discord", translateId: "social-telegram"}} iconPath="img/discord-icon.svg"/>
+    <SmallCard to="https://discord.gg/crossfi" header={{label: "Discord", translateId: "social-telegram"}} iconPath="img/discord-icon.svg"/>
     <SmallCard to="https://twitter.com/empe_io" header={{label: "X", translateId: "social-telegram"}} iconPath="img/x-icon.svg"/>
     <SmallCard to="https://t.me/web3Empeiria" header={{label: "Telegram", translateId: "social-telegram"}} iconPath="img/telegram-icon.svg"/>
 </CardLayout>

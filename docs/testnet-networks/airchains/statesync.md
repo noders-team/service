@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-airchains">
 # State sync
 </div>
-###### Chain ID: `junction` | Current Node Version: `v0.1.0`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ```bash
 SNAP_RPC=https://airchains-t-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop junctiond && junctiond tendermint unsafe-reset-all --home ~/.junction --keep-addr-book
 ```
 ```bash
-peers="b419d23f56a6a5403319399ed38b6b93138210a1@airchains-t-rpc.noders.services:31656"
+peers="@airchains-t-rpc.noders.services:"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.junction/config/config.toml
 ```
 ```bash

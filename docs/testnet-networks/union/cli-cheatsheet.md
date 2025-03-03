@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-union">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `union-testnet-8` | Current Node Version: `v0.24.0`
+###### Chain ID: `union-testnet-9` | Current Node Version: `v0.25.0`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -46,7 +46,7 @@ uniond q bank balances $(uniond keys show KEY -a) --node https://union-t-rpc.nod
 ### Send
 ```js
 uniond tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000muno \
-  --chain-id union-testnet-8 \
+  --chain-id union-testnet-9 \
   --node https://union-t-rpc.noders.services:443 --fees 3000muno \
   --from KEY
 ```
@@ -54,7 +54,7 @@ uniond tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000muno \
 ### Withdraw rewards from all validators
 ```js
 uniond tx distribution withdraw-all-rewards \
-  --chain-id union-testnet-8 \
+  --chain-id union-testnet-9 \
   --node https://union-t-rpc.noders.services:443 --fees 3000muno \
   --from KEY
 ```
@@ -63,7 +63,7 @@ uniond tx distribution withdraw-all-rewards \
 ```js
 uniond tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
-  --chain-id union-testnet-8 \
+  --chain-id union-testnet-9 \
   --node https://union-t-rpc.noders.services:443 --fees 3000muno \
   --from KEY
 ```
@@ -71,7 +71,7 @@ uniond tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ### Delegate tokens to yourself
 ```js
 uniond tx staking delegate $(uniond keys show KEY --bech val -a) 1000000muno \
---chain-id union-testnet-8 \
+--chain-id union-testnet-9 \
 --node https://union-t-rpc.noders.services:443 --fees 3000muno \
 --from KEY
 ```
@@ -79,7 +79,7 @@ uniond tx staking delegate $(uniond keys show KEY --bech val -a) 1000000muno \
 ### Delegate tokens to validator
 ```js
 uniond tx staking delegate VALIDATOR_ADDRESS 1000000muno \
---chain-id union-testnet-8 \
+--chain-id union-testnet-9 \
 --node https://union-t-rpc.noders.services:443 --fees 3000muno \
 --from KEY
 ```
@@ -87,7 +87,7 @@ uniond tx staking delegate VALIDATOR_ADDRESS 1000000muno \
 ### Redelegate tokens to another validator
 ```js
 uniond tx staking redelegate $(uniond keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000muno \
-  --chain-id union-testnet-8 \
+  --chain-id union-testnet-9 \
   --node https://union-t-rpc.noders.services:443 --fees 3000muno \
   --from KEY
 ```
@@ -108,7 +108,7 @@ uniond query gov proposals --node https://union-t-rpc.noders.services:443
 ### Check vote
 ```js
 uniond query gov proposal PROPOSAL_NUMBER \
-  --chain-id union-testnet-8 \
+  --chain-id union-testnet-9 \
   --node https://union-t-rpc.noders.services:443 --fees 3000muno \
   --output json | jq
 ```
@@ -121,7 +121,7 @@ uniond query gov proposal PROPOSAL_NUMBER \
 * abstain
 ```js
 uniond tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
-  --chain-id union-testnet-8 \
+  --chain-id union-testnet-9 \
   --node https://union-t-rpc.noders.services:443 --fees 3000muno \
   --from KEY
 ```
@@ -144,7 +144,7 @@ uniond tx staking create-validator \
   --identity "220491ADDD660741" \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
-  --chain-id union-testnet-8 \
+  --chain-id union-testnet-9 \
   --node https://union-t-rpc.noders.services:443 --fees 3000muno \
   --from KEY
 ```
@@ -156,7 +156,7 @@ uniond tx staking edit-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id union-testnet-8 \
+--chain-id union-testnet-9 \
 --commission-rate 0.05 \
 --from KEY \
 --node https://union-t-rpc.noders.services:443 --fees 3000muno \
@@ -165,7 +165,7 @@ uniond tx staking edit-validator \
 ### Unjail
 ```js
 uniond tx slashing unjail \
-  --chain-id union-testnet-8 \
+  --chain-id union-testnet-9 \
   --node https://union-t-rpc.noders.services:443 --fees 3000muno \
   --from KEY
 ```

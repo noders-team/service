@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-story">
 # Story
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `odyssey-0` | Current Node Version: `v0.13.0`
 
 
 Story is the World’s IP Blockchain, onramping Programmable IP to power the next generation of AI, DeFi, and consumer applications.
@@ -20,7 +20,7 @@ Official links of social networks of projects
 
 <CardLayout autoFitEnabled={false}>
     <SmallCard to="https://www.story.foundation/" header={{label: "Website", translateId: "social-telegram"}} iconPath="img/website-icon.svg"/>
-    <SmallCard to="https://github.com/storyprotocol" header={{label: "GitHub", translateId: "social-telegram"}} iconPath="img/github-icon.svg"/>
+    <SmallCard to="https://github.com/piplabs/story" header={{label: "GitHub", translateId: "social-telegram"}} iconPath="img/github-icon.svg"/>
     <SmallCard to="https://discord.gg/storyprotocol" header={{label: "Discord", translateId: "social-telegram"}} iconPath="img/discord-icon.svg"/>
     <SmallCard to="https://x.com/StoryProtocol" header={{label: "X", translateId: "social-telegram"}} iconPath="img/x-icon.svg"/>
     

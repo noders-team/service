@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-og">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `zgtendermint_16600-2` | Current Node Version: `v0.4.0`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -46,7 +46,7 @@ This cheatsheet collects commonly used CLI commands for node operators to easily
 ### Send
 ```js
 0gchaind tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000ua0gi \
-  --chain-id zgtendermint_16600-2 \
+  --chain-id auto \
   --node https://og-t-rpc.noders.services:443 --fees 3000ua0gi \
   --from KEY
 ```
@@ -54,7 +54,7 @@ This cheatsheet collects commonly used CLI commands for node operators to easily
 ### Withdraw rewards from all validators
 ```js
 0gchaind tx distribution withdraw-all-rewards \
-  --chain-id zgtendermint_16600-2 \
+  --chain-id auto \
   --node https://og-t-rpc.noders.services:443 --fees 3000ua0gi \
   --from KEY
 ```
@@ -63,7 +63,7 @@ This cheatsheet collects commonly used CLI commands for node operators to easily
 ```js
 0gchaind tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
-  --chain-id zgtendermint_16600-2 \
+  --chain-id auto \
   --node https://og-t-rpc.noders.services:443 --fees 3000ua0gi \
   --from KEY
 ```
@@ -71,7 +71,7 @@ This cheatsheet collects commonly used CLI commands for node operators to easily
 ### Delegate tokens to yourself
 ```js
 0gchaind tx staking delegate $(0gchaind keys show KEY --bech val -a) 1000000ua0gi \
---chain-id zgtendermint_16600-2 \
+--chain-id auto \
 --node https://og-t-rpc.noders.services:443 --fees 3000ua0gi \
 --from KEY
 ```
@@ -79,7 +79,7 @@ This cheatsheet collects commonly used CLI commands for node operators to easily
 ### Delegate tokens to validator
 ```js
 0gchaind tx staking delegate VALIDATOR_ADDRESS 1000000ua0gi \
---chain-id zgtendermint_16600-2 \
+--chain-id auto \
 --node https://og-t-rpc.noders.services:443 --fees 3000ua0gi \
 --from KEY
 ```
@@ -87,7 +87,7 @@ This cheatsheet collects commonly used CLI commands for node operators to easily
 ### Redelegate tokens to another validator
 ```js
 0gchaind tx staking redelegate $(0gchaind keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000ua0gi \
-  --chain-id zgtendermint_16600-2 \
+  --chain-id auto \
   --node https://og-t-rpc.noders.services:443 --fees 3000ua0gi \
   --from KEY
 ```
@@ -108,7 +108,7 @@ This cheatsheet collects commonly used CLI commands for node operators to easily
 ### Check vote
 ```js
 0gchaind query gov proposal PROPOSAL_NUMBER \
-  --chain-id zgtendermint_16600-2 \
+  --chain-id auto \
   --node https://og-t-rpc.noders.services:443 --fees 3000ua0gi \
   --output json | jq
 ```
@@ -121,7 +121,7 @@ This cheatsheet collects commonly used CLI commands for node operators to easily
 * abstain
 ```js
 0gchaind tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
-  --chain-id zgtendermint_16600-2 \
+  --chain-id auto \
   --node https://og-t-rpc.noders.services:443 --fees 3000ua0gi \
   --from KEY
 ```
@@ -144,7 +144,7 @@ We use example filed values instead of capitalized dummy words for demo purpose 
   --identity "220491ADDD660741" \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
-  --chain-id zgtendermint_16600-2 \
+  --chain-id auto \
   --node https://og-t-rpc.noders.services:443 --fees 3000ua0gi \
   --from KEY
 ```
@@ -156,7 +156,7 @@ We use example filed values instead of capitalized dummy words for demo purpose 
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id zgtendermint_16600-2 \
+--chain-id auto \
 --commission-rate 0.05 \
 --from KEY \
 --node https://og-t-rpc.noders.services:443 --fees 3000ua0gi \
@@ -165,7 +165,7 @@ We use example filed values instead of capitalized dummy words for demo purpose 
 ### Unjail
 ```js
 0gchaind tx slashing unjail \
-  --chain-id zgtendermint_16600-2 \
+  --chain-id auto \
   --node https://og-t-rpc.noders.services:443 --fees 3000ua0gi \
   --from KEY
 ```

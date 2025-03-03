@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-og">
 # Installation
 </div>
-###### Chain ID: `zgtendermint_16600-2` | Current Node Version: `v0.4.0`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone ZeroGravity repo and build 0gchaind v0.4.0
+### Clone ZeroGravity repo and build 0gchaind auto
 ```js
 cd $HOME
 git clone https://github.com/0glabs/0g-chain.git
 cd 0g-chain
-git checkout v0.4.0
+git checkout auto
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.0gchain/cosmovisor/upgrades/v0.4.0/bin
-mv $HOME/go/bin/0gchaind ~/.0gchain/cosmovisor/upgrades/v0.4.0/bin/
+mkdir -p ~/.0gchain/cosmovisor/upgrades/auto/bin
+mv $HOME/go/bin/0gchaind ~/.0gchain/cosmovisor/upgrades/auto/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone ZeroGravity repo and build 0gchaind v0.4.0
+### Clone ZeroGravity repo and build 0gchaind auto
 ```js
 cd $HOME
 git clone https://github.com/0glabs/0g-chain.git
 cd 0g-chain
-git checkout v0.4.0
+git checkout auto
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable 0gchaind
 ## Node configuration
 ### Set config
 ```js
-0gchaind config chain-id zgtendermint_16600-2
+0gchaind config chain-id auto
 0gchaind config keyring-backend os
 0gchaind config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-0gchaind init NAME_OF_YOUR_VALIDATOR --chain-id zgtendermint_16600-2
+0gchaind init NAME_OF_YOUR_VALIDATOR --chain-id auto
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config-t.noders.services/og/addrbook.json -o ~/.0gchain/config/addr
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"d9fee544b90d15c4f024e52b6c5b2fd9fd199514@og-t-rpc.noders.services:29656\"/" ~/.0gchain/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@og-t-rpc.noders.services:\"/" ~/.0gchain/config/config.toml
 ```
 
 ### Set minimum gas price

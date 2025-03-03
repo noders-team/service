@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-osmosis">
 # Upgrade
 </div>
-###### Chain ID: `osmosis-1` | Current Node Version: `v26.0.1`
+###### Chain ID: `osmosis-1` | Current Node Version: `v28.0.4`
 
 
 # Clone Osmosis repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf osmosis
 git clone https://github.com/osmosis-labs/osmosis.git
 cd osmosis
-git checkout v26.0.1
+git checkout v28.0.4
  ```
 
 # Build binaries
@@ -26,8 +26,8 @@ make build
 
 # Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.osmosisd/cosmovisor/upgrades/v26.0.1/bin
-mv build/osmosisd ~/.osmosisd/cosmovisor/upgrades/v26.0.1/bin/
+mkdir -p ~/.osmosisd/cosmovisor/upgrades/v28.0.4/bin
+mv build/osmosisd ~/.osmosisd/cosmovisor/upgrades/v28.0.4/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf osmosis
 git clone https://github.com/osmosis-labs/osmosis.git
 cd osmosis
-git checkout v26.0.1
+git checkout v28.0.4
  ```
 
 ## Build binaries

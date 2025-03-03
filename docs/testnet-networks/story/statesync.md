@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-story">
 # State sync
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `odyssey-0` | Current Node Version: `v0.13.0`
 
 ```bash
 SNAP_RPC=https://story.rpc.noders.services:443 && \

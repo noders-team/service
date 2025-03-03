@@ -7,13 +7,13 @@ sidebar_position: 3
 <div class="h1-with-icon icon-union">
 # Node Snapshot
 </div>
-###### Chain ID: `union-testnet-8` | Current Node Version: `v0.24.0`
+###### Chain ID: `union-testnet-9` | Current Node Version: `v0.25.0`
 
 ## Our Union Snapshot Server Setup
 
 | Size   | Timestamp    |
 |--------|--------------|
-| 122.71 GB | Thu, 07 Nov 2024 06:09:12 GMT  |
+|  GB |   |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -71,7 +71,7 @@ curl -o - -L https://config-t.noders.services/union/data.tar.lz4 | lz4 -d | tar 
 ```
 ### Wasm
 ```bash
-curl -o - -L https://config-t.noders.services/union/wasm.tar.lz4 | lz4 -d | tar -x -C ~/.union
+Not supported
 ```
 
 :::warning WARNING

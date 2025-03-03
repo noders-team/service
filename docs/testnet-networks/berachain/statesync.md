@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-berachain">
 # State sync
 </div>
-###### Chain ID: `auto` | Current Node Version: `v0.2.0-alpha.8`
+###### Chain ID: `bartio-beacon-80084` | Current Node Version: `auto`
 
 ```bash
 SNAP_RPC=https://berachain-t-rpc.noders.services:443 && \

@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-seda">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `seda-1` | Current Node Version: `v0.1.1`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -46,7 +46,7 @@ sedad q bank balances $(sedad keys show KEY -a) --node https://seda-rpc.noders.s
 ### Send
 ```js
 sedad tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000aseda \
-  --chain-id seda-1 \
+  --chain-id auto \
   --node https://seda-rpc.noders.services:443 --fees 3000000aseda \
   --from KEY
 ```
@@ -54,7 +54,7 @@ sedad tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000aseda \
 ### Withdraw rewards from all validators
 ```js
 sedad tx distribution withdraw-all-rewards \
-  --chain-id seda-1 \
+  --chain-id auto \
   --node https://seda-rpc.noders.services:443 --fees 3000000aseda \
   --from KEY
 ```
@@ -63,7 +63,7 @@ sedad tx distribution withdraw-all-rewards \
 ```js
 sedad tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
-  --chain-id seda-1 \
+  --chain-id auto \
   --node https://seda-rpc.noders.services:443 --fees 3000000aseda \
   --from KEY
 ```
@@ -71,7 +71,7 @@ sedad tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ### Delegate tokens to yourself
 ```js
 sedad tx staking delegate $(sedad keys show KEY --bech val -a) 1000000aseda \
---chain-id seda-1 \
+--chain-id auto \
 --node https://seda-rpc.noders.services:443 --fees 3000000aseda \
 --from KEY
 ```
@@ -79,7 +79,7 @@ sedad tx staking delegate $(sedad keys show KEY --bech val -a) 1000000aseda \
 ### Delegate tokens to validator
 ```js
 sedad tx staking delegate VALIDATOR_ADDRESS 1000000aseda \
---chain-id seda-1 \
+--chain-id auto \
 --node https://seda-rpc.noders.services:443 --fees 3000000aseda \
 --from KEY
 ```
@@ -87,7 +87,7 @@ sedad tx staking delegate VALIDATOR_ADDRESS 1000000aseda \
 ### Redelegate tokens to another validator
 ```js
 sedad tx staking redelegate $(sedad keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000aseda \
-  --chain-id seda-1 \
+  --chain-id auto \
   --node https://seda-rpc.noders.services:443 --fees 3000000aseda \
   --from KEY
 ```
@@ -108,7 +108,7 @@ sedad query gov proposals --node https://seda-rpc.noders.services:443
 ### Check vote
 ```js
 sedad query gov proposal PROPOSAL_NUMBER \
-  --chain-id seda-1 \
+  --chain-id auto \
   --node https://seda-rpc.noders.services:443 --fees 3000000aseda \
   --output json | jq
 ```
@@ -121,7 +121,7 @@ sedad query gov proposal PROPOSAL_NUMBER \
 * abstain
 ```js
 sedad tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
-  --chain-id seda-1 \
+  --chain-id auto \
   --node https://seda-rpc.noders.services:443 --fees 3000000aseda \
   --from KEY
 ```
@@ -144,7 +144,7 @@ sedad tx staking create-validator \
   --identity "220491ADDD660741" \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
-  --chain-id seda-1 \
+  --chain-id auto \
   --node https://seda-rpc.noders.services:443 --fees 3000000aseda \
   --from KEY
 ```
@@ -156,7 +156,7 @@ sedad tx staking edit-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id seda-1 \
+--chain-id auto \
 --commission-rate 0.05 \
 --from KEY \
 --node https://seda-rpc.noders.services:443 --fees 3000000aseda \
@@ -165,7 +165,7 @@ sedad tx staking edit-validator \
 ### Unjail
 ```js
 sedad tx slashing unjail \
-  --chain-id seda-1 \
+  --chain-id auto \
   --node https://seda-rpc.noders.services:443 --fees 3000000aseda \
   --from KEY
 ```
@@ -271,5 +271,5 @@ sudo rm /etc/systemd/system/seda.service
 sudo systemctl daemon-reload
 rm -f $(which sedad)
 rm -rf ~/.sedad
-rm -rf $HOME/sedaprotocol
+rm -rf $HOME/seda-chain
 ```
