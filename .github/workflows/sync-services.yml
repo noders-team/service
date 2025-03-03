@@ -9,6 +9,7 @@ on:
       - 'src/**'
       - 'static/**'
       - 'sidebars/**'
+      - 'config/**'
 
 jobs:
   deploy:
