@@ -18,10 +18,10 @@ jobs:
       - name: Connect to the remote host and execute deployment script
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.MONITOR_HOST }}
-          port: ${{ secrets.MONITOR_PORT }}
-          username: ${{ secrets.MONITOR_USERNAME }}
-          key: ${{ secrets.MONITOR_SSH_KEY }}
+          host: ${{ secrets.SERVICE_HOST }}
+          port: ${{ secrets.SERVICE_PORT }}
+          username: ${{ secrets.SERVICE_USERNAME }}
+          key: ${{ secrets.SERVICE_SSH_KEY }}
           script: |
             cd $HOME/service/config
             ./update_and_deploy.sh
