@@ -13,7 +13,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 ###### Chain ID: `atomone-testnet-1` | Current Node Version: `v1.0.1`
 
 
-The vision behind this AtomOne fork is to be an alternative minimal fork of Gaia ("cosmoshub4") running alongside Gaia to prepare for all contingencies, and also to operate as a political party base in relation to Gaia. We strive to complement the broader Cosmos ecosystem while introducing innovative solutions and perspectives. Our goals are not just to resolve current challenges but are also to set a new precedent for adaptive and responsive self-organization in the multichain multitoken universe that we call the Cosmos.
+The vision behind this AtomOne fork is to be an alternative minimal fork of Gaia ("cosmoshub4") running alongside Gaia to prepare for all contingencies, and also to operate as a political party base in relation to Gaia. We strive to complement the broader Cosmos ecosystem while introducing innovative solutions and perspectives. Our goals are not just to resolve current challenges but also to set a new precedent for adaptive and responsive self-organization in the multichain multitoken universe that we call the Cosmos.
 
 # Social resources
 Official links of social networks of projects

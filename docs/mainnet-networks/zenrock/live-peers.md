@@ -19,7 +19,7 @@ Here is a list of 3 active peers as observed by [NODERS]TEAM in real-time. Add t
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=2f037a6461c012f3296ab1815b3c47843bcd7c3a@65.109.69.119:59656,4f93fec81eadc205dee1b63e766cc33d9f2e6767@54.195.115.195:26656,5ad8a5de6318529994da817043b268ef617e37ba@54.216.86.166:26656
+PEERS=5ad8a5de6318529994da817043b268ef617e37ba@54.216.86.166:26656,4f93fec81eadc205dee1b63e766cc33d9f2e6767@54.195.115.195:26656,2f037a6461c012f3296ab1815b3c47843bcd7c3a@65.109.69.119:59656
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.zrchain/config/config.toml
 
 sudo systemctl restart zenrockd

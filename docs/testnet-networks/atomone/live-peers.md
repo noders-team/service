@@ -19,7 +19,7 @@ Here is a list of 57 active peers as observed by [NODERS]TEAM in real-time. Add 
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=0fb15788a7eb801450c85344c80a9fa78e2b35dd@138.201.85.253:10656,95a4d6b205a173785a1fb3317666a8f85ac7e5cd@142.160.67.89:26656,ce191e4f5bbf8a88412b793fbb1e6ff7b0ba1912@134.17.6.22:26657,cd1b941639898c6c9f7a2d047f52525c9901a65d@168.119.155.34:26656,f824523ca8278b2c7e068ee23500302b9d80bfca@135.125.97.162:29956
+PEERS=6722e59eeeee588c7113127bbee2607165efdbb4@46.242.38.138:26656,edbcc5207173d5ddc744b95602f726ab651138d3@136.52.87.32:26656,0fb15788a7eb801450c85344c80a9fa78e2b35dd@138.201.85.253:10656,637077d431f618181597706810a65c826524fd74@65.109.22.185:29956,2516ab05cbaade0a9a3c506f0f13962fea64edc1@2a01:26656
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.atomone/config/config.toml
 
 sudo systemctl restart atomoned
