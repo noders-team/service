@@ -19,7 +19,7 @@ Here is a list of 75 active peers as observed by [NODERS]TEAM in real-time. Add 
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=7ae101524db07a4ee0afe1526b532fff5f826c96@49.13.148.33:26637,b1dcbb37514fbe215be54079e71aa39dac7fd0ae@64.5.123.203:26656,02d9c4ef53d97efa263dec68e4f3daa9bfac1322@207.231.104.10:33656,ab6a4ae2857ac05fa8f45b03871fa3945193fc61@46.4.81.204:35656,f8209a7ec91f5fc17c789046eacdf7290a503d1e@193.34.213.223:13656
+PEERS=f852ef00c68015ced56818976499e20c0e195dfa@148.113.1.84:16656,ade59f28832001a2a4a64430c8ecaab16ce70c11@178.18.243.67:26656,2b7c68e1099e0a9dc10de0fc902923294018d048@141.94.193.28:54556,d09034a2874616a10d960f6531767e2f46a963b0@216.18.211.130:26656,23e76540bea9b6851b92e280d7e0c123a0d49521@142.132.148.140:30546
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.rebusd/config/config.toml
 
 sudo systemctl restart rebusd
