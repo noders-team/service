@@ -19,7 +19,7 @@ ce255cfad8fffa930e9e6eb1af69f0faca961b95@46.172.236.28:26656,166f7e48e1c756cc663
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=32c1eb0222d2ef914d7015131e5b0f1e70febc5f@54.175.185.100:26656,a1fd703a804459053331bfcbc2959c4f65c8ad15@135.181.246.250:3640,dd6a6d9f4d12bb021de3aada225290770a370cf6@5.9.116.21:37856,c8a84b754754cf79703d285248d75c322aa6f9c0@138.201.54.217:26656,fb0ca9d970416bc640e927d43ff5509dba6e5ea6@65.109.113.219:30056
+PEERS=a1fd703a804459053331bfcbc2959c4f65c8ad15@135.181.246.250:3640,e60a252c148b17122107eba50b4d1b16b7100fa7@23.129.20.120:30056,32c1eb0222d2ef914d7015131e5b0f1e70febc5f@54.175.185.100:26656,10ce7abb1756a06f47438d552c0d91dce6d2b3a1@49.12.168.57:26656,af805ddcd9aca66ef62ae7ce73c920262bac6759@20.215.232.138:26656
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.exrpd/config/config.toml
 
 sudo systemctl restart exrpd

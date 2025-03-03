@@ -19,7 +19,7 @@ ce94c5e02457accd8c0e5f3a61f381f4710b81ae@65.109.29.31:26656,e43ef756309cf5dfbe4c
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=a2e86407c88531b8f62e857ed462eb86634671ea@23.88.100.214:26633,cc8d907b50f19b1a5b9b50716b5f555c86c9d27d@5.9.89.67:15620,8f1930de752a4b589b190e504de9327c203ebc4f@168.119.91.28:26656,c7ecdf87a6ea0ed13f8a5ae0ceea6b1a869a13b6@149.202.68.156:26667,8c37dc8a6c80b411e56e64926291f840750c4348@135.181.142.60:14656
+PEERS=326c1f2744ef1fda960d9c4645ccbd4b4b439aba@23.227.222.196:26656,a9770b180401b2f08499dddee66f538d16ebf6c1@67.211.212.14:656,aa05d4ab1f895626a9b755bdb55f9bd3d40c630c@148.251.13.186:11156,f1d2ffadfb5c5a0feb09b740a3818672595b8f84@88.198.69.44:11156,287b4fb0a5789a1ee25701fbbf54b2688fddcb84@149.50.96.24:16656
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.quicksilverd/config/config.toml
 
 sudo systemctl restart quicksilverd

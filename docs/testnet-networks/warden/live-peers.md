@@ -19,7 +19,7 @@ Here is a list of 92 active peers as observed by [NODERS]TEAM in real-time. Add 
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=e36b636f749d8ea2c7c789ae6ba7b75f52d87c54@57.129.18.53:20145,a68e1721ef211777564265f059a5964fcaf874ba@89.250.64.95:24656,9d186defd9a6ccf1028ad9a209296576e7332067@77.68.126.116:26646,aabe02676fbc59f29a12ed5dc73468abd9caa05f@89.117.58.62:18656,52cda545941f6bc85daf379a5661c8747c8272f3@15.204.143.180:18656
+PEERS=fb00d4ce8903bb949ba5fd783bef6e8872e560c0@65.109.93.168:26656,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:17856,a7a187a1e795f7daf33a28de97ca5a66b525bdff@45.159.230.247:44656,aabe02676fbc59f29a12ed5dc73468abd9caa05f@89.117.58.62:18656,8405984f8a96676bce6f45fee80ca65e42ae6511@65.109.69.117:10656
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.warden/config/config.toml
 
 sudo systemctl restart wardend
