@@ -19,7 +19,7 @@ Here is a list of 37 active peers as observed by [NODERS]TEAM in real-time. Add 
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=b66fd8fc31b0f7b09b0d400065d3834e615a4d46@135.181.240.156:44056,c446dbb102cb95d5b368b96157dff9eccd87438e@161.117.248.199:26656,e8c1d8302878dc02ead10466a8c4ae6b38267c70@148.113.190.239:22656,70b318f49e6b1a5539d1c1b4605649c0d342af78@195.201.241.107:56146,e9ee4fb923d5aab89207df36ce660ff1b882fc72@136.243.33.177:21656
+PEERS=c446dbb102cb95d5b368b96157dff9eccd87438e@161.117.248.199:26656,67cd6d593543f4a469734bdd4dff64fcf05bf6d3@91.210.101.84:26656,942d309d479b7288156848b2302390693c71e42c@51.195.61.9:26356,7c9c4e4d0bbcd99410802974ccebca15b7ca3e5d@94.130.164.82:26356,3247baecb8d37c8429530b7fd2efccf12e1bda86@148.251.235.130:21656
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.side/config/config.toml
 
 sudo systemctl restart sided
