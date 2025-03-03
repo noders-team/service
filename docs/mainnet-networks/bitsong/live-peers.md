@@ -19,7 +19,7 @@ d223f96c92632b3050300a98bf47b8e013c45de0@65.108.126.22:26706,2d8bf092c19043cf61e
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=d223f96c92632b3050300a98bf47b8e013c45de0@65.108.126.22:26706,a5ca61340cba363f99eed283ecd7fb38a9b4337f@107.155.67.202:26626,559dc39ef605ba3f5d22bc65c85e67c58f91afed@187.85.19.200:26656,d4454c53b6c3ca970e38cb506de76a1598a619d8@65.108.121.190:2040,a4673ba339a5b2600b6c0f8ffa4b46caf448c362@184.107.110.21:10400
+PEERS=76ee51cf5ae45b28a8aebc3d5fe0df6cde99683e@143.110.239.73:26656,7053a0374e06e7b6e0479002d1a05f53afb67790@62.109.12.16:26656,a369636384b7700e524988f55320ba52b17a2c06@65.109.97.249:16056,33537488478da9bb5da9aeb266e24fe78ed5b697@193.34.213.222:11656,2d8bf092c19043cf61e3e2aa94774a60aba90952@135.181.215.62:1060
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.bitsongd/config/config.toml
 
 sudo systemctl restart bitsongd

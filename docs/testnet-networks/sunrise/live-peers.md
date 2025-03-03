@@ -19,7 +19,7 @@ cfea981768c4f3b0c9edd5cbca89442a011119b0@65.108.229.19:26776,8dd817674414fe540ae
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=20f1f9f7f8bed7e1dd28c072cf4818439db9120f@37.27.59.178:46656,db223ecc4fba0e7135ba782c0fd710580c5213a6@44.222.102.202:26656,3ef604c48f0a579c5a2a19ddd29a99ad4949ef8e@135.181.139.249:56656,18b9bc3dccfd64dc39459fbac52f7ae7809fd697@13.52.180.217:26656,c41c0dbd00c1bfb9e9f9bd84666fcad818588cbd@89.169.145.165:26656
+PEERS=6939efb7e3d84915a54bb2739630fb6049acd478@91.205.104.146:26656,1e212d6cd9e8f6c633ba8990bbdcf18394a0fbac@148.251.86.17:28356,493e58264302d4e59c9ab50d1cde062745ff882a@5.9.73.170:28356,c6ef0e42531470e7424ae14742eab99199b5c83a@142.132.209.118:26656,320e147cd7ae2ac7650931a96c73543856a2e496@144.76.92.22:13656
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.sunrise/config/config.toml
 
 sudo systemctl restart sunrised
