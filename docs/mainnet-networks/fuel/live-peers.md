@@ -19,7 +19,7 @@ d6491ecc489651c0e76c5677b25a608efb13cd5e@45.77.247.64:38556,e33bd83d1a1d84ef5c5c
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=d6491ecc489651c0e76c5677b25a608efb13cd5e@45.77.247.64:38556,5d75cca90b178f2b782ce57b0067c0ec8512354c@65.109.70.89:41656,330639bdccf597c86bf413dd904e0b377fa1ed21@189.1.170.148:26656,7c856ef7cd1a964b77c2e4cc9a18572d126ca47f@37.27.52.25:63656,5c48a466fce0b5e5ce074a155073320f3dd6e6b4@35.226.58.47:26656
+PEERS=540efd57749223b1400475e121addbddca972916@185.107.68.176:26656,478d6a599ac3e2b93a3622a635c378804b26975a@162.19.83.215:58456,d48507eb9c8fc6cab278da8b64548496134562dc@141.95.11.200:26656,07763803ce4226d9032d55fc6e18d1bd3ac4d40e@86.111.48.66:26656,d87dfe68db586fecc1141b0de687cbd72f1e131e@207.180.215.245:26656
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.fuelsequencer/config/config.toml
 
 sudo systemctl restart fuelsequencerd

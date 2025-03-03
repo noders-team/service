@@ -19,7 +19,7 @@ cb5bd80eb2027422e320e91077eb7aabac66aee7@172.178.72.18:26656,0bf535285fd0a205d4f
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=0797f7bf97bc80d4ca9db230a9ea7f8f6f223ea0@44.246.36.110:26656,04e2201496a150d6846ba82e9d461f935e9103a2@204.29.146.5:26656,c14b1ded8ada662f88f07dc48df344bf3b0f6dae@142.132.146.201:26656,f862618e541b656fca35f565ac46a63bb8043372@84.32.32.150:17600,3adb2d234bd0ab7f764a2b958d6b1f161453c193@142.59.237.125:26656
+PEERS=23893853766ba29bd929642c07a6d253ceb1075e@139.99.122.62:26656,b4ba6edc569ec41b266acb846299c505140180bc@65.109.159.109:22556,c37f642698260707c0e25a8895f9d36735318ef3@54.212.38.135:26656,b7f9f499b1f961372d515adbb76e0e0d64bcd8d6@5.9.104.181:15156,7c54ea34fb8269f1e089606ea0da96b3bb7fd78d@8.218.154.34:26656
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.zetacored/config/config.toml
 
 sudo systemctl restart zetacored

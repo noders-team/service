@@ -19,7 +19,7 @@ e0db435083b4a927ef34d46780a86ae263dbed8c@95.216.54.249:58656,1bcc2348282d98636bb
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=0b871f15d2f3047f87fdeaed39b30f9ab1f0599c@167.235.21.165:56656,decb454839c3bcd20010526547e33ffbbb77bd06@213.136.72.187:42656,58c2ffb3e16f61462ebf26730cbc27b458ea82c0@34.44.209.45:26656,c89c9beda9c89c0eb8cbabc86d78fb03cc3036b4@185.16.38.165:15656,1d43ae39c11c4c06d1858514d85bd7c1238e1499@184.107.182.148:59500
+PEERS=28c0fcd184c31ac7f3e2b3a91ae60dedc086b0c3@94.130.204.227:26656,e0ed0e501fe664d200194c22c61e6c124b5a6324@144.91.82.178:57656,f487313950783ed57c5fcb9be1998b50a41bd931@37.27.127.220:57656,09a7ceb1234360d112b07cfc1a7df2be55185efc@77.237.241.33:26656,637077d431f618181597706810a65c826524fd74@176.9.120.85:30156
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.pellcored/config/config.toml
 
 sudo systemctl restart pellcored
