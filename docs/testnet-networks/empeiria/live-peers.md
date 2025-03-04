@@ -19,7 +19,7 @@ ceabbac01275c13b6e1db47922e1e21da5083c81@65.108.120.251:16656,db9607ef69e579017d
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=6060deaa35729321c2f23c8d3b4938e1440083f9@65.109.30.13:11656,78f766310a83b6670023169b93f01d140566db79@65.109.83.40:29056,810e21adee3b8f337bab0df70ba75d38afde2348@152.53.0.11:29656,149383fab60d8845c408dce7bb93c05aa1fd115e@54.37.80.141:26656,101da325773c1a40b5f11f7f7befe72570828869@65.21.196.57:11156
+PEERS=99ff20ec0c3623d2d725924b8fd0f1c4e1b22e15@195.201.59.173:26656,db9607ef69e579017da25921c818ee23542f689e@65.109.69.117:11656,370697b6f8be026f8529552c22b48c7f5d3ffa36@157.173.193.224:11156,d4e183a6637a8e0844b6c5cecc55a440891b8275@2a01:14056,8158a83a54b6bda18478a959c6b5fb95b6c94170@158.220.103.71:28656
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.empe-chain/config/config.toml
 
 sudo systemctl restart emped
