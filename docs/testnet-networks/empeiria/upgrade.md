@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-empeiria">
 # Upgrade
 </div>
-###### Chain ID: `empe-testnet-2` | Current Node Version: `v0.2.2`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 # With Cosmovisor
 ## Clone Empeiria repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf empe-io
 git clone https://github.com/empe-io.git
 cd empe-io
-git checkout v0.2.2
+git checkout auto
  ```
 
 ## Build binaries
@@ -26,8 +26,8 @@ make build
 
 ## Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.empe-chain/cosmovisor/upgrades/v0.2.2/bin
-mv build/emped ~/.empe-chain/cosmovisor/upgrades/v0.2.2/bin/
+mkdir -p ~/.empe-chain/cosmovisor/upgrades/auto/bin
+mv build/emped ~/.empe-chain/cosmovisor/upgrades/auto/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf empe-io
 git clone https://github.com/empe-io.git
 cd empe-io
-git checkout v0.2.2
+git checkout auto
  ```
 
 ## Build binaries

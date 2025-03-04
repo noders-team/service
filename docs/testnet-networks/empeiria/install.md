@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-empeiria">
 # Installation
 </div>
-###### Chain ID: `empe-testnet-2` | Current Node Version: `v0.2.2`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Empeiria repo and build emped v0.2.2
+### Clone Empeiria repo and build emped auto
 ```js
 cd $HOME
 git clone https://github.com/empe-io.git
 cd empe-io
-git checkout v0.2.2
+git checkout auto
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.empe-chain/cosmovisor/upgrades/v0.2.2/bin
-mv $HOME/go/bin/emped ~/.empe-chain/cosmovisor/upgrades/v0.2.2/bin/
+mkdir -p ~/.empe-chain/cosmovisor/upgrades/auto/bin
+mv $HOME/go/bin/emped ~/.empe-chain/cosmovisor/upgrades/auto/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Empeiria repo and build emped v0.2.2
+### Clone Empeiria repo and build emped auto
 ```js
 cd $HOME
 git clone https://github.com/empe-io.git
 cd empe-io
-git checkout v0.2.2
+git checkout auto
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable emped
 ## Node configuration
 ### Set config
 ```js
-emped config chain-id empe-testnet-2
+emped config chain-id auto
 emped config keyring-backend os
 emped config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-emped init NAME_OF_YOUR_VALIDATOR --chain-id empe-testnet-2
+emped init NAME_OF_YOUR_VALIDATOR --chain-id auto
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config-t.noders.services/empeiria/addrbook.json -o ~/.empe-chain/co
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"5fc98f2ec4b2a6001aa5655c9852d259e83a8e74@empeiria-t-rpc.noders.services:11256\"/" ~/.empe-chain/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@empeiria-t-rpc.noders.services:\"/" ~/.empe-chain/config/config.toml
 ```
 
 ### Set minimum gas price

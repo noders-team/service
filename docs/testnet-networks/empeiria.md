@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-empeiria">
 # Empeiria
 </div>
-###### Chain ID: `empe-testnet-2` | Current Node Version: `v0.2.2`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 
 Empeiria is the first End-to-End Verifiable Data Infrastructure (EVDI). It enables seamless web3 adoption through one-click deployment, empowering organizations with the data of the future.

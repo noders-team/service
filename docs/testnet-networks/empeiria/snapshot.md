@@ -7,13 +7,13 @@ sidebar_position: 3
 <div class="h1-with-icon icon-empeiria">
 # Node Snapshot
 </div>
-###### Chain ID: `empe-testnet-2` | Current Node Version: `v0.2.2`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ## Our Empeiria Snapshot Server Setup
 
 | Size   | Timestamp    |
 |--------|--------------|
-| 3.66 GB | Tue, 04 Mar 2025 06:13:52 GMT  |
+| 3.68 GB | Tue, 04 Mar 2025 12:13:46 GMT  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
