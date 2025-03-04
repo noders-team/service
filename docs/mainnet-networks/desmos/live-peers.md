@@ -19,7 +19,7 @@ b8fdec68b0ecc34bffd9bd61f7b77b86aa542e0f@216.158.237.22:36756,289262e770c1f77270
 Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
 
 ```bash
-PEERS=76a72552810c443d39c7ffafead34a4c96bd37e9@164.68.107.173:26656,e0aa62e0f0fa2d951106d3fa2baee3b6107e99ce@65.21.201.244:26726,6a25b1568b5ddfd9294574b7e000c4612463a960@198.37.112.78:26656,ceba918a8415a3849073ead8ef0cb34b45f7aa78@176.9.125.110:43596,289262e770c1f77270f3dce57ae514e11c3f6c62@203.135.141.134:26656
+PEERS=8dacaa3db6236875ef84e46d96c594bf6fdde48e@51.161.87.146:29656,86854c9da9a050d9146849975d23981c3ec7de2c@65.108.126.22:26716,c92a747a49221fc8a431718268df6b9b15f5016d@142.132.149.171:16256,be472c0ba2fd327347cce48613b4df66f6571fd7@176.191.97.120:26656,23721024ea06e3610ab1f6a34b51f592cd1a3589@139.162.81.104:26656
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.desmos/config/config.toml
 
 sudo systemctl restart desmos
