@@ -13,7 +13,7 @@ sidebar_position: 4
 
 | Size   | Timestamp   |
 |--------|-------------|
-|  GB |  |
+| 1.89 GB | Tue, 04 Mar 2025 06:32:44 GMT |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -71,7 +71,7 @@ curl -o - -L https://config.noders.services/kopi/data.tar.lz4 | lz4 -d | tar -x 
 ```
 ### Wasm
 ```bash
-Not supported
+curl -o - -L https://config.noders.services/kopi/wasm.tar.lz4 | lz4 -d | tar -x -C ~/.kopid
 ```
 
 :::warning WARNING

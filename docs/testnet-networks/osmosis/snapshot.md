@@ -7,13 +7,13 @@ sidebar_position: 3
 <div class="h1-with-icon icon-osmosis">
 # Node Snapshot
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `osmo-test-5` | Current Node Version: `28.0.0-rc1`
 
 ## Our Osmosis Snapshot Server Setup
 
 | Size   | Timestamp    |
 |--------|--------------|
-|  GB |   |
+| 100.14 GB | Tue, 04 Mar 2025 07:25:05 GMT  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -71,7 +71,7 @@ curl -o - -L https://config-t.noders.services/osmosis/data.tar.lz4 | lz4 -d | ta
 ```
 ### Wasm
 ```bash
-Not supported
+curl -o - -L https://config-t.noders.services/osmosis/wasm.tar.lz4 | lz4 -d | tar -x -C ~/.osmosisd
 ```
 
 :::warning WARNING

@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-humans">
 # Node Snapshot
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `humans_1089-1` | Current Node Version: `v1.0.0`
 
 ## Our Humans Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-|  GB |  |
+| 2.49 GB | Tue, 04 Mar 2025 06:33:27 GMT |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

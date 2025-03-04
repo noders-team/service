@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-umee">
 # Installation
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `umee-1` | Current Node Version: `v6.7.3`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone UX repo and build umeed auto
+### Clone UX repo and build umeed v6.7.3
 ```js
 cd $HOME
 git clone https://github.com/umee-network.git
 cd umee-network
-git checkout auto
+git checkout v6.7.3
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.umee/cosmovisor/upgrades/auto/bin
-mv $HOME/go/bin/umeed ~/.umee/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.umee/cosmovisor/upgrades/v6.7.3/bin
+mv $HOME/go/bin/umeed ~/.umee/cosmovisor/upgrades/v6.7.3/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone UX repo and build umeed auto
+### Clone UX repo and build umeed v6.7.3
 ```js
 cd $HOME
 git clone https://github.com/umee-network.git
 cd umee-network
-git checkout auto
+git checkout v6.7.3
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable umeed
 ## Node configuration
 ### Set config
 ```js
-umeed config chain-id auto
+umeed config chain-id umee-1
 umeed config keyring-backend os
 umeed config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-umeed init NAME_OF_YOUR_VALIDATOR --chain-id auto
+umeed init NAME_OF_YOUR_VALIDATOR --chain-id umee-1
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config.noders.services/umee/addrbook.json -o ~/.umee/config/addrboo
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@umee-rpc.noders.services:\"/" ~/.umee/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"8349a4ab1d96f63cd0c9ff603c9869810e4a8e15@umee-rpc.noders.services:32656\"/" ~/.umee/config/config.toml
 ```
 
 ### Set minimum gas price

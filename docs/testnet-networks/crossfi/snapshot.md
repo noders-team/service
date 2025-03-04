@@ -7,13 +7,13 @@ sidebar_position: 3
 <div class="h1-with-icon icon-crossfi">
 # Node Snapshot
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `crossfi-evm-testnet-1` | Current Node Version: `0.3.0-prebuild9`
 
 ## Our CrossFI Snapshot Server Setup
 
 | Size   | Timestamp    |
 |--------|--------------|
-|  GB |   |
+| 3.54 GB | Tue, 04 Mar 2025 06:19:02 GMT  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

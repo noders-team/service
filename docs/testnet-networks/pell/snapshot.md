@@ -13,7 +13,7 @@ sidebar_position: 3
 
 | Size   | Timestamp    |
 |--------|--------------|
-|  GB |   |
+| 2.72 GB | Tue, 04 Mar 2025 06:02:45 GMT  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -71,7 +71,7 @@ curl -o - -L https://config-t.noders.services/pell/data.tar.lz4 | lz4 -d | tar -
 ```
 ### Wasm
 ```bash
-Not supported
+curl -o - -L https://config-t.noders.services/pell/wasm.tar.lz4 | lz4 -d | tar -x -C ~/.pellcored
 ```
 
 :::warning WARNING

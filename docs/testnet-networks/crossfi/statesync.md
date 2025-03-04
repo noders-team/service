@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-crossfi">
 # State sync
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `crossfi-evm-testnet-1` | Current Node Version: `0.3.0-prebuild9`
 
 ```bash
 SNAP_RPC=https://crossfi-t-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop crossfid && crossfid tendermint unsafe-reset-all --home ~/.mineplex-chain --keep-addr-book
 ```
 ```bash
-peers="@crossfi-t-rpc.noders.services:"
+peers="de9daabf7d001c44749bca2eab3085d40ef3accb@crossfi-t-rpc.noders.services:12656"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.mineplex-chain/config/config.toml
 ```
 ```bash

@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-berachain">
 # Berachain
 </div>
-###### Chain ID: `bartio-beacon-80084` | Current Node Version: `auto`
+###### Chain ID: `bartio-beacon-80084` | Current Node Version: `v0.2.0-alpha.8`
 
 
 Berachain is a high-performance EVM-compatible blockchain built on Proof-of-Liquidity consensus.

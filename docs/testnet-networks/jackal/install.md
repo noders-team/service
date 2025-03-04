@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-jackal">
 # Installation
 </div>
-###### Chain ID: `auto` | Current Node Version: `canary-17-gb6ed8056`
+###### Chain ID: `lupulella-2` | Current Node Version: `canary-17-gb6ed8056`
 
 ## Install dependencies
 
@@ -136,14 +136,14 @@ sudo systemctl enable canined
 ## Node configuration
 ### Set config
 ```js
-canined config chain-id auto
+canined config chain-id lupulella-2
 canined config keyring-backend os
 canined config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-canined init NAME_OF_YOUR_VALIDATOR --chain-id auto
+canined init NAME_OF_YOUR_VALIDATOR --chain-id lupulella-2
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config-t.noders.services/jackal/addrbook.json -o ~/.canine/config/a
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@jackal-t-rpc.noders.services:\"/" ~/.canine/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"40b59e9b4a85b4ac6aa372e31cc0d733280c2769@jackal-t-rpc.noders.services:14656\"/" ~/.canine/config/config.toml
 ```
 
 ### Set minimum gas price

@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-airchains">
 # Installation
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `junction` | Current Node Version: `v0.1.0`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Airchains repo and build junctiond auto
+### Clone Airchains repo and build junctiond v0.1.0
 ```js
 cd $HOME
 git clone https://github.com/airchains-network/junction.git
 cd junction
-git checkout auto
+git checkout v0.1.0
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.junction/cosmovisor/upgrades/auto/bin
-mv $HOME/go/bin/junctiond ~/.junction/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.junction/cosmovisor/upgrades/v0.1.0/bin
+mv $HOME/go/bin/junctiond ~/.junction/cosmovisor/upgrades/v0.1.0/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Airchains repo and build junctiond auto
+### Clone Airchains repo and build junctiond v0.1.0
 ```js
 cd $HOME
 git clone https://github.com/airchains-network/junction.git
 cd junction
-git checkout auto
+git checkout v0.1.0
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable junctiond
 ## Node configuration
 ### Set config
 ```js
-junctiond config chain-id auto
+junctiond config chain-id junction
 junctiond config keyring-backend os
 junctiond config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-junctiond init NAME_OF_YOUR_VALIDATOR --chain-id auto
+junctiond init NAME_OF_YOUR_VALIDATOR --chain-id junction
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config-t.noders.services/airchains/addrbook.json -o ~/.junction/con
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@airchains-t-rpc.noders.services:\"/" ~/.junction/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"b419d23f56a6a5403319399ed38b6b93138210a1@airchains-t-rpc.noders.services:31656\"/" ~/.junction/config/config.toml
 ```
 
 ### Set minimum gas price

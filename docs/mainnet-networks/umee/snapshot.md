@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-umee">
 # Node Snapshot
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `umee-1` | Current Node Version: `v6.7.3`
 
 ## Our UX Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-|  GB |  |
+| 1.88 GB | Tue, 04 Mar 2025 06:01:34 GMT |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -71,7 +71,7 @@ curl -o - -L https://config.noders.services/umee/data.tar.lz4 | lz4 -d | tar -x 
 ```
 ### Wasm
 ```bash
-Not supported
+curl -o - -L https://config.noders.services/umee/wasm.tar.lz4 | lz4 -d | tar -x -C ~/.umee
 ```
 
 :::warning WARNING

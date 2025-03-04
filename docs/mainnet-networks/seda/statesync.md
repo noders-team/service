@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-seda">
 # State sync
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `seda-1` | Current Node Version: `v0.1.8-hotfix.3`
 
 ```bash
 SNAP_RPC=https://seda-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop sedad && sedad tendermint unsafe-reset-all --home ~/.sedad --keep-addr-book
 ```
 ```bash
-peers="@seda-rpc.noders.services:"
+peers="c9100af84ba8c9dbeb0c1c49837620bf447bf55c@seda-rpc.noders.services:36656"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.sedad/config/config.toml
 ```
 ```bash

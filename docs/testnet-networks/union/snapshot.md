@@ -13,7 +13,7 @@ sidebar_position: 3
 
 | Size   | Timestamp    |
 |--------|--------------|
-|  GB |   |
+| 22.14 GB | Tue, 04 Mar 2025 06:01:35 GMT  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -71,7 +71,7 @@ curl -o - -L https://config-t.noders.services/union/data.tar.lz4 | lz4 -d | tar 
 ```
 ### Wasm
 ```bash
-Not supported
+curl -o - -L https://config-t.noders.services/union/wasm.tar.lz4 | lz4 -d | tar -x -C ~/.union
 ```
 
 :::warning WARNING

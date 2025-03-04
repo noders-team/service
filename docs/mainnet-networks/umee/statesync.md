@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-umee">
 # State sync
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `umee-1` | Current Node Version: `v6.7.3`
 
 ```bash
 SNAP_RPC=https://umee-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop umeed && umeed tendermint unsafe-reset-all --home ~/.umee --keep-addr-book
 ```
 ```bash
-peers="@umee-rpc.noders.services:"
+peers="8349a4ab1d96f63cd0c9ff603c9869810e4a8e15@umee-rpc.noders.services:32656"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.umee/config/config.toml
 ```
 ```bash

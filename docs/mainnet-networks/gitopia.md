@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-gitopia">
 # Gitopia
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `gitopia` | Current Node Version: `v5.1.0`
 
 
 Gitopia leverages blockchain to offer a decentralized code hosting platform, ensuring transparency, security, and immutability. It addresses centralization issues, promoting open-source development and community-driven projects. Features include decentralized governance, collaboration tools, and incentive mechanisms to reward contributions. Ideal for projects valuing transparency and community involvement, Gitopia fosters a secure, collaborative environment for developers globally.

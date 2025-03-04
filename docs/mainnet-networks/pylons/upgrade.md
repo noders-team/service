@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-pylons">
 # Upgrade
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `pylons-mainnet-1` | Current Node Version: `v1.1.4`
 
 
 # Clone Pylons repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf pylons
 git clone https://github.com/Pylons-tech/pylons.git
 cd pylons
-git checkout auto
+git checkout v1.1.4
  ```
 
 # Build binaries
@@ -26,8 +26,8 @@ make build
 
 # Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.pylonsd/cosmovisor/upgrades/auto/bin
-mv build/pylonsd ~/.pylonsd/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.pylonsd/cosmovisor/upgrades/v1.1.4/bin
+mv build/pylonsd ~/.pylonsd/cosmovisor/upgrades/v1.1.4/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf pylons
 git clone https://github.com/Pylons-tech/pylons.git
 cd pylons
-git checkout auto
+git checkout v1.1.4
  ```
 
 ## Build binaries

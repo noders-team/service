@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-berachain">
 # Node Snapshot
 </div>
-###### Chain ID: `bartio-beacon-80084` | Current Node Version: `auto`
+###### Chain ID: `bartio-beacon-80084` | Current Node Version: `v0.2.0-alpha.8`
 
 ## Our Berachain Snapshot Server Setup
 

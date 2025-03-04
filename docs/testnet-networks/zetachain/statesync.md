@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-zetachain">
 # State sync
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `athens_7001-1` | Current Node Version: `v28.0.0`
 
 ```bash
 SNAP_RPC=https://zetachain-t-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop zetacored && zetacored tendermint unsafe-reset-all --home ~/.zetacored --keep-addr-book
 ```
 ```bash
-peers="@zetachain-t-rpc.noders.services:"
+peers="fdc0a43704510897ad55a611e3f0d6f2c888c40e@zetachain-t-rpc.noders.services:17656"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.zetacored/config/config.toml
 ```
 ```bash

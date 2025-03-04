@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-mantra">
 # Upgrade
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `mantra-hongbai-1` | Current Node Version: `v3.0.0`
 
 # With Cosmovisor
 ## Clone Mantra repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf public
 git clone https://github.com/MANTRA-Finance/public.git
 cd public
-git checkout auto
+git checkout v3.0.0
  ```
 
 ## Build binaries
@@ -26,8 +26,8 @@ make build
 
 ## Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.mantrachaind/cosmovisor/upgrades/auto/bin
-mv build/mantrachaind ~/.mantrachaind/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.mantrachaind/cosmovisor/upgrades/v3.0.0/bin
+mv build/mantrachaind ~/.mantrachaind/cosmovisor/upgrades/v3.0.0/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf public
 git clone https://github.com/MANTRA-Finance/public.git
 cd public
-git checkout auto
+git checkout v3.0.0
  ```
 
 ## Build binaries

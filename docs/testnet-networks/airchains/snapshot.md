@@ -7,13 +7,13 @@ sidebar_position: 3
 <div class="h1-with-icon icon-airchains">
 # Node Snapshot
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `junction` | Current Node Version: `v0.1.0`
 
 ## Our Airchains Snapshot Server Setup
 
 | Size   | Timestamp    |
 |--------|--------------|
-|  GB |   |
+| 564.15 GB | Tue, 04 Mar 2025 07:00:50 GMT  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

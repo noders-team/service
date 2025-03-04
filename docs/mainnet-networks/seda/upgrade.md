@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-seda">
 # Upgrade
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `seda-1` | Current Node Version: `v0.1.8-hotfix.3`
 
 
 # Clone Seda repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf seda-chain
 git clone https://github.com/sedaprotocol/seda-chain.git
 cd seda-chain
-git checkout auto
+git checkout v0.1.8-hotfix.3
  ```
 
 # Build binaries
@@ -26,8 +26,8 @@ make build
 
 # Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.sedad/cosmovisor/upgrades/auto/bin
-mv build/sedad ~/.sedad/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.sedad/cosmovisor/upgrades/v0.1.8-hotfix.3/bin
+mv build/sedad ~/.sedad/cosmovisor/upgrades/v0.1.8-hotfix.3/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf seda-chain
 git clone https://github.com/sedaprotocol/seda-chain.git
 cd seda-chain
-git checkout auto
+git checkout v0.1.8-hotfix.3
  ```
 
 ## Build binaries

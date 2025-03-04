@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-gitopia">
 # State sync
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `gitopia` | Current Node Version: `v5.1.0`
 
 ```bash
 SNAP_RPC=https://gitopia-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop gitopiad && gitopiad tendermint unsafe-reset-all --home ~/.gitopia --keep-addr-book
 ```
 ```bash
-peers="@gitopia-rpc.noders.services:"
+peers="8bd48e54552f091c1d8f194515754ab6ed74f054@gitopia-rpc.noders.services:19656"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.gitopia/config/config.toml
 ```
 ```bash

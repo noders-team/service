@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-jackal">
 # Node Snapshot
 </div>
-###### Chain ID: `auto` | Current Node Version: `v3.2.1`
+###### Chain ID: `jackal-1` | Current Node Version: `v3.2.1`
 
 ## Our Jackal Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-|  GB |  |
+| 5.55 GB | Tue, 04 Mar 2025 06:21:22 GMT |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -71,7 +71,7 @@ curl -o - -L https://config.noders.services/jackal/data.tar.lz4 | lz4 -d | tar -
 ```
 ### Wasm
 ```bash
-Not supported
+curl -o - -L https://config.noders.services/jackal/wasm.tar.lz4 | lz4 -d | tar -x -C ~/.canine
 ```
 
 :::warning WARNING

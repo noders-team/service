@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-pylons">
 # Installation
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `pylons-mainnet-1` | Current Node Version: `v1.1.4`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Pylons repo and build pylonsd auto
+### Clone Pylons repo and build pylonsd v1.1.4
 ```js
 cd $HOME
 git clone https://github.com/Pylons-tech/pylons.git
 cd pylons
-git checkout auto
+git checkout v1.1.4
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.pylonsd/cosmovisor/upgrades/auto/bin
-mv $HOME/go/bin/pylonsd ~/.pylonsd/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.pylonsd/cosmovisor/upgrades/v1.1.4/bin
+mv $HOME/go/bin/pylonsd ~/.pylonsd/cosmovisor/upgrades/v1.1.4/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Pylons repo and build pylonsd auto
+### Clone Pylons repo and build pylonsd v1.1.4
 ```js
 cd $HOME
 git clone https://github.com/Pylons-tech/pylons.git
 cd pylons
-git checkout auto
+git checkout v1.1.4
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable pylonsd
 ## Node configuration
 ### Set config
 ```js
-pylonsd config chain-id auto
+pylonsd config chain-id pylons-mainnet-1
 pylonsd config keyring-backend os
 pylonsd config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-pylonsd init NAME_OF_YOUR_VALIDATOR --chain-id auto
+pylonsd init NAME_OF_YOUR_VALIDATOR --chain-id pylons-mainnet-1
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config.noders.services/pylons/addrbook.json -o ~/.pylonsd/config/ad
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@pylons-rpc.noders.services:\"/" ~/.pylonsd/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"ae94eb20e73c0ad93dbb980338eb313320c56194@pylons-rpc.noders.services:23656\"/" ~/.pylonsd/config/config.toml
 ```
 
 ### Set minimum gas price

@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-airchains">
 # Airchains
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `junction` | Current Node Version: `v0.1.0`
 
 
 Airchains is a platform that provides tools for creating modular blockchain solutions. It enables developers to quickly deploy blockchains with integration across various networks, enhancing interoperability and scalability. The platform offers automated deployment processes, chain and bridge management, and supports various protocols and standards. Airchains aims to reduce complexity and accelerate the time to market for blockchain applications. For more detailed information, visit Airchains.

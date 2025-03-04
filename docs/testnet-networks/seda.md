@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-seda">
 # Seda
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `seda-1-testnet` | Current Node Version: `v0.1.7`
 
 
 SEDA is at the forefront of the decentralized finance revolution, offering a comprehensive platform designed to democratize access to financial services. By leveraging blockchain technology, SEDA introduces a transparent, secure, and accessible ecosystem where users can engage in lending, borrowing, and trading without the need for traditional financial intermediaries.

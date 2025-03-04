@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-lava">
 # State sync
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `lava-testnet-2` | Current Node Version: `v5.2.0`
 
 ```bash
 SNAP_RPC=https://lava-t-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop lavad && lavad tendermint unsafe-reset-all --home ~/.lava --keep-addr-book
 ```
 ```bash
-peers="@lava-t-rpc.noders.services:"
+peers="47a09710163c64a37b4b0454113ea5b6bb0b80b5@lava-t-rpc.noders.services:19656"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.lava/config/config.toml
 ```
 ```bash

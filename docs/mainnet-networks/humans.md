@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-humans">
 # Humans
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `humans_1089-1` | Current Node Version: `v1.0.0`
 
 
 Humans.ai integrates blockchain with AI for decentralized, ethical AI development, emphasizing community-driven innovation and ethical governance. It features a tokenized economy for rewarding contributions, prioritizes data privacy, and supports cross-industry AI applications. Aimed at fostering responsible AI development, Humans.ai champions transparency, user privacy, and equitable value distribution, setting a new standard for AI technologies across healthcare, finance, education, and more.

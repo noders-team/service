@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-lava">
 # Upgrade
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `lava-mainnet-1` | Current Node Version: `v5.2.0`
 
 
 # Clone Lava repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf lavanet
 git clone https://github.com/lavanet.git
 cd lavanet
-git checkout auto
+git checkout v5.2.0
  ```
 
 # Build binaries
@@ -26,8 +26,8 @@ make build
 
 # Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.lava/cosmovisor/upgrades/auto/bin
-mv build/lavad ~/.lava/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.lava/cosmovisor/upgrades/v5.2.0/bin
+mv build/lavad ~/.lava/cosmovisor/upgrades/v5.2.0/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf lavanet
 git clone https://github.com/lavanet.git
 cd lavanet
-git checkout auto
+git checkout v5.2.0
  ```
 
 ## Build binaries

@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-seda">
 # Installation
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `seda-1-testnet` | Current Node Version: `v0.1.7`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Seda repo and build sedad auto
+### Clone Seda repo and build sedad v0.1.7
 ```js
 cd $HOME
 git clone https://github.com/sedaprotocol/seda-chain.git
 cd seda-chain
-git checkout auto
+git checkout v0.1.7
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.sedad/cosmovisor/upgrades/auto/bin
-mv $HOME/go/bin/sedad ~/.sedad/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.sedad/cosmovisor/upgrades/v0.1.7/bin
+mv $HOME/go/bin/sedad ~/.sedad/cosmovisor/upgrades/v0.1.7/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Seda repo and build sedad auto
+### Clone Seda repo and build sedad v0.1.7
 ```js
 cd $HOME
 git clone https://github.com/sedaprotocol/seda-chain.git
 cd seda-chain
-git checkout auto
+git checkout v0.1.7
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable sedad
 ## Node configuration
 ### Set config
 ```js
-sedad config chain-id auto
+sedad config chain-id seda-1-testnet
 sedad config keyring-backend os
 sedad config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-sedad init NAME_OF_YOUR_VALIDATOR --chain-id auto
+sedad init NAME_OF_YOUR_VALIDATOR --chain-id seda-1-testnet
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config-t.noders.services/seda/addrbook.json -o ~/.sedad/config/addr
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@seda-t-rpc.noders.services:\"/" ~/.sedad/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"d9e79bc821f1fcf7b5924dfc1c2a8ffec91737fe@seda-t-rpc.noders.services:24656\"/" ~/.sedad/config/config.toml
 ```
 
 ### Set minimum gas price

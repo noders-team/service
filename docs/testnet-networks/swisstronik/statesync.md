@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-swisstronik">
 # State sync
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `swisstronik_1291-1` | Current Node Version: `v1.0.7`
 
 ```bash
 SNAP_RPC=https://swisstronik-t-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop swisstronikd && swisstronikd tendermint unsafe-reset-all --home ~/.swisstronik --keep-addr-book
 ```
 ```bash
-peers="@swisstronik-t-rpc.noders.services:"
+peers="1db22294bec0fd095eaa4a3f2381aef5105b538c@swisstronik-t-rpc.noders.services:26656"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.swisstronik/config/config.toml
 ```
 ```bash

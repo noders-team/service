@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-humans">
 # State sync
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `humans_1089-1` | Current Node Version: `v1.0.0`
 
 ```bash
 SNAP_RPC=https://humans-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop humansd && humansd tendermint unsafe-reset-all --home ~/.humansd --keep-addr-book
 ```
 ```bash
-peers="@humans-rpc.noders.services:"
+peers="284fa3bdcdfd0d5aba7047db88f26d7a8ef38ed7@humans-rpc.noders.services:21656"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.humansd/config/config.toml
 ```
 ```bash

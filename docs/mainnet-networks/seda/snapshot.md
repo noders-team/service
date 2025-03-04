@@ -7,13 +7,13 @@ sidebar_position: 4
 <div class="h1-with-icon icon-seda">
 # Node Snapshot
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `seda-1` | Current Node Version: `v0.1.8-hotfix.3`
 
 ## Our Seda Snapshot Server Setup
 
 | Size   | Timestamp   |
 |--------|-------------|
-|  GB |  |
+| 1.64 GB | Tue, 04 Mar 2025 06:29:39 GMT |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
@@ -71,7 +71,7 @@ curl -o - -L https://config.noders.services/seda/data.tar.lz4 | lz4 -d | tar -x 
 ```
 ### Wasm
 ```bash
-Not supported
+curl -o - -L https://config.noders.services/seda/wasm.tar.lz4 | lz4 -d | tar -x -C ~/.sedad
 ```
 
 :::warning WARNING

@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-humans">
 # Upgrade
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `humans_1089-1` | Current Node Version: `v1.0.0`
 
 
 # Clone Humans repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf humansdotai
 git clone https://github.com/humansdotai.git
 cd humansdotai
-git checkout auto
+git checkout v1.0.0
  ```
 
 # Build binaries
@@ -26,8 +26,8 @@ make build
 
 # Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.humansd/cosmovisor/upgrades/auto/bin
-mv build/humansd ~/.humansd/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.humansd/cosmovisor/upgrades/v1.0.0/bin
+mv build/humansd ~/.humansd/cosmovisor/upgrades/v1.0.0/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf humansdotai
 git clone https://github.com/humansdotai.git
 cd humansdotai
-git checkout auto
+git checkout v1.0.0
  ```
 
 ## Build binaries

@@ -7,13 +7,13 @@ sidebar_position: 3
 <div class="h1-with-icon icon-zetachain">
 # Node Snapshot
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `athens_7001-1` | Current Node Version: `v28.0.0`
 
 ## Our Zetachain Snapshot Server Setup
 
 | Size   | Timestamp    |
 |--------|--------------|
-|  GB |   |
+| 19.67 GB | Tue, 04 Mar 2025 06:15:13 GMT  |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.

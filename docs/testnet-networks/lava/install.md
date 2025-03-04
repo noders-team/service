@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-lava">
 # Installation
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `lava-testnet-2` | Current Node Version: `v5.2.0`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Lava repo and build lavad auto
+### Clone Lava repo and build lavad v5.2.0
 ```js
 cd $HOME
 git clone https://github.com/lavanet.git
 cd lavanet
-git checkout auto
+git checkout v5.2.0
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.lava/cosmovisor/upgrades/auto/bin
-mv $HOME/go/bin/lavad ~/.lava/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.lava/cosmovisor/upgrades/v5.2.0/bin
+mv $HOME/go/bin/lavad ~/.lava/cosmovisor/upgrades/v5.2.0/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Lava repo and build lavad auto
+### Clone Lava repo and build lavad v5.2.0
 ```js
 cd $HOME
 git clone https://github.com/lavanet.git
 cd lavanet
-git checkout auto
+git checkout v5.2.0
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable lavad
 ## Node configuration
 ### Set config
 ```js
-lavad config chain-id auto
+lavad config chain-id lava-testnet-2
 lavad config keyring-backend os
 lavad config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-lavad init NAME_OF_YOUR_VALIDATOR --chain-id auto
+lavad init NAME_OF_YOUR_VALIDATOR --chain-id lava-testnet-2
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config-t.noders.services/lava/addrbook.json -o ~/.lava/config/addrb
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@lava-t-rpc.noders.services:\"/" ~/.lava/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"47a09710163c64a37b4b0454113ea5b6bb0b80b5@lava-t-rpc.noders.services:19656\"/" ~/.lava/config/config.toml
 ```
 
 ### Set minimum gas price
