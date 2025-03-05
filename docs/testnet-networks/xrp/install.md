@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-xrp">
 # Installation
 </div>
-###### Chain ID: `exrp_1440002-1` | Current Node Version: `v6.0.0`
+###### Chain ID: `exrp_1440002-1` | Current Node Version: `auto`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone XRPL EVM repo and build exrpd v6.0.0
+### Clone XRPL EVM repo and build exrpd auto
 ```js
 cd $HOME
 git clone https://github.com/xrplevm/node.git
 cd node
-git checkout v6.0.0
+git checkout auto
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.exrpd/cosmovisor/upgrades/v6.0.0/bin
-mv $HOME/go/bin/exrpd ~/.exrpd/cosmovisor/upgrades/v6.0.0/bin/
+mkdir -p ~/.exrpd/cosmovisor/upgrades/auto/bin
+mv $HOME/go/bin/exrpd ~/.exrpd/cosmovisor/upgrades/auto/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone XRPL EVM repo and build exrpd v6.0.0
+### Clone XRPL EVM repo and build exrpd auto
 ```js
 cd $HOME
 git clone https://github.com/xrplevm/node.git
 cd node
-git checkout v6.0.0
+git checkout auto
 ```
 
 ### Build binaries

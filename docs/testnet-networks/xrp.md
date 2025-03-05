@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-xrp">
 # XRPL EVM
 </div>
-###### Chain ID: `exrp_1440002-1` | Current Node Version: `v6.0.0`
+###### Chain ID: `exrp_1440002-1` | Current Node Version: `auto`
 
 
 Sidechain is a fast and secure sidechain connected to XRP Ledger via an Axelar bridge. Powered by eXRP as its native token, it offers low-cost transactions and impressive speed.
