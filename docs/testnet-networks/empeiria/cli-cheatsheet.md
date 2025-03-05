@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-empeiria">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `empe-testnet-2` | Current Node Version: `v0.3.0`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -46,7 +46,7 @@ emped q bank balances $(emped keys show KEY -a) --node https://empeiria-t-rpc.no
 ### Send
 ```js
 emped tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uempe \
-  --chain-id auto \
+  --chain-id empe-testnet-2 \
   --node https://empeiria-t-rpc.noders.services:443 --fees 3000uempe \
   --from KEY
 ```
@@ -54,7 +54,7 @@ emped tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uempe \
 ### Withdraw rewards from all validators
 ```js
 emped tx distribution withdraw-all-rewards \
-  --chain-id auto \
+  --chain-id empe-testnet-2 \
   --node https://empeiria-t-rpc.noders.services:443 --fees 3000uempe \
   --from KEY
 ```
@@ -63,7 +63,7 @@ emped tx distribution withdraw-all-rewards \
 ```js
 emped tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
-  --chain-id auto \
+  --chain-id empe-testnet-2 \
   --node https://empeiria-t-rpc.noders.services:443 --fees 3000uempe \
   --from KEY
 ```
@@ -71,7 +71,7 @@ emped tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ### Delegate tokens to yourself
 ```js
 emped tx staking delegate $(emped keys show KEY --bech val -a) 1000000uempe \
---chain-id auto \
+--chain-id empe-testnet-2 \
 --node https://empeiria-t-rpc.noders.services:443 --fees 3000uempe \
 --from KEY
 ```
@@ -79,7 +79,7 @@ emped tx staking delegate $(emped keys show KEY --bech val -a) 1000000uempe \
 ### Delegate tokens to validator
 ```js
 emped tx staking delegate VALIDATOR_ADDRESS 1000000uempe \
---chain-id auto \
+--chain-id empe-testnet-2 \
 --node https://empeiria-t-rpc.noders.services:443 --fees 3000uempe \
 --from KEY
 ```
@@ -87,7 +87,7 @@ emped tx staking delegate VALIDATOR_ADDRESS 1000000uempe \
 ### Redelegate tokens to another validator
 ```js
 emped tx staking redelegate $(emped keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000uempe \
-  --chain-id auto \
+  --chain-id empe-testnet-2 \
   --node https://empeiria-t-rpc.noders.services:443 --fees 3000uempe \
   --from KEY
 ```
@@ -108,7 +108,7 @@ emped query gov proposals --node https://empeiria-t-rpc.noders.services:443
 ### Check vote
 ```js
 emped query gov proposal PROPOSAL_NUMBER \
-  --chain-id auto \
+  --chain-id empe-testnet-2 \
   --node https://empeiria-t-rpc.noders.services:443 --fees 3000uempe \
   --output json | jq
 ```
@@ -121,7 +121,7 @@ emped query gov proposal PROPOSAL_NUMBER \
 * abstain
 ```js
 emped tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
-  --chain-id auto \
+  --chain-id empe-testnet-2 \
   --node https://empeiria-t-rpc.noders.services:443 --fees 3000uempe \
   --from KEY
 ```
@@ -144,7 +144,7 @@ emped tx staking create-validator \
   --identity "220491ADDD660741" \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
-  --chain-id auto \
+  --chain-id empe-testnet-2 \
   --node https://empeiria-t-rpc.noders.services:443 --fees 3000uempe \
   --from KEY
 ```
@@ -156,7 +156,7 @@ emped tx staking edit-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id auto \
+--chain-id empe-testnet-2 \
 --commission-rate 0.05 \
 --from KEY \
 --node https://empeiria-t-rpc.noders.services:443 --fees 3000uempe \
@@ -165,7 +165,7 @@ emped tx staking edit-validator \
 ### Unjail
 ```js
 emped tx slashing unjail \
-  --chain-id auto \
+  --chain-id empe-testnet-2 \
   --node https://empeiria-t-rpc.noders.services:443 --fees 3000uempe \
   --from KEY
 ```

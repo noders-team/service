@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-empeiria">
 # State sync
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `empe-testnet-2` | Current Node Version: `v0.3.0`
 
 ```bash
 SNAP_RPC=https://empeiria-t-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop emped && emped tendermint unsafe-reset-all --home ~/.empe-chain --keep-addr-book
 ```
 ```bash
-peers="@empeiria-t-rpc.noders.services:"
+peers="5fc98f2ec4b2a6001aa5655c9852d259e83a8e74@empeiria-t-rpc.noders.services:11256"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.empe-chain/config/config.toml
 ```
 ```bash
