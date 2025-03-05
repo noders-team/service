@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-babylon">
 # Babylon
 </div>
-###### Chain ID: `bbn-test-5` | Current Node Version: `auto`
+###### Chain ID: `bbn-test-5` | Current Node Version: `v1.0.0-rc.5`
 
 
 

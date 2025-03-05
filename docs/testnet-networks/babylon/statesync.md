@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-babylon">
 # State sync
 </div>
-###### Chain ID: `bbn-test-5` | Current Node Version: `auto`
+###### Chain ID: `bbn-test-5` | Current Node Version: `v1.0.0-rc.5`
 
 ```bash
 SNAP_RPC=https://babylon-t-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop babylond && babylond tendermint unsafe-reset-all --home ~/.babylond --keep-addr-book
 ```
 ```bash
-peers="@babylon-t-rpc.noders.services:"
+peers="a281e911279894d081cbaf647bafbd4fd732572f@babylon-t-rpc.noders.services:20656"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.babylond/config/config.toml
 ```
 ```bash
