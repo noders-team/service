@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-warden">
 # Installation
 </div>
-###### Chain ID: `chiado_10010-1` | Current Node Version: `v0.5.4`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Warden repo and build wardend v0.5.4
+### Clone Warden repo and build wardend auto
 ```js
 cd $HOME
 git clone https://github.com/warden-protocol/wardenprotocol.git
 cd wardenprotocol
-git checkout v0.5.4
+git checkout auto
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.warden/cosmovisor/upgrades/v0.5.4/bin
-mv $HOME/go/bin/wardend ~/.warden/cosmovisor/upgrades/v0.5.4/bin/
+mkdir -p ~/.warden/cosmovisor/upgrades/auto/bin
+mv $HOME/go/bin/wardend ~/.warden/cosmovisor/upgrades/auto/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Warden repo and build wardend v0.5.4
+### Clone Warden repo and build wardend auto
 ```js
 cd $HOME
 git clone https://github.com/warden-protocol/wardenprotocol.git
 cd wardenprotocol
-git checkout v0.5.4
+git checkout auto
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable wardend
 ## Node configuration
 ### Set config
 ```js
-wardend config chain-id chiado_10010-1
+wardend config chain-id auto
 wardend config keyring-backend os
 wardend config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-wardend init NAME_OF_YOUR_VALIDATOR --chain-id chiado_10010-1
+wardend init NAME_OF_YOUR_VALIDATOR --chain-id auto
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config-t.noders.services/warden/addrbook.json -o ~/.warden/config/a
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"d5b7f132587c4bbfb1b024e37fd5989130756f69@warden-t-rpc.noders.services:27356\"/" ~/.warden/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@warden-t-rpc.noders.services:\"/" ~/.warden/config/config.toml
 ```
 
 ### Set minimum gas price
