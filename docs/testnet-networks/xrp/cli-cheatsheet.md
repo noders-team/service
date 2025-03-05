@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-xrp">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `exrp_1440002-1` | Current Node Version: `auto`
+###### Chain ID: `exrp_1440002-1` | Current Node Version: `v6.0.0`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 

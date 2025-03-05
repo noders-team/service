@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-xrp">
 # Upgrade
 </div>
-###### Chain ID: `exrp_1440002-1` | Current Node Version: `auto`
+###### Chain ID: `exrp_1440002-1` | Current Node Version: `v6.0.0`
 
 # With Cosmovisor
 ## Clone XRPL EVM repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf node
 git clone https://github.com/xrplevm/node.git
 cd node
-git checkout auto
+git checkout v6.0.0
  ```
 
 ## Build binaries
@@ -26,8 +26,8 @@ make build
 
 ## Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.exrpd/cosmovisor/upgrades/auto/bin
-mv build/exrpd ~/.exrpd/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.exrpd/cosmovisor/upgrades/v6.0.0/bin
+mv build/exrpd ~/.exrpd/cosmovisor/upgrades/v6.0.0/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf node
 git clone https://github.com/xrplevm/node.git
 cd node
-git checkout auto
+git checkout v6.0.0
  ```
 
 ## Build binaries
