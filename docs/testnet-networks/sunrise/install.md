@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-sunrise">
 # Installation
 </div>
-###### Chain ID: `sunrise-test-0.2` | Current Node Version: `auto`
+###### Chain ID: `sunrise-test-0.2` | Current Node Version: `v0.2.6`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Sunrise repo and build sunrised auto
+### Clone Sunrise repo and build sunrised v0.2.6
 ```js
 cd $HOME
 git clone https://github.com/sunriselayer/sunrise.git
 cd sunrise
-git checkout auto
+git checkout v0.2.6
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.sunrise/cosmovisor/upgrades/auto/bin
-mv $HOME/go/bin/sunrised ~/.sunrise/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.sunrise/cosmovisor/upgrades/v0.2.6/bin
+mv $HOME/go/bin/sunrised ~/.sunrise/cosmovisor/upgrades/v0.2.6/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Sunrise repo and build sunrised auto
+### Clone Sunrise repo and build sunrised v0.2.6
 ```js
 cd $HOME
 git clone https://github.com/sunriselayer/sunrise.git
 cd sunrise
-git checkout auto
+git checkout v0.2.6
 ```
 
 ### Build binaries
