@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-zenrock">
 # Upgrade
 </div>
-###### Chain ID: `diamond-1` | Current Node Version: `auto`
+###### Chain ID: `diamond-1` | Current Node Version: `v5.5.0`
 
 
 # Clone Zenrock repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf zrchain
 git clone https://github.com/Zenrock-Foundation/zrchain.git
 cd zrchain
-git checkout auto
+git checkout v5.5.0
  ```
 
 # Build binaries
@@ -26,8 +26,8 @@ make build
 
 # Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.zrchain/cosmovisor/upgrades/auto/bin
-mv build/zenrockd ~/.zrchain/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.zrchain/cosmovisor/upgrades/v5.5.0/bin
+mv build/zenrockd ~/.zrchain/cosmovisor/upgrades/v5.5.0/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf zrchain
 git clone https://github.com/Zenrock-Foundation/zrchain.git
 cd zrchain
-git checkout auto
+git checkout v5.5.0
  ```
 
 ## Build binaries

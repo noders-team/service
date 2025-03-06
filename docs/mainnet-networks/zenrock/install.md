@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-zenrock">
 # Installation
 </div>
-###### Chain ID: `diamond-1` | Current Node Version: `auto`
+###### Chain ID: `diamond-1` | Current Node Version: `v5.5.0`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Zenrock repo and build zenrockd auto
+### Clone Zenrock repo and build zenrockd v5.5.0
 ```js
 cd $HOME
 git clone https://github.com/Zenrock-Foundation/zrchain.git
 cd zrchain
-git checkout auto
+git checkout v5.5.0
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.zrchain/cosmovisor/upgrades/auto/bin
-mv $HOME/go/bin/zenrockd ~/.zrchain/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.zrchain/cosmovisor/upgrades/v5.5.0/bin
+mv $HOME/go/bin/zenrockd ~/.zrchain/cosmovisor/upgrades/v5.5.0/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Zenrock repo and build zenrockd auto
+### Clone Zenrock repo and build zenrockd v5.5.0
 ```js
 cd $HOME
 git clone https://github.com/Zenrock-Foundation/zrchain.git
 cd zrchain
-git checkout auto
+git checkout v5.5.0
 ```
 
 ### Build binaries
