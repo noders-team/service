@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-zenrock">
 # Zenrock
 </div>
-###### Chain ID: `diamond-1` | Current Node Version: `v5.5.0`
+###### Chain ID: `diamond-1` | Current Node Version: `auto`
 
 
 Zenrock enables decentralized key management for builders of cross-chain protocols and wallets to unlock omnichain security.
