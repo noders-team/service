@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-axone">
 # Installation
 </div>
-###### Chain ID: `axone-dentrite-1` | Current Node Version: `auto`
+###### Chain ID: `axone-dentrite-1` | Current Node Version: `v10.0.0`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Axone repo and build axoned auto
+### Clone Axone repo and build axoned v10.0.0
 ```js
 cd $HOME
 git clone https://github.com/axone-protocol.git
 cd axone-protocol
-git checkout auto
+git checkout v10.0.0
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.axoned/cosmovisor/upgrades/auto/bin
-mv $HOME/go/bin/axoned ~/.axoned/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.axoned/cosmovisor/upgrades/v10.0.0/bin
+mv $HOME/go/bin/axoned ~/.axoned/cosmovisor/upgrades/v10.0.0/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Axone repo and build axoned auto
+### Clone Axone repo and build axoned v10.0.0
 ```js
 cd $HOME
 git clone https://github.com/axone-protocol.git
 cd axone-protocol
-git checkout auto
+git checkout v10.0.0
 ```
 
 ### Build binaries

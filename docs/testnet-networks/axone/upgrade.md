@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-axone">
 # Upgrade
 </div>
-###### Chain ID: `axone-dentrite-1` | Current Node Version: `auto`
+###### Chain ID: `axone-dentrite-1` | Current Node Version: `v10.0.0`
 
 # With Cosmovisor
 ## Clone Axone repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf axone-protocol
 git clone https://github.com/axone-protocol.git
 cd axone-protocol
-git checkout auto
+git checkout v10.0.0
  ```
 
 ## Build binaries
@@ -26,8 +26,8 @@ make build
 
 ## Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.axoned/cosmovisor/upgrades/auto/bin
-mv build/axoned ~/.axoned/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.axoned/cosmovisor/upgrades/v10.0.0/bin
+mv build/axoned ~/.axoned/cosmovisor/upgrades/v10.0.0/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf axone-protocol
 git clone https://github.com/axone-protocol.git
 cd axone-protocol
-git checkout auto
+git checkout v10.0.0
  ```
 
 ## Build binaries
