@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-axone">
 # Axone
 </div>
-###### Chain ID: `axone-dentrite-1` | Current Node Version: `v10.0.0`
+###### Chain ID: `axone-dentrite-1` | Current Node Version: `auto`
 
 
 Axone's intuitive protocol lets you orchestrate sophisticated AI processes with ease. Seamlessly link resources, models, and data. Create powerful AI workflows with trust-minimized collaboration. Ensure fair rewards for every contribution. That's the Axone promise.

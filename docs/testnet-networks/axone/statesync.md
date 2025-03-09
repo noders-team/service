@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-axone">
 # State sync
 </div>
-###### Chain ID: `axone-dentrite-1` | Current Node Version: `v10.0.0`
+###### Chain ID: `axone-dentrite-1` | Current Node Version: `auto`
 
 ```bash
 SNAP_RPC=https://axone-t-rpc.noders.services:443 && \
