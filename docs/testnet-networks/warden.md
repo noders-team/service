@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-warden">
 # Warden
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `chiado_10010-1` | Current Node Version: `v0.6.2`
 
 
 Warden Protocol stands as a beacon of innovation in the decentralized finance (DeFi) landscape, focusing on bolstering security measures for blockchain transactions and smart contracts. Aimed at mitigating the risks associated with DeFi operations, Warden Protocol introduces a suite of security tools and services designed to protect users and developers from vulnerabilities, hacks, and financial losses.
