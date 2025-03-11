@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-osmosis">
 # Upgrade
 </div>
-###### Chain ID: `auto` | Current Node Version: `v28.0.4`
+###### Chain ID: `osmosis-1` | Current Node Version: `v28.0.4`
 
 
 # Clone Osmosis repository

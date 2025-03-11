@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-osmosis">
 # Installation
 </div>
-###### Chain ID: `auto` | Current Node Version: `v28.0.4`
+###### Chain ID: `osmosis-1` | Current Node Version: `v28.0.4`
 
 ## Install dependencies
 
@@ -136,14 +136,14 @@ sudo systemctl enable osmosisd
 ## Node configuration
 ### Set config
 ```js
-osmosisd config chain-id auto
+osmosisd config chain-id osmosis-1
 osmosisd config keyring-backend os
 osmosisd config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-osmosisd init NAME_OF_YOUR_VALIDATOR --chain-id auto
+osmosisd init NAME_OF_YOUR_VALIDATOR --chain-id osmosis-1
 ```
 
 ### Download genesis and addrbook
