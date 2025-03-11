@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-osmosis">
 # Installation
 </div>
-###### Chain ID: `osmosis-1` | Current Node Version: `v28.0.4`
+###### Chain ID: `osmosis-1` | Current Node Version: `auto`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Osmosis repo and build osmosisd v28.0.4
+### Clone Osmosis repo and build osmosisd auto
 ```js
 cd $HOME
 git clone https://github.com/osmosis-labs/osmosis.git
 cd osmosis
-git checkout v28.0.4
+git checkout auto
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.osmosisd/cosmovisor/upgrades/v28.0.4/bin
-mv $HOME/go/bin/osmosisd ~/.osmosisd/cosmovisor/upgrades/v28.0.4/bin/
+mkdir -p ~/.osmosisd/cosmovisor/upgrades/auto/bin
+mv $HOME/go/bin/osmosisd ~/.osmosisd/cosmovisor/upgrades/auto/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Osmosis repo and build osmosisd v28.0.4
+### Clone Osmosis repo and build osmosisd auto
 ```js
 cd $HOME
 git clone https://github.com/osmosis-labs/osmosis.git
 cd osmosis
-git checkout v28.0.4
+git checkout auto
 ```
 
 ### Build binaries
