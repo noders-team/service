@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-osmosis">
 # Osmosis
 </div>
-###### Chain ID: `osmosis-1` | Current Node Version: `v28.0.4`
+###### Chain ID: `auto` | Current Node Version: `v28.0.4`
 
 
 Osmosis is a leading decentralized exchange (DEX) and automated market maker (AMM) on the Cosmos blockchain, revolutionizing DeFi with unparalleled customization and interoperability. It enables advanced DeFi features for liquidity providers and traders, fostering cross-chain liquidity and novel financial products. With customizable AMM pools, Inter-Blockchain Communication (IBC) protocol integration, superfluid staking, and community-driven governance, Osmosis is at the forefront of DeFi innovation, offering dynamic yield farming and sophisticated trading strategies within the Cosmos ecosystem.
