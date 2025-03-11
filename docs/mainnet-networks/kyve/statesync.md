@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-kyve">
 # State sync
 </div>
-###### Chain ID: `auto` | Current Node Version: `v1.5.0`
+###### Chain ID: `kyve-1` | Current Node Version: `v1.5.0`
 
 ```bash
 SNAP_RPC=https://kyve-rpc.noders.services:443 && \

@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-kyve">
 # Installation
 </div>
-###### Chain ID: `auto` | Current Node Version: `v1.5.0`
+###### Chain ID: `kyve-1` | Current Node Version: `v1.5.0`
 
 ## Install dependencies
 
@@ -136,14 +136,14 @@ sudo systemctl enable kyved
 ## Node configuration
 ### Set config
 ```js
-kyved config chain-id auto
+kyved config chain-id kyve-1
 kyved config keyring-backend os
 kyved config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-kyved init NAME_OF_YOUR_VALIDATOR --chain-id auto
+kyved init NAME_OF_YOUR_VALIDATOR --chain-id kyve-1
 ```
 
 ### Download genesis and addrbook
