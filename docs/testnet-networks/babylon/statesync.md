@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-babylon">
 # State sync
 </div>
-###### Chain ID: `bbn-test-5` | Current Node Version: `v1.0.0-rc.5`
+###### Chain ID: `bbn-test-5` | Current Node Version: `auto`
 
 ```bash
 SNAP_RPC=https://babylon-t-rpc.noders.services:443 && \
