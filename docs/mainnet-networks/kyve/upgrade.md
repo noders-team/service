@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-kyve">
 # Upgrade
 </div>
-###### Chain ID: `kyve-1` | Current Node Version: `v1.5.0`
+###### Chain ID: `auto` | Current Node Version: `v1.5.0`
 
 
 # Clone Kyve repository
