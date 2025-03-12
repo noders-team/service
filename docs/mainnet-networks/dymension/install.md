@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-dymension">
 # Installation
 </div>
-###### Chain ID: `dymension_1100-1` | Current Node Version: `auto`
+###### Chain ID: `dymension_1100-1` | Current Node Version: `v3.2.0`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Dymension repo and build dymd auto
+### Clone Dymension repo and build dymd v3.2.0
 ```js
 cd $HOME
 git clone https://github.com/dymensionxyz.git
 cd dymensionxyz
-git checkout auto
+git checkout v3.2.0
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.dymension/cosmovisor/upgrades/auto/bin
-mv $HOME/go/bin/dymd ~/.dymension/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.dymension/cosmovisor/upgrades/v3.2.0/bin
+mv $HOME/go/bin/dymd ~/.dymension/cosmovisor/upgrades/v3.2.0/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Dymension repo and build dymd auto
+### Clone Dymension repo and build dymd v3.2.0
 ```js
 cd $HOME
 git clone https://github.com/dymensionxyz.git
 cd dymensionxyz
-git checkout auto
+git checkout v3.2.0
 ```
 
 ### Build binaries
