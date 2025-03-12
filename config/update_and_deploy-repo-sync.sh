@@ -53,7 +53,7 @@ else
 	git clone git@github.com:noders-team/service.git && cd "$SERVICES_REPO_PATH" && git checkout main 2>&1 | tee -a "$LOG_FILE"
 fi
 
-log "Starting sync process..."
+log "Starting sync process.."
 cd $SERVICES_CONFIG_PATH
 bash sync.sh 2>&1 | tee -a "$LOG_FILE"
 
