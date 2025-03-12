@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-althea">
 # State sync
 </div>
-###### Chain ID: `althea_258432-1` | Current Node Version: `v1.5.1`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ```bash
 SNAP_RPC=https://althea-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop althea && althea tendermint unsafe-reset-all --home ~/.althea --keep-addr-book
 ```
 ```bash
-peers="cd95708f6f107d9970e86668a70bf8f6253dda60@althea-rpc.noders.services:12456"
+peers="@althea-rpc.noders.services:"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.althea/config/config.toml
 ```
 ```bash

@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-pylons">
 # Installation
 </div>
-###### Chain ID: `pylons-mainnet-1` | Current Node Version: `v1.1.4`
+###### Chain ID: `null` | Current Node Version: `v1.1.4`
 
 ## Install dependencies
 
@@ -136,14 +136,14 @@ sudo systemctl enable pylonsd
 ## Node configuration
 ### Set config
 ```js
-pylonsd config chain-id pylons-mainnet-1
+pylonsd config chain-id null
 pylonsd config keyring-backend os
 pylonsd config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-pylonsd init NAME_OF_YOUR_VALIDATOR --chain-id pylons-mainnet-1
+pylonsd init NAME_OF_YOUR_VALIDATOR --chain-id null
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config.noders.services/pylons/addrbook.json -o ~/.pylonsd/config/ad
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"ae94eb20e73c0ad93dbb980338eb313320c56194@pylons-rpc.noders.services:23656\"/" ~/.pylonsd/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"null@pylons-rpc.noders.services:null\"/" ~/.pylonsd/config/config.toml
 ```
 
 ### Set minimum gas price

@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-bitsong">
 # State sync
 </div>
-###### Chain ID: `bitsong-2b` | Current Node Version: `v0.21.4`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ```bash
 SNAP_RPC=https://bitsong-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop bitsongd && bitsongd tendermint unsafe-reset-all --home ~/.bitsongd --keep-addr-book
 ```
 ```bash
-peers="b347b47a650981b2e12782e92cf26ba8aa0148c9@bitsong-rpc.noders.services:20656"
+peers="@bitsong-rpc.noders.services:"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.bitsongd/config/config.toml
 ```
 ```bash

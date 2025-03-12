@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-uptick">
 # Installation
 </div>
-###### Chain ID: `uptick_117-1` | Current Node Version: `v0.2.19`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Uptick repo and build uptickd v0.2.19
+### Clone Uptick repo and build uptickd auto
 ```js
 cd $HOME
 git clone https://github.com/UptickNetwork.git
 cd UptickNetwork
-git checkout v0.2.19
+git checkout auto
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.uptickd/cosmovisor/upgrades/v0.2.19/bin
-mv $HOME/go/bin/uptickd ~/.uptickd/cosmovisor/upgrades/v0.2.19/bin/
+mkdir -p ~/.uptickd/cosmovisor/upgrades/auto/bin
+mv $HOME/go/bin/uptickd ~/.uptickd/cosmovisor/upgrades/auto/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Uptick repo and build uptickd v0.2.19
+### Clone Uptick repo and build uptickd auto
 ```js
 cd $HOME
 git clone https://github.com/UptickNetwork.git
 cd UptickNetwork
-git checkout v0.2.19
+git checkout auto
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable uptickd
 ## Node configuration
 ### Set config
 ```js
-uptickd config chain-id uptick_117-1
+uptickd config chain-id auto
 uptickd config keyring-backend os
 uptickd config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-uptickd init NAME_OF_YOUR_VALIDATOR --chain-id uptick_117-1
+uptickd init NAME_OF_YOUR_VALIDATOR --chain-id auto
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config.noders.services/uptick/addrbook.json -o ~/.uptickd/config/ad
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"d9de9af4a4e9092dd29ea833ef4960b97798ba18@uptick-rpc.noders.services:24656\"/" ~/.uptickd/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@uptick-rpc.noders.services:\"/" ~/.uptickd/config/config.toml
 ```
 
 ### Set minimum gas price

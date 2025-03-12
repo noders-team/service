@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-uptick">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `uptick_117-1` | Current Node Version: `v0.2.19`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -46,7 +46,7 @@ uptickd q bank balances $(uptickd keys show KEY -a) --node https://uptick-rpc.no
 ### Send
 ```js
 uptickd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000auptick \
-  --chain-id uptick_117-1 \
+  --chain-id auto \
   --node https://uptick-rpc.noders.services:443 --fees 3000auptick \
   --from KEY
 ```
@@ -54,7 +54,7 @@ uptickd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000auptick \
 ### Withdraw rewards from all validators
 ```js
 uptickd tx distribution withdraw-all-rewards \
-  --chain-id uptick_117-1 \
+  --chain-id auto \
   --node https://uptick-rpc.noders.services:443 --fees 3000auptick \
   --from KEY
 ```
@@ -63,7 +63,7 @@ uptickd tx distribution withdraw-all-rewards \
 ```js
 uptickd tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
-  --chain-id uptick_117-1 \
+  --chain-id auto \
   --node https://uptick-rpc.noders.services:443 --fees 3000auptick \
   --from KEY
 ```
@@ -71,7 +71,7 @@ uptickd tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ### Delegate tokens to yourself
 ```js
 uptickd tx staking delegate $(uptickd keys show KEY --bech val -a) 1000000auptick \
---chain-id uptick_117-1 \
+--chain-id auto \
 --node https://uptick-rpc.noders.services:443 --fees 3000auptick \
 --from KEY
 ```
@@ -79,7 +79,7 @@ uptickd tx staking delegate $(uptickd keys show KEY --bech val -a) 1000000auptic
 ### Delegate tokens to validator
 ```js
 uptickd tx staking delegate VALIDATOR_ADDRESS 1000000auptick \
---chain-id uptick_117-1 \
+--chain-id auto \
 --node https://uptick-rpc.noders.services:443 --fees 3000auptick \
 --from KEY
 ```
@@ -87,7 +87,7 @@ uptickd tx staking delegate VALIDATOR_ADDRESS 1000000auptick \
 ### Redelegate tokens to another validator
 ```js
 uptickd tx staking redelegate $(uptickd keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000auptick \
-  --chain-id uptick_117-1 \
+  --chain-id auto \
   --node https://uptick-rpc.noders.services:443 --fees 3000auptick \
   --from KEY
 ```
@@ -108,7 +108,7 @@ uptickd query gov proposals --node https://uptick-rpc.noders.services:443
 ### Check vote
 ```js
 uptickd query gov proposal PROPOSAL_NUMBER \
-  --chain-id uptick_117-1 \
+  --chain-id auto \
   --node https://uptick-rpc.noders.services:443 --fees 3000auptick \
   --output json | jq
 ```
@@ -121,7 +121,7 @@ uptickd query gov proposal PROPOSAL_NUMBER \
 * abstain
 ```js
 uptickd tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
-  --chain-id uptick_117-1 \
+  --chain-id auto \
   --node https://uptick-rpc.noders.services:443 --fees 3000auptick \
   --from KEY
 ```
@@ -144,7 +144,7 @@ uptickd tx staking create-validator \
   --identity "220491ADDD660741" \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
-  --chain-id uptick_117-1 \
+  --chain-id auto \
   --node https://uptick-rpc.noders.services:443 --fees 3000auptick \
   --from KEY
 ```
@@ -156,7 +156,7 @@ uptickd tx staking edit-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id uptick_117-1 \
+--chain-id auto \
 --commission-rate 0.05 \
 --from KEY \
 --node https://uptick-rpc.noders.services:443 --fees 3000auptick \
@@ -165,7 +165,7 @@ uptickd tx staking edit-validator \
 ### Unjail
 ```js
 uptickd tx slashing unjail \
-  --chain-id uptick_117-1 \
+  --chain-id auto \
   --node https://uptick-rpc.noders.services:443 --fees 3000auptick \
   --from KEY
 ```

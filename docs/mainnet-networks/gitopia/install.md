@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-gitopia">
 # Installation
 </div>
-###### Chain ID: `gitopia` | Current Node Version: `v5.1.0`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Gitopia repo and build gitopiad v5.1.0
+### Clone Gitopia repo and build gitopiad auto
 ```js
 cd $HOME
 git clone https://github.com/gitopia.git
 cd gitopia
-git checkout v5.1.0
+git checkout auto
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.gitopia/cosmovisor/upgrades/v5.1.0/bin
-mv $HOME/go/bin/gitopiad ~/.gitopia/cosmovisor/upgrades/v5.1.0/bin/
+mkdir -p ~/.gitopia/cosmovisor/upgrades/auto/bin
+mv $HOME/go/bin/gitopiad ~/.gitopia/cosmovisor/upgrades/auto/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Gitopia repo and build gitopiad v5.1.0
+### Clone Gitopia repo and build gitopiad auto
 ```js
 cd $HOME
 git clone https://github.com/gitopia.git
 cd gitopia
-git checkout v5.1.0
+git checkout auto
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable gitopiad
 ## Node configuration
 ### Set config
 ```js
-gitopiad config chain-id gitopia
+gitopiad config chain-id auto
 gitopiad config keyring-backend os
 gitopiad config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-gitopiad init NAME_OF_YOUR_VALIDATOR --chain-id gitopia
+gitopiad init NAME_OF_YOUR_VALIDATOR --chain-id auto
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config.noders.services/gitopia/addrbook.json -o ~/.gitopia/config/a
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"8bd48e54552f091c1d8f194515754ab6ed74f054@gitopia-rpc.noders.services:19656\"/" ~/.gitopia/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@gitopia-rpc.noders.services:\"/" ~/.gitopia/config/config.toml
 ```
 
 ### Set minimum gas price

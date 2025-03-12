@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-jackal">
 # Upgrade
 </div>
-###### Chain ID: `jackal-1` | Current Node Version: `v3.2.1`
+###### Chain ID: `auto` | Current Node Version: `v3.2.1`
 
 
 # Clone Jackal repository

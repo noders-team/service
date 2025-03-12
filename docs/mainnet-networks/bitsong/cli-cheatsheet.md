@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-bitsong">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `bitsong-2b` | Current Node Version: `v0.21.4`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -46,7 +46,7 @@ bitsongd q bank balances $(bitsongd keys show KEY -a) --node https://bitsong-rpc
 ### Send
 ```js
 bitsongd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000ubtsg \
-  --chain-id bitsong-2b \
+  --chain-id auto \
   --node https://bitsong-rpc.noders.services:443 --fees 3000ubtsg \
   --from KEY
 ```
@@ -54,7 +54,7 @@ bitsongd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000ubtsg \
 ### Withdraw rewards from all validators
 ```js
 bitsongd tx distribution withdraw-all-rewards \
-  --chain-id bitsong-2b \
+  --chain-id auto \
   --node https://bitsong-rpc.noders.services:443 --fees 3000ubtsg \
   --from KEY
 ```
@@ -63,7 +63,7 @@ bitsongd tx distribution withdraw-all-rewards \
 ```js
 bitsongd tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
-  --chain-id bitsong-2b \
+  --chain-id auto \
   --node https://bitsong-rpc.noders.services:443 --fees 3000ubtsg \
   --from KEY
 ```
@@ -71,7 +71,7 @@ bitsongd tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ### Delegate tokens to yourself
 ```js
 bitsongd tx staking delegate $(bitsongd keys show KEY --bech val -a) 1000000ubtsg \
---chain-id bitsong-2b \
+--chain-id auto \
 --node https://bitsong-rpc.noders.services:443 --fees 3000ubtsg \
 --from KEY
 ```
@@ -79,7 +79,7 @@ bitsongd tx staking delegate $(bitsongd keys show KEY --bech val -a) 1000000ubts
 ### Delegate tokens to validator
 ```js
 bitsongd tx staking delegate VALIDATOR_ADDRESS 1000000ubtsg \
---chain-id bitsong-2b \
+--chain-id auto \
 --node https://bitsong-rpc.noders.services:443 --fees 3000ubtsg \
 --from KEY
 ```
@@ -87,7 +87,7 @@ bitsongd tx staking delegate VALIDATOR_ADDRESS 1000000ubtsg \
 ### Redelegate tokens to another validator
 ```js
 bitsongd tx staking redelegate $(bitsongd keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000ubtsg \
-  --chain-id bitsong-2b \
+  --chain-id auto \
   --node https://bitsong-rpc.noders.services:443 --fees 3000ubtsg \
   --from KEY
 ```
@@ -108,7 +108,7 @@ bitsongd query gov proposals --node https://bitsong-rpc.noders.services:443
 ### Check vote
 ```js
 bitsongd query gov proposal PROPOSAL_NUMBER \
-  --chain-id bitsong-2b \
+  --chain-id auto \
   --node https://bitsong-rpc.noders.services:443 --fees 3000ubtsg \
   --output json | jq
 ```
@@ -121,7 +121,7 @@ bitsongd query gov proposal PROPOSAL_NUMBER \
 * abstain
 ```js
 bitsongd tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
-  --chain-id bitsong-2b \
+  --chain-id auto \
   --node https://bitsong-rpc.noders.services:443 --fees 3000ubtsg \
   --from KEY
 ```
@@ -144,7 +144,7 @@ bitsongd tx staking create-validator \
   --identity "220491ADDD660741" \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
-  --chain-id bitsong-2b \
+  --chain-id auto \
   --node https://bitsong-rpc.noders.services:443 --fees 3000ubtsg \
   --from KEY
 ```
@@ -156,7 +156,7 @@ bitsongd tx staking edit-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id bitsong-2b \
+--chain-id auto \
 --commission-rate 0.05 \
 --from KEY \
 --node https://bitsong-rpc.noders.services:443 --fees 3000ubtsg \
@@ -165,7 +165,7 @@ bitsongd tx staking edit-validator \
 ### Unjail
 ```js
 bitsongd tx slashing unjail \
-  --chain-id bitsong-2b \
+  --chain-id auto \
   --node https://bitsong-rpc.noders.services:443 --fees 3000ubtsg \
   --from KEY
 ```

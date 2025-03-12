@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-aura">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `aura_6322-2` | Current Node Version: `v0.9.3`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -46,7 +46,7 @@ aurad q bank balances $(aurad keys show KEY -a) --node https://aura-rpc.noders.s
 ### Send
 ```js
 aurad tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uaura \
-  --chain-id aura_6322-2 \
+  --chain-id auto \
   --node https://aura-rpc.noders.services:443 --fees 3000uaura \
   --from KEY
 ```
@@ -54,7 +54,7 @@ aurad tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uaura \
 ### Withdraw rewards from all validators
 ```js
 aurad tx distribution withdraw-all-rewards \
-  --chain-id aura_6322-2 \
+  --chain-id auto \
   --node https://aura-rpc.noders.services:443 --fees 3000uaura \
   --from KEY
 ```
@@ -63,7 +63,7 @@ aurad tx distribution withdraw-all-rewards \
 ```js
 aurad tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
-  --chain-id aura_6322-2 \
+  --chain-id auto \
   --node https://aura-rpc.noders.services:443 --fees 3000uaura \
   --from KEY
 ```
@@ -71,7 +71,7 @@ aurad tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ### Delegate tokens to yourself
 ```js
 aurad tx staking delegate $(aurad keys show KEY --bech val -a) 1000000uaura \
---chain-id aura_6322-2 \
+--chain-id auto \
 --node https://aura-rpc.noders.services:443 --fees 3000uaura \
 --from KEY
 ```
@@ -79,7 +79,7 @@ aurad tx staking delegate $(aurad keys show KEY --bech val -a) 1000000uaura \
 ### Delegate tokens to validator
 ```js
 aurad tx staking delegate VALIDATOR_ADDRESS 1000000uaura \
---chain-id aura_6322-2 \
+--chain-id auto \
 --node https://aura-rpc.noders.services:443 --fees 3000uaura \
 --from KEY
 ```
@@ -87,7 +87,7 @@ aurad tx staking delegate VALIDATOR_ADDRESS 1000000uaura \
 ### Redelegate tokens to another validator
 ```js
 aurad tx staking redelegate $(aurad keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000uaura \
-  --chain-id aura_6322-2 \
+  --chain-id auto \
   --node https://aura-rpc.noders.services:443 --fees 3000uaura \
   --from KEY
 ```
@@ -108,7 +108,7 @@ aurad query gov proposals --node https://aura-rpc.noders.services:443
 ### Check vote
 ```js
 aurad query gov proposal PROPOSAL_NUMBER \
-  --chain-id aura_6322-2 \
+  --chain-id auto \
   --node https://aura-rpc.noders.services:443 --fees 3000uaura \
   --output json | jq
 ```
@@ -121,7 +121,7 @@ aurad query gov proposal PROPOSAL_NUMBER \
 * abstain
 ```js
 aurad tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
-  --chain-id aura_6322-2 \
+  --chain-id auto \
   --node https://aura-rpc.noders.services:443 --fees 3000uaura \
   --from KEY
 ```
@@ -144,7 +144,7 @@ aurad tx staking create-validator \
   --identity "220491ADDD660741" \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
-  --chain-id aura_6322-2 \
+  --chain-id auto \
   --node https://aura-rpc.noders.services:443 --fees 3000uaura \
   --from KEY
 ```
@@ -156,7 +156,7 @@ aurad tx staking edit-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id aura_6322-2 \
+--chain-id auto \
 --commission-rate 0.05 \
 --from KEY \
 --node https://aura-rpc.noders.services:443 --fees 3000uaura \
@@ -165,7 +165,7 @@ aurad tx staking edit-validator \
 ### Unjail
 ```js
 aurad tx slashing unjail \
-  --chain-id aura_6322-2 \
+  --chain-id auto \
   --node https://aura-rpc.noders.services:443 --fees 3000uaura \
   --from KEY
 ```

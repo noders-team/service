@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-pylons">
 # Upgrade
 </div>
-###### Chain ID: `pylons-mainnet-1` | Current Node Version: `v1.1.4`
+###### Chain ID: `null` | Current Node Version: `v1.1.4`
 
 
 # Clone Pylons repository
