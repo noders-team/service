@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-althea">
 # Installation
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `althea_258432-1` | Current Node Version: `v1.5.1`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Althea repo and build althea auto
+### Clone Althea repo and build althea v1.5.1
 ```js
 cd $HOME
 git clone https://github.com/althea-net/althea-chain.git
 cd althea-chain
-git checkout auto
+git checkout v1.5.1
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.althea/cosmovisor/upgrades/auto/bin
-mv $HOME/go/bin/althea ~/.althea/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.althea/cosmovisor/upgrades/v1.5.1/bin
+mv $HOME/go/bin/althea ~/.althea/cosmovisor/upgrades/v1.5.1/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Althea repo and build althea auto
+### Clone Althea repo and build althea v1.5.1
 ```js
 cd $HOME
 git clone https://github.com/althea-net/althea-chain.git
 cd althea-chain
-git checkout auto
+git checkout v1.5.1
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable althea
 ## Node configuration
 ### Set config
 ```js
-althea config chain-id auto
+althea config chain-id althea_258432-1
 althea config keyring-backend os
 althea config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-althea init NAME_OF_YOUR_VALIDATOR --chain-id auto
+althea init NAME_OF_YOUR_VALIDATOR --chain-id althea_258432-1
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config.noders.services/althea/addrbook.json -o ~/.althea/config/add
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@althea-rpc.noders.services:\"/" ~/.althea/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"cd95708f6f107d9970e86668a70bf8f6253dda60@althea-rpc.noders.services:12456\"/" ~/.althea/config/config.toml
 ```
 
 ### Set minimum gas price

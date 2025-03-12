@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-haqq">
 # Haqq
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `haqq_11235-1` | Current Node Version: `v1.8.2`
 
 # IslamicCoin: A Shariah-Compliant Digital Currency
 

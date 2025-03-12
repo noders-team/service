@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-althea">
 # Althea
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `althea_258432-1` | Current Node Version: `v1.5.1`
 
 
 

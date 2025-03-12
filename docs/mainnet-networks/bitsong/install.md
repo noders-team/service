@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-bitsong">
 # Installation
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `bitsong-2b` | Current Node Version: `v0.21.4`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone BitSong repo and build bitsongd auto
+### Clone BitSong repo and build bitsongd v0.21.4
 ```js
 cd $HOME
 git clone https://github.com/bitsongofficial.git
 cd bitsongofficial
-git checkout auto
+git checkout v0.21.4
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.bitsongd/cosmovisor/upgrades/auto/bin
-mv $HOME/go/bin/bitsongd ~/.bitsongd/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.bitsongd/cosmovisor/upgrades/v0.21.4/bin
+mv $HOME/go/bin/bitsongd ~/.bitsongd/cosmovisor/upgrades/v0.21.4/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone BitSong repo and build bitsongd auto
+### Clone BitSong repo and build bitsongd v0.21.4
 ```js
 cd $HOME
 git clone https://github.com/bitsongofficial.git
 cd bitsongofficial
-git checkout auto
+git checkout v0.21.4
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable bitsongd
 ## Node configuration
 ### Set config
 ```js
-bitsongd config chain-id auto
+bitsongd config chain-id bitsong-2b
 bitsongd config keyring-backend os
 bitsongd config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-bitsongd init NAME_OF_YOUR_VALIDATOR --chain-id auto
+bitsongd init NAME_OF_YOUR_VALIDATOR --chain-id bitsong-2b
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://config.noders.services/bitsong/addrbook.json -o ~/.bitsongd/config/
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@bitsong-rpc.noders.services:\"/" ~/.bitsongd/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"b347b47a650981b2e12782e92cf26ba8aa0148c9@bitsong-rpc.noders.services:20656\"/" ~/.bitsongd/config/config.toml
 ```
 
 ### Set minimum gas price

@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-althea">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `althea_258432-1` | Current Node Version: `v1.5.1`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -46,7 +46,7 @@ althea q bank balances $(althea keys show KEY -a) --node https://althea-rpc.node
 ### Send
 ```js
 althea tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000aalthea \
-  --chain-id auto \
+  --chain-id althea_258432-1 \
   --node https://althea-rpc.noders.services:443 --fees 30000000aalthea \
   --from KEY
 ```
@@ -54,7 +54,7 @@ althea tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000aalthea \
 ### Withdraw rewards from all validators
 ```js
 althea tx distribution withdraw-all-rewards \
-  --chain-id auto \
+  --chain-id althea_258432-1 \
   --node https://althea-rpc.noders.services:443 --fees 30000000aalthea \
   --from KEY
 ```
@@ -63,7 +63,7 @@ althea tx distribution withdraw-all-rewards \
 ```js
 althea tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
-  --chain-id auto \
+  --chain-id althea_258432-1 \
   --node https://althea-rpc.noders.services:443 --fees 30000000aalthea \
   --from KEY
 ```
@@ -71,7 +71,7 @@ althea tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ### Delegate tokens to yourself
 ```js
 althea tx staking delegate $(althea keys show KEY --bech val -a) 1000000aalthea \
---chain-id auto \
+--chain-id althea_258432-1 \
 --node https://althea-rpc.noders.services:443 --fees 30000000aalthea \
 --from KEY
 ```
@@ -79,7 +79,7 @@ althea tx staking delegate $(althea keys show KEY --bech val -a) 1000000aalthea 
 ### Delegate tokens to validator
 ```js
 althea tx staking delegate VALIDATOR_ADDRESS 1000000aalthea \
---chain-id auto \
+--chain-id althea_258432-1 \
 --node https://althea-rpc.noders.services:443 --fees 30000000aalthea \
 --from KEY
 ```
@@ -87,7 +87,7 @@ althea tx staking delegate VALIDATOR_ADDRESS 1000000aalthea \
 ### Redelegate tokens to another validator
 ```js
 althea tx staking redelegate $(althea keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000aalthea \
-  --chain-id auto \
+  --chain-id althea_258432-1 \
   --node https://althea-rpc.noders.services:443 --fees 30000000aalthea \
   --from KEY
 ```
@@ -108,7 +108,7 @@ althea query gov proposals --node https://althea-rpc.noders.services:443
 ### Check vote
 ```js
 althea query gov proposal PROPOSAL_NUMBER \
-  --chain-id auto \
+  --chain-id althea_258432-1 \
   --node https://althea-rpc.noders.services:443 --fees 30000000aalthea \
   --output json | jq
 ```
@@ -121,7 +121,7 @@ althea query gov proposal PROPOSAL_NUMBER \
 * abstain
 ```js
 althea tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
-  --chain-id auto \
+  --chain-id althea_258432-1 \
   --node https://althea-rpc.noders.services:443 --fees 30000000aalthea \
   --from KEY
 ```
@@ -144,7 +144,7 @@ althea tx staking create-validator \
   --identity "220491ADDD660741" \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
-  --chain-id auto \
+  --chain-id althea_258432-1 \
   --node https://althea-rpc.noders.services:443 --fees 30000000aalthea \
   --from KEY
 ```
@@ -156,7 +156,7 @@ althea tx staking edit-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id auto \
+--chain-id althea_258432-1 \
 --commission-rate 0.05 \
 --from KEY \
 --node https://althea-rpc.noders.services:443 --fees 30000000aalthea \
@@ -165,7 +165,7 @@ althea tx staking edit-validator \
 ### Unjail
 ```js
 althea tx slashing unjail \
-  --chain-id auto \
+  --chain-id althea_258432-1 \
   --node https://althea-rpc.noders.services:443 --fees 30000000aalthea \
   --from KEY
 ```

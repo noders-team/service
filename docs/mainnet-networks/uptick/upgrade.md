@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-uptick">
 # Upgrade
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `uptick_117-1` | Current Node Version: `v0.2.19`
 
 
 # Clone Uptick repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf UptickNetwork
 git clone https://github.com/UptickNetwork.git
 cd UptickNetwork
-git checkout auto
+git checkout v0.2.19
  ```
 
 # Build binaries
@@ -26,8 +26,8 @@ make build
 
 # Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.uptickd/cosmovisor/upgrades/auto/bin
-mv build/uptickd ~/.uptickd/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.uptickd/cosmovisor/upgrades/v0.2.19/bin
+mv build/uptickd ~/.uptickd/cosmovisor/upgrades/v0.2.19/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf UptickNetwork
 git clone https://github.com/UptickNetwork.git
 cd UptickNetwork
-git checkout auto
+git checkout v0.2.19
  ```
 
 ## Build binaries

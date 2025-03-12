@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-pylons">
 # Pylons
 </div>
-###### Chain ID: `null` | Current Node Version: `v1.1.4`
+###### Chain ID: `pylons-mainnet-1` | Current Node Version: `v1.1.4`
 
 
 Pylons.tech is at the forefront of blockchain development, specializing in digital items and NFTs. It streamlines the creation of freemium DApps, marrying mobile Web3 experiences with traditional in-app purchases. Designed to facilitate easy onboarding, Pylons removes barriers like KYC and initial token buys, making on-chain gaming as accessible as its mainstream counterpart. Its innovative fiat bridge furthers this mission, ensuring direct purchases of digital assets, thereby democratizing access to the blockchain ecosystem.

@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-uptick">
 # State sync
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `uptick_117-1` | Current Node Version: `v0.2.19`
 
 ```bash
 SNAP_RPC=https://uptick-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop uptickd && uptickd tendermint unsafe-reset-all --home ~/.uptickd --keep-addr-book
 ```
 ```bash
-peers="@uptick-rpc.noders.services:"
+peers="d9de9af4a4e9092dd29ea833ef4960b97798ba18@uptick-rpc.noders.services:24656"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.uptickd/config/config.toml
 ```
 ```bash
