@@ -19,9 +19,9 @@ DAEMON_SERVICE="story.service"
 DAEMON_HOME="~/.story"
 
 # Endpoints
-ENDPOINT_RPC="https://story.rpc.noders.services"
-ENDPOINT_API="https://story.api.noders.services"
-ENDPOINT_JRPC="https://story.jsonrpc.noders.services"
+ENDPOINT_RPC="https://story-t-rpc.noders.services"
+ENDPOINT_API="https://story-t-api.noders.services"
+ENDPOINT_JRPC="https://story-t-jsonrpc.noders.services"
 ENDPOINT_GRPC=""
 ENDPOINT_PEER="auto"
 

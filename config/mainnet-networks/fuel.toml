@@ -3,8 +3,7 @@ CHAIN_NAME="Fuel"
 CHAIN_SYSTEM_NAME="fuel"
 CHAIN_ID="auto"
 VERSION="auto"
-CHAIN_DESCRIPTION="""# Andromeda Protocol: Unveiling the aOS
-
+CHAIN_DESCRIPTION="""# Fuel
 Fuel addresses a creeping centralization infecting the blockchain ecosystem, igniting a high-throughput architecture built for mass adoption, retaining low node requirements.
 
 """
