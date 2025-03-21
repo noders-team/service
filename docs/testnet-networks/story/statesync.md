@@ -10,7 +10,7 @@ sidebar_position: 4
 ###### Chain ID: `odyssey-0` | Current Node Version: `v0.13.0`
 
 ```bash
-SNAP_RPC=https://story.rpc.noders.services:443 && \
+SNAP_RPC=https://story-t-rpc.noders.services:443 && \
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
 TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash) && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop story && story tendermint unsafe-reset-all --home ~/.story --keep-addr-book
 ```
 ```bash
-peers="@story.rpc.noders.services:"
+peers="@story-t-rpc.noders.services:"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.story/config/config.toml
 ```
 ```bash

@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-atomone">
 # Installation
 </div>
-###### Chain ID: `atomone-1` | Current Node Version: `v1.0.0`
+###### Chain ID: `atomone-1` | Current Node Version: `v1.1.2`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Atomone repo and build atomoned v1.0.0
+### Clone Atomone repo and build atomoned v1.1.2
 ```js
 cd $HOME
 git clone https://github.com/atomone-hub/atomone.git
 cd atomone
-git checkout v1.0.0
+git checkout v1.1.2
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.atomone/cosmovisor/upgrades/v1.0.0/bin
-mv $HOME/go/bin/atomoned ~/.atomone/cosmovisor/upgrades/v1.0.0/bin/
+mkdir -p ~/.atomone/cosmovisor/upgrades/v1.1.2/bin
+mv $HOME/go/bin/atomoned ~/.atomone/cosmovisor/upgrades/v1.1.2/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Atomone repo and build atomoned v1.0.0
+### Clone Atomone repo and build atomoned v1.1.2
 ```js
 cd $HOME
 git clone https://github.com/atomone-hub/atomone.git
 cd atomone
-git checkout v1.0.0
+git checkout v1.1.2
 ```
 
 ### Build binaries

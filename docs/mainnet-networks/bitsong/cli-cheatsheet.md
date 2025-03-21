@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-bitsong">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `bitsong-2b` | Current Node Version: `v0.21.4`
+###### Chain ID: `bitsong-2b` | Current Node Version: `v0.21.6`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 

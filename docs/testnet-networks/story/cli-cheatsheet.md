@@ -40,14 +40,14 @@ story keys delete KEY
 ## Wallet
 ### Wallet balance
 ```js
-story q bank balances $(story keys show KEY -a) --node https://story.rpc.noders.services:443
+story q bank balances $(story keys show KEY -a) --node https://story-t-rpc.noders.services:443
 ```
 
 ### Send
 ```js
 story tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000aip \
   --chain-id odyssey-0 \
-  --node https://story.rpc.noders.services:443 --fees 3000aip \
+  --node https://story-t-rpc.noders.services:443 --fees 3000aip \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ story tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000aip \
 ```js
 story tx distribution withdraw-all-rewards \
   --chain-id odyssey-0 \
-  --node https://story.rpc.noders.services:443 --fees 3000aip \
+  --node https://story-t-rpc.noders.services:443 --fees 3000aip \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ story tx distribution withdraw-all-rewards \
 story tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id odyssey-0 \
-  --node https://story.rpc.noders.services:443 --fees 3000aip \
+  --node https://story-t-rpc.noders.services:443 --fees 3000aip \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ story tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 story tx staking delegate $(story keys show KEY --bech val -a) 1000000aip \
 --chain-id odyssey-0 \
---node https://story.rpc.noders.services:443 --fees 3000aip \
+--node https://story-t-rpc.noders.services:443 --fees 3000aip \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ story tx staking delegate $(story keys show KEY --bech val -a) 1000000aip \
 ```js
 story tx staking delegate VALIDATOR_ADDRESS 1000000aip \
 --chain-id odyssey-0 \
---node https://story.rpc.noders.services:443 --fees 3000aip \
+--node https://story-t-rpc.noders.services:443 --fees 3000aip \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ story tx staking delegate VALIDATOR_ADDRESS 1000000aip \
 ```js
 story tx staking redelegate $(story keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000aip \
   --chain-id odyssey-0 \
-  --node https://story.rpc.noders.services:443 --fees 3000aip \
+  --node https://story-t-rpc.noders.services:443 --fees 3000aip \
   --from KEY
 ```
 
@@ -96,20 +96,20 @@ story tx staking redelegate $(story keys show KEY --bech val -a) VALIDATOR_ADDRE
 ```js
 story tx staking unbond $(story keys show KEY --bech val -a) aip \
   --chain-id andromeda-1 \
-  --node https://story.rpc.noders.services:443 --fees 3000aip \
+  --node https://story-t-rpc.noders.services:443 --fees 3000aip \
   --from KEY
 ```
 
 ## Governance
 ### List of all proposals
 ```js
-story query gov proposals --node https://story.rpc.noders.services:443
+story query gov proposals --node https://story-t-rpc.noders.services:443
 ```
 ### Check vote
 ```js
 story query gov proposal PROPOSAL_NUMBER \
   --chain-id odyssey-0 \
-  --node https://story.rpc.noders.services:443 --fees 3000aip \
+  --node https://story-t-rpc.noders.services:443 --fees 3000aip \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ story query gov proposal PROPOSAL_NUMBER \
 ```js
 story tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id odyssey-0 \
-  --node https://story.rpc.noders.services:443 --fees 3000aip \
+  --node https://story-t-rpc.noders.services:443 --fees 3000aip \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ story tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id odyssey-0 \
-  --node https://story.rpc.noders.services:443 --fees 3000aip \
+  --node https://story-t-rpc.noders.services:443 --fees 3000aip \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ story tx staking edit-validator \
 --chain-id odyssey-0 \
 --commission-rate 0.05 \
 --from KEY \
---node https://story.rpc.noders.services:443 --fees 3000aip \
+--node https://story-t-rpc.noders.services:443 --fees 3000aip \
 ```
 
 ### Unjail
 ```js
 story tx slashing unjail \
   --chain-id odyssey-0 \
-  --node https://story.rpc.noders.services:443 --fees 3000aip \
+  --node https://story-t-rpc.noders.services:443 --fees 3000aip \
   --from KEY
 ```
 
@@ -203,7 +203,7 @@ echo $(story tendermint show-node-id)'@'$(curl -s ifconfig.me)':'$(cat ~/.story/
 
 ### Get live peers
 ```js
-curl -sS https://story.rpc.noders.services:443/net_info | jq -r '.result.peers[] | "\(.node_info.id)@\(.remote_ip):\(.node_info.listen_addr)"' | awk -F ':' '{print $1":"$(NF)}'
+curl -sS https://story-t-rpc.noders.services:443/net_info | jq -r '.result.peers[] | "\(.node_info.id)@\(.remote_ip):\(.node_info.listen_addr)"' | awk -F ':' '{print $1":"$(NF)}'
 ```
 
 ### Set minimum gas price

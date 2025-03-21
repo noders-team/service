@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-bitsong">
 # Installation
 </div>
-###### Chain ID: `bitsong-2b` | Current Node Version: `v0.21.4`
+###### Chain ID: `bitsong-2b` | Current Node Version: `v0.21.6`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone BitSong repo and build bitsongd v0.21.4
+### Clone BitSong repo and build bitsongd v0.21.6
 ```js
 cd $HOME
 git clone https://github.com/bitsongofficial.git
 cd bitsongofficial
-git checkout v0.21.4
+git checkout v0.21.6
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.bitsongd/cosmovisor/upgrades/v0.21.4/bin
-mv $HOME/go/bin/bitsongd ~/.bitsongd/cosmovisor/upgrades/v0.21.4/bin/
+mkdir -p ~/.bitsongd/cosmovisor/upgrades/v0.21.6/bin
+mv $HOME/go/bin/bitsongd ~/.bitsongd/cosmovisor/upgrades/v0.21.6/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone BitSong repo and build bitsongd v0.21.4
+### Clone BitSong repo and build bitsongd v0.21.6
 ```js
 cd $HOME
 git clone https://github.com/bitsongofficial.git
 cd bitsongofficial
-git checkout v0.21.4
+git checkout v0.21.6
 ```
 
 ### Build binaries
