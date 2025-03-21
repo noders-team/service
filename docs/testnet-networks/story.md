@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-story">
 # Story
 </div>
-###### Chain ID: `odyssey-0` | Current Node Version: `v0.13.0`
+###### Chain ID: `devnet-1` | Current Node Version: `v1.1.0`
 
 
 Story is the World’s IP Blockchain, onramping Programmable IP to power the next generation of AI, DeFi, and consumer applications.
