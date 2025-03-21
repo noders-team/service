@@ -1,8 +1,8 @@
 # Blockchain
 CHAIN_NAME="Story"
 CHAIN_SYSTEM_NAME="story"
-CHAIN_ID="odyssey-0"
-VERSION="v0.13.0"
+CHAIN_ID="devnet-1"
+VERSION="v1.1.0"
 CHAIN_DESCRIPTION=""" # Story Protocol
 
 Story is the World’s IP Blockchain, onramping Programmable IP to power the next generation of AI, DeFi, and consumer applications.
