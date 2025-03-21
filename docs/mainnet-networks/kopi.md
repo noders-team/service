@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-kopi">
 # Kopi
 </div>
-###### Chain ID: `luwak-1` | Current Node Version: `v18.3`
+###### Chain ID: `luwak-1` | Current Node Version: `v18.4`
 
 
 Kopi is the latest project in DeFi and offers a decentralized exchange as well as its own supply managed coins (kCoins).

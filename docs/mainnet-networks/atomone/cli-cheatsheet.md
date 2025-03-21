@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-atomone">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `atomone-1` | Current Node Version: `v1.0.0`
+###### Chain ID: `atomone-1` | Current Node Version: `v1.1.2`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 

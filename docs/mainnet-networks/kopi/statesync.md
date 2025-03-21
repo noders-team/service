@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-kopi">
 # State sync
 </div>
-###### Chain ID: `luwak-1` | Current Node Version: `v18.3`
+###### Chain ID: `luwak-1` | Current Node Version: `v18.4`
 
 ```bash
 SNAP_RPC=https://kopi-rpc.noders.services:443 && \

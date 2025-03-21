@@ -45,8 +45,8 @@ Official links of social networks of projects
 # Public endpoints
 
 <CardLayout autoFitEnabled={true}>
-    <SmallCard to="https://story.rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
-    <SmallCard to="https://story.api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
-    <SmallCard to="https://story.jsonrpc.noders.services" header={{label: "json-RPC Endpoint", translateId: "jrpc-endpoint"}}/>
+    <SmallCard to="https://story-t-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
+    <SmallCard to="https://story-t-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
+    <SmallCard to="https://story-t-jsonrpc.noders.services" header={{label: "json-RPC Endpoint", translateId: "jrpc-endpoint"}}/>
     
 </CardLayout>

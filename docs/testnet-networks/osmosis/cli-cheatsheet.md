@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-osmosis">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `osmo-test-5` | Current Node Version: `28.0.0-rc1`
+###### Chain ID: `osmo-test-5` | Current Node Version: `29.0.0-rc1`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 

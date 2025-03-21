@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-atomone">
 # State sync
 </div>
-###### Chain ID: `atomone-1` | Current Node Version: `v1.0.0`
+###### Chain ID: `atomone-1` | Current Node Version: `v1.1.2`
 
 ```bash
 SNAP_RPC=https://atomone-rpc.noders.services:443 && \

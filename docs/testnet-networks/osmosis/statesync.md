@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-osmosis">
 # State sync
 </div>
-###### Chain ID: `osmo-test-5` | Current Node Version: `28.0.0-rc1`
+###### Chain ID: `osmo-test-5` | Current Node Version: `29.0.0-rc1`
 
 ```bash
 SNAP_RPC=https://osmosis-t-rpc.noders.services:443 && \

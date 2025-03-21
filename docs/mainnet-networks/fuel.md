@@ -12,7 +12,6 @@ import CardLayout from "../../src/layouts/CardLayout"
 </div>
 ###### Chain ID: `seq-mainnet-1` | Current Node Version: `seq-mainnet-1.2-improved-sidecar`
 
-
 Fuel addresses a creeping centralization infecting the blockchain ecosystem, igniting a high-throughput architecture built for mass adoption, retaining low node requirements.
 
 # Social resources

@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-mantra">
 # Installation
 </div>
-###### Chain ID: `mantra-hongbai-1` | Current Node Version: `v3.0.0`
+###### Chain ID: `mantra-dukong-1` | Current Node Version: `v3.0.0`
 
 ## Install dependencies
 
@@ -136,14 +136,14 @@ sudo systemctl enable mantrachaind
 ## Node configuration
 ### Set config
 ```js
-mantrachaind config chain-id mantra-hongbai-1
+mantrachaind config chain-id mantra-dukong-1
 mantrachaind config keyring-backend os
 mantrachaind config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-mantrachaind init NAME_OF_YOUR_VALIDATOR --chain-id mantra-hongbai-1
+mantrachaind init NAME_OF_YOUR_VALIDATOR --chain-id mantra-dukong-1
 ```
 
 ### Download genesis and addrbook

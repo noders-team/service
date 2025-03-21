@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-atomone">
 # Upgrade
 </div>
-###### Chain ID: `atomone-1` | Current Node Version: `v1.0.0`
+###### Chain ID: `atomone-1` | Current Node Version: `v1.1.2`
 
 
 # Clone Atomone repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf atomone
 git clone https://github.com/atomone-hub/atomone.git
 cd atomone
-git checkout v1.0.0
+git checkout v1.1.2
  ```
 
 # Build binaries
@@ -26,8 +26,8 @@ make build
 
 # Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.atomone/cosmovisor/upgrades/v1.0.0/bin
-mv build/atomoned ~/.atomone/cosmovisor/upgrades/v1.0.0/bin/
+mkdir -p ~/.atomone/cosmovisor/upgrades/v1.1.2/bin
+mv build/atomoned ~/.atomone/cosmovisor/upgrades/v1.1.2/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf atomone
 git clone https://github.com/atomone-hub/atomone.git
 cd atomone
-git checkout v1.0.0
+git checkout v1.1.2
  ```
 
 ## Build binaries

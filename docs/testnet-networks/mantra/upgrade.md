@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-mantra">
 # Upgrade
 </div>
-###### Chain ID: `mantra-hongbai-1` | Current Node Version: `v3.0.0`
+###### Chain ID: `mantra-dukong-1` | Current Node Version: `v3.0.0`
 
 # With Cosmovisor
 ## Clone Mantra repository
