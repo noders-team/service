@@ -26,6 +26,7 @@ ENDPOINT_API="https://uptick-api.noders.services"
 ENDPOINT_JRPC="https://uptick-jsonrpc.noders.services"
 ENDPOINT_GRPC="http://uptick-grpc.noders.services:24090"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/uptick"
 
 # Social
 SOCIAL_WEBSITE="https://www.uptickproject.com/"

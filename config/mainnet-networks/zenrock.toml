@@ -24,6 +24,7 @@ ENDPOINT_API="https://zenrock-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="http://zenrock-grpc.noders.services:49590"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/zenrock"
 
 # Social
 SOCIAL_WEBSITE="https://www.zenrocklabs.io"

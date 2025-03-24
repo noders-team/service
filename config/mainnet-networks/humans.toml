@@ -24,6 +24,7 @@ ENDPOINT_API="https://humans-api.noders.services"
 ENDPOINT_JCWEB="https://humans-jsonrpc.noders.services"
 ENDPOINT_GRPC="http://humans-grpc.noders.services:21090"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/humans"
 
 # Social
 SOCIAL_WEBSITE="https://humans.ai/"

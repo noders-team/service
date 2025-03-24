@@ -24,6 +24,7 @@ ENDPOINT_API="https://dymension-api.noders.services"
 ENDPOINT_JRPC="https://dymension-jsonrpc.noders.services"
 ENDPOINT_GRPC="http://dymension-grpc.noders.services:12090"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/dymension"
 
 # Social
 SOCIAL_WEBSITE="https://dymension.xyz/"

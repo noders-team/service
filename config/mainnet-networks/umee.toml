@@ -26,6 +26,7 @@ ENDPOINT_API="https://umee-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="http://umee-grpc.noders.services:32090"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/umee"
 
 # Social
 SOCIAL_WEBSITE="https://www.ux.xyz/"

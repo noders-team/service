@@ -24,6 +24,7 @@ ENDPOINT_API="https://rebus-api.noders.services"
 ENDPOINT_JRPC="https://rebus-jsonrpc.noders.services"
 ENDPOINT_GRPC="http://rebus-grpc.noders.services:18090"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/rebus"
 
 # Social
 SOCIAL_WEBSITE="https://www.rebuschain.com/"

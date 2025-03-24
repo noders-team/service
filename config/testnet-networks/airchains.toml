@@ -24,6 +24,7 @@ ENDPOINT_API="https://airchains-t-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="http://airchains-t-grpc.noders.services:31090"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/airchains"
 
 # Social
 SOCIAL_WEBSITE="https://www.airchains.io/"

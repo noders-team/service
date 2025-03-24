@@ -24,6 +24,7 @@ ENDPOINT_API="https://mantra-t-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="http://mantra-t-grpc.noders.services:30090"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/mantra"
 
 # Social
 SOCIAL_WEBSITE="https://www.mantrachain.io/"

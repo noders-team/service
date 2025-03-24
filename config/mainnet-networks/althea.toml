@@ -21,6 +21,7 @@ ENDPOINT_API="https://althea-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="http://althea-grpc.noders.services:12490"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/althea"
 
 # Social
 SOCIAL_WEBSITE="https://www.althea.net/"

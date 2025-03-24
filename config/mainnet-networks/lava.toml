@@ -24,6 +24,7 @@ ENDPOINT_API="https://lava-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="http://lava-grpc.noders.services:37090"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/lava"
 
 # Social
 SOCIAL_WEBSITE="https://www.lavanet.xyz/"

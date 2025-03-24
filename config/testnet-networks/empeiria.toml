@@ -24,6 +24,7 @@ ENDPOINT_API="https://empeiria-t-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="http://empeiria-t-grpc.noders.services:11290"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/empeiria"
 
 # Social
 SOCIAL_WEBSITE="https://empe.io/"

@@ -21,6 +21,7 @@ ENDPOINT_API="https://atomone-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="http://atomone-grpc.noders.services:14590"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/atomone"
 
 # Social
 SOCIAL_WEBSITE=""

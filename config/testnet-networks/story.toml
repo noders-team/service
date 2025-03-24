@@ -24,6 +24,7 @@ ENDPOINT_API="https://story-t-api.noders.services"
 ENDPOINT_JRPC="https://story-t-jsonrpc.noders.services"
 ENDPOINT_GRPC=""
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/story"
 
 # Social
 SOCIAL_WEBSITE="https://www.story.foundation/"

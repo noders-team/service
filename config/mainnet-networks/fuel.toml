@@ -23,6 +23,7 @@ ENDPOINT_API="https://fuel-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="https://fuel-grpc.noders.services"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/fuel"
 
 # Social
 SOCIAL_WEBSITE="https://fuel.network/"

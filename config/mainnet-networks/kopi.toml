@@ -24,6 +24,7 @@ ENDPOINT_API="https://kopi-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="http://kopi-grpc.noders.services:30790"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/kopi"
 
 # Social
 SOCIAL_WEBSITE="https://kopi.money/"

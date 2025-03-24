@@ -24,6 +24,7 @@ ENDPOINT_API="https://bitsong-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="http://bitsong-grpc.noders.services:20090"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/bitsong"
 
 # Social
 SOCIAL_WEBSITE="https://bitsong.io/"

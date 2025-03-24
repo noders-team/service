@@ -24,6 +24,7 @@ ENDPOINT_API="https://gitopia-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="http://gitopia-grpc.noders.services:19090"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/gitopia"
 
 # Social
 SOCIAL_WEBSITE="https://gitopia.com/"

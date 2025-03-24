@@ -24,6 +24,7 @@ ENDPOINT_API="https://quicksilver-t-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="http://quicksilver-t-grpc.noders.services:13090"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/quicksilver"
 
 # Social
 SOCIAL_WEBSITE="https://quicksilver.zone/"

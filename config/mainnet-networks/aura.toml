@@ -24,6 +24,7 @@ ENDPOINT_API="https://aura-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="http://aura-grpc.noders.services:17090"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/aura"
 
 # Social
 SOCIAL_WEBSITE="https://aura.network/"

@@ -26,6 +26,7 @@ ENDPOINT_API="https://seda-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="http://seda-grpc.noders.services:36090"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/seda"
 
 # Social
 SOCIAL_WEBSITE="https://www.seda.xyz/"

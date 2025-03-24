@@ -24,6 +24,7 @@ ENDPOINT_API="https://desmos-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="http://desmos-grpc.noders.services:27090"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/desmos"
 
 # Social
 SOCIAL_WEBSITE="https://desmos.network/"

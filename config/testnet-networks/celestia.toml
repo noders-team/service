@@ -24,6 +24,7 @@ ENDPOINT_API="https://celestia-t-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="http://celestia-t-grpc.noders.services:21090"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/celestia"
 
 # Social
 SOCIAL_WEBSITE="https://celestia.org/"

@@ -24,6 +24,7 @@ ENDPOINT_API="https://sunrise-t-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="http://sunrise-t-grpc.noders.services:28390"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/sunrise"
 
 # Social
 SOCIAL_WEBSITE="https://sunriselayer.io/"

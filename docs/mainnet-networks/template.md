@@ -49,6 +49,7 @@ Official links of social networks of projects
     [ENDPOINT_API_BLOCK]
     [ENDPOINT_JRPC_BLOCK]
     [ENDPOINT_GRPC_BLOCK]
+    [ENDPOINT_COSMOSLIST_BLOCK]
 </CardLayout>
 
 

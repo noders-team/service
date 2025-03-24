@@ -24,6 +24,7 @@ ENDPOINT_API="https://arkeo-t-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="http://arkeo-t-grpc.noders.services:22890"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/arkeo"
 
 # Social
 SOCIAL_WEBSITE="https://arkeo.network/"

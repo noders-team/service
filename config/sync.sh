@@ -25,11 +25,13 @@ function readBlockchainConfig {
   ENDPOINT_JRPC=$(grep -oE '^ENDPOINT_JRPC=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   ENDPOINT_GRPC=$(grep -oE '^ENDPOINT_GRPC=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   ENDPOINT_PEER=$(grep -oE '^ENDPOINT_PEER=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  ENDPOINT_COSMOSLIST=$(grep -oE '^ENDPOINT_COSMOSLIST=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
 
   ENDPOINT_RPC_BLOCK=""
   ENDPOINT_API_BLOCK=""
   ENDPOINT_JRPC_BLOCK=""
   ENDPOINT_GRPC_BLOCK=""
+  ENDPOINT_COSMOSLIST_BLOCK=""
 
   # Social
   SOCIAL_WEBSITE=$(grep -oE '^SOCIAL_WEBSITE=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
@@ -160,11 +162,14 @@ function replacePageVariables {
   sed -i'' "s|\[ENDPOINT_JRPC\]|${ENDPOINT_JRPC}|g" $1
   sed -i'' "s|\[ENDPOINT_GRPC\]|${ENDPOINT_GRPC}|g" $1
   sed -i'' "s|\[ENDPOINT_PEER\]|${ENDPOINT_PEER}|g" $1
+  sed -i'' "s|\[ENDPOINT_COSMOSLIST\]|${ENDPOINT_COSMOSLIST}|g" $1
 
   sed -i'' "s|\[ENDPOINT_RPC_BLOCK\]|${ENDPOINT_RPC_BLOCK}|g" $1
   sed -i'' "s|\[ENDPOINT_API_BLOCK\]|${ENDPOINT_API_BLOCK}|g" $1
   sed -i'' "s|\[ENDPOINT_JRPC_BLOCK\]|${ENDPOINT_JRPC_BLOCK}|g" $1
   sed -i'' "s|\[ENDPOINT_GRPC_BLOCK\]|${ENDPOINT_GRPC_BLOCK}|g" $1
+  sed -i'' "s|\[ENDPOINT_COSMOSLIST_BLOCK\]|${ENDPOINT_COSMOSLIST_BLOCK}|g" $1
+
   # Social
   sed -i'' "s|\[SOCIAL_WEBSITE\]|${SOCIAL_WEBSITE}|g" $1
   sed -i'' "s|\[SOCIAL_GITHUB\]|${SOCIAL_GITHUB}|g" $1
@@ -215,6 +220,9 @@ function updateMain {
     fi
     if [ -n "${ENDPOINT_GRPC}" ] ; then
       ENDPOINT_GRPC_BLOCK="<SmallCard to=\"${ENDPOINT_GRPC}\" header={{label: \"gRPC Endpoint\", translateId: \"grpc-endpoint\"}}/>"
+    fi
+    if [ -n "${ENDPOINT_COSMOSLIST}" ] ; then
+      ENDPOINT_COSMOSLIST_BLOCK="<SmallCard to=\"${ENDPOINT_COSMOSLIST}\" header={{label: \"Cosmoslist Endpoint\", translateId: \"cosmoslist-endpoint\"}}/>"
     fi
 
     # Social
@@ -406,6 +414,9 @@ function updateMain {
     fi
     if [ -n "${ENDPOINT_GRPC}" ] ; then
       ENDPOINT_GRPC_BLOCK="<SmallCard to=\"${ENDPOINT_GRPC}\" header={{label: \"gRPC Endpoint\", translateId: \"grpc-endpoint\"}}/>"
+    fi
+    if [ -n "${ENDPOINT_COSMOSLIST}" ] ; then
+      ENDPOINT_COSMOSLIST_BLOCK="<SmallCard to=\"${ENDPOINT_COSMOSLIST}\" header={{label: \"Cosmoslist Endpoint\", translateId: \"cosmoslist-endpoint\"}}/>"
     fi
 
     # Social

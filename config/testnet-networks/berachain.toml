@@ -24,6 +24,7 @@ ENDPOINT_API=""
 ENDPOINT_JRPC="http://berachain-t-jsonrpc.noders.services:80"
 ENDPOINT_GRPC=""
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/berachain"
 
 # Social
 SOCIAL_WEBSITE="https://www.berachain.com/"

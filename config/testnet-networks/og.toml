@@ -23,6 +23,7 @@ ENDPOINT_API="https://og-t-api.noders.services"
 ENDPOINT_JRPC="https://og-t-json.noders.services"
 ENDPOINT_GRPC="http://og-t-grpc.noders.services:29090"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/og"
 
 # Social
 SOCIAL_WEBSITE="https://0g.ai/"

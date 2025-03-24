@@ -24,6 +24,7 @@ ENDPOINT_API="https://xrp-t-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="http://xrp-t-grpc.noders.services"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/xrp"
 
 # Social
 SOCIAL_WEBSITE="https://xrplevm.org/"

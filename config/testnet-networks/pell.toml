@@ -24,6 +24,7 @@ ENDPOINT_API="https://pell-t-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="http://pell-t-grpc.noders.services:47990"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/pell"
 
 # Social
 SOCIAL_WEBSITE="https://pell.network/"

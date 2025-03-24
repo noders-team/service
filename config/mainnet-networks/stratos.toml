@@ -27,6 +27,7 @@ ENDPOINT_API="https://stratos-api.noders.services"
 ENDPOINT_JRPC="https://stratos-jsonrpc.noders.services "
 ENDPOINT_GRPC="http://stratos-grpc.noders.services:29090"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/stratos"
 
 # Social
 SOCIAL_WEBSITE="https://www.thestratos.org/"

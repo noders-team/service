@@ -25,6 +25,7 @@ ENDPOINT_API="https://haqq-api.noders.services"
 ENDPOINT_JRPC="https://haqq-jsonrpc.noders.services"
 ENDPOINT_GRPC="http://haqq-grpc.noders.services:14090"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/haqq"
 
 # Social
 SOCIAL_WEBSITE="https://haqq.network/"

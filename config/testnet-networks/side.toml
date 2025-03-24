@@ -24,6 +24,7 @@ ENDPOINT_API="https://side-t-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="http://side-t-grpc.noders.services:26090"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/side"
 
 # Social
 SOCIAL_WEBSITE="https://side.one/"

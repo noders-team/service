@@ -27,6 +27,7 @@ ENDPOINT_API="https://jackal-t-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="http://jackal-t-grpc.noders.services:14090"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/jackal"
 
 # Social
 SOCIAL_WEBSITE="https://www.jackalprotocol.com/"

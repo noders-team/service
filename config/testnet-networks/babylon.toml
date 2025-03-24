@@ -22,6 +22,7 @@ ENDPOINT_API="https://babylon-t-api.noders.services"
 ENDPOINT_JRPC="https://babylon-t-jsonrpc.noders.services"
 ENDPOINT_GRPC=""
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/babylon"
 
 # Social
 SOCIAL_WEBSITE="https://babylonlabs.io/"

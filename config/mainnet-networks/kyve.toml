@@ -26,6 +26,7 @@ ENDPOINT_API="https://kyve-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="http://kyve-grpc.noders.services:15090"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/kyve"
 
 # Social
 SOCIAL_WEBSITE="https://www.kyve.network/"

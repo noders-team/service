@@ -24,6 +24,7 @@ ENDPOINT_API="https://warden-t-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="http://warden-t-grpc.noders.services:23090"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/warden"
 
 # Social
 SOCIAL_WEBSITE="https://wardenprotocol.org/"

@@ -26,6 +26,7 @@ ENDPOINT_API="https://osmosis-t-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="http://osmosis-t-grpc.noders.services:10090"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/osmosis"
 
 # Social
 SOCIAL_WEBSITE="https://app.osmosis.zone/"

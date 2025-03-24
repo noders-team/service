@@ -24,6 +24,7 @@ ENDPOINT_API="https://zetachain-api.noders.services"
 ENDPOINT_JRPC="https://zetachain-jsonrpc.noders.services"
 ENDPOINT_GRPC="http://zetachain-grpc.noders.services:28090"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/zetachain"
 
 # Social
 SOCIAL_WEBSITE="https://www.zetachain.com/"

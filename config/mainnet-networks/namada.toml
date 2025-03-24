@@ -24,6 +24,7 @@ ENDPOINT_API=""
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC=""
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/namada"
 
 # Social
 SOCIAL_WEBSITE="https://namada.net/"

@@ -24,6 +24,7 @@ ENDPOINT_API="https://galactica-t-api.noders.services"
 ENDPOINT_JRPC="https://galactica-t-json.noders.services"
 ENDPOINT_GRPC="http://galactica-t-grpc.noders.services:28090"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/galactica"
 
 # Social
 SOCIAL_WEBSITE="https://galactica.com/"

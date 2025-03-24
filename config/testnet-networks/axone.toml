@@ -24,6 +24,7 @@ ENDPOINT_API="https://axone-t-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="http://axone-t-grpc.noders.services:20090"
 ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/axone"
 
 # Social
 SOCIAL_WEBSITE="https://www.axone.xyz/"
