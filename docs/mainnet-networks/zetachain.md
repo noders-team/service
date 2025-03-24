@@ -49,6 +49,7 @@ Official links of social networks of projects
     <SmallCard to="https://zetachain-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     <SmallCard to="https://zetachain-jsonrpc.noders.services" header={{label: "json-RPC Endpoint", translateId: "jrpc-endpoint"}}/>
     <SmallCard to="http://zetachain-grpc.noders.services:28090" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="https://cosmoslist.co/mainnet/zetachain" header={{label: "Cosmoslist Endpoint", translateId: "cosmoslist-endpoint"}}/>
 </CardLayout>
 
 

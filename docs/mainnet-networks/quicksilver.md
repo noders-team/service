@@ -49,6 +49,7 @@ Official links of social networks of projects
     <SmallCard to="https://quicksilver-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     
     <SmallCard to="http://quicksilver-grpc.noders.services:11190" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="https://cosmoslist.co/mainnet/quicksilver" header={{label: "Cosmoslist Endpoint", translateId: "cosmoslist-endpoint"}}/>
 </CardLayout>
 
 

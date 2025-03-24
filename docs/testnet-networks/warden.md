@@ -49,4 +49,5 @@ Official links of social networks of projects
     <SmallCard to="https://warden-t-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     
     <SmallCard to="http://warden-t-grpc.noders.services:23090" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="https://cosmoslist.co/testnet/warden" header={{label: "Cosmoslist Endpoint", translateId: "cosmoslist-endpoint"}}/>
 </CardLayout>

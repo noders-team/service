@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-swisstronik">
 # State sync
 </div>
-###### Chain ID: `swisstronik_1291-1` | Current Node Version: `v1.0.7`
+###### Chain ID: `swisstronik_1291-1` | Current Node Version: `v1.0.8`
 
 ```bash
 SNAP_RPC=https://swisstronik-t-rpc.noders.services:443 && \

@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-airchains">
 # Airchains
 </div>
-###### Chain ID: `junction` | Current Node Version: `v0.1.0`
+###### Chain ID: `varanasi-1` | Current Node Version: `v0.3.1`
 
 
 Airchains is a platform that provides tools for creating modular blockchain solutions. It enables developers to quickly deploy blockchains with integration across various networks, enhancing interoperability and scalability. The platform offers automated deployment processes, chain and bridge management, and supports various protocols and standards. Airchains aims to reduce complexity and accelerate the time to market for blockchain applications. For more detailed information, visit Airchains.
@@ -49,4 +49,5 @@ Official links of social networks of projects
     <SmallCard to="https://airchains-t-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     
     <SmallCard to="http://airchains-t-grpc.noders.services:31090" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="https://cosmoslist.co/testnet/airchains" header={{label: "Cosmoslist Endpoint", translateId: "cosmoslist-endpoint"}}/>
 </CardLayout>

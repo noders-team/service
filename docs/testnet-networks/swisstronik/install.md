@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-swisstronik">
 # Installation
 </div>
-###### Chain ID: `swisstronik_1291-1` | Current Node Version: `v1.0.7`
+###### Chain ID: `swisstronik_1291-1` | Current Node Version: `v1.0.8`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Swisstronik repo and build swisstronikd v1.0.7
+### Clone Swisstronik repo and build swisstronikd v1.0.8
 ```js
 cd $HOME
 git clone https://github.com/SigmaGmbH.git
 cd SigmaGmbH
-git checkout v1.0.7
+git checkout v1.0.8
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.swisstronik/cosmovisor/upgrades/v1.0.7/bin
-mv $HOME/go/bin/swisstronikd ~/.swisstronik/cosmovisor/upgrades/v1.0.7/bin/
+mkdir -p ~/.swisstronik/cosmovisor/upgrades/v1.0.8/bin
+mv $HOME/go/bin/swisstronikd ~/.swisstronik/cosmovisor/upgrades/v1.0.8/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Swisstronik repo and build swisstronikd v1.0.7
+### Clone Swisstronik repo and build swisstronikd v1.0.8
 ```js
 cd $HOME
 git clone https://github.com/SigmaGmbH.git
 cd SigmaGmbH
-git checkout v1.0.7
+git checkout v1.0.8
 ```
 
 ### Build binaries

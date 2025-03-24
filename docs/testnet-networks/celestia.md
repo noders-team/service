@@ -49,4 +49,5 @@ Official links of social networks of projects
     <SmallCard to="https://celestia-t-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     
     <SmallCard to="http://celestia-t-grpc.noders.services:21090" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="https://cosmoslist.co/testnet/celestia" header={{label: "Cosmoslist Endpoint", translateId: "cosmoslist-endpoint"}}/>
 </CardLayout>

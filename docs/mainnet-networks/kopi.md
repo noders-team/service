@@ -49,6 +49,7 @@ Official links of social networks of projects
     <SmallCard to="https://kopi-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     
     <SmallCard to="http://kopi-grpc.noders.services:30790" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="https://cosmoslist.co/mainnet/kopi" header={{label: "Cosmoslist Endpoint", translateId: "cosmoslist-endpoint"}}/>
 </CardLayout>
 
 

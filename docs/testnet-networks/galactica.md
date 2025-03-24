@@ -49,4 +49,5 @@ Official links of social networks of projects
     <SmallCard to="https://galactica-t-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     <SmallCard to="https://galactica-t-json.noders.services" header={{label: "json-RPC Endpoint", translateId: "jrpc-endpoint"}}/>
     <SmallCard to="http://galactica-t-grpc.noders.services:28090" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="https://cosmoslist.co/testnet/galactica" header={{label: "Cosmoslist Endpoint", translateId: "cosmoslist-endpoint"}}/>
 </CardLayout>

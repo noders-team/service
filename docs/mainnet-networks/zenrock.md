@@ -49,6 +49,7 @@ Official links of social networks of projects
     <SmallCard to="https://zenrock-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     
     <SmallCard to="http://zenrock-grpc.noders.services:49590" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="https://cosmoslist.co/mainnet/zenrock" header={{label: "Cosmoslist Endpoint", translateId: "cosmoslist-endpoint"}}/>
 </CardLayout>
 
 

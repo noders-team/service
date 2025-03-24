@@ -49,6 +49,7 @@ Official links of social networks of projects
     <SmallCard to="https://rebus-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     <SmallCard to="https://rebus-jsonrpc.noders.services" header={{label: "json-RPC Endpoint", translateId: "jrpc-endpoint"}}/>
     <SmallCard to="http://rebus-grpc.noders.services:18090" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="https://cosmoslist.co/mainnet/rebus" header={{label: "Cosmoslist Endpoint", translateId: "cosmoslist-endpoint"}}/>
 </CardLayout>
 
 

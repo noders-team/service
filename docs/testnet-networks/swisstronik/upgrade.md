@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-swisstronik">
 # Upgrade
 </div>
-###### Chain ID: `swisstronik_1291-1` | Current Node Version: `v1.0.7`
+###### Chain ID: `swisstronik_1291-1` | Current Node Version: `v1.0.8`
 
 # With Cosmovisor
 ## Clone Swisstronik repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf SigmaGmbH
 git clone https://github.com/SigmaGmbH.git
 cd SigmaGmbH
-git checkout v1.0.7
+git checkout v1.0.8
  ```
 
 ## Build binaries
@@ -26,8 +26,8 @@ make build
 
 ## Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.swisstronik/cosmovisor/upgrades/v1.0.7/bin
-mv build/swisstronikd ~/.swisstronik/cosmovisor/upgrades/v1.0.7/bin/
+mkdir -p ~/.swisstronik/cosmovisor/upgrades/v1.0.8/bin
+mv build/swisstronikd ~/.swisstronik/cosmovisor/upgrades/v1.0.8/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf SigmaGmbH
 git clone https://github.com/SigmaGmbH.git
 cd SigmaGmbH
-git checkout v1.0.7
+git checkout v1.0.8
  ```
 
 ## Build binaries

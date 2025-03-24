@@ -51,6 +51,7 @@ Official links of social networks of projects
     <SmallCard to="https://uptick-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     <SmallCard to="https://uptick-jsonrpc.noders.services" header={{label: "json-RPC Endpoint", translateId: "jrpc-endpoint"}}/>
     <SmallCard to="http://uptick-grpc.noders.services:24090" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="https://cosmoslist.co/mainnet/uptick" header={{label: "Cosmoslist Endpoint", translateId: "cosmoslist-endpoint"}}/>
 </CardLayout>
 
 

@@ -49,4 +49,5 @@ Official links of social networks of projects
     <SmallCard to="https://story-t-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     <SmallCard to="https://story-t-jsonrpc.noders.services" header={{label: "json-RPC Endpoint", translateId: "jrpc-endpoint"}}/>
     
+    <SmallCard to="https://cosmoslist.co/testnet/story" header={{label: "Cosmoslist Endpoint", translateId: "cosmoslist-endpoint"}}/>
 </CardLayout>

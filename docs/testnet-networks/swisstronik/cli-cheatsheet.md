@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-swisstronik">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `swisstronik_1291-1` | Current Node Version: `v1.0.7`
+###### Chain ID: `swisstronik_1291-1` | Current Node Version: `v1.0.8`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 

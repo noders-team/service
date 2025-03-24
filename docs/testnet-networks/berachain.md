@@ -49,4 +49,5 @@ Official links of social networks of projects
     
     <SmallCard to="http://berachain-t-jsonrpc.noders.services:80" header={{label: "json-RPC Endpoint", translateId: "jrpc-endpoint"}}/>
     
+    <SmallCard to="https://cosmoslist.co/testnet/berachain" header={{label: "Cosmoslist Endpoint", translateId: "cosmoslist-endpoint"}}/>
 </CardLayout>
