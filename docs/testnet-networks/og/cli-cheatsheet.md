@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-og">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `zgtendermint_16600-2` | Current Node Version: `v57`
+###### Chain ID: `zgtendermint_16600-2` | Current Node Version: `v0.5.0.1`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 

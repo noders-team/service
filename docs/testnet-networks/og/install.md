@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-og">
 # Installation
 </div>
-###### Chain ID: `zgtendermint_16600-2` | Current Node Version: `v57`
+###### Chain ID: `zgtendermint_16600-2` | Current Node Version: `v0.5.0.1`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone ZeroGravity repo and build 0gchaind v57
+### Clone ZeroGravity repo and build 0gchaind v0.5.0.1
 ```js
 cd $HOME
 git clone https://github.com/0glabs/0g-chain.git
 cd 0g-chain
-git checkout v57
+git checkout v0.5.0.1
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.0gchain/cosmovisor/upgrades/v57/bin
-mv $HOME/go/bin/0gchaind ~/.0gchain/cosmovisor/upgrades/v57/bin/
+mkdir -p ~/.0gchain/cosmovisor/upgrades/v0.5.0.1/bin
+mv $HOME/go/bin/0gchaind ~/.0gchain/cosmovisor/upgrades/v0.5.0.1/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone ZeroGravity repo and build 0gchaind v57
+### Clone ZeroGravity repo and build 0gchaind v0.5.0.1
 ```js
 cd $HOME
 git clone https://github.com/0glabs/0g-chain.git
 cd 0g-chain
-git checkout v57
+git checkout v0.5.0.1
 ```
 
 ### Build binaries
@@ -153,7 +153,7 @@ curl https://config-t.noders.services/og/addrbook.json -o ~/.0gchain/config/addr
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"b5643bd00f7329d538c90d83d5b83b9124925093@og-t-rpc.noders.services:23856\"/" ~/.0gchain/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"a9b097b76283cbf2e0aa9275b77326b8bcf952ee@og-t-rpc.noders.services:23856\"/" ~/.0gchain/config/config.toml
 ```
 
 ### Set minimum gas price
