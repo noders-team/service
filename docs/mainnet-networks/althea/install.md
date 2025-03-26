@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-althea">
 # Installation
 </div>
-###### Chain ID: `althea_258432-1` | Current Node Version: `v1.5.1`
+###### Chain ID: `althea_258432-1` | Current Node Version: `auto`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Althea repo and build althea v1.5.1
+### Clone Althea repo and build althea auto
 ```js
 cd $HOME
 git clone https://github.com/althea-net/althea-chain.git
 cd althea-chain
-git checkout v1.5.1
+git checkout auto
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.althea/cosmovisor/upgrades/v1.5.1/bin
-mv $HOME/go/bin/althea ~/.althea/cosmovisor/upgrades/v1.5.1/bin/
+mkdir -p ~/.althea/cosmovisor/upgrades/auto/bin
+mv $HOME/go/bin/althea ~/.althea/cosmovisor/upgrades/auto/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Althea repo and build althea v1.5.1
+### Clone Althea repo and build althea auto
 ```js
 cd $HOME
 git clone https://github.com/althea-net/althea-chain.git
 cd althea-chain
-git checkout v1.5.1
+git checkout auto
 ```
 
 ### Build binaries

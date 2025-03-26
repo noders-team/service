@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-althea">
 # Upgrade
 </div>
-###### Chain ID: `althea_258432-1` | Current Node Version: `v1.5.1`
+###### Chain ID: `althea_258432-1` | Current Node Version: `auto`
 
 
 # Clone Althea repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf althea-chain
 git clone https://github.com/althea-net/althea-chain.git
 cd althea-chain
-git checkout v1.5.1
+git checkout auto
  ```
 
 # Build binaries
@@ -26,8 +26,8 @@ make build
 
 # Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.althea/cosmovisor/upgrades/v1.5.1/bin
-mv build/althea ~/.althea/cosmovisor/upgrades/v1.5.1/bin/
+mkdir -p ~/.althea/cosmovisor/upgrades/auto/bin
+mv build/althea ~/.althea/cosmovisor/upgrades/auto/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf althea-chain
 git clone https://github.com/althea-net/althea-chain.git
 cd althea-chain
-git checkout v1.5.1
+git checkout auto
  ```
 
 ## Build binaries

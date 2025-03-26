@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-zetachain">
 # State sync
 </div>
-###### Chain ID: `zetachain_7000-1` | Current Node Version: `v28.0.0`
+###### Chain ID: `zetachain_7000-1` | Current Node Version: `v29.1.2`
 
 ```bash
 SNAP_RPC=https://zetachain-rpc.noders.services:443 && \

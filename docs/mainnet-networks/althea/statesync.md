@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-althea">
 # State sync
 </div>
-###### Chain ID: `althea_258432-1` | Current Node Version: `v1.5.1`
+###### Chain ID: `althea_258432-1` | Current Node Version: `auto`
 
 ```bash
 SNAP_RPC=https://althea-rpc.noders.services:443 && \

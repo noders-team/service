@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-og">
 # State sync
 </div>
-###### Chain ID: `zgtendermint_16600-2` | Current Node Version: `v57`
+###### Chain ID: `zgtendermint_16600-2` | Current Node Version: `v0.5.0.1`
 
 ```bash
 SNAP_RPC=https://og-t-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop 0gchaind && 0gchaind tendermint unsafe-reset-all --home ~/.0gchain --keep-addr-book
 ```
 ```bash
-peers="b5643bd00f7329d538c90d83d5b83b9124925093@og-t-rpc.noders.services:23856"
+peers="a9b097b76283cbf2e0aa9275b77326b8bcf952ee@og-t-rpc.noders.services:23856"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.0gchain/config/config.toml
 ```
 ```bash

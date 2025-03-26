@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-kopi">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `luwak-1` | Current Node Version: `v18.4`
+###### Chain ID: `luwak-1` | Current Node Version: `v19`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
