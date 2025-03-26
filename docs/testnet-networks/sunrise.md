@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-sunrise">
 # Sunrise
 </div>
-###### Chain ID: `sunrise-test-0.2` | Current Node Version: `v0.2.6`
+###### Chain ID: `auto` | Current Node Version: `v0.2.6`
 
 
 Sunrise is a specialized Data Availability Layer for Proof of Liquidity.
