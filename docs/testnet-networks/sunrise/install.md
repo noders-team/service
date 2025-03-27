@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-sunrise">
 # Installation
 </div>
-###### Chain ID: `auto` | Current Node Version: `v0.2.6`
+###### Chain ID: `sunrise-test-0.2` | Current Node Version: `v0.2.6`
 
 ## Install dependencies
 
@@ -136,14 +136,14 @@ sudo systemctl enable sunrised
 ## Node configuration
 ### Set config
 ```js
-sunrised config chain-id auto
+sunrised config chain-id sunrise-test-0.2
 sunrised config keyring-backend os
 sunrised config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-sunrised init NAME_OF_YOUR_VALIDATOR --chain-id auto
+sunrised init NAME_OF_YOUR_VALIDATOR --chain-id sunrise-test-0.2
 ```
 
 ### Download genesis and addrbook
