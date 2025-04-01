@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-mantra">
 # Installation
 </div>
-###### Chain ID: `mantra-dukong-1` | Current Node Version: `v3.0.0`
+###### Chain ID: `mantra-dukong-1` | Current Node Version: `v4.0.0`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Mantra repo and build mantrachaind v3.0.0
+### Clone Mantra repo and build mantrachaind v4.0.0
 ```js
 cd $HOME
 git clone https://github.com/MANTRA-Finance/public.git
 cd public
-git checkout v3.0.0
+git checkout v4.0.0
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.mantrachaind/cosmovisor/upgrades/v3.0.0/bin
-mv $HOME/go/bin/mantrachaind ~/.mantrachaind/cosmovisor/upgrades/v3.0.0/bin/
+mkdir -p ~/.mantrachaind/cosmovisor/upgrades/v4.0.0/bin
+mv $HOME/go/bin/mantrachaind ~/.mantrachaind/cosmovisor/upgrades/v4.0.0/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Mantra repo and build mantrachaind v3.0.0
+### Clone Mantra repo and build mantrachaind v4.0.0
 ```js
 cd $HOME
 git clone https://github.com/MANTRA-Finance/public.git
 cd public
-git checkout v3.0.0
+git checkout v4.0.0
 ```
 
 ### Build binaries
