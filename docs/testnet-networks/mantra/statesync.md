@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-mantra">
 # State sync
 </div>
-###### Chain ID: `mantra-dukong-1` | Current Node Version: `v3.0.0`
+###### Chain ID: `mantra-dukong-1` | Current Node Version: `v4.0.0`
 
 ```bash
 SNAP_RPC=https://mantra-t-rpc.noders.services:443 && \
