@@ -6,10 +6,11 @@ VERSION="auto"
 CHAIN_DESCRIPTION="""# Nillion
 
 Nillion is a decentralized privacy-preserving computation network that enables secure data processing and storage without exposing sensitive information.
+
 """
 [CHAIN_DESCRIPTION_END]
 
-CHAIN_DENOM="unillion"
+CHAIN_DENOM="unil"
 CHAIN_FEES="3000"
 
 # Binary
@@ -45,4 +46,4 @@ UPDATE_UPGRADE=true
 UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true
 UPDATE_LIVE_PEERS=true
-UPDATE_CLI_CHEATSHEET=true 
+UPDATE_CLI_CHEATSHEET=true
