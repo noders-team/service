@@ -347,7 +347,7 @@ function updateSnapshotInfo {
   local size_raw
   size_raw=$(echo "${headers}" | awk 'BEGIN { FS=": " } tolower($1) == "content-length" { print $2 }')
   local size_gb
-  size_gb=$(awk "BEGIN {printf \"%.2f\", $size_raw/1024/1024/1024}")
+  size_gb=$(awk "BEGIN {printf \"%.2f\", ${size_raw}/(1024*1024*1024)}")
 
   # Assigning the extracted values to the global variables
   TIMESTAMP="${timestamp}"
@@ -541,7 +541,7 @@ function updateSnapshotInfo {
   local size_raw
   size_raw=$(echo "${headers}" | awk 'BEGIN { FS=": " } tolower($1) == "content-length" { print $2 }')
   local size_gb
-  size_gb=$(awk "BEGIN {printf \"%.2f\", $size_raw/1024/1024/1024}")
+  size_gb=$(awk "BEGIN {printf \"%.2f\", ${size_raw}/(1024*1024*1024)}")
 
   # Assigning the extracted values to the global variables
   TIMESTAMP="${timestamp}"
