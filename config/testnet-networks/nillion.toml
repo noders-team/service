@@ -19,10 +19,10 @@ DAEMON_SERVICE="nillion.service"
 DAEMON_HOME="~/.nilliond"
 
 # Endpoints
-ENDPOINT_RPC="https://nillion-testnet-rpc.noders.services"
-ENDPOINT_API="https://nillion-testnet-api.noders.services"
+ENDPOINT_RPC="https://nillion-t-rpc.noders.services"
+ENDPOINT_API="https://nillion-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://nillion-testnet-grpc.noders.services:26690"
+ENDPOINT_GRPC="http://nillion-t-grpc.noders.services:26690"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/nillion"
 
