@@ -101,11 +101,15 @@ jobs:
       - name: Format failed endpoints for Telegram
         id: format
         run: |
-          if [ "${{ needs.check-endpoints.outputs.failed_endpoints }}" != "[]" ]; then
+          echo '${{ needs.check-endpoints.outputs.failed_endpoints }}' > endpoints.json
+          count=$(jq 'length' endpoints.json)
+      
+          if [ "$count" -gt 0 ]; then
             echo "ENDPOINT_LIST<<EOF" >> $GITHUB_OUTPUT
-            echo "${{ needs.check-endpoints.outputs.failed_endpoints }}" | jq -r '.[]' >> $GITHUB_OUTPUT
+            jq -r '.[]' endpoints.json >> $GITHUB_OUTPUT
             echo "EOF" >> $GITHUB_OUTPUT
           fi
+    
       - name: Send Telegram notification
         if: steps.format.outputs.ENDPOINT_LIST != ''
         uses: appleboy/telegram-action@master
