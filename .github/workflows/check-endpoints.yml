@@ -120,9 +120,7 @@ jobs:
           message: |
             *🔔 Some endpoints from noders.services deploy are failing*
       
-            *Failing Endpoints:*
             ```
             ${{ steps.format.outputs.ENDPOINT_LIST }}
             ```
-      
-            [View Workflow Run]( ${{ github.event.workflow_run.html_url }})
+            *Can devs do something?*
