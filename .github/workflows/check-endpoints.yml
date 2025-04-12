@@ -69,15 +69,20 @@ jobs:
             clean_endpoint=$(echo "$endpoint" | sed -E 's#^(grpc|http|https)://##')
 
             if [[ "$endpoint" =~ ^https:// ]]; then
-                grpcurl -max-time 3 "$clean_endpoint" list > /dev/null 2>&1
+              set +e
+              grpcurl -max-time 3 "$clean_endpoint" list > /dev/null 2>&1 || FAIL=1
+              set -e
             else
-                grpcurl -plaintext -max-time 3 "$clean_endpoint" list > /dev/null 2>&1
+              set +e
+              grpcurl -plaintext -max-time 3 "$clean_endpoint" list > /dev/null 2>&1 || FAIL=1
+              set -e
             fi
 
-            echo "Probing gRPC endpoint: $endpoint"
-            if [ $? -ne 0 ]; then
+            if [ "$FAIL" == "1" ]; then
               FAILED_ENDPOINTS+=("$endpoint (GRPC unreachable)")
             fi
+
+          unset FAIL
           done
 
           echo "Check complete. Preparing output."
