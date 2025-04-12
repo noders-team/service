@@ -65,19 +65,17 @@ jobs:
           done
 
           echo "Checking ENDPOINT_GRPC..."
-          for endpoint in $(extract_values "ENDPOINT_GRPC"); do
+          for endpoint in $(extracted_values "ENDPOINT_GRPC"); do
             clean_endpoint=$(echo "$endpoint" | sed -E 's#^(grpc|http|https)://##')
 
             if [[ "$endpoint" =~ ^https:// ]]; then
-                # Secure gRPC endpoint
-                gprc_result="grpcurl -max-time 3 $clean_endpoint list"
+                grpcurl -max-time 3 "$clean_endpoint" list > /dev/null 2>&1
             else
-                # Insecure/plaintext gRPC endpoint
-                gprc_result="grpcurl -plaintext -max-time 3 $clean_endpoint list"
+                grpcurl -plaintext -max-time 3 "$clean_endpoint" list > /dev/null 2>&1
             fi
 
             echo "Probing gRPC endpoint: $endpoint"
-            if ! $gprc_result > /dev/null 2>&1; then
+            if [ $? -ne 0 ]; then
               FAILED_ENDPOINTS+=("$endpoint (GRPC unreachable)")
             fi
           done
@@ -85,15 +83,16 @@ jobs:
           echo "Check complete. Preparing output."
 
           json_output=$(printf '%s\n' "${FAILED_ENDPOINTS[@]}" | jq -R . | jq -s .)
-          echo "failed=$json_output" >> $GITHUB_OUTPUT
+          echo "failed<<EOF" >> $GITHUB_OUTPUT
+          echo "$json_output" >> $GITHUB_OUTPUT
+          echo "EOF"  >> $GITHUB_OUTPUT
 
-  # Example: downstream job
   notify-telegram:
     needs: check-endpoints
 
 
     runs-on: ubuntu-latest
-    steps:  
+    steps:
       - name: Format failed endpoints for Telegram
         id: format
         run: |
@@ -101,7 +100,7 @@ jobs:
             echo "ENDPOINT_LIST<<EOF" >> $GITHUB_OUTPUT
             echo "${{ needs.check-endpoints.outputs.failed_endpoints }}" | jq -r '.[]' >> $GITHUB_OUTPUT
             echo "EOF" >> $GITHUB_OUTPUT
-          fi  
+          fi
       - name: Send Telegram notification
         if: steps.format.outputs.ENDPOINT_LIST != ''
         uses: appleboy/telegram-action@master
