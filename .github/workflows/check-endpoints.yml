@@ -2,17 +2,15 @@ name: Check APIs liveness
 
 on:
   push:
-    branches:
-      - api-check-on-deploy
-  #  paths:
-  #    - 'config/mainnet-networks/**.toml'
-  #    - 'config/testnet-networks/**.toml'
-  #workflow_dispatch:
-  #workflow_run:
-  #  workflows:
-  #    - "Deploy to Remote Host"
-  #  types:
-  #    - requested
+    paths:
+      - 'config/mainnet-networks/**.toml'
+      - 'config/testnet-networks/**.toml'
+  workflow_dispatch:
+  workflow_run:
+    workflows:
+      - "Deploy to Remote Host"
+    types:
+      - requested
 
 jobs:
   check-endpoints:
@@ -114,7 +112,7 @@ jobs:
         if: steps.format.outputs.ENDPOINT_LIST != ''
         uses: appleboy/telegram-action@master
         with:
-          to: ${{ secrets.TELEGRAM_CICD_ALARM_CHAT_ID }}
+          to: ${{ secrets.TELEGRAM_ALARM_CHAT_ID }}
           token: ${{ secrets.TELEGRAM_NODERS_BOT_TOKEN }}
           format: markdown
           message: |
