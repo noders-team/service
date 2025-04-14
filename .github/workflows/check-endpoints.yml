@@ -1,0 +1,124 @@
+name: Check APIs liveness
+
+on:
+  push:
+    paths:
+      - 'config/mainnet-networks/**.toml'
+      - 'config/testnet-networks/**.toml'
+  workflow_dispatch:
+  workflow_run:
+    workflows:
+      - "Deploy to Remote Host"
+    types:
+      - requested
+
+jobs:
+  check-endpoints:
+    runs-on: ubuntu-latest
+    outputs:
+      failed_endpoints: ${{ steps.collect.outputs.failed }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq curl
+          curl -sL https://github.com/fullstorydev/grpcurl/releases/download/v1.8.7/grpcurl_1.8.7_linux_x86_64.tar.gz \
+            | tar -xz -C /usr/local/bin
+
+      - name: Run endpoint checks
+        id: collect
+        run: |
+          extracted_values() {
+            local pattern="$1"
+            cat config/mainnet-networks/* config/testnet-networks/* | grep "$pattern" | cut -d '=' -f 2 | tr -d '"' | tr -d "'"
+          }
+
+          FAILED_ENDPOINTS=()
+          
+          API_CHECK_PATH="/cosmos/bank/v1beta1/params"
+
+          echo "Checking ENDPOINT_RPC..."
+          for endpoint in $(extracted_values "ENDPOINT_RPC"); do
+            if [[ "$endpoint" =~ ^https?:// ]]; then
+              http_code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 3 "$endpoint" || echo "000")
+              if [ "$http_code" -ne 200 ]; then
+                FAILED_ENDPOINTS+=("$endpoint (RPC - HTTP $http_code)")
+              fi
+            fi
+          done
+
+          echo "Checking ENDPOINT_API..."
+          for endpoint in $(extracted_values "ENDPOINT_API"); do
+            if [[ "$endpoint" =~ ^https?:// ]]; then
+              full_url="${endpoint%/}${API_CHECK_PATH}"
+              http_code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 3 "$full_url" || echo "000")
+              if [ "$http_code" -ne 200 ]; then
+                FAILED_ENDPOINTS+=("$endpoint (API - HTTP $http_code)")
+              fi
+            fi
+          done
+
+          echo "Checking ENDPOINT_GRPC..."
+          for endpoint in $(extracted_values "ENDPOINT_GRPC"); do
+            clean_endpoint=$(echo "$endpoint" | sed -E 's#^(grpc|http|https)://##')
+
+            if [[ "$endpoint" =~ ^https:// ]]; then
+              set +e
+              grpcurl -max-time 3 "$clean_endpoint" list > /dev/null 2>&1 || FAIL=1
+              set -e
+            else
+              set +e
+              grpcurl -plaintext -max-time 3 "$clean_endpoint" list > /dev/null 2>&1 || FAIL=1
+              set -e
+            fi
+
+            if [ "$FAIL" == "1" ]; then
+              FAILED_ENDPOINTS+=("$endpoint (GRPC unreachable)")
+            fi
+
+          unset FAIL
+          done
+
+          echo "Check complete. Preparing output."
+
+          json_output=$(printf '%s\n' "${FAILED_ENDPOINTS[@]}" | jq -R . | jq -s .)
+          echo "failed<<EOF" >> $GITHUB_OUTPUT
+          echo "$json_output" >> $GITHUB_OUTPUT
+          echo "EOF"  >> $GITHUB_OUTPUT
+
+  notify-telegram:
+    needs: check-endpoints
+
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Format failed endpoints for Telegram
+        id: format
+        run: |
+          echo '${{ needs.check-endpoints.outputs.failed_endpoints }}' > endpoints.json
+          count=$(jq 'length' endpoints.json)
+      
+          if [ "$count" -gt 0 ]; then
+            echo "ENDPOINT_LIST<<EOF" >> $GITHUB_OUTPUT
+            jq -r '.[]' endpoints.json >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          fi
+    
+      - name: Send Telegram notification
+        if: steps.format.outputs.ENDPOINT_LIST != ''
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_ALARM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_NODERS_BOT_TOKEN }}
+          format: markdown
+          message: |
+            *🔔 Some endpoints from noders.services deploy are failing*
+      
+            ```
+            ${{ steps.format.outputs.ENDPOINT_LIST }}
+            ```
+            *Can devs do something?*
