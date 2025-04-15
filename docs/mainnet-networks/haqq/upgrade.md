@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-haqq">
 # Upgrade
 </div>
-###### Chain ID: `null` | Current Node Version: `v1.8.2`
+###### Chain ID: `haqq_11235-1` | Current Node Version: `v1.8.2`
 
 
 # Clone Haqq repository

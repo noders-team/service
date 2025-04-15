@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-haqq">
 # Installation
 </div>
-###### Chain ID: `null` | Current Node Version: `v1.8.2`
+###### Chain ID: `haqq_11235-1` | Current Node Version: `v1.8.2`
 
 ## Install dependencies
 
@@ -136,14 +136,14 @@ sudo systemctl enable haqqd
 ## Node configuration
 ### Set config
 ```js
-haqqd config chain-id null
+haqqd config chain-id haqq_11235-1
 haqqd config keyring-backend os
 haqqd config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-haqqd init NAME_OF_YOUR_VALIDATOR --chain-id null
+haqqd init NAME_OF_YOUR_VALIDATOR --chain-id haqq_11235-1
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://snapshots.noders.services/haqq/addrbook.json -o ~/.haqqd/config/add
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"null@haqq-rpc.noders.services:null\"/" ~/.haqqd/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"acbd4ad54449c6e762628f957dd25f99955daa6c@haqq-rpc.noders.services:24056\"/" ~/.haqqd/config/config.toml
 ```
 
 ### Set minimum gas price
