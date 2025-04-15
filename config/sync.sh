@@ -190,7 +190,7 @@ function replacePageVariables {
   sed -i'' "s|\[LIVE_PEERS_RANDOM\]|${LIVE_PEERS_RANDOM}|g" $1
   sed -i'' "s|\[VALIDATOR_LINK\]|${VALIDATOR_LINK}|g" $1
   sed -i'' "s|\[VERSION_HAND\]|${VERSION_HAND}|g" $1
-}
+  sed -i'' "s|\[SNAP_ARCHIVE_DOWNLOAD_COMMAND\]|${SNAP_ARCHIVE_DOWNLOAD_COMMAND}|g" $1
 
 #####################################################################################################################################################################
 #                                                                          UPDATE MAINNET PAGES                                                                     #
@@ -346,9 +346,11 @@ function updateSnapshotInfo {
   if [ -z "${filename}" ]; then
     SNAP_LATEST_BLOCK="-"
     SNAP_ARCHIVE_NAME="${CHAIN_SYSTEM_NAME}"
+    SNAP_ARCHIVE_DOWNLOAD_COMMAND="Snapshot is not available"
   else
     SNAP_LATEST_BLOCK="$(echo "${filename}" | grep -o "[[:digit:]]*" | head -n 1)"
     SNAP_ARCHIVE_NAME="${filename}"
+    SNAP_ARCHIVE_DOWNLOAD_COMMAND="curl -o - -L ${url} | lz4 -d | tar -x -C ${DAEMON_HOME}"
   fi
 
   SNAP_ARCHIVE_LINK="${url}"
@@ -545,9 +547,11 @@ function updateSnapshotInfo {
   if [ -z "${filename}" ]; then
     SNAP_LATEST_BLOCK="-"
     SNAP_ARCHIVE_NAME="${CHAIN_SYSTEM_NAME}"
+    SNAP_ARCHIVE_DOWNLOAD_COMMAND="Snapshot is not available"
   else
     SNAP_LATEST_BLOCK="$(echo "${filename}" | grep -o "[[:digit:]]*" | head -n 1)"
     SNAP_ARCHIVE_NAME="${filename}"
+    SNAP_ARCHIVE_DOWNLOAD_COMMAND="curl -o - -L ${url} | lz4 -d | tar -x -C ${DAEMON_HOME}"
   fi
 
   SNAP_ARCHIVE_LINK="${url}"

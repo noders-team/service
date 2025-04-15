@@ -68,7 +68,7 @@ Decompress the snapshot to your database location. You database location will be
 The above solution requires you to download the compressed file, uncompressed it and then delete the original file. This requires extra storage space on your server. You can run the following combo command to stream the snapshot into your database location. For advanced users only:
 ### Data
 ```bash
-curl -o - -L [SNAP_ARCHIVE_LINK] | lz4 -d | tar -x -C [DAEMON_HOME]
+[SNAP_ARCHIVE_DOWNLOAD_COMMAND]
 ```
 :::warning WARNING
 
