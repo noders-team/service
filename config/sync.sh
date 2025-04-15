@@ -191,6 +191,7 @@ function replacePageVariables {
   sed -i'' "s|\[LIVE_PEERS_RANDOM\]|${LIVE_PEERS_RANDOM}|g" $1
   sed -i'' "s|\[VALIDATOR_LINK\]|${VALIDATOR_LINK}|g" $1
   sed -i'' "s|\[VERSION_HAND\]|${VERSION_HAND}|g" $1
+}
 
 #####################################################################################################################################################################
 #                                                                          UPDATE MAINNET PAGES                                                                     #
