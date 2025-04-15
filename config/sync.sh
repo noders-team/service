@@ -345,12 +345,13 @@ function updateSnapshotInfo {
 
   if [ -z "${filename}" ]; then
     SNAP_LATEST_BLOCK="-"
+    SNAP_ARCHIVE_NAME="${CHAIN_SYSTEM_NAME}"
   else
     SNAP_LATEST_BLOCK="-$(echo "${filename}" | grep -o "[[:digit:]]*" | head -n 1)"
+    SNAP_ARCHIVE_NAME="${filename}"
   fi
 
   SNAP_ARCHIVE_LINK="${url}"
-  SNAP_ARCHIVE_NAME="${CHAIN_SYSTEM_NAME}"
 
   CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/snapshot.md"
   cp "../docs/mainnet-networks/template/snapshot.md" "${CHAIN_PAGE_PATH}"
@@ -543,12 +544,13 @@ function updateSnapshotInfo {
 
   if [ -z "${filename}" ]; then
     SNAP_LATEST_BLOCK="-"
+    SNAP_ARCHIVE_NAME="${CHAIN_SYSTEM_NAME}"
   else
     SNAP_LATEST_BLOCK="-$(echo "${filename}" | grep -o "[[:digit:]]*" | head -n 1)"
+    SNAP_ARCHIVE_NAME="${filename}"
   fi
 
   SNAP_ARCHIVE_LINK="${url}"
-  SNAP_ARCHIVE_NAME="${CHAIN_SYSTEM_NAME}"
 
   CHAIN_PAGE_PATH="../docs/testnet-networks/${CHAIN_SYSTEM_NAME}/snapshot.md"
   cp "../docs/testnet-networks/template/snapshot.md" "${CHAIN_PAGE_PATH}"
