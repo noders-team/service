@@ -22,7 +22,7 @@ DAEMON_HOME="~/.lava"
 ENDPOINT_RPC="https://lava-rpc.noders.services"
 ENDPOINT_API="https://lava-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://lava-grpc.noders.services:37090"
+ENDPOINT_GRPC="https://lava-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/lava"
 
@@ -34,7 +34,7 @@ SOCIAL_X="https://twitter.com/lavanetxyz"
 SOCIAL_TELEGRAM=""
 
 # Other
-DOWNLOAD_URL="https://config.noders.services/lava"
+DOWNLOAD_URL="https://snapshots.noders.services/lava"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK="https://lava.explorers.guru/validator/lava@valoper1tkhehvca5uur6svd2l83lp704mlhc7xu32r2j4"
 

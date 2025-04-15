@@ -24,7 +24,7 @@ DAEMON_HOME="~/.osmosisd"
 ENDPOINT_RPC="https://osmosis-rpc.noders.services"
 ENDPOINT_API="https://osmosis-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://osmosis-grpc.noders.services:10090"
+ENDPOINT_GRPC="https://osmosis-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/osmosis"
 
@@ -36,7 +36,7 @@ SOCIAL_X="https://twitter.com/osmosiszone"
 SOCIAL_TELEGRAM="https://t.me/osmosiszone"
 
 # Other
-DOWNLOAD_URL="https://config.noders.services/osmosis"
+DOWNLOAD_URL="https://snapshots.noders.services/osmosis"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK=""
 

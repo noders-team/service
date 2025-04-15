@@ -25,7 +25,7 @@ DAEMON_HOME="~/.canine"
 ENDPOINT_RPC="https://jackal-rpc.noders.services"
 ENDPOINT_API="https://jackal-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://jackal-grpc.noders.services:26090"
+ENDPOINT_GRPC="https://jackal-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/jackal"
 
@@ -37,7 +37,7 @@ SOCIAL_X="https://twitter.com/Jackal_Protocol"
 SOCIAL_TELEGRAM="https://t.me/+rtuZnbTlHaIzNjVh"
 
 # Other
-DOWNLOAD_URL="https://config.noders.services/jackal"
+DOWNLOAD_URL="https://snapshots.noders.services/jackal"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK="https://ping.pub/jackal/staking/jklvaloper132k95jan8ju92jtmkzr49vnusv5xvwvju27kpq"
 

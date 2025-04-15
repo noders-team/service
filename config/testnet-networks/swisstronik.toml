@@ -22,7 +22,7 @@ DAEMON_HOME="~/.swisstronik"
 ENDPOINT_RPC="https://swisstronik-t-rpc.noders.services"
 ENDPOINT_API="https://swisstronik-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://swisstronik-t-grpc.noders.services:26090"
+ENDPOINT_GRPC="https://swisstronik-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/swisstronik"
 
@@ -34,7 +34,7 @@ SOCIAL_X="https://twitter.com/swisstronik"
 SOCIAL_TELEGRAM="https://t.me/swisstronik"
 
 # Other
-DOWNLOAD_URL="h"
+DOWNLOAD_URL=""
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK="https://explorer-cosmos.testnet.swisstronik.com/swisstronik/staking/swtrvaloper1jxptedfkfa0dea7zdu238290xxhm2nk6nat2tt"
 

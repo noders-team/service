@@ -22,7 +22,7 @@ DAEMON_HOME="~/.axoned"
 ENDPOINT_RPC="https://axone-t-rpc.noders.services"
 ENDPOINT_API="https://axone-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://axone-t-grpc.noders.services:20090"
+ENDPOINT_GRPC="https://axone-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/axone"
 
@@ -34,7 +34,7 @@ SOCIAL_X="https://x.com/axonexyz"
 SOCIAL_TELEGRAM=""
 
 # Other
-DOWNLOAD_URL="https://config-t.noders.services/axone"
+DOWNLOAD_URL="https://snapshots-t.noders.services/axone"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK="https://testnet.axone.explorers.guru/validator/axonevaloper1zux0q0unnu9s0sz9kfy074e0rp7cj909yf4hc8"
 

@@ -22,7 +22,7 @@ DAEMON_HOME="~/.dymension"
 ENDPOINT_RPC="https://dymension-rpc.noders.services"
 ENDPOINT_API="https://dymension-api.noders.services"
 ENDPOINT_JRPC="https://dymension-jsonrpc.noders.services"
-ENDPOINT_GRPC="http://dymension-grpc.noders.services:12090"
+ENDPOINT_GRPC="https://dymension-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/dymension"
 
@@ -34,7 +34,7 @@ SOCIAL_X="https://twitter.com/dymension"
 SOCIAL_TELEGRAM="https://t.me/dymensionXYZ"
 
 # Other
-DOWNLOAD_URL="https://config.noders.services/dymension"
+DOWNLOAD_URL="https://snapshots.noders.services/dymension"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK="https://dymension.explorers.guru/validator/dymvaloper1ta56hcqaxj55wu8emarnw090gk5uq4366uz572"
 

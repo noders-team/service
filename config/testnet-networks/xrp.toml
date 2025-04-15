@@ -22,7 +22,7 @@ DAEMON_HOME="~/.exrpd"
 ENDPOINT_RPC="https://xrp-t-rpc.noders.services"
 ENDPOINT_API="https://xrp-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://xrp-t-grpc.noders.services"
+ENDPOINT_GRPC="https://xrp-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/xrp"
 
@@ -34,7 +34,7 @@ SOCIAL_X=""
 SOCIAL_TELEGRAM=""
 
 # Other
-DOWNLOAD_URL="https://config-t.noders.services/xrp"
+DOWNLOAD_URL="https://snapshots-t.noders.services/xrp"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK=""
 

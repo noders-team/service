@@ -22,7 +22,7 @@ DAEMON_HOME="~/.nilliond"
 ENDPOINT_RPC="https://nillion-rpc.noders.services"
 ENDPOINT_API="https://nillion-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://nillion-grpc.noders.services:26690"
+ENDPOINT_GRPC="https://nillion-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/nillion"
 
@@ -34,7 +34,7 @@ SOCIAL_X="https://x.com/nillionnetwork"
 SOCIAL_TELEGRAM="https://t.me/nillionnetwork"
 
 # Other
-DOWNLOAD_URL="https://config.noders.services/nillion"
+DOWNLOAD_URL="https://snapshots.noders.services/nillion-mainnet/"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK="https://nillion.explorers.guru/validator/nillionvaloper12dzevy6zu7kyqvx6hsa4ajru8835wga6k0tphu"
 

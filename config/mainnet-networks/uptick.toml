@@ -24,7 +24,7 @@ DAEMON_HOME="~/.uptickd"
 ENDPOINT_RPC="https://uptick-rpc.noders.services"
 ENDPOINT_API="https://uptick-api.noders.services"
 ENDPOINT_JRPC="https://uptick-jsonrpc.noders.services"
-ENDPOINT_GRPC="http://uptick-grpc.noders.services:24090"
+ENDPOINT_GRPC="https://uptick-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/uptick"
 
@@ -36,7 +36,7 @@ SOCIAL_X="https://twitter.com/Uptickproject"
 SOCIAL_TELEGRAM="https://t.me/uptickproject"
 
 # Other
-DOWNLOAD_URL="https://config.noders.services/uptick"
+DOWNLOAD_URL="https://snapshots.noders.services/uptick"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK="https://uptick.explorers.guru/validator/uptickvaloper1fl3426k0avvergm7ejzczqy6rfzxk5ma93mqwj"
 

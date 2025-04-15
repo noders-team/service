@@ -22,7 +22,7 @@ DAEMON_HOME="~/.aura"
 ENDPOINT_RPC="https://aura-rpc.noders.services"
 ENDPOINT_API="https://aura-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://aura-grpc.noders.services:17090"
+ENDPOINT_GRPC="https://aura-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/aura"
 
@@ -34,7 +34,7 @@ SOCIAL_X="https://twitter.com/AuraNetworkHQ"
 SOCIAL_TELEGRAM="https://t.me/AuraNetworkOfficial"
 
 # Other
-DOWNLOAD_URL="https://config.noders.services/aura"
+DOWNLOAD_URL="https://snapshots.noders.services/aura"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK="https://aurascan.io/validators/auravaloper1vvqz6j3ucxr6n0ejdz4ck602lnyjew93cgcw4m"
 

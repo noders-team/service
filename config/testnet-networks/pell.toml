@@ -22,7 +22,7 @@ DAEMON_HOME="~/.pellcored"
 ENDPOINT_RPC="https://pell-t-rpc.noders.services"
 ENDPOINT_API="https://pell-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://pell-t-grpc.noders.services:47990"
+ENDPOINT_GRPC="https://pell-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/pell"
 
@@ -34,7 +34,7 @@ SOCIAL_X="https://x.com/Pell_Network"
 SOCIAL_TELEGRAM="https://t.me/pellnetwork_chat"
 
 # Other
-DOWNLOAD_URL="https://config-t.noders.services/pell"
+DOWNLOAD_URL="https://snapshots-t.noders.services/pell"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK="https://testnet.pell.explorers.guru/validator/pellvaloper1qkvwaakuf2expvp22kys5z9p8jt9c3dxfjwk0z"
 

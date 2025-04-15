@@ -22,7 +22,7 @@ DAEMON_HOME="~/.mineplex-chain"
 ENDPOINT_RPC="https://crossfi-t-rpc.noders.services"
 ENDPOINT_API="https://crossfi-t-api.noders.services"
 ENDPOINT_JRPC="https://crossfi-t-jsonrpc.noders.services"
-ENDPOINT_GRPC="http://crossfi-t-grpc.noders.services:12090"
+ENDPOINT_GRPC="https://crossfi-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/crossfi"
 
@@ -34,7 +34,7 @@ SOCIAL_X="https://x.com/crossfichain"
 SOCIAL_TELEGRAM="https://t.me/crossfichain"
 
 # Other
-DOWNLOAD_URL="https://config-t.noders.services/crossfi"
+DOWNLOAD_URL="https://snapshots-t.noders.services/crossfi"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK="https://coinsspor.com/crossfi/staking/mxvaloper1jep3dc0aysyzcj78mer6zps5jftm89s2fzrf7m"
 

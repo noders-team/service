@@ -25,7 +25,7 @@ DAEMON_HOME="~/.stchaind"
 ENDPOINT_RPC="https://stratos-rpc.noders.services"
 ENDPOINT_API="https://stratos-api.noders.services"
 ENDPOINT_JRPC="https://stratos-jsonrpc.noders.services "
-ENDPOINT_GRPC="http://stratos-grpc.noders.services:29090"
+ENDPOINT_GRPC="https://stratos-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/stratos"
 
@@ -37,7 +37,7 @@ SOCIAL_X="https://twitter.com/Stratos_Network"
 SOCIAL_TELEGRAM="https://t.me/StratosOfficial"
 
 # Other
-DOWNLOAD_URL="https://config.noders.services/stratos"
+DOWNLOAD_URL="https://snapshots.noders.services/stratos"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK="https://explorer.thestratos.org/stratos/validators/stvaloper1ghkn8ra63422mcepdk0zzglzy6qax637g6fhzm"
 

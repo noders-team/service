@@ -22,7 +22,7 @@ DAEMON_HOME="~/.empe-chain"
 ENDPOINT_RPC="https://empeiria-t-rpc.noders.services"
 ENDPOINT_API="https://empeiria-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://empeiria-t-grpc.noders.services:11290"
+ENDPOINT_GRPC="https://empeiria-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/empeiria"
 
@@ -34,7 +34,7 @@ SOCIAL_X="https://twitter.com/empe_io"
 SOCIAL_TELEGRAM="https://t.me/web3Empeiria"
 
 # Other
-DOWNLOAD_URL="https://config-t.noders.services/empeiria"
+DOWNLOAD_URL="https://snapshots-t.noders.services/empeiria"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK="https://explorer.stavr.tech/Empeiria-Testnet/staking/empevaloper1wmqc6ak6st207q69qdatp6fpr0x6r6ekk4km9v"
 

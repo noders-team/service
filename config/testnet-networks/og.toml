@@ -21,7 +21,7 @@ DAEMON_HOME="~/.0gchain"
 ENDPOINT_RPC="https://og-t-rpc.noders.services"
 ENDPOINT_API="https://og-t-api.noders.services"
 ENDPOINT_JRPC="https://og-t-json.noders.services"
-ENDPOINT_GRPC="http://og-t-grpc.noders.services:29090"
+ENDPOINT_GRPC="https://og-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/og"
 
@@ -33,7 +33,7 @@ SOCIAL_X="https://twitter.com/0G_labs"
 SOCIAL_TELEGRAM="https://t.me/web3_0glabs"
 
 # Other
-DOWNLOAD_URL="https://config-t.noders.services/og"
+DOWNLOAD_URL="https://snapshots-t.noders.services/og"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK="https://explorer.validatorvn.com/OG-Testnet/staking/evmosvaloper1n30zgt2nc3auawqlsgkqmwz9u3r0zdwnu9xjc4"
 

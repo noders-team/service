@@ -22,7 +22,7 @@ DAEMON_HOME="~/.warden"
 ENDPOINT_RPC="https://warden-t-rpc.noders.services"
 ENDPOINT_API="https://warden-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://warden-t-grpc.noders.services:23090"
+ENDPOINT_GRPC="https://warden-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/warden"
 
@@ -34,7 +34,7 @@ SOCIAL_X="https://x.com/wardenprotocol"
 SOCIAL_TELEGRAM="https://t.me/wardenprotocol"
 
 # Other
-DOWNLOAD_URL="https://config-t.noders.services/warden"
+DOWNLOAD_URL="https://snapshots-t.noders.services/warden"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK="https://warden-explorer.paranorm.pro/warden/staking/wardenvaloper1ucm0wa7g029xvlt9yffz5kqj2zw40qyugqlakc"
 

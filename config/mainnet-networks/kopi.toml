@@ -22,7 +22,7 @@ DAEMON_HOME="~/.kopid"
 ENDPOINT_RPC="https://kopi-rpc.noders.services"
 ENDPOINT_API="https://kopi-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://kopi-grpc.noders.services:30790"
+ENDPOINT_GRPC="https://kopi-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/kopi"
 
@@ -34,9 +34,9 @@ SOCIAL_X="https://twitter.com/kopi_money/"
 SOCIAL_TELEGRAM="https://t.me/+_hk--L9mKKc4MThk"
 
 # Other
-DOWNLOAD_URL="https://config-t.noders.services/kopi"
+DOWNLOAD_URL="https://snapshots.noders.services/kopi"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://explorer.kopi.money/kopi-test-4/staking/kopivaloper1en8f3y0wx52npwmxw2jy2qghy2acar55w9h39d"
+VALIDATOR_LINK="https://explorer.kopi.money/luwak-1/staking/kopivaloper1ctu3g3m2jyp26m03vhjap2aua8646magep7y36"
 
 # Updates
 UPDATE_MAIN=true

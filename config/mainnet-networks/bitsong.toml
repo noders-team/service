@@ -22,7 +22,7 @@ DAEMON_HOME="~/.bitsongd"
 ENDPOINT_RPC="https://bitsong-rpc.noders.services"
 ENDPOINT_API="https://bitsong-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://bitsong-grpc.noders.services:20090"
+ENDPOINT_GRPC="https://bitsong-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/bitsong"
 
@@ -34,7 +34,7 @@ SOCIAL_X="https://twitter.com/bitsongofficial"
 SOCIAL_TELEGRAM="https://t.me/BitSongOfficial"
 
 # Other
-DOWNLOAD_URL="https://config.noders.services/bitsong"
+DOWNLOAD_URL="https://snapshots.noders.services/bitsong"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK="https://ping.pub/bitsong/staking/bitsongvaloper19qtzdsu57hf5jmcyy5t2uuh0y45q4ah7hrwk4n"
 

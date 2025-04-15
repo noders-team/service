@@ -32,7 +32,7 @@ SOCIAL_X="https://x.com/babylonlabs_io"
 SOCIAL_TELEGRAM="https://t.me/babyloncommunity"
 
 # Other
-DOWNLOAD_URL="https://config-t.noders.services/babylon"
+DOWNLOAD_URL="https://snapshots-t.noders.services/babylon"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK=""
 

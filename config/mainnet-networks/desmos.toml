@@ -22,7 +22,7 @@ DAEMON_HOME="~/.desmos"
 ENDPOINT_RPC="https://desmos-rpc.noders.services"
 ENDPOINT_API="https://desmos-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://desmos-grpc.noders.services:27090"
+ENDPOINT_GRPC="https://desmos-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/desmos"
 
@@ -34,7 +34,7 @@ SOCIAL_X="https://twitter.com/desmosnetwork"
 SOCIAL_TELEGRAM="https://t.me/desmosnetwork"
 
 # Other
-DOWNLOAD_URL="https://config.noders.services/desmos"
+DOWNLOAD_URL="https://snapshots.noders.services/desmos"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK="https://www.mintscan.io/desmos/validators/desmosvaloper1pequu0gsvh9ay5rx2xyg6j7eratwufu560dpnu"
 

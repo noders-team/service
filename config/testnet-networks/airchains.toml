@@ -22,7 +22,7 @@ DAEMON_HOME="~/.junction"
 ENDPOINT_RPC="https://airchains-t-rpc.noders.services"
 ENDPOINT_API="https://airchains-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://airchains-t-grpc.noders.services:31090"
+ENDPOINT_GRPC="https://airchains-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/airchains"
 
@@ -34,7 +34,7 @@ SOCIAL_X="https://twitter.com/airchains_io"
 SOCIAL_TELEGRAM=""
 
 # Other
-DOWNLOAD_URL="https://config-t.noders.services/airchain"
+DOWNLOAD_URL="https://snapshots-t.noders.services/airchains"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK="https://testnet.airchains.io/validator/airvaloper15n0pesc7ggllax6medkfv6pqjszpc40qps5au8"
 

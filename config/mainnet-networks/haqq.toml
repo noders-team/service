@@ -23,7 +23,7 @@ DAEMON_HOME="~/.haqqd"
 ENDPOINT_RPC="https://haqq-rpc.noders.services"
 ENDPOINT_API="https://haqq-api.noders.services"
 ENDPOINT_JRPC="https://haqq-jsonrpc.noders.services"
-ENDPOINT_GRPC="http://haqq-grpc.noders.services:14090"
+ENDPOINT_GRPC="https://haqq-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/haqq"
 
@@ -35,7 +35,7 @@ SOCIAL_X="https://twitter.com/The_HaqqNetwork"
 SOCIAL_TELEGRAM="https://t.me/islamiccoin_int"
 
 # Other
-DOWNLOAD_URL="https://config.noders.services/haqq"
+DOWNLOAD_URL="https://snapshots.noders.services/haqq"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK="https://haqq.explorers.guru/validator/haqqvaloper1hgggrfgjeu4d5nveh03c6w37magsuqcy84p44t"
 

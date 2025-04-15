@@ -317,8 +317,8 @@ function updateLivePeers {
 }
 
 function updateSnapshotInfo {
-  local url="https://config.noders.services/${CHAIN_SYSTEM_NAME}/data.tar.lz4"
-  local wasm_url="https://config.noders.services/${CHAIN_SYSTEM_NAME}/wasm.tar.lz4"
+  local url="https://snapshots.noders.services/${CHAIN_SYSTEM_NAME}/data.tar.lz4"
+  local wasm_url="https://snapshots.noders.services/${CHAIN_SYSTEM_NAME}/wasm.tar.lz4"
   local wget_command="wget -O wasm.tar.lz4 ${wasm_url} --inet4-only"
   local curl_command="curl -o - -L ${wasm_url} | lz4 -d | tar -x -C ${DAEMON_HOME}"
 

@@ -19,7 +19,7 @@ DAEMON_HOME="~/.atomone"
 ENDPOINT_RPC="https://atomone-rpc.noders.services"
 ENDPOINT_API="https://atomone-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://atomone-grpc.noders.services:14590"
+ENDPOINT_GRPC="https://atomone-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/atomone"
 
@@ -31,7 +31,7 @@ SOCIAL_X="https://x.com/_atomone"
 SOCIAL_TELEGRAM=""
 
 # Other
-DOWNLOAD_URL="https://config.noders.services/atomone"
+DOWNLOAD_URL="https://snapshots.noders.services/atomone"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK="https://ping.pub/atomone/staking/atonevaloper1f2r68y2htcmp4rfe2wfn9f3nvzh9xsq9y0vdyz"
 

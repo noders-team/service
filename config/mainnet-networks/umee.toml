@@ -24,7 +24,7 @@ DAEMON_HOME="~/.umee"
 ENDPOINT_RPC="https://umee-rpc.noders.services"
 ENDPOINT_API="https://umee-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://umee-grpc.noders.services:32090"
+ENDPOINT_GRPC="https://umee-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/umee"
 
@@ -36,7 +36,7 @@ SOCIAL_X="https://x.com/ux_xyz"
 SOCIAL_TELEGRAM="https://t.me/uxuxchain"
 
 # Other
-DOWNLOAD_URL="https://config.noders.services/umee"
+DOWNLOAD_URL="https://snapshots.noders.services/umee"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK="https://ux.explorers.guru/validator/umeevaloper1wwl9f8wcc0am9wruvmx4hjzdv7ewfcex0lz9vp"
 
