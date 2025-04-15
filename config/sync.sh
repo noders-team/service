@@ -187,8 +187,7 @@ function replacePageVariables {
   sed -i'' "s|\[SNAP_LATEST_BLOCK\]|${SNAP_LATEST_BLOCK}|g" $1
   sed -i'' "s|\[SNAP_ARCHIVE_NAME\]|${SNAP_ARCHIVE_NAME}|g" $1
   sed -i'' "s|\[SNAP_ARCHIVE_LINK\]|${SNAP_ARCHIVE_LINK}|g" $1
-  escaped_command=$(printf '%s\n' "${SNAP_ARCHIVE_DOWNLOAD_COMMAND}" | sed 's:[][\/.^$*]:\\&:g')
-  sed -i'' "s|\[SNAP_ARCHIVE_DOWNLOAD_COMMAND\]|${escaped_command}|g" $1
+  perl -i -pe "s|\[SNAP_ARCHIVE_DOWNLOAD_COMMAND\]|${SNAP_ARCHIVE_DOWNLOAD_COMMAND}|g" "$1"
   sed -i'' "s|\[LIVE_PEERS_RANDOM\]|${LIVE_PEERS_RANDOM}|g" $1
   sed -i'' "s|\[VALIDATOR_LINK\]|${VALIDATOR_LINK}|g" $1
   sed -i'' "s|\[VERSION_HAND\]|${VERSION_HAND}|g" $1
@@ -352,7 +351,7 @@ function updateSnapshotInfo {
   else
     SNAP_LATEST_BLOCK="$(echo "${filename}" | grep -o "[[:digit:]]*" | head -n 1)"
     SNAP_ARCHIVE_NAME="${filename}"
-    SNAP_ARCHIVE_DOWNLOAD_COMMAND="curl -o - -L ${url} | lz4 -d | tar -x -C ${DAEMON_HOME}"
+    SNAP_ARCHIVE_DOWNLOAD_COMMAND="curl -o - -L \"${url}\" | lz4 -d | tar -x -C \"${DAEMON_HOME}\""
   fi
 
   SNAP_ARCHIVE_LINK="${url}"
@@ -554,7 +553,7 @@ function updateSnapshotInfo {
   else
     SNAP_LATEST_BLOCK="$(echo "${filename}" | grep -o "[[:digit:]]*" | head -n 1)"
     SNAP_ARCHIVE_NAME="${filename}"
-    SNAP_ARCHIVE_DOWNLOAD_COMMAND="curl -o - -L ${url} | lz4 -d | tar -x -C ${DAEMON_HOME}"
+    SNAP_ARCHIVE_DOWNLOAD_COMMAND="curl -o - -L \"${url}\" | lz4 -d | tar -x -C \"${DAEMON_HOME}\""
   fi
 
   SNAP_ARCHIVE_LINK="${url}"
