@@ -22,7 +22,7 @@ DAEMON_HOME="~/.pylonsd"
 ENDPOINT_RPC="https://pylons-rpc.noders.services"
 ENDPOINT_API="https://pylons-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://pylons-grpc.noders.services:23090"
+ENDPOINT_GRPC="https://pylons-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/pylons"
 
@@ -34,7 +34,7 @@ SOCIAL_X="https://twitter.com/pylonstech"
 SOCIAL_TELEGRAM=""
 
 # Other
-DOWNLOAD_URL="https://config.noders.services/pylons"
+DOWNLOAD_URL="https://snapshots.noders.services/pylons"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK="https://pylons.explorers.guru/validator/pylovaloper1yc06qqa99vz50jrh64fctt0gvjj7pp7n7029c7"
 

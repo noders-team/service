@@ -22,7 +22,7 @@ DAEMON_HOME="~/.zrchain"
 ENDPOINT_RPC="https://zenrock-rpc.noders.services"
 ENDPOINT_API="https://zenrock-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://zenrock-grpc.noders.services:49590"
+ENDPOINT_GRPC="https://zenrock-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/zenrock"
 
@@ -34,7 +34,7 @@ SOCIAL_X="https://x.com/OfficialZenrock"
 SOCIAL_TELEGRAM="https://t.me/officialZenrock"
 
 # Other
-DOWNLOAD_URL="https://config.noders.services/zenrock"
+DOWNLOAD_URL="https://snapshots.noders.services/zenrock"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK=""
 

@@ -22,7 +22,7 @@ DAEMON_HOME="~/.sunrise"
 ENDPOINT_RPC="https://sunrise-t-rpc.noders.services"
 ENDPOINT_API="https://sunrise-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://sunrise-t-grpc.noders.services:28390"
+ENDPOINT_GRPC="https://sunrise-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/sunrise"
 
@@ -34,7 +34,7 @@ SOCIAL_X="https://twitter.com/SunriseLayer"
 SOCIAL_TELEGRAM=""
 
 # Other
-DOWNLOAD_URL="https://config-t.noders.services/sunrise"
+DOWNLOAD_URL="https://snapshots-t.noders.services/sunrise"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK="https://testnet.sunrise.explorers.guru/validator/sunrisevaloper1knkwlqqxky07f7vu6vgxna49m2tf9aa9j7fnkt"
 

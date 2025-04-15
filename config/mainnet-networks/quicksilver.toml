@@ -22,7 +22,7 @@ DAEMON_HOME="~/.quicksilverd"
 ENDPOINT_RPC="https://quicksilver-rpc.noders.services"
 ENDPOINT_API="https://quicksilver-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://quicksilver-grpc.noders.services:11190"
+ENDPOINT_GRPC="https://quicksilver-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/quicksilver"
 
@@ -34,9 +34,9 @@ SOCIAL_X="https://twitter.com/quicksilverzone"
 SOCIAL_TELEGRAM="https://t.me/quicksilverzone"
 
 # Other
-DOWNLOAD_URL="https://config.noders.services/quicksilver"
+DOWNLOAD_URL="https://snapshots.noders.services/quicksilver"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://quicksilver.explorers.guru/validator/quickvaloper17gwfcceyvcw53r6cclrhwk5jksmtd96xfjwrcv
+VALIDATOR_LINK="https://quicksilver.explorers.guru/validator/quickvaloper17gwfcceyvcw53r6cclrhwk5jksmtd96xfjwrcv"
 
 # Updates
 UPDATE_MAIN=true

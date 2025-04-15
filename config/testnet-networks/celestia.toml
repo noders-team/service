@@ -22,7 +22,7 @@ DAEMON_HOME="~/.celestia-app"
 ENDPOINT_RPC="https://celestia-t-rpc.noders.services"
 ENDPOINT_API="https://celestia-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://celestia-t-grpc.noders.services:21090"
+ENDPOINT_GRPC="https://celestia-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/celestia"
 
@@ -34,7 +34,7 @@ SOCIAL_X="https://twitter.com/CelestiaOrg"
 SOCIAL_TELEGRAM="https://t.me/celestiaru"
 
 # Other
-DOWNLOAD_URL="https://config-t.noders.services/celestia"
+DOWNLOAD_URL="https://snapshots-t.noders.services/celestia"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK="https://testnet.celestia.explorers.guru/validator/celestiavaloper1zzxrq7tjlsqvv0jtqtlt8gjaa68racukf5n9xh"
 

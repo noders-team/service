@@ -22,7 +22,7 @@ DAEMON_HOME="~/.zetacored"
 ENDPOINT_RPC="https://zetachain-t-rpc.noders.services"
 ENDPOINT_API="https://zetachain-t-api.noders.services"
 ENDPOINT_JRPC="https://zetachain-t-jsonrpc.noders.services"
-ENDPOINT_GRPC="http://zetachain-t-grpc.noders.services:17090"
+ENDPOINT_GRPC="https://zetachain-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/zetachain"
 
@@ -34,7 +34,7 @@ SOCIAL_X="https://twitter.com/zetablockchain"
 SOCIAL_TELEGRAM="https://t.me/zetachainofficial"
 
 # Other
-DOWNLOAD_URL="https://config-t.noders.services/zwtachain"
+DOWNLOAD_URL="https://snapshots-t.noders.services/zetachain"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK="https://athens.explorer.zetachain.com/address/0x49A17CCa0Fd5cb5AE9056Bbac316D3FCe098Aed2"
 

@@ -22,7 +22,7 @@ DAEMON_HOME="~/.side"
 ENDPOINT_RPC="https://side-t-rpc.noders.services"
 ENDPOINT_API="https://side-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://side-t-grpc.noders.services:26090"
+ENDPOINT_GRPC="https://side-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/side"
 
@@ -34,7 +34,7 @@ SOCIAL_X="https://twitter.com/SideProtocol"
 SOCIAL_TELEGRAM="https://t.me/SideProtocolOfficial"
 
 # Other
-DOWNLOAD_URL="https://config-t.noders.services/side"
+DOWNLOAD_URL="https://snapshots-t.noders.services/side"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK="https://explorer.stavr.tech/Side-Testnet/staking/bcvaloper17tn2zvychzan0v0ulakq596gczmjtw8pdqary7"
 

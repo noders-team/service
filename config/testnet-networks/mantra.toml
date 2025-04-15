@@ -22,7 +22,7 @@ DAEMON_HOME="~/.mantrachaind"
 ENDPOINT_RPC="https://mantra-t-rpc.noders.services"
 ENDPOINT_API="https://mantra-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://mantra-t-grpc.noders.services:30090"
+ENDPOINT_GRPC="https://mantra-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/mantra"
 
@@ -34,7 +34,7 @@ SOCIAL_X="https://twitter.com/MANTRA_Chain"
 SOCIAL_TELEGRAM="https://t.me/MANTRA_Chain"
 
 # Other
-DOWNLOAD_URL="https://config-t.noders.services/mantra"
+DOWNLOAD_URL="https://snapshots-t.noders.services/mantra"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK="https://explorer.stavr.tech/Mantra-Testnet/staking/mantravaloper1aysxyetv0y7sfe0v70akyjn3kkjc6qyt5dlewa"
 

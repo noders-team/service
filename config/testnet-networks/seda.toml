@@ -24,7 +24,7 @@ DAEMON_HOME="~/.sedad"
 ENDPOINT_RPC="https://seda-t-rpc.noders.services"
 ENDPOINT_API="https://seda-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://seda-t-grpc.noders.services:24090"
+ENDPOINT_GRPC="https://seda-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/seda"
 
@@ -36,7 +36,7 @@ SOCIAL_X="https://twitter.com/sedaprotocol"
 SOCIAL_TELEGRAM="https://t.me/sedaprotocol"
 
 # Other
-DOWNLOAD_URL="https://config-t.noders.services/seda"
+DOWNLOAD_URL="https://snapshots-t.noders.services/seda"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK=""
 

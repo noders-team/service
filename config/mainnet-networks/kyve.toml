@@ -24,7 +24,7 @@ DAEMON_HOME="~/.kyve"
 ENDPOINT_RPC="https://kyve-rpc.noders.services"
 ENDPOINT_API="https://kyve-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="http://kyve-grpc.noders.services:15090"
+ENDPOINT_GRPC="https://kyve-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/kyve"
 
@@ -36,7 +36,7 @@ SOCIAL_X="https://twitter.com/KYVENetwork"
 SOCIAL_TELEGRAM="https://t.me/kyvenet"
 
 # Other
-DOWNLOAD_URL="https://config.noders.services/kyve"
+DOWNLOAD_URL="https://snapshots.noders.services/kyve"
 GITHUB_FOLDER_NAME="auto"
 VALIDATOR_LINK="https://kyve.explorers.guru/validator/kyvevaloper1sfwfat9p9k7datgy0kzge7pv0szcd5ycc0jxre"
 
