@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-lava">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `lava-mainnet-1` | Current Node Version: `v5.2.0`
+###### Chain ID: `lava-mainnet-1` | Current Node Version: `auto`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
