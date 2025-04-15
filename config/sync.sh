@@ -331,10 +331,11 @@ function updateSnapshotInfo {
   size_gb=$(awk "BEGIN {printf \"%.2f\", ${size_raw}/(1024*1024*1024)}")
 
   # Assigning the extracted values to the global variables
-  TIMESTAMP="${timestamp}"
-  SIZE="${size_gb} GB"
-  SNAP_LATEST_BLOCK="$(echo "${filename}" | grep -o "[0-9][0-9][0-9]*" | head -n 1)"
-  SNAP_ARCHIVE_LINK="${url}"
+  TIMESTAMP="${timestamp:-}"
+  SIZE="${size_gb:-} GB"
+  SNAP_LATEST_BLOCK="${filename:+-$(echo "${filename}" | grep -o "[[:digit:]]*" | head -n 1)}"
+  SNAP_LATEST_BLOCK="${SNAP_LATEST_BLOCK:-}"
+  SNAP_ARCHIVE_LINK="${url:-}"
 
   CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/snapshot.md"
   cp "../docs/mainnet-networks/template/snapshot.md" "${CHAIN_PAGE_PATH}"
@@ -513,10 +514,11 @@ function updateSnapshotInfo {
   size_gb=$(awk "BEGIN {printf \"%.2f\", ${size_raw}/(1024*1024*1024)}")
 
   # Assigning the extracted values to the global variables
-  TIMESTAMP="${timestamp}"
-  SIZE="${size_gb} GB"
-  SNAP_LATEST_BLOCK="$(echo "${filename}" | grep -o "[0-9][0-9][0-9]*" | head -n 1)"
-  SNAP_ARCHIVE_LINK="${url}"
+  TIMESTAMP="${timestamp:-}"
+  SIZE="${size_gb:-} GB"
+  SNAP_LATEST_BLOCK="${filename:+-$(echo "${filename}" | grep -o "[[:digit:]]*" | head -n 1)}"
+  SNAP_LATEST_BLOCK="${SNAP_LATEST_BLOCK:-}"
+  SNAP_ARCHIVE_LINK="${url:-}"
 
   CHAIN_PAGE_PATH="../docs/testnet-networks/${CHAIN_SYSTEM_NAME}/snapshot.md"
   cp "../docs/testnet-networks/template/snapshot.md" "${CHAIN_PAGE_PATH}"
