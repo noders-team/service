@@ -30,7 +30,7 @@ Official links of social networks of projects
 
 <CardLayout autoFitEnabled={true}>
     <Card
-        to="https://explorer.kopi.money/kopi-test-4/staking/kopivaloper1en8f3y0wx52npwmxw2jy2qghy2acar55w9h39d"
+        to="https://explorer.kopi.money/luwak-1/staking/kopivaloper1ctu3g3m2jyp26m03vhjap2aua8646magep7y36"
         header={{
             label: "[NODERS]TEAM",
             translateId: "development-setup",
@@ -48,7 +48,7 @@ Official links of social networks of projects
     <SmallCard to="https://kopi-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
     <SmallCard to="https://kopi-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     
-    <SmallCard to="http://kopi-grpc.noders.services:30790" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="https://kopi-grpc.noders.services:443" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
     <SmallCard to="https://cosmoslist.co/mainnet/kopi" header={{label: "Cosmoslist Endpoint", translateId: "cosmoslist-endpoint"}}/>
 </CardLayout>
 
