@@ -351,7 +351,7 @@ function updateSnapshotInfo {
   else
     SNAP_LATEST_BLOCK="$(echo "${filename}" | grep -o "[[:digit:]]*" | head -n 1)"
     SNAP_ARCHIVE_NAME="${filename}"
-    SNAP_ARCHIVE_DOWNLOAD_COMMAND="curl -o - -L ${url} | lz4 -d | tar -x -C \${DAEMON_HOME}"
+    SNAP_ARCHIVE_DOWNLOAD_COMMAND="curl -o - -L ${url} | lz4 -d | tar -x -C ${DAEMON_HOME}"
   fi
 
   SNAP_ARCHIVE_LINK="${url}"
@@ -553,7 +553,7 @@ function updateSnapshotInfo {
   else
     SNAP_LATEST_BLOCK="$(echo "${filename}" | grep -o "[[:digit:]]*" | head -n 1)"
     SNAP_ARCHIVE_NAME="${filename}"
-    SNAP_ARCHIVE_DOWNLOAD_COMMAND="curl -o - -L ${url} | lz4 -d | tar -x -C \${DAEMON_HOME}"
+    SNAP_ARCHIVE_DOWNLOAD_COMMAND="curl -o - -L ${url} | lz4 -d | tar -x -C ${DAEMON_HOME}"
   fi
 
   SNAP_ARCHIVE_LINK="${url}"
