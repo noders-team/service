@@ -187,10 +187,10 @@ function replacePageVariables {
   sed -i'' "s|\[SNAP_LATEST_BLOCK\]|${SNAP_LATEST_BLOCK}|g" $1
   sed -i'' "s|\[SNAP_ARCHIVE_NAME\]|${SNAP_ARCHIVE_NAME}|g" $1
   sed -i'' "s|\[SNAP_ARCHIVE_LINK\]|${SNAP_ARCHIVE_LINK}|g" $1
+  sed -i'' "s|\[SNAP_ARCHIVE_DOWNLOAD_COMMAND\]|${SNAP_ARCHIVE_DOWNLOAD_COMMAND}|g" $1
   sed -i'' "s|\[LIVE_PEERS_RANDOM\]|${LIVE_PEERS_RANDOM}|g" $1
   sed -i'' "s|\[VALIDATOR_LINK\]|${VALIDATOR_LINK}|g" $1
   sed -i'' "s|\[VERSION_HAND\]|${VERSION_HAND}|g" $1
-  sed -i'' "s|\[SNAP_ARCHIVE_DOWNLOAD_COMMAND\]|${SNAP_ARCHIVE_DOWNLOAD_COMMAND}|g" $1
 
 #####################################################################################################################################################################
 #                                                                          UPDATE MAINNET PAGES                                                                     #
