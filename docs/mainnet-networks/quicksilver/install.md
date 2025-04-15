@@ -148,8 +148,8 @@ quicksilverd init NAME_OF_YOUR_VALIDATOR --chain-id quicksilver-2
 
 ### Download genesis and addrbook
 ```js
-curl https://config.noders.services/quicksilver/genesis.json -o ~/.quicksilverd/config/genesis.json
-curl https://config.noders.services/quicksilver/addrbook.json -o ~/.quicksilverd/config/addrbook.json
+curl https://snapshots.noders.services/quicksilver/genesis.json -o ~/.quicksilverd/config/genesis.json
+curl https://snapshots.noders.services/quicksilver/addrbook.json -o ~/.quicksilverd/config/addrbook.json
 ```
 ### Add peers
 ```js

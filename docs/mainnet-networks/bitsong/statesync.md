@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop bitsongd && bitsongd tendermint unsafe-reset-all --home ~/.bitsongd --keep-addr-book
 ```
 ```bash
-peers="b347b47a650981b2e12782e92cf26ba8aa0148c9@bitsong-rpc.noders.services:20656"
+peers="b347b47a650981b2e12782e92cf26ba8aa0148c9@bitsong-rpc.noders.services:16056"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.bitsongd/config/config.toml
 ```
 ```bash

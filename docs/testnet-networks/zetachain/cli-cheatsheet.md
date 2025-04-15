@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-zetachain">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `athens_7001-1` | Current Node Version: `v29.1.4`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
@@ -46,7 +46,7 @@ zetacored q bank balances $(zetacored keys show KEY -a) --node https://zetachain
 ### Send
 ```js
 zetacored tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000azeta \
-  --chain-id athens_7001-1 \
+  --chain-id auto \
   --node https://zetachain-t-rpc.noders.services:443 --fees 3000azeta \
   --from KEY
 ```
@@ -54,7 +54,7 @@ zetacored tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000azeta \
 ### Withdraw rewards from all validators
 ```js
 zetacored tx distribution withdraw-all-rewards \
-  --chain-id athens_7001-1 \
+  --chain-id auto \
   --node https://zetachain-t-rpc.noders.services:443 --fees 3000azeta \
   --from KEY
 ```
@@ -63,7 +63,7 @@ zetacored tx distribution withdraw-all-rewards \
 ```js
 zetacored tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
-  --chain-id athens_7001-1 \
+  --chain-id auto \
   --node https://zetachain-t-rpc.noders.services:443 --fees 3000azeta \
   --from KEY
 ```
@@ -71,7 +71,7 @@ zetacored tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ### Delegate tokens to yourself
 ```js
 zetacored tx staking delegate $(zetacored keys show KEY --bech val -a) 1000000azeta \
---chain-id athens_7001-1 \
+--chain-id auto \
 --node https://zetachain-t-rpc.noders.services:443 --fees 3000azeta \
 --from KEY
 ```
@@ -79,7 +79,7 @@ zetacored tx staking delegate $(zetacored keys show KEY --bech val -a) 1000000az
 ### Delegate tokens to validator
 ```js
 zetacored tx staking delegate VALIDATOR_ADDRESS 1000000azeta \
---chain-id athens_7001-1 \
+--chain-id auto \
 --node https://zetachain-t-rpc.noders.services:443 --fees 3000azeta \
 --from KEY
 ```
@@ -87,7 +87,7 @@ zetacored tx staking delegate VALIDATOR_ADDRESS 1000000azeta \
 ### Redelegate tokens to another validator
 ```js
 zetacored tx staking redelegate $(zetacored keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000azeta \
-  --chain-id athens_7001-1 \
+  --chain-id auto \
   --node https://zetachain-t-rpc.noders.services:443 --fees 3000azeta \
   --from KEY
 ```
@@ -108,7 +108,7 @@ zetacored query gov proposals --node https://zetachain-t-rpc.noders.services:443
 ### Check vote
 ```js
 zetacored query gov proposal PROPOSAL_NUMBER \
-  --chain-id athens_7001-1 \
+  --chain-id auto \
   --node https://zetachain-t-rpc.noders.services:443 --fees 3000azeta \
   --output json | jq
 ```
@@ -121,7 +121,7 @@ zetacored query gov proposal PROPOSAL_NUMBER \
 * abstain
 ```js
 zetacored tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
-  --chain-id athens_7001-1 \
+  --chain-id auto \
   --node https://zetachain-t-rpc.noders.services:443 --fees 3000azeta \
   --from KEY
 ```
@@ -144,7 +144,7 @@ zetacored tx staking create-validator \
   --identity "220491ADDD660741" \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
-  --chain-id athens_7001-1 \
+  --chain-id auto \
   --node https://zetachain-t-rpc.noders.services:443 --fees 3000azeta \
   --from KEY
 ```
@@ -156,7 +156,7 @@ zetacored tx staking edit-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id athens_7001-1 \
+--chain-id auto \
 --commission-rate 0.05 \
 --from KEY \
 --node https://zetachain-t-rpc.noders.services:443 --fees 3000azeta \
@@ -165,7 +165,7 @@ zetacored tx staking edit-validator \
 ### Unjail
 ```js
 zetacored tx slashing unjail \
-  --chain-id athens_7001-1 \
+  --chain-id auto \
   --node https://zetachain-t-rpc.noders.services:443 --fees 3000azeta \
   --from KEY
 ```

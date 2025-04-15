@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-pell">
 # State sync
 </div>
-###### Chain ID: `ignite_186-1` | Current Node Version: `v1.2.1`
+###### Chain ID: `ignite_186-1` | Current Node Version: `v1.3.0`
 
 ```bash
 SNAP_RPC=https://pell-t-rpc.noders.services:443 && \

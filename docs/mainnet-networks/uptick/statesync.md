@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop uptickd && uptickd tendermint unsafe-reset-all --home ~/.uptickd --keep-addr-book
 ```
 ```bash
-peers="d9de9af4a4e9092dd29ea833ef4960b97798ba18@uptick-rpc.noders.services:24656"
+peers="d9de9af4a4e9092dd29ea833ef4960b97798ba18@uptick-rpc.noders.services:15956"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.uptickd/config/config.toml
 ```
 ```bash

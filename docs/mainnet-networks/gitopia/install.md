@@ -148,12 +148,12 @@ gitopiad init NAME_OF_YOUR_VALIDATOR --chain-id gitopia
 
 ### Download genesis and addrbook
 ```js
-curl https://config.noders.services/gitopia/genesis.json -o ~/.gitopia/config/genesis.json
-curl https://config.noders.services/gitopia/addrbook.json -o ~/.gitopia/config/addrbook.json
+curl https://snapshots.noders.services/gitopia/genesis.json -o ~/.gitopia/config/genesis.json
+curl https://snapshots.noders.services/gitopia/addrbook.json -o ~/.gitopia/config/addrbook.json
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"8bd48e54552f091c1d8f194515754ab6ed74f054@gitopia-rpc.noders.services:19656\"/" ~/.gitopia/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"8bd48e54552f091c1d8f194515754ab6ed74f054@gitopia-rpc.noders.services:11356\"/" ~/.gitopia/config/config.toml
 ```
 
 ### Set minimum gas price

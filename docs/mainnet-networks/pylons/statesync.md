@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop pylonsd && pylonsd tendermint unsafe-reset-all --home ~/.pylonsd --keep-addr-book
 ```
 ```bash
-peers="ae94eb20e73c0ad93dbb980338eb313320c56194@pylons-rpc.noders.services:23656"
+peers="ae94eb20e73c0ad93dbb980338eb313320c56194@pylons-rpc.noders.services:16556"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.pylonsd/config/config.toml
 ```
 ```bash

@@ -148,12 +148,12 @@ humansd init NAME_OF_YOUR_VALIDATOR --chain-id humans_1089-1
 
 ### Download genesis and addrbook
 ```js
-curl https://config.noders.services/humans/genesis.json -o ~/.humansd/config/genesis.json
-curl https://config.noders.services/humans/addrbook.json -o ~/.humansd/config/addrbook.json
+curl https://snapshots.noders.services/humans/genesis.json -o ~/.humansd/config/genesis.json
+curl https://snapshots.noders.services/humans/addrbook.json -o ~/.humansd/config/addrbook.json
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"284fa3bdcdfd0d5aba7047db88f26d7a8ef38ed7@humans-rpc.noders.services:21656\"/" ~/.humansd/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"284fa3bdcdfd0d5aba7047db88f26d7a8ef38ed7@humans-rpc.noders.services:18456\"/" ~/.humansd/config/config.toml
 ```
 
 ### Set minimum gas price

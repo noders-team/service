@@ -148,12 +148,12 @@ andromedad init NAME_OF_YOUR_VALIDATOR --chain-id andromeda-1
 
 ### Download genesis and addrbook
 ```js
-curl https://config.noders.services/andromeda/genesis.json -o ~/.andromeda/config/genesis.json
-curl https://config.noders.services/andromeda/addrbook.json -o ~/.andromeda/config/addrbook.json
+curl https://snapshots.noders.services/andromeda/genesis.json -o ~/.andromeda/config/genesis.json
+curl https://snapshots.noders.services/andromeda/addrbook.json -o ~/.andromeda/config/addrbook.json
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"c1cde7020a3f96c7480702ede7ce470f4140bb8f@andromeda-rpc.noders.services:34656\"/" ~/.andromeda/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"c1cde7020a3f96c7480702ede7ce470f4140bb8f@andromeda-rpc.noders.services:21256\"/" ~/.andromeda/config/config.toml
 ```
 
 ### Set minimum gas price

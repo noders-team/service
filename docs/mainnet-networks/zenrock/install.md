@@ -148,12 +148,12 @@ zenrockd init NAME_OF_YOUR_VALIDATOR --chain-id diamond-1
 
 ### Download genesis and addrbook
 ```js
-curl https://config.noders.services/zenrock/genesis.json -o ~/.zrchain/config/genesis.json
-curl https://config.noders.services/zenrock/addrbook.json -o ~/.zrchain/config/addrbook.json
+curl https://snapshots.noders.services/zenrock/genesis.json -o ~/.zrchain/config/genesis.json
+curl https://snapshots.noders.services/zenrock/addrbook.json -o ~/.zrchain/config/addrbook.json
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"f2b52bc8a9931c9a1ea7090c7139b186733dcf73@zenrock-rpc.noders.services:49556\"/" ~/.zrchain/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"f2b52bc8a9931c9a1ea7090c7139b186733dcf73@zenrock-rpc.noders.services:49656\"/" ~/.zrchain/config/config.toml
 ```
 
 ### Set minimum gas price

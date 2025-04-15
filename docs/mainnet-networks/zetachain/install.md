@@ -148,8 +148,8 @@ zetacored init NAME_OF_YOUR_VALIDATOR --chain-id zetachain_7000-1
 
 ### Download genesis and addrbook
 ```js
-curl https://config.noders.services/zetachain/genesis.json -o ~/.zetacored/config/genesis.json
-curl https://config.noders.services/zetachain/addrbook.json -o ~/.zetacored/config/addrbook.json
+curl https://snapshots.noders.services/zetachain/genesis.json -o ~/.zetacored/config/genesis.json
+curl https://snapshots.noders.services/zetachain/addrbook.json -o ~/.zetacored/config/addrbook.json
 ```
 ### Add peers
 ```js

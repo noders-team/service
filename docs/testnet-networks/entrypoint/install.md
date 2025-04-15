@@ -148,8 +148,8 @@ entrypointd init NAME_OF_YOUR_VALIDATOR --chain-id auto
 
 ### Download genesis and addrbook
 ```js
-curl https://config-t.noders.services/entrypoint/genesis.json -o ~/.entrypoint/config/genesis.json
-curl https://config-t.noders.services/entrypoint/addrbook.json -o ~/.entrypoint/config/addrbook.json
+curl https://snapshots-t.noders.services/entrypoint/genesis.json -o ~/.entrypoint/config/genesis.json
+curl https://snapshots-t.noders.services/entrypoint/addrbook.json -o ~/.entrypoint/config/addrbook.json
 ```
 ### Add peers
 ```js

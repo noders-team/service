@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-quicksilver">
 # State sync
 </div>
-###### Chain ID: `rhye-3` | Current Node Version: `v1.7.6-testnet`
+###### Chain ID: `rhye-3` | Current Node Version: `v1.8.0-rc.0`
 
 ```bash
 SNAP_RPC=https://quicksilver-t-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop quicksilverd && quicksilverd tendermint unsafe-reset-all --home ~/.quicksilverd --keep-addr-book
 ```
 ```bash
-peers="30e054bce2e72334fcc3af90aa6985cc55eaec7a@quicksilver-t-rpc.noders.services:13656"
+peers="30e054bce2e72334fcc3af90aa6985cc55eaec7a@quicksilver-t-rpc.noders.services:11156"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.quicksilverd/config/config.toml
 ```
 ```bash

@@ -148,8 +148,8 @@ swisstronikd init NAME_OF_YOUR_VALIDATOR --chain-id swisstronik_1291-1
 
 ### Download genesis and addrbook
 ```js
-curl https://config-t.noders.services/swisstronik/genesis.json -o ~/.swisstronik/config/genesis.json
-curl https://config-t.noders.services/swisstronik/addrbook.json -o ~/.swisstronik/config/addrbook.json
+curl https://snapshots-t.noders.services/swisstronik/genesis.json -o ~/.swisstronik/config/genesis.json
+curl https://snapshots-t.noders.services/swisstronik/addrbook.json -o ~/.swisstronik/config/addrbook.json
 ```
 ### Add peers
 ```js

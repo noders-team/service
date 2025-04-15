@@ -148,12 +148,12 @@ canined init NAME_OF_YOUR_VALIDATOR --chain-id lupulella-2
 
 ### Download genesis and addrbook
 ```js
-curl https://config-t.noders.services/jackal/genesis.json -o ~/.canine/config/genesis.json
-curl https://config-t.noders.services/jackal/addrbook.json -o ~/.canine/config/addrbook.json
+curl https://snapshots-t.noders.services/jackal/genesis.json -o ~/.canine/config/genesis.json
+curl https://snapshots-t.noders.services/jackal/addrbook.json -o ~/.canine/config/addrbook.json
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"40b59e9b4a85b4ac6aa372e31cc0d733280c2769@jackal-t-rpc.noders.services:14656\"/" ~/.canine/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"40b59e9b4a85b4ac6aa372e31cc0d733280c2769@jackal-t-rpc.noders.services:17556\"/" ~/.canine/config/config.toml
 ```
 
 ### Set minimum gas price

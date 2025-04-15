@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop osmosisd && osmosisd tendermint unsafe-reset-all --home ~/.osmosisd --keep-addr-book
 ```
 ```bash
-peers="6147a54c107d366c4a1eb5196cb20b3498a31d83@osmosis-t-rpc.noders.services:10656"
+peers="6147a54c107d366c4a1eb5196cb20b3498a31d83@osmosis-t-rpc.noders.services:12556"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.osmosisd/config/config.toml
 ```
 ```bash

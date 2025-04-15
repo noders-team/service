@@ -148,8 +148,8 @@ althea init NAME_OF_YOUR_VALIDATOR --chain-id althea_258432-1
 
 ### Download genesis and addrbook
 ```js
-curl https://config.noders.services/althea/genesis.json -o ~/.althea/config/genesis.json
-curl https://config.noders.services/althea/addrbook.json -o ~/.althea/config/addrbook.json
+curl https://snapshots.noders.services/althea/genesis.json -o ~/.althea/config/genesis.json
+curl https://snapshots.noders.services/althea/addrbook.json -o ~/.althea/config/addrbook.json
 ```
 ### Add peers
 ```js

@@ -148,8 +148,8 @@ exrpd init NAME_OF_YOUR_VALIDATOR --chain-id exrp_1440002-1
 
 ### Download genesis and addrbook
 ```js
-curl https://config-t.noders.services/xrp/genesis.json -o ~/.exrpd/config/genesis.json
-curl https://config-t.noders.services/xrp/addrbook.json -o ~/.exrpd/config/addrbook.json
+curl https://snapshots-t.noders.services/xrp/genesis.json -o ~/.exrpd/config/genesis.json
+curl https://snapshots-t.noders.services/xrp/addrbook.json -o ~/.exrpd/config/addrbook.json
 ```
 ### Add peers
 ```js

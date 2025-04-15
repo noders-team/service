@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-quicksilver">
 # Installation
 </div>
-###### Chain ID: `rhye-3` | Current Node Version: `v1.7.6-testnet`
+###### Chain ID: `rhye-3` | Current Node Version: `v1.8.0-rc.0`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Quicksilver repo and build quicksilverd v1.7.6-testnet
+### Clone Quicksilver repo and build quicksilverd v1.8.0-rc.0
 ```js
 cd $HOME
 git clone https://github.com/quicksilver-zone.git
 cd quicksilver-zone
-git checkout v1.7.6-testnet
+git checkout v1.8.0-rc.0
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.quicksilverd/cosmovisor/upgrades/v1.7.6-testnet/bin
-mv $HOME/go/bin/quicksilverd ~/.quicksilverd/cosmovisor/upgrades/v1.7.6-testnet/bin/
+mkdir -p ~/.quicksilverd/cosmovisor/upgrades/v1.8.0-rc.0/bin
+mv $HOME/go/bin/quicksilverd ~/.quicksilverd/cosmovisor/upgrades/v1.8.0-rc.0/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Quicksilver repo and build quicksilverd v1.7.6-testnet
+### Clone Quicksilver repo and build quicksilverd v1.8.0-rc.0
 ```js
 cd $HOME
 git clone https://github.com/quicksilver-zone.git
 cd quicksilver-zone
-git checkout v1.7.6-testnet
+git checkout v1.8.0-rc.0
 ```
 
 ### Build binaries
@@ -148,12 +148,12 @@ quicksilverd init NAME_OF_YOUR_VALIDATOR --chain-id rhye-3
 
 ### Download genesis and addrbook
 ```js
-curl https://config-t.noders.services/quicksilver/genesis.json -o ~/.quicksilverd/config/genesis.json
-curl https://config-t.noders.services/quicksilver/addrbook.json -o ~/.quicksilverd/config/addrbook.json
+curl https://snapshots-t.noders.services/quicksilver/genesis.json -o ~/.quicksilverd/config/genesis.json
+curl https://snapshots-t.noders.services/quicksilver/addrbook.json -o ~/.quicksilverd/config/addrbook.json
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"30e054bce2e72334fcc3af90aa6985cc55eaec7a@quicksilver-t-rpc.noders.services:13656\"/" ~/.quicksilverd/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"30e054bce2e72334fcc3af90aa6985cc55eaec7a@quicksilver-t-rpc.noders.services:11156\"/" ~/.quicksilverd/config/config.toml
 ```
 
 ### Set minimum gas price

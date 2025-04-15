@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-pell">
 # Installation
 </div>
-###### Chain ID: `ignite_186-1` | Current Node Version: `v1.2.1`
+###### Chain ID: `ignite_186-1` | Current Node Version: `v1.3.0`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Pell repo and build pellcored v1.2.1
+### Clone Pell repo and build pellcored v1.3.0
 ```js
 cd $HOME
 git clone https://github.com/0xPellNetwork.git
 cd 0xPellNetwork
-git checkout v1.2.1
+git checkout v1.3.0
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.pellcored/cosmovisor/upgrades/v1.2.1/bin
-mv $HOME/go/bin/pellcored ~/.pellcored/cosmovisor/upgrades/v1.2.1/bin/
+mkdir -p ~/.pellcored/cosmovisor/upgrades/v1.3.0/bin
+mv $HOME/go/bin/pellcored ~/.pellcored/cosmovisor/upgrades/v1.3.0/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Pell repo and build pellcored v1.2.1
+### Clone Pell repo and build pellcored v1.3.0
 ```js
 cd $HOME
 git clone https://github.com/0xPellNetwork.git
 cd 0xPellNetwork
-git checkout v1.2.1
+git checkout v1.3.0
 ```
 
 ### Build binaries
@@ -148,8 +148,8 @@ pellcored init NAME_OF_YOUR_VALIDATOR --chain-id ignite_186-1
 
 ### Download genesis and addrbook
 ```js
-curl https://config-t.noders.services/pell/genesis.json -o ~/.pellcored/config/genesis.json
-curl https://config-t.noders.services/pell/addrbook.json -o ~/.pellcored/config/addrbook.json
+curl https://snapshots-t.noders.services/pell/genesis.json -o ~/.pellcored/config/genesis.json
+curl https://snapshots-t.noders.services/pell/addrbook.json -o ~/.pellcored/config/addrbook.json
 ```
 ### Add peers
 ```js

@@ -148,12 +148,12 @@ uptickd init NAME_OF_YOUR_VALIDATOR --chain-id uptick_117-1
 
 ### Download genesis and addrbook
 ```js
-curl https://config.noders.services/uptick/genesis.json -o ~/.uptickd/config/genesis.json
-curl https://config.noders.services/uptick/addrbook.json -o ~/.uptickd/config/addrbook.json
+curl https://snapshots.noders.services/uptick/genesis.json -o ~/.uptickd/config/genesis.json
+curl https://snapshots.noders.services/uptick/addrbook.json -o ~/.uptickd/config/addrbook.json
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"d9de9af4a4e9092dd29ea833ef4960b97798ba18@uptick-rpc.noders.services:24656\"/" ~/.uptickd/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"d9de9af4a4e9092dd29ea833ef4960b97798ba18@uptick-rpc.noders.services:15956\"/" ~/.uptickd/config/config.toml
 ```
 
 ### Set minimum gas price

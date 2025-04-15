@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop mantrachaind && mantrachaind tendermint unsafe-reset-all --home ~/.mantrachaind --keep-addr-book
 ```
 ```bash
-peers="8ac264aa8af65b4363f98fcab3fbc58c81b2ca90@mantra-t-rpc.noders.services:30656"
+peers="8ac264aa8af65b4363f98fcab3fbc58c81b2ca90@mantra-t-rpc.noders.services:25156"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.mantrachaind/config/config.toml
 ```
 ```bash

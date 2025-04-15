@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop umeed && umeed tendermint unsafe-reset-all --home ~/.umee --keep-addr-book
 ```
 ```bash
-peers="8349a4ab1d96f63cd0c9ff603c9869810e4a8e15@umee-rpc.noders.services:32656"
+peers="8349a4ab1d96f63cd0c9ff603c9869810e4a8e15@umee-rpc.noders.services:13656"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.umee/config/config.toml
 ```
 ```bash

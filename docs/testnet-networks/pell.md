@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-pell">
 # Pell
 </div>
-###### Chain ID: `ignite_186-1` | Current Node Version: `v1.2.1`
+###### Chain ID: `ignite_186-1` | Current Node Version: `v1.3.0`
 
 
 The First & Omnichain BTC Restaking Network, extending BTCFi into the cryptoeconomic security domain and fully unlocking Bitcoin's potential.

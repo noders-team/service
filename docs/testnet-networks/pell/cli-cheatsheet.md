@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-pell">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `ignite_186-1` | Current Node Version: `v1.2.1`
+###### Chain ID: `ignite_186-1` | Current Node Version: `v1.3.0`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 

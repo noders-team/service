@@ -148,8 +148,8 @@ sunrised init NAME_OF_YOUR_VALIDATOR --chain-id sunrise-test-0.2
 
 ### Download genesis and addrbook
 ```js
-curl https://config-t.noders.services/sunrise/genesis.json -o ~/.sunrise/config/genesis.json
-curl https://config-t.noders.services/sunrise/addrbook.json -o ~/.sunrise/config/addrbook.json
+curl https://snapshots-t.noders.services/sunrise/genesis.json -o ~/.sunrise/config/genesis.json
+curl https://snapshots-t.noders.services/sunrise/addrbook.json -o ~/.sunrise/config/addrbook.json
 ```
 ### Add peers
 ```js

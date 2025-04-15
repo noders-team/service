@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop humansd && humansd tendermint unsafe-reset-all --home ~/.humansd --keep-addr-book
 ```
 ```bash
-peers="284fa3bdcdfd0d5aba7047db88f26d7a8ef38ed7@humans-rpc.noders.services:21656"
+peers="284fa3bdcdfd0d5aba7047db88f26d7a8ef38ed7@humans-rpc.noders.services:18456"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.humansd/config/config.toml
 ```
 ```bash

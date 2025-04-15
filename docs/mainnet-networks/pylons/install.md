@@ -148,12 +148,12 @@ pylonsd init NAME_OF_YOUR_VALIDATOR --chain-id pylons-mainnet-1
 
 ### Download genesis and addrbook
 ```js
-curl https://config.noders.services/pylons/genesis.json -o ~/.pylonsd/config/genesis.json
-curl https://config.noders.services/pylons/addrbook.json -o ~/.pylonsd/config/addrbook.json
+curl https://snapshots.noders.services/pylons/genesis.json -o ~/.pylonsd/config/genesis.json
+curl https://snapshots.noders.services/pylons/addrbook.json -o ~/.pylonsd/config/addrbook.json
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"ae94eb20e73c0ad93dbb980338eb313320c56194@pylons-rpc.noders.services:23656\"/" ~/.pylonsd/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"ae94eb20e73c0ad93dbb980338eb313320c56194@pylons-rpc.noders.services:16556\"/" ~/.pylonsd/config/config.toml
 ```
 
 ### Set minimum gas price

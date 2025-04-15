@@ -148,12 +148,12 @@ sedad init NAME_OF_YOUR_VALIDATOR --chain-id seda-1
 
 ### Download genesis and addrbook
 ```js
-curl https://config.noders.services/seda/genesis.json -o ~/.sedad/config/genesis.json
-curl https://config.noders.services/seda/addrbook.json -o ~/.sedad/config/addrbook.json
+curl https://snapshots.noders.services/seda/genesis.json -o ~/.sedad/config/genesis.json
+curl https://snapshots.noders.services/seda/addrbook.json -o ~/.sedad/config/addrbook.json
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"c9100af84ba8c9dbeb0c1c49837620bf447bf55c@seda-rpc.noders.services:36656\"/" ~/.sedad/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"c9100af84ba8c9dbeb0c1c49837620bf447bf55c@seda-rpc.noders.services:25856\"/" ~/.sedad/config/config.toml
 ```
 
 ### Set minimum gas price

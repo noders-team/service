@@ -148,8 +148,8 @@ galacticad init NAME_OF_YOUR_VALIDATOR --chain-id galactica_9302-1
 
 ### Download genesis and addrbook
 ```js
-curl https://config-t.noders.services/galactica/genesis.json -o ~/.galactica/config/genesis.json
-curl https://config-t.noders.services/galactica/addrbook.json -o ~/.galactica/config/addrbook.json
+curl https://snapshots-t.noders.services/galactica/genesis.json -o ~/.galactica/config/genesis.json
+curl https://snapshots-t.noders.services/galactica/addrbook.json -o ~/.galactica/config/addrbook.json
 ```
 ### Add peers
 ```js

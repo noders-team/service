@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop sedad && sedad tendermint unsafe-reset-all --home ~/.sedad --keep-addr-book
 ```
 ```bash
-peers="c9100af84ba8c9dbeb0c1c49837620bf447bf55c@seda-rpc.noders.services:36656"
+peers="c9100af84ba8c9dbeb0c1c49837620bf447bf55c@seda-rpc.noders.services:25856"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.sedad/config/config.toml
 ```
 ```bash

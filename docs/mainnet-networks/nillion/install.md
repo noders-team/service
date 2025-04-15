@@ -148,8 +148,8 @@ nilliond init NAME_OF_YOUR_VALIDATOR --chain-id nillion-1
 
 ### Download genesis and addrbook
 ```js
-curl https://config.noders.services/nillion/genesis.json -o ~/.nilliond/config/genesis.json
-curl https://config.noders.services/nillion/addrbook.json -o ~/.nilliond/config/addrbook.json
+curl https://snapshots.noders.services/nillion/genesis.json -o ~/.nilliond/config/genesis.json
+curl https://snapshots.noders.services/nillion/addrbook.json -o ~/.nilliond/config/addrbook.json
 ```
 ### Add peers
 ```js

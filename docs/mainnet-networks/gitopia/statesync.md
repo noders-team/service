@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop gitopiad && gitopiad tendermint unsafe-reset-all --home ~/.gitopia --keep-addr-book
 ```
 ```bash
-peers="8bd48e54552f091c1d8f194515754ab6ed74f054@gitopia-rpc.noders.services:19656"
+peers="8bd48e54552f091c1d8f194515754ab6ed74f054@gitopia-rpc.noders.services:11356"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.gitopia/config/config.toml
 ```
 ```bash

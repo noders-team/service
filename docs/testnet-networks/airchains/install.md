@@ -148,12 +148,12 @@ junctiond init NAME_OF_YOUR_VALIDATOR --chain-id varanasi-1
 
 ### Download genesis and addrbook
 ```js
-curl https://config-t.noders.services/airchains/genesis.json -o ~/.junction/config/genesis.json
-curl https://config-t.noders.services/airchains/addrbook.json -o ~/.junction/config/addrbook.json
+curl https://snapshots-t.noders.services/airchains/genesis.json -o ~/.junction/config/genesis.json
+curl https://snapshots-t.noders.services/airchains/addrbook.json -o ~/.junction/config/addrbook.json
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"b419d23f56a6a5403319399ed38b6b93138210a1@airchains-t-rpc.noders.services:31656\"/" ~/.junction/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"b419d23f56a6a5403319399ed38b6b93138210a1@airchains-t-rpc.noders.services:26756\"/" ~/.junction/config/config.toml
 ```
 
 ### Set minimum gas price

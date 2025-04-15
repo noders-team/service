@@ -148,8 +148,8 @@ sudo systemctl enable 0gchaind
 
 ### Download genesis and addrbook
 ```js
-curl https://config-t.noders.services/og/genesis.json -o ~/.0gchain/config/genesis.json
-curl https://config-t.noders.services/og/addrbook.json -o ~/.0gchain/config/addrbook.json
+curl https://snapshots-t.noders.services/og/genesis.json -o ~/.0gchain/config/genesis.json
+curl https://snapshots-t.noders.services/og/addrbook.json -o ~/.0gchain/config/addrbook.json
 ```
 ### Add peers
 ```js

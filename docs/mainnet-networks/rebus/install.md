@@ -148,8 +148,8 @@ rebusd init NAME_OF_YOUR_VALIDATOR --chain-id reb_1111-1
 
 ### Download genesis and addrbook
 ```js
-curl https://config.noders.services/rebus/genesis.json -o ~/.rebusd/config/genesis.json
-curl https://config.noders.services/rebus/addrbook.json -o ~/.rebusd/config/addrbook.json
+curl https://snapshots.noders.services/rebus/genesis.json -o ~/.rebusd/config/genesis.json
+curl https://snapshots.noders.services/rebus/addrbook.json -o ~/.rebusd/config/addrbook.json
 ```
 ### Add peers
 ```js

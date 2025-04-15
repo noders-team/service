@@ -148,12 +148,12 @@ mantrachaind init NAME_OF_YOUR_VALIDATOR --chain-id mantra-dukong-1
 
 ### Download genesis and addrbook
 ```js
-curl https://config-t.noders.services/mantra/genesis.json -o ~/.mantrachaind/config/genesis.json
-curl https://config-t.noders.services/mantra/addrbook.json -o ~/.mantrachaind/config/addrbook.json
+curl https://snapshots-t.noders.services/mantra/genesis.json -o ~/.mantrachaind/config/genesis.json
+curl https://snapshots-t.noders.services/mantra/addrbook.json -o ~/.mantrachaind/config/addrbook.json
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"8ac264aa8af65b4363f98fcab3fbc58c81b2ca90@mantra-t-rpc.noders.services:30656\"/" ~/.mantrachaind/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"8ac264aa8af65b4363f98fcab3fbc58c81b2ca90@mantra-t-rpc.noders.services:25156\"/" ~/.mantrachaind/config/config.toml
 ```
 
 ### Set minimum gas price

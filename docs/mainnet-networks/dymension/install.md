@@ -148,8 +148,8 @@ dymd init NAME_OF_YOUR_VALIDATOR --chain-id dymension_1100-1
 
 ### Download genesis and addrbook
 ```js
-curl https://config.noders.services/dymension/genesis.json -o ~/.dymension/config/genesis.json
-curl https://config.noders.services/dymension/addrbook.json -o ~/.dymension/config/addrbook.json
+curl https://snapshots.noders.services/dymension/genesis.json -o ~/.dymension/config/genesis.json
+curl https://snapshots.noders.services/dymension/addrbook.json -o ~/.dymension/config/addrbook.json
 ```
 ### Add peers
 ```js

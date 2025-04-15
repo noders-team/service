@@ -148,12 +148,12 @@ stchaind init NAME_OF_YOUR_VALIDATOR --chain-id stratos-1
 
 ### Download genesis and addrbook
 ```js
-curl https://config.noders.services/stratos/genesis.json -o ~/.stchaind/config/genesis.json
-curl https://config.noders.services/stratos/addrbook.json -o ~/.stchaind/config/addrbook.json
+curl https://snapshots.noders.services/stratos/genesis.json -o ~/.stchaind/config/genesis.json
+curl https://snapshots.noders.services/stratos/addrbook.json -o ~/.stchaind/config/addrbook.json
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"71f6b523df0c5cbb1995a14e7eac46a9befcad37@stratos-rpc.noders.services:29656\"/" ~/.stchaind/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"71f6b523df0c5cbb1995a14e7eac46a9befcad37@stratos-rpc.noders.services:21856\"/" ~/.stchaind/config/config.toml
 ```
 
 ### Set minimum gas price

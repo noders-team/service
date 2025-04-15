@@ -148,12 +148,12 @@ crossfid init NAME_OF_YOUR_VALIDATOR --chain-id crossfi-evm-testnet-1
 
 ### Download genesis and addrbook
 ```js
-curl https://config-t.noders.services/crossfi/genesis.json -o ~/.mineplex-chain/config/genesis.json
-curl https://config-t.noders.services/crossfi/addrbook.json -o ~/.mineplex-chain/config/addrbook.json
+curl https://snapshots-t.noders.services/crossfi/genesis.json -o ~/.mineplex-chain/config/genesis.json
+curl https://snapshots-t.noders.services/crossfi/addrbook.json -o ~/.mineplex-chain/config/addrbook.json
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"de9daabf7d001c44749bca2eab3085d40ef3accb@crossfi-t-rpc.noders.services:12656\"/" ~/.mineplex-chain/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"de9daabf7d001c44749bca2eab3085d40ef3accb@crossfi-t-rpc.noders.services:26056\"/" ~/.mineplex-chain/config/config.toml
 ```
 
 ### Set minimum gas price

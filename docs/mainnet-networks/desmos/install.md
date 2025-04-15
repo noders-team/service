@@ -148,8 +148,8 @@ desmos init NAME_OF_YOUR_VALIDATOR --chain-id desmos-mainnet
 
 ### Download genesis and addrbook
 ```js
-curl https://config.noders.services/desmos/genesis.json -o ~/.desmos/config/genesis.json
-curl https://config.noders.services/desmos/addrbook.json -o ~/.desmos/config/addrbook.json
+curl https://snapshots.noders.services/desmos/genesis.json -o ~/.desmos/config/genesis.json
+curl https://snapshots.noders.services/desmos/addrbook.json -o ~/.desmos/config/addrbook.json
 ```
 ### Add peers
 ```js

@@ -148,12 +148,12 @@ aurad init NAME_OF_YOUR_VALIDATOR --chain-id aura_6322-2
 
 ### Download genesis and addrbook
 ```js
-curl https://config.noders.services/aura/genesis.json -o ~/.aura/config/genesis.json
-curl https://config.noders.services/aura/addrbook.json -o ~/.aura/config/addrbook.json
+curl https://snapshots.noders.services/aura/genesis.json -o ~/.aura/config/genesis.json
+curl https://snapshots.noders.services/aura/addrbook.json -o ~/.aura/config/addrbook.json
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"e038fb068587bfe9b67e23df287aabad352577d9@aura-rpc.noders.services:17656\"/" ~/.aura/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"e038fb068587bfe9b67e23df287aabad352577d9@aura-rpc.noders.services:21756\"/" ~/.aura/config/config.toml
 ```
 
 ### Set minimum gas price

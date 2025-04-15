@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop crossfid && crossfid tendermint unsafe-reset-all --home ~/.mineplex-chain --keep-addr-book
 ```
 ```bash
-peers="de9daabf7d001c44749bca2eab3085d40ef3accb@crossfi-t-rpc.noders.services:12656"
+peers="de9daabf7d001c44749bca2eab3085d40ef3accb@crossfi-t-rpc.noders.services:26056"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.mineplex-chain/config/config.toml
 ```
 ```bash

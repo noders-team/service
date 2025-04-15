@@ -148,8 +148,8 @@ sided init NAME_OF_YOUR_VALIDATOR --chain-id sidechain-testnet-4
 
 ### Download genesis and addrbook
 ```js
-curl https://config-t.noders.services/side/genesis.json -o ~/.side/config/genesis.json
-curl https://config-t.noders.services/side/addrbook.json -o ~/.side/config/addrbook.json
+curl https://snapshots-t.noders.services/side/genesis.json -o ~/.side/config/genesis.json
+curl https://snapshots-t.noders.services/side/addrbook.json -o ~/.side/config/addrbook.json
 ```
 ### Add peers
 ```js

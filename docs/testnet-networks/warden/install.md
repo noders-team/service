@@ -148,8 +148,8 @@ wardend init NAME_OF_YOUR_VALIDATOR --chain-id chiado_10010-1
 
 ### Download genesis and addrbook
 ```js
-curl https://config-t.noders.services/warden/genesis.json -o ~/.warden/config/genesis.json
-curl https://config-t.noders.services/warden/addrbook.json -o ~/.warden/config/addrbook.json
+curl https://snapshots-t.noders.services/warden/genesis.json -o ~/.warden/config/genesis.json
+curl https://snapshots-t.noders.services/warden/addrbook.json -o ~/.warden/config/addrbook.json
 ```
 ### Add peers
 ```js

@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop aurad && aurad tendermint unsafe-reset-all --home ~/.aura --keep-addr-book
 ```
 ```bash
-peers="e038fb068587bfe9b67e23df287aabad352577d9@aura-rpc.noders.services:17656"
+peers="e038fb068587bfe9b67e23df287aabad352577d9@aura-rpc.noders.services:21756"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.aura/config/config.toml
 ```
 ```bash

@@ -148,8 +148,8 @@ fuelsequencerd init NAME_OF_YOUR_VALIDATOR --chain-id seq-mainnet-1
 
 ### Download genesis and addrbook
 ```js
-curl https://config.noders.services/fuel/genesis.json -o ~/.fuelsequencer/config/genesis.json
-curl https://config.noders.services/fuel/addrbook.json -o ~/.fuelsequencer/config/addrbook.json
+curl https://snapshots.noders.services/fuel/genesis.json -o ~/.fuelsequencer/config/genesis.json
+curl https://snapshots.noders.services/fuel/addrbook.json -o ~/.fuelsequencer/config/addrbook.json
 ```
 ### Add peers
 ```js

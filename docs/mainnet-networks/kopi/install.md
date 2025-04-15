@@ -148,8 +148,8 @@ uxkp init NAME_OF_YOUR_VALIDATOR --chain-id luwak-1
 
 ### Download genesis and addrbook
 ```js
-curl https://config.noders.services/kopi/genesis.json -o ~/.kopid/config/genesis.json
-curl https://config.noders.services/kopi/addrbook.json -o ~/.kopid/config/addrbook.json
+curl https://snapshots.noders.services/kopi/genesis.json -o ~/.kopid/config/genesis.json
+curl https://snapshots.noders.services/kopi/addrbook.json -o ~/.kopid/config/addrbook.json
 ```
 ### Add peers
 ```js

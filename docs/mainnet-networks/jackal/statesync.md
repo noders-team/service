@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop canined && canined tendermint unsafe-reset-all --home ~/.canine --keep-addr-book
 ```
 ```bash
-peers="5b622b13c4b0bdeea993bc3ec4d9cf269819893e@jackal-rpc.noders.services:26656"
+peers="5b622b13c4b0bdeea993bc3ec4d9cf269819893e@jackal-rpc.noders.services:17556"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.canine/config/config.toml
 ```
 ```bash

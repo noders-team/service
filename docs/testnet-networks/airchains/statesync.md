@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop junctiond && junctiond tendermint unsafe-reset-all --home ~/.junction --keep-addr-book
 ```
 ```bash
-peers="b419d23f56a6a5403319399ed38b6b93138210a1@airchains-t-rpc.noders.services:31656"
+peers="b419d23f56a6a5403319399ed38b6b93138210a1@airchains-t-rpc.noders.services:26756"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.junction/config/config.toml
 ```
 ```bash

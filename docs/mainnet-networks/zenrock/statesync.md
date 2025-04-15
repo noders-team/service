@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop zenrockd && zenrockd tendermint unsafe-reset-all --home ~/.zrchain --keep-addr-book
 ```
 ```bash
-peers="f2b52bc8a9931c9a1ea7090c7139b186733dcf73@zenrock-rpc.noders.services:49556"
+peers="f2b52bc8a9931c9a1ea7090c7139b186733dcf73@zenrock-rpc.noders.services:49656"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.zrchain/config/config.toml
 ```
 ```bash

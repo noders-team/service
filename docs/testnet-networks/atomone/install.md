@@ -148,8 +148,8 @@ atomoned init NAME_OF_YOUR_VALIDATOR --chain-id atomone-testnet-1
 
 ### Download genesis and addrbook
 ```js
-curl https://config-t.noders.services/atomone/genesis.json -o ~/.atomone/config/genesis.json
-curl https://config-t.noders.services/atomone/addrbook.json -o ~/.atomone/config/addrbook.json
+curl https://snapshots-t.noders.services/atomone/genesis.json -o ~/.atomone/config/genesis.json
+curl https://snapshots-t.noders.services/atomone/addrbook.json -o ~/.atomone/config/addrbook.json
 ```
 ### Add peers
 ```js

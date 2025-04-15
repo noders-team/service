@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop lavad && lavad tendermint unsafe-reset-all --home ~/.lava --keep-addr-book
 ```
 ```bash
-peers="2b0daf7ab2976dc5bf2702c0fd3fffad6f62d5e2@lava-rpc.noders.services:37656"
+peers="2b0daf7ab2976dc5bf2702c0fd3fffad6f62d5e2@lava-rpc.noders.services:19956"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.lava/config/config.toml
 ```
 ```bash

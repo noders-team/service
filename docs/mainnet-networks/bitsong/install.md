@@ -148,12 +148,12 @@ bitsongd init NAME_OF_YOUR_VALIDATOR --chain-id bitsong-2b
 
 ### Download genesis and addrbook
 ```js
-curl https://config.noders.services/bitsong/genesis.json -o ~/.bitsongd/config/genesis.json
-curl https://config.noders.services/bitsong/addrbook.json -o ~/.bitsongd/config/addrbook.json
+curl https://snapshots.noders.services/bitsong/genesis.json -o ~/.bitsongd/config/genesis.json
+curl https://snapshots.noders.services/bitsong/addrbook.json -o ~/.bitsongd/config/addrbook.json
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"b347b47a650981b2e12782e92cf26ba8aa0148c9@bitsong-rpc.noders.services:20656\"/" ~/.bitsongd/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"b347b47a650981b2e12782e92cf26ba8aa0148c9@bitsong-rpc.noders.services:16056\"/" ~/.bitsongd/config/config.toml
 ```
 
 ### Set minimum gas price

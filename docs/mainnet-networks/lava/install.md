@@ -148,12 +148,12 @@ lavad init NAME_OF_YOUR_VALIDATOR --chain-id lava-mainnet-1
 
 ### Download genesis and addrbook
 ```js
-curl https://config.noders.services/lava/genesis.json -o ~/.lava/config/genesis.json
-curl https://config.noders.services/lava/addrbook.json -o ~/.lava/config/addrbook.json
+curl https://snapshots.noders.services/lava/genesis.json -o ~/.lava/config/genesis.json
+curl https://snapshots.noders.services/lava/addrbook.json -o ~/.lava/config/addrbook.json
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"2b0daf7ab2976dc5bf2702c0fd3fffad6f62d5e2@lava-rpc.noders.services:37656\"/" ~/.lava/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"2b0daf7ab2976dc5bf2702c0fd3fffad6f62d5e2@lava-rpc.noders.services:19956\"/" ~/.lava/config/config.toml
 ```
 
 ### Set minimum gas price

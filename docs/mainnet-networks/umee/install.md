@@ -148,12 +148,12 @@ umeed init NAME_OF_YOUR_VALIDATOR --chain-id umee-1
 
 ### Download genesis and addrbook
 ```js
-curl https://config.noders.services/umee/genesis.json -o ~/.umee/config/genesis.json
-curl https://config.noders.services/umee/addrbook.json -o ~/.umee/config/addrbook.json
+curl https://snapshots.noders.services/umee/genesis.json -o ~/.umee/config/genesis.json
+curl https://snapshots.noders.services/umee/addrbook.json -o ~/.umee/config/addrbook.json
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"8349a4ab1d96f63cd0c9ff603c9869810e4a8e15@umee-rpc.noders.services:32656\"/" ~/.umee/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"8349a4ab1d96f63cd0c9ff603c9869810e4a8e15@umee-rpc.noders.services:13656\"/" ~/.umee/config/config.toml
 ```
 
 ### Set minimum gas price

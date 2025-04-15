@@ -4,10 +4,10 @@ title: Installation
 sidebar_position: 2
 ---
 
-<div class="h1-with-icon icon-osmosis">
+<div class="h1-with-icon icon-arkeo">
 # Installation
 </div>
-###### Chain ID: `osmo-test-5` | Current Node Version: `29.0.0-rc1`
+###### Chain ID: `arkeo-main-v1` | Current Node Version: `v1.0.9`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Osmosis repo and build osmosisd 29.0.0-rc1
+### Clone Arkeo repo and build arkeod v1.0.9
 ```js
 cd $HOME
-git clone https://github.com/osmosis-labs/osmosis.git
-cd osmosis
-git checkout 29.0.0-rc1
+git clone https://github.com/arkeonetwork.git
+cd arkeonetwork
+git checkout v1.0.9
 ```
 
 ### Build binaries
@@ -51,14 +51,14 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.osmosisd/cosmovisor/upgrades/29.0.0-rc1/bin
-mv $HOME/go/bin/osmosisd ~/.osmosisd/cosmovisor/upgrades/29.0.0-rc1/bin/
+mkdir -p ~/.arkeo/cosmovisor/upgrades/v1.0.9/bin
+mv $HOME/go/bin/arkeod ~/.arkeo/cosmovisor/upgrades/v1.0.9/bin/
 ```
 
 ### Create symlinks
 ```js
-sudo ln -s ~/.osmosisd/cosmovisor/genesis ~/.osmosisd/cosmovisor/current -f
-sudo ln -s ~/.osmosisd/cosmovisor/current/bin/osmosisd /usr/local/bin/osmosisd -f
+sudo ln -s ~/.arkeo/cosmovisor/genesis ~/.arkeo/cosmovisor/current -f
+sudo ln -s ~/.arkeo/cosmovisor/current/bin/arkeod /usr/local/bin/arkeod -f
 ```
 
 ## Download and install Cosmovisor
@@ -69,9 +69,9 @@ go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
 ## Run node
 ### Create service
 ```js
-sudo tee /etc/systemd/system/osmosisd.service > /dev/null << EOF
+sudo tee /etc/systemd/system/arkeod.service > /dev/null << EOF
 [Unit]
-Description=osmosis node service
+Description=arkeo node service
 After=network-online.target
 
 [Service]
@@ -80,10 +80,10 @@ ExecStart=$(which cosmovisor) run start
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
-Environment="DAEMON_HOME=~/.osmosisd"
-Environment="DAEMON_NAME=osmosisd"
+Environment="DAEMON_HOME=~/.arkeo"
+Environment="DAEMON_NAME=arkeod"
 Environment="UNSAFE_SKIP_BACKUP=true"
-Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/.osmosisd/cosmovisor/current/bin"
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/.arkeo/cosmovisor/current/bin"
 
 [Install]
 WantedBy=multi-user.target
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Osmosis repo and build osmosisd 29.0.0-rc1
+### Clone Arkeo repo and build arkeod v1.0.9
 ```js
 cd $HOME
-git clone https://github.com/osmosis-labs/osmosis.git
-cd osmosis
-git checkout 29.0.0-rc1
+git clone https://github.com/arkeonetwork.git
+cd arkeonetwork
+git checkout v1.0.9
 ```
 
 ### Build binaries
@@ -109,14 +109,14 @@ make install
 ## Run node
 ### Create service
 ```js
-sudo tee /etc/systemd/system/osmosisd.service > /dev/null << EOF
+sudo tee /etc/systemd/system/arkeod.service > /dev/null << EOF
 [Unit]
-Description=osmosis node service
+Description=arkeo node service
 After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=$(which osmosisd) start
+ExecStart=$(which arkeod) start
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
@@ -130,35 +130,35 @@ EOF
 ### Enable service
 ```js
 sudo systemctl daemon-reload
-sudo systemctl enable osmosisd
+sudo systemctl enable arkeod
 ```
 
 ## Node configuration
 ### Set config
 ```js
-osmosisd config chain-id osmo-test-5
-osmosisd config keyring-backend os
-osmosisd config node tcp://localhost:26657
+arkeod config chain-id arkeo-main-v1
+arkeod config keyring-backend os
+arkeod config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-osmosisd init NAME_OF_YOUR_VALIDATOR --chain-id osmo-test-5
+arkeod init NAME_OF_YOUR_VALIDATOR --chain-id arkeo-main-v1
 ```
 
 ### Download genesis and addrbook
 ```js
-curl https://snapshots-t.noders.services/osmosis/genesis.json -o ~/.osmosisd/config/genesis.json
-curl https://snapshots-t.noders.services/osmosis/addrbook.json -o ~/.osmosisd/config/addrbook.json
+curl https://snapshots.noders.services/arkeo/genesis.json -o ~/.arkeo/config/genesis.json
+curl https://snapshots.noders.services/arkeo/addrbook.json -o ~/.arkeo/config/addrbook.json
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"6147a54c107d366c4a1eb5196cb20b3498a31d83@osmosis-t-rpc.noders.services:12556\"/" ~/.osmosisd/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"4f1a4cd780aebef488151e71f938453f9059f995@arkeo-rpc.noders.services:22856\"/" ~/.arkeo/config/config.toml
 ```
 
 ### Set minimum gas price
 ```js
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001uosmo\"|" ~/.osmosisd/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001uarkeo\"|" ~/.arkeo/config/app.toml
 ```
 ### Set pruning
 ```js
@@ -167,34 +167,34 @@ sed -i \
   -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
   -e 's|^pruning-keep-every *=.*|pruning-keep-every = "0"|' \
   -e 's|^pruning-interval *=.*|pruning-interval = "19"|' \
-  ~/.osmosisd/config/app.toml
+  ~/.arkeo/config/app.toml
 ```
 
 ### Set custom ports
 
 ```bash
-echo "export osmosisd_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export arkeod_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
 # Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${osmosisd_PORT}317%g" \
--e "s%:8080%:${osmosisd_PORT}080%g" \
--e "s%:9090%:${osmosisd_PORT}090%g" \
--e "s%:9091%:${osmosisd_PORT}091%g" \
--e "s%:8545%:${osmosisd_PORT}545%g" \
--e "s%:8546%:${osmosisd_PORT}546%g" \
--e "s%:6065%:${osmosisd_PORT}065%g" ~/.osmosisd/config/app.toml
+sed -i.bak -e "s%:1317%:${arkeod_PORT}317%g" \
+-e "s%:8080%:${arkeod_PORT}080%g" \
+-e "s%:9090%:${arkeod_PORT}090%g" \
+-e "s%:9091%:${arkeod_PORT}091%g" \
+-e "s%:8545%:${arkeod_PORT}545%g" \
+-e "s%:8546%:${arkeod_PORT}546%g" \
+-e "s%:6065%:${arkeod_PORT}065%g" ~/.arkeo/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${osmosisd_PORT}658%g" \
--e "s%:26657%:${osmosisd_PORT}657%g" \
--e "s%:6060%:${osmosisd_PORT}060%g" \
--e "s%:26656%:${osmosisd_PORT}656%g" \
--e "s%:26660%:${osmosisd_PORT}660%g" ~/.osmosisd/config/config.toml
+sed -i.bak -e "s%:26658%:${arkeod_PORT}658%g" \
+-e "s%:26657%:${arkeod_PORT}657%g" \
+-e "s%:6060%:${arkeod_PORT}060%g" \
+-e "s%:26656%:${arkeod_PORT}656%g" \
+-e "s%:26660%:${arkeod_PORT}660%g" ~/.arkeo/config/config.toml
 ```
 
 ### Start node and check logs
 ```js
-sudo systemctl start osmosisd && sudo journalctl -u osmosisd -f --no-hostname -o cat
+sudo systemctl start arkeod && sudo journalctl -u arkeod -f --no-hostname -o cat
 ```
