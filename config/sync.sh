@@ -322,7 +322,7 @@ function updateSnapshotInfo {
 
   # Extracting TIMESTAMP
   local timestamp
-  timestamp=$(echo "${headers}" | grep -i '^Last-Modified:' | cut -d' ' -f2-)
+  timestamp=$(echo "${headers}" | grep -i '^Last-Modified:' | cut -d' ' -f2- | tr -d '\r')
 
   # Extracting SIZE and converting it to GB
   local size_raw
@@ -521,7 +521,7 @@ function updateSnapshotInfo {
 
   # Extracting TIMESTAMP
   local timestamp
-  timestamp=$(echo "${headers}" | grep -i '^Last-Modified:' | cut -d' ' -f2-)
+  timestamp=$(echo "${headers}" | grep -i '^Last-Modified:' | cut -d' ' -f2- | tr -d '\r')
 
   # Extracting SIZE and converting it to GB
   local size_raw
