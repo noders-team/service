@@ -185,11 +185,11 @@ function replacePageVariables {
   sed -i'' "s|\[TIMESTAMP\]|${TIMESTAMP}|g" $1
   sed -i'' "s|\[SIZE\]|${SIZE}|g" $1
   sed -i'' "s|\[SNAP_LATEST_BLOCK\]|${SNAP_LATEST_BLOCK}|g" $1
+  sed -i'' "s|\[SNAP_ARCHIVE_NAME\]|${SNAP_ARCHIVE_NAME}|g" $1
   sed -i'' "s|\[SNAP_ARCHIVE_LINK\]|${SNAP_ARCHIVE_LINK}|g" $1
   sed -i'' "s|\[LIVE_PEERS_RANDOM\]|${LIVE_PEERS_RANDOM}|g" $1
   sed -i'' "s|\[VALIDATOR_LINK\]|${VALIDATOR_LINK}|g" $1
   sed -i'' "s|\[VERSION_HAND\]|${VERSION_HAND}|g" $1
-
 }
 
 #####################################################################################################################################################################
@@ -349,11 +349,8 @@ function updateSnapshotInfo {
     SNAP_LATEST_BLOCK="-$(echo "${filename}" | grep -o "[[:digit:]]*" | head -n 1)"
   fi
 
-  if [ -z "${url}" ]; then
-    SNAP_ARCHIVE_LINK="-"
-  else
-    SNAP_ARCHIVE_LINK="${url}"
-  fi
+  SNAP_ARCHIVE_LINK="${url}"
+  SNAP_ARCHIVE_NAME="${CHAIN_SYSTEM_NAME}"
 
   CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/snapshot.md"
   cp "../docs/mainnet-networks/template/snapshot.md" "${CHAIN_PAGE_PATH}"
@@ -550,11 +547,8 @@ function updateSnapshotInfo {
     SNAP_LATEST_BLOCK="-$(echo "${filename}" | grep -o "[[:digit:]]*" | head -n 1)"
   fi
 
-  if [ -z "${url}" ]; then
-    SNAP_ARCHIVE_LINK="-"
-  else
-    SNAP_ARCHIVE_LINK="${url}"
-  fi
+  SNAP_ARCHIVE_LINK="${url}"
+  SNAP_ARCHIVE_NAME="${CHAIN_SYSTEM_NAME}"
 
   CHAIN_PAGE_PATH="../docs/testnet-networks/${CHAIN_SYSTEM_NAME}/snapshot.md"
   cp "../docs/testnet-networks/template/snapshot.md" "${CHAIN_PAGE_PATH}"
