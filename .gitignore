@@ -22,4 +22,7 @@ yarn-error.log*
 .idea
 
 live-peers.md
+
 snapshot.md
+!docs/mainnet-networks/templates/snapshot.md
+!docs/testnet-networks/templates/snapshot.md
