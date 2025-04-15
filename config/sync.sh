@@ -347,7 +347,7 @@ function updateSnapshotInfo {
     SNAP_LATEST_BLOCK="-"
     SNAP_ARCHIVE_NAME="${CHAIN_SYSTEM_NAME}"
   else
-    SNAP_LATEST_BLOCK="-$(echo "${filename}" | grep -o "[[:digit:]]*" | head -n 1)"
+    SNAP_LATEST_BLOCK="$(echo "${filename}" | grep -o "[[:digit:]]*" | head -n 1)"
     SNAP_ARCHIVE_NAME="${filename}"
   fi
 
@@ -546,7 +546,7 @@ function updateSnapshotInfo {
     SNAP_LATEST_BLOCK="-"
     SNAP_ARCHIVE_NAME="${CHAIN_SYSTEM_NAME}"
   else
-    SNAP_LATEST_BLOCK="-$(echo "${filename}" | grep -o "[[:digit:]]*" | head -n 1)"
+    SNAP_LATEST_BLOCK="$(echo "${filename}" | grep -o "[[:digit:]]*" | head -n 1)"
     SNAP_ARCHIVE_NAME="${filename}"
   fi
 

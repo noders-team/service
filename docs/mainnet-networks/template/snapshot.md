@@ -11,9 +11,11 @@ sidebar_position: 4
 
 ## Our [CHAIN_NAME] Snapshot Server Setup
 
-| Size   |  Timestamp  |  Latest Block        | Link                                       |
-|--------|-------------|----------------------|--------------------------------------------|
-| [SIZE] | [TIMESTAMP] |  [SNAP_LATEST_BLOCK] | [[SNAP_ARCHIVE_NAME]]([SNAP_ARCHIVE_LINK]) |
+### Snapshot Information
+
+| Block Height | Size | Timestamp | Download Link |
+|-------------|------|-----------|---------------|
+| [SNAP_LATEST_BLOCK] | [SIZE] | [TIMESTAMP] | [Download]([SNAP_ARCHIVE_LINK]) |
 
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
