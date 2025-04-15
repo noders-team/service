@@ -56,8 +56,6 @@ function readBlockchainConfig {
   LIVE_PEERS_RANDOM=""
   TIMESTAMP=""
   SIZE=""
-  WASM=""
-  WASM_URL=""
   VERSION_HAND=$(grep -oE '^VERSION_HAND=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
 
 
@@ -138,10 +136,6 @@ function escapeSpecialChars {
 
 function replacePageVariables {
 
-  local wasm=$(escapeSpecialChars "${WASM}")
-  local wasm_url=$(escapeSpecialChars "${WASM_URL}")
-
-
   # Blockchain
   sed -i'' "s|\[CHAIN_NAME\]|${CHAIN_NAME}|g" $1
   sed -i'' "s|\[CHAIN_SYSTEM_NAME\]|${CHAIN_SYSTEM_NAME}|g" $1
@@ -190,12 +184,13 @@ function replacePageVariables {
   sed -i'' "s|\[LIVE_PEERS_ALL\]|${LIVE_PEERS_ALL}|g" $1
   sed -i'' "s|\[TIMESTAMP\]|${TIMESTAMP}|g" $1
   sed -i'' "s|\[SIZE\]|${SIZE}|g" $1
-  sed -i'' "s#\[WASM\]#${wasm}#g" "$1"
-  sed -i'' "s#\[WASM_URL\]#${wasm_url}#g" "$1"
+  sed -i'' "s|\[SNAP_LATEST_BLOCK\]|${SNAP_LATEST_BLOCK}|g" $1
+  sed -i'' "s|\[SNAP_ARCHIVE_NAME\]|${SNAP_ARCHIVE_NAME}|g" $1
+  sed -i'' "s|\[SNAP_ARCHIVE_LINK\]|${SNAP_ARCHIVE_LINK}|g" $1
+  sed -i'' "s|\[SNAP_ARCHIVE_DOWNLOAD_COMMAND\]|${SNAP_ARCHIVE_DOWNLOAD_COMMAND}|g" $1
   sed -i'' "s|\[LIVE_PEERS_RANDOM\]|${LIVE_PEERS_RANDOM}|g" $1
   sed -i'' "s|\[VALIDATOR_LINK\]|${VALIDATOR_LINK}|g" $1
   sed -i'' "s|\[VERSION_HAND\]|${VERSION_HAND}|g" $1
-
 }
 
 #####################################################################################################################################################################
@@ -317,31 +312,18 @@ function updateLivePeers {
 }
 
 function updateSnapshotInfo {
-  local url="https://snapshots.noders.services/${CHAIN_SYSTEM_NAME}/data.tar.lz4"
-  local wasm_url="https://snapshots.noders.services/${CHAIN_SYSTEM_NAME}/wasm.tar.lz4"
-  local wget_command="wget -O wasm.tar.lz4 ${wasm_url} --inet4-only"
-  local curl_command="curl -o - -L ${wasm_url} | lz4 -d | tar -x -C ${DAEMON_HOME}"
+  # Get the actual filename from the directory listing
+  local filename
+  filename=$(curl -s "https://snapshots.noders.services/${CHAIN_SYSTEM_NAME}/" | grep -o "${CHAIN_SYSTEM_NAME}-[0-9]*.tar.lz4" | head -n 1)
+  local url="https://snapshots.noders.services/${CHAIN_SYSTEM_NAME}/${filename}"
 
-  if curl --head --silent --fail "${wasm_url}" > /dev/null; then
-    WASM_URL="${curl_command}"
-  else
-    WASM_URL="Not supported"
-  fi
-
-  # Check if the wasm file exists
-  if curl --head --silent --fail "${wasm_url}" > /dev/null; then
-    WASM="${wget_command}"
-  else
-    WASM="Not supported"
-  fi
-
-  # Fetching the headers for the data.tar.lz4 URL
+  # Fetching the headers for the snapshot URL
   local headers
   headers=$(curl -sI "${url}")
 
   # Extracting TIMESTAMP
   local timestamp
-  timestamp=$(echo "${headers}" | grep -i '^Last-Modified:' | cut -d' ' -f2-)
+  timestamp=$(echo "${headers}" | grep -i '^Last-Modified:' | cut -d' ' -f2- | tr -d '\r')
 
   # Extracting SIZE and converting it to GB
   local size_raw
@@ -350,8 +332,29 @@ function updateSnapshotInfo {
   size_gb=$(awk "BEGIN {printf \"%.2f\", ${size_raw}/(1024*1024*1024)}")
 
   # Assigning the extracted values to the global variables
-  TIMESTAMP="${timestamp}"
-  SIZE="${size_gb} GB"
+  if [ -z "${timestamp}" ]; then
+    TIMESTAMP="-"
+  else
+    TIMESTAMP="${timestamp}"
+  fi
+
+  if [ -z "${size_gb}" ]; then
+    SIZE="-"
+  else
+    SIZE="${size_gb} GB"
+  fi
+
+  if [ -z "${filename}" ]; then
+    SNAP_LATEST_BLOCK="-"
+    SNAP_ARCHIVE_NAME="${CHAIN_SYSTEM_NAME}"
+    SNAP_ARCHIVE_DOWNLOAD_COMMAND="Snapshot is not available"
+  else
+    SNAP_LATEST_BLOCK="$(echo "${filename}" | grep -o "[[:digit:]]*" | head -n 1)"
+    SNAP_ARCHIVE_NAME="${filename}"
+    SNAP_ARCHIVE_DOWNLOAD_COMMAND="curl -o - -L ${url} | lz4 -d | tar -x -C ${DAEMON_HOME}"
+  fi
+
+  SNAP_ARCHIVE_LINK="${url}"
 
   CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/snapshot.md"
   cp "../docs/mainnet-networks/template/snapshot.md" "${CHAIN_PAGE_PATH}"
@@ -511,31 +514,17 @@ function updateLivePeers {
 }
 
 function updateSnapshotInfo {
-  local url="https://config-t.noders.services/${CHAIN_SYSTEM_NAME}/data.tar.lz4"
-  local wasm_url="https://config-t.noders.services/${CHAIN_SYSTEM_NAME}/wasm.tar.lz4"
-  local wget_command="wget -O wasm.tar.lz4 ${wasm_url} --inet4-only"
-  local curl_command="curl -o - -L ${wasm_url} | lz4 -d | tar -x -C ${DAEMON_HOME}"
+  local filename
+  filename=$(curl -s "https://snapshots-t.noders.services/${CHAIN_SYSTEM_NAME}/" | grep -o "${CHAIN_SYSTEM_NAME}-[0-9]*.tar.lz4" | head -n 1)
+  local url="https://snapshots-t.noders.services/${CHAIN_SYSTEM_NAME}/${filename}"
 
-  if curl --head --silent --fail "${wasm_url}" > /dev/null; then
-    WASM_URL="${curl_command}"
-  else
-    WASM_URL="Not supported"
-  fi
-
-  # Check if the wasm file exists
-  if curl --head --silent --fail "${wasm_url}" > /dev/null; then
-    WASM="${wget_command}"
-  else
-    WASM="Not supported"
-  fi
-
-  # Fetching the headers for the data.tar.lz4 URL
+  # Fetching the headers for the snapshot URL
   local headers
   headers=$(curl -sI "${url}")
 
   # Extracting TIMESTAMP
   local timestamp
-  timestamp=$(echo "${headers}" | grep -i '^Last-Modified:' | cut -d' ' -f2-)
+  timestamp=$(echo "${headers}" | grep -i '^Last-Modified:' | cut -d' ' -f2- | tr -d '\r')
 
   # Extracting SIZE and converting it to GB
   local size_raw
@@ -544,8 +533,29 @@ function updateSnapshotInfo {
   size_gb=$(awk "BEGIN {printf \"%.2f\", ${size_raw}/(1024*1024*1024)}")
 
   # Assigning the extracted values to the global variables
-  TIMESTAMP="${timestamp}"
-  SIZE="${size_gb} GB"
+  if [ -z "${timestamp}" ]; then
+    TIMESTAMP="-"
+  else
+    TIMESTAMP="${timestamp}"
+  fi
+
+  if [ -z "${size_gb}" ]; then
+    SIZE="-"
+  else
+    SIZE="${size_gb} GB"
+  fi
+
+  if [ -z "${filename}" ]; then
+    SNAP_LATEST_BLOCK="-"
+    SNAP_ARCHIVE_NAME="${CHAIN_SYSTEM_NAME}"
+    SNAP_ARCHIVE_DOWNLOAD_COMMAND="Snapshot is not available"
+  else
+    SNAP_LATEST_BLOCK="$(echo "${filename}" | grep -o "[[:digit:]]*" | head -n 1)"
+    SNAP_ARCHIVE_NAME="${filename}"
+    SNAP_ARCHIVE_DOWNLOAD_COMMAND="curl -o - -L ${url} | lz4 -d | tar -x -C ${DAEMON_HOME}"
+  fi
+
+  SNAP_ARCHIVE_LINK="${url}"
 
   CHAIN_PAGE_PATH="../docs/testnet-networks/${CHAIN_SYSTEM_NAME}/snapshot.md"
   cp "../docs/testnet-networks/template/snapshot.md" "${CHAIN_PAGE_PATH}"
