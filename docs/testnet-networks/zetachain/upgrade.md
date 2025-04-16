@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-zetachain">
 # Upgrade
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `athens_7001-1` | Current Node Version: `v29.1.4`
 
 # With Cosmovisor
 ## Clone Zetachain repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf zeta-chain
 git clone https://github.com/zeta-chain.git
 cd zeta-chain
-git checkout auto
+git checkout v29.1.4
  ```
 
 ## Build binaries
@@ -26,8 +26,8 @@ make build
 
 ## Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.zetacored/cosmovisor/upgrades/auto/bin
-mv build/zetacored ~/.zetacored/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.zetacored/cosmovisor/upgrades/v29.1.4/bin
+mv build/zetacored ~/.zetacored/cosmovisor/upgrades/v29.1.4/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf zeta-chain
 git clone https://github.com/zeta-chain.git
 cd zeta-chain
-git checkout auto
+git checkout v29.1.4
  ```
 
 ## Build binaries

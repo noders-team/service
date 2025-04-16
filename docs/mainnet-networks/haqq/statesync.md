@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-haqq">
 # State sync
 </div>
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `haqq_11235-1` | Current Node Version: `v1.8.2`
 
 ```bash
 SNAP_RPC=https://haqq-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop haqqd && haqqd tendermint unsafe-reset-all --home ~/.haqqd --keep-addr-book
 ```
 ```bash
-peers="@haqq-rpc.noders.services:"
+peers="acbd4ad54449c6e762628f957dd25f99955daa6c@haqq-rpc.noders.services:14656"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.haqqd/config/config.toml
 ```
 ```bash
