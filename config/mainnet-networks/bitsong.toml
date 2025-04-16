@@ -11,7 +11,7 @@ BitSong revolutionizes music streaming with blockchain, offering direct artist c
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="ubtsg"
-CHAIN_FEES="3000"
+CHAIN_FEES="20000"
 
 # Binary
 DAEMON_NAME="bitsongd"

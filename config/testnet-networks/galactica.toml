@@ -11,7 +11,7 @@ Galactica Network presents itself as a pioneering platform in the Web3 space, ai
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="agnet"
-CHAIN_FEES="300000"
+CHAIN_FEES="300000000000"
 
 # Binary
 DAEMON_NAME="galacticad"

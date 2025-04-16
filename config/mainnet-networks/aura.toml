@@ -11,7 +11,7 @@ Aura Network, a Layer-1 blockchain, focuses on scalability, interoperability, an
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="uaura"
-CHAIN_FEES="3000"
+CHAIN_FEES="20000"
 
 # Binary
 DAEMON_NAME="aurad"

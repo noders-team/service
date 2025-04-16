@@ -21,7 +21,7 @@ DAEMON_HOME="~/.fuelsequencer"
 ENDPOINT_RPC="https://fuel-rpc.noders.services"
 ENDPOINT_API="https://fuel-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://fuel-grpc.noders.services"
+ENDPOINT_GRPC="https://fuel-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/fuel"
 

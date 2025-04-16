@@ -11,7 +11,7 @@ Story is the World’s IP Blockchain, onramping Programmable IP to power the nex
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="aip"
-CHAIN_FEES="3000"
+CHAIN_FEES="300000000000"
 
 # Binary
 DAEMON_NAME="story"

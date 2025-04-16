@@ -11,7 +11,7 @@ Warden Protocol stands as a beacon of innovation in the decentralized finance (D
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="uward"
-CHAIN_FEES="3000"
+CHAIN_FEES="20000"
 
 # Binary
 DAEMON_NAME="wardend"

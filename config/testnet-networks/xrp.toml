@@ -11,7 +11,7 @@ Sidechain is a fast and secure sidechain connected to XRP Ledger via an Axelar b
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="apoa"
-CHAIN_FEES="3000000"
+CHAIN_FEES="300000000000"
 
 # Binary
 DAEMON_NAME="exrpd"

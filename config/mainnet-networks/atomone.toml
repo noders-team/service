@@ -8,7 +8,7 @@ CHAIN_DESCRIPTION="""# Atomone: The vision behind this AtomOne fork is to be an 
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="uatone"
-CHAIN_FEES="300000"
+CHAIN_FEES="20000"
 
 # Binary
 DAEMON_NAME="atomoned"

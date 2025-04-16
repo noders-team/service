@@ -11,7 +11,7 @@ The scalability of 0G hinges on the idea of separating the workflow of data avai
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="ua0gi"
-CHAIN_FEES="3000"
+CHAIN_FEES="20000"
 
 # Binary
 DAEMON_NAME="0gchaind"

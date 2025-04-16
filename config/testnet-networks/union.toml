@@ -12,7 +12,7 @@ Union is poised to transform the decentralized finance landscape by introducing 
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="muno"
-CHAIN_FEES="3000"
+CHAIN_FEES="20000"
 
 # Binary
 DAEMON_NAME="uniond"

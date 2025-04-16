@@ -11,7 +11,7 @@ Swisstronik emerges as a trailblazer at the intersection of electronics and bloc
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="uswtr"
-CHAIN_FEES="3000"
+CHAIN_FEES="20000"
 
 # Binary
 DAEMON_NAME="swisstronikd"

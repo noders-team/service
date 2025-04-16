@@ -13,7 +13,7 @@ This platform is built with the user in mind, featuring an intuitive interface t
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="aseda"
-CHAIN_FEES="3000000"
+CHAIN_FEES="300000000000"
 
 # Binary
 DAEMON_NAME="sedad"

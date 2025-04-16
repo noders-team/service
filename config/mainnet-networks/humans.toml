@@ -11,7 +11,7 @@ Humans.ai integrates blockchain with AI for decentralized, ethical AI developmen
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="aheart"
-CHAIN_FEES="3000"
+CHAIN_FEES="300000000000"
 
 # Binary
 DAEMON_NAME="humansd"

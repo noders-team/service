@@ -11,7 +11,7 @@ The vision behind this AtomOne fork is to be an alternative minimal fork of Gaia
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="uatone"
-CHAIN_FEES="300000"
+CHAIN_FEES="20000"
 
 # Binary
 DAEMON_NAME="atomoned"
@@ -22,7 +22,7 @@ DAEMON_HOME="~/.atomone"
 ENDPOINT_RPC="https://atomone-t-rpc.noders.services"
 ENDPOINT_API="https://atomone-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://atomone-t-grpc.noders.services"
+ENDPOINT_GRPC="https://atomone-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/atomone"
 

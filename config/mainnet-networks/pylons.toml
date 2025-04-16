@@ -11,7 +11,7 @@ Pylons.tech is at the forefront of blockchain development, specializing in digit
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="ubedrock"
-CHAIN_FEES="3000"
+CHAIN_FEES="20000"
 
 # Binary
 DAEMON_NAME="pylonsd"

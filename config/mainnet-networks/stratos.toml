@@ -14,7 +14,7 @@ Explore Stratos for a decentralized data storage solution.
 
 
 CHAIN_DENOM="wei"
-CHAIN_FEES="3000"
+CHAIN_FEES="300000000000"
 
 # Binary
 DAEMON_NAME="stchaind"

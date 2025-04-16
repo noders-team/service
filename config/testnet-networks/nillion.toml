@@ -11,7 +11,7 @@ Nillion is a decentralized privacy-preserving computation network that enables s
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="unil"
-CHAIN_FEES="3000"
+CHAIN_FEES="20000"
 
 # Binary
 DAEMON_NAME="nilliond"

@@ -11,7 +11,7 @@ Dymension introduces a Layer 2 scaling solution using rollup technology to boost
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="adym"
-CHAIN_FEES="300000000"
+CHAIN_FEES="300000000000"
 
 # Binary
 DAEMON_NAME="dymd"

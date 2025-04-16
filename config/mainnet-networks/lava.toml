@@ -11,7 +11,7 @@ LavaNet is set to redefine the landscape of decentralized networks by introducin
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="ulava"
-CHAIN_FEES="3000"
+CHAIN_FEES="20000"
 
 # Binary
 DAEMON_NAME="lavad"

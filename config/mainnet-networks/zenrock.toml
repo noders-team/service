@@ -11,7 +11,7 @@ Zenrock enables decentralized key management for builders of cross-chain protoco
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="urock"
-CHAIN_FEES="3000"
+CHAIN_FEES="20000"
 
 # Binary
 DAEMON_NAME="zenrockd"

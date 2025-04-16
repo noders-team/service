@@ -10,8 +10,8 @@ Desmos revolutionizes social media, focusing on user empowerment, data sovereign
 """
 [CHAIN_DESCRIPTION_END]
 
-CHAIN_DENOM="uosmo"
-CHAIN_FEES="3000"
+CHAIN_DENOM="udsm"
+CHAIN_FEES="20000"
 
 # Binary
 DAEMON_NAME="desmos"

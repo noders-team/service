@@ -14,7 +14,7 @@ Explore Jackal Protocol's vision for a decentralized web.
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="ujckl"
-CHAIN_FEES="3000"
+CHAIN_FEES="20000"
 
 # Binary
 DAEMON_NAME="canined"

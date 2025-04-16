@@ -11,7 +11,7 @@ Arkeo was created to provide decentralized applications with increased developme
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="uarkeo"
-CHAIN_FEES="3000"
+CHAIN_FEES="20000"
 
 # Binary
 DAEMON_NAME="arkeod"

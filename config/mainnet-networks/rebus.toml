@@ -11,7 +11,7 @@ Rebuschain innovatively connects traditional finance with decentralized finance,
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="arebus"
-CHAIN_FEES="3000"
+CHAIN_FEES="300000000000"
 
 # Binary
 DAEMON_NAME="rebusd"

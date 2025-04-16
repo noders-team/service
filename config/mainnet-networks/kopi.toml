@@ -10,8 +10,8 @@ Kopi is the latest project in DeFi and offers a decentralized exchange as well a
 """
 [CHAIN_DESCRIPTION_END]
 
-CHAIN_DENOM="abgt"
-CHAIN_FEES="3000"
+CHAIN_DENOM="ukopi"
+CHAIN_FEES="20000"
 
 # Binary
 DAEMON_NAME="uxkp"

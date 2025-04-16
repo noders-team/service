@@ -11,7 +11,7 @@ Sunrise is a specialized Data Availability Layer for Proof of Liquidity.
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="uvrise"
-CHAIN_FEES="3000"
+CHAIN_FEES="20000"
 
 # Binary
 DAEMON_NAME="sunrised"

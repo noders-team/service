@@ -11,7 +11,7 @@ CrossFi leverages cutting-edge blockchain technology to facilitate seamless cros
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="mpx"
-CHAIN_FEES="3000"
+CHAIN_FEES="300000000000"
 
 # Binary
 DAEMON_NAME="crossfid"

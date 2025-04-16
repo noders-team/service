@@ -11,7 +11,7 @@ The First & Omnichain BTC Restaking Network, extending BTCFi into the cryptoecon
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="apell"
-CHAIN_FEES="500000000"
+CHAIN_FEES="300000000000"
 
 # Binary
 DAEMON_NAME="pellcored"

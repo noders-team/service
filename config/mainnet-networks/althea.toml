@@ -8,7 +8,7 @@ CHAIN_DESCRIPTION="""# Althea L1 is a high-availability Hybrid EVM blockchain pu
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="aalthea"
-CHAIN_FEES="30000000"
+CHAIN_FEES="300000000000"
 
 # Binary
 DAEMON_NAME="althea"

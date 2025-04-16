@@ -11,7 +11,7 @@ Axone's intuitive protocol lets you orchestrate sophisticated AI processes with 
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="uaxone"
-CHAIN_FEES="3000"
+CHAIN_FEES="20000"
 
 # Binary
 DAEMON_NAME="axoned"

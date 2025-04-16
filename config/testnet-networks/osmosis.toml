@@ -13,7 +13,7 @@ Discover more about Osmosis and its innovative features by visiting their offici
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="uosmo"
-CHAIN_FEES="3000"
+CHAIN_FEES="20000"
 
 # Binary
 DAEMON_NAME="osmosisd"

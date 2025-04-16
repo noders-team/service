@@ -13,7 +13,7 @@ Explore the future of digital collectibles with Uptick Project.
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="auptick"
-CHAIN_FEES="3000"
+CHAIN_FEES="300000000000"
 
 # Binary
 DAEMON_NAME="uptickd"

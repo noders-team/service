@@ -12,8 +12,8 @@ This platform is built with the user in mind, featuring an intuitive interface t
 """
 [CHAIN_DESCRIPTION_END]
 
-CHAIN_DENOM="useda"
-CHAIN_FEES="3000"
+CHAIN_DENOM="aseda"
+CHAIN_FEES="300000000000"
 
 # Binary
 DAEMON_NAME="sedad"

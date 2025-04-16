@@ -11,7 +11,7 @@ ZetaChain aims to revolutionize the blockchain landscape by offering a truly int
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="azeta"
-CHAIN_FEES="3000"
+CHAIN_FEES="300000000000"
 
 # Binary
 DAEMON_NAME="zetacored"

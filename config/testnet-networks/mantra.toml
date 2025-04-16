@@ -11,7 +11,7 @@ Mantra Chain emerges as a pioneering Layer 1 blockchain, strategically crafted t
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="uom"
-CHAIN_FEES="3000"
+CHAIN_FEES="20000"
 
 # Binary
 DAEMON_NAME="mantrachaind"

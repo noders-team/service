@@ -12,7 +12,7 @@ IslamicCoin is designed for the Islamic community, ensuring Shariah compliance, 
 [CHAIN_DESCRIPTION_END]
 
 CHAIN_DENOM="aISLM"
-CHAIN_FEES="3000"
+CHAIN_FEES="300000000000"
 
 # Binary
 DAEMON_NAME="haqqd"
