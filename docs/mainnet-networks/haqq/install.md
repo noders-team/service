@@ -153,7 +153,7 @@ curl https://snapshots.noders.services/haqq/addrbook.json -o ~/.haqqd/config/add
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"acbd4ad54449c6e762628f957dd25f99955daa6c@haqq-rpc.noders.services:14656\"/" ~/.haqqd/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"acbd4ad54449c6e762628f957dd25f99955daa6c@haqq-rpc.noders.services:24056\"/" ~/.haqqd/config/config.toml
 ```
 
 ### Set minimum gas price

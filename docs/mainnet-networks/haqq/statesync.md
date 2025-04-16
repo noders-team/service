@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop haqqd && haqqd tendermint unsafe-reset-all --home ~/.haqqd --keep-addr-book
 ```
 ```bash
-peers="acbd4ad54449c6e762628f957dd25f99955daa6c@haqq-rpc.noders.services:14656"
+peers="acbd4ad54449c6e762628f957dd25f99955daa6c@haqq-rpc.noders.services:24056"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.haqqd/config/config.toml
 ```
 ```bash

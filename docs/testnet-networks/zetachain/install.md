@@ -153,7 +153,7 @@ curl https://snapshots-t.noders.services/zetachain/addrbook.json -o ~/.zetacored
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"fdc0a43704510897ad55a611e3f0d6f2c888c40e@zetachain-t-rpc.noders.services:17656\"/" ~/.zetacored/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"fdc0a43704510897ad55a611e3f0d6f2c888c40e@zetachain-t-rpc.noders.services:22556\"/" ~/.zetacored/config/config.toml
 ```
 
 ### Set minimum gas price

@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop zetacored && zetacored tendermint unsafe-reset-all --home ~/.zetacored --keep-addr-book
 ```
 ```bash
-peers="fdc0a43704510897ad55a611e3f0d6f2c888c40e@zetachain-t-rpc.noders.services:17656"
+peers="fdc0a43704510897ad55a611e3f0d6f2c888c40e@zetachain-t-rpc.noders.services:22556"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.zetacored/config/config.toml
 ```
 ```bash
