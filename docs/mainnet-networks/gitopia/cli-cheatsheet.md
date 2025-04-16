@@ -47,7 +47,7 @@ gitopiad q bank balances $(gitopiad keys show KEY -a) --node https://gitopia-rpc
 ```js
 gitopiad tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000ulore \
   --chain-id gitopia \
-  --node https://gitopia-rpc.noders.services:443 --fees 3000ulore \
+  --node https://gitopia-rpc.noders.services:443 --fees 20000ulore \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ gitopiad tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000ulore \
 ```js
 gitopiad tx distribution withdraw-all-rewards \
   --chain-id gitopia \
-  --node https://gitopia-rpc.noders.services:443 --fees 3000ulore \
+  --node https://gitopia-rpc.noders.services:443 --fees 20000ulore \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ gitopiad tx distribution withdraw-all-rewards \
 gitopiad tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id gitopia \
-  --node https://gitopia-rpc.noders.services:443 --fees 3000ulore \
+  --node https://gitopia-rpc.noders.services:443 --fees 20000ulore \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ gitopiad tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 gitopiad tx staking delegate $(gitopiad keys show KEY --bech val -a) 1000000ulore \
 --chain-id gitopia \
---node https://gitopia-rpc.noders.services:443 --fees 3000ulore \
+--node https://gitopia-rpc.noders.services:443 --fees 20000ulore \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ gitopiad tx staking delegate $(gitopiad keys show KEY --bech val -a) 1000000ulor
 ```js
 gitopiad tx staking delegate VALIDATOR_ADDRESS 1000000ulore \
 --chain-id gitopia \
---node https://gitopia-rpc.noders.services:443 --fees 3000ulore \
+--node https://gitopia-rpc.noders.services:443 --fees 20000ulore \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ gitopiad tx staking delegate VALIDATOR_ADDRESS 1000000ulore \
 ```js
 gitopiad tx staking redelegate $(gitopiad keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000ulore \
   --chain-id gitopia \
-  --node https://gitopia-rpc.noders.services:443 --fees 3000ulore \
+  --node https://gitopia-rpc.noders.services:443 --fees 20000ulore \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ gitopiad tx staking redelegate $(gitopiad keys show KEY --bech val -a) VALIDATOR
 ```js
 gitopiad tx staking unbond $(gitopiad keys show KEY --bech val -a) ulore \
   --chain-id andromeda-1 \
-  --node https://gitopia-rpc.noders.services:443 --fees 3000ulore \
+  --node https://gitopia-rpc.noders.services:443 --fees 20000ulore \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ gitopiad query gov proposals --node https://gitopia-rpc.noders.services:443
 ```js
 gitopiad query gov proposal PROPOSAL_NUMBER \
   --chain-id gitopia \
-  --node https://gitopia-rpc.noders.services:443 --fees 3000ulore \
+  --node https://gitopia-rpc.noders.services:443 --fees 20000ulore \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ gitopiad query gov proposal PROPOSAL_NUMBER \
 ```js
 gitopiad tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id gitopia \
-  --node https://gitopia-rpc.noders.services:443 --fees 3000ulore \
+  --node https://gitopia-rpc.noders.services:443 --fees 20000ulore \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ gitopiad tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id gitopia \
-  --node https://gitopia-rpc.noders.services:443 --fees 3000ulore \
+  --node https://gitopia-rpc.noders.services:443 --fees 20000ulore \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ gitopiad tx staking edit-validator \
 --chain-id gitopia \
 --commission-rate 0.05 \
 --from KEY \
---node https://gitopia-rpc.noders.services:443 --fees 3000ulore \
+--node https://gitopia-rpc.noders.services:443 --fees 20000ulore \
 ```
 
 ### Unjail
 ```js
 gitopiad tx slashing unjail \
   --chain-id gitopia \
-  --node https://gitopia-rpc.noders.services:443 --fees 3000ulore \
+  --node https://gitopia-rpc.noders.services:443 --fees 20000ulore \
   --from KEY
 ```
 

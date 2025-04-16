@@ -47,7 +47,7 @@ bitsongd q bank balances $(bitsongd keys show KEY -a) --node https://bitsong-rpc
 ```js
 bitsongd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000ubtsg \
   --chain-id bitsong-2b \
-  --node https://bitsong-rpc.noders.services:443 --fees 3000ubtsg \
+  --node https://bitsong-rpc.noders.services:443 --fees 20000ubtsg \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ bitsongd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000ubtsg \
 ```js
 bitsongd tx distribution withdraw-all-rewards \
   --chain-id bitsong-2b \
-  --node https://bitsong-rpc.noders.services:443 --fees 3000ubtsg \
+  --node https://bitsong-rpc.noders.services:443 --fees 20000ubtsg \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ bitsongd tx distribution withdraw-all-rewards \
 bitsongd tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id bitsong-2b \
-  --node https://bitsong-rpc.noders.services:443 --fees 3000ubtsg \
+  --node https://bitsong-rpc.noders.services:443 --fees 20000ubtsg \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ bitsongd tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 bitsongd tx staking delegate $(bitsongd keys show KEY --bech val -a) 1000000ubtsg \
 --chain-id bitsong-2b \
---node https://bitsong-rpc.noders.services:443 --fees 3000ubtsg \
+--node https://bitsong-rpc.noders.services:443 --fees 20000ubtsg \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ bitsongd tx staking delegate $(bitsongd keys show KEY --bech val -a) 1000000ubts
 ```js
 bitsongd tx staking delegate VALIDATOR_ADDRESS 1000000ubtsg \
 --chain-id bitsong-2b \
---node https://bitsong-rpc.noders.services:443 --fees 3000ubtsg \
+--node https://bitsong-rpc.noders.services:443 --fees 20000ubtsg \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ bitsongd tx staking delegate VALIDATOR_ADDRESS 1000000ubtsg \
 ```js
 bitsongd tx staking redelegate $(bitsongd keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000ubtsg \
   --chain-id bitsong-2b \
-  --node https://bitsong-rpc.noders.services:443 --fees 3000ubtsg \
+  --node https://bitsong-rpc.noders.services:443 --fees 20000ubtsg \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ bitsongd tx staking redelegate $(bitsongd keys show KEY --bech val -a) VALIDATOR
 ```js
 bitsongd tx staking unbond $(bitsongd keys show KEY --bech val -a) ubtsg \
   --chain-id andromeda-1 \
-  --node https://bitsong-rpc.noders.services:443 --fees 3000ubtsg \
+  --node https://bitsong-rpc.noders.services:443 --fees 20000ubtsg \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ bitsongd query gov proposals --node https://bitsong-rpc.noders.services:443
 ```js
 bitsongd query gov proposal PROPOSAL_NUMBER \
   --chain-id bitsong-2b \
-  --node https://bitsong-rpc.noders.services:443 --fees 3000ubtsg \
+  --node https://bitsong-rpc.noders.services:443 --fees 20000ubtsg \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ bitsongd query gov proposal PROPOSAL_NUMBER \
 ```js
 bitsongd tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id bitsong-2b \
-  --node https://bitsong-rpc.noders.services:443 --fees 3000ubtsg \
+  --node https://bitsong-rpc.noders.services:443 --fees 20000ubtsg \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ bitsongd tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id bitsong-2b \
-  --node https://bitsong-rpc.noders.services:443 --fees 3000ubtsg \
+  --node https://bitsong-rpc.noders.services:443 --fees 20000ubtsg \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ bitsongd tx staking edit-validator \
 --chain-id bitsong-2b \
 --commission-rate 0.05 \
 --from KEY \
---node https://bitsong-rpc.noders.services:443 --fees 3000ubtsg \
+--node https://bitsong-rpc.noders.services:443 --fees 20000ubtsg \
 ```
 
 ### Unjail
 ```js
 bitsongd tx slashing unjail \
   --chain-id bitsong-2b \
-  --node https://bitsong-rpc.noders.services:443 --fees 3000ubtsg \
+  --node https://bitsong-rpc.noders.services:443 --fees 20000ubtsg \
   --from KEY
 ```
 

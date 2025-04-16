@@ -47,7 +47,7 @@ galacticad q bank balances $(galacticad keys show KEY -a) --node https://galacti
 ```js
 galacticad tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000agnet \
   --chain-id galactica_9302-1 \
-  --node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
+  --node https://galactica-t-rpc.noders.services:443 --fees 300000000000agnet \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ galacticad tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000agnet \
 ```js
 galacticad tx distribution withdraw-all-rewards \
   --chain-id galactica_9302-1 \
-  --node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
+  --node https://galactica-t-rpc.noders.services:443 --fees 300000000000agnet \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ galacticad tx distribution withdraw-all-rewards \
 galacticad tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id galactica_9302-1 \
-  --node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
+  --node https://galactica-t-rpc.noders.services:443 --fees 300000000000agnet \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ galacticad tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 galacticad tx staking delegate $(galacticad keys show KEY --bech val -a) 1000000agnet \
 --chain-id galactica_9302-1 \
---node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
+--node https://galactica-t-rpc.noders.services:443 --fees 300000000000agnet \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ galacticad tx staking delegate $(galacticad keys show KEY --bech val -a) 1000000
 ```js
 galacticad tx staking delegate VALIDATOR_ADDRESS 1000000agnet \
 --chain-id galactica_9302-1 \
---node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
+--node https://galactica-t-rpc.noders.services:443 --fees 300000000000agnet \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ galacticad tx staking delegate VALIDATOR_ADDRESS 1000000agnet \
 ```js
 galacticad tx staking redelegate $(galacticad keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000agnet \
   --chain-id galactica_9302-1 \
-  --node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
+  --node https://galactica-t-rpc.noders.services:443 --fees 300000000000agnet \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ galacticad tx staking redelegate $(galacticad keys show KEY --bech val -a) VALID
 ```js
 galacticad tx staking unbond $(galacticad keys show KEY --bech val -a) agnet \
   --chain-id andromeda-1 \
-  --node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
+  --node https://galactica-t-rpc.noders.services:443 --fees 300000000000agnet \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ galacticad query gov proposals --node https://galactica-t-rpc.noders.services:44
 ```js
 galacticad query gov proposal PROPOSAL_NUMBER \
   --chain-id galactica_9302-1 \
-  --node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
+  --node https://galactica-t-rpc.noders.services:443 --fees 300000000000agnet \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ galacticad query gov proposal PROPOSAL_NUMBER \
 ```js
 galacticad tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id galactica_9302-1 \
-  --node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
+  --node https://galactica-t-rpc.noders.services:443 --fees 300000000000agnet \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ galacticad tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id galactica_9302-1 \
-  --node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
+  --node https://galactica-t-rpc.noders.services:443 --fees 300000000000agnet \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ galacticad tx staking edit-validator \
 --chain-id galactica_9302-1 \
 --commission-rate 0.05 \
 --from KEY \
---node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
+--node https://galactica-t-rpc.noders.services:443 --fees 300000000000agnet \
 ```
 
 ### Unjail
 ```js
 galacticad tx slashing unjail \
   --chain-id galactica_9302-1 \
-  --node https://galactica-t-rpc.noders.services:443 --fees 300000agnet \
+  --node https://galactica-t-rpc.noders.services:443 --fees 300000000000agnet \
   --from KEY
 ```
 

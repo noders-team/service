@@ -47,7 +47,7 @@ junctiond q bank balances $(junctiond keys show KEY -a) --node https://airchains
 ```js
 junctiond tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uamf \
   --chain-id varanasi-1 \
-  --node https://airchains-t-rpc.noders.services:443 --fees 3000uamf \
+  --node https://airchains-t-rpc.noders.services:443 --fees 20000uamf \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ junctiond tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uamf \
 ```js
 junctiond tx distribution withdraw-all-rewards \
   --chain-id varanasi-1 \
-  --node https://airchains-t-rpc.noders.services:443 --fees 3000uamf \
+  --node https://airchains-t-rpc.noders.services:443 --fees 20000uamf \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ junctiond tx distribution withdraw-all-rewards \
 junctiond tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id varanasi-1 \
-  --node https://airchains-t-rpc.noders.services:443 --fees 3000uamf \
+  --node https://airchains-t-rpc.noders.services:443 --fees 20000uamf \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ junctiond tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 junctiond tx staking delegate $(junctiond keys show KEY --bech val -a) 1000000uamf \
 --chain-id varanasi-1 \
---node https://airchains-t-rpc.noders.services:443 --fees 3000uamf \
+--node https://airchains-t-rpc.noders.services:443 --fees 20000uamf \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ junctiond tx staking delegate $(junctiond keys show KEY --bech val -a) 1000000ua
 ```js
 junctiond tx staking delegate VALIDATOR_ADDRESS 1000000uamf \
 --chain-id varanasi-1 \
---node https://airchains-t-rpc.noders.services:443 --fees 3000uamf \
+--node https://airchains-t-rpc.noders.services:443 --fees 20000uamf \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ junctiond tx staking delegate VALIDATOR_ADDRESS 1000000uamf \
 ```js
 junctiond tx staking redelegate $(junctiond keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000uamf \
   --chain-id varanasi-1 \
-  --node https://airchains-t-rpc.noders.services:443 --fees 3000uamf \
+  --node https://airchains-t-rpc.noders.services:443 --fees 20000uamf \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ junctiond tx staking redelegate $(junctiond keys show KEY --bech val -a) VALIDAT
 ```js
 junctiond tx staking unbond $(junctiond keys show KEY --bech val -a) uamf \
   --chain-id andromeda-1 \
-  --node https://airchains-t-rpc.noders.services:443 --fees 3000uamf \
+  --node https://airchains-t-rpc.noders.services:443 --fees 20000uamf \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ junctiond query gov proposals --node https://airchains-t-rpc.noders.services:443
 ```js
 junctiond query gov proposal PROPOSAL_NUMBER \
   --chain-id varanasi-1 \
-  --node https://airchains-t-rpc.noders.services:443 --fees 3000uamf \
+  --node https://airchains-t-rpc.noders.services:443 --fees 20000uamf \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ junctiond query gov proposal PROPOSAL_NUMBER \
 ```js
 junctiond tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id varanasi-1 \
-  --node https://airchains-t-rpc.noders.services:443 --fees 3000uamf \
+  --node https://airchains-t-rpc.noders.services:443 --fees 20000uamf \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ junctiond tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id varanasi-1 \
-  --node https://airchains-t-rpc.noders.services:443 --fees 3000uamf \
+  --node https://airchains-t-rpc.noders.services:443 --fees 20000uamf \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ junctiond tx staking edit-validator \
 --chain-id varanasi-1 \
 --commission-rate 0.05 \
 --from KEY \
---node https://airchains-t-rpc.noders.services:443 --fees 3000uamf \
+--node https://airchains-t-rpc.noders.services:443 --fees 20000uamf \
 ```
 
 ### Unjail
 ```js
 junctiond tx slashing unjail \
   --chain-id varanasi-1 \
-  --node https://airchains-t-rpc.noders.services:443 --fees 3000uamf \
+  --node https://airchains-t-rpc.noders.services:443 --fees 20000uamf \
   --from KEY
 ```
 

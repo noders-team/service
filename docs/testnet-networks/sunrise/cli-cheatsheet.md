@@ -47,7 +47,7 @@ sunrised q bank balances $(sunrised keys show KEY -a) --node https://sunrise-t-r
 ```js
 sunrised tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uvrise \
   --chain-id sunrise-test-0.2 \
-  --node https://sunrise-t-rpc.noders.services:443 --fees 3000uvrise \
+  --node https://sunrise-t-rpc.noders.services:443 --fees 20000uvrise \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ sunrised tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uvrise \
 ```js
 sunrised tx distribution withdraw-all-rewards \
   --chain-id sunrise-test-0.2 \
-  --node https://sunrise-t-rpc.noders.services:443 --fees 3000uvrise \
+  --node https://sunrise-t-rpc.noders.services:443 --fees 20000uvrise \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ sunrised tx distribution withdraw-all-rewards \
 sunrised tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id sunrise-test-0.2 \
-  --node https://sunrise-t-rpc.noders.services:443 --fees 3000uvrise \
+  --node https://sunrise-t-rpc.noders.services:443 --fees 20000uvrise \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ sunrised tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 sunrised tx staking delegate $(sunrised keys show KEY --bech val -a) 1000000uvrise \
 --chain-id sunrise-test-0.2 \
---node https://sunrise-t-rpc.noders.services:443 --fees 3000uvrise \
+--node https://sunrise-t-rpc.noders.services:443 --fees 20000uvrise \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ sunrised tx staking delegate $(sunrised keys show KEY --bech val -a) 1000000uvri
 ```js
 sunrised tx staking delegate VALIDATOR_ADDRESS 1000000uvrise \
 --chain-id sunrise-test-0.2 \
---node https://sunrise-t-rpc.noders.services:443 --fees 3000uvrise \
+--node https://sunrise-t-rpc.noders.services:443 --fees 20000uvrise \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ sunrised tx staking delegate VALIDATOR_ADDRESS 1000000uvrise \
 ```js
 sunrised tx staking redelegate $(sunrised keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000uvrise \
   --chain-id sunrise-test-0.2 \
-  --node https://sunrise-t-rpc.noders.services:443 --fees 3000uvrise \
+  --node https://sunrise-t-rpc.noders.services:443 --fees 20000uvrise \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ sunrised tx staking redelegate $(sunrised keys show KEY --bech val -a) VALIDATOR
 ```js
 sunrised tx staking unbond $(sunrised keys show KEY --bech val -a) uvrise \
   --chain-id andromeda-1 \
-  --node https://sunrise-t-rpc.noders.services:443 --fees 3000uvrise \
+  --node https://sunrise-t-rpc.noders.services:443 --fees 20000uvrise \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ sunrised query gov proposals --node https://sunrise-t-rpc.noders.services:443
 ```js
 sunrised query gov proposal PROPOSAL_NUMBER \
   --chain-id sunrise-test-0.2 \
-  --node https://sunrise-t-rpc.noders.services:443 --fees 3000uvrise \
+  --node https://sunrise-t-rpc.noders.services:443 --fees 20000uvrise \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ sunrised query gov proposal PROPOSAL_NUMBER \
 ```js
 sunrised tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id sunrise-test-0.2 \
-  --node https://sunrise-t-rpc.noders.services:443 --fees 3000uvrise \
+  --node https://sunrise-t-rpc.noders.services:443 --fees 20000uvrise \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ sunrised tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id sunrise-test-0.2 \
-  --node https://sunrise-t-rpc.noders.services:443 --fees 3000uvrise \
+  --node https://sunrise-t-rpc.noders.services:443 --fees 20000uvrise \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ sunrised tx staking edit-validator \
 --chain-id sunrise-test-0.2 \
 --commission-rate 0.05 \
 --from KEY \
---node https://sunrise-t-rpc.noders.services:443 --fees 3000uvrise \
+--node https://sunrise-t-rpc.noders.services:443 --fees 20000uvrise \
 ```
 
 ### Unjail
 ```js
 sunrised tx slashing unjail \
   --chain-id sunrise-test-0.2 \
-  --node https://sunrise-t-rpc.noders.services:443 --fees 3000uvrise \
+  --node https://sunrise-t-rpc.noders.services:443 --fees 20000uvrise \
   --from KEY
 ```
 

@@ -47,7 +47,7 @@ haqqd q bank balances $(haqqd keys show KEY -a) --node https://haqq-rpc.noders.s
 ```js
 haqqd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000aISLM \
   --chain-id auto \
-  --node https://haqq-rpc.noders.services:443 --fees 3000aISLM \
+  --node https://haqq-rpc.noders.services:443 --fees 300000000000aISLM \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ haqqd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000aISLM \
 ```js
 haqqd tx distribution withdraw-all-rewards \
   --chain-id auto \
-  --node https://haqq-rpc.noders.services:443 --fees 3000aISLM \
+  --node https://haqq-rpc.noders.services:443 --fees 300000000000aISLM \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ haqqd tx distribution withdraw-all-rewards \
 haqqd tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id auto \
-  --node https://haqq-rpc.noders.services:443 --fees 3000aISLM \
+  --node https://haqq-rpc.noders.services:443 --fees 300000000000aISLM \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ haqqd tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 haqqd tx staking delegate $(haqqd keys show KEY --bech val -a) 1000000aISLM \
 --chain-id auto \
---node https://haqq-rpc.noders.services:443 --fees 3000aISLM \
+--node https://haqq-rpc.noders.services:443 --fees 300000000000aISLM \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ haqqd tx staking delegate $(haqqd keys show KEY --bech val -a) 1000000aISLM \
 ```js
 haqqd tx staking delegate VALIDATOR_ADDRESS 1000000aISLM \
 --chain-id auto \
---node https://haqq-rpc.noders.services:443 --fees 3000aISLM \
+--node https://haqq-rpc.noders.services:443 --fees 300000000000aISLM \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ haqqd tx staking delegate VALIDATOR_ADDRESS 1000000aISLM \
 ```js
 haqqd tx staking redelegate $(haqqd keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000aISLM \
   --chain-id auto \
-  --node https://haqq-rpc.noders.services:443 --fees 3000aISLM \
+  --node https://haqq-rpc.noders.services:443 --fees 300000000000aISLM \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ haqqd tx staking redelegate $(haqqd keys show KEY --bech val -a) VALIDATOR_ADDRE
 ```js
 haqqd tx staking unbond $(haqqd keys show KEY --bech val -a) aISLM \
   --chain-id andromeda-1 \
-  --node https://haqq-rpc.noders.services:443 --fees 3000aISLM \
+  --node https://haqq-rpc.noders.services:443 --fees 300000000000aISLM \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ haqqd query gov proposals --node https://haqq-rpc.noders.services:443
 ```js
 haqqd query gov proposal PROPOSAL_NUMBER \
   --chain-id auto \
-  --node https://haqq-rpc.noders.services:443 --fees 3000aISLM \
+  --node https://haqq-rpc.noders.services:443 --fees 300000000000aISLM \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ haqqd query gov proposal PROPOSAL_NUMBER \
 ```js
 haqqd tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id auto \
-  --node https://haqq-rpc.noders.services:443 --fees 3000aISLM \
+  --node https://haqq-rpc.noders.services:443 --fees 300000000000aISLM \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ haqqd tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id auto \
-  --node https://haqq-rpc.noders.services:443 --fees 3000aISLM \
+  --node https://haqq-rpc.noders.services:443 --fees 300000000000aISLM \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ haqqd tx staking edit-validator \
 --chain-id auto \
 --commission-rate 0.05 \
 --from KEY \
---node https://haqq-rpc.noders.services:443 --fees 3000aISLM \
+--node https://haqq-rpc.noders.services:443 --fees 300000000000aISLM \
 ```
 
 ### Unjail
 ```js
 haqqd tx slashing unjail \
   --chain-id auto \
-  --node https://haqq-rpc.noders.services:443 --fees 3000aISLM \
+  --node https://haqq-rpc.noders.services:443 --fees 300000000000aISLM \
   --from KEY
 ```
 

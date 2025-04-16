@@ -47,7 +47,7 @@ lavad q bank balances $(lavad keys show KEY -a) --node https://lava-rpc.noders.s
 ```js
 lavad tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000ulava \
   --chain-id lava-mainnet-1 \
-  --node https://lava-rpc.noders.services:443 --fees 3000ulava \
+  --node https://lava-rpc.noders.services:443 --fees 20000ulava \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ lavad tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000ulava \
 ```js
 lavad tx distribution withdraw-all-rewards \
   --chain-id lava-mainnet-1 \
-  --node https://lava-rpc.noders.services:443 --fees 3000ulava \
+  --node https://lava-rpc.noders.services:443 --fees 20000ulava \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ lavad tx distribution withdraw-all-rewards \
 lavad tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id lava-mainnet-1 \
-  --node https://lava-rpc.noders.services:443 --fees 3000ulava \
+  --node https://lava-rpc.noders.services:443 --fees 20000ulava \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ lavad tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 lavad tx staking delegate $(lavad keys show KEY --bech val -a) 1000000ulava \
 --chain-id lava-mainnet-1 \
---node https://lava-rpc.noders.services:443 --fees 3000ulava \
+--node https://lava-rpc.noders.services:443 --fees 20000ulava \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ lavad tx staking delegate $(lavad keys show KEY --bech val -a) 1000000ulava \
 ```js
 lavad tx staking delegate VALIDATOR_ADDRESS 1000000ulava \
 --chain-id lava-mainnet-1 \
---node https://lava-rpc.noders.services:443 --fees 3000ulava \
+--node https://lava-rpc.noders.services:443 --fees 20000ulava \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ lavad tx staking delegate VALIDATOR_ADDRESS 1000000ulava \
 ```js
 lavad tx staking redelegate $(lavad keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000ulava \
   --chain-id lava-mainnet-1 \
-  --node https://lava-rpc.noders.services:443 --fees 3000ulava \
+  --node https://lava-rpc.noders.services:443 --fees 20000ulava \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ lavad tx staking redelegate $(lavad keys show KEY --bech val -a) VALIDATOR_ADDRE
 ```js
 lavad tx staking unbond $(lavad keys show KEY --bech val -a) ulava \
   --chain-id andromeda-1 \
-  --node https://lava-rpc.noders.services:443 --fees 3000ulava \
+  --node https://lava-rpc.noders.services:443 --fees 20000ulava \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ lavad query gov proposals --node https://lava-rpc.noders.services:443
 ```js
 lavad query gov proposal PROPOSAL_NUMBER \
   --chain-id lava-mainnet-1 \
-  --node https://lava-rpc.noders.services:443 --fees 3000ulava \
+  --node https://lava-rpc.noders.services:443 --fees 20000ulava \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ lavad query gov proposal PROPOSAL_NUMBER \
 ```js
 lavad tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id lava-mainnet-1 \
-  --node https://lava-rpc.noders.services:443 --fees 3000ulava \
+  --node https://lava-rpc.noders.services:443 --fees 20000ulava \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ lavad tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id lava-mainnet-1 \
-  --node https://lava-rpc.noders.services:443 --fees 3000ulava \
+  --node https://lava-rpc.noders.services:443 --fees 20000ulava \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ lavad tx staking edit-validator \
 --chain-id lava-mainnet-1 \
 --commission-rate 0.05 \
 --from KEY \
---node https://lava-rpc.noders.services:443 --fees 3000ulava \
+--node https://lava-rpc.noders.services:443 --fees 20000ulava \
 ```
 
 ### Unjail
 ```js
 lavad tx slashing unjail \
   --chain-id lava-mainnet-1 \
-  --node https://lava-rpc.noders.services:443 --fees 3000ulava \
+  --node https://lava-rpc.noders.services:443 --fees 20000ulava \
   --from KEY
 ```
 

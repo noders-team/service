@@ -47,7 +47,7 @@ axoned q bank balances $(axoned keys show KEY -a) --node https://axone-t-rpc.nod
 ```js
 axoned tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uaxone \
   --chain-id axone-dentrite-1 \
-  --node https://axone-t-rpc.noders.services:443 --fees 3000uaxone \
+  --node https://axone-t-rpc.noders.services:443 --fees 20000uaxone \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ axoned tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uaxone \
 ```js
 axoned tx distribution withdraw-all-rewards \
   --chain-id axone-dentrite-1 \
-  --node https://axone-t-rpc.noders.services:443 --fees 3000uaxone \
+  --node https://axone-t-rpc.noders.services:443 --fees 20000uaxone \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ axoned tx distribution withdraw-all-rewards \
 axoned tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id axone-dentrite-1 \
-  --node https://axone-t-rpc.noders.services:443 --fees 3000uaxone \
+  --node https://axone-t-rpc.noders.services:443 --fees 20000uaxone \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ axoned tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 axoned tx staking delegate $(axoned keys show KEY --bech val -a) 1000000uaxone \
 --chain-id axone-dentrite-1 \
---node https://axone-t-rpc.noders.services:443 --fees 3000uaxone \
+--node https://axone-t-rpc.noders.services:443 --fees 20000uaxone \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ axoned tx staking delegate $(axoned keys show KEY --bech val -a) 1000000uaxone \
 ```js
 axoned tx staking delegate VALIDATOR_ADDRESS 1000000uaxone \
 --chain-id axone-dentrite-1 \
---node https://axone-t-rpc.noders.services:443 --fees 3000uaxone \
+--node https://axone-t-rpc.noders.services:443 --fees 20000uaxone \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ axoned tx staking delegate VALIDATOR_ADDRESS 1000000uaxone \
 ```js
 axoned tx staking redelegate $(axoned keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000uaxone \
   --chain-id axone-dentrite-1 \
-  --node https://axone-t-rpc.noders.services:443 --fees 3000uaxone \
+  --node https://axone-t-rpc.noders.services:443 --fees 20000uaxone \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ axoned tx staking redelegate $(axoned keys show KEY --bech val -a) VALIDATOR_ADD
 ```js
 axoned tx staking unbond $(axoned keys show KEY --bech val -a) uaxone \
   --chain-id andromeda-1 \
-  --node https://axone-t-rpc.noders.services:443 --fees 3000uaxone \
+  --node https://axone-t-rpc.noders.services:443 --fees 20000uaxone \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ axoned query gov proposals --node https://axone-t-rpc.noders.services:443
 ```js
 axoned query gov proposal PROPOSAL_NUMBER \
   --chain-id axone-dentrite-1 \
-  --node https://axone-t-rpc.noders.services:443 --fees 3000uaxone \
+  --node https://axone-t-rpc.noders.services:443 --fees 20000uaxone \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ axoned query gov proposal PROPOSAL_NUMBER \
 ```js
 axoned tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id axone-dentrite-1 \
-  --node https://axone-t-rpc.noders.services:443 --fees 3000uaxone \
+  --node https://axone-t-rpc.noders.services:443 --fees 20000uaxone \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ axoned tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id axone-dentrite-1 \
-  --node https://axone-t-rpc.noders.services:443 --fees 3000uaxone \
+  --node https://axone-t-rpc.noders.services:443 --fees 20000uaxone \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ axoned tx staking edit-validator \
 --chain-id axone-dentrite-1 \
 --commission-rate 0.05 \
 --from KEY \
---node https://axone-t-rpc.noders.services:443 --fees 3000uaxone \
+--node https://axone-t-rpc.noders.services:443 --fees 20000uaxone \
 ```
 
 ### Unjail
 ```js
 axoned tx slashing unjail \
   --chain-id axone-dentrite-1 \
-  --node https://axone-t-rpc.noders.services:443 --fees 3000uaxone \
+  --node https://axone-t-rpc.noders.services:443 --fees 20000uaxone \
   --from KEY
 ```
 

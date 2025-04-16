@@ -47,7 +47,7 @@ nilliond q bank balances $(nilliond keys show KEY -a) --node https://nillion-rpc
 ```js
 nilliond tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000unil \
   --chain-id nillion-1 \
-  --node https://nillion-rpc.noders.services:443 --fees 3000unil \
+  --node https://nillion-rpc.noders.services:443 --fees 20000unil \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ nilliond tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000unil \
 ```js
 nilliond tx distribution withdraw-all-rewards \
   --chain-id nillion-1 \
-  --node https://nillion-rpc.noders.services:443 --fees 3000unil \
+  --node https://nillion-rpc.noders.services:443 --fees 20000unil \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ nilliond tx distribution withdraw-all-rewards \
 nilliond tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id nillion-1 \
-  --node https://nillion-rpc.noders.services:443 --fees 3000unil \
+  --node https://nillion-rpc.noders.services:443 --fees 20000unil \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ nilliond tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 nilliond tx staking delegate $(nilliond keys show KEY --bech val -a) 1000000unil \
 --chain-id nillion-1 \
---node https://nillion-rpc.noders.services:443 --fees 3000unil \
+--node https://nillion-rpc.noders.services:443 --fees 20000unil \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ nilliond tx staking delegate $(nilliond keys show KEY --bech val -a) 1000000unil
 ```js
 nilliond tx staking delegate VALIDATOR_ADDRESS 1000000unil \
 --chain-id nillion-1 \
---node https://nillion-rpc.noders.services:443 --fees 3000unil \
+--node https://nillion-rpc.noders.services:443 --fees 20000unil \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ nilliond tx staking delegate VALIDATOR_ADDRESS 1000000unil \
 ```js
 nilliond tx staking redelegate $(nilliond keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000unil \
   --chain-id nillion-1 \
-  --node https://nillion-rpc.noders.services:443 --fees 3000unil \
+  --node https://nillion-rpc.noders.services:443 --fees 20000unil \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ nilliond tx staking redelegate $(nilliond keys show KEY --bech val -a) VALIDATOR
 ```js
 nilliond tx staking unbond $(nilliond keys show KEY --bech val -a) unil \
   --chain-id andromeda-1 \
-  --node https://nillion-rpc.noders.services:443 --fees 3000unil \
+  --node https://nillion-rpc.noders.services:443 --fees 20000unil \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ nilliond query gov proposals --node https://nillion-rpc.noders.services:443
 ```js
 nilliond query gov proposal PROPOSAL_NUMBER \
   --chain-id nillion-1 \
-  --node https://nillion-rpc.noders.services:443 --fees 3000unil \
+  --node https://nillion-rpc.noders.services:443 --fees 20000unil \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ nilliond query gov proposal PROPOSAL_NUMBER \
 ```js
 nilliond tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id nillion-1 \
-  --node https://nillion-rpc.noders.services:443 --fees 3000unil \
+  --node https://nillion-rpc.noders.services:443 --fees 20000unil \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ nilliond tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id nillion-1 \
-  --node https://nillion-rpc.noders.services:443 --fees 3000unil \
+  --node https://nillion-rpc.noders.services:443 --fees 20000unil \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ nilliond tx staking edit-validator \
 --chain-id nillion-1 \
 --commission-rate 0.05 \
 --from KEY \
---node https://nillion-rpc.noders.services:443 --fees 3000unil \
+--node https://nillion-rpc.noders.services:443 --fees 20000unil \
 ```
 
 ### Unjail
 ```js
 nilliond tx slashing unjail \
   --chain-id nillion-1 \
-  --node https://nillion-rpc.noders.services:443 --fees 3000unil \
+  --node https://nillion-rpc.noders.services:443 --fees 20000unil \
   --from KEY
 ```
 

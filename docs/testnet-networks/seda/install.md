@@ -158,7 +158,7 @@ sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"d9e79bc821f1fcf7b59
 
 ### Set minimum gas price
 ```js
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001useda\"|" ~/.sedad/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001aseda\"|" ~/.sedad/config/app.toml
 ```
 ### Set pruning
 ```js

@@ -47,7 +47,7 @@ althea q bank balances $(althea keys show KEY -a) --node https://althea-rpc.node
 ```js
 althea tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000aalthea \
   --chain-id althea_258432-1 \
-  --node https://althea-rpc.noders.services:443 --fees 30000000aalthea \
+  --node https://althea-rpc.noders.services:443 --fees 300000000000aalthea \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ althea tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000aalthea \
 ```js
 althea tx distribution withdraw-all-rewards \
   --chain-id althea_258432-1 \
-  --node https://althea-rpc.noders.services:443 --fees 30000000aalthea \
+  --node https://althea-rpc.noders.services:443 --fees 300000000000aalthea \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ althea tx distribution withdraw-all-rewards \
 althea tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id althea_258432-1 \
-  --node https://althea-rpc.noders.services:443 --fees 30000000aalthea \
+  --node https://althea-rpc.noders.services:443 --fees 300000000000aalthea \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ althea tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 althea tx staking delegate $(althea keys show KEY --bech val -a) 1000000aalthea \
 --chain-id althea_258432-1 \
---node https://althea-rpc.noders.services:443 --fees 30000000aalthea \
+--node https://althea-rpc.noders.services:443 --fees 300000000000aalthea \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ althea tx staking delegate $(althea keys show KEY --bech val -a) 1000000aalthea 
 ```js
 althea tx staking delegate VALIDATOR_ADDRESS 1000000aalthea \
 --chain-id althea_258432-1 \
---node https://althea-rpc.noders.services:443 --fees 30000000aalthea \
+--node https://althea-rpc.noders.services:443 --fees 300000000000aalthea \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ althea tx staking delegate VALIDATOR_ADDRESS 1000000aalthea \
 ```js
 althea tx staking redelegate $(althea keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000aalthea \
   --chain-id althea_258432-1 \
-  --node https://althea-rpc.noders.services:443 --fees 30000000aalthea \
+  --node https://althea-rpc.noders.services:443 --fees 300000000000aalthea \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ althea tx staking redelegate $(althea keys show KEY --bech val -a) VALIDATOR_ADD
 ```js
 althea tx staking unbond $(althea keys show KEY --bech val -a) aalthea \
   --chain-id andromeda-1 \
-  --node https://althea-rpc.noders.services:443 --fees 30000000aalthea \
+  --node https://althea-rpc.noders.services:443 --fees 300000000000aalthea \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ althea query gov proposals --node https://althea-rpc.noders.services:443
 ```js
 althea query gov proposal PROPOSAL_NUMBER \
   --chain-id althea_258432-1 \
-  --node https://althea-rpc.noders.services:443 --fees 30000000aalthea \
+  --node https://althea-rpc.noders.services:443 --fees 300000000000aalthea \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ althea query gov proposal PROPOSAL_NUMBER \
 ```js
 althea tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id althea_258432-1 \
-  --node https://althea-rpc.noders.services:443 --fees 30000000aalthea \
+  --node https://althea-rpc.noders.services:443 --fees 300000000000aalthea \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ althea tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id althea_258432-1 \
-  --node https://althea-rpc.noders.services:443 --fees 30000000aalthea \
+  --node https://althea-rpc.noders.services:443 --fees 300000000000aalthea \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ althea tx staking edit-validator \
 --chain-id althea_258432-1 \
 --commission-rate 0.05 \
 --from KEY \
---node https://althea-rpc.noders.services:443 --fees 30000000aalthea \
+--node https://althea-rpc.noders.services:443 --fees 300000000000aalthea \
 ```
 
 ### Unjail
 ```js
 althea tx slashing unjail \
   --chain-id althea_258432-1 \
-  --node https://althea-rpc.noders.services:443 --fees 30000000aalthea \
+  --node https://althea-rpc.noders.services:443 --fees 300000000000aalthea \
   --from KEY
 ```
 

@@ -47,7 +47,7 @@ mantrachaind q bank balances $(mantrachaind keys show KEY -a) --node https://man
 ```js
 mantrachaind tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uom \
   --chain-id mantra-dukong-1 \
-  --node https://mantra-t-rpc.noders.services:443 --fees 3000uom \
+  --node https://mantra-t-rpc.noders.services:443 --fees 20000uom \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ mantrachaind tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uom \
 ```js
 mantrachaind tx distribution withdraw-all-rewards \
   --chain-id mantra-dukong-1 \
-  --node https://mantra-t-rpc.noders.services:443 --fees 3000uom \
+  --node https://mantra-t-rpc.noders.services:443 --fees 20000uom \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ mantrachaind tx distribution withdraw-all-rewards \
 mantrachaind tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id mantra-dukong-1 \
-  --node https://mantra-t-rpc.noders.services:443 --fees 3000uom \
+  --node https://mantra-t-rpc.noders.services:443 --fees 20000uom \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ mantrachaind tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 mantrachaind tx staking delegate $(mantrachaind keys show KEY --bech val -a) 1000000uom \
 --chain-id mantra-dukong-1 \
---node https://mantra-t-rpc.noders.services:443 --fees 3000uom \
+--node https://mantra-t-rpc.noders.services:443 --fees 20000uom \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ mantrachaind tx staking delegate $(mantrachaind keys show KEY --bech val -a) 100
 ```js
 mantrachaind tx staking delegate VALIDATOR_ADDRESS 1000000uom \
 --chain-id mantra-dukong-1 \
---node https://mantra-t-rpc.noders.services:443 --fees 3000uom \
+--node https://mantra-t-rpc.noders.services:443 --fees 20000uom \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ mantrachaind tx staking delegate VALIDATOR_ADDRESS 1000000uom \
 ```js
 mantrachaind tx staking redelegate $(mantrachaind keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000uom \
   --chain-id mantra-dukong-1 \
-  --node https://mantra-t-rpc.noders.services:443 --fees 3000uom \
+  --node https://mantra-t-rpc.noders.services:443 --fees 20000uom \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ mantrachaind tx staking redelegate $(mantrachaind keys show KEY --bech val -a) V
 ```js
 mantrachaind tx staking unbond $(mantrachaind keys show KEY --bech val -a) uom \
   --chain-id andromeda-1 \
-  --node https://mantra-t-rpc.noders.services:443 --fees 3000uom \
+  --node https://mantra-t-rpc.noders.services:443 --fees 20000uom \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ mantrachaind query gov proposals --node https://mantra-t-rpc.noders.services:443
 ```js
 mantrachaind query gov proposal PROPOSAL_NUMBER \
   --chain-id mantra-dukong-1 \
-  --node https://mantra-t-rpc.noders.services:443 --fees 3000uom \
+  --node https://mantra-t-rpc.noders.services:443 --fees 20000uom \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ mantrachaind query gov proposal PROPOSAL_NUMBER \
 ```js
 mantrachaind tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id mantra-dukong-1 \
-  --node https://mantra-t-rpc.noders.services:443 --fees 3000uom \
+  --node https://mantra-t-rpc.noders.services:443 --fees 20000uom \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ mantrachaind tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id mantra-dukong-1 \
-  --node https://mantra-t-rpc.noders.services:443 --fees 3000uom \
+  --node https://mantra-t-rpc.noders.services:443 --fees 20000uom \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ mantrachaind tx staking edit-validator \
 --chain-id mantra-dukong-1 \
 --commission-rate 0.05 \
 --from KEY \
---node https://mantra-t-rpc.noders.services:443 --fees 3000uom \
+--node https://mantra-t-rpc.noders.services:443 --fees 20000uom \
 ```
 
 ### Unjail
 ```js
 mantrachaind tx slashing unjail \
   --chain-id mantra-dukong-1 \
-  --node https://mantra-t-rpc.noders.services:443 --fees 3000uom \
+  --node https://mantra-t-rpc.noders.services:443 --fees 20000uom \
   --from KEY
 ```
 

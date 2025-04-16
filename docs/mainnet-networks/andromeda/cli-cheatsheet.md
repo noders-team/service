@@ -47,7 +47,7 @@ andromedad q bank balances $(andromedad keys show KEY -a) --node https://androme
 ```js
 andromedad tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uandr \
   --chain-id andromeda-1 \
-  --node https://andromeda-rpc.noders.services:443 --fees 3000uandr \
+  --node https://andromeda-rpc.noders.services:443 --fees 20000uandr \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ andromedad tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uandr \
 ```js
 andromedad tx distribution withdraw-all-rewards \
   --chain-id andromeda-1 \
-  --node https://andromeda-rpc.noders.services:443 --fees 3000uandr \
+  --node https://andromeda-rpc.noders.services:443 --fees 20000uandr \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ andromedad tx distribution withdraw-all-rewards \
 andromedad tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id andromeda-1 \
-  --node https://andromeda-rpc.noders.services:443 --fees 3000uandr \
+  --node https://andromeda-rpc.noders.services:443 --fees 20000uandr \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ andromedad tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 andromedad tx staking delegate $(andromedad keys show KEY --bech val -a) 1000000uandr \
 --chain-id andromeda-1 \
---node https://andromeda-rpc.noders.services:443 --fees 3000uandr \
+--node https://andromeda-rpc.noders.services:443 --fees 20000uandr \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ andromedad tx staking delegate $(andromedad keys show KEY --bech val -a) 1000000
 ```js
 andromedad tx staking delegate VALIDATOR_ADDRESS 1000000uandr \
 --chain-id andromeda-1 \
---node https://andromeda-rpc.noders.services:443 --fees 3000uandr \
+--node https://andromeda-rpc.noders.services:443 --fees 20000uandr \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ andromedad tx staking delegate VALIDATOR_ADDRESS 1000000uandr \
 ```js
 andromedad tx staking redelegate $(andromedad keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000uandr \
   --chain-id andromeda-1 \
-  --node https://andromeda-rpc.noders.services:443 --fees 3000uandr \
+  --node https://andromeda-rpc.noders.services:443 --fees 20000uandr \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ andromedad tx staking redelegate $(andromedad keys show KEY --bech val -a) VALID
 ```js
 andromedad tx staking unbond $(andromedad keys show KEY --bech val -a) uandr \
   --chain-id andromeda-1 \
-  --node https://andromeda-rpc.noders.services:443 --fees 3000uandr \
+  --node https://andromeda-rpc.noders.services:443 --fees 20000uandr \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ andromedad query gov proposals --node https://andromeda-rpc.noders.services:443
 ```js
 andromedad query gov proposal PROPOSAL_NUMBER \
   --chain-id andromeda-1 \
-  --node https://andromeda-rpc.noders.services:443 --fees 3000uandr \
+  --node https://andromeda-rpc.noders.services:443 --fees 20000uandr \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ andromedad query gov proposal PROPOSAL_NUMBER \
 ```js
 andromedad tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id andromeda-1 \
-  --node https://andromeda-rpc.noders.services:443 --fees 3000uandr \
+  --node https://andromeda-rpc.noders.services:443 --fees 20000uandr \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ andromedad tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id andromeda-1 \
-  --node https://andromeda-rpc.noders.services:443 --fees 3000uandr \
+  --node https://andromeda-rpc.noders.services:443 --fees 20000uandr \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ andromedad tx staking edit-validator \
 --chain-id andromeda-1 \
 --commission-rate 0.05 \
 --from KEY \
---node https://andromeda-rpc.noders.services:443 --fees 3000uandr \
+--node https://andromeda-rpc.noders.services:443 --fees 20000uandr \
 ```
 
 ### Unjail
 ```js
 andromedad tx slashing unjail \
   --chain-id andromeda-1 \
-  --node https://andromeda-rpc.noders.services:443 --fees 3000uandr \
+  --node https://andromeda-rpc.noders.services:443 --fees 20000uandr \
   --from KEY
 ```
 

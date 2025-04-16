@@ -47,7 +47,7 @@ sided q bank balances $(sided keys show KEY -a) --node https://side-t-rpc.noders
 ```js
 sided tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uside \
   --chain-id sidechain-testnet-4 \
-  --node https://side-t-rpc.noders.services:443 --fees 3000uside \
+  --node https://side-t-rpc.noders.services:443 --fees 20000uside \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ sided tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uside \
 ```js
 sided tx distribution withdraw-all-rewards \
   --chain-id sidechain-testnet-4 \
-  --node https://side-t-rpc.noders.services:443 --fees 3000uside \
+  --node https://side-t-rpc.noders.services:443 --fees 20000uside \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ sided tx distribution withdraw-all-rewards \
 sided tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id sidechain-testnet-4 \
-  --node https://side-t-rpc.noders.services:443 --fees 3000uside \
+  --node https://side-t-rpc.noders.services:443 --fees 20000uside \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ sided tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 sided tx staking delegate $(sided keys show KEY --bech val -a) 1000000uside \
 --chain-id sidechain-testnet-4 \
---node https://side-t-rpc.noders.services:443 --fees 3000uside \
+--node https://side-t-rpc.noders.services:443 --fees 20000uside \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ sided tx staking delegate $(sided keys show KEY --bech val -a) 1000000uside \
 ```js
 sided tx staking delegate VALIDATOR_ADDRESS 1000000uside \
 --chain-id sidechain-testnet-4 \
---node https://side-t-rpc.noders.services:443 --fees 3000uside \
+--node https://side-t-rpc.noders.services:443 --fees 20000uside \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ sided tx staking delegate VALIDATOR_ADDRESS 1000000uside \
 ```js
 sided tx staking redelegate $(sided keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000uside \
   --chain-id sidechain-testnet-4 \
-  --node https://side-t-rpc.noders.services:443 --fees 3000uside \
+  --node https://side-t-rpc.noders.services:443 --fees 20000uside \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ sided tx staking redelegate $(sided keys show KEY --bech val -a) VALIDATOR_ADDRE
 ```js
 sided tx staking unbond $(sided keys show KEY --bech val -a) uside \
   --chain-id andromeda-1 \
-  --node https://side-t-rpc.noders.services:443 --fees 3000uside \
+  --node https://side-t-rpc.noders.services:443 --fees 20000uside \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ sided query gov proposals --node https://side-t-rpc.noders.services:443
 ```js
 sided query gov proposal PROPOSAL_NUMBER \
   --chain-id sidechain-testnet-4 \
-  --node https://side-t-rpc.noders.services:443 --fees 3000uside \
+  --node https://side-t-rpc.noders.services:443 --fees 20000uside \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ sided query gov proposal PROPOSAL_NUMBER \
 ```js
 sided tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id sidechain-testnet-4 \
-  --node https://side-t-rpc.noders.services:443 --fees 3000uside \
+  --node https://side-t-rpc.noders.services:443 --fees 20000uside \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ sided tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id sidechain-testnet-4 \
-  --node https://side-t-rpc.noders.services:443 --fees 3000uside \
+  --node https://side-t-rpc.noders.services:443 --fees 20000uside \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ sided tx staking edit-validator \
 --chain-id sidechain-testnet-4 \
 --commission-rate 0.05 \
 --from KEY \
---node https://side-t-rpc.noders.services:443 --fees 3000uside \
+--node https://side-t-rpc.noders.services:443 --fees 20000uside \
 ```
 
 ### Unjail
 ```js
 sided tx slashing unjail \
   --chain-id sidechain-testnet-4 \
-  --node https://side-t-rpc.noders.services:443 --fees 3000uside \
+  --node https://side-t-rpc.noders.services:443 --fees 20000uside \
   --from KEY
 ```
 

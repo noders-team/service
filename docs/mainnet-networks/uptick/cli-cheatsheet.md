@@ -47,7 +47,7 @@ uptickd q bank balances $(uptickd keys show KEY -a) --node https://uptick-rpc.no
 ```js
 uptickd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000auptick \
   --chain-id uptick_117-1 \
-  --node https://uptick-rpc.noders.services:443 --fees 3000auptick \
+  --node https://uptick-rpc.noders.services:443 --fees 300000000000auptick \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ uptickd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000auptick \
 ```js
 uptickd tx distribution withdraw-all-rewards \
   --chain-id uptick_117-1 \
-  --node https://uptick-rpc.noders.services:443 --fees 3000auptick \
+  --node https://uptick-rpc.noders.services:443 --fees 300000000000auptick \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ uptickd tx distribution withdraw-all-rewards \
 uptickd tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id uptick_117-1 \
-  --node https://uptick-rpc.noders.services:443 --fees 3000auptick \
+  --node https://uptick-rpc.noders.services:443 --fees 300000000000auptick \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ uptickd tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 uptickd tx staking delegate $(uptickd keys show KEY --bech val -a) 1000000auptick \
 --chain-id uptick_117-1 \
---node https://uptick-rpc.noders.services:443 --fees 3000auptick \
+--node https://uptick-rpc.noders.services:443 --fees 300000000000auptick \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ uptickd tx staking delegate $(uptickd keys show KEY --bech val -a) 1000000auptic
 ```js
 uptickd tx staking delegate VALIDATOR_ADDRESS 1000000auptick \
 --chain-id uptick_117-1 \
---node https://uptick-rpc.noders.services:443 --fees 3000auptick \
+--node https://uptick-rpc.noders.services:443 --fees 300000000000auptick \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ uptickd tx staking delegate VALIDATOR_ADDRESS 1000000auptick \
 ```js
 uptickd tx staking redelegate $(uptickd keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000auptick \
   --chain-id uptick_117-1 \
-  --node https://uptick-rpc.noders.services:443 --fees 3000auptick \
+  --node https://uptick-rpc.noders.services:443 --fees 300000000000auptick \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ uptickd tx staking redelegate $(uptickd keys show KEY --bech val -a) VALIDATOR_A
 ```js
 uptickd tx staking unbond $(uptickd keys show KEY --bech val -a) auptick \
   --chain-id andromeda-1 \
-  --node https://uptick-rpc.noders.services:443 --fees 3000auptick \
+  --node https://uptick-rpc.noders.services:443 --fees 300000000000auptick \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ uptickd query gov proposals --node https://uptick-rpc.noders.services:443
 ```js
 uptickd query gov proposal PROPOSAL_NUMBER \
   --chain-id uptick_117-1 \
-  --node https://uptick-rpc.noders.services:443 --fees 3000auptick \
+  --node https://uptick-rpc.noders.services:443 --fees 300000000000auptick \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ uptickd query gov proposal PROPOSAL_NUMBER \
 ```js
 uptickd tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id uptick_117-1 \
-  --node https://uptick-rpc.noders.services:443 --fees 3000auptick \
+  --node https://uptick-rpc.noders.services:443 --fees 300000000000auptick \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ uptickd tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id uptick_117-1 \
-  --node https://uptick-rpc.noders.services:443 --fees 3000auptick \
+  --node https://uptick-rpc.noders.services:443 --fees 300000000000auptick \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ uptickd tx staking edit-validator \
 --chain-id uptick_117-1 \
 --commission-rate 0.05 \
 --from KEY \
---node https://uptick-rpc.noders.services:443 --fees 3000auptick \
+--node https://uptick-rpc.noders.services:443 --fees 300000000000auptick \
 ```
 
 ### Unjail
 ```js
 uptickd tx slashing unjail \
   --chain-id uptick_117-1 \
-  --node https://uptick-rpc.noders.services:443 --fees 3000auptick \
+  --node https://uptick-rpc.noders.services:443 --fees 300000000000auptick \
   --from KEY
 ```
 

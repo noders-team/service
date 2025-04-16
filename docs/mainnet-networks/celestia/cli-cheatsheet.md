@@ -47,7 +47,7 @@ celestia-appd q bank balances $(celestia-appd keys show KEY -a) --node https://c
 ```js
 celestia-appd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000utia \
   --chain-id celestia \
-  --node https://celestia-rpc.noders.services:443 --fees 3000utia \
+  --node https://celestia-rpc.noders.services:443 --fees 20000utia \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ celestia-appd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000utia \
 ```js
 celestia-appd tx distribution withdraw-all-rewards \
   --chain-id celestia \
-  --node https://celestia-rpc.noders.services:443 --fees 3000utia \
+  --node https://celestia-rpc.noders.services:443 --fees 20000utia \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ celestia-appd tx distribution withdraw-all-rewards \
 celestia-appd tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id celestia \
-  --node https://celestia-rpc.noders.services:443 --fees 3000utia \
+  --node https://celestia-rpc.noders.services:443 --fees 20000utia \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ celestia-appd tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 celestia-appd tx staking delegate $(celestia-appd keys show KEY --bech val -a) 1000000utia \
 --chain-id celestia \
---node https://celestia-rpc.noders.services:443 --fees 3000utia \
+--node https://celestia-rpc.noders.services:443 --fees 20000utia \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ celestia-appd tx staking delegate $(celestia-appd keys show KEY --bech val -a) 1
 ```js
 celestia-appd tx staking delegate VALIDATOR_ADDRESS 1000000utia \
 --chain-id celestia \
---node https://celestia-rpc.noders.services:443 --fees 3000utia \
+--node https://celestia-rpc.noders.services:443 --fees 20000utia \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ celestia-appd tx staking delegate VALIDATOR_ADDRESS 1000000utia \
 ```js
 celestia-appd tx staking redelegate $(celestia-appd keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000utia \
   --chain-id celestia \
-  --node https://celestia-rpc.noders.services:443 --fees 3000utia \
+  --node https://celestia-rpc.noders.services:443 --fees 20000utia \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ celestia-appd tx staking redelegate $(celestia-appd keys show KEY --bech val -a)
 ```js
 celestia-appd tx staking unbond $(celestia-appd keys show KEY --bech val -a) utia \
   --chain-id andromeda-1 \
-  --node https://celestia-rpc.noders.services:443 --fees 3000utia \
+  --node https://celestia-rpc.noders.services:443 --fees 20000utia \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ celestia-appd query gov proposals --node https://celestia-rpc.noders.services:44
 ```js
 celestia-appd query gov proposal PROPOSAL_NUMBER \
   --chain-id celestia \
-  --node https://celestia-rpc.noders.services:443 --fees 3000utia \
+  --node https://celestia-rpc.noders.services:443 --fees 20000utia \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ celestia-appd query gov proposal PROPOSAL_NUMBER \
 ```js
 celestia-appd tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id celestia \
-  --node https://celestia-rpc.noders.services:443 --fees 3000utia \
+  --node https://celestia-rpc.noders.services:443 --fees 20000utia \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ celestia-appd tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id celestia \
-  --node https://celestia-rpc.noders.services:443 --fees 3000utia \
+  --node https://celestia-rpc.noders.services:443 --fees 20000utia \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ celestia-appd tx staking edit-validator \
 --chain-id celestia \
 --commission-rate 0.05 \
 --from KEY \
---node https://celestia-rpc.noders.services:443 --fees 3000utia \
+--node https://celestia-rpc.noders.services:443 --fees 20000utia \
 ```
 
 ### Unjail
 ```js
 celestia-appd tx slashing unjail \
   --chain-id celestia \
-  --node https://celestia-rpc.noders.services:443 --fees 3000utia \
+  --node https://celestia-rpc.noders.services:443 --fees 20000utia \
   --from KEY
 ```
 

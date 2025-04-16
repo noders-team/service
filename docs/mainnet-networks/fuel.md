@@ -47,7 +47,7 @@ Official links of social networks of projects
     <SmallCard to="https://fuel-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
     <SmallCard to="https://fuel-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
     
-    <SmallCard to="https://fuel-grpc.noders.services" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
+    <SmallCard to="https://fuel-grpc.noders.services:443" header={{label: "gRPC Endpoint", translateId: "grpc-endpoint"}}/>
     <SmallCard to="https://cosmoslist.co/mainnet/fuel" header={{label: "Cosmoslist Endpoint", translateId: "cosmoslist-endpoint"}}/>
 </CardLayout>
 

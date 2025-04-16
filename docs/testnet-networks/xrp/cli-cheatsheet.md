@@ -47,7 +47,7 @@ exrpd q bank balances $(exrpd keys show KEY -a) --node https://xrp-t-rpc.noders.
 ```js
 exrpd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000apoa \
   --chain-id exrp_1440002-1 \
-  --node https://xrp-t-rpc.noders.services:443 --fees 3000000apoa \
+  --node https://xrp-t-rpc.noders.services:443 --fees 300000000000apoa \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ exrpd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000apoa \
 ```js
 exrpd tx distribution withdraw-all-rewards \
   --chain-id exrp_1440002-1 \
-  --node https://xrp-t-rpc.noders.services:443 --fees 3000000apoa \
+  --node https://xrp-t-rpc.noders.services:443 --fees 300000000000apoa \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ exrpd tx distribution withdraw-all-rewards \
 exrpd tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id exrp_1440002-1 \
-  --node https://xrp-t-rpc.noders.services:443 --fees 3000000apoa \
+  --node https://xrp-t-rpc.noders.services:443 --fees 300000000000apoa \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ exrpd tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 exrpd tx staking delegate $(exrpd keys show KEY --bech val -a) 1000000apoa \
 --chain-id exrp_1440002-1 \
---node https://xrp-t-rpc.noders.services:443 --fees 3000000apoa \
+--node https://xrp-t-rpc.noders.services:443 --fees 300000000000apoa \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ exrpd tx staking delegate $(exrpd keys show KEY --bech val -a) 1000000apoa \
 ```js
 exrpd tx staking delegate VALIDATOR_ADDRESS 1000000apoa \
 --chain-id exrp_1440002-1 \
---node https://xrp-t-rpc.noders.services:443 --fees 3000000apoa \
+--node https://xrp-t-rpc.noders.services:443 --fees 300000000000apoa \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ exrpd tx staking delegate VALIDATOR_ADDRESS 1000000apoa \
 ```js
 exrpd tx staking redelegate $(exrpd keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000apoa \
   --chain-id exrp_1440002-1 \
-  --node https://xrp-t-rpc.noders.services:443 --fees 3000000apoa \
+  --node https://xrp-t-rpc.noders.services:443 --fees 300000000000apoa \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ exrpd tx staking redelegate $(exrpd keys show KEY --bech val -a) VALIDATOR_ADDRE
 ```js
 exrpd tx staking unbond $(exrpd keys show KEY --bech val -a) apoa \
   --chain-id andromeda-1 \
-  --node https://xrp-t-rpc.noders.services:443 --fees 3000000apoa \
+  --node https://xrp-t-rpc.noders.services:443 --fees 300000000000apoa \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ exrpd query gov proposals --node https://xrp-t-rpc.noders.services:443
 ```js
 exrpd query gov proposal PROPOSAL_NUMBER \
   --chain-id exrp_1440002-1 \
-  --node https://xrp-t-rpc.noders.services:443 --fees 3000000apoa \
+  --node https://xrp-t-rpc.noders.services:443 --fees 300000000000apoa \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ exrpd query gov proposal PROPOSAL_NUMBER \
 ```js
 exrpd tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id exrp_1440002-1 \
-  --node https://xrp-t-rpc.noders.services:443 --fees 3000000apoa \
+  --node https://xrp-t-rpc.noders.services:443 --fees 300000000000apoa \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ exrpd tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id exrp_1440002-1 \
-  --node https://xrp-t-rpc.noders.services:443 --fees 3000000apoa \
+  --node https://xrp-t-rpc.noders.services:443 --fees 300000000000apoa \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ exrpd tx staking edit-validator \
 --chain-id exrp_1440002-1 \
 --commission-rate 0.05 \
 --from KEY \
---node https://xrp-t-rpc.noders.services:443 --fees 3000000apoa \
+--node https://xrp-t-rpc.noders.services:443 --fees 300000000000apoa \
 ```
 
 ### Unjail
 ```js
 exrpd tx slashing unjail \
   --chain-id exrp_1440002-1 \
-  --node https://xrp-t-rpc.noders.services:443 --fees 3000000apoa \
+  --node https://xrp-t-rpc.noders.services:443 --fees 300000000000apoa \
   --from KEY
 ```
 

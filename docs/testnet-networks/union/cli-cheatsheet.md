@@ -47,7 +47,7 @@ uniond q bank balances $(uniond keys show KEY -a) --node https://union-t-rpc.nod
 ```js
 uniond tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000muno \
   --chain-id union-testnet-9 \
-  --node https://union-t-rpc.noders.services:443 --fees 3000muno \
+  --node https://union-t-rpc.noders.services:443 --fees 20000muno \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ uniond tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000muno \
 ```js
 uniond tx distribution withdraw-all-rewards \
   --chain-id union-testnet-9 \
-  --node https://union-t-rpc.noders.services:443 --fees 3000muno \
+  --node https://union-t-rpc.noders.services:443 --fees 20000muno \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ uniond tx distribution withdraw-all-rewards \
 uniond tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id union-testnet-9 \
-  --node https://union-t-rpc.noders.services:443 --fees 3000muno \
+  --node https://union-t-rpc.noders.services:443 --fees 20000muno \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ uniond tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 uniond tx staking delegate $(uniond keys show KEY --bech val -a) 1000000muno \
 --chain-id union-testnet-9 \
---node https://union-t-rpc.noders.services:443 --fees 3000muno \
+--node https://union-t-rpc.noders.services:443 --fees 20000muno \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ uniond tx staking delegate $(uniond keys show KEY --bech val -a) 1000000muno \
 ```js
 uniond tx staking delegate VALIDATOR_ADDRESS 1000000muno \
 --chain-id union-testnet-9 \
---node https://union-t-rpc.noders.services:443 --fees 3000muno \
+--node https://union-t-rpc.noders.services:443 --fees 20000muno \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ uniond tx staking delegate VALIDATOR_ADDRESS 1000000muno \
 ```js
 uniond tx staking redelegate $(uniond keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000muno \
   --chain-id union-testnet-9 \
-  --node https://union-t-rpc.noders.services:443 --fees 3000muno \
+  --node https://union-t-rpc.noders.services:443 --fees 20000muno \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ uniond tx staking redelegate $(uniond keys show KEY --bech val -a) VALIDATOR_ADD
 ```js
 uniond tx staking unbond $(uniond keys show KEY --bech val -a) muno \
   --chain-id andromeda-1 \
-  --node https://union-t-rpc.noders.services:443 --fees 3000muno \
+  --node https://union-t-rpc.noders.services:443 --fees 20000muno \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ uniond query gov proposals --node https://union-t-rpc.noders.services:443
 ```js
 uniond query gov proposal PROPOSAL_NUMBER \
   --chain-id union-testnet-9 \
-  --node https://union-t-rpc.noders.services:443 --fees 3000muno \
+  --node https://union-t-rpc.noders.services:443 --fees 20000muno \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ uniond query gov proposal PROPOSAL_NUMBER \
 ```js
 uniond tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id union-testnet-9 \
-  --node https://union-t-rpc.noders.services:443 --fees 3000muno \
+  --node https://union-t-rpc.noders.services:443 --fees 20000muno \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ uniond tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id union-testnet-9 \
-  --node https://union-t-rpc.noders.services:443 --fees 3000muno \
+  --node https://union-t-rpc.noders.services:443 --fees 20000muno \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ uniond tx staking edit-validator \
 --chain-id union-testnet-9 \
 --commission-rate 0.05 \
 --from KEY \
---node https://union-t-rpc.noders.services:443 --fees 3000muno \
+--node https://union-t-rpc.noders.services:443 --fees 20000muno \
 ```
 
 ### Unjail
 ```js
 uniond tx slashing unjail \
   --chain-id union-testnet-9 \
-  --node https://union-t-rpc.noders.services:443 --fees 3000muno \
+  --node https://union-t-rpc.noders.services:443 --fees 20000muno \
   --from KEY
 ```
 

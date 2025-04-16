@@ -47,7 +47,7 @@ atomoned q bank balances $(atomoned keys show KEY -a) --node https://atomone-t-r
 ```js
 atomoned tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uatone \
   --chain-id atomone-testnet-1 \
-  --node https://atomone-t-rpc.noders.services:443 --fees 300000uatone \
+  --node https://atomone-t-rpc.noders.services:443 --fees 20000uatone \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ atomoned tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uatone \
 ```js
 atomoned tx distribution withdraw-all-rewards \
   --chain-id atomone-testnet-1 \
-  --node https://atomone-t-rpc.noders.services:443 --fees 300000uatone \
+  --node https://atomone-t-rpc.noders.services:443 --fees 20000uatone \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ atomoned tx distribution withdraw-all-rewards \
 atomoned tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id atomone-testnet-1 \
-  --node https://atomone-t-rpc.noders.services:443 --fees 300000uatone \
+  --node https://atomone-t-rpc.noders.services:443 --fees 20000uatone \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ atomoned tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 atomoned tx staking delegate $(atomoned keys show KEY --bech val -a) 1000000uatone \
 --chain-id atomone-testnet-1 \
---node https://atomone-t-rpc.noders.services:443 --fees 300000uatone \
+--node https://atomone-t-rpc.noders.services:443 --fees 20000uatone \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ atomoned tx staking delegate $(atomoned keys show KEY --bech val -a) 1000000uato
 ```js
 atomoned tx staking delegate VALIDATOR_ADDRESS 1000000uatone \
 --chain-id atomone-testnet-1 \
---node https://atomone-t-rpc.noders.services:443 --fees 300000uatone \
+--node https://atomone-t-rpc.noders.services:443 --fees 20000uatone \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ atomoned tx staking delegate VALIDATOR_ADDRESS 1000000uatone \
 ```js
 atomoned tx staking redelegate $(atomoned keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000uatone \
   --chain-id atomone-testnet-1 \
-  --node https://atomone-t-rpc.noders.services:443 --fees 300000uatone \
+  --node https://atomone-t-rpc.noders.services:443 --fees 20000uatone \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ atomoned tx staking redelegate $(atomoned keys show KEY --bech val -a) VALIDATOR
 ```js
 atomoned tx staking unbond $(atomoned keys show KEY --bech val -a) uatone \
   --chain-id andromeda-1 \
-  --node https://atomone-t-rpc.noders.services:443 --fees 300000uatone \
+  --node https://atomone-t-rpc.noders.services:443 --fees 20000uatone \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ atomoned query gov proposals --node https://atomone-t-rpc.noders.services:443
 ```js
 atomoned query gov proposal PROPOSAL_NUMBER \
   --chain-id atomone-testnet-1 \
-  --node https://atomone-t-rpc.noders.services:443 --fees 300000uatone \
+  --node https://atomone-t-rpc.noders.services:443 --fees 20000uatone \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ atomoned query gov proposal PROPOSAL_NUMBER \
 ```js
 atomoned tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id atomone-testnet-1 \
-  --node https://atomone-t-rpc.noders.services:443 --fees 300000uatone \
+  --node https://atomone-t-rpc.noders.services:443 --fees 20000uatone \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ atomoned tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id atomone-testnet-1 \
-  --node https://atomone-t-rpc.noders.services:443 --fees 300000uatone \
+  --node https://atomone-t-rpc.noders.services:443 --fees 20000uatone \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ atomoned tx staking edit-validator \
 --chain-id atomone-testnet-1 \
 --commission-rate 0.05 \
 --from KEY \
---node https://atomone-t-rpc.noders.services:443 --fees 300000uatone \
+--node https://atomone-t-rpc.noders.services:443 --fees 20000uatone \
 ```
 
 ### Unjail
 ```js
 atomoned tx slashing unjail \
   --chain-id atomone-testnet-1 \
-  --node https://atomone-t-rpc.noders.services:443 --fees 300000uatone \
+  --node https://atomone-t-rpc.noders.services:443 --fees 20000uatone \
   --from KEY
 ```
 

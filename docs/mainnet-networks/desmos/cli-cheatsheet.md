@@ -45,9 +45,9 @@ desmos q bank balances $(desmos keys show KEY -a) --node https://desmos-rpc.node
 
 ### Send
 ```js
-desmos tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uosmo \
+desmos tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000udsm \
   --chain-id desmos-mainnet \
-  --node https://desmos-rpc.noders.services:443 --fees 3000uosmo \
+  --node https://desmos-rpc.noders.services:443 --fees 20000udsm \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ desmos tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uosmo \
 ```js
 desmos tx distribution withdraw-all-rewards \
   --chain-id desmos-mainnet \
-  --node https://desmos-rpc.noders.services:443 --fees 3000uosmo \
+  --node https://desmos-rpc.noders.services:443 --fees 20000udsm \
   --from KEY
 ```
 
@@ -64,39 +64,39 @@ desmos tx distribution withdraw-all-rewards \
 desmos tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id desmos-mainnet \
-  --node https://desmos-rpc.noders.services:443 --fees 3000uosmo \
+  --node https://desmos-rpc.noders.services:443 --fees 20000udsm \
   --from KEY
 ```
 
 ### Delegate tokens to yourself
 ```js
-desmos tx staking delegate $(desmos keys show KEY --bech val -a) 1000000uosmo \
+desmos tx staking delegate $(desmos keys show KEY --bech val -a) 1000000udsm \
 --chain-id desmos-mainnet \
---node https://desmos-rpc.noders.services:443 --fees 3000uosmo \
+--node https://desmos-rpc.noders.services:443 --fees 20000udsm \
 --from KEY
 ```
 
 ### Delegate tokens to validator
 ```js
-desmos tx staking delegate VALIDATOR_ADDRESS 1000000uosmo \
+desmos tx staking delegate VALIDATOR_ADDRESS 1000000udsm \
 --chain-id desmos-mainnet \
---node https://desmos-rpc.noders.services:443 --fees 3000uosmo \
+--node https://desmos-rpc.noders.services:443 --fees 20000udsm \
 --from KEY
 ```
 
 ### Redelegate tokens to another validator
 ```js
-desmos tx staking redelegate $(desmos keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000uosmo \
+desmos tx staking redelegate $(desmos keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000udsm \
   --chain-id desmos-mainnet \
-  --node https://desmos-rpc.noders.services:443 --fees 3000uosmo \
+  --node https://desmos-rpc.noders.services:443 --fees 20000udsm \
   --from KEY
 ```
 
 ### Unbond tokens from your validator
 ```js
-desmos tx staking unbond $(desmos keys show KEY --bech val -a) uosmo \
+desmos tx staking unbond $(desmos keys show KEY --bech val -a) udsm \
   --chain-id andromeda-1 \
-  --node https://desmos-rpc.noders.services:443 --fees 3000uosmo \
+  --node https://desmos-rpc.noders.services:443 --fees 20000udsm \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ desmos query gov proposals --node https://desmos-rpc.noders.services:443
 ```js
 desmos query gov proposal PROPOSAL_NUMBER \
   --chain-id desmos-mainnet \
-  --node https://desmos-rpc.noders.services:443 --fees 3000uosmo \
+  --node https://desmos-rpc.noders.services:443 --fees 20000udsm \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ desmos query gov proposal PROPOSAL_NUMBER \
 ```js
 desmos tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id desmos-mainnet \
-  --node https://desmos-rpc.noders.services:443 --fees 3000uosmo \
+  --node https://desmos-rpc.noders.services:443 --fees 20000udsm \
   --from KEY
 ```
 
@@ -133,7 +133,7 @@ We use example filed values instead of capitalized dummy words for demo purpose 
 :::
 ```js
 desmos tx staking create-validator \
-  --amount 1000000uosmo \
+  --amount 1000000udsm \
   --commission-max-change-rate "0.05" \
   --commission-max-rate "0.10" \
   --commission-rate "0.05" \
@@ -145,7 +145,7 @@ desmos tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id desmos-mainnet \
-  --node https://desmos-rpc.noders.services:443 --fees 3000uosmo \
+  --node https://desmos-rpc.noders.services:443 --fees 20000udsm \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ desmos tx staking edit-validator \
 --chain-id desmos-mainnet \
 --commission-rate 0.05 \
 --from KEY \
---node https://desmos-rpc.noders.services:443 --fees 3000uosmo \
+--node https://desmos-rpc.noders.services:443 --fees 20000udsm \
 ```
 
 ### Unjail
 ```js
 desmos tx slashing unjail \
   --chain-id desmos-mainnet \
-  --node https://desmos-rpc.noders.services:443 --fees 3000uosmo \
+  --node https://desmos-rpc.noders.services:443 --fees 20000udsm \
   --from KEY
 ```
 
@@ -208,7 +208,7 @@ curl -sS https://desmos-rpc.noders.services:443/net_info | jq -r '.result.peers[
 
 ### Set minimum gas price
 ```js
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.001uosmo\"/" ~/.desmos/config/app.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.001udsm\"/" ~/.desmos/config/app.toml
 ```
 
 ###Enable prometheus

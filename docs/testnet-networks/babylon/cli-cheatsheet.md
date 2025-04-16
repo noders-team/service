@@ -47,7 +47,7 @@ babylond q bank balances $(babylond keys show KEY -a) --node https://babylon-t-r
 ```js
 babylond tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000ubbn \
   --chain-id bbn-test-5 \
-  --node https://babylon-t-rpc.noders.services:443 --fees 3000ubbn \
+  --node https://babylon-t-rpc.noders.services:443 --fees 20000ubbn \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ babylond tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000ubbn \
 ```js
 babylond tx distribution withdraw-all-rewards \
   --chain-id bbn-test-5 \
-  --node https://babylon-t-rpc.noders.services:443 --fees 3000ubbn \
+  --node https://babylon-t-rpc.noders.services:443 --fees 20000ubbn \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ babylond tx distribution withdraw-all-rewards \
 babylond tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id bbn-test-5 \
-  --node https://babylon-t-rpc.noders.services:443 --fees 3000ubbn \
+  --node https://babylon-t-rpc.noders.services:443 --fees 20000ubbn \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ babylond tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 babylond tx staking delegate $(babylond keys show KEY --bech val -a) 1000000ubbn \
 --chain-id bbn-test-5 \
---node https://babylon-t-rpc.noders.services:443 --fees 3000ubbn \
+--node https://babylon-t-rpc.noders.services:443 --fees 20000ubbn \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ babylond tx staking delegate $(babylond keys show KEY --bech val -a) 1000000ubbn
 ```js
 babylond tx staking delegate VALIDATOR_ADDRESS 1000000ubbn \
 --chain-id bbn-test-5 \
---node https://babylon-t-rpc.noders.services:443 --fees 3000ubbn \
+--node https://babylon-t-rpc.noders.services:443 --fees 20000ubbn \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ babylond tx staking delegate VALIDATOR_ADDRESS 1000000ubbn \
 ```js
 babylond tx staking redelegate $(babylond keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000ubbn \
   --chain-id bbn-test-5 \
-  --node https://babylon-t-rpc.noders.services:443 --fees 3000ubbn \
+  --node https://babylon-t-rpc.noders.services:443 --fees 20000ubbn \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ babylond tx staking redelegate $(babylond keys show KEY --bech val -a) VALIDATOR
 ```js
 babylond tx staking unbond $(babylond keys show KEY --bech val -a) ubbn \
   --chain-id andromeda-1 \
-  --node https://babylon-t-rpc.noders.services:443 --fees 3000ubbn \
+  --node https://babylon-t-rpc.noders.services:443 --fees 20000ubbn \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ babylond query gov proposals --node https://babylon-t-rpc.noders.services:443
 ```js
 babylond query gov proposal PROPOSAL_NUMBER \
   --chain-id bbn-test-5 \
-  --node https://babylon-t-rpc.noders.services:443 --fees 3000ubbn \
+  --node https://babylon-t-rpc.noders.services:443 --fees 20000ubbn \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ babylond query gov proposal PROPOSAL_NUMBER \
 ```js
 babylond tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id bbn-test-5 \
-  --node https://babylon-t-rpc.noders.services:443 --fees 3000ubbn \
+  --node https://babylon-t-rpc.noders.services:443 --fees 20000ubbn \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ babylond tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id bbn-test-5 \
-  --node https://babylon-t-rpc.noders.services:443 --fees 3000ubbn \
+  --node https://babylon-t-rpc.noders.services:443 --fees 20000ubbn \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ babylond tx staking edit-validator \
 --chain-id bbn-test-5 \
 --commission-rate 0.05 \
 --from KEY \
---node https://babylon-t-rpc.noders.services:443 --fees 3000ubbn \
+--node https://babylon-t-rpc.noders.services:443 --fees 20000ubbn \
 ```
 
 ### Unjail
 ```js
 babylond tx slashing unjail \
   --chain-id bbn-test-5 \
-  --node https://babylon-t-rpc.noders.services:443 --fees 3000ubbn \
+  --node https://babylon-t-rpc.noders.services:443 --fees 20000ubbn \
   --from KEY
 ```
 

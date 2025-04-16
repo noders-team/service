@@ -45,9 +45,9 @@ sedad q bank balances $(sedad keys show KEY -a) --node https://seda-t-rpc.noders
 
 ### Send
 ```js
-sedad tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000useda \
+sedad tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000aseda \
   --chain-id seda-1-testnet \
-  --node https://seda-t-rpc.noders.services:443 --fees 3000useda \
+  --node https://seda-t-rpc.noders.services:443 --fees 300000000000aseda \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ sedad tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000useda \
 ```js
 sedad tx distribution withdraw-all-rewards \
   --chain-id seda-1-testnet \
-  --node https://seda-t-rpc.noders.services:443 --fees 3000useda \
+  --node https://seda-t-rpc.noders.services:443 --fees 300000000000aseda \
   --from KEY
 ```
 
@@ -64,39 +64,39 @@ sedad tx distribution withdraw-all-rewards \
 sedad tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id seda-1-testnet \
-  --node https://seda-t-rpc.noders.services:443 --fees 3000useda \
+  --node https://seda-t-rpc.noders.services:443 --fees 300000000000aseda \
   --from KEY
 ```
 
 ### Delegate tokens to yourself
 ```js
-sedad tx staking delegate $(sedad keys show KEY --bech val -a) 1000000useda \
+sedad tx staking delegate $(sedad keys show KEY --bech val -a) 1000000aseda \
 --chain-id seda-1-testnet \
---node https://seda-t-rpc.noders.services:443 --fees 3000useda \
+--node https://seda-t-rpc.noders.services:443 --fees 300000000000aseda \
 --from KEY
 ```
 
 ### Delegate tokens to validator
 ```js
-sedad tx staking delegate VALIDATOR_ADDRESS 1000000useda \
+sedad tx staking delegate VALIDATOR_ADDRESS 1000000aseda \
 --chain-id seda-1-testnet \
---node https://seda-t-rpc.noders.services:443 --fees 3000useda \
+--node https://seda-t-rpc.noders.services:443 --fees 300000000000aseda \
 --from KEY
 ```
 
 ### Redelegate tokens to another validator
 ```js
-sedad tx staking redelegate $(sedad keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000useda \
+sedad tx staking redelegate $(sedad keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000aseda \
   --chain-id seda-1-testnet \
-  --node https://seda-t-rpc.noders.services:443 --fees 3000useda \
+  --node https://seda-t-rpc.noders.services:443 --fees 300000000000aseda \
   --from KEY
 ```
 
 ### Unbond tokens from your validator
 ```js
-sedad tx staking unbond $(sedad keys show KEY --bech val -a) useda \
+sedad tx staking unbond $(sedad keys show KEY --bech val -a) aseda \
   --chain-id andromeda-1 \
-  --node https://seda-t-rpc.noders.services:443 --fees 3000useda \
+  --node https://seda-t-rpc.noders.services:443 --fees 300000000000aseda \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ sedad query gov proposals --node https://seda-t-rpc.noders.services:443
 ```js
 sedad query gov proposal PROPOSAL_NUMBER \
   --chain-id seda-1-testnet \
-  --node https://seda-t-rpc.noders.services:443 --fees 3000useda \
+  --node https://seda-t-rpc.noders.services:443 --fees 300000000000aseda \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ sedad query gov proposal PROPOSAL_NUMBER \
 ```js
 sedad tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id seda-1-testnet \
-  --node https://seda-t-rpc.noders.services:443 --fees 3000useda \
+  --node https://seda-t-rpc.noders.services:443 --fees 300000000000aseda \
   --from KEY
 ```
 
@@ -133,7 +133,7 @@ We use example filed values instead of capitalized dummy words for demo purpose 
 :::
 ```js
 sedad tx staking create-validator \
-  --amount 1000000useda \
+  --amount 1000000aseda \
   --commission-max-change-rate "0.05" \
   --commission-max-rate "0.10" \
   --commission-rate "0.05" \
@@ -145,7 +145,7 @@ sedad tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id seda-1-testnet \
-  --node https://seda-t-rpc.noders.services:443 --fees 3000useda \
+  --node https://seda-t-rpc.noders.services:443 --fees 300000000000aseda \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ sedad tx staking edit-validator \
 --chain-id seda-1-testnet \
 --commission-rate 0.05 \
 --from KEY \
---node https://seda-t-rpc.noders.services:443 --fees 3000useda \
+--node https://seda-t-rpc.noders.services:443 --fees 300000000000aseda \
 ```
 
 ### Unjail
 ```js
 sedad tx slashing unjail \
   --chain-id seda-1-testnet \
-  --node https://seda-t-rpc.noders.services:443 --fees 3000useda \
+  --node https://seda-t-rpc.noders.services:443 --fees 300000000000aseda \
   --from KEY
 ```
 
@@ -208,7 +208,7 @@ curl -sS https://seda-t-rpc.noders.services:443/net_info | jq -r '.result.peers[
 
 ### Set minimum gas price
 ```js
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.001useda\"/" ~/.sedad/config/app.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.001aseda\"/" ~/.sedad/config/app.toml
 ```
 
 ###Enable prometheus

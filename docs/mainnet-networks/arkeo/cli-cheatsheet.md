@@ -47,7 +47,7 @@ arkeod q bank balances $(arkeod keys show KEY -a) --node https://arkeo-rpc.noder
 ```js
 arkeod tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uarkeo \
   --chain-id arkeo-main-v1 \
-  --node https://arkeo-rpc.noders.services:443 --fees 3000uarkeo \
+  --node https://arkeo-rpc.noders.services:443 --fees 20000uarkeo \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ arkeod tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uarkeo \
 ```js
 arkeod tx distribution withdraw-all-rewards \
   --chain-id arkeo-main-v1 \
-  --node https://arkeo-rpc.noders.services:443 --fees 3000uarkeo \
+  --node https://arkeo-rpc.noders.services:443 --fees 20000uarkeo \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ arkeod tx distribution withdraw-all-rewards \
 arkeod tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id arkeo-main-v1 \
-  --node https://arkeo-rpc.noders.services:443 --fees 3000uarkeo \
+  --node https://arkeo-rpc.noders.services:443 --fees 20000uarkeo \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ arkeod tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 arkeod tx staking delegate $(arkeod keys show KEY --bech val -a) 1000000uarkeo \
 --chain-id arkeo-main-v1 \
---node https://arkeo-rpc.noders.services:443 --fees 3000uarkeo \
+--node https://arkeo-rpc.noders.services:443 --fees 20000uarkeo \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ arkeod tx staking delegate $(arkeod keys show KEY --bech val -a) 1000000uarkeo \
 ```js
 arkeod tx staking delegate VALIDATOR_ADDRESS 1000000uarkeo \
 --chain-id arkeo-main-v1 \
---node https://arkeo-rpc.noders.services:443 --fees 3000uarkeo \
+--node https://arkeo-rpc.noders.services:443 --fees 20000uarkeo \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ arkeod tx staking delegate VALIDATOR_ADDRESS 1000000uarkeo \
 ```js
 arkeod tx staking redelegate $(arkeod keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000uarkeo \
   --chain-id arkeo-main-v1 \
-  --node https://arkeo-rpc.noders.services:443 --fees 3000uarkeo \
+  --node https://arkeo-rpc.noders.services:443 --fees 20000uarkeo \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ arkeod tx staking redelegate $(arkeod keys show KEY --bech val -a) VALIDATOR_ADD
 ```js
 arkeod tx staking unbond $(arkeod keys show KEY --bech val -a) uarkeo \
   --chain-id andromeda-1 \
-  --node https://arkeo-rpc.noders.services:443 --fees 3000uarkeo \
+  --node https://arkeo-rpc.noders.services:443 --fees 20000uarkeo \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ arkeod query gov proposals --node https://arkeo-rpc.noders.services:443
 ```js
 arkeod query gov proposal PROPOSAL_NUMBER \
   --chain-id arkeo-main-v1 \
-  --node https://arkeo-rpc.noders.services:443 --fees 3000uarkeo \
+  --node https://arkeo-rpc.noders.services:443 --fees 20000uarkeo \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ arkeod query gov proposal PROPOSAL_NUMBER \
 ```js
 arkeod tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id arkeo-main-v1 \
-  --node https://arkeo-rpc.noders.services:443 --fees 3000uarkeo \
+  --node https://arkeo-rpc.noders.services:443 --fees 20000uarkeo \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ arkeod tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id arkeo-main-v1 \
-  --node https://arkeo-rpc.noders.services:443 --fees 3000uarkeo \
+  --node https://arkeo-rpc.noders.services:443 --fees 20000uarkeo \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ arkeod tx staking edit-validator \
 --chain-id arkeo-main-v1 \
 --commission-rate 0.05 \
 --from KEY \
---node https://arkeo-rpc.noders.services:443 --fees 3000uarkeo \
+--node https://arkeo-rpc.noders.services:443 --fees 20000uarkeo \
 ```
 
 ### Unjail
 ```js
 arkeod tx slashing unjail \
   --chain-id arkeo-main-v1 \
-  --node https://arkeo-rpc.noders.services:443 --fees 3000uarkeo \
+  --node https://arkeo-rpc.noders.services:443 --fees 20000uarkeo \
   --from KEY
 ```
 

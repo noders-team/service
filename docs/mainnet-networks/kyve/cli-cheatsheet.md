@@ -47,7 +47,7 @@ kyved q bank balances $(kyved keys show KEY -a) --node https://kyve-rpc.noders.s
 ```js
 kyved tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000ukyve \
   --chain-id kyve-1 \
-  --node https://kyve-rpc.noders.services:443 --fees 3000ukyve \
+  --node https://kyve-rpc.noders.services:443 --fees 20000ukyve \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ kyved tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000ukyve \
 ```js
 kyved tx distribution withdraw-all-rewards \
   --chain-id kyve-1 \
-  --node https://kyve-rpc.noders.services:443 --fees 3000ukyve \
+  --node https://kyve-rpc.noders.services:443 --fees 20000ukyve \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ kyved tx distribution withdraw-all-rewards \
 kyved tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id kyve-1 \
-  --node https://kyve-rpc.noders.services:443 --fees 3000ukyve \
+  --node https://kyve-rpc.noders.services:443 --fees 20000ukyve \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ kyved tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 kyved tx staking delegate $(kyved keys show KEY --bech val -a) 1000000ukyve \
 --chain-id kyve-1 \
---node https://kyve-rpc.noders.services:443 --fees 3000ukyve \
+--node https://kyve-rpc.noders.services:443 --fees 20000ukyve \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ kyved tx staking delegate $(kyved keys show KEY --bech val -a) 1000000ukyve \
 ```js
 kyved tx staking delegate VALIDATOR_ADDRESS 1000000ukyve \
 --chain-id kyve-1 \
---node https://kyve-rpc.noders.services:443 --fees 3000ukyve \
+--node https://kyve-rpc.noders.services:443 --fees 20000ukyve \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ kyved tx staking delegate VALIDATOR_ADDRESS 1000000ukyve \
 ```js
 kyved tx staking redelegate $(kyved keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000ukyve \
   --chain-id kyve-1 \
-  --node https://kyve-rpc.noders.services:443 --fees 3000ukyve \
+  --node https://kyve-rpc.noders.services:443 --fees 20000ukyve \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ kyved tx staking redelegate $(kyved keys show KEY --bech val -a) VALIDATOR_ADDRE
 ```js
 kyved tx staking unbond $(kyved keys show KEY --bech val -a) ukyve \
   --chain-id andromeda-1 \
-  --node https://kyve-rpc.noders.services:443 --fees 3000ukyve \
+  --node https://kyve-rpc.noders.services:443 --fees 20000ukyve \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ kyved query gov proposals --node https://kyve-rpc.noders.services:443
 ```js
 kyved query gov proposal PROPOSAL_NUMBER \
   --chain-id kyve-1 \
-  --node https://kyve-rpc.noders.services:443 --fees 3000ukyve \
+  --node https://kyve-rpc.noders.services:443 --fees 20000ukyve \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ kyved query gov proposal PROPOSAL_NUMBER \
 ```js
 kyved tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id kyve-1 \
-  --node https://kyve-rpc.noders.services:443 --fees 3000ukyve \
+  --node https://kyve-rpc.noders.services:443 --fees 20000ukyve \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ kyved tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id kyve-1 \
-  --node https://kyve-rpc.noders.services:443 --fees 3000ukyve \
+  --node https://kyve-rpc.noders.services:443 --fees 20000ukyve \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ kyved tx staking edit-validator \
 --chain-id kyve-1 \
 --commission-rate 0.05 \
 --from KEY \
---node https://kyve-rpc.noders.services:443 --fees 3000ukyve \
+--node https://kyve-rpc.noders.services:443 --fees 20000ukyve \
 ```
 
 ### Unjail
 ```js
 kyved tx slashing unjail \
   --chain-id kyve-1 \
-  --node https://kyve-rpc.noders.services:443 --fees 3000ukyve \
+  --node https://kyve-rpc.noders.services:443 --fees 20000ukyve \
   --from KEY
 ```
 

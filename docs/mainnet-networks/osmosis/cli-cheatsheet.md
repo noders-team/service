@@ -47,7 +47,7 @@ osmosisd q bank balances $(osmosisd keys show KEY -a) --node https://osmosis-rpc
 ```js
 osmosisd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uosmo \
   --chain-id osmosis-1 \
-  --node https://osmosis-rpc.noders.services:443 --fees 3000uosmo \
+  --node https://osmosis-rpc.noders.services:443 --fees 20000uosmo \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ osmosisd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uosmo \
 ```js
 osmosisd tx distribution withdraw-all-rewards \
   --chain-id osmosis-1 \
-  --node https://osmosis-rpc.noders.services:443 --fees 3000uosmo \
+  --node https://osmosis-rpc.noders.services:443 --fees 20000uosmo \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ osmosisd tx distribution withdraw-all-rewards \
 osmosisd tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id osmosis-1 \
-  --node https://osmosis-rpc.noders.services:443 --fees 3000uosmo \
+  --node https://osmosis-rpc.noders.services:443 --fees 20000uosmo \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ osmosisd tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 osmosisd tx staking delegate $(osmosisd keys show KEY --bech val -a) 1000000uosmo \
 --chain-id osmosis-1 \
---node https://osmosis-rpc.noders.services:443 --fees 3000uosmo \
+--node https://osmosis-rpc.noders.services:443 --fees 20000uosmo \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ osmosisd tx staking delegate $(osmosisd keys show KEY --bech val -a) 1000000uosm
 ```js
 osmosisd tx staking delegate VALIDATOR_ADDRESS 1000000uosmo \
 --chain-id osmosis-1 \
---node https://osmosis-rpc.noders.services:443 --fees 3000uosmo \
+--node https://osmosis-rpc.noders.services:443 --fees 20000uosmo \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ osmosisd tx staking delegate VALIDATOR_ADDRESS 1000000uosmo \
 ```js
 osmosisd tx staking redelegate $(osmosisd keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000uosmo \
   --chain-id osmosis-1 \
-  --node https://osmosis-rpc.noders.services:443 --fees 3000uosmo \
+  --node https://osmosis-rpc.noders.services:443 --fees 20000uosmo \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ osmosisd tx staking redelegate $(osmosisd keys show KEY --bech val -a) VALIDATOR
 ```js
 osmosisd tx staking unbond $(osmosisd keys show KEY --bech val -a) uosmo \
   --chain-id andromeda-1 \
-  --node https://osmosis-rpc.noders.services:443 --fees 3000uosmo \
+  --node https://osmosis-rpc.noders.services:443 --fees 20000uosmo \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ osmosisd query gov proposals --node https://osmosis-rpc.noders.services:443
 ```js
 osmosisd query gov proposal PROPOSAL_NUMBER \
   --chain-id osmosis-1 \
-  --node https://osmosis-rpc.noders.services:443 --fees 3000uosmo \
+  --node https://osmosis-rpc.noders.services:443 --fees 20000uosmo \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ osmosisd query gov proposal PROPOSAL_NUMBER \
 ```js
 osmosisd tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id osmosis-1 \
-  --node https://osmosis-rpc.noders.services:443 --fees 3000uosmo \
+  --node https://osmosis-rpc.noders.services:443 --fees 20000uosmo \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ osmosisd tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id osmosis-1 \
-  --node https://osmosis-rpc.noders.services:443 --fees 3000uosmo \
+  --node https://osmosis-rpc.noders.services:443 --fees 20000uosmo \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ osmosisd tx staking edit-validator \
 --chain-id osmosis-1 \
 --commission-rate 0.05 \
 --from KEY \
---node https://osmosis-rpc.noders.services:443 --fees 3000uosmo \
+--node https://osmosis-rpc.noders.services:443 --fees 20000uosmo \
 ```
 
 ### Unjail
 ```js
 osmosisd tx slashing unjail \
   --chain-id osmosis-1 \
-  --node https://osmosis-rpc.noders.services:443 --fees 3000uosmo \
+  --node https://osmosis-rpc.noders.services:443 --fees 20000uosmo \
   --from KEY
 ```
 

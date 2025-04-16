@@ -47,7 +47,7 @@ crossfid q bank balances $(crossfid keys show KEY -a) --node https://crossfi-t-r
 ```js
 crossfid tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000mpx \
   --chain-id crossfi-evm-testnet-1 \
-  --node https://crossfi-t-rpc.noders.services:443 --fees 3000mpx \
+  --node https://crossfi-t-rpc.noders.services:443 --fees 300000000000mpx \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ crossfid tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000mpx \
 ```js
 crossfid tx distribution withdraw-all-rewards \
   --chain-id crossfi-evm-testnet-1 \
-  --node https://crossfi-t-rpc.noders.services:443 --fees 3000mpx \
+  --node https://crossfi-t-rpc.noders.services:443 --fees 300000000000mpx \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ crossfid tx distribution withdraw-all-rewards \
 crossfid tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id crossfi-evm-testnet-1 \
-  --node https://crossfi-t-rpc.noders.services:443 --fees 3000mpx \
+  --node https://crossfi-t-rpc.noders.services:443 --fees 300000000000mpx \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ crossfid tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 crossfid tx staking delegate $(crossfid keys show KEY --bech val -a) 1000000mpx \
 --chain-id crossfi-evm-testnet-1 \
---node https://crossfi-t-rpc.noders.services:443 --fees 3000mpx \
+--node https://crossfi-t-rpc.noders.services:443 --fees 300000000000mpx \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ crossfid tx staking delegate $(crossfid keys show KEY --bech val -a) 1000000mpx 
 ```js
 crossfid tx staking delegate VALIDATOR_ADDRESS 1000000mpx \
 --chain-id crossfi-evm-testnet-1 \
---node https://crossfi-t-rpc.noders.services:443 --fees 3000mpx \
+--node https://crossfi-t-rpc.noders.services:443 --fees 300000000000mpx \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ crossfid tx staking delegate VALIDATOR_ADDRESS 1000000mpx \
 ```js
 crossfid tx staking redelegate $(crossfid keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000mpx \
   --chain-id crossfi-evm-testnet-1 \
-  --node https://crossfi-t-rpc.noders.services:443 --fees 3000mpx \
+  --node https://crossfi-t-rpc.noders.services:443 --fees 300000000000mpx \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ crossfid tx staking redelegate $(crossfid keys show KEY --bech val -a) VALIDATOR
 ```js
 crossfid tx staking unbond $(crossfid keys show KEY --bech val -a) mpx \
   --chain-id andromeda-1 \
-  --node https://crossfi-t-rpc.noders.services:443 --fees 3000mpx \
+  --node https://crossfi-t-rpc.noders.services:443 --fees 300000000000mpx \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ crossfid query gov proposals --node https://crossfi-t-rpc.noders.services:443
 ```js
 crossfid query gov proposal PROPOSAL_NUMBER \
   --chain-id crossfi-evm-testnet-1 \
-  --node https://crossfi-t-rpc.noders.services:443 --fees 3000mpx \
+  --node https://crossfi-t-rpc.noders.services:443 --fees 300000000000mpx \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ crossfid query gov proposal PROPOSAL_NUMBER \
 ```js
 crossfid tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id crossfi-evm-testnet-1 \
-  --node https://crossfi-t-rpc.noders.services:443 --fees 3000mpx \
+  --node https://crossfi-t-rpc.noders.services:443 --fees 300000000000mpx \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ crossfid tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id crossfi-evm-testnet-1 \
-  --node https://crossfi-t-rpc.noders.services:443 --fees 3000mpx \
+  --node https://crossfi-t-rpc.noders.services:443 --fees 300000000000mpx \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ crossfid tx staking edit-validator \
 --chain-id crossfi-evm-testnet-1 \
 --commission-rate 0.05 \
 --from KEY \
---node https://crossfi-t-rpc.noders.services:443 --fees 3000mpx \
+--node https://crossfi-t-rpc.noders.services:443 --fees 300000000000mpx \
 ```
 
 ### Unjail
 ```js
 crossfid tx slashing unjail \
   --chain-id crossfi-evm-testnet-1 \
-  --node https://crossfi-t-rpc.noders.services:443 --fees 3000mpx \
+  --node https://crossfi-t-rpc.noders.services:443 --fees 300000000000mpx \
   --from KEY
 ```
 

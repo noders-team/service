@@ -47,7 +47,7 @@ rebusd q bank balances $(rebusd keys show KEY -a) --node https://rebus-rpc.noder
 ```js
 rebusd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000arebus \
   --chain-id reb_1111-1 \
-  --node https://rebus-rpc.noders.services:443 --fees 3000arebus \
+  --node https://rebus-rpc.noders.services:443 --fees 300000000000arebus \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ rebusd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000arebus \
 ```js
 rebusd tx distribution withdraw-all-rewards \
   --chain-id reb_1111-1 \
-  --node https://rebus-rpc.noders.services:443 --fees 3000arebus \
+  --node https://rebus-rpc.noders.services:443 --fees 300000000000arebus \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ rebusd tx distribution withdraw-all-rewards \
 rebusd tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id reb_1111-1 \
-  --node https://rebus-rpc.noders.services:443 --fees 3000arebus \
+  --node https://rebus-rpc.noders.services:443 --fees 300000000000arebus \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ rebusd tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 rebusd tx staking delegate $(rebusd keys show KEY --bech val -a) 1000000arebus \
 --chain-id reb_1111-1 \
---node https://rebus-rpc.noders.services:443 --fees 3000arebus \
+--node https://rebus-rpc.noders.services:443 --fees 300000000000arebus \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ rebusd tx staking delegate $(rebusd keys show KEY --bech val -a) 1000000arebus \
 ```js
 rebusd tx staking delegate VALIDATOR_ADDRESS 1000000arebus \
 --chain-id reb_1111-1 \
---node https://rebus-rpc.noders.services:443 --fees 3000arebus \
+--node https://rebus-rpc.noders.services:443 --fees 300000000000arebus \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ rebusd tx staking delegate VALIDATOR_ADDRESS 1000000arebus \
 ```js
 rebusd tx staking redelegate $(rebusd keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000arebus \
   --chain-id reb_1111-1 \
-  --node https://rebus-rpc.noders.services:443 --fees 3000arebus \
+  --node https://rebus-rpc.noders.services:443 --fees 300000000000arebus \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ rebusd tx staking redelegate $(rebusd keys show KEY --bech val -a) VALIDATOR_ADD
 ```js
 rebusd tx staking unbond $(rebusd keys show KEY --bech val -a) arebus \
   --chain-id andromeda-1 \
-  --node https://rebus-rpc.noders.services:443 --fees 3000arebus \
+  --node https://rebus-rpc.noders.services:443 --fees 300000000000arebus \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ rebusd query gov proposals --node https://rebus-rpc.noders.services:443
 ```js
 rebusd query gov proposal PROPOSAL_NUMBER \
   --chain-id reb_1111-1 \
-  --node https://rebus-rpc.noders.services:443 --fees 3000arebus \
+  --node https://rebus-rpc.noders.services:443 --fees 300000000000arebus \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ rebusd query gov proposal PROPOSAL_NUMBER \
 ```js
 rebusd tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id reb_1111-1 \
-  --node https://rebus-rpc.noders.services:443 --fees 3000arebus \
+  --node https://rebus-rpc.noders.services:443 --fees 300000000000arebus \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ rebusd tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id reb_1111-1 \
-  --node https://rebus-rpc.noders.services:443 --fees 3000arebus \
+  --node https://rebus-rpc.noders.services:443 --fees 300000000000arebus \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ rebusd tx staking edit-validator \
 --chain-id reb_1111-1 \
 --commission-rate 0.05 \
 --from KEY \
---node https://rebus-rpc.noders.services:443 --fees 3000arebus \
+--node https://rebus-rpc.noders.services:443 --fees 300000000000arebus \
 ```
 
 ### Unjail
 ```js
 rebusd tx slashing unjail \
   --chain-id reb_1111-1 \
-  --node https://rebus-rpc.noders.services:443 --fees 3000arebus \
+  --node https://rebus-rpc.noders.services:443 --fees 300000000000arebus \
   --from KEY
 ```
 

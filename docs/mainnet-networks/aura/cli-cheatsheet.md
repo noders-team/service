@@ -47,7 +47,7 @@ aurad q bank balances $(aurad keys show KEY -a) --node https://aura-rpc.noders.s
 ```js
 aurad tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uaura \
   --chain-id aura_6322-2 \
-  --node https://aura-rpc.noders.services:443 --fees 3000uaura \
+  --node https://aura-rpc.noders.services:443 --fees 20000uaura \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ aurad tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uaura \
 ```js
 aurad tx distribution withdraw-all-rewards \
   --chain-id aura_6322-2 \
-  --node https://aura-rpc.noders.services:443 --fees 3000uaura \
+  --node https://aura-rpc.noders.services:443 --fees 20000uaura \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ aurad tx distribution withdraw-all-rewards \
 aurad tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id aura_6322-2 \
-  --node https://aura-rpc.noders.services:443 --fees 3000uaura \
+  --node https://aura-rpc.noders.services:443 --fees 20000uaura \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ aurad tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 aurad tx staking delegate $(aurad keys show KEY --bech val -a) 1000000uaura \
 --chain-id aura_6322-2 \
---node https://aura-rpc.noders.services:443 --fees 3000uaura \
+--node https://aura-rpc.noders.services:443 --fees 20000uaura \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ aurad tx staking delegate $(aurad keys show KEY --bech val -a) 1000000uaura \
 ```js
 aurad tx staking delegate VALIDATOR_ADDRESS 1000000uaura \
 --chain-id aura_6322-2 \
---node https://aura-rpc.noders.services:443 --fees 3000uaura \
+--node https://aura-rpc.noders.services:443 --fees 20000uaura \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ aurad tx staking delegate VALIDATOR_ADDRESS 1000000uaura \
 ```js
 aurad tx staking redelegate $(aurad keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000uaura \
   --chain-id aura_6322-2 \
-  --node https://aura-rpc.noders.services:443 --fees 3000uaura \
+  --node https://aura-rpc.noders.services:443 --fees 20000uaura \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ aurad tx staking redelegate $(aurad keys show KEY --bech val -a) VALIDATOR_ADDRE
 ```js
 aurad tx staking unbond $(aurad keys show KEY --bech val -a) uaura \
   --chain-id andromeda-1 \
-  --node https://aura-rpc.noders.services:443 --fees 3000uaura \
+  --node https://aura-rpc.noders.services:443 --fees 20000uaura \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ aurad query gov proposals --node https://aura-rpc.noders.services:443
 ```js
 aurad query gov proposal PROPOSAL_NUMBER \
   --chain-id aura_6322-2 \
-  --node https://aura-rpc.noders.services:443 --fees 3000uaura \
+  --node https://aura-rpc.noders.services:443 --fees 20000uaura \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ aurad query gov proposal PROPOSAL_NUMBER \
 ```js
 aurad tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id aura_6322-2 \
-  --node https://aura-rpc.noders.services:443 --fees 3000uaura \
+  --node https://aura-rpc.noders.services:443 --fees 20000uaura \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ aurad tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id aura_6322-2 \
-  --node https://aura-rpc.noders.services:443 --fees 3000uaura \
+  --node https://aura-rpc.noders.services:443 --fees 20000uaura \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ aurad tx staking edit-validator \
 --chain-id aura_6322-2 \
 --commission-rate 0.05 \
 --from KEY \
---node https://aura-rpc.noders.services:443 --fees 3000uaura \
+--node https://aura-rpc.noders.services:443 --fees 20000uaura \
 ```
 
 ### Unjail
 ```js
 aurad tx slashing unjail \
   --chain-id aura_6322-2 \
-  --node https://aura-rpc.noders.services:443 --fees 3000uaura \
+  --node https://aura-rpc.noders.services:443 --fees 20000uaura \
   --from KEY
 ```
 

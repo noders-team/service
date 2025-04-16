@@ -47,7 +47,7 @@ story q bank balances $(story keys show KEY -a) --node https://story-t-rpc.noder
 ```js
 story tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000aip \
   --chain-id devnet-1 \
-  --node https://story-t-rpc.noders.services:443 --fees 3000aip \
+  --node https://story-t-rpc.noders.services:443 --fees 300000000000aip \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ story tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000aip \
 ```js
 story tx distribution withdraw-all-rewards \
   --chain-id devnet-1 \
-  --node https://story-t-rpc.noders.services:443 --fees 3000aip \
+  --node https://story-t-rpc.noders.services:443 --fees 300000000000aip \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ story tx distribution withdraw-all-rewards \
 story tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id devnet-1 \
-  --node https://story-t-rpc.noders.services:443 --fees 3000aip \
+  --node https://story-t-rpc.noders.services:443 --fees 300000000000aip \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ story tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 story tx staking delegate $(story keys show KEY --bech val -a) 1000000aip \
 --chain-id devnet-1 \
---node https://story-t-rpc.noders.services:443 --fees 3000aip \
+--node https://story-t-rpc.noders.services:443 --fees 300000000000aip \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ story tx staking delegate $(story keys show KEY --bech val -a) 1000000aip \
 ```js
 story tx staking delegate VALIDATOR_ADDRESS 1000000aip \
 --chain-id devnet-1 \
---node https://story-t-rpc.noders.services:443 --fees 3000aip \
+--node https://story-t-rpc.noders.services:443 --fees 300000000000aip \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ story tx staking delegate VALIDATOR_ADDRESS 1000000aip \
 ```js
 story tx staking redelegate $(story keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000aip \
   --chain-id devnet-1 \
-  --node https://story-t-rpc.noders.services:443 --fees 3000aip \
+  --node https://story-t-rpc.noders.services:443 --fees 300000000000aip \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ story tx staking redelegate $(story keys show KEY --bech val -a) VALIDATOR_ADDRE
 ```js
 story tx staking unbond $(story keys show KEY --bech val -a) aip \
   --chain-id andromeda-1 \
-  --node https://story-t-rpc.noders.services:443 --fees 3000aip \
+  --node https://story-t-rpc.noders.services:443 --fees 300000000000aip \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ story query gov proposals --node https://story-t-rpc.noders.services:443
 ```js
 story query gov proposal PROPOSAL_NUMBER \
   --chain-id devnet-1 \
-  --node https://story-t-rpc.noders.services:443 --fees 3000aip \
+  --node https://story-t-rpc.noders.services:443 --fees 300000000000aip \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ story query gov proposal PROPOSAL_NUMBER \
 ```js
 story tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id devnet-1 \
-  --node https://story-t-rpc.noders.services:443 --fees 3000aip \
+  --node https://story-t-rpc.noders.services:443 --fees 300000000000aip \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ story tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id devnet-1 \
-  --node https://story-t-rpc.noders.services:443 --fees 3000aip \
+  --node https://story-t-rpc.noders.services:443 --fees 300000000000aip \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ story tx staking edit-validator \
 --chain-id devnet-1 \
 --commission-rate 0.05 \
 --from KEY \
---node https://story-t-rpc.noders.services:443 --fees 3000aip \
+--node https://story-t-rpc.noders.services:443 --fees 300000000000aip \
 ```
 
 ### Unjail
 ```js
 story tx slashing unjail \
   --chain-id devnet-1 \
-  --node https://story-t-rpc.noders.services:443 --fees 3000aip \
+  --node https://story-t-rpc.noders.services:443 --fees 300000000000aip \
   --from KEY
 ```
 

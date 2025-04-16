@@ -47,7 +47,7 @@ canined q bank balances $(canined keys show KEY -a) --node https://jackal-rpc.no
 ```js
 canined tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000ujckl \
   --chain-id jackal-1 \
-  --node https://jackal-rpc.noders.services:443 --fees 3000ujckl \
+  --node https://jackal-rpc.noders.services:443 --fees 20000ujckl \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ canined tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000ujckl \
 ```js
 canined tx distribution withdraw-all-rewards \
   --chain-id jackal-1 \
-  --node https://jackal-rpc.noders.services:443 --fees 3000ujckl \
+  --node https://jackal-rpc.noders.services:443 --fees 20000ujckl \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ canined tx distribution withdraw-all-rewards \
 canined tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id jackal-1 \
-  --node https://jackal-rpc.noders.services:443 --fees 3000ujckl \
+  --node https://jackal-rpc.noders.services:443 --fees 20000ujckl \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ canined tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 canined tx staking delegate $(canined keys show KEY --bech val -a) 1000000ujckl \
 --chain-id jackal-1 \
---node https://jackal-rpc.noders.services:443 --fees 3000ujckl \
+--node https://jackal-rpc.noders.services:443 --fees 20000ujckl \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ canined tx staking delegate $(canined keys show KEY --bech val -a) 1000000ujckl 
 ```js
 canined tx staking delegate VALIDATOR_ADDRESS 1000000ujckl \
 --chain-id jackal-1 \
---node https://jackal-rpc.noders.services:443 --fees 3000ujckl \
+--node https://jackal-rpc.noders.services:443 --fees 20000ujckl \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ canined tx staking delegate VALIDATOR_ADDRESS 1000000ujckl \
 ```js
 canined tx staking redelegate $(canined keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000ujckl \
   --chain-id jackal-1 \
-  --node https://jackal-rpc.noders.services:443 --fees 3000ujckl \
+  --node https://jackal-rpc.noders.services:443 --fees 20000ujckl \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ canined tx staking redelegate $(canined keys show KEY --bech val -a) VALIDATOR_A
 ```js
 canined tx staking unbond $(canined keys show KEY --bech val -a) ujckl \
   --chain-id andromeda-1 \
-  --node https://jackal-rpc.noders.services:443 --fees 3000ujckl \
+  --node https://jackal-rpc.noders.services:443 --fees 20000ujckl \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ canined query gov proposals --node https://jackal-rpc.noders.services:443
 ```js
 canined query gov proposal PROPOSAL_NUMBER \
   --chain-id jackal-1 \
-  --node https://jackal-rpc.noders.services:443 --fees 3000ujckl \
+  --node https://jackal-rpc.noders.services:443 --fees 20000ujckl \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ canined query gov proposal PROPOSAL_NUMBER \
 ```js
 canined tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id jackal-1 \
-  --node https://jackal-rpc.noders.services:443 --fees 3000ujckl \
+  --node https://jackal-rpc.noders.services:443 --fees 20000ujckl \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ canined tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id jackal-1 \
-  --node https://jackal-rpc.noders.services:443 --fees 3000ujckl \
+  --node https://jackal-rpc.noders.services:443 --fees 20000ujckl \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ canined tx staking edit-validator \
 --chain-id jackal-1 \
 --commission-rate 0.05 \
 --from KEY \
---node https://jackal-rpc.noders.services:443 --fees 3000ujckl \
+--node https://jackal-rpc.noders.services:443 --fees 20000ujckl \
 ```
 
 ### Unjail
 ```js
 canined tx slashing unjail \
   --chain-id jackal-1 \
-  --node https://jackal-rpc.noders.services:443 --fees 3000ujckl \
+  --node https://jackal-rpc.noders.services:443 --fees 20000ujckl \
   --from KEY
 ```
 

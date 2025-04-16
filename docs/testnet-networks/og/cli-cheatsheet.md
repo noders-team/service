@@ -47,7 +47,7 @@ This cheatsheet collects commonly used CLI commands for node operators to easily
 ```js
 0gchaind tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000ua0gi \
   --chain-id zgtendermint_16600-2 \
-  --node https://og-t-rpc.noders.services:443 --fees 3000ua0gi \
+  --node https://og-t-rpc.noders.services:443 --fees 20000ua0gi \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ This cheatsheet collects commonly used CLI commands for node operators to easily
 ```js
 0gchaind tx distribution withdraw-all-rewards \
   --chain-id zgtendermint_16600-2 \
-  --node https://og-t-rpc.noders.services:443 --fees 3000ua0gi \
+  --node https://og-t-rpc.noders.services:443 --fees 20000ua0gi \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ This cheatsheet collects commonly used CLI commands for node operators to easily
 0gchaind tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id zgtendermint_16600-2 \
-  --node https://og-t-rpc.noders.services:443 --fees 3000ua0gi \
+  --node https://og-t-rpc.noders.services:443 --fees 20000ua0gi \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ This cheatsheet collects commonly used CLI commands for node operators to easily
 ```js
 0gchaind tx staking delegate $(0gchaind keys show KEY --bech val -a) 1000000ua0gi \
 --chain-id zgtendermint_16600-2 \
---node https://og-t-rpc.noders.services:443 --fees 3000ua0gi \
+--node https://og-t-rpc.noders.services:443 --fees 20000ua0gi \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ This cheatsheet collects commonly used CLI commands for node operators to easily
 ```js
 0gchaind tx staking delegate VALIDATOR_ADDRESS 1000000ua0gi \
 --chain-id zgtendermint_16600-2 \
---node https://og-t-rpc.noders.services:443 --fees 3000ua0gi \
+--node https://og-t-rpc.noders.services:443 --fees 20000ua0gi \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ This cheatsheet collects commonly used CLI commands for node operators to easily
 ```js
 0gchaind tx staking redelegate $(0gchaind keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000ua0gi \
   --chain-id zgtendermint_16600-2 \
-  --node https://og-t-rpc.noders.services:443 --fees 3000ua0gi \
+  --node https://og-t-rpc.noders.services:443 --fees 20000ua0gi \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ This cheatsheet collects commonly used CLI commands for node operators to easily
 ```js
 0gchaind tx staking unbond $(0gchaind keys show KEY --bech val -a) ua0gi \
   --chain-id andromeda-1 \
-  --node https://og-t-rpc.noders.services:443 --fees 3000ua0gi \
+  --node https://og-t-rpc.noders.services:443 --fees 20000ua0gi \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ This cheatsheet collects commonly used CLI commands for node operators to easily
 ```js
 0gchaind query gov proposal PROPOSAL_NUMBER \
   --chain-id zgtendermint_16600-2 \
-  --node https://og-t-rpc.noders.services:443 --fees 3000ua0gi \
+  --node https://og-t-rpc.noders.services:443 --fees 20000ua0gi \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ This cheatsheet collects commonly used CLI commands for node operators to easily
 ```js
 0gchaind tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id zgtendermint_16600-2 \
-  --node https://og-t-rpc.noders.services:443 --fees 3000ua0gi \
+  --node https://og-t-rpc.noders.services:443 --fees 20000ua0gi \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ We use example filed values instead of capitalized dummy words for demo purpose 
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id zgtendermint_16600-2 \
-  --node https://og-t-rpc.noders.services:443 --fees 3000ua0gi \
+  --node https://og-t-rpc.noders.services:443 --fees 20000ua0gi \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ We use example filed values instead of capitalized dummy words for demo purpose 
 --chain-id zgtendermint_16600-2 \
 --commission-rate 0.05 \
 --from KEY \
---node https://og-t-rpc.noders.services:443 --fees 3000ua0gi \
+--node https://og-t-rpc.noders.services:443 --fees 20000ua0gi \
 ```
 
 ### Unjail
 ```js
 0gchaind tx slashing unjail \
   --chain-id zgtendermint_16600-2 \
-  --node https://og-t-rpc.noders.services:443 --fees 3000ua0gi \
+  --node https://og-t-rpc.noders.services:443 --fees 20000ua0gi \
   --from KEY
 ```
 

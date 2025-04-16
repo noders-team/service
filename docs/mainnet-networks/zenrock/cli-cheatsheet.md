@@ -47,7 +47,7 @@ zenrockd q bank balances $(zenrockd keys show KEY -a) --node https://zenrock-rpc
 ```js
 zenrockd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000urock \
   --chain-id diamond-1 \
-  --node https://zenrock-rpc.noders.services:443 --fees 3000urock \
+  --node https://zenrock-rpc.noders.services:443 --fees 20000urock \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ zenrockd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000urock \
 ```js
 zenrockd tx distribution withdraw-all-rewards \
   --chain-id diamond-1 \
-  --node https://zenrock-rpc.noders.services:443 --fees 3000urock \
+  --node https://zenrock-rpc.noders.services:443 --fees 20000urock \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ zenrockd tx distribution withdraw-all-rewards \
 zenrockd tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id diamond-1 \
-  --node https://zenrock-rpc.noders.services:443 --fees 3000urock \
+  --node https://zenrock-rpc.noders.services:443 --fees 20000urock \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ zenrockd tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 zenrockd tx staking delegate $(zenrockd keys show KEY --bech val -a) 1000000urock \
 --chain-id diamond-1 \
---node https://zenrock-rpc.noders.services:443 --fees 3000urock \
+--node https://zenrock-rpc.noders.services:443 --fees 20000urock \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ zenrockd tx staking delegate $(zenrockd keys show KEY --bech val -a) 1000000uroc
 ```js
 zenrockd tx staking delegate VALIDATOR_ADDRESS 1000000urock \
 --chain-id diamond-1 \
---node https://zenrock-rpc.noders.services:443 --fees 3000urock \
+--node https://zenrock-rpc.noders.services:443 --fees 20000urock \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ zenrockd tx staking delegate VALIDATOR_ADDRESS 1000000urock \
 ```js
 zenrockd tx staking redelegate $(zenrockd keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000urock \
   --chain-id diamond-1 \
-  --node https://zenrock-rpc.noders.services:443 --fees 3000urock \
+  --node https://zenrock-rpc.noders.services:443 --fees 20000urock \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ zenrockd tx staking redelegate $(zenrockd keys show KEY --bech val -a) VALIDATOR
 ```js
 zenrockd tx staking unbond $(zenrockd keys show KEY --bech val -a) urock \
   --chain-id andromeda-1 \
-  --node https://zenrock-rpc.noders.services:443 --fees 3000urock \
+  --node https://zenrock-rpc.noders.services:443 --fees 20000urock \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ zenrockd query gov proposals --node https://zenrock-rpc.noders.services:443
 ```js
 zenrockd query gov proposal PROPOSAL_NUMBER \
   --chain-id diamond-1 \
-  --node https://zenrock-rpc.noders.services:443 --fees 3000urock \
+  --node https://zenrock-rpc.noders.services:443 --fees 20000urock \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ zenrockd query gov proposal PROPOSAL_NUMBER \
 ```js
 zenrockd tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id diamond-1 \
-  --node https://zenrock-rpc.noders.services:443 --fees 3000urock \
+  --node https://zenrock-rpc.noders.services:443 --fees 20000urock \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ zenrockd tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id diamond-1 \
-  --node https://zenrock-rpc.noders.services:443 --fees 3000urock \
+  --node https://zenrock-rpc.noders.services:443 --fees 20000urock \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ zenrockd tx staking edit-validator \
 --chain-id diamond-1 \
 --commission-rate 0.05 \
 --from KEY \
---node https://zenrock-rpc.noders.services:443 --fees 3000urock \
+--node https://zenrock-rpc.noders.services:443 --fees 20000urock \
 ```
 
 ### Unjail
 ```js
 zenrockd tx slashing unjail \
   --chain-id diamond-1 \
-  --node https://zenrock-rpc.noders.services:443 --fees 3000urock \
+  --node https://zenrock-rpc.noders.services:443 --fees 20000urock \
   --from KEY
 ```
 

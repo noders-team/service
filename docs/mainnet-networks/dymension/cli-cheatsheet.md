@@ -47,7 +47,7 @@ dymd q bank balances $(dymd keys show KEY -a) --node https://dymension-rpc.noder
 ```js
 dymd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000adym \
   --chain-id dymension_1100-1 \
-  --node https://dymension-rpc.noders.services:443 --fees 300000000adym \
+  --node https://dymension-rpc.noders.services:443 --fees 300000000000adym \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ dymd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000adym \
 ```js
 dymd tx distribution withdraw-all-rewards \
   --chain-id dymension_1100-1 \
-  --node https://dymension-rpc.noders.services:443 --fees 300000000adym \
+  --node https://dymension-rpc.noders.services:443 --fees 300000000000adym \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ dymd tx distribution withdraw-all-rewards \
 dymd tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id dymension_1100-1 \
-  --node https://dymension-rpc.noders.services:443 --fees 300000000adym \
+  --node https://dymension-rpc.noders.services:443 --fees 300000000000adym \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ dymd tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 dymd tx staking delegate $(dymd keys show KEY --bech val -a) 1000000adym \
 --chain-id dymension_1100-1 \
---node https://dymension-rpc.noders.services:443 --fees 300000000adym \
+--node https://dymension-rpc.noders.services:443 --fees 300000000000adym \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ dymd tx staking delegate $(dymd keys show KEY --bech val -a) 1000000adym \
 ```js
 dymd tx staking delegate VALIDATOR_ADDRESS 1000000adym \
 --chain-id dymension_1100-1 \
---node https://dymension-rpc.noders.services:443 --fees 300000000adym \
+--node https://dymension-rpc.noders.services:443 --fees 300000000000adym \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ dymd tx staking delegate VALIDATOR_ADDRESS 1000000adym \
 ```js
 dymd tx staking redelegate $(dymd keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000adym \
   --chain-id dymension_1100-1 \
-  --node https://dymension-rpc.noders.services:443 --fees 300000000adym \
+  --node https://dymension-rpc.noders.services:443 --fees 300000000000adym \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ dymd tx staking redelegate $(dymd keys show KEY --bech val -a) VALIDATOR_ADDRESS
 ```js
 dymd tx staking unbond $(dymd keys show KEY --bech val -a) adym \
   --chain-id andromeda-1 \
-  --node https://dymension-rpc.noders.services:443 --fees 300000000adym \
+  --node https://dymension-rpc.noders.services:443 --fees 300000000000adym \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ dymd query gov proposals --node https://dymension-rpc.noders.services:443
 ```js
 dymd query gov proposal PROPOSAL_NUMBER \
   --chain-id dymension_1100-1 \
-  --node https://dymension-rpc.noders.services:443 --fees 300000000adym \
+  --node https://dymension-rpc.noders.services:443 --fees 300000000000adym \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ dymd query gov proposal PROPOSAL_NUMBER \
 ```js
 dymd tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id dymension_1100-1 \
-  --node https://dymension-rpc.noders.services:443 --fees 300000000adym \
+  --node https://dymension-rpc.noders.services:443 --fees 300000000000adym \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ dymd tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id dymension_1100-1 \
-  --node https://dymension-rpc.noders.services:443 --fees 300000000adym \
+  --node https://dymension-rpc.noders.services:443 --fees 300000000000adym \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ dymd tx staking edit-validator \
 --chain-id dymension_1100-1 \
 --commission-rate 0.05 \
 --from KEY \
---node https://dymension-rpc.noders.services:443 --fees 300000000adym \
+--node https://dymension-rpc.noders.services:443 --fees 300000000000adym \
 ```
 
 ### Unjail
 ```js
 dymd tx slashing unjail \
   --chain-id dymension_1100-1 \
-  --node https://dymension-rpc.noders.services:443 --fees 300000000adym \
+  --node https://dymension-rpc.noders.services:443 --fees 300000000000adym \
   --from KEY
 ```
 

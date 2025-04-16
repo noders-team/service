@@ -45,9 +45,9 @@ uxkp q bank balances $(uxkp keys show KEY -a) --node https://kopi-rpc.noders.ser
 
 ### Send
 ```js
-uxkp tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000abgt \
+uxkp tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000ukopi \
   --chain-id luwak-1 \
-  --node https://kopi-rpc.noders.services:443 --fees 3000abgt \
+  --node https://kopi-rpc.noders.services:443 --fees 20000ukopi \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ uxkp tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000abgt \
 ```js
 uxkp tx distribution withdraw-all-rewards \
   --chain-id luwak-1 \
-  --node https://kopi-rpc.noders.services:443 --fees 3000abgt \
+  --node https://kopi-rpc.noders.services:443 --fees 20000ukopi \
   --from KEY
 ```
 
@@ -64,39 +64,39 @@ uxkp tx distribution withdraw-all-rewards \
 uxkp tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id luwak-1 \
-  --node https://kopi-rpc.noders.services:443 --fees 3000abgt \
+  --node https://kopi-rpc.noders.services:443 --fees 20000ukopi \
   --from KEY
 ```
 
 ### Delegate tokens to yourself
 ```js
-uxkp tx staking delegate $(uxkp keys show KEY --bech val -a) 1000000abgt \
+uxkp tx staking delegate $(uxkp keys show KEY --bech val -a) 1000000ukopi \
 --chain-id luwak-1 \
---node https://kopi-rpc.noders.services:443 --fees 3000abgt \
+--node https://kopi-rpc.noders.services:443 --fees 20000ukopi \
 --from KEY
 ```
 
 ### Delegate tokens to validator
 ```js
-uxkp tx staking delegate VALIDATOR_ADDRESS 1000000abgt \
+uxkp tx staking delegate VALIDATOR_ADDRESS 1000000ukopi \
 --chain-id luwak-1 \
---node https://kopi-rpc.noders.services:443 --fees 3000abgt \
+--node https://kopi-rpc.noders.services:443 --fees 20000ukopi \
 --from KEY
 ```
 
 ### Redelegate tokens to another validator
 ```js
-uxkp tx staking redelegate $(uxkp keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000abgt \
+uxkp tx staking redelegate $(uxkp keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000ukopi \
   --chain-id luwak-1 \
-  --node https://kopi-rpc.noders.services:443 --fees 3000abgt \
+  --node https://kopi-rpc.noders.services:443 --fees 20000ukopi \
   --from KEY
 ```
 
 ### Unbond tokens from your validator
 ```js
-uxkp tx staking unbond $(uxkp keys show KEY --bech val -a) abgt \
+uxkp tx staking unbond $(uxkp keys show KEY --bech val -a) ukopi \
   --chain-id andromeda-1 \
-  --node https://kopi-rpc.noders.services:443 --fees 3000abgt \
+  --node https://kopi-rpc.noders.services:443 --fees 20000ukopi \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ uxkp query gov proposals --node https://kopi-rpc.noders.services:443
 ```js
 uxkp query gov proposal PROPOSAL_NUMBER \
   --chain-id luwak-1 \
-  --node https://kopi-rpc.noders.services:443 --fees 3000abgt \
+  --node https://kopi-rpc.noders.services:443 --fees 20000ukopi \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ uxkp query gov proposal PROPOSAL_NUMBER \
 ```js
 uxkp tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id luwak-1 \
-  --node https://kopi-rpc.noders.services:443 --fees 3000abgt \
+  --node https://kopi-rpc.noders.services:443 --fees 20000ukopi \
   --from KEY
 ```
 
@@ -133,7 +133,7 @@ We use example filed values instead of capitalized dummy words for demo purpose 
 :::
 ```js
 uxkp tx staking create-validator \
-  --amount 1000000abgt \
+  --amount 1000000ukopi \
   --commission-max-change-rate "0.05" \
   --commission-max-rate "0.10" \
   --commission-rate "0.05" \
@@ -145,7 +145,7 @@ uxkp tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id luwak-1 \
-  --node https://kopi-rpc.noders.services:443 --fees 3000abgt \
+  --node https://kopi-rpc.noders.services:443 --fees 20000ukopi \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ uxkp tx staking edit-validator \
 --chain-id luwak-1 \
 --commission-rate 0.05 \
 --from KEY \
---node https://kopi-rpc.noders.services:443 --fees 3000abgt \
+--node https://kopi-rpc.noders.services:443 --fees 20000ukopi \
 ```
 
 ### Unjail
 ```js
 uxkp tx slashing unjail \
   --chain-id luwak-1 \
-  --node https://kopi-rpc.noders.services:443 --fees 3000abgt \
+  --node https://kopi-rpc.noders.services:443 --fees 20000ukopi \
   --from KEY
 ```
 
@@ -208,7 +208,7 @@ curl -sS https://kopi-rpc.noders.services:443/net_info | jq -r '.result.peers[] 
 
 ### Set minimum gas price
 ```js
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.001abgt\"/" ~/.kopid/config/app.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.001ukopi\"/" ~/.kopid/config/app.toml
 ```
 
 ###Enable prometheus

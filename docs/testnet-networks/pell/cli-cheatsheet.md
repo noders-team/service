@@ -47,7 +47,7 @@ pellcored q bank balances $(pellcored keys show KEY -a) --node https://pell-t-rp
 ```js
 pellcored tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000apell \
   --chain-id ignite_186-1 \
-  --node https://pell-t-rpc.noders.services:443 --fees 500000000apell \
+  --node https://pell-t-rpc.noders.services:443 --fees 300000000000apell \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ pellcored tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000apell \
 ```js
 pellcored tx distribution withdraw-all-rewards \
   --chain-id ignite_186-1 \
-  --node https://pell-t-rpc.noders.services:443 --fees 500000000apell \
+  --node https://pell-t-rpc.noders.services:443 --fees 300000000000apell \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ pellcored tx distribution withdraw-all-rewards \
 pellcored tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id ignite_186-1 \
-  --node https://pell-t-rpc.noders.services:443 --fees 500000000apell \
+  --node https://pell-t-rpc.noders.services:443 --fees 300000000000apell \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ pellcored tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 pellcored tx staking delegate $(pellcored keys show KEY --bech val -a) 1000000apell \
 --chain-id ignite_186-1 \
---node https://pell-t-rpc.noders.services:443 --fees 500000000apell \
+--node https://pell-t-rpc.noders.services:443 --fees 300000000000apell \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ pellcored tx staking delegate $(pellcored keys show KEY --bech val -a) 1000000ap
 ```js
 pellcored tx staking delegate VALIDATOR_ADDRESS 1000000apell \
 --chain-id ignite_186-1 \
---node https://pell-t-rpc.noders.services:443 --fees 500000000apell \
+--node https://pell-t-rpc.noders.services:443 --fees 300000000000apell \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ pellcored tx staking delegate VALIDATOR_ADDRESS 1000000apell \
 ```js
 pellcored tx staking redelegate $(pellcored keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000apell \
   --chain-id ignite_186-1 \
-  --node https://pell-t-rpc.noders.services:443 --fees 500000000apell \
+  --node https://pell-t-rpc.noders.services:443 --fees 300000000000apell \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ pellcored tx staking redelegate $(pellcored keys show KEY --bech val -a) VALIDAT
 ```js
 pellcored tx staking unbond $(pellcored keys show KEY --bech val -a) apell \
   --chain-id andromeda-1 \
-  --node https://pell-t-rpc.noders.services:443 --fees 500000000apell \
+  --node https://pell-t-rpc.noders.services:443 --fees 300000000000apell \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ pellcored query gov proposals --node https://pell-t-rpc.noders.services:443
 ```js
 pellcored query gov proposal PROPOSAL_NUMBER \
   --chain-id ignite_186-1 \
-  --node https://pell-t-rpc.noders.services:443 --fees 500000000apell \
+  --node https://pell-t-rpc.noders.services:443 --fees 300000000000apell \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ pellcored query gov proposal PROPOSAL_NUMBER \
 ```js
 pellcored tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id ignite_186-1 \
-  --node https://pell-t-rpc.noders.services:443 --fees 500000000apell \
+  --node https://pell-t-rpc.noders.services:443 --fees 300000000000apell \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ pellcored tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id ignite_186-1 \
-  --node https://pell-t-rpc.noders.services:443 --fees 500000000apell \
+  --node https://pell-t-rpc.noders.services:443 --fees 300000000000apell \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ pellcored tx staking edit-validator \
 --chain-id ignite_186-1 \
 --commission-rate 0.05 \
 --from KEY \
---node https://pell-t-rpc.noders.services:443 --fees 500000000apell \
+--node https://pell-t-rpc.noders.services:443 --fees 300000000000apell \
 ```
 
 ### Unjail
 ```js
 pellcored tx slashing unjail \
   --chain-id ignite_186-1 \
-  --node https://pell-t-rpc.noders.services:443 --fees 500000000apell \
+  --node https://pell-t-rpc.noders.services:443 --fees 300000000000apell \
   --from KEY
 ```
 

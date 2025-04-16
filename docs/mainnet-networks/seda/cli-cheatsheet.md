@@ -47,7 +47,7 @@ sedad q bank balances $(sedad keys show KEY -a) --node https://seda-rpc.noders.s
 ```js
 sedad tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000aseda \
   --chain-id seda-1 \
-  --node https://seda-rpc.noders.services:443 --fees 3000000aseda \
+  --node https://seda-rpc.noders.services:443 --fees 300000000000aseda \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ sedad tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000aseda \
 ```js
 sedad tx distribution withdraw-all-rewards \
   --chain-id seda-1 \
-  --node https://seda-rpc.noders.services:443 --fees 3000000aseda \
+  --node https://seda-rpc.noders.services:443 --fees 300000000000aseda \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ sedad tx distribution withdraw-all-rewards \
 sedad tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id seda-1 \
-  --node https://seda-rpc.noders.services:443 --fees 3000000aseda \
+  --node https://seda-rpc.noders.services:443 --fees 300000000000aseda \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ sedad tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 sedad tx staking delegate $(sedad keys show KEY --bech val -a) 1000000aseda \
 --chain-id seda-1 \
---node https://seda-rpc.noders.services:443 --fees 3000000aseda \
+--node https://seda-rpc.noders.services:443 --fees 300000000000aseda \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ sedad tx staking delegate $(sedad keys show KEY --bech val -a) 1000000aseda \
 ```js
 sedad tx staking delegate VALIDATOR_ADDRESS 1000000aseda \
 --chain-id seda-1 \
---node https://seda-rpc.noders.services:443 --fees 3000000aseda \
+--node https://seda-rpc.noders.services:443 --fees 300000000000aseda \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ sedad tx staking delegate VALIDATOR_ADDRESS 1000000aseda \
 ```js
 sedad tx staking redelegate $(sedad keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000aseda \
   --chain-id seda-1 \
-  --node https://seda-rpc.noders.services:443 --fees 3000000aseda \
+  --node https://seda-rpc.noders.services:443 --fees 300000000000aseda \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ sedad tx staking redelegate $(sedad keys show KEY --bech val -a) VALIDATOR_ADDRE
 ```js
 sedad tx staking unbond $(sedad keys show KEY --bech val -a) aseda \
   --chain-id andromeda-1 \
-  --node https://seda-rpc.noders.services:443 --fees 3000000aseda \
+  --node https://seda-rpc.noders.services:443 --fees 300000000000aseda \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ sedad query gov proposals --node https://seda-rpc.noders.services:443
 ```js
 sedad query gov proposal PROPOSAL_NUMBER \
   --chain-id seda-1 \
-  --node https://seda-rpc.noders.services:443 --fees 3000000aseda \
+  --node https://seda-rpc.noders.services:443 --fees 300000000000aseda \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ sedad query gov proposal PROPOSAL_NUMBER \
 ```js
 sedad tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id seda-1 \
-  --node https://seda-rpc.noders.services:443 --fees 3000000aseda \
+  --node https://seda-rpc.noders.services:443 --fees 300000000000aseda \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ sedad tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id seda-1 \
-  --node https://seda-rpc.noders.services:443 --fees 3000000aseda \
+  --node https://seda-rpc.noders.services:443 --fees 300000000000aseda \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ sedad tx staking edit-validator \
 --chain-id seda-1 \
 --commission-rate 0.05 \
 --from KEY \
---node https://seda-rpc.noders.services:443 --fees 3000000aseda \
+--node https://seda-rpc.noders.services:443 --fees 300000000000aseda \
 ```
 
 ### Unjail
 ```js
 sedad tx slashing unjail \
   --chain-id seda-1 \
-  --node https://seda-rpc.noders.services:443 --fees 3000000aseda \
+  --node https://seda-rpc.noders.services:443 --fees 300000000000aseda \
   --from KEY
 ```
 

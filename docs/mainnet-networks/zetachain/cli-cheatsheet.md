@@ -47,7 +47,7 @@ zetacored q bank balances $(zetacored keys show KEY -a) --node https://zetachain
 ```js
 zetacored tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000azeta \
   --chain-id zetachain_7000-1 \
-  --node https://zetachain-rpc.noders.services:443 --fees 3000azeta \
+  --node https://zetachain-rpc.noders.services:443 --fees 300000000000azeta \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ zetacored tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000azeta \
 ```js
 zetacored tx distribution withdraw-all-rewards \
   --chain-id zetachain_7000-1 \
-  --node https://zetachain-rpc.noders.services:443 --fees 3000azeta \
+  --node https://zetachain-rpc.noders.services:443 --fees 300000000000azeta \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ zetacored tx distribution withdraw-all-rewards \
 zetacored tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id zetachain_7000-1 \
-  --node https://zetachain-rpc.noders.services:443 --fees 3000azeta \
+  --node https://zetachain-rpc.noders.services:443 --fees 300000000000azeta \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ zetacored tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 zetacored tx staking delegate $(zetacored keys show KEY --bech val -a) 1000000azeta \
 --chain-id zetachain_7000-1 \
---node https://zetachain-rpc.noders.services:443 --fees 3000azeta \
+--node https://zetachain-rpc.noders.services:443 --fees 300000000000azeta \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ zetacored tx staking delegate $(zetacored keys show KEY --bech val -a) 1000000az
 ```js
 zetacored tx staking delegate VALIDATOR_ADDRESS 1000000azeta \
 --chain-id zetachain_7000-1 \
---node https://zetachain-rpc.noders.services:443 --fees 3000azeta \
+--node https://zetachain-rpc.noders.services:443 --fees 300000000000azeta \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ zetacored tx staking delegate VALIDATOR_ADDRESS 1000000azeta \
 ```js
 zetacored tx staking redelegate $(zetacored keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000azeta \
   --chain-id zetachain_7000-1 \
-  --node https://zetachain-rpc.noders.services:443 --fees 3000azeta \
+  --node https://zetachain-rpc.noders.services:443 --fees 300000000000azeta \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ zetacored tx staking redelegate $(zetacored keys show KEY --bech val -a) VALIDAT
 ```js
 zetacored tx staking unbond $(zetacored keys show KEY --bech val -a) azeta \
   --chain-id andromeda-1 \
-  --node https://zetachain-rpc.noders.services:443 --fees 3000azeta \
+  --node https://zetachain-rpc.noders.services:443 --fees 300000000000azeta \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ zetacored query gov proposals --node https://zetachain-rpc.noders.services:443
 ```js
 zetacored query gov proposal PROPOSAL_NUMBER \
   --chain-id zetachain_7000-1 \
-  --node https://zetachain-rpc.noders.services:443 --fees 3000azeta \
+  --node https://zetachain-rpc.noders.services:443 --fees 300000000000azeta \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ zetacored query gov proposal PROPOSAL_NUMBER \
 ```js
 zetacored tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id zetachain_7000-1 \
-  --node https://zetachain-rpc.noders.services:443 --fees 3000azeta \
+  --node https://zetachain-rpc.noders.services:443 --fees 300000000000azeta \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ zetacored tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id zetachain_7000-1 \
-  --node https://zetachain-rpc.noders.services:443 --fees 3000azeta \
+  --node https://zetachain-rpc.noders.services:443 --fees 300000000000azeta \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ zetacored tx staking edit-validator \
 --chain-id zetachain_7000-1 \
 --commission-rate 0.05 \
 --from KEY \
---node https://zetachain-rpc.noders.services:443 --fees 3000azeta \
+--node https://zetachain-rpc.noders.services:443 --fees 300000000000azeta \
 ```
 
 ### Unjail
 ```js
 zetacored tx slashing unjail \
   --chain-id zetachain_7000-1 \
-  --node https://zetachain-rpc.noders.services:443 --fees 3000azeta \
+  --node https://zetachain-rpc.noders.services:443 --fees 300000000000azeta \
   --from KEY
 ```
 

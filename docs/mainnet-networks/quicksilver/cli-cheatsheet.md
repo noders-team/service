@@ -47,7 +47,7 @@ quicksilverd q bank balances $(quicksilverd keys show KEY -a) --node https://qui
 ```js
 quicksilverd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uqck \
   --chain-id quicksilver-2 \
-  --node https://quicksilver-rpc.noders.services:443 --fees 3000uqck \
+  --node https://quicksilver-rpc.noders.services:443 --fees 20000uqck \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ quicksilverd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uqck \
 ```js
 quicksilverd tx distribution withdraw-all-rewards \
   --chain-id quicksilver-2 \
-  --node https://quicksilver-rpc.noders.services:443 --fees 3000uqck \
+  --node https://quicksilver-rpc.noders.services:443 --fees 20000uqck \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ quicksilverd tx distribution withdraw-all-rewards \
 quicksilverd tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id quicksilver-2 \
-  --node https://quicksilver-rpc.noders.services:443 --fees 3000uqck \
+  --node https://quicksilver-rpc.noders.services:443 --fees 20000uqck \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ quicksilverd tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 quicksilverd tx staking delegate $(quicksilverd keys show KEY --bech val -a) 1000000uqck \
 --chain-id quicksilver-2 \
---node https://quicksilver-rpc.noders.services:443 --fees 3000uqck \
+--node https://quicksilver-rpc.noders.services:443 --fees 20000uqck \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ quicksilverd tx staking delegate $(quicksilverd keys show KEY --bech val -a) 100
 ```js
 quicksilverd tx staking delegate VALIDATOR_ADDRESS 1000000uqck \
 --chain-id quicksilver-2 \
---node https://quicksilver-rpc.noders.services:443 --fees 3000uqck \
+--node https://quicksilver-rpc.noders.services:443 --fees 20000uqck \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ quicksilverd tx staking delegate VALIDATOR_ADDRESS 1000000uqck \
 ```js
 quicksilverd tx staking redelegate $(quicksilverd keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000uqck \
   --chain-id quicksilver-2 \
-  --node https://quicksilver-rpc.noders.services:443 --fees 3000uqck \
+  --node https://quicksilver-rpc.noders.services:443 --fees 20000uqck \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ quicksilverd tx staking redelegate $(quicksilverd keys show KEY --bech val -a) V
 ```js
 quicksilverd tx staking unbond $(quicksilverd keys show KEY --bech val -a) uqck \
   --chain-id andromeda-1 \
-  --node https://quicksilver-rpc.noders.services:443 --fees 3000uqck \
+  --node https://quicksilver-rpc.noders.services:443 --fees 20000uqck \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ quicksilverd query gov proposals --node https://quicksilver-rpc.noders.services:
 ```js
 quicksilverd query gov proposal PROPOSAL_NUMBER \
   --chain-id quicksilver-2 \
-  --node https://quicksilver-rpc.noders.services:443 --fees 3000uqck \
+  --node https://quicksilver-rpc.noders.services:443 --fees 20000uqck \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ quicksilverd query gov proposal PROPOSAL_NUMBER \
 ```js
 quicksilverd tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id quicksilver-2 \
-  --node https://quicksilver-rpc.noders.services:443 --fees 3000uqck \
+  --node https://quicksilver-rpc.noders.services:443 --fees 20000uqck \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ quicksilverd tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id quicksilver-2 \
-  --node https://quicksilver-rpc.noders.services:443 --fees 3000uqck \
+  --node https://quicksilver-rpc.noders.services:443 --fees 20000uqck \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ quicksilverd tx staking edit-validator \
 --chain-id quicksilver-2 \
 --commission-rate 0.05 \
 --from KEY \
---node https://quicksilver-rpc.noders.services:443 --fees 3000uqck \
+--node https://quicksilver-rpc.noders.services:443 --fees 20000uqck \
 ```
 
 ### Unjail
 ```js
 quicksilverd tx slashing unjail \
   --chain-id quicksilver-2 \
-  --node https://quicksilver-rpc.noders.services:443 --fees 3000uqck \
+  --node https://quicksilver-rpc.noders.services:443 --fees 20000uqck \
   --from KEY
 ```
 

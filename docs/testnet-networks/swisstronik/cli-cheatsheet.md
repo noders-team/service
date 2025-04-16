@@ -47,7 +47,7 @@ swisstronikd q bank balances $(swisstronikd keys show KEY -a) --node https://swi
 ```js
 swisstronikd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uswtr \
   --chain-id swisstronik_1291-1 \
-  --node https://swisstronik-t-rpc.noders.services:443 --fees 3000uswtr \
+  --node https://swisstronik-t-rpc.noders.services:443 --fees 20000uswtr \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ swisstronikd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uswtr \
 ```js
 swisstronikd tx distribution withdraw-all-rewards \
   --chain-id swisstronik_1291-1 \
-  --node https://swisstronik-t-rpc.noders.services:443 --fees 3000uswtr \
+  --node https://swisstronik-t-rpc.noders.services:443 --fees 20000uswtr \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ swisstronikd tx distribution withdraw-all-rewards \
 swisstronikd tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id swisstronik_1291-1 \
-  --node https://swisstronik-t-rpc.noders.services:443 --fees 3000uswtr \
+  --node https://swisstronik-t-rpc.noders.services:443 --fees 20000uswtr \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ swisstronikd tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 swisstronikd tx staking delegate $(swisstronikd keys show KEY --bech val -a) 1000000uswtr \
 --chain-id swisstronik_1291-1 \
---node https://swisstronik-t-rpc.noders.services:443 --fees 3000uswtr \
+--node https://swisstronik-t-rpc.noders.services:443 --fees 20000uswtr \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ swisstronikd tx staking delegate $(swisstronikd keys show KEY --bech val -a) 100
 ```js
 swisstronikd tx staking delegate VALIDATOR_ADDRESS 1000000uswtr \
 --chain-id swisstronik_1291-1 \
---node https://swisstronik-t-rpc.noders.services:443 --fees 3000uswtr \
+--node https://swisstronik-t-rpc.noders.services:443 --fees 20000uswtr \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ swisstronikd tx staking delegate VALIDATOR_ADDRESS 1000000uswtr \
 ```js
 swisstronikd tx staking redelegate $(swisstronikd keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000uswtr \
   --chain-id swisstronik_1291-1 \
-  --node https://swisstronik-t-rpc.noders.services:443 --fees 3000uswtr \
+  --node https://swisstronik-t-rpc.noders.services:443 --fees 20000uswtr \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ swisstronikd tx staking redelegate $(swisstronikd keys show KEY --bech val -a) V
 ```js
 swisstronikd tx staking unbond $(swisstronikd keys show KEY --bech val -a) uswtr \
   --chain-id andromeda-1 \
-  --node https://swisstronik-t-rpc.noders.services:443 --fees 3000uswtr \
+  --node https://swisstronik-t-rpc.noders.services:443 --fees 20000uswtr \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ swisstronikd query gov proposals --node https://swisstronik-t-rpc.noders.service
 ```js
 swisstronikd query gov proposal PROPOSAL_NUMBER \
   --chain-id swisstronik_1291-1 \
-  --node https://swisstronik-t-rpc.noders.services:443 --fees 3000uswtr \
+  --node https://swisstronik-t-rpc.noders.services:443 --fees 20000uswtr \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ swisstronikd query gov proposal PROPOSAL_NUMBER \
 ```js
 swisstronikd tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id swisstronik_1291-1 \
-  --node https://swisstronik-t-rpc.noders.services:443 --fees 3000uswtr \
+  --node https://swisstronik-t-rpc.noders.services:443 --fees 20000uswtr \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ swisstronikd tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id swisstronik_1291-1 \
-  --node https://swisstronik-t-rpc.noders.services:443 --fees 3000uswtr \
+  --node https://swisstronik-t-rpc.noders.services:443 --fees 20000uswtr \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ swisstronikd tx staking edit-validator \
 --chain-id swisstronik_1291-1 \
 --commission-rate 0.05 \
 --from KEY \
---node https://swisstronik-t-rpc.noders.services:443 --fees 3000uswtr \
+--node https://swisstronik-t-rpc.noders.services:443 --fees 20000uswtr \
 ```
 
 ### Unjail
 ```js
 swisstronikd tx slashing unjail \
   --chain-id swisstronik_1291-1 \
-  --node https://swisstronik-t-rpc.noders.services:443 --fees 3000uswtr \
+  --node https://swisstronik-t-rpc.noders.services:443 --fees 20000uswtr \
   --from KEY
 ```
 

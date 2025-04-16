@@ -47,7 +47,7 @@ emped q bank balances $(emped keys show KEY -a) --node https://empeiria-t-rpc.no
 ```js
 emped tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uempe \
   --chain-id empe-testnet-2 \
-  --node https://empeiria-t-rpc.noders.services:443 --fees 3000uempe \
+  --node https://empeiria-t-rpc.noders.services:443 --fees 20000uempe \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ emped tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uempe \
 ```js
 emped tx distribution withdraw-all-rewards \
   --chain-id empe-testnet-2 \
-  --node https://empeiria-t-rpc.noders.services:443 --fees 3000uempe \
+  --node https://empeiria-t-rpc.noders.services:443 --fees 20000uempe \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ emped tx distribution withdraw-all-rewards \
 emped tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id empe-testnet-2 \
-  --node https://empeiria-t-rpc.noders.services:443 --fees 3000uempe \
+  --node https://empeiria-t-rpc.noders.services:443 --fees 20000uempe \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ emped tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 emped tx staking delegate $(emped keys show KEY --bech val -a) 1000000uempe \
 --chain-id empe-testnet-2 \
---node https://empeiria-t-rpc.noders.services:443 --fees 3000uempe \
+--node https://empeiria-t-rpc.noders.services:443 --fees 20000uempe \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ emped tx staking delegate $(emped keys show KEY --bech val -a) 1000000uempe \
 ```js
 emped tx staking delegate VALIDATOR_ADDRESS 1000000uempe \
 --chain-id empe-testnet-2 \
---node https://empeiria-t-rpc.noders.services:443 --fees 3000uempe \
+--node https://empeiria-t-rpc.noders.services:443 --fees 20000uempe \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ emped tx staking delegate VALIDATOR_ADDRESS 1000000uempe \
 ```js
 emped tx staking redelegate $(emped keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000uempe \
   --chain-id empe-testnet-2 \
-  --node https://empeiria-t-rpc.noders.services:443 --fees 3000uempe \
+  --node https://empeiria-t-rpc.noders.services:443 --fees 20000uempe \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ emped tx staking redelegate $(emped keys show KEY --bech val -a) VALIDATOR_ADDRE
 ```js
 emped tx staking unbond $(emped keys show KEY --bech val -a) uempe \
   --chain-id andromeda-1 \
-  --node https://empeiria-t-rpc.noders.services:443 --fees 3000uempe \
+  --node https://empeiria-t-rpc.noders.services:443 --fees 20000uempe \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ emped query gov proposals --node https://empeiria-t-rpc.noders.services:443
 ```js
 emped query gov proposal PROPOSAL_NUMBER \
   --chain-id empe-testnet-2 \
-  --node https://empeiria-t-rpc.noders.services:443 --fees 3000uempe \
+  --node https://empeiria-t-rpc.noders.services:443 --fees 20000uempe \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ emped query gov proposal PROPOSAL_NUMBER \
 ```js
 emped tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id empe-testnet-2 \
-  --node https://empeiria-t-rpc.noders.services:443 --fees 3000uempe \
+  --node https://empeiria-t-rpc.noders.services:443 --fees 20000uempe \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ emped tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id empe-testnet-2 \
-  --node https://empeiria-t-rpc.noders.services:443 --fees 3000uempe \
+  --node https://empeiria-t-rpc.noders.services:443 --fees 20000uempe \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ emped tx staking edit-validator \
 --chain-id empe-testnet-2 \
 --commission-rate 0.05 \
 --from KEY \
---node https://empeiria-t-rpc.noders.services:443 --fees 3000uempe \
+--node https://empeiria-t-rpc.noders.services:443 --fees 20000uempe \
 ```
 
 ### Unjail
 ```js
 emped tx slashing unjail \
   --chain-id empe-testnet-2 \
-  --node https://empeiria-t-rpc.noders.services:443 --fees 3000uempe \
+  --node https://empeiria-t-rpc.noders.services:443 --fees 20000uempe \
   --from KEY
 ```
 

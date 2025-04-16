@@ -47,7 +47,7 @@ humansd q bank balances $(humansd keys show KEY -a) --node https://humans-rpc.no
 ```js
 humansd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000aheart \
   --chain-id humans_1089-1 \
-  --node https://humans-rpc.noders.services:443 --fees 3000aheart \
+  --node https://humans-rpc.noders.services:443 --fees 300000000000aheart \
   --from KEY
 ```
 
@@ -55,7 +55,7 @@ humansd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000aheart \
 ```js
 humansd tx distribution withdraw-all-rewards \
   --chain-id humans_1089-1 \
-  --node https://humans-rpc.noders.services:443 --fees 3000aheart \
+  --node https://humans-rpc.noders.services:443 --fees 300000000000aheart \
   --from KEY
 ```
 
@@ -64,7 +64,7 @@ humansd tx distribution withdraw-all-rewards \
 humansd tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
   --chain-id humans_1089-1 \
-  --node https://humans-rpc.noders.services:443 --fees 3000aheart \
+  --node https://humans-rpc.noders.services:443 --fees 300000000000aheart \
   --from KEY
 ```
 
@@ -72,7 +72,7 @@ humansd tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```js
 humansd tx staking delegate $(humansd keys show KEY --bech val -a) 1000000aheart \
 --chain-id humans_1089-1 \
---node https://humans-rpc.noders.services:443 --fees 3000aheart \
+--node https://humans-rpc.noders.services:443 --fees 300000000000aheart \
 --from KEY
 ```
 
@@ -80,7 +80,7 @@ humansd tx staking delegate $(humansd keys show KEY --bech val -a) 1000000aheart
 ```js
 humansd tx staking delegate VALIDATOR_ADDRESS 1000000aheart \
 --chain-id humans_1089-1 \
---node https://humans-rpc.noders.services:443 --fees 3000aheart \
+--node https://humans-rpc.noders.services:443 --fees 300000000000aheart \
 --from KEY
 ```
 
@@ -88,7 +88,7 @@ humansd tx staking delegate VALIDATOR_ADDRESS 1000000aheart \
 ```js
 humansd tx staking redelegate $(humansd keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000aheart \
   --chain-id humans_1089-1 \
-  --node https://humans-rpc.noders.services:443 --fees 3000aheart \
+  --node https://humans-rpc.noders.services:443 --fees 300000000000aheart \
   --from KEY
 ```
 
@@ -96,7 +96,7 @@ humansd tx staking redelegate $(humansd keys show KEY --bech val -a) VALIDATOR_A
 ```js
 humansd tx staking unbond $(humansd keys show KEY --bech val -a) aheart \
   --chain-id andromeda-1 \
-  --node https://humans-rpc.noders.services:443 --fees 3000aheart \
+  --node https://humans-rpc.noders.services:443 --fees 300000000000aheart \
   --from KEY
 ```
 
@@ -109,7 +109,7 @@ humansd query gov proposals --node https://humans-rpc.noders.services:443
 ```js
 humansd query gov proposal PROPOSAL_NUMBER \
   --chain-id humans_1089-1 \
-  --node https://humans-rpc.noders.services:443 --fees 3000aheart \
+  --node https://humans-rpc.noders.services:443 --fees 300000000000aheart \
   --output json | jq
 ```
 
@@ -122,7 +122,7 @@ humansd query gov proposal PROPOSAL_NUMBER \
 ```js
 humansd tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id humans_1089-1 \
-  --node https://humans-rpc.noders.services:443 --fees 3000aheart \
+  --node https://humans-rpc.noders.services:443 --fees 300000000000aheart \
   --from KEY
 ```
 
@@ -145,7 +145,7 @@ humansd tx staking create-validator \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
   --chain-id humans_1089-1 \
-  --node https://humans-rpc.noders.services:443 --fees 3000aheart \
+  --node https://humans-rpc.noders.services:443 --fees 300000000000aheart \
   --from KEY
 ```
 
@@ -159,14 +159,14 @@ humansd tx staking edit-validator \
 --chain-id humans_1089-1 \
 --commission-rate 0.05 \
 --from KEY \
---node https://humans-rpc.noders.services:443 --fees 3000aheart \
+--node https://humans-rpc.noders.services:443 --fees 300000000000aheart \
 ```
 
 ### Unjail
 ```js
 humansd tx slashing unjail \
   --chain-id humans_1089-1 \
-  --node https://humans-rpc.noders.services:443 --fees 3000aheart \
+  --node https://humans-rpc.noders.services:443 --fees 300000000000aheart \
   --from KEY
 ```
 
