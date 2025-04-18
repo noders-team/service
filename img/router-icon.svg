@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="256"
+   height="256"
+   viewBox="0 0 256 256"
+   version="1.1"
+   id="svg933"
+   sodipodi:docname="Router Protocol ROUTE Coin Icon 256x256.svg"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)">
+  <metadata
+     id="metadata937">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     id="namedview935"
+     showgrid="false"
+     inkscape:zoom="1.0283762"
+     inkscape:cx="6.6694749"
+     inkscape:cy="186.98944"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg933" />
+  <defs
+     id="defs907">
+    <style
+       id="style886">.a{fill:url(#a);}.b{fill:url(#b);}.c{fill:url(#c);}.d{fill:#fff;}</style>
+    <radialGradient
+       id="a"
+       cx="9.8192844"
+       cy="14.366022"
+       r="8.1661243"
+       gradientTransform="scale(1.0157352,0.9845086)"
+       gradientUnits="userSpaceOnUse"
+       fx="9.8192844"
+       fy="14.366022">
+      <stop
+         offset="0"
+         stop-color="#be4650"
+         id="stop888" />
+      <stop
+         offset="1"
+         stop-color="#9b375a"
+         id="stop890" />
+    </radialGradient>
+    <linearGradient
+       id="b"
+       y1="11.919086"
+       x2="23.120203"
+       y2="11.919086"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(0.90832846,1.1009233)"
+       x1="1.0932384">
+      <stop
+         offset="0"
+         stop-color="#ff3c55"
+         id="stop893" />
+      <stop
+         offset="0.514"
+         stop-color="#ff3d56"
+         id="stop895" />
+      <stop
+         offset="1"
+         stop-color="#ff8b65"
+         id="stop897" />
+    </linearGradient>
+    <linearGradient
+       id="c"
+       x1="1.257593"
+       y1="17.490404"
+       x2="23.294216"
+       y2="17.490404"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(0.80126494,1.2480266)">
+      <stop
+         offset="0"
+         stop-color="#ff3c55"
+         id="stop900" />
+      <stop
+         offset="0.514"
+         stop-color="#ff3c55"
+         id="stop902" />
+      <stop
+         offset="1"
+         stop-color="#ff8b65"
+         id="stop904" />
+    </linearGradient>
+  </defs>
+  <circle
+     style="fill:#333333;stroke-width:4.49148"
+     id="path956"
+     cx="128"
+     cy="128"
+     r="128" />
+  <g
+     id="g915"
+     transform="matrix(4.1312343,0,0,4.1312343,86.70055,34.000001)">
+    <path
+       class="a"
+       d="M 6.8,22.05 A 0.918,0.918 0 0 1 6.05,21.8 l -4,-4 A 0.918,0.918 0 0 1 1.8,17.05 0.918,0.918 0 0 1 2.05,16.3 l 10,-9.75 A 0.918,0.918 0 0 1 12.8,6.3 0.918,0.918 0 0 1 13.55,6.55 l 4.25,4 c 0.25,0 0.25,0.5 0.25,0.75 A 0.918,0.918 0 0 1 17.8,12.05 L 7.55,21.8 A 0.918,0.918 0 0 1 6.8,22.05 Z"
+       transform="translate(0.2,7.2)"
+       id="path909"
+       style="fill:url(#a)" />
+    <path
+       class="b"
+       d="m 19,10.65 -8.25,-8 A 7.187,7.187 0 0 0 6.25,0.9 6.83,6.83 0 0 0 1.5,2.9 C 1,3.15 1,3.4 1,3.65 A 0.918,0.918 0 0 0 1.25,4.4 L 12.5,15.15 c 0.25,0.25 0.5,0.25 0.5,0.5 a 7.247,7.247 0 0 1 0.5,9.5 L 19,19.9 v 0 a 5.854,5.854 0 0 0 2,-4.5 6.83,6.83 0 0 0 -2,-4.75 z"
+       transform="translate(-1,-0.9)"
+       id="path911"
+       style="fill:url(#b)" />
+    <path
+       class="c"
+       d="M 8.95,17.7 A 6.96,6.96 0 0 1 8.7,8.2 l -5.5,5.25 v 0 a 6.641,6.641 0 0 0 0,9.5 l 12,12.25 a 0.918,0.918 0 0 0 0.75,0.25 0.918,0.918 0 0 0 0.75,-0.25 6.641,6.641 0 0 0 0,-9.5 L 9.2,18.2 v 0 c 0,-0.25 -0.25,-0.25 -0.25,-0.5 z"
+       transform="translate(-0.7,10.05)"
+       id="path913"
+       style="fill:url(#c)" />
+  </g>
+</svg>
