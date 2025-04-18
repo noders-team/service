@@ -20,7 +20,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install dependencies
         run: |
@@ -93,7 +93,6 @@ jobs:
   notify-telegram:
     needs: check-endpoints
 
-
     runs-on: ubuntu-latest
     steps:
       - name: Format failed endpoints for Telegram
@@ -101,13 +100,13 @@ jobs:
         run: |
           echo '${{ needs.check-endpoints.outputs.failed_endpoints }}' > endpoints.json
           count=$(jq 'length' endpoints.json)
-      
+          
           if [ "$count" -gt 0 ]; then
             echo "ENDPOINT_LIST<<EOF" >> $GITHUB_OUTPUT
             jq -r '.[]' endpoints.json >> $GITHUB_OUTPUT
             echo "EOF" >> $GITHUB_OUTPUT
           fi
-    
+
       - name: Send Telegram notification
         if: steps.format.outputs.ENDPOINT_LIST != ''
         uses: appleboy/telegram-action@master
@@ -117,7 +116,7 @@ jobs:
           format: markdown
           message: |
             *🔔 Some endpoints from noders.services deploy are failing*
-      
+
             ```
             ${{ steps.format.outputs.ENDPOINT_LIST }}
             ```
