@@ -54,11 +54,11 @@ const config = {
       image: 'img/logo.svg',
       colorMode: {
         defaultMode: 'dark',
-        disableSwitch: false,
+        disableSwitch: true,
         respectPrefersColorScheme: false,
       },
       navbar: {
-        title: 'Services',
+        title: 'Noders.Services',
         logo: {
           alt: '[NODERS]TEAM',
           src: 'img/logo.svg',
@@ -78,8 +78,7 @@ const config = {
             label: 'Testnet',
           },
           {
-            href: 'https://cosmoslist.co',
-            label: 'Cosmos List',
+            type: 'custom-navbar-item-social-links',
             position: 'right',
           },
         ],
