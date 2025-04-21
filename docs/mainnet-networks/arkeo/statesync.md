@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-arkeo">
 # State sync
 </div>
-###### Chain ID: `arkeo-main-v1` | Current Node Version: `v1.0.9`
+###### Chain ID: `arkeo-main-v1` | Current Node Version: `v1.0.11`
 
 ```bash
 SNAP_RPC=https://arkeo-rpc.noders.services:443 && \

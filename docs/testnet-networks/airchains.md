@@ -30,7 +30,7 @@ Official links of social networks of projects
 
 <CardLayout autoFitEnabled={true}>
     <Card
-        to="https://testnet.airchains.io/validator/airvaloper15n0pesc7ggllax6medkfv6pqjszpc40qps5au8"
+        to="https://explorer.stavr.tech/Airchains-Testnet/staking/airvaloper1z6q26lprv70xgztfzgnfxgm7t57xh0p0hugz54"
         header={{
             label: "[NODERS]TEAM",
             translateId: "development-setup",

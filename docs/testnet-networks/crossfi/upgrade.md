@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-crossfi">
 # Upgrade
 </div>
-###### Chain ID: `crossfi-evm-testnet-1` | Current Node Version: `0.3.0-prebuild9`
+###### Chain ID: `crossfi-evm-testnet-1` | Current Node Version: `v0.4.0`
 
 # With Cosmovisor
 ## Clone CrossFI repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf crossfichain
 git clone https://github.com/crossfichain.git
 cd crossfichain
-git checkout 0.3.0-prebuild9
+git checkout v0.4.0
  ```
 
 ## Build binaries
@@ -26,8 +26,8 @@ make build
 
 ## Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.mineplex-chain/cosmovisor/upgrades/0.3.0-prebuild9/bin
-mv build/crossfid ~/.mineplex-chain/cosmovisor/upgrades/0.3.0-prebuild9/bin/
+mkdir -p ~/.mineplex-chain/cosmovisor/upgrades/v0.4.0/bin
+mv build/crossfid ~/.mineplex-chain/cosmovisor/upgrades/v0.4.0/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf crossfichain
 git clone https://github.com/crossfichain.git
 cd crossfichain
-git checkout 0.3.0-prebuild9
+git checkout v0.4.0
  ```
 
 ## Build binaries

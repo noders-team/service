@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-crossfi">
 # State sync
 </div>
-###### Chain ID: `crossfi-evm-testnet-1` | Current Node Version: `0.3.0-prebuild9`
+###### Chain ID: `crossfi-evm-testnet-1` | Current Node Version: `v0.4.0`
 
 ```bash
 SNAP_RPC=https://crossfi-t-rpc.noders.services:443 && \

@@ -32,7 +32,7 @@ Official links of social networks of projects
 
 <CardLayout autoFitEnabled={true}>
     <Card
-        to="https://explorer.bccnodes.com/jackal-T/staking/jklvaloper132k95jan8ju92jtmkzr49vnusv5xvwvju27kpq"
+        to="https://explorer.kjnodes.com/jackal-testnet/staking/jklvaloper132k95jan8ju92jtmkzr49vnusv5xvwvju27kpq"
         header={{
             label: "[NODERS]TEAM",
             translateId: "development-setup",

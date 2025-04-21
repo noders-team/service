@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-celestia">
 # State sync
 </div>
-###### Chain ID: `mocha-4` | Current Node Version: `v3.4.2`
+###### Chain ID: `mocha-4` | Current Node Version: `3.8.1-mocha`
 
 ```bash
 SNAP_RPC=https://celestia-t-rpc.noders.services:443 && \

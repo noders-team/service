@@ -32,7 +32,7 @@ Official links of social networks of projects
 
 <CardLayout autoFitEnabled={true}>
     <Card
-        to=""
+        to="https://testnet.seda.explorers.guru/validator/sedavaloper1ws3x9g0e7sx7zaxvtmtjmrdz2fgttr0x57csd9"
         header={{
             label: "[NODERS]TEAM",
             translateId: "development-setup",
