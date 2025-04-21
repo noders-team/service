@@ -30,7 +30,7 @@ Official links of social networks of projects
 
 <CardLayout autoFitEnabled={true}>
     <Card
-        to="https://lava.explorers.guru/validator/lava@valoper1tkhehvca5uur6svd2l83lp704mlhc7xu32r2j4"
+        to="https://lava.explorers.guru/validator/lava@valoper1cfup2qa0dcmx9y0tm73rp3yend3chhzkaakd85"
         header={{
             label: "[NODERS]TEAM",
             translateId: "development-setup",
