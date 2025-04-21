@@ -31,6 +31,8 @@ const config = {
     locales: ['en'],
   },
 
+  future: { experimental_faster: true },
+
   presets: [
     [
       'classic',
@@ -78,6 +80,10 @@ const config = {
             label: 'Testnet',
           },
           {
+            type: 'custom-navbar-item-tools',
+            position: 'left',
+          },
+          {
             type: 'custom-navbar-item-social-links',
             position: 'right',
           },
@@ -89,6 +95,23 @@ const config = {
         additionalLanguages: ['bash'],
       },
     }),
+
+  plugins: [
+    function aliasPlugin(context, options) {
+      return {
+        name: 'docusaurus-plugin-aliases',
+        configureWebpack() {
+          return {
+            resolve: {
+              alias: {
+                '@': path.resolve(__dirname, './src'),
+              },
+            },
+          };
+        },
+      };
+    }
+  ],
 };
 
 module.exports = config;
