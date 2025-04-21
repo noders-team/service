@@ -35,6 +35,10 @@ const config = {
 
   future: { experimental_faster: true },
 
+  stylesheets: [
+    'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap',
+  ],
+
   presets: [
     [
       'classic',
@@ -95,6 +99,9 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
         additionalLanguages: ['bash'],
+      },
+      footer: {
+        copyright: `© ${new Date().getFullYear()} Noders LLC`,
       },
     }),
 

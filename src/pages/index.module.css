@@ -25,12 +25,10 @@
 /* Logo */
 
 .logoContainer {
-  position: relative;
-  width: 250px; /* фиксированная ширина */
-  height: 250px; /* фиксированная высота */
-  margin: 155px auto 0;
-  margin-bottom: 50px;
-  /* добавляем отступ сверху, авто-маргины по бокам для центрирования, 0 внизу */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
 }
 
 .backgroundImage {
@@ -129,10 +127,8 @@
 
 /* Section */
 .Section {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  overflow-x: hidden;
+  display: flex;
+  flex-grow: 1;
 }
 
 .Section + .Section {

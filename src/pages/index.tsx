@@ -52,7 +52,7 @@ function HomeCallToAction() {
 function SolanaMobileStackLogo() {
     return (
         <div className={styles.logoContainer}>
-            <img src="img/logo.svg" alt="[NODERS]TEAM" />
+            <img src="img/logo.svg" alt="[NODERS]TEAM" style={{ width: '200px', height: '200px' }} />
         </div>
     );
 }
