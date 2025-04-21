@@ -39,7 +39,7 @@ SOCIAL_TELEGRAM="https://t.me/+rtuZnbTlHaIzNjVh"
 # Other
 DOWNLOAD_URL="https://snapshots-t.noders.services/jackal"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://explorer.bccnodes.com/jackal-T/staking/jklvaloper132k95jan8ju92jtmkzr49vnusv5xvwvju27kpq"
+VALIDATOR_LINK="https://explorer.kjnodes.com/jackal-testnet/staking/jklvaloper132k95jan8ju92jtmkzr49vnusv5xvwvju27kpq"
 
 # Updates
 UPDATE_MAIN=true

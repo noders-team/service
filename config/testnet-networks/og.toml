@@ -35,7 +35,7 @@ SOCIAL_TELEGRAM="https://t.me/web3_0glabs"
 # Other
 DOWNLOAD_URL="https://snapshots-t.noders.services/og"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://explorer.validatorvn.com/OG-Testnet/staking/evmosvaloper1n30zgt2nc3auawqlsgkqmwz9u3r0zdwnu9xjc4"
+VALIDATOR_LINK="https://testnet.0g.explorers.guru/validator/0gvaloper1w24g8xczpxuy5y87lwv0dyq9n27mlyul3xf2zk"
 
 # Updates
 UPDATE_MAIN=true

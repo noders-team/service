@@ -36,7 +36,7 @@ SOCIAL_TELEGRAM="https://t.me/SideProtocolOfficial"
 # Other
 DOWNLOAD_URL="https://snapshots-t.noders.services/side"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://explorer.stavr.tech/Side-Testnet/staking/bcvaloper17tn2zvychzan0v0ulakq596gczmjtw8pdqary7"
+VALIDATOR_LINK="https://testnet.side.explorers.guru/validator/sidevaloper1qqfquysyqstp5qq8rsfqypgxq5zs7pc2r5tsv8cezc93gycrpywp22zkf48"
 
 # Updates
 UPDATE_MAIN=true
