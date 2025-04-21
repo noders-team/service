@@ -3,6 +3,8 @@
 
 import { themes as prismThemes } from 'prism-react-renderer';
 
+const path = require('path');
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'VALIDATOR SERVICES | NODERS',
