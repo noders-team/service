@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-arkeo">
 # Installation
 </div>
-###### Chain ID: `arkeo-main-v1` | Current Node Version: `v1.0.9`
+###### Chain ID: `arkeo-main-v1` | Current Node Version: `v1.0.11`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Arkeo repo and build arkeod v1.0.9
+### Clone Arkeo repo and build arkeod v1.0.11
 ```js
 cd $HOME
 git clone https://github.com/arkeonetwork.git
 cd arkeonetwork
-git checkout v1.0.9
+git checkout v1.0.11
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.arkeo/cosmovisor/upgrades/v1.0.9/bin
-mv $HOME/go/bin/arkeod ~/.arkeo/cosmovisor/upgrades/v1.0.9/bin/
+mkdir -p ~/.arkeo/cosmovisor/upgrades/v1.0.11/bin
+mv $HOME/go/bin/arkeod ~/.arkeo/cosmovisor/upgrades/v1.0.11/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Arkeo repo and build arkeod v1.0.9
+### Clone Arkeo repo and build arkeod v1.0.11
 ```js
 cd $HOME
 git clone https://github.com/arkeonetwork.git
 cd arkeonetwork
-git checkout v1.0.9
+git checkout v1.0.11
 ```
 
 ### Build binaries

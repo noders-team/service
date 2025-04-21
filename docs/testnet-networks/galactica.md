@@ -30,7 +30,7 @@ Official links of social networks of projects
 
 <CardLayout autoFitEnabled={true}>
     <Card
-        to="https://ping.pfc.zone/galactica-testnet/staking/galavaloper1p0gs5uq44usv2fnx0qcw785jj2ey76svjtlgx7"
+        to="https://explorer.nodestake.org/galactica-testnet/staking/galavaloper1p0gs5uq44usv2fnx0qcw785jj2ey76svjtlgx7"
         header={{
             label: "[NODERS]TEAM",
             translateId: "development-setup",

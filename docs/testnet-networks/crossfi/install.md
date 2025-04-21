@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-crossfi">
 # Installation
 </div>
-###### Chain ID: `crossfi-evm-testnet-1` | Current Node Version: `0.3.0-prebuild9`
+###### Chain ID: `crossfi-evm-testnet-1` | Current Node Version: `v0.4.0`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone CrossFI repo and build crossfid 0.3.0-prebuild9
+### Clone CrossFI repo and build crossfid v0.4.0
 ```js
 cd $HOME
 git clone https://github.com/crossfichain.git
 cd crossfichain
-git checkout 0.3.0-prebuild9
+git checkout v0.4.0
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.mineplex-chain/cosmovisor/upgrades/0.3.0-prebuild9/bin
-mv $HOME/go/bin/crossfid ~/.mineplex-chain/cosmovisor/upgrades/0.3.0-prebuild9/bin/
+mkdir -p ~/.mineplex-chain/cosmovisor/upgrades/v0.4.0/bin
+mv $HOME/go/bin/crossfid ~/.mineplex-chain/cosmovisor/upgrades/v0.4.0/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone CrossFI repo and build crossfid 0.3.0-prebuild9
+### Clone CrossFI repo and build crossfid v0.4.0
 ```js
 cd $HOME
 git clone https://github.com/crossfichain.git
 cd crossfichain
-git checkout 0.3.0-prebuild9
+git checkout v0.4.0
 ```
 
 ### Build binaries

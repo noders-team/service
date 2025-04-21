@@ -30,7 +30,7 @@ Official links of social networks of projects
 
 <CardLayout autoFitEnabled={true}>
     <Card
-        to="https://explorer.stavr.tech/Mantra-Testnet/staking/mantravaloper1aysxyetv0y7sfe0v70akyjn3kkjc6qyt5dlewa"
+        to="https://explorer.stavr.tech/MANTRA-Hongbai/staking/mantravaloper1aysxyetv0y7sfe0v70akyjn3kkjc6qyt5dlewa"
         header={{
             label: "[NODERS]TEAM",
             translateId: "development-setup",

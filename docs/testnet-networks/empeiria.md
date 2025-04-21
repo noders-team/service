@@ -30,7 +30,7 @@ Official links of social networks of projects
 
 <CardLayout autoFitEnabled={true}>
     <Card
-        to="https://explorer.stavr.tech/Empeiria-Testnet/staking/empevaloper1wmqc6ak6st207q69qdatp6fpr0x6r6ekk4km9v"
+        to="https://explorer.stavr.tech/Empeiria-Testnet/staking/empevaloper1ghmjf5nhwqzvd7ztkrf3d5c383lmmsc9az392s"
         header={{
             label: "[NODERS]TEAM",
             translateId: "development-setup",

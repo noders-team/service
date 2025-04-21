@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-celestia">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `mocha-4` | Current Node Version: `v3.4.2`
+###### Chain ID: `mocha-4` | Current Node Version: `3.8.1-mocha`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 

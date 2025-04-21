@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-arkeo">
 # Upgrade
 </div>
-###### Chain ID: `arkeo-main-v1` | Current Node Version: `v1.0.9`
+###### Chain ID: `arkeo-main-v1` | Current Node Version: `v1.0.11`
 
 
 # Clone Arkeo repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf arkeonetwork
 git clone https://github.com/arkeonetwork.git
 cd arkeonetwork
-git checkout v1.0.9
+git checkout v1.0.11
  ```
 
 # Build binaries
@@ -26,8 +26,8 @@ make build
 
 # Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.arkeo/cosmovisor/upgrades/v1.0.9/bin
-mv build/arkeod ~/.arkeo/cosmovisor/upgrades/v1.0.9/bin/
+mkdir -p ~/.arkeo/cosmovisor/upgrades/v1.0.11/bin
+mv build/arkeod ~/.arkeo/cosmovisor/upgrades/v1.0.11/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf arkeonetwork
 git clone https://github.com/arkeonetwork.git
 cd arkeonetwork
-git checkout v1.0.9
+git checkout v1.0.11
  ```
 
 ## Build binaries
