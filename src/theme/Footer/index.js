@@ -88,15 +88,15 @@ export default function Footer() {
               COMPANY
             </Typography>
             <Stack spacing={2}>
-              <Link href="#" underline="none">
+              <Link href="https://noders.team" underline="none">
                 About Us
                 <Box component="span" sx={{ ml: 1, fontSize: '0.7rem' }}>↗</Box>
               </Link>
-              <Link href="#" underline="none">
+              <Link href="https://noders.team" underline="none">
                 Stake with Us
                 <Box component="span" sx={{ ml: 1, fontSize: '0.7rem' }}>↗</Box>
               </Link>
-              <Link href="#" underline="none">
+              <Link href="mailto:office@noders.team" underline="none">
                 Contact Us
               </Link>
             </Stack>
