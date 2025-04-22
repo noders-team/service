@@ -1,0 +1,380 @@
+[
+  {
+    "name": "althea",
+    "pretty_name": "Althea",
+    "chain_id": "althea_258432-1",
+    "logo_url": "img/althea-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "andromeda",
+    "pretty_name": "Andromeda",
+    "chain_id": "andromeda-1",
+    "logo_url": "img/andromeda-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "arkeo",
+    "pretty_name": "Arkeo",
+    "chain_id": "arkeo-main-v1",
+    "logo_url": "img/arkeo-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "atomone",
+    "pretty_name": "Atomone",
+    "chain_id": "atomone-1",
+    "logo_url": "img/atomone-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "aura",
+    "pretty_name": "Aura",
+    "chain_id": "aura_6322-2",
+    "logo_url": "img/aura-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "bitsong",
+    "pretty_name": "BitSong",
+    "chain_id": "bitsong-2b",
+    "logo_url": "img/bitsong-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "celestia",
+    "pretty_name": "Celestia",
+    "chain_id": "celestia",
+    "logo_url": "img/celestia-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "desmos",
+    "pretty_name": "Desmos",
+    "chain_id": "desmos-mainnet",
+    "logo_url": "img/desmos-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "dymension",
+    "pretty_name": "Dymension",
+    "chain_id": "dymension_1100-1",
+    "logo_url": "img/dymension-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "fuel",
+    "pretty_name": "Fuel",
+    "chain_id": "seq-mainnet-1",
+    "logo_url": "img/fuel-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "gitopia",
+    "pretty_name": "Gitopia",
+    "chain_id": "gitopia",
+    "logo_url": "img/gitopia-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "haqq",
+    "pretty_name": "Haqq",
+    "chain_id": "haqq_11235-1",
+    "logo_url": "img/haqq-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "humans",
+    "pretty_name": "Humans",
+    "chain_id": "humans_1089-1",
+    "logo_url": "img/humans-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "jackal",
+    "pretty_name": "Jackal",
+    "chain_id": "jackal-1",
+    "logo_url": "img/jackal-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "kopi",
+    "pretty_name": "Kopi",
+    "chain_id": "luwak-1",
+    "logo_url": "img/kopi-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "kyve",
+    "pretty_name": "Kyve",
+    "chain_id": "kyve-1",
+    "logo_url": "img/kyve-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "lava",
+    "pretty_name": "Lava",
+    "chain_id": "lava-mainnet-1",
+    "logo_url": "img/lava-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "namada",
+    "pretty_name": "Namada",
+    "chain_id": "namada.5f5de2dd1b88cba30586420",
+    "logo_url": "img/namada-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "nillion",
+    "pretty_name": "Nillion",
+    "chain_id": "nillion-1",
+    "logo_url": "img/nillion-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "osmosis",
+    "pretty_name": "Osmosis",
+    "chain_id": "osmosis-1",
+    "logo_url": "img/osmosis-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "pylons",
+    "pretty_name": "Pylons",
+    "chain_id": "pylons-mainnet-1",
+    "logo_url": "img/pylons-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "quicksilver",
+    "pretty_name": "Quicksilver",
+    "chain_id": "quicksilver-2",
+    "logo_url": "img/quicksilver-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "rebus",
+    "pretty_name": "Rebus",
+    "chain_id": "reb_1111-1",
+    "logo_url": "img/rebus-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "seda",
+    "pretty_name": "Seda",
+    "chain_id": "seda-1",
+    "logo_url": "img/seda-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "stratos",
+    "pretty_name": "Stratos",
+    "chain_id": "stratos-1",
+    "logo_url": "img/stratos-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "umee",
+    "pretty_name": "UX",
+    "chain_id": "umee-1",
+    "logo_url": "img/umee-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "uptick",
+    "pretty_name": "Uptick",
+    "chain_id": "uptick_117-1",
+    "logo_url": "img/uptick-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "zenrock",
+    "pretty_name": "Zenrock",
+    "chain_id": "diamond-1",
+    "logo_url": "img/zenrock-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "zetachain",
+    "pretty_name": "Zetachain",
+    "chain_id": "zetachain_7000-1",
+    "logo_url": "img/zeta-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "airchains",
+    "pretty_name": "Airchains",
+    "chain_id": "varanasi-1",
+    "logo_url": "img/airchains-icon.svg",
+    "scope": "testnet"
+  },
+  {
+    "name": "atomone",
+    "pretty_name": "Atomone",
+    "chain_id": "atomone-testnet-1",
+    "logo_url": "img/atomone-icon.svg",
+    "scope": "testnet"
+  },
+  {
+    "name": "axone",
+    "pretty_name": "Axone",
+    "chain_id": "axone-dentrite-1",
+    "logo_url": "img/axone-icon.svg",
+    "scope": "testnet"
+  },
+  {
+    "name": "babylon",
+    "pretty_name": "Babylon",
+    "chain_id": "bbn-test-5",
+    "logo_url": "img/babylon-icon.svg",
+    "scope": "testnet"
+  },
+  {
+    "name": "celestia",
+    "pretty_name": "Celestia",
+    "chain_id": "mocha-4",
+    "logo_url": "img/celestia-icon.svg",
+    "scope": "testnet"
+  },
+  {
+    "name": "crossfi",
+    "pretty_name": "CrossFI",
+    "chain_id": "crossfi-evm-testnet-1",
+    "logo_url": "img/crossfi-icon.svg",
+    "scope": "testnet"
+  },
+  {
+    "name": "empeiria",
+    "pretty_name": "Empeiria",
+    "chain_id": "empe-testnet-2",
+    "logo_url": "img/empeiria-icon.svg",
+    "scope": "testnet"
+  },
+  {
+    "name": "galactica",
+    "pretty_name": "Galactica",
+    "chain_id": "galactica_9302-1",
+    "logo_url": "img/galactica-icon.svg",
+    "scope": "testnet"
+  },
+  {
+    "name": "jackal",
+    "pretty_name": "Jackal",
+    "chain_id": "lupulella-2",
+    "logo_url": "img/jackal-icon.svg",
+    "scope": "testnet"
+  },
+  {
+    "name": "lava",
+    "pretty_name": "Lava",
+    "chain_id": "lava-testnet-2",
+    "logo_url": "img/lava-icon.svg",
+    "scope": "testnet"
+  },
+  {
+    "name": "mantra",
+    "pretty_name": "Mantra",
+    "chain_id": "mantra-dukong-1",
+    "logo_url": "img/mantra-icon.svg",
+    "scope": "testnet"
+  },
+  {
+    "name": "nillion",
+    "pretty_name": "Nillion",
+    "chain_id": "nillion-chain-testnet-1",
+    "logo_url": "img/nillion-icon.svg",
+    "scope": "testnet"
+  },
+  {
+    "name": "og",
+    "pretty_name": "ZeroGravity",
+    "chain_id": "zgtendermint_16600-2",
+    "logo_url": "img/og-icon.svg",
+    "scope": "testnet"
+  },
+  {
+    "name": "osmosis",
+    "pretty_name": "Osmosis",
+    "chain_id": "osmo-test-5",
+    "logo_url": "img/osmosis-icon.svg",
+    "scope": "testnet"
+  },
+  {
+    "name": "pell",
+    "pretty_name": "Pell",
+    "chain_id": "ignite_186-1",
+    "logo_url": "img/pell-icon.svg",
+    "scope": "testnet"
+  },
+  {
+    "name": "quicksilver",
+    "pretty_name": "Quicksilver",
+    "chain_id": "rhye-3",
+    "logo_url": "img/quicksilver-icon.svg",
+    "scope": "testnet"
+  },
+  {
+    "name": "seda",
+    "pretty_name": "Seda",
+    "chain_id": "seda-1-testnet",
+    "logo_url": "img/seda-icon.svg",
+    "scope": "testnet"
+  },
+  {
+    "name": "side",
+    "pretty_name": "Side",
+    "chain_id": "sidechain-testnet-4",
+    "logo_url": "img/side-icon.svg",
+    "scope": "testnet"
+  },
+  {
+    "name": "story",
+    "pretty_name": "Story",
+    "chain_id": "devnet-1",
+    "logo_url": "img/story-icon.svg",
+    "scope": "testnet"
+  },
+  {
+    "name": "sunrise",
+    "pretty_name": "Sunrise",
+    "chain_id": "sunrise-test-0.2",
+    "logo_url": "img/sunrise-icon.svg",
+    "scope": "testnet"
+  },
+  {
+    "name": "swisstronik",
+    "pretty_name": "Swisstronik",
+    "chain_id": "swisstronik_1291-1",
+    "logo_url": "img/swisstronik-icon.svg",
+    "scope": "testnet"
+  },
+  {
+    "name": "union",
+    "pretty_name": "Union",
+    "chain_id": "union-testnet-9",
+    "logo_url": "img/union-icon.svg",
+    "scope": "testnet"
+  },
+  {
+    "name": "warden",
+    "pretty_name": "Warden",
+    "chain_id": "chiado_10010-1",
+    "logo_url": "img/warden-icon.svg",
+    "scope": "testnet"
+  },
+  {
+    "name": "xrp",
+    "pretty_name": "XRPL EVM",
+    "chain_id": "exrp_1440002-1",
+    "logo_url": "img/xrp-icon.svg",
+    "scope": "testnet"
+  },
+  {
+    "name": "zetachain",
+    "pretty_name": "Zetachain",
+    "chain_id": "athens_7001-1",
+    "logo_url": "img/zeta-icon.svg",
+    "scope": "testnet"
+  }
+]
