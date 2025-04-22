@@ -1,4 +1,3 @@
-import useBaseUrl from '@docusaurus/useBaseUrl';
 import { Box } from '@mui/material';
 import React from 'react';
 
@@ -9,13 +8,11 @@ interface IllustrationProps {
   height?: number | string;
 }
 
-function Illustration({ src, alt = '', width = 'auto', height = 'auto', ...props }: IllustrationProps) {
-  const imageSrc = useBaseUrl(src);
-  
+function Illustration({ src, alt = '', width = 'auto', height = 'auto', ...props }: IllustrationProps) {  
   return (
     <Box 
       component="img" 
-      src={imageSrc} 
+      src={src}
       alt={alt} 
       sx={{ 
         width, 
