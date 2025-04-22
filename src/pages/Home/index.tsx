@@ -35,28 +35,28 @@ function Home() {
         <Box display="flex" px={8} border={1} borderColor="divider">
           <Box display="flex" flexDirection="column" flex={1} gap={1} pr={2} py={3} borderRight={1} borderColor="divider">
             <Box display="flex" pb={1}>
-              <Illustration src="img/home-page/endpoints.svg" alt="Endpoints" width={112} />
+              <Illustration src={useBaseUrl("img/home-page/endpoints.svg")} alt="Endpoints" width={112} />
             </Box>
             <Typography variant="h5">Endpoints</Typography>
             <Typography variant="body2">API, RPC, gRPC</Typography>
           </Box>
           <Box display="flex" flexDirection="column" flex={1} gap={1} px={2} py={3} borderRight={1} borderColor="divider">
             <Box display="flex" pb={1}>
-              <Illustration src="img/home-page/sync.svg" alt="Sync" width={114} />
+              <Illustration src={useBaseUrl("img/home-page/sync.svg")} alt="Sync" width={114} />
             </Box>
             <Typography variant="h5">Sync</Typography>
             <Typography variant="body2">Snapshot, State Sync, Peers, Seed</Typography>
           </Box>
           <Box display="flex" flexDirection="column" flex={1} gap={1} px={2} py={3} borderRight={1} borderColor="divider">
             <Box display="flex" pb={1}>
-              <Illustration src="img/home-page/explorer.svg" alt="Explorers" width={112} />
+              <Illustration src={useBaseUrl("img/home-page/explorer.svg")} alt="Explorers" width={112} />
             </Box>
             <Typography variant="h5">Explorers</Typography>
             <Typography variant="body2">Faucet, Bots and other Useful Tools</Typography>
           </Box>
           <Box display="flex" flexDirection="column" flex={1} gap={1} pl={2} py={3}>
             <Box display="flex" pb={1}>
-              <Illustration src="img/home-page/guides.svg" alt="Guides" width={108} />
+              <Illustration src={useBaseUrl("img/home-page/guides.svg")} alt="Guides" width={108} />
             </Box>
             <Typography variant="h5">Guides</Typography>
             <Typography variant="body2">Clear Installation and Upgrade Guides </Typography>
