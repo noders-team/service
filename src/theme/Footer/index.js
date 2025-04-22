@@ -14,15 +14,16 @@ export default function Footer() {
   const logoUrl = useBaseUrl('img/logo.svg');
 
   return (
-    <Box component="footer" sx={{
-      color: '#ffffff',
-      paddingTop: 6,
-      paddingBottom: 3,
-      paddingX: 8,
-      mt: 'auto',
-    }}>
-      <Container
-        maxWidth="lg"
+    <Container
+      component="footer"
+      maxWidth="lg"
+    >
+      <Box
+        pt={10}
+        pb={3}
+        px={8}
+        border={1}
+        borderColor="divider"
       >
         <Grid
           container
@@ -63,7 +64,7 @@ export default function Footer() {
           </Grid>
 
           <Grid item xs={12} md={3}>
-            <Typography variant="h6" sx={{ mb: 3 }}>
+            <Typography variant="body2" sx={{ mb: 3 }}>
               OUR PRODUCTS
             </Typography>
             <Stack spacing={2}>
@@ -83,7 +84,7 @@ export default function Footer() {
           </Grid>
 
           <Grid item xs={12} md={3}>
-            <Typography variant="h6" sx={{ mb: 3 }}>
+            <Typography variant="body2" sx={{ mb: 3 }}>
               COMPANY
             </Typography>
             <Stack spacing={2}>
@@ -102,7 +103,7 @@ export default function Footer() {
           </Grid>
 
           <Grid item xs={12} md={3}>
-            <Typography variant="h6" sx={{ mb: 3 }}>
+            <Typography variant="body2" sx={{ mb: 3 }}>
               SOCIALS
             </Typography>
             <Stack direction="row" spacing={3} sx={{ mb: 4 }}>
@@ -119,10 +120,10 @@ export default function Footer() {
           </Grid>
         </Grid>
 
-         <Typography variant="body2" sx={{ color: '#a0a0a0', mt: 4, textAlign: 'left' }}>
+        <Typography variant="body2" sx={{ color: '#a0a0a0', mt: 4, textAlign: 'left' }}>
           {copyright}
         </Typography>
-      </Container>
-    </Box>
+      </Box>
+    </Container>
   );
 }

@@ -85,10 +85,10 @@ const config = {
             position: 'left',
             label: 'Testnet',
           },
-          {
-            type: 'custom-navbar-item-tools',
-            position: 'left',
-          },
+//          {
+//            type: 'custom-navbar-item-tools',
+//            position: 'left',
+//          },
           {
             type: 'custom-navbar-item-social-links',
             position: 'right',
