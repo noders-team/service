@@ -18,6 +18,7 @@ export default function Footer() {
       color: '#ffffff',
       paddingTop: 6,
       paddingBottom: 3,
+      paddingX: 8,
       mt: 'auto',
     }}>
       <Container
