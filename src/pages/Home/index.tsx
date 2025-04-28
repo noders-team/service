@@ -9,12 +9,16 @@ import { FaArrowRight } from 'react-icons/fa6';
 function Home() {
   return (
     <Container maxWidth="lg">
-      <Box display="flex" flexDirection="column" border={1} borderColor="divider">
-
-        <Box 
-          display="flex" 
-          px={8} 
-          gap={2} 
+      <Box
+        display="flex"
+        flexDirection="column"
+        border={1}
+        borderColor="divider"
+      >
+        <Box
+          display="flex"
+          px={8}
+          gap={2}
           alignItems="center"
           sx={{
             backgroundImage: 'url("img/home-page/anim-bg.png")',
@@ -45,7 +49,7 @@ function Home() {
           </Box>
         </Box>
 
-        <Box display="flex" px={8} border={1} borderColor="divider">
+        <Box display="flex" px={8} borderTop={1} borderBottom={1} borderColor="divider">
           <Box display="flex" flexDirection="column" flex={1} gap={1} pr={2} py={3} borderRight={1} borderColor="divider">
             <Box display="flex" pb={1}>
               <Illustration src="img/home-page/endpoints.svg" alt="Endpoints" width={112} />

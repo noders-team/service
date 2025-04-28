@@ -66,7 +66,7 @@ function ChainsGrid() {
 
   return (
     <Box display="flex" flexGrow={1} flexDirection="column">
-      <Box display="flex" flexGrow={1} sx={{ borderBottom: 1, borderColor: 'divider' }}>
+      <Box display="flex" flexGrow={1} borderBottom={1} borderColor="divider">
         <Tabs variant="fullWidth" value={value} onChange={handleChange} sx={{ display: 'flex', flexGrow: 1 }}>
           <Tab label="Mainnet" sx={{ flexGrow: 1 }} />
           <Tab label="Testnet" sx={{ flexGrow: 1 }} />
