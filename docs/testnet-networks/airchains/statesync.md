@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-airchains">
 # State sync
 </div>
-###### Chain ID: `varanasi-1` | Current Node Version: `v0.3.1`
+###### Chain ID: `varanasi-1` | Current Node Version: `v0.3.2`
 
 ```bash
 SNAP_RPC=https://airchains-t-rpc.noders.services:443 && \

@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-airchains">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `varanasi-1` | Current Node Version: `v0.3.1`
+###### Chain ID: `varanasi-1` | Current Node Version: `v0.3.2`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 
