@@ -25,6 +25,7 @@ export default function Footer() {
           pt={10}
           pb={3}
           px={8}
+          borderTop={1}
           borderLeft={1}
           borderRight={1}
           borderColor="divider"

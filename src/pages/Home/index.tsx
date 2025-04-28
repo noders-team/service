@@ -12,13 +12,15 @@ function Home() {
       <Box
         display="flex"
         flexDirection="column"
-        border={1}
+        borderTop={1}
+        borderLeft={1}
+        borderRight={1}
         borderColor="divider"
       >
         <Box
           display="flex"
-          px={8}
-          gap={2}
+          pl={8}
+          gap={3}
           alignItems="center"
           sx={{
             backgroundImage: 'url("img/home-page/anim-bg.png")',
@@ -44,9 +46,7 @@ function Home() {
               <Button variant="outlined" href={useBaseUrl('testnet-networks/overview')} endIcon={<FaArrowRight size={14} />}>Testnet Networks</Button>
             </Box>
           </Box>
-          <Box display="flex" justifyContent="center" py={5} flex={1}>
             <HeroAnimation />
-          </Box>
         </Box>
 
         <Box display="flex" px={8} borderTop={1} borderBottom={1} borderColor="divider">
