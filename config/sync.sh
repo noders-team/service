@@ -314,7 +314,7 @@ function updateLivePeers {
 function updateSnapshotInfo {
   # Get the actual filename from the directory listing
   local filename
-  filename=$(curl -s "https://snapshots.noders.services/${CHAIN_SYSTEM_NAME}/" | grep -o "\"${CHAIN_SYSTEM_NAME}.*.tar.lz4\"" | cut -d "\"" -f2)
+  filename=$(curl -s "https://snapshots.noders.services/${CHAIN_SYSTEM_NAME}/" | grep -o "\"${CHAIN_SYSTEM_NAME}.*.tar.lz4\"" | tail -n1 | cut -d "\"" -f2)
   local url="https://snapshots.noders.services/${CHAIN_SYSTEM_NAME}/${filename}"
 
   # Fetching the headers for the snapshot URL
@@ -516,7 +516,7 @@ function updateLivePeers {
 function updateSnapshotInfo {
   # Get the actual filename from the directory listing
   local filename
-  filename=$(curl -s "https://snapshots-t.noders.services/${CHAIN_SYSTEM_NAME}/" | grep -o "\"${CHAIN_SYSTEM_NAME}.*.tar.lz4\"" | cut -d "\"" -f2)
+  filename=$(curl -s "https://snapshots-t.noders.services/${CHAIN_SYSTEM_NAME}/" | grep -o "\"${CHAIN_SYSTEM_NAME}.*.tar.lz4\"" | tail -n1 | cut -d "\"" -f2)
   local url="https://snapshots-t.noders.services/${CHAIN_SYSTEM_NAME}/${filename}"
 
   # Fetching the headers for the snapshot URL
