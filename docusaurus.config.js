@@ -74,21 +74,9 @@ const config = {
         hideOnScroll: true,
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'mainnetSidebar',
+            type: 'custom-navbar-item-links',
             position: 'left',
-            label: 'Mainnet',
           },
-          {
-            type: 'docSidebar',
-            sidebarId: 'testnetSidebar',
-            position: 'left',
-            label: 'Testnet',
-          },
-//          {
-//            type: 'custom-navbar-item-tools',
-//            position: 'left',
-//          },
           {
             type: 'custom-navbar-item-social-links',
             position: 'right',
