@@ -1,5 +1,6 @@
 import React from "react";
 import { Box } from "@mui/material";
+import styles from "./index.module.css";
 
 function ImgContainer({ imgUrl, width, height }: { imgUrl: string, width: number, height: number }) {
   return (
@@ -27,7 +28,13 @@ function ImgContainer({ imgUrl, width, height }: { imgUrl: string, width: number
 
 function HeroAnimation() {
   return (
-    <Box display="flex" gap={2}>
+    <Box display="flex" gap={2} sx={{ position: "relative", overflow: "hidden" }}>
+      <Box
+        component="img"
+        src="img/home-page/anim-blocks.webp"
+        alt=""
+        className={styles.rotatingBackground}
+      />
       <Box display="flex" flexDirection="column" gap={2} justifyContent="right" minWidth={168}>
         <Box display="flex" justifyContent="flex-end">
           <ImgContainer imgUrl="img/home-page/anim-api.svg" width={88} height={88} />

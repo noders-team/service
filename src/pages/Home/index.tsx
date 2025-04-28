@@ -10,7 +10,19 @@ function Home() {
     <Container maxWidth="lg">
       <Box display="flex" flexDirection="column" border={1} borderColor="divider">
 
-        <Box display="flex" px={8} gap={2} alignItems="center">
+        <Box 
+          display="flex" 
+          px={8} 
+          gap={2} 
+          alignItems="center"
+          sx={{
+            backgroundImage: 'url("img/home-page/anim-bg.png")',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'right bottom',
+            backgroundSize: 'auto 100%',
+            position: 'relative',
+          }}
+        >
           <Box
             display="flex"
             flexDirection="column"
