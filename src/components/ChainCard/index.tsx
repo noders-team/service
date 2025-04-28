@@ -1,7 +1,13 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 
-function ChainCard({ chainName, chainId, iconUrl }) {
+interface ChainCardProps {
+  chainName: string;
+  chainId: string;
+  iconUrl: string;
+}
+
+function ChainCard({ chainName, chainId, iconUrl }: ChainCardProps) {
   return (
     <Box display="flex" gap={2} sx={{ borderRadius: 2, p: 2 }} bgcolor={theme => theme.palette.background.paper}>
       <Box
@@ -13,13 +19,14 @@ function ChainCard({ chainName, chainId, iconUrl }) {
       <Box>
         <Typography variant="h6">{chainName}</Typography>
         <Typography
-          variant="body1"
+          variant="body2"
           title={chainId}
           sx={{
             maxWidth: 180,
             overflow: "hidden",
             textOverflow: "ellipsis",
-            whiteSpace: "nowrap"
+            whiteSpace: "nowrap",
+            opacity: 0.6
           }}
         >
           {chainId}
@@ -29,4 +36,4 @@ function ChainCard({ chainName, chainId, iconUrl }) {
   )
 }
 
-export default ChainCard;
+export default React.memo(ChainCard);

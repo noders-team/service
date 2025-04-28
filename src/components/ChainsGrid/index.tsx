@@ -1,9 +1,9 @@
-import { Tab, Tabs } from "@mui/material";
+import { Link as MuiLink, Tab, Tabs } from "@mui/material";
 import { Box } from "@mui/material";
-import React from "react";
+import React, { useMemo } from "react";
 import ChainCard from "../ChainCard";
-import { Chain } from "../../types/Chain";
-import Link from "@docusaurus/Link";
+import { Chain } from "@/types/Chain";
+import DocusaurusLink from "@docusaurus/Link";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -36,7 +36,8 @@ async function fetchChains(url: string): Promise<Chain[]> {
 }
 
 function ChainsGrid() {
-  const [chains, setChains] = React.useState<Chain[]>([]);
+  const [mainnetChains, setMainnetChains] = React.useState<Chain[]>([]);
+  const [testnetChains, setTestnetChains] = React.useState<Chain[]>([]);
   const [loading, setLoading] = React.useState(true);
   const [value, setValue] = React.useState(0);
 
@@ -44,7 +45,8 @@ function ChainsGrid() {
   React.useEffect(() => {
     fetchChains(chainsUrl)
       .then(data => {
-        setChains(data);
+        setMainnetChains(data.filter(chain => chain.scope === 'mainnet'));
+        setTestnetChains(data.filter(chain => chain.scope === 'testnet'));
         setLoading(false);
       })
       .catch(error => {
@@ -57,8 +59,47 @@ function ChainsGrid() {
     setValue(newValue);
   };
 
-  const mainnetChains = chains.filter(chain => chain.scope === 'mainnet')
-  const testnetChains = chains.filter(chain => chain.scope === 'testnet')
+  const mainnetContent = useMemo(() => (
+    <Box display="grid" gridTemplateColumns="repeat(auto-fill, minmax(250px, 1fr))" gap={2}>
+      {mainnetChains.map((chain) => (
+        <MuiLink component={DocusaurusLink} to={`mainnet-networks/${chain.name}`} key={chain.chain_id} sx={{
+          textDecoration: 'none',
+          '&:hover': {
+            textDecoration: 'none',
+            color: 'inherit'
+          },
+          color: 'inherit'
+        }}>
+          <ChainCard
+            chainName={chain.pretty_name}
+            chainId={chain.chain_id}
+            iconUrl={chain.logo_url}
+          />
+        </MuiLink>
+      ))}
+    </Box>
+  ), [mainnetChains]);
+
+  const testnetContent = useMemo(() => (
+    <Box display="grid" gridTemplateColumns="repeat(auto-fill, minmax(250px, 1fr))" gap={2}>
+      {testnetChains.map((chain) => (
+        <MuiLink component={DocusaurusLink} to={`testnet-networks/${chain.name}`} key={chain.chain_id} sx={{
+          textDecoration: 'none',
+          '&:hover': {
+            textDecoration: 'none',
+            color: 'inherit'
+          },
+          color: 'inherit'
+        }}>
+          <ChainCard
+            chainName={chain.pretty_name}
+            chainId={chain.chain_id}
+            iconUrl={chain.logo_url}
+          />
+        </MuiLink>
+      ))}
+    </Box>
+  ), [testnetChains]);
 
   if (loading) {
     return <Box>Loading chains...</Box>;
@@ -73,32 +114,10 @@ function ChainsGrid() {
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
-        <Box display="grid" gridTemplateColumns="repeat(auto-fill, minmax(250px, 1fr))" gap={2}>
-          {mainnetChains.map((chain) => (
-            <Link to={`mainnet-networks/${chain.name}`} key={chain.chain_id}>
-              <ChainCard
-                key={chain.chain_id}
-                chainName={chain.pretty_name}
-                chainId={chain.chain_id}
-                iconUrl={chain.logo_url}
-              />
-            </Link>
-          ))}
-        </Box>
+        {mainnetContent}
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        <Box display="grid" gridTemplateColumns="repeat(auto-fill, minmax(250px, 1fr))" gap={2}>
-          {testnetChains.map((chain) => (
-            <Link to={`testnet-networks/${chain.name}`} key={chain.chain_id}>
-              <ChainCard
-                key={chain.chain_id}
-                chainName={chain.pretty_name}
-                chainId={chain.chain_id}
-                iconUrl={chain.logo_url}
-              />
-            </Link>
-          ))}
-        </Box>
+        {testnetContent}
       </CustomTabPanel>
     </Box>
   );

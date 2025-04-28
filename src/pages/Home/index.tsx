@@ -36,7 +36,7 @@ function Home() {
             flex={1}
           >
             <Typography variant="h3">Validator servises</Typography>
-            <Typography variant="body1">Noders Team provides a stable, reliable infrastructure for web3 projects, supporting them at all stages of development: starting with testnet
+            <Typography variant="subtitle1" sx={{ opacity: 0.6 }}>Noders Team provides a stable, reliable infrastructure for web3 projects, supporting them at all stages of development: starting with testnet
               and continuing into the mainnet</Typography>
 
             <Box display="flex" gap={2}>
@@ -54,29 +54,29 @@ function Home() {
             <Box display="flex" pb={1}>
               <Illustration src="img/home-page/endpoints.svg" alt="Endpoints" width={112} />
             </Box>
-            <Typography variant="h5">Endpoints</Typography>
-            <Typography variant="body2">API, RPC, gRPC</Typography>
+            <Typography variant="h6">Endpoints</Typography>
+            <Typography variant="body2" sx={{ opacity: 0.6 }}>API, RPC, gRPC</Typography>
           </Box>
           <Box display="flex" flexDirection="column" flex={1} gap={1} px={2} py={3} borderRight={1} borderColor="divider">
             <Box display="flex" pb={1}>
               <Illustration src="img/home-page/sync.svg" alt="Sync" width={114} />
             </Box>
-            <Typography variant="h5">Sync</Typography>
-            <Typography variant="body2">Snapshot, State Sync, Peers, Seed</Typography>
+            <Typography variant="h6">Sync</Typography>
+            <Typography variant="body2" sx={{ opacity: 0.6 }}>Snapshot, State Sync, Peers, Seed</Typography>
           </Box>
           <Box display="flex" flexDirection="column" flex={1} gap={1} px={2} py={3} borderRight={1} borderColor="divider">
             <Box display="flex" pb={1}>
               <Illustration src="img/home-page/explorer.svg" alt="Explorers" width={112} />
             </Box>
-            <Typography variant="h5">Explorers</Typography>
-            <Typography variant="body2">Faucet, Bots and other Useful Tools</Typography>
+            <Typography variant="h6">Explorers</Typography>
+            <Typography variant="body2" sx={{ opacity: 0.6 }}>Faucet, Bots and other Useful Tools</Typography>
           </Box>
           <Box display="flex" flexDirection="column" flex={1} gap={1} pl={2} py={3}>
             <Box display="flex" pb={1}>
               <Illustration src="img/home-page/guides.svg" alt="Guides" width={108} />
             </Box>
-            <Typography variant="h5">Guides</Typography>
-            <Typography variant="body2">Clear Installation and Upgrade Guides </Typography>
+            <Typography variant="h6">Guides</Typography>
+            <Typography variant="body2" sx={{ opacity: 0.6 }}>Clear Installation and Upgrade Guides </Typography>
           </Box>
         </Box>
 

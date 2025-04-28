@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { createTheme, ThemeProvider as MUIThemeProvider } from '@mui/material/styles';
+import { createTheme, ThemeProvider as MUIThemeProvider, ThemeOptions } from '@mui/material/styles';
 import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
 import { useColorMode } from '@docusaurus/theme-common';
@@ -14,9 +14,9 @@ export default function ThemeProvider(props) {
   const { colorMode } = useColorMode();
   const isDark = colorMode === 'dark';
 
-  const dark = {
+  const dark: ThemeOptions = {
     palette: {
-      mode: 'dark' as 'dark',
+      mode: 'dark',
       primary: {
         main: '#3880FF',
       },
@@ -29,11 +29,49 @@ export default function ThemeProvider(props) {
       },
       divider: '#1F232E',
     },
+    components: {
+      MuiButton: {
+        styleOverrides: {
+          root: {
+            textTransform: 'none',
+            '&:hover': {
+              color: 'inherit',
+            },
+          },
+          outlined: {
+            color: '#ffffff',
+            borderColor: '#ffffff',
+            '&:hover': {
+              color: '#3880FF',
+              borderColor: '#3880FF',
+            },
+          },
+        },
+      },
+      MuiTab: {
+        styleOverrides: {
+          root: {
+            textTransform: 'none',
+          },
+        },
+      },
+      MuiLink: {
+        styleOverrides: {
+          root: {
+            textDecoration: 'none',
+            cursor: 'pointer',
+            '&:hover': {
+              opacity: 1,
+            },
+          },
+        },
+      },
+    },
   }
 
-  const light = {
+  const light: ThemeOptions = {
     palette: {
-      mode: 'light' as 'light',
+      mode: 'light',
       primary: {
         main: '#3880FF',
       },
@@ -44,6 +82,38 @@ export default function ThemeProvider(props) {
         default: '#ffffff',
         paper: '#f6f8fa',
       }
+    },
+    components: {
+      MuiButton: {
+        styleOverrides: {
+          root: {
+            textTransform: 'none',
+            '&:hover': {
+              color: 'inherit',
+            },
+          },
+          outlined: {
+            '&:hover': {
+              color: '#3880FF',
+              borderColor: '#3880FF',
+            },
+          },
+        },
+      },
+      MuiTab: {
+        styleOverrides: {
+          root: {
+            textTransform: 'none',
+          },
+        },
+      },
+      MuiLink: {
+        styleOverrides: {
+          root: {
+            textDecoration: 'none',
+          },
+        },
+      },
     },
   }
 
