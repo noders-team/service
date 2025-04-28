@@ -1,12 +1,8 @@
-'use client';
-
 import React, { useEffect } from 'react';
 import { createTheme, ThemeProvider as MUIThemeProvider } from '@mui/material/styles';
 import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useColorMode } from '@docusaurus/theme-common';
-import Root from '@theme-original/Root';
 
 const createEmotionCache = () => {
   return createCache({ key: 'mui' });
@@ -16,33 +12,51 @@ const emotionCache = createEmotionCache();
 
 export default function ThemeProvider(props) {
   const { colorMode } = useColorMode();
-  const { siteConfig } = useDocusaurusContext();
+  const isDark = colorMode === 'dark';
 
+  const dark = {
+    palette: {
+      mode: 'dark' as 'dark',
+      primary: {
+        main: '#3880FF',
+      },
+      secondary: {
+        main: '#111111',
+      },
+      background: {
+        default: '#04060B',
+        paper: '#111317',
+      },
+      divider: '#1F232E',
+    },
+  }
+
+  const light = {
+    palette: {
+      mode: 'light' as 'light',
+      primary: {
+        main: '#3880FF',
+      },
+      secondary: {
+        main: '#25c2a0',
+      },
+      background: {
+        default: '#ffffff',
+        paper: '#f6f8fa',
+      }
+    },
+  }
+
+  const palette = isDark ? dark : light;
   const theme = React.useMemo(
     () =>
-      createTheme({
-        palette: {
-          mode: colorMode,
-          primary: {
-            // main: '#3880FF', 
-            main: 'FFFFFF',
-          },
-          secondary: {
-            // main: '#25c2a0', 
-            main: '#FFFFFF',
-          },
-          background: {
-            default: colorMode === 'dark' ? '#04060B' : '#ffffff',
-            paper: colorMode === 'dark' ? '#20222C' : '#f6f8fa',
-          },
-        },
-      }),
+      createTheme(palette),
     [colorMode],
   );
 
   useEffect(() => {
     const root = document.documentElement;
-    
+
     root.style.setProperty('--ifm-color-primary', theme.palette.primary.main);
     root.style.setProperty('--ifm-color-primary-dark', theme.palette.primary.dark);
     root.style.setProperty('--ifm-color-primary-darker', theme.palette.primary.dark);
@@ -50,7 +64,7 @@ export default function ThemeProvider(props) {
     root.style.setProperty('--ifm-color-primary-light', theme.palette.primary.light);
     root.style.setProperty('--ifm-color-primary-lighter', theme.palette.primary.light);
     root.style.setProperty('--ifm-color-primary-lightest', theme.palette.primary.light);
-    
+
     root.style.setProperty('--ifm-menu-color-active', theme.palette.primary.main);
     root.style.setProperty('--ifm-menu-color-primary', theme.palette.primary.main);
     root.style.setProperty('--ifm-link-color', theme.palette.primary.main);
@@ -62,7 +76,7 @@ export default function ThemeProvider(props) {
 
     root.style.setProperty('--ifm-code-background', theme.palette.background.paper);
     root.style.setProperty('--ifm-code-font-size', '95%');
-    
+
     if (colorMode === 'dark') {
       root.style.setProperty('--ifm-background-color', theme.palette.background.default);
       root.style.setProperty('--ifm-background-surface-color', theme.palette.background.default);
@@ -75,11 +89,13 @@ export default function ThemeProvider(props) {
     }
   }, [theme, colorMode]);
 
+  console.log('🎨 Theme: ', colorMode, theme);
+
   return (
     <CacheProvider value={emotionCache}>
       <MUIThemeProvider theme={theme}>
-        <Root {...props} />
+        {props.children}
       </MUIThemeProvider>
     </CacheProvider>
   );
-} 
+}

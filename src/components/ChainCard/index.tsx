@@ -3,7 +3,7 @@ import { Box, Typography } from "@mui/material";
 
 function ChainCard({ chainName, chainId, iconUrl }) {
   return (
-    <Box display="flex" gap={2} sx={{ borderRadius: 2, p: 2 }}>
+    <Box display="flex" gap={2} sx={{ borderRadius: 2, p: 2 }} bgcolor={theme => theme.palette.background.paper}>
       <Box
         component="img"
         src={iconUrl}
@@ -12,8 +12,8 @@ function ChainCard({ chainName, chainId, iconUrl }) {
       />
       <Box>
         <Typography variant="h6">{chainName}</Typography>
-        <Typography 
-          variant="body1" 
+        <Typography
+          variant="body1"
           title={chainId}
           sx={{
             maxWidth: 180,
