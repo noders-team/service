@@ -4,6 +4,7 @@ import ChainsGrid from '@site/src/components/ChainsGrid';
 import HeroAnimation from '@site/src/components/HeroAnimation';
 import Illustration from '@site/src/components/Illustration';
 import React from 'react';
+import { FaArrowRight } from 'react-icons/fa6';
 
 function Home() {
   return (
@@ -35,8 +36,8 @@ function Home() {
               and continuing into the mainnet</Typography>
 
             <Box display="flex" gap={2}>
-              <Button variant="contained" href={useBaseUrl('mainnet-networks/overview')}>Mainnet Networks</Button>
-              <Button variant="outlined" href={useBaseUrl('testnet-networks/overview')}>Testnet Networks</Button>
+              <Button variant="contained" href={useBaseUrl('mainnet-networks/overview')} endIcon={<FaArrowRight size={14} />}>Mainnet Networks</Button>
+              <Button variant="outlined" href={useBaseUrl('testnet-networks/overview')} endIcon={<FaArrowRight size={14} />}>Testnet Networks</Button>
             </Box>
           </Box>
           <Box display="flex" justifyContent="center" py={5} flex={1}>
