@@ -22,7 +22,7 @@ function CustomTabPanel(props: TabPanelProps) {
       aria-labelledby={`tab-${index}`}
       {...other}
     >
-      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
+      {value === index && <Box pt={4}>{children}</Box>}
     </div>
   );
 }
@@ -60,7 +60,7 @@ function ChainsGrid() {
   };
 
   const mainnetContent = useMemo(() => (
-    <Box display="grid" gridTemplateColumns="repeat(auto-fill, minmax(250px, 1fr))" gap={2}>
+    <Box display="grid" gridTemplateColumns="repeat(auto-fill, minmax(200px, 1fr))" gap={2}>
       {mainnetChains.map((chain) => (
         <MuiLink component={DocusaurusLink} to={`mainnet-networks/${chain.name}`} key={chain.chain_id} sx={{
           textDecoration: 'none',
@@ -81,7 +81,7 @@ function ChainsGrid() {
   ), [mainnetChains]);
 
   const testnetContent = useMemo(() => (
-    <Box display="grid" gridTemplateColumns="repeat(auto-fill, minmax(250px, 1fr))" gap={2}>
+    <Box display="grid" gridTemplateColumns="repeat(auto-fill, minmax(200px, 1fr))" gap={2}>
       {testnetChains.map((chain) => (
         <MuiLink component={DocusaurusLink} to={`testnet-networks/${chain.name}`} key={chain.chain_id} sx={{
           textDecoration: 'none',

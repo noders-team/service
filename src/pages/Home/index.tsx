@@ -80,7 +80,7 @@ function Home() {
           </Box>
         </Box>
 
-        <Box display="flex" px={8} py={8}>
+        <Box display="flex" px={8} pt={8} pb={15}>
           <ChainsGrid />
         </Box>
       </Box>
