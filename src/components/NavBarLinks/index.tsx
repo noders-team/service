@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Box, Link, Typography, SvgIcon } from "@mui/material";
+import useBaseUrl from "@docusaurus/useBaseUrl";
 
 const MainnetIcon = (props) => (
   <SvgIcon {...props} viewBox="0 0 24 24">
@@ -32,9 +33,12 @@ const TestnetIcon = (props) => (
 );
 
 export default function NavBarLinks(props: any): JSX.Element {
+  const mainnetHref = useBaseUrl("mainnet-networks/overview");
+  const testnetHref = useBaseUrl("testnet-networks/overview");
+
   return (
     <Box display="flex" pl={6} gap={6}>
-      <Box component={Link} href="/mainnet-networks/overview" display="flex" alignItems="center" gap={1}
+      <Box component={Link} href={mainnetHref} display="flex" alignItems="center" gap={1}
            sx={{
              color: "text.primary",
              textDecoration: "none",
@@ -48,7 +52,7 @@ export default function NavBarLinks(props: any): JSX.Element {
         <MainnetIcon sx={{ width: 24, height: 24 }} />
         <Typography variant="subtitle1" sx={{fontWeight: 600}}>Mainnet</Typography>
       </Box>
-      <Box component={Link} href="/testnet-networks/overview" display="flex" alignItems="center" gap={1}
+      <Box component={Link} href={testnetHref} display="flex" alignItems="center" gap={1}
            sx={{
              color: "text.primary",
              textDecoration: "none",

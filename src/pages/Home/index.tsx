@@ -8,7 +8,7 @@ import { FaArrowRight } from 'react-icons/fa6';
 
 function Home() {
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" disableGutters>
       <Box
         display="flex"
         flexDirection="column"

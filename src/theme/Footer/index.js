@@ -20,6 +20,7 @@ export default function Footer() {
       <Container
         component="footer"
         maxWidth="lg"
+        disableGutters
       >
         <Box
           pt={10}

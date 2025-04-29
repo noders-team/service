@@ -29,6 +29,15 @@ export default function ThemeProvider(props) {
       },
       divider: '#1F232E',
     },
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 600,
+        md: 900,
+        lg: 1200,
+        xl: 1536,
+      },
+    },
     components: {
       MuiButton: {
         styleOverrides: {
@@ -45,6 +54,16 @@ export default function ThemeProvider(props) {
             '&:hover': {
               color: '#3880FF',
               borderColor: '#3880FF',
+            },
+          },
+        },
+      },
+      MuiContainer: {
+        styleOverrides: {
+          maxWidthLg: {
+            maxWidth: '1400px !important',
+            '@media (min-width: 1200px)': {
+              maxWidth: '1400px !important',
             },
           },
         },
@@ -85,6 +104,15 @@ export default function ThemeProvider(props) {
         paper: '#f6f8fa',
       }
     },
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 600,
+        md: 900,
+        lg: 1200,
+        xl: 1536,
+      },
+    },
     components: {
       MuiButton: {
         styleOverrides: {
@@ -98,6 +126,16 @@ export default function ThemeProvider(props) {
             '&:hover': {
               color: '#3880FF',
               borderColor: '#3880FF',
+            },
+          },
+        },
+      },
+      MuiContainer: {
+        styleOverrides: {
+          maxWidthLg: {
+            maxWidth: '1400px !important',
+            '@media (min-width: 1200px)': {
+              maxWidth: '1400px !important',
             },
           },
         },
