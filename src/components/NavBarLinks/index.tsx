@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { Box, Typography, SvgIcon } from "@mui/material";
-import Link from '@docusaurus/Link';
+import { Box, Link, Typography, SvgIcon } from "@mui/material";
 
 const MainnetIcon = (props) => (
   <SvgIcon {...props} viewBox="0 0 24 24">

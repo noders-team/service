@@ -41,6 +41,7 @@ export default function ThemeProvider(props) {
           outlined: {
             color: '#ffffff',
             borderColor: '#ffffff',
+            transition: 'all 0.15s ease',
             '&:hover': {
               color: '#3880FF',
               borderColor: '#3880FF',
@@ -60,6 +61,7 @@ export default function ThemeProvider(props) {
           root: {
             textDecoration: 'none',
             cursor: 'pointer',
+            transition: 'all 0.15s ease',
             '&:hover': {
               opacity: 1,
             },
