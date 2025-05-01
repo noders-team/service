@@ -2,12 +2,10 @@ import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
-import useMediaQuery from "@mui/material/useMediaQuery";
 import React, { useMemo } from "react";
 import ChainCard from "../ChainCard";
 import { Chain } from "@/types/Chain";
 import DocusaurusLink from "@docusaurus/Link";
-import { useTheme } from "@mui/material";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -45,17 +43,6 @@ function ChainsGrid() {
   const [loading, setLoading] = React.useState(true);
   const [value, setValue] = React.useState(0);
 
-  const theme = useTheme();
-  const isWidthLessThanMd = useMediaQuery(theme.breakpoints.down('md'));
-  const isWidthLessThanLg = useMediaQuery(theme.breakpoints.down('lg'));
-
-  let gridTemplateColumns = 'repeat(4, 1fr)';
-  if (isWidthLessThanMd) {
-    gridTemplateColumns = 'repeat(2, 1fr)';
-  } else if (isWidthLessThanLg) {
-    gridTemplateColumns = 'repeat(3, 1fr)';
-  }
-
   const chainsUrl = 'chains.json';
   React.useEffect(() => {
     fetchChains(chainsUrl)
@@ -75,7 +62,17 @@ function ChainsGrid() {
   };
 
   const mainnetContent = useMemo(() => (
-    <Box display="grid" gridTemplateColumns={gridTemplateColumns} gap={2}>
+    <Box
+      display="grid"
+      gap={2}
+      sx={{ gridTemplateColumns: {
+          xs: 'repeat(1, 1fr)',
+          sm: 'repeat(2, 1fr)',
+          md: 'repeat(3, 1fr)',
+          lg: 'repeat(4, 1fr)'
+        }
+      }}
+    >
       {mainnetChains.map((chain) => (
         <Link component={DocusaurusLink} to={`mainnet-networks/${chain.name}`} key={chain.chain_id} sx={{
           textDecoration: 'none',
@@ -93,10 +90,20 @@ function ChainsGrid() {
         </Link>
       ))}
     </Box>
-  ), [mainnetChains, gridTemplateColumns]);
+  ), [mainnetChains]);
 
   const testnetContent = useMemo(() => (
-    <Box display="grid" gridTemplateColumns={gridTemplateColumns} gap={2}>
+    <Box
+      display="grid"
+      gap={2}
+      sx={{ gridTemplateColumns: {
+          xs: 'repeat(1, 1fr)',
+          sm: 'repeat(2, 1fr)',
+          md: 'repeat(3, 1fr)',
+          lg: 'repeat(4, 1fr)'
+        }
+      }}
+    >
       {testnetChains.map((chain) => (
         <Link component={DocusaurusLink} to={`testnet-networks/${chain.name}`} key={chain.chain_id} sx={{
           textDecoration: 'none',
@@ -114,7 +121,7 @@ function ChainsGrid() {
         </Link>
       ))}
     </Box>
-  ), [testnetChains, gridTemplateColumns]);
+  ), [testnetChains]);
 
   if (loading) {
     return <Box>Loading chains...</Box>;

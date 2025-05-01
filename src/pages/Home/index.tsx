@@ -68,14 +68,18 @@ function Home() {
             gap={2}
             py={10}
             flex={1}
-            sx={{ position: 'relative', zIndex: 1 }}
+            sx={{
+              position: 'relative',
+              zIndex: 1,
+              paddingRight: {xs: 5, md: 0},
+            }}
           >
             <Typography variant="h3">Validator servises</Typography>
              <Typography variant="subtitle1" sx={{opacity: 0.6, fontWeight: 300}}>Noders Team provides a stable, reliable infrastructure
               for web3 projects, supporting them at all stages of development: starting with testnet
               and continuing into the mainnet</Typography>
 
-            <Box display="flex" gap={2} pt={1}>
+            <Box display="flex" gap={2} pt={1} sx={{ flexDirection: {xs: 'column', md: 'row'} }}>
               <Button
                 variant="contained"
                 href={useBaseUrl('mainnet-networks/overview')}
@@ -192,7 +196,7 @@ function Home() {
           </Box>
         </Box>
 
-        <Box display="flex" px={padding} pt={6} pb={15}>
+        <Box display="flex" px={padding} pt={6} pb={isDesktop ? 15 : 6}>
           <ChainsGrid/>
         </Box>
       </Box>
