@@ -47,6 +47,12 @@ export default function MuiThemeProvider(props) {
               borderColor: '#3880FF',
             },
           },
+          sizeLarge: {
+            borderRadius: 8,
+            fontSize: '1rem',
+            lineHeight: '1.5',
+            padding: '12px 24px',
+          }
         },
       },
       MuiTab: {

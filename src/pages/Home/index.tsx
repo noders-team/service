@@ -71,15 +71,26 @@ function Home() {
             sx={{ position: 'relative', zIndex: 1 }}
           >
             <Typography variant="h3">Validator servises</Typography>
-            <Typography variant="subtitle1" sx={{opacity: 0.6}}>Noders Team provides a stable, reliable infrastructure
+fix             <Typography variant="subtitle1" sx={{opacity: 0.6, fontWeight: 300}}>Noders Team provides a stable, reliable infrastructure
               for web3 projects, supporting them at all stages of development: starting with testnet
               and continuing into the mainnet</Typography>
 
-            <Box display="flex" gap={2}>
-              <Button variant="contained" href={useBaseUrl('mainnet-networks/overview')}
-                      endIcon={<FaArrowRight size={14}/>}>Mainnet Networks</Button>
-              <Button variant="outlined" href={useBaseUrl('testnet-networks/overview')}
-                      endIcon={<FaArrowRight size={14}/>}>Testnet Networks</Button>
+            <Box display="flex" gap={2} pt={1}>
+              <Button
+                variant="contained"
+                href={useBaseUrl('mainnet-networks/overview')}
+                endIcon={<FaArrowRight size={14}/>}
+                size="large"
+              >
+                Mainnet Networks
+              </Button>
+              <Button
+                variant="outlined" href={useBaseUrl('testnet-networks/overview')}
+                endIcon={<FaArrowRight size={14}/>}
+                size="large"
+              >
+                Testnet Networks
+              </Button>
             </Box>
           </Box>
           <Box sx={{ position: 'relative', zIndex: 1, display: {xs: 'none', md: 'flex'} }}>
@@ -97,7 +108,9 @@ function Home() {
               display="flex"
               flexDirection={isDesktop ? 'column' : 'row'}
               gap={2}
-              p={3}
+              paddingY={3}
+              paddingLeft={isDesktop ? 0 : 3}
+              paddingRight={3}
               borderRight={1}
               borderBottom={!isDesktop ? 1 : 0}
               borderColor="divider"
