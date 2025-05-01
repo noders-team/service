@@ -4,17 +4,14 @@
  * work well for content-centric websites.
  */
 
-/* Основная тема */
 :root {
-  /* Цвета устанавливаются динамически из ThemeProvider.js */
+  /* Colors set dynamically from ThemeProvider.js */
 }
 
 [data-theme='dark'] {
-  /* Цвета устанавливаются динамически из ThemeProvider.js */
-}
-
-[data-theme='dark'] .menu__link:hover {
-    /* color: #eeeeee; */
+    /* Colors set dynamically from ThemeProvider.js */
+  --ifm-background-color: #04060B;
+  --ifm-background-surface-color: #04060B;
 }
 
 /* NAV BAR */
