@@ -36,7 +36,7 @@ SOCIAL_TELEGRAM="https://t.me/quicksilverzone"
 # Other
 DOWNLOAD_URL="https://snapshots.noders.services/quicksilver"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://quicksilver.explorers.guru/validator/quickvaloper17gwfcceyvcw53r6cclrhwk5jksmtd96xfjwrcv"
+VALIDATOR_LINK="https://ping.pub/quicksilver/staking/quickvaloper17gwfcceyvcw53r6cclrhwk5jksmtd96xfjwrcv"
 
 # Updates
 UPDATE_MAIN=true

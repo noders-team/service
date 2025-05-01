@@ -30,7 +30,7 @@ Official links of social networks of projects
 
 <CardLayout autoFitEnabled={true}>
     <Card
-        to=""
+        to="https://testnet.itrocket.net/zenrock/staking/zenvaloper1jmxxnpl4saratjf46dsv3kfk5ny3qk0923fdwn"
         header={{
             label: "[NODERS]TEAM",
             translateId: "development-setup",

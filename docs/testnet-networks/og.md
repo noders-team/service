@@ -30,7 +30,7 @@ Official links of social networks of projects
 
 <CardLayout autoFitEnabled={true}>
     <Card
-        to="https://explorer.validatorvn.com/OG-Testnet/staking/evmosvaloper1n30zgt2nc3auawqlsgkqmwz9u3r0zdwnu9xjc4"
+        to="https://testnet.0g.explorers.guru/validator/0gvaloper1w24g8xczpxuy5y87lwv0dyq9n27mlyul3xf2zk"
         header={{
             label: "[NODERS]TEAM",
             translateId: "development-setup",

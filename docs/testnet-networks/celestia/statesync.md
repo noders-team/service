@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-celestia">
 # State sync
 </div>
-###### Chain ID: `mocha-4` | Current Node Version: `v3.4.2`
+###### Chain ID: `mocha-4` | Current Node Version: `3.8.1-mocha`
 
 ```bash
 SNAP_RPC=https://celestia-t-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop celestia-appd && celestia-appd tendermint unsafe-reset-all --home ~/.celestia-app --keep-addr-book
 ```
 ```bash
-peers="d7fc95caa0450605b6cbc0a8ab47e3f20992cfd1@celestia-t-rpc.noders.services:11656"
+peers="2d40e73c3b0fcccc5c7806621ff9943a7fb3199e@celestia-t-rpc.noders.services:11656"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.celestia-app/config/config.toml
 ```
 ```bash

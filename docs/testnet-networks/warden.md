@@ -30,7 +30,7 @@ Official links of social networks of projects
 
 <CardLayout autoFitEnabled={true}>
     <Card
-        to="https://warden-explorer.paranorm.pro/warden/staking/wardenvaloper1ucm0wa7g029xvlt9yffz5kqj2zw40qyugqlakc"
+        to="https://testnet.warden.explorers.guru/validator/wardenvaloper1nun82ve6x07rhd0vda25acnalea70m28trfp4j"
         header={{
             label: "[NODERS]TEAM",
             translateId: "development-setup",

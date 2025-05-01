@@ -30,7 +30,7 @@ Official links of social networks of projects
 
 <CardLayout autoFitEnabled={true}>
     <Card
-        to="https://www.mintscan.io/desmos/validators/desmosvaloper1pequu0gsvh9ay5rx2xyg6j7eratwufu560dpnu"
+        to="https://ping.pub/desmos/staking/desmosvaloper1pequu0gsvh9ay5rx2xyg6j7eratwufu560dpnu"
         header={{
             label: "[NODERS]TEAM",
             translateId: "development-setup",

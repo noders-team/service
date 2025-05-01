@@ -36,7 +36,7 @@ SOCIAL_TELEGRAM=""
 # Other
 DOWNLOAD_URL="https://snapshots-t.noders.services/airchains"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://testnet.airchains.io/validator/airvaloper15n0pesc7ggllax6medkfv6pqjszpc40qps5au8"
+VALIDATOR_LINK="https://explorer.stavr.tech/Airchains-Testnet/staking/airvaloper1z6q26lprv70xgztfzgnfxgm7t57xh0p0hugz54"
 
 # Updates
 UPDATE_MAIN=true

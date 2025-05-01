@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-quicksilver">
 # Quicksilver
 </div>
-###### Chain ID: `rhye-3` | Current Node Version: `v1.8.0-rc.0`
+###### Chain ID: `rhye-3` | Current Node Version: `v1.8.0-rc.1`
 
 
 Quicksilver introduces liquid staking to the Cosmos ecosystem, unlocking liquidity for staked assets while maintaining network security participation. It features liquid staking derivatives, cross-chain functionality through the IBC protocol, decentralized governance, high security, and yield optimization. This protocol enables greater capital efficiency and a vibrant DeFi ecosystem, offering opportunities for lending, borrowing, and trading staked assets across chains, thus innovating within DeFi and Cosmos.
@@ -30,7 +30,7 @@ Official links of social networks of projects
 
 <CardLayout autoFitEnabled={true}>
     <Card
-        to="https://testnet.quicksilver.explorers.guru/validator/quickvaloper17gwfcceyvcw53r6cclrhwk5jksmtd96xfjwrcv"
+        to="https://testnet.itrocket.net/quicksilver/staking/quickvaloper17gwfcceyvcw53r6cclrhwk5jksmtd96xfjwrcv"
         header={{
             label: "[NODERS]TEAM",
             translateId: "development-setup",

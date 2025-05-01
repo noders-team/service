@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-celestia">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `celestia` | Current Node Version: `v3.7.0`
+###### Chain ID: `celestia` | Current Node Version: `v3.8.1`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 

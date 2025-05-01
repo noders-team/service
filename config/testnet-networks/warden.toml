@@ -36,7 +36,7 @@ SOCIAL_TELEGRAM="https://t.me/wardenprotocol"
 # Other
 DOWNLOAD_URL="https://snapshots-t.noders.services/warden"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://warden-explorer.paranorm.pro/warden/staking/wardenvaloper1ucm0wa7g029xvlt9yffz5kqj2zw40qyugqlakc"
+VALIDATOR_LINK="https://testnet.warden.explorers.guru/validator/wardenvaloper1nun82ve6x07rhd0vda25acnalea70m28trfp4j"
 
 # Updates
 UPDATE_MAIN=true

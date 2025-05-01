@@ -30,7 +30,7 @@ Official links of social networks of projects
 
 <CardLayout autoFitEnabled={true}>
     <Card
-        to="https://quicksilver.explorers.guru/validator/quickvaloper17gwfcceyvcw53r6cclrhwk5jksmtd96xfjwrcv"
+        to="https://ping.pub/quicksilver/staking/quickvaloper17gwfcceyvcw53r6cclrhwk5jksmtd96xfjwrcv"
         header={{
             label: "[NODERS]TEAM",
             translateId: "development-setup",

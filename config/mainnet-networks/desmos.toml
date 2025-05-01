@@ -36,7 +36,7 @@ SOCIAL_TELEGRAM="https://t.me/desmosnetwork"
 # Other
 DOWNLOAD_URL="https://snapshots.noders.services/desmos"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://www.mintscan.io/desmos/validators/desmosvaloper1pequu0gsvh9ay5rx2xyg6j7eratwufu560dpnu"
+VALIDATOR_LINK="https://ping.pub/desmos/staking/desmosvaloper1pequu0gsvh9ay5rx2xyg6j7eratwufu560dpnu"
 
 # Updates
 UPDATE_MAIN=true
