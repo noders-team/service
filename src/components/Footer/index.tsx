@@ -16,10 +16,7 @@ export default function Footer() {
   const copyright = `© ${new Date().getFullYear()} Noders LLC`;
 
   return (
-    <Container
-      maxWidth="lg"
-      disableGutters={!isDesktop}
-    >
+    <Container maxWidth="lg" disableGutters>
       <Box
         pt={10}
         pb={3}

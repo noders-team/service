@@ -29,15 +29,6 @@ export default function MuiThemeProvider(props) {
       },
       divider: '#1F232E',
     },
-    breakpoints: {
-      values: {
-        xs: 0,
-        sm: 600,
-        md: 900,
-        lg: 1200,
-        xl: 1536,
-      },
-    },
     components: {
       MuiButton: {
         styleOverrides: {
@@ -77,6 +68,13 @@ export default function MuiThemeProvider(props) {
           },
         },
       },
+      MuiContainer: {
+        styleOverrides: {
+          root: {
+            backgroundColor: '#04060B',
+          },
+        },
+      },
     },
   }
 
@@ -93,15 +91,6 @@ export default function MuiThemeProvider(props) {
         default: '#ffffff',
         paper: '#f6f8fa',
       }
-    },
-    breakpoints: {
-      values: {
-        xs: 0,
-        sm: 600,
-        md: 900,
-        lg: 1200,
-        xl: 1536,
-      },
     },
     components: {
       MuiButton: {
@@ -131,6 +120,13 @@ export default function MuiThemeProvider(props) {
         styleOverrides: {
           root: {
             textDecoration: 'none',
+          },
+        },
+      },
+      MuiContainer: {
+        styleOverrides: {
+          root: {
+            backgroundColor: '#ffffff',
           },
         },
       },

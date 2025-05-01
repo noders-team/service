@@ -17,7 +17,7 @@ function Home() {
   const padding = isDesktop ? 8 : 5;
 
   return (
-    <Container maxWidth="lg" disableGutters={!isDesktop}>
+    <Container maxWidth="lg" disableGutters>
       <Box
         display="flex"
         flexDirection="column"

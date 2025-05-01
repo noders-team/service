@@ -22,8 +22,12 @@ export default function RootPage(): JSX.Element {
                     `}
               </script>
             </Head>
-            <Home />
-            <Footer />
+            <div style={{
+                backgroundImage: 'url(img/home-page/dot-pattern.svg)',
+            }}>
+              <Home />
+              <Footer />
+            </div>
         </Layout>
     );
 }
