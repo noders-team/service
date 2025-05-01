@@ -8,6 +8,19 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import Grid from '@mui/material/Grid';
 import { FaGithub, FaTelegram, FaXTwitter } from 'react-icons/fa6';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import SvgIcon from '@mui/material/SvgIcon';
+
+const ArrowIcon = () => (
+  <SvgIcon sx={{ fontSize: '24px', ml: 1 }}>
+    <path 
+      fillRule="evenodd" 
+      clipRule="evenodd" 
+      d="M10.166 9.88298V10.55H11.5V9.88298V5.16702C11.5 4.79863 11.2014 4.5 10.833 4.5H6.11703H5.45002V5.83403H6.11703H9.22266L4.97165 10.085L4.5 10.5567L5.4433 11.5L5.91496 11.0283L10.166 6.77732V9.88298Z" 
+      fill="currentColor" 
+      fillOpacity="0.6"
+    />
+  </SvgIcon>
+);
 
 export default function Footer() {
   const isDesktop = useMediaQuery(theme => theme.breakpoints.up('md'));
@@ -86,7 +99,9 @@ export default function Footer() {
                 </Typography>
               </Box>
               <Box display="flex" alignItems="top" ml={3}
-                   sx={{color: 'text.primary', fontSize: '0.7rem', opacity: 0.6}}>↗</Box>
+                   sx={{color: 'text.primary', fontSize: '0.7rem', opacity: 0.6}}>
+                <ArrowIcon />
+              </Box>
             </Box>
           </Grid>
 
@@ -99,19 +114,19 @@ export default function Footer() {
                 <Typography variant="body2">
                   Explorer
                 </Typography>
-                <Box component="span" sx={{ml: 1, fontSize: '0.7rem'}}>↗</Box>
+                <ArrowIcon />
               </Link>
               <Link href="https://celestiahub.org" target="_blank" sx={{color: 'inherit', opacity: 0.6, display: 'flex'}}>
                 <Typography variant="body2">
                   CommunityApp
                 </Typography>
-                <Box component="span" sx={{ml: 1, fontSize: '0.7rem'}}>↗</Box>
+                <ArrowIcon />
               </Link>
               <Link href="https://faucet.noders.services" target="_blank" sx={{color: 'inherit', opacity: 0.6, display: 'flex'}}>
                 <Typography variant="body2">
                   Faucet
                 </Typography>
-                <Box component="span" sx={{ml: 1, fontSize: '0.7rem'}}>↗</Box>
+                <ArrowIcon />
               </Link>
             </Stack>
           </Grid>
@@ -125,13 +140,13 @@ export default function Footer() {
                 <Typography variant="body2">
                   About Us
                 </Typography>
-                <Box component="span" sx={{ml: 1, fontSize: '0.7rem'}}>↗</Box>
+                <ArrowIcon />
               </Link>
               <Link href="https://noders.team" target="_blank" sx={{color: 'inherit', opacity: 0.6, display: 'flex'}}>
                 <Typography variant="body2">
                   Stake with Us
                 </Typography>
-                <Box component="span" sx={{ml: 1, fontSize: '0.7rem'}}>↗</Box>
+                <ArrowIcon />
               </Link>
               <Link href="mailto:office@noders.team" sx={{color: 'inherit', opacity: 0.6, display: 'flex'}}>
                 <Typography variant="body2">
