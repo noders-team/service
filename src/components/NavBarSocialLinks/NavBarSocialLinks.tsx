@@ -13,15 +13,15 @@ export default function NavBarSocialLinks(props: any): JSX.Element {
   }
 
   const iconStyle = {
-    color: 'var(--ifm-navbar-link-color)',
+    color: 'inherit',
     opacity: 0.6,
     fontSize: '1.25rem',
     display: 'flex',
     alignItems: 'center',
-    transition: 'opacity 0.2s',
+    transition: 'all 0.2s',
     '&:hover': {
       opacity: 1,
-      color: 'var(--ifm-navbar-link-hover-color)',
+      color: 'primary.main',
     }
   };
 
