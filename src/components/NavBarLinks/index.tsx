@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Link, Typography, SvgIcon } from "@mui/material";
+import { Box, Link, Typography, SvgIcon, useMediaQuery } from "@mui/material";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
 const MainnetIcon = (props) => (
@@ -35,9 +35,21 @@ const TestnetIcon = (props) => (
 export default function NavBarLinks(props: any): JSX.Element {
   const mainnetHref = useBaseUrl("mainnet-networks/overview");
   const testnetHref = useBaseUrl("testnet-networks/overview");
+  const isMobile = props?.mobile === true;
+  const isDesktop = useMediaQuery('(min-width: 997px)');
+
+  if (!isMobile && !isDesktop) {
+    return null;
+  }
 
   return (
-    <Box display="flex" pl={6} gap={6}>
+    <Box
+      display="flex"
+      pl={isDesktop ? 6 : 1}
+      pb={isDesktop ? 0 : 2}
+      gap={isDesktop ? 6 : 1}
+      flexDirection={isDesktop ? "row" : "column"}
+    >
       <Box component={Link} href={mainnetHref} display="flex" alignItems="center" gap={1}
            sx={{
              color: "text.primary",

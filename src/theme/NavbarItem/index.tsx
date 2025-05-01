@@ -5,12 +5,13 @@ import NavBarLinks from "@/components/NavBarLinks";
 
 interface NavbarItemProps {
   type?: string;
+  mobile?: boolean;
   [key: string]: any;
 }
 
 export default function NavbarItemWrapper(props: NavbarItemProps): JSX.Element {
   if (props.type === 'custom-navbar-item-links') {
-    return <NavBarLinks/>
+    return <NavBarLinks {...props} />
   }
   if (props.type === 'custom-navbar-item-social-links') {
     return <NavBarSocialLinks {...props} />;
