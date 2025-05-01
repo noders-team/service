@@ -71,7 +71,7 @@ function Home() {
             sx={{ position: 'relative', zIndex: 1 }}
           >
             <Typography variant="h3">Validator servises</Typography>
-fix             <Typography variant="subtitle1" sx={{opacity: 0.6, fontWeight: 300}}>Noders Team provides a stable, reliable infrastructure
+             <Typography variant="subtitle1" sx={{opacity: 0.6, fontWeight: 300}}>Noders Team provides a stable, reliable infrastructure
               for web3 projects, supporting them at all stages of development: starting with testnet
               and continuing into the mainnet</Typography>
 
