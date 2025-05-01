@@ -1,5 +1,4 @@
-import { Link as MuiLink, Tab, Tabs } from "@mui/material";
-import { Box } from "@mui/material";
+import { Box, Link, Tab, Tabs, useMediaQuery } from "@mui/material";
 import React, { useMemo } from "react";
 import ChainCard from "../ChainCard";
 import { Chain } from "@/types/Chain";
@@ -12,7 +11,7 @@ interface TabPanelProps {
 }
 
 function CustomTabPanel(props: TabPanelProps) {
-  const { children, value, index, ...other } = props;
+  const {children, value, index, ...other} = props;
 
   return (
     <div
@@ -41,6 +40,16 @@ function ChainsGrid() {
   const [loading, setLoading] = React.useState(true);
   const [value, setValue] = React.useState(0);
 
+  const isWidthLessThanMd = useMediaQuery(theme => theme.breakpoints.down('md'));
+  const isWidthLessThanLg = useMediaQuery(theme => theme.breakpoints.down('lg'));
+
+  let gridTemplateColumns = 'repeat(4, 1fr)';
+  if (isWidthLessThanMd) {
+    gridTemplateColumns = 'repeat(2, 1fr)';
+  } else if (isWidthLessThanLg) {
+    gridTemplateColumns = 'repeat(3, 1fr)';
+  }
+
   const chainsUrl = 'chains.json';
   React.useEffect(() => {
     fetchChains(chainsUrl)
@@ -60,9 +69,9 @@ function ChainsGrid() {
   };
 
   const mainnetContent = useMemo(() => (
-    <Box display="grid" gridTemplateColumns="repeat(auto-fill, minmax(300px, 1fr))" gap={2}>
+    <Box display="grid" gridTemplateColumns={gridTemplateColumns} gap={2}>
       {mainnetChains.map((chain) => (
-        <MuiLink component={DocusaurusLink} to={`mainnet-networks/${chain.name}`} key={chain.chain_id} sx={{
+        <Link component={DocusaurusLink} to={`mainnet-networks/${chain.name}`} key={chain.chain_id} sx={{
           textDecoration: 'none',
           '&:hover': {
             textDecoration: 'none',
@@ -75,15 +84,15 @@ function ChainsGrid() {
             chainId={chain.chain_id}
             iconUrl={chain.logo_url}
           />
-        </MuiLink>
+        </Link>
       ))}
     </Box>
-  ), [mainnetChains]);
+  ), [mainnetChains, gridTemplateColumns]);
 
   const testnetContent = useMemo(() => (
-    <Box display="grid" gridTemplateColumns="repeat(auto-fill, minmax(300px, 1fr))" gap={2}>
+    <Box display="grid" gridTemplateColumns={gridTemplateColumns} gap={2}>
       {testnetChains.map((chain) => (
-        <MuiLink component={DocusaurusLink} to={`testnet-networks/${chain.name}`} key={chain.chain_id} sx={{
+        <Link component={DocusaurusLink} to={`testnet-networks/${chain.name}`} key={chain.chain_id} sx={{
           textDecoration: 'none',
           '&:hover': {
             textDecoration: 'none',
@@ -96,10 +105,10 @@ function ChainsGrid() {
             chainId={chain.chain_id}
             iconUrl={chain.logo_url}
           />
-        </MuiLink>
+        </Link>
       ))}
     </Box>
-  ), [testnetChains]);
+  ), [testnetChains, gridTemplateColumns]);
 
   if (loading) {
     return <Box>Loading chains...</Box>;
@@ -108,9 +117,9 @@ function ChainsGrid() {
   return (
     <Box display="flex" flexGrow={1} flexDirection="column">
       <Box display="flex" flexGrow={1} borderBottom={1} borderColor="divider">
-        <Tabs variant="fullWidth" value={value} onChange={handleChange} sx={{ display: 'flex', flexGrow: 1 }}>
-          <Tab label="Mainnet" sx={{ flexGrow: 1 }} />
-          <Tab label="Testnet" sx={{ flexGrow: 1 }} />
+        <Tabs variant="fullWidth" value={value} onChange={handleChange} sx={{display: 'flex', flexGrow: 1}}>
+          <Tab label="Mainnet" sx={{flexGrow: 1}}/>
+          <Tab label="Testnet" sx={{flexGrow: 1}}/>
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>

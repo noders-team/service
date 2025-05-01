@@ -58,16 +58,6 @@ export default function ThemeProvider(props) {
           },
         },
       },
-      MuiContainer: {
-        styleOverrides: {
-          maxWidthLg: {
-            maxWidth: '1400px !important',
-            '@media (min-width: 1200px)': {
-              maxWidth: '1400px !important',
-            },
-          },
-        },
-      },
       MuiTab: {
         styleOverrides: {
           root: {
@@ -126,16 +116,6 @@ export default function ThemeProvider(props) {
             '&:hover': {
               color: '#3880FF',
               borderColor: '#3880FF',
-            },
-          },
-        },
-      },
-      MuiContainer: {
-        styleOverrides: {
-          maxWidthLg: {
-            maxWidth: '1400px !important',
-            '@media (min-width: 1200px)': {
-              maxWidth: '1400px !important',
             },
           },
         },

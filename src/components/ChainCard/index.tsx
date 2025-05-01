@@ -22,7 +22,7 @@ function ChainCard({ chainName, chainId, iconUrl }: ChainCardProps) {
           variant="body2"
           title={chainId}
           sx={{
-            maxWidth: 180,
+            maxWidth: 120,
             overflow: "hidden",
             textOverflow: "ellipsis",
             whiteSpace: "nowrap",

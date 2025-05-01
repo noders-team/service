@@ -88,9 +88,7 @@ const config = {
         darkTheme: prismThemes.dracula,
         additionalLanguages: ['bash'],
       },
-      footer: {
-        copyright: `© ${new Date().getFullYear()} Noders LLC`,
-      },
+      footer: {},
     }),
 
   plugins: [

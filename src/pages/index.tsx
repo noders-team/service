@@ -3,6 +3,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import Home from './Home';
+import Footer from "@/components/Footer";
 
 export default function HomePage(): JSX.Element {
     const {siteConfig} = useDocusaurusContext();
@@ -22,6 +23,7 @@ export default function HomePage(): JSX.Element {
               </script>
             </Head>
             <Home />
+            <Footer />
         </Layout>
     );
 }
