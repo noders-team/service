@@ -53,6 +53,7 @@ export default function Footer() {
             <Box
               component="a"
               href='https://noders.team'
+              target="_blank"
               display="flex"
               border={1}
               borderColor="divider"
@@ -92,20 +93,19 @@ export default function Footer() {
               Our products
             </Typography>
             <Stack spacing={2} pt={2}>
-              <Link href="https://celestiahub.org/explorer/dashboard"
-                    sx={{color: 'inherit', opacity: 0.6, display: 'flex'}}>
+              <Link href="https://celestiahub.org/explorer/dashboard" target="_blank" sx={{color: 'inherit', opacity: 0.6, display: 'flex'}}>
                 <Typography variant="body2">
                   Explorer
                 </Typography>
                 <Box component="span" sx={{ml: 1, fontSize: '0.7rem'}}>↗</Box>
               </Link>
-              <Link href="https://celestiahub.org" sx={{color: 'inherit', opacity: 0.6, display: 'flex'}}>
+              <Link href="https://celestiahub.org" target="_blank" sx={{color: 'inherit', opacity: 0.6, display: 'flex'}}>
                 <Typography variant="body2">
                   CommunityApp
                 </Typography>
                 <Box component="span" sx={{ml: 1, fontSize: '0.7rem'}}>↗</Box>
               </Link>
-              <Link href="https://faucet.noders.services" sx={{color: 'inherit', opacity: 0.6, display: 'flex'}}>
+              <Link href="https://faucet.noders.services" target="_blank" sx={{color: 'inherit', opacity: 0.6, display: 'flex'}}>
                 <Typography variant="body2">
                   Faucet
                 </Typography>
@@ -119,13 +119,13 @@ export default function Footer() {
               Company
             </Typography>
             <Stack spacing={2} pt={2}>
-              <Link href="https://noders.team" sx={{color: 'inherit', opacity: 0.6, display: 'flex'}}>
+              <Link href="https://noders.team" target="_blank" sx={{color: 'inherit', opacity: 0.6, display: 'flex'}}>
                 <Typography variant="body2">
                   About Us
                 </Typography>
                 <Box component="span" sx={{ml: 1, fontSize: '0.7rem'}}>↗</Box>
               </Link>
-              <Link href="https://noders.team" sx={{color: 'inherit', opacity: 0.6, display: 'flex'}}>
+              <Link href="https://noders.team" target="_blank" sx={{color: 'inherit', opacity: 0.6, display: 'flex'}}>
                 <Typography variant="body2">
                   Stake with Us
                 </Typography>
@@ -144,14 +144,14 @@ export default function Footer() {
               Socials
             </Typography>
             <Stack direction="row" pt={2} spacing={3}>
-              <Link href="https://x.com/NODERS_TEAM" aria-label="Twitter" sx={{color: 'inherit', opacity: 0.6}}>
+              <Link href="https://x.com/NODERS_TEAM" target="_blank" aria-label="Twitter" sx={{color: 'inherit', opacity: 0.6}}>
                 <FaXTwitter size={24}/>
               </Link>
-              <Link href="https://t.me/noders_team" aria-label="Telegram Channel"
+              <Link href="https://t.me/noders_team" target="_blank" aria-label="Telegram Channel"
                     sx={{color: 'inherit', opacity: 0.6}}>
                 <FaTelegram size={24}/>
               </Link>
-              <Link href="https://github.com/noders-team" aria-label="GitHub" sx={{color: 'inherit', opacity: 0.6}}>
+              <Link href="https://github.com/noders-team" target="_blank" aria-label="GitHub" sx={{color: 'inherit', opacity: 0.6}}>
                 <FaGithub size={24}/>
               </Link>
             </Stack>
