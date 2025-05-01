@@ -1,4 +1,8 @@
-import { Box, Link, Tab, Tabs, useMediaQuery } from "@mui/material";
+import Box from "@mui/material/Box";
+import Link from "@mui/material/Link";
+import Tab from "@mui/material/Tab";
+import Tabs from "@mui/material/Tabs";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import React, { useMemo } from "react";
 import ChainCard from "../ChainCard";
 import { Chain } from "@/types/Chain";

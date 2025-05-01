@@ -1,5 +1,9 @@
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import { Box, Button, Container, Typography, useMediaQuery } from '@mui/material';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import ChainsGrid from '@site/src/components/ChainsGrid';
 import ServicesCards from '@site/src/components/ServicesCards';
 import Illustration from '@site/src/components/Illustration';

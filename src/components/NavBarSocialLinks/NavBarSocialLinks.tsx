@@ -1,5 +1,7 @@
 import * as React from 'react';
-import { Box, Link, useMediaQuery } from '@mui/material';
+import Box from '@mui/material/Box';
+import Link from '@mui/material/Link';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { FaTelegram, FaXTwitter, FaGithub, FaGlobe } from 'react-icons/fa6';
 
 export default function NavBarSocialLinks(props: any): JSX.Element {

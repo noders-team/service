@@ -33,7 +33,7 @@ const config = {
     locales: ['en'],
   },
 
-  future: { experimental_faster: true },
+  // future: { experimental_faster: true },
 
   stylesheets: [
     'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap',

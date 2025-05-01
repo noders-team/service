@@ -1,5 +1,10 @@
 import React from 'react';
-import { Box, Container, Link, Stack, Typography, useMediaQuery } from '@mui/material';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import Link from '@mui/material/Link';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import Grid from '@mui/material/Grid';
 import { FaGithub, FaTelegram, FaXTwitter } from 'react-icons/fa6';
 import useBaseUrl from '@docusaurus/useBaseUrl';
