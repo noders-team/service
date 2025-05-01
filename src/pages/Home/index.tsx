@@ -115,7 +115,7 @@ function Home() {
               borderBottom={!isDesktop ? 1 : 0}
               borderColor="divider"
             >
-              <Box display="flex" pb={1}>
+              <Box display="flex" pb={1} sx={{ maxWidth: {xs: '30%', md: 'unset'} }}>
                 <Illustration src="img/home-page/endpoints.svg" alt="Endpoints" width={112}/>
               </Box>
               <Box
