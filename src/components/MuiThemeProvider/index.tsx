@@ -3,6 +3,7 @@ import { createTheme, ThemeProvider, ThemeOptions } from '@mui/material/styles';
 import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
 import { useColorMode } from '@docusaurus/theme-common';
+import '@fontsource/space-grotesk/500.css';
 
 const createEmotionCache = () => {
   return createCache({ key: 'mui' });
@@ -28,6 +29,15 @@ export default function MuiThemeProvider(props) {
         paper: '#111317',
       },
       divider: '#1F232E',
+    },
+    typography: {
+      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+      h1: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
+      h2: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
+      h3: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
+      h4: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
+      h5: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
+      h6: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
     },
     components: {
       MuiButton: {
@@ -98,6 +108,15 @@ export default function MuiThemeProvider(props) {
         default: '#ffffff',
         paper: '#f6f8fa',
       }
+    },
+    typography: {
+      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+      h1: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
+      h2: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
+      h3: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
+      h4: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
+      h5: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
+      h6: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
     },
     components: {
       MuiButton: {
