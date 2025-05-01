@@ -18,7 +18,7 @@ export default function Footer() {
   return (
     <Container maxWidth="lg" disableGutters>
       <Box
-        pt={10}
+        pt={isDesktop ? 10 : 5}
         pb={3}
         px={padding}
         borderTop={1}
@@ -29,7 +29,7 @@ export default function Footer() {
 
         <Grid
           container
-          spacing={8}
+          spacing={padding}
           justifyContent="space-between"
           sx={{width: '100%'}}
         >
@@ -40,10 +40,10 @@ export default function Footer() {
               flexDirection: "column",
               alignItems: {xs: 'center', lg: 'flex-start'}
             }}>
-            <Typography variant="h6" sx={{pb: 2}}>
+            <Typography variant="h6" sx={{pb: 1}}>
               Validator services
             </Typography>
-            <Typography variant="body2" sx={{opacity: 0.6}}>
+            <Typography variant="body2" sx={{opacity: 0.6, fontWeight: 300}}>
               Infrastructure and services for mainnets and testnets: Public RPC, API, Snapshots, Guides
             </Typography>
             <Box
@@ -54,9 +54,15 @@ export default function Footer() {
               border={1}
               borderColor="divider"
               borderRadius={2}
-              mt={3}
+              mt={2}
               p={1}
               width="fit-content"
+              sx={{
+                "&:hover": {
+                  textDecoration: 'none',
+                  backgroundColor: 'background.paper',
+                }
+              }}
             >
               <Box
                 component="img"

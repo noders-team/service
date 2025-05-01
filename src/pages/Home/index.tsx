@@ -192,7 +192,7 @@ function Home() {
           </Box>
         </Box>
 
-        <Box display="flex" px={padding} pt={8} pb={15}>
+        <Box display="flex" px={padding} pt={6} pb={15}>
           <ChainsGrid/>
         </Box>
       </Box>

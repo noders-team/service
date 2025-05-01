@@ -59,6 +59,7 @@ export default function MuiThemeProvider(props) {
         styleOverrides: {
           root: {
             textTransform: 'none',
+            fontSize: '1rem',
           },
         },
       },
