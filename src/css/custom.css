@@ -368,3 +368,7 @@ code .variable {
 .icon-fuel {
     background-image: url('../../static/img/fuel-icon.svg');
 }
+
+.pagination-nav {
+  display: none;
+}
