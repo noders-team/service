@@ -9,9 +9,11 @@ import ServicesCards from '@site/src/components/ServicesCards';
 import Illustration from '@site/src/components/Illustration';
 import React from 'react';
 import { FaArrowRight } from 'react-icons/fa6';
+import { useTheme } from '@mui/material';
 
 function Home() {
-  const isDesktop = useMediaQuery(theme => theme.breakpoints.up('md'));
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up('md'));
   const padding = isDesktop ? 8 : 5;
 
   return (

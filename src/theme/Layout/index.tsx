@@ -5,15 +5,17 @@ import type { WrapperProps } from '@docusaurus/types';
 import InitColorSchemeScript from "@mui/material/InitColorSchemeScript";
 import MuiThemeProvider from "@/components/MuiThemeProvider";
 
-type Props = WrapperProps<typeof LayoutType>;
+type Props = WrapperProps<typeof LayoutType> & {
+  children?: ReactNode;
+};
 
-export default function LayoutWrapper({children, ...props}): ReactNode {
+export default function LayoutWrapper(props: Props): ReactNode {
   return (
     <>
       <Layout {...props}>
         <InitColorSchemeScript/>
         <MuiThemeProvider>
-          {children}
+          {props.children}
         </MuiThemeProvider>
       </Layout>
     </>

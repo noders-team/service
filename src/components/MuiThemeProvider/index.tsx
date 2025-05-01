@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { createTheme, ThemeProvider as MUIThemeProvider, ThemeOptions } from '@mui/material/styles';
+import { createTheme, ThemeProvider, ThemeOptions } from '@mui/material/styles';
 import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
 import { useColorMode } from '@docusaurus/theme-common';
@@ -10,7 +10,7 @@ const createEmotionCache = () => {
 
 const emotionCache = createEmotionCache();
 
-export default function ThemeProvider(props) {
+export default function MuiThemeProvider(props) {
   const { colorMode } = useColorMode();
   const isDark = colorMode === 'dark';
 
@@ -183,9 +183,9 @@ export default function ThemeProvider(props) {
 
   return (
     <CacheProvider value={emotionCache}>
-      <MUIThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
         {props.children}
-      </MUIThemeProvider>
+      </ThemeProvider>
     </CacheProvider>
   );
 }

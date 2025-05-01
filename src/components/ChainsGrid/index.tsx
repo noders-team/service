@@ -7,6 +7,7 @@ import React, { useMemo } from "react";
 import ChainCard from "../ChainCard";
 import { Chain } from "@/types/Chain";
 import DocusaurusLink from "@docusaurus/Link";
+import { useTheme } from "@mui/material";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -44,8 +45,9 @@ function ChainsGrid() {
   const [loading, setLoading] = React.useState(true);
   const [value, setValue] = React.useState(0);
 
-  const isWidthLessThanMd = useMediaQuery(theme => theme.breakpoints.down('md'));
-  const isWidthLessThanLg = useMediaQuery(theme => theme.breakpoints.down('lg'));
+  const theme = useTheme();
+  const isWidthLessThanMd = useMediaQuery(theme.breakpoints.down('md'));
+  const isWidthLessThanLg = useMediaQuery(theme.breakpoints.down('lg'));
 
   let gridTemplateColumns = 'repeat(4, 1fr)';
   if (isWidthLessThanMd) {
