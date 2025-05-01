@@ -1,40 +1,16 @@
 import React from "react";
 import { Box } from "@mui/material";
 
-const imgContainerStyles = {
-  border: "1px solid rgba(255, 255, 255, 0.10)",
-  background: "rgba(255, 255, 255, 0.03)",
-  backdropFilter: "blur(42px)",
-};
-
-const rotatingBackgroundStyles = {
-  position: "absolute",
-  zIndex: 0,
-  objectFit: "cover",
-  animation: "rotateBg 20s linear infinite",
-  top: "50%",
-  left: "50%",
-  width: "150%",
-  height: "150%",
-  transformOrigin: "center center",
-  maxWidth: "none",
-  maxHeight: "none",
-  "@keyframes rotateBg": {
-    "0%": {
-      transform: "translate(-50%, -50%) rotate(0deg)",
-    },
-    "100%": {
-      transform: "translate(-50%, -50%) rotate(360deg)",
-    },
-  },
-};
-
 function ImgContainer({ imgUrl, width, height }: { imgUrl: string, width: number, height: number }) {
   return (
     <Box
       p={2}
       borderRadius={2}
-      sx={imgContainerStyles}
+      sx={{
+        border: "1px solid rgba(255, 255, 255, 0.10)",
+        background: "rgba(255, 255, 255, 0.03)",
+        backdropFilter: "blur(42px)",
+      }}
     >
       <Box
         component="img"
@@ -49,15 +25,9 @@ function ImgContainer({ imgUrl, width, height }: { imgUrl: string, width: number
   );
 }
 
-function HeroAnimation() {
+function ServicesCards() {
   return (
-    <Box display="flex" flex={1} gap={2} position="relative" overflow="hidden" padding={8}>
-      <Box
-        component="img"
-        src="img/home-page/anim-blocks.webp"
-        alt=""
-        sx={rotatingBackgroundStyles}
-      />
+    <Box display="flex" flex={1} gap={2} padding={8}>
       <Box display="flex" gap={2}>
         <Box display="flex" flexDirection="column" gap={2} justifyContent="right" minWidth={168}>
           <Box display="flex" justifyContent="flex-end">
@@ -76,4 +46,4 @@ function HeroAnimation() {
   );
 }
 
-export default HeroAnimation;
+export default ServicesCards;

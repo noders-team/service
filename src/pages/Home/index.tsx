@@ -1,7 +1,7 @@
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { Box, Button, Container, Typography, useMediaQuery } from '@mui/material';
 import ChainsGrid from '@site/src/components/ChainsGrid';
-import HeroAnimation from '@site/src/components/HeroAnimation';
+import ServicesCards from '@site/src/components/ServicesCards';
 import Illustration from '@site/src/components/Illustration';
 import React from 'react';
 import { FaArrowRight } from 'react-icons/fa6';
@@ -31,14 +31,39 @@ function Home() {
             backgroundPosition: 'right bottom',
             backgroundSize: 'auto 100%',
             position: 'relative',
+            overflow: 'hidden',
           }}
         >
+          <Box
+            component="img"
+            src="img/home-page/anim-blocks.webp"
+            alt=""
+            sx={{
+              position: "absolute",
+              zIndex: 0,
+              objectFit: "cover",
+              animation: "rotateBg 20s linear infinite",
+              top: "50%",
+              left: "70%",
+              minWidth: "220px",
+              minHeight: "220px",
+              "@keyframes rotateBg": {
+                "0%": {
+                  transform: "translate(-50%, -50%) rotate(0deg)",
+                },
+                "100%": {
+                  transform: "translate(-50%, -50%) rotate(360deg)",
+                },
+              },
+            }}
+          />
           <Box
             display="flex"
             flexDirection="column"
             gap={2}
             py={10}
             flex={1}
+            sx={{ position: 'relative', zIndex: 1 }}
           >
             <Typography variant="h3">Validator servises</Typography>
             <Typography variant="subtitle1" sx={{opacity: 0.6}}>Noders Team provides a stable, reliable infrastructure
@@ -52,7 +77,9 @@ function Home() {
                       endIcon={<FaArrowRight size={14}/>}>Testnet Networks</Button>
             </Box>
           </Box>
-          <HeroAnimation/>
+          <Box sx={{ position: 'relative', zIndex: 1, display: {xs: 'none', md: 'flex'} }}>
+            <ServicesCards/>
+          </Box>
         </Box>
 
         <Box display="flex" borderTop={1} borderBottom={1} borderColor="divider" sx={{paddingX: {xs: 0, md: 5, lg: 8}}}>
