@@ -27,7 +27,7 @@ function ImgContainer({ imgUrl, width, height }: { imgUrl: string, width: number
 
 function ServicesCards() {
   return (
-    <Box display="flex" flex={1} gap={2} padding={8}>
+    <Box display="flex" flex={1} gap={2} paddingY={3} paddingX={8}>
       <Box display="flex" gap={2}>
         <Box display="flex" flexDirection="column" gap={2} justifyContent="right" minWidth={168}>
           <Box display="flex" justifyContent="flex-end">
