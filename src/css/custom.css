@@ -17,6 +17,16 @@
     /* color: #eeeeee; */
 }
 
+/* NAV BAR */
+.navbar {
+  border-bottom: 1px solid #1F232E;
+}
+
+/* FOOTER */
+footer {
+  display: none;
+}
+
 /* Image Styles */
 .diagram-image {
   border-radius: 8px;
@@ -64,26 +74,6 @@
     height: 1px; /* Thickness of the divider */
     /* background-color: rgb(255, 255, 255); Color of the divider */
     margin: 10px 0px 0px 2px;
-}
-
-/* Устанавливаем минимальную высоту футера */
-.footer {
-    padding-top: 0.1rem; /* Reduced from 0.25rem */
-    padding-bottom: 0.1rem; /* Reduced from 0.25rem */
-}
-
-/* Убедитесь, что для дочерних элементов не задана фиксированная высота, которая может влиять на общую высоту футера */
-.footer * {
-    margin: 0; /* Keep existing margin removal */
-    padding: 0; /* Keep existing padding removal */
-    height: initial; /* Make sure elements only take up necessary space */
-}
-
-.footer__links-container,
-.footer__bottom {
-    display: flex; /* Use flexbox to layout children */
-    justify-content: space-between; /* Spread out the content */
-    padding: 0; /* Keep existing padding removal */
 }
 
 /* Убедитесь, что для .container-fluid не заданы минимальные высоты или большие паддинги */
@@ -162,14 +152,6 @@ li > a.menu__link {
     .h1-with-icon h1 {
         padding-left: 2.5rem;
     }
-}
-
-/* Pagination NavLink */
-
-[data-theme="dark"] .pagination-nav__link:hover {
-    font-weight: bold; /* Жирный текст при наведении */
-    /*border-color: #eeeeee;*/
-    /* box-shadow: 0 0 8px rgba(255, 255, 255, 0.5); Подсветка текста для лучшей видимости */
 }
 
 /* Code Block */

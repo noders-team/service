@@ -21,7 +21,6 @@ function Home() {
       <Box
         display="flex"
         flexDirection="column"
-        borderTop={1}
         borderLeft={1}
         borderRight={1}
         borderColor="divider"

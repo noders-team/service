@@ -17,7 +17,6 @@ export default function Footer() {
 
   return (
     <Container
-      component="footer"
       maxWidth="lg"
       disableGutters={!isDesktop}
     >
