@@ -12,6 +12,7 @@
     /* Colors set dynamically from ThemeProvider.js */
   --ifm-background-color: #04060B;
   --ifm-background-surface-color: #04060B;
+  --ifm-navbar-background-color: #04060B;
 }
 
 /* NAV BAR */

@@ -39,6 +39,20 @@ const config = {
     'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap',
   ],
 
+  headTags: [
+    {
+      tagName: 'style',
+      attributes: { type: 'text/css' },
+      innerHTML: `
+        [data-theme='dark'] {
+          --ifm-background-color: #04060B!important;
+          --ifm-background-surface-color: #04060B!important;
+          --ifm-navbar-background-color: #04060B!important;
+        }
+      `
+    }
+  ],
+
   presets: [
     [
       'classic',
