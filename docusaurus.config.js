@@ -15,12 +15,12 @@ const config = {
   url: 'https://noders.services',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/service/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'nodersteam', // Usually your GitHub org/user name.
-  projectName: 'services-docusaurus', // Usually your repo name.
+  organizationName: 'noders-team', // Usually your GitHub org/user name.
+  projectName: 'service', // Usually your repo name.
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
