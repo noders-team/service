@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-zetachain">
 # Zetachain
 </div>
-###### Chain ID: `athens_7001-1` | Current Node Version: `v29.1.4`
+###### Chain ID: `athens_7001-1` | Current Node Version: `v30.0.0`
 
 
 ZetaChain aims to revolutionize the blockchain landscape by offering a truly interoperable platform that connects disparate blockchain networks, enabling seamless communication and transactions across different ecosystems. As a multi-chain protocol, ZetaChain facilitates the transfer of data and value between all blockchains, whether they are public, private, or consortium, without requiring intermediaries. This open infrastructure supports smart contracts, allowing developers to build applications that can interact with any blockchain from a single platform. ZetaChain's innovative approach not only enhances efficiency and scalability but also opens up new possibilities for decentralized applications, fostering a more integrated and collaborative blockchain environment.

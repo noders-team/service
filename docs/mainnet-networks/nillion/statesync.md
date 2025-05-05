@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop nilliond && nilliond tendermint unsafe-reset-all --home ~/.nilliond --keep-addr-book
 ```
 ```bash
-peers="3b9feb89a38538c8e476071e9da84d6b5777f0bc@nillion-rpc.noders.services:26656"
+peers="e773e29b14899ca4ce83a58109d85b46402d93ad@nillion-rpc.noders.services:29856"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.nilliond/config/config.toml
 ```
 ```bash

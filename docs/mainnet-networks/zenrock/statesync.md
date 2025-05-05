@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-zenrock">
 # State sync
 </div>
-###### Chain ID: `diamond-1` | Current Node Version: `v5.16.20`
+###### Chain ID: `diamond-1` | Current Node Version: `v6.1.16`
 
 ```bash
 SNAP_RPC=https://zenrock-rpc.noders.services:443 && \
