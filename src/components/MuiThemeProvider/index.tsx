@@ -28,6 +28,12 @@ export default function MuiThemeProvider(props) {
         default: '#04060B',
         paper: '#111317',
       },
+      success: {
+        main: '#09C37C',
+      },
+      warning: {
+        main: '#FF9807',
+      },
       divider: '#1F232E',
     },
     typography: {
@@ -38,6 +44,7 @@ export default function MuiThemeProvider(props) {
       h4: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
       h5: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
       h6: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
+      subtitle2: { fontSize: '14px', fontWeight: 600 },
     },
     components: {
       MuiButton: {
@@ -56,6 +63,12 @@ export default function MuiThemeProvider(props) {
               color: '#3880FF',
               borderColor: '#3880FF',
             },
+          },
+          sizeMedium: {
+            fontSize: '14px',
+            lineHeight: '16px',
+            fontWeight: 600,
+            padding: '12px 24px',
           },
           sizeLarge: {
             borderRadius: 8,

@@ -49,6 +49,12 @@ const config = {
           --ifm-background-surface-color: #04060B!important;
           --ifm-navbar-background-color: #04060B!important;
         }
+
+        @font-face {
+          font-family: 'Consolas';
+          src: local('Consolas');
+          font-display: swap;
+        }
       `
     }
   ],

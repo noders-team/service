@@ -6,14 +6,21 @@ title: "Celestia"
 import SmallCard from "../../src/components/SmallCard"
 import Card from "../../src/components/Card"
 import CardLayout from "../../src/layouts/CardLayout"
+import ChainHero from "@site/src/components/ChainHero"
 
-<div class="h1-with-icon icon-celestia">
-# Celestia
-</div>
-###### Chain ID: `celestia` | Current Node Version: `v3.8.1`
-
-
-Celestia introduces a modular data availability network to enhance blockchain scalability and flexibility. It features a minimal design focusing on transaction ordering and data availability, decoupling consensus from execution for improved scalability. This approach allows for customized execution layers, powered by a secure Proof of Stake mechanism. Celestia's innovation lies in its ability to ensure transaction data is verifiable without downloading the entire chain, offering a foundation for scalable, efficient blockchain applications.
+<ChainHero
+  name="Celestia"
+  iconUrl="img/celestia-icon.svg"
+  scope="Mainnet"
+  chainId="mocha-4"
+  nodeVersion="v3.4.2"
+  stakeUrl="https://keplr.com"
+  restakeUrl="https://restake.app"
+  websiteUrl="https://celestia.app"
+  githubUrl="https://github.com"
+  xUrl="https://x.com"
+  discordUrl="https://discord.com"
+/>
 
 # Social resources
 Official links of social networks of projects

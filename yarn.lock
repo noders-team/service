@@ -1973,6 +1973,11 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.4.0.tgz#5e13fac887f08c44f76b0ccaf3370eb00fec9bb6"
   integrity sha512-snKqtPW01tN0ui7yu9rGv69aJXr/a/Ywvl11sUjNtEcRc+ng/mQriFL0wLXMef74iHa/EkftbDzU9F8iFbH+zg==
 
+"@fontsource/inconsolata@^5.2.5":
+  version "5.2.5"
+  resolved "https://registry.npmjs.org/@fontsource/inconsolata/-/inconsolata-5.2.5.tgz#8f220d83567dc27b7b54fd583044cb2ebbbd2759"
+  integrity sha512-OvzkZY5qYghv/jEV6cfGZzFhdFTvSnU+ExPC7WcZ7w8PdRhtiu/SpcBWOBt+3LXgS0n9qyepgq4zZmxlDTlGGQ==
+
 "@fontsource/space-grotesk@^5.2.6":
   version "5.2.7"
   resolved "https://registry.yarnpkg.com/@fontsource/space-grotesk/-/space-grotesk-5.2.7.tgz#3dc731576933d04771a5d09a6569964ba604b9ac"

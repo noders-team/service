@@ -1,0 +1,216 @@
+import React from "react";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import IconLink from "@/components/IconLink";
+import { FaXTwitter, FaGithub, FaGlobe, FaDiscord } from 'react-icons/fa6';
+import ScopeCard from "@/components/ScopeCard";
+import Divider from "@mui/material/Divider";
+import CodeText from "../CodeText";
+import Button from "@mui/material/Button";
+import KeplrIcon from "@site/static/img/keplr-logo.svg";
+import RestakeIcon from "@site/static/img/restake-logo.svg";
+
+type Props = {
+  name: string;
+  iconUrl: string;
+  scope: string;
+  chainId: string;
+  nodeVersion: string;
+  token?: string;
+  stakeUrl: string;
+  restakeUrl: string;
+  websiteUrl: string;
+  githubUrl: string;
+  xUrl: string;
+  discordUrl: string;
+}
+
+function ChainHero({ name, iconUrl, scope, chainId, nodeVersion, token, stakeUrl, restakeUrl, websiteUrl, githubUrl, xUrl, discordUrl }: Props) {
+  const baseIconUrl = useBaseUrl(iconUrl);
+  const showStakingButtons = stakeUrl || restakeUrl;
+
+  const handleStakeClick = () => {
+    window.open(stakeUrl, '_blank');
+  };
+
+  const handleRestakeClick = () => {
+    window.open(restakeUrl, '_blank');
+  };
+
+  return (
+    <Box
+      display="flex"
+      flexDirection="column"
+      padding={4}
+      borderRadius={3}
+      gap={2}
+      sx={{
+        background: `linear-gradient(
+            0deg,
+            rgba(123, 43, 249, 0.50) 0%,
+            rgba(27, 27, 29, 0.00) 100%
+          ),
+          linear-gradient(
+            0deg,
+            rgba(4, 6, 11, 0.00) 0%,
+            #04060B 100%
+          ),
+          url("/img/home-page/dot-pattern.svg") repeat;`
+      }}
+    >
+
+      <Box
+        display="flex"
+        alignItems="top"
+        justifyContent="space-between"
+        gap={2}
+      >
+        <Box
+          display="flex"
+          alignItems="center"
+          gap={2}
+        >
+          <Box
+            component="img"
+            src={baseIconUrl}
+            alt={name}
+            width={50}
+            height={50}
+          />
+          <Typography variant="h3">{name}</Typography>
+        </Box>
+
+        <Box
+          display="flex"
+          alignItems="center"
+          gap={2}
+        >
+          {websiteUrl && (
+            <IconLink
+              icon={<FaGlobe />}
+              href={websiteUrl}
+              width={20}
+              height={20}
+              target="_blank"
+              title="Website"
+            />
+          )}
+          {githubUrl && (
+            <IconLink
+              icon={<FaGithub />}
+              href={githubUrl}
+              width={24}
+              height={24}
+              target="_blank"
+              title="Github"
+            />
+          )}
+          {xUrl && (
+            <IconLink
+              icon={<FaXTwitter />}
+              href={xUrl}
+              width={24}
+              height={24}
+              target="_blank"
+              title="X"
+            />
+          )}
+          {discordUrl && (
+            <IconLink
+              icon={<FaDiscord />}
+              href={discordUrl}
+              width={24}
+              height={24}
+              target="_blank"
+              title="Discord"
+            />
+          )}
+        </Box>
+      </Box>
+
+      <Box
+        display="flex"
+        gap={1.5}
+      >
+        <Box
+          display="flex"
+          flexDirection="row"
+          alignItems="center"
+          gap={0.5}
+        >
+          <Typography variant="subtitle2">Network: </Typography>
+          <ScopeCard scope={scope} />
+        </Box>
+        <Divider orientation="vertical" variant="middle" flexItem />
+        <Box
+          display="flex"
+          flexDirection="row"
+          alignItems="center"
+          gap={0.5}
+        >
+          <Typography variant="subtitle2">Chain ID: </Typography>
+          <CodeText text={chainId} />
+        </Box>
+        <Divider orientation="vertical" variant="middle" flexItem />
+        <Box
+          display="flex"
+          flexDirection="row"
+          alignItems="center"
+          gap={0.5}
+        >
+          <Typography variant="subtitle2">Current Node Version: </Typography>
+          <CodeText text={nodeVersion} />
+        </Box>
+      </Box>
+
+      {showStakingButtons && (
+        <Box
+          display="flex"
+          gap={2}
+          paddingTop={2}
+        >
+          {stakeUrl && (
+            <Button
+              startIcon={<KeplrIcon width={24} height={24} />}
+              variant="contained"
+              onClick={handleStakeClick}
+              sx={{
+                borderRadius: 2,
+                boxShadow: 'none',
+              }}
+            >
+              Stake {token} via NODERS
+            </Button>
+          )}
+          {restakeUrl && (
+            <Button
+              variant="contained"
+              startIcon={<RestakeIcon width={24} height={24} />}
+              onClick={handleRestakeClick}
+              sx={theme => ({
+                borderRadius: 2,
+                color: '#000000',
+                backgroundColor: '#ffffff',
+                border: `1px solid transparent`,
+                boxShadow: 'none',
+                "&:hover": {
+                  backgroundColor: '#ffffff',
+                  color: '#000000',
+                  border: `1px solid ${theme.palette.divider}`,
+                  boxSizing: 'border-box',
+                  transition: 'all 0.2s ease-in-out',
+                }
+              })}
+            >
+              Auto Compounding
+            </Button>
+          )}
+        </Box>
+      )}
+
+    </Box>
+  )
+}
+
+export default ChainHero;
