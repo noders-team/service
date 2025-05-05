@@ -36,6 +36,7 @@ export default function MuiThemeProvider(props) {
       },
       divider: '#1F232E',
     },
+    spacing: 8,
     typography: {
       fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
       h1: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
@@ -122,6 +123,7 @@ export default function MuiThemeProvider(props) {
         paper: '#f6f8fa',
       }
     },
+    spacing: 8,
     typography: {
       fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
       h1: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
