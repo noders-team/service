@@ -216,8 +216,17 @@ code .variable {
     background-image: url('../../static/img/quicksilver-icon.svg');
 }
 
+.icon-realio {
+    background-image: url('../../static/img/realio-icon.svg');
+}
+
+
 .icon-rebus {
     background-image: url('../../static/img/rebus-icon.svg');
+}
+
+.icon-router {
+    background-image: url('../../static/img/router-icon.svg');
 }
 
 .icon-stratos {

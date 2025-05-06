@@ -1,0 +1,49 @@
+# Blockchain
+CHAIN_NAME="Router"
+CHAIN_SYSTEM_NAME="router"
+CHAIN_ID="auto"
+VERSION="auto"
+CHAIN_DESCRIPTION="""# The Router blockchain is a decentralized network built using the Cosmos SDK.
+
+The Router Chain is a layer 1 blockchain that leverages tendermint’s Byzantine Fault Tolerant (BFT) consensus engine
+
+"""
+[CHAIN_DESCRIPTION_END]
+
+CHAIN_DENOM="route"
+CHAIN_FEES="100000000000000"
+
+# Binary
+DAEMON_NAME="routerd"
+DAEMON_SERVICE="router.service"
+DAEMON_HOME="~/.routerd"
+
+# Endpoints
+ENDPOINT_RPC="https://router-rpc.noders.services"
+ENDPOINT_API="https://router-api.noders.services"
+ENDPOINT_JRPC=""
+ENDPOINT_GRPC="https://router-grpc.noders.services:443"
+ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/router"
+
+# Social
+SOCIAL_WEBSITE="https://www.routerprotocol.com/"
+SOCIAL_GITHUB="https://github.com/router-protocol"
+SOCIAL_DISCORD="https://discord.com/invite/yjM2fUUHvN"
+SOCIAL_X="https://twitter.com/routerprotocol"
+SOCIAL_TELEGRAM="https://t.me/routerprotocol"
+
+# Other
+DOWNLOAD_URL="https://snapshots.noders.services/router"
+GITHUB_FOLDER_NAME="auto"
+VALIDATOR_LINK="https://routerscan.io/validators/routervaloper1wf2sev9705ujesda8rzncr60xjgvt3mjzd5kne"
+
+# Updates
+UPDATE_MAIN=true
+UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
+UPDATE_UPGRADE=true
+UPDATE_SNAPSHOT=false
+UPDATE_STATESYNC=true
+UPDATE_LIVE_PEERS=true
+UPDATE_CLI_CHEATSHEET=true
