@@ -17,9 +17,9 @@ DAEMON_SERVICE="babylon.service"
 DAEMON_HOME="~/.babylond"
 
 # Endpoints
-ENDPOINT_RPC="https://babylon-t-rpc.noders.services"
-ENDPOINT_API="https://babylon-t-api.noders.services"
-ENDPOINT_JRPC="https://babylon-t-jsonrpc.noders.services"
+ENDPOINT_RPC=""
+ENDPOINT_API=""
+ENDPOINT_JRPC=""
 ENDPOINT_GRPC=""
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/babylon"
