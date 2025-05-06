@@ -14,8 +14,10 @@ function SimpleCard(props): React.JSX.Element {
       sx={{
         cursor: cursor,
         borderRadius: theme.spacing(borderRadius),
+        transition: theme.transitions.create('all'),
         '&:hover': {
           cursor: cursor,
+          backgroundColor: "#22252A",
         },
       }}
       {...rest}

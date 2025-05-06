@@ -24,6 +24,7 @@ import SimpleCard from '@/components/SimpleCard';
 import { IconBaseProps } from 'react-icons';
 import { useTheme } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 type ToolCardProps = {
   icon: React.ComponentType<IconBaseProps>;
@@ -32,9 +33,17 @@ type ToolCardProps = {
 };
 
 function ToolCard({ icon: Icon, linkUrl, title }: ToolCardProps): React.ReactElement {
+  const isMobile = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   return (
     <Link to={linkUrl} style={{ textDecoration: 'none', color: 'inherit' }}>
-      <SimpleCard flexDirection="column" gap={3} padding={3} borderRadius={2} cursor="pointer">
+      <SimpleCard
+        flexDirection="column"
+        gap={3}
+        padding={isMobile ? 2 : 3}
+        borderRadius={2}
+        cursor="pointer"
+        height="100%"
+      >
         <Icon size={32} opacity={0.2} />
         <Box display="flex" justifyContent="space-between" alignItems="center">
           <Typography variant="subtitle1" sx={{ fontWeight: 600, lineHeight: 'normal' }}>
@@ -103,7 +112,11 @@ function ToolsGrid({ chainName }: ToolsGridProps): React.ReactElement {
           <ToolCard icon={PiDatabase} linkUrl={chainName + '/snapshot'} title="Node Snapshot" />
           <ToolCard icon={PiGitPullRequest} linkUrl={chainName + '/live-peers'} title="Live Peers" />
           <ToolCard icon={PiFediverseLogo} linkUrl={chainName + '/seed-node'} title="Seed Node" />
-          <ToolCard icon={PiFediverseLogo} linkUrl={chainName + '/install#download-genesis-and-addrbook'} title="Address Book" />
+          <ToolCard
+            icon={PiFediverseLogo}
+            linkUrl={chainName + '/install#download-genesis-and-addrbook'}
+            title="Address Book"
+          />
         </Box>
       </Box>
 
