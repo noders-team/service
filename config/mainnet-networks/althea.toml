@@ -31,9 +31,9 @@ SOCIAL_X="https://twitter.com/AltheaNetwork"
 SOCIAL_TELEGRAM=""
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/althea"
+SNAPSHOT_URL="https://snapshots.noders.services/althea"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK=""
+VALIDATOR_URL=""
 
 # Updates
 UPDATE_MAIN=true

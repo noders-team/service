@@ -35,9 +35,9 @@ SOCIAL_X="https://x.com/union_build"
 SOCIAL_TELEGRAM=""
 
 # Other
-DOWNLOAD_URL="https://snapshots-t.noders.services/union"
+SNAPSHOT_URL="https://snapshots-t.noders.services/union"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://testnet.union.explorers.guru/validator/unionvaloper1qk3g5r2spp9t3a28ek0ken6k62rwyyxay6tl93"
+VALIDATOR_URL="https://testnet.union.explorers.guru/validator/unionvaloper1qk3g5r2spp9t3a28ek0ken6k62rwyyxay6tl93"
 
 # Updates
 UPDATE_MAIN=true

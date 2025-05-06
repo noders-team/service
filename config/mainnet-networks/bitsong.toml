@@ -34,9 +34,9 @@ SOCIAL_X="https://twitter.com/bitsongofficial"
 SOCIAL_TELEGRAM="https://t.me/BitSongOfficial"
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/bitsong"
+SNAPSHOT_URL="https://snapshots.noders.services/bitsong"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://ping.pub/bitsong/staking/bitsongvaloper19qtzdsu57hf5jmcyy5t2uuh0y45q4ah7hrwk4n"
+VALIDATOR_URL="https://ping.pub/bitsong/staking/bitsongvaloper19qtzdsu57hf5jmcyy5t2uuh0y45q4ah7hrwk4n"
 
 # Updates
 UPDATE_MAIN=true

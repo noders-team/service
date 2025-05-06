@@ -34,9 +34,9 @@ SOCIAL_X="https://twitter.com/AuraNetworkHQ"
 SOCIAL_TELEGRAM="https://t.me/AuraNetworkOfficial"
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/aura"
+SNAPSHOT_URL="https://snapshots.noders.services/aura"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://aurascan.io/validators/auravaloper1vvqz6j3ucxr6n0ejdz4ck602lnyjew93cgcw4m"
+VALIDATOR_URL="https://aurascan.io/validators/auravaloper1vvqz6j3ucxr6n0ejdz4ck602lnyjew93cgcw4m"
 
 # Updates
 UPDATE_MAIN=true

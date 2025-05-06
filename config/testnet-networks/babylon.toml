@@ -32,9 +32,9 @@ SOCIAL_X="https://x.com/babylonlabs_io"
 SOCIAL_TELEGRAM="https://t.me/babyloncommunity"
 
 # Other
-DOWNLOAD_URL="https://snapshots-t.noders.services/babylon"
+SNAPSHOT_URL="https://snapshots-t.noders.services/babylon"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK=""
+VALIDATOR_URL=""
 
 # Updates
 UPDATE_MAIN=true

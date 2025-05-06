@@ -34,9 +34,9 @@ SOCIAL_X="https://twitter.com/andromedaprot"
 SOCIAL_TELEGRAM="https://t.me/andromedaprotocol"
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/andromeda"
+SNAPSHOT_URL="https://snapshots.noders.services/andromeda"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://andromeda.explorers.guru/validator/andrvaloper1t8zsecgzc5025k3s0mthdm6vt82p5p0v48p2ry"
+VALIDATOR_URL="https://andromeda.explorers.guru/validator/andrvaloper1t8zsecgzc5025k3s0mthdm6vt82p5p0v48p2ry"
 
 # Updates
 UPDATE_MAIN=true

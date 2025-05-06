@@ -31,9 +31,9 @@ SOCIAL_X="https://x.com/_atomone"
 SOCIAL_TELEGRAM=""
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/atomone"
+SNAPSHOT_URL="https://snapshots.noders.services/atomone"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://ping.pub/atomone/staking/atonevaloper1f2r68y2htcmp4rfe2wfn9f3nvzh9xsq9y0vdyz"
+VALIDATOR_URL="https://ping.pub/atomone/staking/atonevaloper1f2r68y2htcmp4rfe2wfn9f3nvzh9xsq9y0vdyz"
 
 # Updates
 UPDATE_MAIN=true

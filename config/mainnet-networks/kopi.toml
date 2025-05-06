@@ -34,9 +34,9 @@ SOCIAL_X="https://twitter.com/kopi_money/"
 SOCIAL_TELEGRAM="https://t.me/+_hk--L9mKKc4MThk"
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/kopi"
+SNAPSHOT_URL="https://snapshots.noders.services/kopi"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://explorer.kopi.money/luwak-1/staking/kopivaloper1ctu3g3m2jyp26m03vhjap2aua8646magep7y36"
+VALIDATOR_URL="https://explorer.kopi.money/luwak-1/staking/kopivaloper1ctu3g3m2jyp26m03vhjap2aua8646magep7y36"
 
 # Updates
 UPDATE_MAIN=true

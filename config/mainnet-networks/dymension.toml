@@ -34,9 +34,9 @@ SOCIAL_X="https://twitter.com/dymension"
 SOCIAL_TELEGRAM="https://t.me/dymensionXYZ"
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/dymension"
+SNAPSHOT_URL="https://snapshots.noders.services/dymension"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://dymension.explorers.guru/validator/dymvaloper1ta56hcqaxj55wu8emarnw090gk5uq4366uz572"
+VALIDATOR_URL="https://dymension.explorers.guru/validator/dymvaloper1ta56hcqaxj55wu8emarnw090gk5uq4366uz572"
 
 # Updates
 UPDATE_MAIN=true

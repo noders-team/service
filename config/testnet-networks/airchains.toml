@@ -34,9 +34,9 @@ SOCIAL_X="https://twitter.com/airchains_io"
 SOCIAL_TELEGRAM=""
 
 # Other
-DOWNLOAD_URL="https://snapshots-t.noders.services/airchains"
+SNAPSHOT_URL="https://snapshots-t.noders.services/airchains"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://explorer.stavr.tech/Airchains-Testnet/staking/airvaloper1z6q26lprv70xgztfzgnfxgm7t57xh0p0hugz54"
+VALIDATOR_URL="https://explorer.stavr.tech/Airchains-Testnet/staking/airvaloper1z6q26lprv70xgztfzgnfxgm7t57xh0p0hugz54"
 
 # Updates
 UPDATE_MAIN=true

@@ -34,9 +34,9 @@ SOCIAL_X="https://twitter.com/gitopiaDAO"
 SOCIAL_TELEGRAM="https://t.me/Gitopia"
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/gitopia"
+SNAPSHOT_URL="https://snapshots.noders.services/gitopia"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://ping.pub/gitopia/staking/gitopiavaloper1fpwhn7tevwz657rg00mc7zcf9eq4tg0a703dw8"
+VALIDATOR_URL="https://ping.pub/gitopia/staking/gitopiavaloper1fpwhn7tevwz657rg00mc7zcf9eq4tg0a703dw8"
 
 # Updates
 UPDATE_MAIN=true

@@ -34,9 +34,9 @@ SOCIAL_X="https://twitter.com/GalacticaNet"
 SOCIAL_TELEGRAM="https://t.me/TheCypherState"
 
 # Other
-DOWNLOAD_URL="https://snapshots-t.noders.services/galactica"
+SNAPSHOT_URL="https://snapshots-t.noders.services/galactica"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://explorer.nodestake.org/galactica-testnet/staking/galavaloper1p0gs5uq44usv2fnx0qcw785jj2ey76svjtlgx7"
+VALIDATOR_URL="https://explorer.nodestake.org/galactica-testnet/staking/galavaloper1p0gs5uq44usv2fnx0qcw785jj2ey76svjtlgx7"
 
 # Updates
 UPDATE_MAIN=true

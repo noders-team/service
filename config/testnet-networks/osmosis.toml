@@ -36,9 +36,9 @@ SOCIAL_X="https://twitter.com/osmosiszone"
 SOCIAL_TELEGRAM="https://t.me/osmosiszone"
 
 # Other
-DOWNLOAD_URL="https://snapshots-t.noders.services/osmosis"
+SNAPSHOT_URL="https://snapshots-t.noders.services/osmosis"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK=""
+VALIDATOR_URL=""
 
 # Updates
 UPDATE_MAIN=true

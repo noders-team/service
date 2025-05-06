@@ -34,9 +34,9 @@ SOCIAL_X="https://twitter.com/SunriseLayer"
 SOCIAL_TELEGRAM=""
 
 # Other
-DOWNLOAD_URL="https://snapshots-t.noders.services/sunrise"
+SNAPSHOT_URL="https://snapshots-t.noders.services/sunrise"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://testnet.sunrise.explorers.guru/validator/sunrisevaloper1knkwlqqxky07f7vu6vgxna49m2tf9aa9j7fnkt"
+VALIDATOR_URL="https://testnet.sunrise.explorers.guru/validator/sunrisevaloper1knkwlqqxky07f7vu6vgxna49m2tf9aa9j7fnkt"
 
 # Updates
 UPDATE_MAIN=true

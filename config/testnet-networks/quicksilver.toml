@@ -34,9 +34,9 @@ SOCIAL_X="https://twitter.com/quicksilverzone"
 SOCIAL_TELEGRAM="https://t.me/quicksilverzone"
 
 # Other
-DOWNLOAD_URL="https://snapshots-t.noders.services/quicksilver"
+SNAPSHOT_URL="https://snapshots-t.noders.services/quicksilver"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://testnet.itrocket.net/quicksilver/staking/quickvaloper17gwfcceyvcw53r6cclrhwk5jksmtd96xfjwrcv"
+VALIDATOR_URL="https://testnet.itrocket.net/quicksilver/staking/quickvaloper17gwfcceyvcw53r6cclrhwk5jksmtd96xfjwrcv"
 
 # Updates
 UPDATE_MAIN=true

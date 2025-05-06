@@ -34,9 +34,9 @@ SOCIAL_X="https://twitter.com/lavanetxyz"
 SOCIAL_TELEGRAM=""
 
 # Other
-DOWNLOAD_URL="https://snapshots-t.noders.services/lava"
+SNAPSHOT_URL="https://snapshots-t.noders.services/lava"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://explorer.kjnodes.com/lava-testnet/staking/lava@valoper1tkhehvca5uur6svd2l83lp704mlhc7xu32r2j4"
+VALIDATOR_URL="https://explorer.kjnodes.com/lava-testnet/staking/lava@valoper1tkhehvca5uur6svd2l83lp704mlhc7xu32r2j4"
 
 # Updates
 UPDATE_MAIN=true

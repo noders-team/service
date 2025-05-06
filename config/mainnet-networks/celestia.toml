@@ -1,19 +1,24 @@
-# Blockchain
+# App
 CHAIN_NAME="Celestia"
 CHAIN_SYSTEM_NAME="celestia"
+CHAIN_ICON="celestia-icon.svg"
+
+# NODERS
+STAKE_URL="https://wallet.keplr.app/?modal=staking&chain=celestia&validator_address=celestiavaloper139mu0a0ucz0gmrkavm5wjar2lpx7yvxq3e25e5&step_id=3&action_id=stake"
+RESTAKE_URL="https://restake.app/celestia/celestiavaloper139mu0a0ucz0gmrkavm5wjar2lpx7yvxq3e25e5"
+VALIDATOR_URL="https://celestia.explorers.guru/validator/celestiavaloper139mu0a0ucz0gmrkavm5wjar2lpx7yvxq3e25e5"
+EXPLORER_URL="https://celestiahub.org/explorer"
+APP_URL="https://celestiahub.org"
+APP_IMAGE="celestia-community-app.png"
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Celestia: Revolutionizing Blockchain with Modularity
-
-Celestia introduces a modular data availability network to enhance blockchain scalability and flexibility. It features a minimal design focusing on transaction ordering and data availability, decoupling consensus from execution for improved scalability. This approach allows for customized execution layers, powered by a secure Proof of Stake mechanism. Celestia's innovation lies in its ability to ensure transaction data is verifiable without downloading the entire chain, offering a foundation for scalable, efficient blockchain applications.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
+CHAIN_DENOM_PRETTY="TIA"
 CHAIN_DENOM="utia"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="celestia-appd"
 DAEMON_SERVICE="celestia-appd.service"
 DAEMON_HOME="~/.celestia-app"
@@ -34,9 +39,8 @@ SOCIAL_X="https://twitter.com/CelestiaOrg"
 SOCIAL_TELEGRAM="https://t.me/celestiaru"
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/celestia"
+SNAPSHOT_URL="https://snapshots.noders.services/celestia"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://celestia.explorers.guru/validator/celestiavaloper139mu0a0ucz0gmrkavm5wjar2lpx7yvxq3e25e5"
 
 # Updates
 UPDATE_MAIN=true

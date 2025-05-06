@@ -34,9 +34,9 @@ SOCIAL_X="https://twitter.com/RebusChain"
 SOCIAL_TELEGRAM="https://t.me/RebusChain"
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/rebus"
+SNAPSHOT_URL="https://snapshots.noders.services/rebus"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://rebus.explorers.guru/validator/rebusvaloper1ssvn4vrw8c40r6zgyhhxclhp36n75sulca02pl"
+VALIDATOR_URL="https://rebus.explorers.guru/validator/rebusvaloper1ssvn4vrw8c40r6zgyhhxclhp36n75sulca02pl"
 
 # Updates
 UPDATE_MAIN=true

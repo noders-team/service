@@ -34,9 +34,9 @@ SOCIAL_X="https://x.com/OfficialZenrock"
 SOCIAL_TELEGRAM="https://t.me/officialZenrock"
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/zenrock"
+SNAPSHOT_URL="https://snapshots.noders.services/zenrock"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://testnet.itrocket.net/zenrock/staking/zenvaloper1jmxxnpl4saratjf46dsv3kfk5ny3qk0923fdwn"
+VALIDATOR_URL="https://testnet.itrocket.net/zenrock/staking/zenvaloper1jmxxnpl4saratjf46dsv3kfk5ny3qk0923fdwn"
 
 # Updates
 UPDATE_MAIN=true

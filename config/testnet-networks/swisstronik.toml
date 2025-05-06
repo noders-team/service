@@ -34,9 +34,9 @@ SOCIAL_X="https://twitter.com/swisstronik"
 SOCIAL_TELEGRAM="https://t.me/swisstronik"
 
 # Other
-DOWNLOAD_URL=""
+SNAPSHOT_URL=""
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://explorer-cosmos.testnet.swisstronik.com/swisstronik/staking/swtrvaloper1jxptedfkfa0dea7zdu238290xxhm2nk6nat2tt"
+VALIDATOR_URL="https://explorer-cosmos.testnet.swisstronik.com/swisstronik/staking/swtrvaloper1jxptedfkfa0dea7zdu238290xxhm2nk6nat2tt"
 
 # Updates
 UPDATE_MAIN=true

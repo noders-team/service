@@ -36,9 +36,9 @@ SOCIAL_X="https://twitter.com/sedaprotocol"
 SOCIAL_TELEGRAM="https://t.me/sedaprotocol"
 
 # Other
-DOWNLOAD_URL="https://snapshots-t.noders.services/seda"
+SNAPSHOT_URL="https://snapshots-t.noders.services/seda"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://testnet.seda.explorers.guru/validator/sedavaloper1ws3x9g0e7sx7zaxvtmtjmrdz2fgttr0x57csd9"
+VALIDATOR_URL="https://testnet.seda.explorers.guru/validator/sedavaloper1ws3x9g0e7sx7zaxvtmtjmrdz2fgttr0x57csd9"
 
 # Updates
 UPDATE_MAIN=true

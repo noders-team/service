@@ -36,9 +36,9 @@ SOCIAL_X="https://twitter.com/Uptickproject"
 SOCIAL_TELEGRAM="https://t.me/uptickproject"
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/uptick"
+SNAPSHOT_URL="https://snapshots.noders.services/uptick"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://uptick.explorers.guru/validator/uptickvaloper1fl3426k0avvergm7ejzczqy6rfzxk5ma93mqwj"
+VALIDATOR_URL="https://uptick.explorers.guru/validator/uptickvaloper1fl3426k0avvergm7ejzczqy6rfzxk5ma93mqwj"
 
 # Updates
 UPDATE_MAIN=true

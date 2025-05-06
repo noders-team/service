@@ -37,9 +37,9 @@ SOCIAL_X="https://twitter.com/Jackal_Protocol"
 SOCIAL_TELEGRAM="https://t.me/+rtuZnbTlHaIzNjVh"
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/jackal"
+SNAPSHOT_URL="https://snapshots.noders.services/jackal"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://ping.pub/jackal/staking/jklvaloper132k95jan8ju92jtmkzr49vnusv5xvwvju27kpq"
+VALIDATOR_URL="https://ping.pub/jackal/staking/jklvaloper132k95jan8ju92jtmkzr49vnusv5xvwvju27kpq"
 
 # Updates
 UPDATE_MAIN=true

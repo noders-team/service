@@ -34,9 +34,9 @@ SOCIAL_X="https://x.com/axonexyz"
 SOCIAL_TELEGRAM=""
 
 # Other
-DOWNLOAD_URL="https://snapshots-t.noders.services/axone"
+SNAPSHOT_URL="https://snapshots-t.noders.services/axone"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://testnet.axone.explorers.guru/validator/axonevaloper1zux0q0unnu9s0sz9kfy074e0rp7cj909yf4hc8"
+VALIDATOR_URL="https://testnet.axone.explorers.guru/validator/axonevaloper1zux0q0unnu9s0sz9kfy074e0rp7cj909yf4hc8"
 
 # Updates
 UPDATE_MAIN=true

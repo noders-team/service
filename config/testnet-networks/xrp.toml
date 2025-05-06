@@ -34,9 +34,9 @@ SOCIAL_X=""
 SOCIAL_TELEGRAM=""
 
 # Other
-DOWNLOAD_URL="https://snapshots-t.noders.services/xrp"
+SNAPSHOT_URL="https://snapshots-t.noders.services/xrp"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK=""
+VALIDATOR_URL=""
 
 # Updates
 UPDATE_MAIN=true

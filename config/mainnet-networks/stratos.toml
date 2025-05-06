@@ -37,9 +37,9 @@ SOCIAL_X="https://twitter.com/Stratos_Network"
 SOCIAL_TELEGRAM="https://t.me/StratosOfficial"
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/stratos"
+SNAPSHOT_URL="https://snapshots.noders.services/stratos"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://explorer.thestratos.org/stratos/validators/stvaloper1ghkn8ra63422mcepdk0zzglzy6qax637g6fhzm"
+VALIDATOR_URL="https://explorer.thestratos.org/stratos/validators/stvaloper1ghkn8ra63422mcepdk0zzglzy6qax637g6fhzm"
 
 # Updates
 UPDATE_MAIN=true

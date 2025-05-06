@@ -34,9 +34,9 @@ SOCIAL_X="https://twitter.com/zetablockchain"
 SOCIAL_TELEGRAM="https://t.me/zetachainofficial"
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/zwtachain"
+SNAPSHOT_URL="https://snapshots.noders.services/zwtachain"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://zetachain.explorers.guru/validator/zetavaloper1r66jlz6qvq74apsx4r5696jkrusn5uvvvcgvn9"
+VALIDATOR_URL="https://zetachain.explorers.guru/validator/zetavaloper1r66jlz6qvq74apsx4r5696jkrusn5uvvvcgvn9"
 
 # Updates
 UPDATE_MAIN=true

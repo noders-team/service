@@ -34,9 +34,9 @@ SOCIAL_X="https://twitter.com/CelestiaOrg"
 SOCIAL_TELEGRAM="https://t.me/celestiaru"
 
 # Other
-DOWNLOAD_URL="https://snapshots-t.noders.services/celestia"
+SNAPSHOT_URL="https://snapshots-t.noders.services/celestia"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://testnet.celestia.explorers.guru/validator/celestiavaloper1zzxrq7tjlsqvv0jtqtlt8gjaa68racukf5n9xh"
+VALIDATOR_URL="https://testnet.celestia.explorers.guru/validator/celestiavaloper1zzxrq7tjlsqvv0jtqtlt8gjaa68racukf5n9xh"
 
 # Updates
 UPDATE_MAIN=true

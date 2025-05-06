@@ -47,8 +47,16 @@ function ToolCard({ icon: Icon, linkUrl, title }: ToolCardProps): React.ReactEle
   );
 }
 
-function ToolsGrid(): React.ReactElement {
+type ToolsGridProps = {
+  chainName: string;
+};
+
+function ToolsGrid({ chainName }: ToolsGridProps): React.ReactElement {
   const theme = useTheme();
+
+  // TODO: enable when implemented
+  const showTools = false;
+
   return (
     <Box display="flex" flexDirection="column" gap={5}>
       <Box display="flex" flexDirection="column" gap={2}>
@@ -67,10 +75,10 @@ function ToolsGrid(): React.ReactElement {
             },
           }}
         >
-          <ToolCard icon={PiBookOpenText} linkUrl="" title="Installation Guide" />
-          <ToolCard icon={PiFileCode} linkUrl="" title="Upgrade Guide" />
-          <ToolCard icon={PiAtom} linkUrl="" title="Genesis File" />
-          <ToolCard icon={PiTerminalWindow} linkUrl="" title="CLI Cheatsheet" />
+          <ToolCard icon={PiBookOpenText} linkUrl={chainName + '/install'} title="Installation Guide" />
+          <ToolCard icon={PiFileCode} linkUrl={chainName + '/upgrade'} title="Upgrade Guide" />
+          <ToolCard icon={PiAtom} linkUrl={chainName + '/install#download-genesis-and-addrbook'} title="Genesis File" />
+          <ToolCard icon={PiTerminalWindow} linkUrl={chainName + '/cli-cheatsheet'} title="CLI Cheatsheet" />
         </Box>
       </Box>
 
@@ -90,37 +98,39 @@ function ToolsGrid(): React.ReactElement {
             },
           }}
         >
-          <ToolCard icon={PiGraph} linkUrl="" title="RPC, API, gRPC" />
-          <ToolCard icon={PiLightning} linkUrl="" title="State Sync" />
-          <ToolCard icon={PiDatabase} linkUrl="" title="Node Snapshot" />
-          <ToolCard icon={PiGitPullRequest} linkUrl="" title="Live Peers" />
-          <ToolCard icon={PiFediverseLogo} linkUrl="" title="Seed Node" />
-          <ToolCard icon={PiFediverseLogo} linkUrl="" title="Address Book" />
+          <ToolCard icon={PiGraph} linkUrl={chainName + '/endpoints'} title="RPC, API, gRPC" />
+          <ToolCard icon={PiLightning} linkUrl={chainName + '/statesync'} title="State Sync" />
+          <ToolCard icon={PiDatabase} linkUrl={chainName + '/snapshot'} title="Node Snapshot" />
+          <ToolCard icon={PiGitPullRequest} linkUrl={chainName + '/live-peers'} title="Live Peers" />
+          <ToolCard icon={PiFediverseLogo} linkUrl={chainName + '/seed-node'} title="Seed Node" />
+          <ToolCard icon={PiFediverseLogo} linkUrl={chainName + '/install#download-genesis-and-addrbook'} title="Address Book" />
         </Box>
       </Box>
 
-      <Box display="flex" flexDirection="column" gap={2}>
-        <Box display="flex" gap={2}>
-          <PiGearSixFill size={32} color={theme.palette.primary.main} />
-          <Typography variant="h5">Tools</Typography>
+      {showTools && (
+        <Box display="flex" flexDirection="column" gap={2}>
+          <Box display="flex" gap={2}>
+            <PiGearSixFill size={32} color={theme.palette.primary.main} />
+            <Typography variant="h5">Tools</Typography>
+          </Box>
+          <Box
+            display="grid"
+            gap={2}
+            sx={{
+              gridTemplateColumns: {
+                xs: 'repeat(2, 1fr)',
+                sm: 'repeat(3, 1fr)',
+                md: 'repeat(4, 1fr)',
+              },
+            }}
+          >
+            <ToolCard icon={PiCubeFocus} linkUrl={chainName + '/explorers'} title="Explorers list" />
+            <ToolCard icon={PiBroadcast} linkUrl={chainName + '/public-endpoints'} title="Public Endpoints" />
+            <ToolCard icon={PiToolbox} linkUrl={chainName + '/useful-tools'} title="Useful Tools" />
+            <ToolCard icon={PiTarget} linkUrl={chainName + '/upgrade-watcher'} title="Upgrade Watcher" />
+          </Box>
         </Box>
-        <Box
-          display="grid"
-          gap={2}
-          sx={{
-            gridTemplateColumns: {
-              xs: 'repeat(2, 1fr)',
-              sm: 'repeat(3, 1fr)',
-              md: 'repeat(4, 1fr)',
-            },
-          }}
-        >
-          <ToolCard icon={PiCubeFocus} linkUrl="" title="Explorers list" />
-          <ToolCard icon={PiBroadcast} linkUrl="" title="Public Endpoints" />
-          <ToolCard icon={PiToolbox} linkUrl="" title="Useful Tools" />
-          <ToolCard icon={PiTarget} linkUrl="" title="Upgrade Watcher" />
-        </Box>
-      </Box>
+      )}
     </Box>
   );
 }

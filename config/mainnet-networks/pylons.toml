@@ -34,9 +34,9 @@ SOCIAL_X="https://twitter.com/pylonstech"
 SOCIAL_TELEGRAM=""
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/pylons"
+SNAPSHOT_URL="https://snapshots.noders.services/pylons"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://pylons.explorers.guru/validator/pylovaloper1yc06qqa99vz50jrh64fctt0gvjj7pp7n7029c7"
+VALIDATOR_URL="https://pylons.explorers.guru/validator/pylovaloper1yc06qqa99vz50jrh64fctt0gvjj7pp7n7029c7"
 
 # Updates
 UPDATE_MAIN=true

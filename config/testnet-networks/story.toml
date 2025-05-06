@@ -34,9 +34,9 @@ SOCIAL_X="https://x.com/StoryProtocol"
 SOCIAL_TELEGRAM=""
 
 # Other
-DOWNLOAD_URL="https://snapshots-t.noders.services/story"
+SNAPSHOT_URL="https://snapshots-t.noders.services/story"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK=""
+VALIDATOR_URL=""
 
 # Updates
 UPDATE_MAIN=true

@@ -34,9 +34,9 @@ SOCIAL_X="https://twitter.com/arkeonetwork"
 SOCIAL_TELEGRAM=""
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/arkeo"
+SNAPSHOT_URL="https://snapshots.noders.services/arkeo"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://exp.utsa.tech/arkeo-main/staking/arkeovaloper1rnfgv6uhry6ywl880mgz4rmxm8csqwd74plfuu"
+VALIDATOR_URL="https://exp.utsa.tech/arkeo-main/staking/arkeovaloper1rnfgv6uhry6ywl880mgz4rmxm8csqwd74plfuu"
 
 # Updates
 UPDATE_MAIN=true

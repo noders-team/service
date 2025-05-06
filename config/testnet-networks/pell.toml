@@ -34,9 +34,9 @@ SOCIAL_X="https://x.com/Pell_Network"
 SOCIAL_TELEGRAM="https://t.me/pellnetwork_chat"
 
 # Other
-DOWNLOAD_URL="https://snapshots-t.noders.services/pell"
+SNAPSHOT_URL="https://snapshots-t.noders.services/pell"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://testnet.pell.explorers.guru/validator/pellvaloper1qkvwaakuf2expvp22kys5z9p8jt9c3dxfjwk0z"
+VALIDATOR_URL="https://testnet.pell.explorers.guru/validator/pellvaloper1qkvwaakuf2expvp22kys5z9p8jt9c3dxfjwk0z"
 
 # Updates
 UPDATE_MAIN=true

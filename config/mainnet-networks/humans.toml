@@ -34,9 +34,9 @@ SOCIAL_X="https://twitter.com/humansdotai"
 SOCIAL_TELEGRAM="https://t.me/humansdotai"
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/humans"
+SNAPSHOT_URL="https://snapshots.noders.services/humans"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://humans.explorers.guru/validator/humanvaloper1xl4lxgvwesnehdkfpn92ku8fk99lkrk6kmjc98"
+VALIDATOR_URL="https://humans.explorers.guru/validator/humanvaloper1xl4lxgvwesnehdkfpn92ku8fk99lkrk6kmjc98"
 
 # Updates
 UPDATE_MAIN=true

@@ -34,9 +34,9 @@ SOCIAL_X="https://x.com/crossfichain"
 SOCIAL_TELEGRAM="https://t.me/crossfichain"
 
 # Other
-DOWNLOAD_URL="https://snapshots-t.noders.services/crossfi"
+SNAPSHOT_URL="https://snapshots-t.noders.services/crossfi"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://test.xfiscan.com/validator/mxvaloper1jep3dc0aysyzcj78mer6zps5jftm89s2fzrf7m"
+VALIDATOR_URL="https://test.xfiscan.com/validator/mxvaloper1jep3dc0aysyzcj78mer6zps5jftm89s2fzrf7m"
 
 # Updates
 UPDATE_MAIN=true

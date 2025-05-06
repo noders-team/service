@@ -34,9 +34,9 @@ SOCIAL_X="https://x.com/wardenprotocol"
 SOCIAL_TELEGRAM="https://t.me/wardenprotocol"
 
 # Other
-DOWNLOAD_URL="https://snapshots-t.noders.services/warden"
+SNAPSHOT_URL="https://snapshots-t.noders.services/warden"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://testnet.warden.explorers.guru/validator/wardenvaloper1nun82ve6x07rhd0vda25acnalea70m28trfp4j"
+VALIDATOR_URL="https://testnet.warden.explorers.guru/validator/wardenvaloper1nun82ve6x07rhd0vda25acnalea70m28trfp4j"
 
 # Updates
 UPDATE_MAIN=true

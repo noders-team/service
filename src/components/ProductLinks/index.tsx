@@ -13,6 +13,10 @@ type Props = {
 };
 
 function ProductLinks({ explorerUrl, faucetUrl, appUrl, appImageUrl }: Props): React.JSX.Element {
+  if (!explorerUrl && !faucetUrl && !appUrl) {
+    return null;
+  }
+
   const explorerImageUrl = useBaseUrl('/img/products/explorer.webp');
   const faucetImageUrl = useBaseUrl('/img/products/faucet.png');
   const hubAppImageUrl = useBaseUrl(appImageUrl);
