@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-quicksilver">
 # Installation
 </div>
-###### Chain ID: `null` | Current Node Version: `v1.8.0`
+###### Chain ID: `quicksilver-2` | Current Node Version: `v1.8.0`
 
 ## Install dependencies
 
@@ -136,14 +136,14 @@ sudo systemctl enable quicksilverd
 ## Node configuration
 ### Set config
 ```js
-quicksilverd config chain-id null
+quicksilverd config chain-id quicksilver-2
 quicksilverd config keyring-backend os
 quicksilverd config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-quicksilverd init NAME_OF_YOUR_VALIDATOR --chain-id null
+quicksilverd init NAME_OF_YOUR_VALIDATOR --chain-id quicksilver-2
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://snapshots.noders.services/quicksilver/addrbook.json -o ~/.quicksilv
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"null@quicksilver-rpc.noders.services:null\"/" ~/.quicksilverd/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"f3ac1f863748202672ff9e34f2e6da92260f537e@quicksilver-rpc.noders.services:11156\"/" ~/.quicksilverd/config/config.toml
 ```
 
 ### Set minimum gas price

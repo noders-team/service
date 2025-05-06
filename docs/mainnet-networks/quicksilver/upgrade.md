@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-quicksilver">
 # Upgrade
 </div>
-###### Chain ID: `null` | Current Node Version: `v1.8.0`
+###### Chain ID: `quicksilver-2` | Current Node Version: `v1.8.0`
 
 
 # Clone Quicksilver repository
