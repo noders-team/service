@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-arkeo">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `arkeo-main-v1` | Current Node Version: `v1.0.11`
+###### Chain ID: `arkeo-main-v1` | Current Node Version: `v1.0.13`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 

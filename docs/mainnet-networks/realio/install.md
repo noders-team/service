@@ -4,10 +4,10 @@ title: Installation
 sidebar_position: 2
 ---
 
-<div class="h1-with-icon icon-arkeo">
+<div class="h1-with-icon icon-realio">
 # Installation
 </div>
-###### Chain ID: `arkeo-main-v1` | Current Node Version: `v1.0.13`
+###### Chain ID: `realionetwork_3301-1` | Current Node Version: `v1.0.2`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Arkeo repo and build arkeod v1.0.13
+### Clone Realio repo and build realiod v1.0.2
 ```js
 cd $HOME
-git clone https://github.com/arkeonetwork.git
-cd arkeonetwork
-git checkout v1.0.13
+git clone https://github.com/realio-network.git
+cd realio-network
+git checkout v1.0.2
 ```
 
 ### Build binaries
@@ -51,14 +51,14 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.arkeo/cosmovisor/upgrades/v1.0.13/bin
-mv $HOME/go/bin/arkeod ~/.arkeo/cosmovisor/upgrades/v1.0.13/bin/
+mkdir -p ~/.realio-network/cosmovisor/upgrades/v1.0.2/bin
+mv $HOME/go/bin/realiod ~/.realio-network/cosmovisor/upgrades/v1.0.2/bin/
 ```
 
 ### Create symlinks
 ```js
-sudo ln -s ~/.arkeo/cosmovisor/genesis ~/.arkeo/cosmovisor/current -f
-sudo ln -s ~/.arkeo/cosmovisor/current/bin/arkeod /usr/local/bin/arkeod -f
+sudo ln -s ~/.realio-network/cosmovisor/genesis ~/.realio-network/cosmovisor/current -f
+sudo ln -s ~/.realio-network/cosmovisor/current/bin/realiod /usr/local/bin/realiod -f
 ```
 
 ## Download and install Cosmovisor
@@ -69,9 +69,9 @@ go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
 ## Run node
 ### Create service
 ```js
-sudo tee /etc/systemd/system/arkeod.service > /dev/null << EOF
+sudo tee /etc/systemd/system/realiod.service > /dev/null << EOF
 [Unit]
-Description=arkeo node service
+Description=realio node service
 After=network-online.target
 
 [Service]
@@ -80,10 +80,10 @@ ExecStart=$(which cosmovisor) run start
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
-Environment="DAEMON_HOME=~/.arkeo"
-Environment="DAEMON_NAME=arkeod"
+Environment="DAEMON_HOME=~/.realio-network"
+Environment="DAEMON_NAME=realiod"
 Environment="UNSAFE_SKIP_BACKUP=true"
-Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/.arkeo/cosmovisor/current/bin"
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/.realio-network/cosmovisor/current/bin"
 
 [Install]
 WantedBy=multi-user.target
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Arkeo repo and build arkeod v1.0.13
+### Clone Realio repo and build realiod v1.0.2
 ```js
 cd $HOME
-git clone https://github.com/arkeonetwork.git
-cd arkeonetwork
-git checkout v1.0.13
+git clone https://github.com/realio-network.git
+cd realio-network
+git checkout v1.0.2
 ```
 
 ### Build binaries
@@ -109,14 +109,14 @@ make install
 ## Run node
 ### Create service
 ```js
-sudo tee /etc/systemd/system/arkeod.service > /dev/null << EOF
+sudo tee /etc/systemd/system/realiod.service > /dev/null << EOF
 [Unit]
-Description=arkeo node service
+Description=realio node service
 After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=$(which arkeod) start
+ExecStart=$(which realiod) start
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
@@ -130,35 +130,35 @@ EOF
 ### Enable service
 ```js
 sudo systemctl daemon-reload
-sudo systemctl enable arkeod
+sudo systemctl enable realiod
 ```
 
 ## Node configuration
 ### Set config
 ```js
-arkeod config chain-id arkeo-main-v1
-arkeod config keyring-backend os
-arkeod config node tcp://localhost:26657
+realiod config chain-id realionetwork_3301-1
+realiod config keyring-backend os
+realiod config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-arkeod init NAME_OF_YOUR_VALIDATOR --chain-id arkeo-main-v1
+realiod init NAME_OF_YOUR_VALIDATOR --chain-id realionetwork_3301-1
 ```
 
 ### Download genesis and addrbook
 ```js
-curl https://snapshots.noders.services/arkeo/genesis.json -o ~/.arkeo/config/genesis.json
-curl https://snapshots.noders.services/arkeo/addrbook.json -o ~/.arkeo/config/addrbook.json
+curl https://snapshots.noders.services/realio/genesis.json -o ~/.realio-network/config/genesis.json
+curl https://snapshots.noders.services/realio/addrbook.json -o ~/.realio-network/config/addrbook.json
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"4f1a4cd780aebef488151e71f938453f9059f995@arkeo-rpc.noders.services:22856\"/" ~/.arkeo/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"990b38ffdec10e168fba6187a71c9c1f7aa53300@realio-rpc.noders.services:12056\"/" ~/.realio-network/config/config.toml
 ```
 
 ### Set minimum gas price
 ```js
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001uarkeo\"|" ~/.arkeo/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001ario\"|" ~/.realio-network/config/app.toml
 ```
 ### Set pruning
 ```js
@@ -167,34 +167,34 @@ sed -i \
   -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
   -e 's|^pruning-keep-every *=.*|pruning-keep-every = "0"|' \
   -e 's|^pruning-interval *=.*|pruning-interval = "19"|' \
-  ~/.arkeo/config/app.toml
+  ~/.realio-network/config/app.toml
 ```
 
 ### Set custom ports
 
 ```bash
-echo "export arkeod_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export realiod_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
 # Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${arkeod_PORT}317%g" \
--e "s%:8080%:${arkeod_PORT}080%g" \
--e "s%:9090%:${arkeod_PORT}090%g" \
--e "s%:9091%:${arkeod_PORT}091%g" \
--e "s%:8545%:${arkeod_PORT}545%g" \
--e "s%:8546%:${arkeod_PORT}546%g" \
--e "s%:6065%:${arkeod_PORT}065%g" ~/.arkeo/config/app.toml
+sed -i.bak -e "s%:1317%:${realiod_PORT}317%g" \
+-e "s%:8080%:${realiod_PORT}080%g" \
+-e "s%:9090%:${realiod_PORT}090%g" \
+-e "s%:9091%:${realiod_PORT}091%g" \
+-e "s%:8545%:${realiod_PORT}545%g" \
+-e "s%:8546%:${realiod_PORT}546%g" \
+-e "s%:6065%:${realiod_PORT}065%g" ~/.realio-network/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${arkeod_PORT}658%g" \
--e "s%:26657%:${arkeod_PORT}657%g" \
--e "s%:6060%:${arkeod_PORT}060%g" \
--e "s%:26656%:${arkeod_PORT}656%g" \
--e "s%:26660%:${arkeod_PORT}660%g" ~/.arkeo/config/config.toml
+sed -i.bak -e "s%:26658%:${realiod_PORT}658%g" \
+-e "s%:26657%:${realiod_PORT}657%g" \
+-e "s%:6060%:${realiod_PORT}060%g" \
+-e "s%:26656%:${realiod_PORT}656%g" \
+-e "s%:26660%:${realiod_PORT}660%g" ~/.realio-network/config/config.toml
 ```
 
 ### Start node and check logs
 ```js
-sudo systemctl start arkeod && sudo journalctl -u arkeod -f --no-hostname -o cat
+sudo systemctl start realiod && sudo journalctl -u realiod -f --no-hostname -o cat
 ```

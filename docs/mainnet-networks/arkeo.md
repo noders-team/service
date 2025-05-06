@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-arkeo">
 # Arkeo
 </div>
-###### Chain ID: `arkeo-main-v1` | Current Node Version: `v1.0.11`
+###### Chain ID: `arkeo-main-v1` | Current Node Version: `v1.0.13`
 
 
 Arkeo was created to provide decentralized applications with increased development velocity, censorship-resistance, and most importantly to be a needed tool in fully decentralizing the UI layer of the web3 stack, all while reducing reliance on centralized data sources. In short, Arkeo is a free-market solution for decentralized infrastructure.

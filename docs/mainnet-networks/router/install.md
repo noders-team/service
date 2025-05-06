@@ -4,10 +4,10 @@ title: Installation
 sidebar_position: 2
 ---
 
-<div class="h1-with-icon icon-arkeo">
+<div class="h1-with-icon icon-router">
 # Installation
 </div>
-###### Chain ID: `arkeo-main-v1` | Current Node Version: `v1.0.13`
+###### Chain ID: `router_9600-1` | Current Node Version: `v1.6.0`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Arkeo repo and build arkeod v1.0.13
+### Clone Router repo and build routerd v1.6.0
 ```js
 cd $HOME
-git clone https://github.com/arkeonetwork.git
-cd arkeonetwork
-git checkout v1.0.13
+git clone https://github.com/router-protocol.git
+cd router-protocol
+git checkout v1.6.0
 ```
 
 ### Build binaries
@@ -51,14 +51,14 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.arkeo/cosmovisor/upgrades/v1.0.13/bin
-mv $HOME/go/bin/arkeod ~/.arkeo/cosmovisor/upgrades/v1.0.13/bin/
+mkdir -p ~/.routerd/cosmovisor/upgrades/v1.6.0/bin
+mv $HOME/go/bin/routerd ~/.routerd/cosmovisor/upgrades/v1.6.0/bin/
 ```
 
 ### Create symlinks
 ```js
-sudo ln -s ~/.arkeo/cosmovisor/genesis ~/.arkeo/cosmovisor/current -f
-sudo ln -s ~/.arkeo/cosmovisor/current/bin/arkeod /usr/local/bin/arkeod -f
+sudo ln -s ~/.routerd/cosmovisor/genesis ~/.routerd/cosmovisor/current -f
+sudo ln -s ~/.routerd/cosmovisor/current/bin/routerd /usr/local/bin/routerd -f
 ```
 
 ## Download and install Cosmovisor
@@ -69,9 +69,9 @@ go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
 ## Run node
 ### Create service
 ```js
-sudo tee /etc/systemd/system/arkeod.service > /dev/null << EOF
+sudo tee /etc/systemd/system/routerd.service > /dev/null << EOF
 [Unit]
-Description=arkeo node service
+Description=router node service
 After=network-online.target
 
 [Service]
@@ -80,10 +80,10 @@ ExecStart=$(which cosmovisor) run start
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
-Environment="DAEMON_HOME=~/.arkeo"
-Environment="DAEMON_NAME=arkeod"
+Environment="DAEMON_HOME=~/.routerd"
+Environment="DAEMON_NAME=routerd"
 Environment="UNSAFE_SKIP_BACKUP=true"
-Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/.arkeo/cosmovisor/current/bin"
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/.routerd/cosmovisor/current/bin"
 
 [Install]
 WantedBy=multi-user.target
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Arkeo repo and build arkeod v1.0.13
+### Clone Router repo and build routerd v1.6.0
 ```js
 cd $HOME
-git clone https://github.com/arkeonetwork.git
-cd arkeonetwork
-git checkout v1.0.13
+git clone https://github.com/router-protocol.git
+cd router-protocol
+git checkout v1.6.0
 ```
 
 ### Build binaries
@@ -109,14 +109,14 @@ make install
 ## Run node
 ### Create service
 ```js
-sudo tee /etc/systemd/system/arkeod.service > /dev/null << EOF
+sudo tee /etc/systemd/system/routerd.service > /dev/null << EOF
 [Unit]
-Description=arkeo node service
+Description=router node service
 After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=$(which arkeod) start
+ExecStart=$(which routerd) start
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
@@ -130,35 +130,35 @@ EOF
 ### Enable service
 ```js
 sudo systemctl daemon-reload
-sudo systemctl enable arkeod
+sudo systemctl enable routerd
 ```
 
 ## Node configuration
 ### Set config
 ```js
-arkeod config chain-id arkeo-main-v1
-arkeod config keyring-backend os
-arkeod config node tcp://localhost:26657
+routerd config chain-id router_9600-1
+routerd config keyring-backend os
+routerd config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-arkeod init NAME_OF_YOUR_VALIDATOR --chain-id arkeo-main-v1
+routerd init NAME_OF_YOUR_VALIDATOR --chain-id router_9600-1
 ```
 
 ### Download genesis and addrbook
 ```js
-curl https://snapshots.noders.services/arkeo/genesis.json -o ~/.arkeo/config/genesis.json
-curl https://snapshots.noders.services/arkeo/addrbook.json -o ~/.arkeo/config/addrbook.json
+curl https://snapshots.noders.services/router/genesis.json -o ~/.routerd/config/genesis.json
+curl https://snapshots.noders.services/router/addrbook.json -o ~/.routerd/config/addrbook.json
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"4f1a4cd780aebef488151e71f938453f9059f995@arkeo-rpc.noders.services:22856\"/" ~/.arkeo/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"6a9402ad251b30fcec43e9c1e2abe17934fcd864@router-rpc.noders.services:23756\"/" ~/.routerd/config/config.toml
 ```
 
 ### Set minimum gas price
 ```js
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001uarkeo\"|" ~/.arkeo/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001route\"|" ~/.routerd/config/app.toml
 ```
 ### Set pruning
 ```js
@@ -167,34 +167,34 @@ sed -i \
   -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
   -e 's|^pruning-keep-every *=.*|pruning-keep-every = "0"|' \
   -e 's|^pruning-interval *=.*|pruning-interval = "19"|' \
-  ~/.arkeo/config/app.toml
+  ~/.routerd/config/app.toml
 ```
 
 ### Set custom ports
 
 ```bash
-echo "export arkeod_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export routerd_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
 # Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${arkeod_PORT}317%g" \
--e "s%:8080%:${arkeod_PORT}080%g" \
--e "s%:9090%:${arkeod_PORT}090%g" \
--e "s%:9091%:${arkeod_PORT}091%g" \
--e "s%:8545%:${arkeod_PORT}545%g" \
--e "s%:8546%:${arkeod_PORT}546%g" \
--e "s%:6065%:${arkeod_PORT}065%g" ~/.arkeo/config/app.toml
+sed -i.bak -e "s%:1317%:${routerd_PORT}317%g" \
+-e "s%:8080%:${routerd_PORT}080%g" \
+-e "s%:9090%:${routerd_PORT}090%g" \
+-e "s%:9091%:${routerd_PORT}091%g" \
+-e "s%:8545%:${routerd_PORT}545%g" \
+-e "s%:8546%:${routerd_PORT}546%g" \
+-e "s%:6065%:${routerd_PORT}065%g" ~/.routerd/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${arkeod_PORT}658%g" \
--e "s%:26657%:${arkeod_PORT}657%g" \
--e "s%:6060%:${arkeod_PORT}060%g" \
--e "s%:26656%:${arkeod_PORT}656%g" \
--e "s%:26660%:${arkeod_PORT}660%g" ~/.arkeo/config/config.toml
+sed -i.bak -e "s%:26658%:${routerd_PORT}658%g" \
+-e "s%:26657%:${routerd_PORT}657%g" \
+-e "s%:6060%:${routerd_PORT}060%g" \
+-e "s%:26656%:${routerd_PORT}656%g" \
+-e "s%:26660%:${routerd_PORT}660%g" ~/.routerd/config/config.toml
 ```
 
 ### Start node and check logs
 ```js
-sudo systemctl start arkeod && sudo journalctl -u arkeod -f --no-hostname -o cat
+sudo systemctl start routerd && sudo journalctl -u routerd -f --no-hostname -o cat
 ```
