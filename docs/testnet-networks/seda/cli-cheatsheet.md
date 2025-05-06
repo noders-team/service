@@ -7,7 +7,7 @@ sidebar_position: 8
 <div class="h1-with-icon icon-seda">
 # CLI Cheatsheet
 </div>
-###### Chain ID: `seda-1-testnet` | Current Node Version: `v0.1.7`
+###### Chain ID: `seda-1-testnet` | Current Node Version: `1.0.0-rc.2`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
 

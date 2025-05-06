@@ -10,7 +10,7 @@ sidebar_position: 4
 ###### Chain ID: `bbn-test-5` | Current Node Version: `auto`
 
 ```bash
-SNAP_RPC=https://babylon-t-rpc.noders.services:443 && \
+SNAP_RPC=:443 && \
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
 TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash) && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop babylond && babylond tendermint unsafe-reset-all --home ~/.babylond --keep-addr-book
 ```
 ```bash
-peers="@babylon-t-rpc.noders.services:"
+peers="@:"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.babylond/config/config.toml
 ```
 ```bash

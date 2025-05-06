@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-seda">
 # Installation
 </div>
-###### Chain ID: `seda-1-testnet` | Current Node Version: `v0.1.7`
+###### Chain ID: `seda-1-testnet` | Current Node Version: `1.0.0-rc.2`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Seda repo and build sedad v0.1.7
+### Clone Seda repo and build sedad 1.0.0-rc.2
 ```js
 cd $HOME
 git clone https://github.com/sedaprotocol/seda-chain.git
 cd seda-chain
-git checkout v0.1.7
+git checkout 1.0.0-rc.2
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.sedad/cosmovisor/upgrades/v0.1.7/bin
-mv $HOME/go/bin/sedad ~/.sedad/cosmovisor/upgrades/v0.1.7/bin/
+mkdir -p ~/.sedad/cosmovisor/upgrades/1.0.0-rc.2/bin
+mv $HOME/go/bin/sedad ~/.sedad/cosmovisor/upgrades/1.0.0-rc.2/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Seda repo and build sedad v0.1.7
+### Clone Seda repo and build sedad 1.0.0-rc.2
 ```js
 cd $HOME
 git clone https://github.com/sedaprotocol/seda-chain.git
 cd seda-chain
-git checkout v0.1.7
+git checkout 1.0.0-rc.2
 ```
 
 ### Build binaries

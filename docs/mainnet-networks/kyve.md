@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-kyve">
 # Kyve
 </div>
-###### Chain ID: `kyve-1` | Current Node Version: `v2.0.0`
+###### Chain ID: `kyve-1` | Current Node Version: `v2.1.0`
 
 
 KYVE Network transforms data storage and validation across blockchains, ensuring data remains unchanged and accessible. It emphasizes decentralized storage, accurate data validation, interoperability, customizable data pools, and a token-based incentive mechanism. KYVE supports diverse applications, from enhancing blockchain scalability to enabling secure cross-chain bridges, making it pivotal for future decentralized data ecosystems.

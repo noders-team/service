@@ -44,9 +44,9 @@ Official links of social networks of projects
 # Public endpoints
 
 <CardLayout autoFitEnabled={true}>
-    <SmallCard to="https://babylon-t-rpc.noders.services" header={{label: "RPC Endpoint", translateId: "rpc-endpoint"}}/>
-    <SmallCard to="https://babylon-t-api.noders.services" header={{label: "API Endpoint", translateId: "api-endpoint"}}/>
-    <SmallCard to="https://babylon-t-jsonrpc.noders.services" header={{label: "json-RPC Endpoint", translateId: "jrpc-endpoint"}}/>
+    
+    
+    
     
     <SmallCard to="https://cosmoslist.co/testnet/babylon" header={{label: "Cosmoslist Endpoint", translateId: "cosmoslist-endpoint"}}/>
 </CardLayout>

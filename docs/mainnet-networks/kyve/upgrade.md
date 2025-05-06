@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-kyve">
 # Upgrade
 </div>
-###### Chain ID: `kyve-1` | Current Node Version: `v2.0.0`
+###### Chain ID: `kyve-1` | Current Node Version: `v2.1.0`
 
 
 # Clone Kyve repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf KYVENetwork
 git clone https://github.com/KYVENetwork.git
 cd KYVENetwork
-git checkout v2.0.0
+git checkout v2.1.0
  ```
 
 # Build binaries
@@ -26,8 +26,8 @@ make build
 
 # Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.kyve/cosmovisor/upgrades/v2.0.0/bin
-mv build/kyved ~/.kyve/cosmovisor/upgrades/v2.0.0/bin/
+mkdir -p ~/.kyve/cosmovisor/upgrades/v2.1.0/bin
+mv build/kyved ~/.kyve/cosmovisor/upgrades/v2.1.0/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf KYVENetwork
 git clone https://github.com/KYVENetwork.git
 cd KYVENetwork
-git checkout v2.0.0
+git checkout v2.1.0
  ```
 
 ## Build binaries

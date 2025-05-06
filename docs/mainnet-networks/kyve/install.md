@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-kyve">
 # Installation
 </div>
-###### Chain ID: `kyve-1` | Current Node Version: `v2.0.0`
+###### Chain ID: `kyve-1` | Current Node Version: `v2.1.0`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Kyve repo and build kyved v2.0.0
+### Clone Kyve repo and build kyved v2.1.0
 ```js
 cd $HOME
 git clone https://github.com/KYVENetwork.git
 cd KYVENetwork
-git checkout v2.0.0
+git checkout v2.1.0
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.kyve/cosmovisor/upgrades/v2.0.0/bin
-mv $HOME/go/bin/kyved ~/.kyve/cosmovisor/upgrades/v2.0.0/bin/
+mkdir -p ~/.kyve/cosmovisor/upgrades/v2.1.0/bin
+mv $HOME/go/bin/kyved ~/.kyve/cosmovisor/upgrades/v2.1.0/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Kyve repo and build kyved v2.0.0
+### Clone Kyve repo and build kyved v2.1.0
 ```js
 cd $HOME
 git clone https://github.com/KYVENetwork.git
 cd KYVENetwork
-git checkout v2.0.0
+git checkout v2.1.0
 ```
 
 ### Build binaries
