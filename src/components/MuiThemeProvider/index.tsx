@@ -36,7 +36,6 @@ export default function MuiThemeProvider(props) {
       },
       divider: '#1F232E',
     },
-    spacing: 8,
     typography: {
       fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
       h1: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
@@ -76,7 +75,7 @@ export default function MuiThemeProvider(props) {
             fontSize: '1rem',
             lineHeight: '1.5',
             padding: '12px 24px',
-          }
+          },
         },
       },
       MuiTab: {
@@ -107,7 +106,7 @@ export default function MuiThemeProvider(props) {
         },
       },
     },
-  }
+  };
 
   const light: ThemeOptions = {
     palette: {
@@ -121,9 +120,8 @@ export default function MuiThemeProvider(props) {
       background: {
         default: '#ffffff',
         paper: '#f6f8fa',
-      }
+      },
     },
-    spacing: 8,
     typography: {
       fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
       h1: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
@@ -172,14 +170,10 @@ export default function MuiThemeProvider(props) {
         },
       },
     },
-  }
+  };
 
   const palette = isDark ? dark : light;
-  const theme = React.useMemo(
-    () =>
-      createTheme(palette),
-    [colorMode],
-  );
+  const theme = React.useMemo(() => createTheme(palette), [colorMode]);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -220,9 +214,7 @@ export default function MuiThemeProvider(props) {
 
   return (
     <CacheProvider value={emotionCache}>
-      <ThemeProvider theme={theme}>
-        {props.children}
-      </ThemeProvider>
+      <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
     </CacheProvider>
   );
 }

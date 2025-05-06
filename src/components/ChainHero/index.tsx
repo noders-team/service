@@ -1,15 +1,15 @@
-import React from "react";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import useBaseUrl from "@docusaurus/useBaseUrl";
-import IconLink from "@/components/IconLink";
-import { FaXTwitter, FaGithub, FaGlobe, FaDiscord } from 'react-icons/fa6';
-import ScopeCard from "@/components/ScopeCard";
-import Divider from "@mui/material/Divider";
-import CodeText from "../CodeText";
-import Button from "@mui/material/Button";
-import KeplrIcon from "@site/static/img/keplr-logo.svg";
-import RestakeIcon from "@site/static/img/restake-logo.svg";
+import React from 'react';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import IconLink from '@/components/IconLink';
+import { FaDiscord, FaGithub, FaGlobe, FaXTwitter } from 'react-icons/fa6';
+import ScopeCard from '@/components/ScopeCard';
+import Divider from '@mui/material/Divider';
+import CodeText from '../CodeText';
+import Button from '@mui/material/Button';
+import KeplrIcon from '@site/static/img/keplr-logo.svg';
+import RestakeIcon from '@site/static/img/restake-logo.svg';
 
 type Props = {
   name: string;
@@ -24,10 +24,11 @@ type Props = {
   githubUrl: string;
   xUrl: string;
   discordUrl: string;
-}
+};
 
 function ChainHero({ name, iconUrl, scope, chainId, nodeVersion, token, stakeUrl, restakeUrl, websiteUrl, githubUrl, xUrl, discordUrl }: Props) {
   const baseIconUrl = useBaseUrl(iconUrl);
+  const bgImageUrl = useBaseUrl('/img/home-page/dot-pattern.svg');
   const showStakingButtons = stakeUrl || restakeUrl;
 
   const handleStakeClick = () => {
@@ -56,120 +57,42 @@ function ChainHero({ name, iconUrl, scope, chainId, nodeVersion, token, stakeUrl
             rgba(4, 6, 11, 0.00) 0%,
             #04060B 100%
           ),
-          url("/img/home-page/dot-pattern.svg") repeat;`
+          url(${bgImageUrl}) repeat;`,
       }}
     >
-
-      <Box
-        display="flex"
-        alignItems="top"
-        justifyContent="space-between"
-        gap={2}
-      >
-        <Box
-          display="flex"
-          alignItems="center"
-          gap={2}
-        >
-          <Box
-            component="img"
-            src={baseIconUrl}
-            alt={name}
-            width={50}
-            height={50}
-          />
+      <Box display="flex" alignItems="top" justifyContent="space-between" gap={2}>
+        <Box display="flex" alignItems="center" gap={2}>
+          <Box component="img" src={baseIconUrl} alt={name} width={50} height={50} />
           <Typography variant="h3">{name}</Typography>
         </Box>
 
-        <Box
-          display="flex"
-          alignItems="center"
-          gap={2}
-        >
-          {websiteUrl && (
-            <IconLink
-              icon={<FaGlobe />}
-              href={websiteUrl}
-              width={20}
-              height={20}
-              target="_blank"
-              title="Website"
-            />
-          )}
-          {githubUrl && (
-            <IconLink
-              icon={<FaGithub />}
-              href={githubUrl}
-              width={24}
-              height={24}
-              target="_blank"
-              title="Github"
-            />
-          )}
-          {xUrl && (
-            <IconLink
-              icon={<FaXTwitter />}
-              href={xUrl}
-              width={24}
-              height={24}
-              target="_blank"
-              title="X"
-            />
-          )}
-          {discordUrl && (
-            <IconLink
-              icon={<FaDiscord />}
-              href={discordUrl}
-              width={24}
-              height={24}
-              target="_blank"
-              title="Discord"
-            />
-          )}
+        <Box display="flex" alignItems="center" gap={2}>
+          {websiteUrl && <IconLink icon={<FaGlobe />} href={websiteUrl} width={20} height={20} target="_blank" title="Website" />}
+          {githubUrl && <IconLink icon={<FaGithub />} href={githubUrl} width={24} height={24} target="_blank" title="Github" />}
+          {xUrl && <IconLink icon={<FaXTwitter />} href={xUrl} width={24} height={24} target="_blank" title="X" />}
+          {discordUrl && <IconLink icon={<FaDiscord />} href={discordUrl} width={24} height={24} target="_blank" title="Discord" />}
         </Box>
       </Box>
 
-      <Box
-        display="flex"
-        gap={1.5}
-      >
-        <Box
-          display="flex"
-          flexDirection="row"
-          alignItems="center"
-          gap={0.5}
-        >
+      <Box display="flex" flexWrap="wrap" gap={1.5}>
+        <Box display="flex" flexDirection="row" alignItems="center" gap={0.5}>
           <Typography variant="subtitle2">Network: </Typography>
           <ScopeCard scope={scope} />
         </Box>
         <Divider orientation="vertical" variant="middle" flexItem />
-        <Box
-          display="flex"
-          flexDirection="row"
-          alignItems="center"
-          gap={0.5}
-        >
+        <Box display="flex" flexDirection="row" alignItems="center" gap={0.5}>
           <Typography variant="subtitle2">Chain ID: </Typography>
           <CodeText text={chainId} />
         </Box>
         <Divider orientation="vertical" variant="middle" flexItem />
-        <Box
-          display="flex"
-          flexDirection="row"
-          alignItems="center"
-          gap={0.5}
-        >
+        <Box display="flex" flexDirection="row" alignItems="center" gap={0.5}>
           <Typography variant="subtitle2">Current Node Version: </Typography>
           <CodeText text={nodeVersion} />
         </Box>
       </Box>
 
       {showStakingButtons && (
-        <Box
-          display="flex"
-          gap={2}
-          paddingTop={2}
-        >
+        <Box display="flex" gap={2} paddingTop={2}>
           {stakeUrl && (
             <Button
               startIcon={<KeplrIcon width={24} height={24} />}
@@ -188,19 +111,19 @@ function ChainHero({ name, iconUrl, scope, chainId, nodeVersion, token, stakeUrl
               variant="contained"
               startIcon={<RestakeIcon width={24} height={24} />}
               onClick={handleRestakeClick}
-              sx={theme => ({
+              sx={(theme) => ({
                 borderRadius: 2,
                 color: '#000000',
                 backgroundColor: '#ffffff',
                 border: `1px solid transparent`,
                 boxShadow: 'none',
-                "&:hover": {
+                '&:hover': {
                   backgroundColor: '#ffffff',
                   color: '#000000',
                   border: `1px solid ${theme.palette.divider}`,
                   boxSizing: 'border-box',
                   transition: 'all 0.2s ease-in-out',
-                }
+                },
               })}
             >
               Auto Compounding
@@ -208,9 +131,8 @@ function ChainHero({ name, iconUrl, scope, chainId, nodeVersion, token, stakeUrl
           )}
         </Box>
       )}
-
     </Box>
-  )
+  );
 }
 
 export default ChainHero;
