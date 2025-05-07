@@ -10,11 +10,13 @@ import CodeText from '../CodeText';
 import Button from '@mui/material/Button';
 import KeplrIcon from '@site/static/img/keplr-logo.svg';
 import RestakeIcon from '@site/static/img/restake-logo.svg';
-import { useMediaQuery } from '@mui/material';
+import { useMediaQuery, useTheme } from '@mui/material';
+import { alpha } from '@mui/material/styles';
 
 type Props = {
   name: string;
   iconUrl: string;
+  bgColor?: string;
   scope: string;
   chainId: string;
   nodeVersion: string;
@@ -30,6 +32,7 @@ type Props = {
 function ChainHero({
   name,
   iconUrl,
+  bgColor,
   scope,
   chainId,
   nodeVersion,
@@ -41,17 +44,15 @@ function ChainHero({
   xUrl,
   discordUrl,
 }: Props) {
+  const theme = useTheme();
   const baseIconUrl = useBaseUrl(iconUrl);
   const bgImageUrl = useBaseUrl('/img/home-page/dot-pattern.svg');
-  const showStakingButtons = stakeUrl || restakeUrl;
   const isMobile = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+  const showStakingButtons = stakeUrl || restakeUrl;
+  const bgColorString = alpha(bgColor ? bgColor : theme.palette.primary.main, 0.6);
 
-  const handleStakeClick = () => {
-    window.open(stakeUrl, '_blank');
-  };
-
-  const handleRestakeClick = () => {
-    window.open(restakeUrl, '_blank');
+  const handleLinkClick = (url: string) => {
+    window.open(url, '_blank');
   };
 
   return (
@@ -62,19 +63,15 @@ function ChainHero({
       paddingX={isMobile ? 3 : 4}
       borderRadius={3}
       gap={2}
-      sx={{
+      sx={(theme) => ({
         background: `linear-gradient(
             0deg,
-            rgba(123, 43, 249, 0.50) 0%,
-            rgba(27, 27, 29, 0.00) 100%
+            transparent 0%,
+            ${theme.palette.background.default} 100%
           ),
-          linear-gradient(
-            0deg,
-            rgba(4, 6, 11, 0.00) 0%,
-            #04060B 100%
-          ),
-          url(${bgImageUrl}) repeat;`,
-      }}
+          url(${bgImageUrl}) repeat,
+          ${bgColorString}`,
+      })}
     >
       <Box display="flex" flexWrap="wrap" alignItems="top" justifyContent="space-between" gap={2}>
         <Box display="flex" alignItems="center" gap={2}>
@@ -124,7 +121,7 @@ function ChainHero({
             <Button
               startIcon={<KeplrIcon width={24} height={24} />}
               variant="contained"
-              onClick={handleStakeClick}
+              onClick={() => handleLinkClick(stakeUrl)}
               sx={{
                 borderRadius: 2,
                 boxShadow: 'none',
@@ -137,7 +134,7 @@ function ChainHero({
             <Button
               variant="contained"
               startIcon={<RestakeIcon width={24} height={24} />}
-              onClick={handleRestakeClick}
+              onClick={() => handleLinkClick(restakeUrl)}
               sx={(theme) => ({
                 borderRadius: 2,
                 color: '#000000',

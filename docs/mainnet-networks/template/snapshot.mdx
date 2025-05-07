@@ -1,22 +1,19 @@
 ---
 hide_table_of_contents: false
-title: [CHAIN_NAME] Snapshot
+title: '[CHAIN_NAME] Snapshot'
 sidebar_position: 4
 ---
 
-<div class="h1-with-icon icon-[CHAIN_SYSTEM_NAME]">
-# Node Snapshot
-</div>
+<div class="h1-with-icon icon-[CHAIN_SYSTEM_NAME]"># Node Snapshot</div>
 ###### Chain ID: `[CHAIN_ID]` | Current Node Version: `[VERSION]`
 
 ## Our [CHAIN_NAME] Snapshot Server Setup
 
 ### Snapshot Information
 
-| Block Height | Size | Timestamp | Download Link |
-|-------------|------|-----------|---------------|
+| Block Height        | Size   | Timestamp   | Download Link                   |
+| ------------------- | ------ | ----------- | ------------------------------- |
 | [SNAP_LATEST_BLOCK] | [SIZE] | [TIMESTAMP] | [Download]([SNAP_ARCHIVE_LINK]) |
-
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
 
@@ -37,6 +34,7 @@ indexer = "null"
 ```
 
 ## How To Process [CHAIN_NAME] Snapshot
+
 ```bash
 sudo apt update
 sudo apt install snapd -y
@@ -44,9 +42,11 @@ sudo snap install lz4
 ```
 
 Stop your node
+
 ```bash
 sudo systemctl stop [DAEMON_NAME]
 ```
+
 Reset your node. This will erase your node database. If you are already running validator, be sure you backed up your `priv_validator_key.json` prior to running the command. The command does not wipe the file. However, you should have a backup of it already in a safe location.
 
 :::warning WARNING
@@ -66,10 +66,13 @@ sudo rm -rf [DAEMON_HOME]/data
 Decompress the snapshot to your database location. You database location will be something to the effect of `[DAEMON_HOME]` depending on your node implemention.
 
 The above solution requires you to download the compressed file, uncompressed it and then delete the original file. This requires extra storage space on your server. You can run the following combo command to stream the snapshot into your database location. For advanced users only:
+
 ### Data
+
 ```bash
 [SNAP_ARCHIVE_DOWNLOAD_COMMAND]
 ```
+
 :::warning WARNING
 
 If you run a validator node and the chain is in halt, it is time to replace the `priv_validator_state.json` file that you have backed up.

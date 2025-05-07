@@ -9,6 +9,7 @@ function readBlockchainConfig {
   CHAIN_NAME=$(grep -oE '^CHAIN_NAME=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   CHAIN_SYSTEM_NAME=$(grep -oE '^CHAIN_SYSTEM_NAME=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   CHAIN_ICON=$(grep -oE '^CHAIN_ICON=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  CHAIN_BACKGROUND_COLOR=$(grep -oE '^CHAIN_BACKGROUND_COLOR=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
 
   # Noders
   STAKE_URL=$(grep -oE '^STAKE_URL=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
@@ -136,6 +137,7 @@ function replacePageVariables {
   sed -i '' "s|\[CHAIN_SYSTEM_NAME\]|${CHAIN_SYSTEM_NAME}|g" "$1"
   sed -i '' "s|\[CHAIN_ICON\]|${CHAIN_ICON}|g" "$1"
   sed -i '' "s|\[CHAIN_SCOPE\]|${CHAIN_SCOPE}|g" "$1"
+  sed -i '' "s|\[CHAIN_BACKGROUND_COLOR\]|${CHAIN_BACKGROUND_COLOR}|g" "$1"
 
   # Noders
   escaped_stake_url=$(escapeSpecialChars "${STAKE_URL}")

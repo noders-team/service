@@ -2,6 +2,7 @@
 CHAIN_NAME="Celestia"
 CHAIN_SYSTEM_NAME="celestia"
 CHAIN_ICON="celestia-icon.svg"
+CHAIN_BACKGROUND_COLOR="#7B2BF9"
 
 # NODERS
 STAKE_URL="https://wallet.keplr.app/?modal=staking&chain=celestia&validator_address=celestiavaloper139mu0a0ucz0gmrkavm5wjar2lpx7yvxq3e25e5&step_id=3&action_id=stake"

@@ -4,6 +4,7 @@ hide_title: true
 hide_table_of_contents: false
 ---
 
+
 import ChainLayout from '@site/src/components/ChainLayout';
 import ChainHero from '@site/src/components/ChainHero';
 import ProductLinks from '@site/src/components/ProductLinks';
@@ -13,6 +14,7 @@ import ToolsGrid from '@site/src/components/ToolsGrid';
   <ChainHero
     name="[CHAIN_NAME]"
     iconUrl="img/[CHAIN_ICON]"
+    bgColor="[CHAIN_BACKGROUND_COLOR]"
     scope="[CHAIN_SCOPE]"
     chainId="[CHAIN_ID]"
     nodeVersion="[VERSION]"
@@ -25,8 +27,8 @@ import ToolsGrid from '@site/src/components/ToolsGrid';
     discordUrl="[SOCIAL_DISCORD]"
   />
 
-<ProductLinks explorerUrl="[EXPLORER_URL]" appUrl="[APP_URL]" appImageUrl="img/products/[APP_IMAGE]" />
+  <ProductLinks explorerUrl="[EXPLORER_URL]" appUrl="[APP_URL]" appImageUrl="img/products/[APP_IMAGE]"/>
 
-<ToolsGrid chainName="[CHAIN_SYSTEM_NAME]" />
+  <ToolsGrid chainName="[CHAIN_SYSTEM_NAME]"/>
 
 </ChainLayout>
