@@ -49,7 +49,11 @@ function ChainHero({
   const bgImageUrl = useBaseUrl('/img/home-page/dot-pattern.svg');
   const isMobile = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   const showStakingButtons = stakeUrl || restakeUrl;
-  const bgColorString = alpha(bgColor ? bgColor : theme.palette.primary.main, 0.6);
+
+  let bgColorString = alpha(theme.palette.primary.main, 0.6);
+  if (bgColor && bgColor !== '[CHAIN_BACKGROUND_COLOR]') {
+    bgColorString = alpha(bgColor, 0.6);
+  }
 
   const handleLinkClick = (url: string) => {
     window.open(url, '_blank');
