@@ -14,6 +14,8 @@ import { useTheme } from '@mui/material';
 function Home() {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up('md'));
+  const bgImage = useBaseUrl('img/home-page/anim-bg.png');
+  const bgImageAnimated = useBaseUrl('img/home-page/anim-blocks.webp');
 
   return (
     <Container maxWidth="lg" disableGutters>
@@ -23,7 +25,7 @@ function Home() {
           gap={3}
           alignItems="center"
           sx={{
-            backgroundImage: 'url("img/home-page/anim-bg.png")',
+            backgroundImage: `url("${bgImage}")`,
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'right bottom',
             backgroundSize: 'auto 100%',
@@ -34,7 +36,7 @@ function Home() {
         >
           <Box
             component="img"
-            src="img/home-page/anim-blocks.webp"
+            src={bgImageAnimated}
             alt=""
             sx={{
               position: 'absolute',
