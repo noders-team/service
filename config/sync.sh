@@ -138,8 +138,10 @@ function replacePageVariables {
   sed -i '' "s|\[CHAIN_SCOPE\]|${CHAIN_SCOPE}|g" "$1"
 
   # Noders
-  sed -i '' "s|\[STAKE_URL\]|${STAKE_URL}|g" "$1"
-  sed -i '' "s|\[RESTAKE_URL\]|${RESTAKE_URL}|g" "$1"
+  escaped_stake_url=$(escapeSpecialChars "${STAKE_URL}")
+  sed -i '' "s|\[STAKE_URL\]|${escaped_stake_url}|g" "$1"
+  escaped_restake_url=$(escapeSpecialChars "${RESTAKE_URL}")
+  sed -i '' "s|\[RESTAKE_URL\]|${escaped_restake_url}|g" "$1"
   sed -i '' "s|\[VALIDATOR_URL\]|${VALIDATOR_URL}|g" "$1"
   sed -i '' "s|\[EXPLORER_URL\]|${EXPLORER_URL}|g" "$1"
   sed -i '' "s|\[APP_URL\]|${APP_URL}|g" "$1"
