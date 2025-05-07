@@ -41,9 +41,20 @@ function Home() {
               objectFit: 'cover',
               animation: 'rotateBg 20s linear infinite',
               top: '50%',
-              left: '70%',
-              minWidth: '220px',
-              minHeight: '220px',
+              left: {
+                xs: '95%',
+                md: '72%',
+              },
+              maxWidth: {
+                xs: '145%',
+                sm: '100%',
+                md: '145%',
+              },
+              maxHeight: {
+                xs: '125%',
+                sm: '150%',
+                md: '150%',
+              },
               '@keyframes rotateBg': {
                 '0%': {
                   transform: 'translate(-50%, -50%) rotate(0deg)',
