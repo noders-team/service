@@ -1,12 +1,13 @@
 ---
 hide_table_of_contents: false
-title: CLI Cheatsheet
+title: 'CLI Cheatsheet'
 sidebar_position: 8
 ---
 
 <div class="h1-with-icon icon-zenrock">
-# CLI Cheatsheet
+  # CLI Cheatsheet
 </div>
+
 ###### Chain ID: `diamond-1` | Current Node Version: `v6.1.16`
 
 This cheatsheet collects commonly used CLI commands for node operators to easily copy and paste. A few conventions we follow:
@@ -17,33 +18,41 @@ This cheatsheet collects commonly used CLI commands for node operators to easily
 - Query CLI command always uses `--output json` flag and pipes result through `jq`
 
 ## Wallet generate and recover
+
 ### Add new key
+
 ```js
 zenrockd keys add KEY
 ```
 
 ### Recover key (via existing mnemonic)
+
 ```js
 zenrockd keys add KEY --recover
 ```
 
 ### List all keys
+
 ```js
 zenrockd keys list
 ```
 
 ### Delete key
+
 ```js
 zenrockd keys delete KEY
 ```
 
 ## Wallet
+
 ### Wallet balance
+
 ```js
 zenrockd q bank balances $(zenrockd keys show KEY -a) --node https://zenrock-rpc.noders.services:443
 ```
 
 ### Send
+
 ```js
 zenrockd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000urock \
   --chain-id diamond-1 \
@@ -52,6 +61,7 @@ zenrockd tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000urock \
 ```
 
 ### Withdraw rewards from all validators
+
 ```js
 zenrockd tx distribution withdraw-all-rewards \
   --chain-id diamond-1 \
@@ -60,6 +70,7 @@ zenrockd tx distribution withdraw-all-rewards \
 ```
 
 ### Withdraw Rewards including Commission
+
 ```js
 zenrockd tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
@@ -69,6 +80,7 @@ zenrockd tx distribution withdraw-rewards VALIDATOR_ADRESS \
 ```
 
 ### Delegate tokens to yourself
+
 ```js
 zenrockd tx staking delegate $(zenrockd keys show KEY --bech val -a) 1000000urock \
 --chain-id diamond-1 \
@@ -77,6 +89,7 @@ zenrockd tx staking delegate $(zenrockd keys show KEY --bech val -a) 1000000uroc
 ```
 
 ### Delegate tokens to validator
+
 ```js
 zenrockd tx staking delegate VALIDATOR_ADDRESS 1000000urock \
 --chain-id diamond-1 \
@@ -85,6 +98,7 @@ zenrockd tx staking delegate VALIDATOR_ADDRESS 1000000urock \
 ```
 
 ### Redelegate tokens to another validator
+
 ```js
 zenrockd tx staking redelegate $(zenrockd keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000urock \
   --chain-id diamond-1 \
@@ -93,6 +107,7 @@ zenrockd tx staking redelegate $(zenrockd keys show KEY --bech val -a) VALIDATOR
 ```
 
 ### Unbond tokens from your validator
+
 ```js
 zenrockd tx staking unbond $(zenrockd keys show KEY --bech val -a) urock \
   --chain-id andromeda-1 \
@@ -101,11 +116,15 @@ zenrockd tx staking unbond $(zenrockd keys show KEY --bech val -a) urock \
 ```
 
 ## Governance
+
 ### List of all proposals
+
 ```js
 zenrockd query gov proposals --node https://zenrock-rpc.noders.services:443
 ```
+
 ### Check vote
+
 ```js
 zenrockd query gov proposal PROPOSAL_NUMBER \
   --chain-id diamond-1 \
@@ -114,11 +133,14 @@ zenrockd query gov proposal PROPOSAL_NUMBER \
 ```
 
 ### Vote
+
 #### Vote options:
-* yes
-* no 
-* no_with_veto
-* abstain
+
+- yes
+- no
+- no_with_veto
+- abstain
+
 ```js
 zenrockd tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
   --chain-id diamond-1 \
@@ -127,10 +149,13 @@ zenrockd tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
 ```
 
 ## Validator management
+
 ### Create Validator
+
 :::note
 We use example filed values instead of capitalized dummy words for demo purpose in this command. Please make sure to adjust accordingly for your use.
 :::
+
 ```js
 zenrockd tx staking create-validator \
   --amount 1000000urock \
@@ -150,6 +175,7 @@ zenrockd tx staking create-validator \
 ```
 
 ### Edit validator
+
 ```js
 zenrockd tx staking edit-validator \
 --new-moniker "YOUR_MONIKER_NAME" \
@@ -163,6 +189,7 @@ zenrockd tx staking edit-validator \
 ```
 
 ### Unjail
+
 ```js
 zenrockd tx slashing unjail \
   --chain-id diamond-1 \
@@ -171,98 +198,119 @@ zenrockd tx slashing unjail \
 ```
 
 ### Jail reason
+
 ```js
 zenrockd query slashing signing-info $(zenrockd tendermint show-validator)
 ```
 
 ### Validator details
+
 ```js
 zenrockd q staking validator $(zenrockd keys show KEY --bech val -a)
 ```
 
 ## Maintenance
+
 ### Get validator info
+
 ```js
 zenrockd status 2>&1 | jq .ValidatorInfo
 ```
 
 ### Get sync info
+
 ```js
 zenrockd status 2>&1 | jq .SyncInfo
 ```
 
 ### Get node peer
+
 ```js
 echo $(zenrockd tendermint show-node-id)'@'$(curl -s ifconfig.me)':'$(cat ~/.zrchain/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
 ```
 
 ### Check if validator key is correct
+
 ```js
 [[ $(zenrockd q staking validator $(zenrockd keys show KEY --bech val -a) -oj | jq -r .consensus_pubkey.key) = $(zenrockd status | jq -r .ValidatorInfo.PubKey.value) ]] && echo -e "\n\e[1m\e[32mTrue\e[0m\n" || echo -e "\n\e[1m\e[31mFalse\e[0m\n"
 ```
 
 ### Get live peers
+
 ```js
 curl -sS https://zenrock-rpc.noders.services:443/net_info | jq -r '.result.peers[] | "\(.node_info.id)@\(.remote_ip):\(.node_info.listen_addr)"' | awk -F ':' '{print $1":"$(NF)}'
 ```
 
 ### Set minimum gas price
+
 ```js
 sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.001urock\"/" ~/.zrchain/config/app.toml
 ```
 
 ###Enable prometheus
+
 ```js
 sed -i -e "s/prometheus = false/prometheus = true/" ~/.zrchain/config/config.toml
 ```
 
 ### Reset chain data
+
 ```js
 zenrockd tendermint unsafe-reset-all --keep-addr-book --home ~/.zrchain
 ```
 
 ## Service Management
+
 ### Reload service configuration
+
 ```js
 sudo systemctl daemon-reload
 ```
 
 ### Enable service
+
 ```js
 sudo systemctl enable zenrockd
 ```
 
 ### Disable service
+
 ```js
 sudo systemctl disable zenrockd
 ```
 
 ### Start service
+
 ```js
 sudo systemctl start zenrockd
 ```
 
 ### Stop service
+
 ```js
 sudo systemctl stop zenrockd
 ```
 
 ### Restart service
+
 ```js
 sudo systemctl restart zenrockd
 ```
 
 ### Check service status
+
 ```js
 sudo systemctl status zenrockd
 ```
 
 ### Check service logs
+
 ```js
 sudo journalctl -u zenrockd -f --no-hostname -o cat
 ```
 
 ## Remove node
+
 ```js
 cd $HOME
 sudo systemctl stop zenrockd

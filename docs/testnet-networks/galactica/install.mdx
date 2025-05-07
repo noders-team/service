@@ -1,12 +1,13 @@
 ---
 hide_table_of_contents: false
-title: Installation
+title: 'Installation'
 sidebar_position: 2
 ---
 
 <div class="h1-with-icon icon-galactica">
-# Installation
+  # Installation
 </div>
+
 ###### Chain ID: `galactica_9302-1` | Current Node Version: `v0.2.7`
 
 ## Install dependencies
@@ -18,6 +19,7 @@ sudo apt -qy upgrade
 ```
 
 ## Install GO
+
 ```js
 ver="1.21.3" &&
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" &&
@@ -30,13 +32,17 @@ go version
 ```
 
 ## Install with Cosmovisor
+
 :::note ADVANCED ROUTE
 
 Cosmosvisor is a process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If a proposal is approved, cosmosvisor can automatically download the new binary, stop the current one, switch to the new binary, and restart the node with the new binary.
 
 :::
+
 ### Download and build binaries
+
 ### Clone Galactica repo and build galacticad v0.2.7
+
 ```js
 cd $HOME
 git clone https://github.com/Galactica-corp/networks.git
@@ -45,10 +51,13 @@ git checkout v0.2.7
 ```
 
 ### Build binaries
+
 ```js
 make install
 ```
+
 ### Prepare binaries for Cosmovisor
+
 ```js
 cd $HOME
 mkdir -p ~/.galactica/cosmovisor/upgrades/v0.2.7/bin
@@ -56,18 +65,22 @@ mv $HOME/go/bin/galacticad ~/.galactica/cosmovisor/upgrades/v0.2.7/bin/
 ```
 
 ### Create symlinks
+
 ```js
 sudo ln -s ~/.galactica/cosmovisor/genesis ~/.galactica/cosmovisor/current -f
 sudo ln -s ~/.galactica/cosmovisor/current/bin/galacticad /usr/local/bin/galacticad -f
 ```
 
 ## Download and install Cosmovisor
+
 ```js
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
 ```
 
 ## Run node
+
 ### Create service
+
 ```js
 sudo tee /etc/systemd/system/galacticad.service > /dev/null << EOF
 [Unit]
@@ -93,7 +106,9 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
+
 ### Clone Galactica repo and build galacticad v0.2.7
+
 ```js
 cd $HOME
 git clone https://github.com/Galactica-corp/networks.git
@@ -102,12 +117,15 @@ git checkout v0.2.7
 ```
 
 ### Build binaries
+
 ```js
 make install
 ```
 
 ## Run node
+
 ### Create service
+
 ```js
 sudo tee /etc/systemd/system/galacticad.service > /dev/null << EOF
 [Unit]
@@ -128,13 +146,16 @@ EOF
 ```
 
 ### Enable service
+
 ```js
 sudo systemctl daemon-reload
 sudo systemctl enable galacticad
 ```
 
 ## Node configuration
+
 ### Set config
+
 ```js
 galacticad config chain-id galactica_9302-1
 galacticad config keyring-backend os
@@ -142,25 +163,32 @@ galacticad config node tcp://localhost:26657
 ```
 
 ### Initialize the node
+
 ```js
 galacticad init NAME_OF_YOUR_VALIDATOR --chain-id galactica_9302-1
 ```
 
 ### Download genesis and addrbook
+
 ```js
 curl https://snapshots-t.noders.services/galactica/genesis.json -o ~/.galactica/config/genesis.json
 curl https://snapshots-t.noders.services/galactica/addrbook.json -o ~/.galactica/config/addrbook.json
 ```
+
 ### Add peers
+
 ```js
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"e8e9b99df78bae2bf6c41a3006f6f3568230649b@galactica-t-rpc.noders.services:27456\"/" ~/.galactica/config/config.toml
 ```
 
 ### Set minimum gas price
+
 ```js
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001agnet\"|" ~/.galactica/config/app.toml
 ```
+
 ### Set pruning
+
 ```js
 sed -i \
   -e 's|^pruning *=.*|pruning = "custom"|' \
@@ -195,6 +223,7 @@ sed -i.bak -e "s%:26658%:${galacticad_PORT}658%g" \
 ```
 
 ### Start node and check logs
+
 ```js
 sudo systemctl start galacticad && sudo journalctl -u galacticad -f --no-hostname -o cat
 ```

@@ -1,12 +1,13 @@
 ---
 hide_table_of_contents: false
-title: Installation
+title: 'Installation'
 sidebar_position: 2
 ---
 
 <div class="h1-with-icon icon-arkeo">
-# Installation
+  # Installation
 </div>
+
 ###### Chain ID: `arkeo-main-v1` | Current Node Version: `v1.0.13`
 
 ## Install dependencies
@@ -18,6 +19,7 @@ sudo apt -qy upgrade
 ```
 
 ## Install GO
+
 ```js
 ver="1.21.3" &&
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" &&
@@ -30,13 +32,17 @@ go version
 ```
 
 ## Install with Cosmovisor
+
 :::note ADVANCED ROUTE
 
 Cosmosvisor is a process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If a proposal is approved, cosmosvisor can automatically download the new binary, stop the current one, switch to the new binary, and restart the node with the new binary.
 
 :::
+
 ### Download and build binaries
+
 ### Clone Arkeo repo and build arkeod v1.0.13
+
 ```js
 cd $HOME
 git clone https://github.com/arkeonetwork.git
@@ -45,10 +51,13 @@ git checkout v1.0.13
 ```
 
 ### Build binaries
+
 ```js
 make install
 ```
+
 ### Prepare binaries for Cosmovisor
+
 ```js
 cd $HOME
 mkdir -p ~/.arkeo/cosmovisor/upgrades/v1.0.13/bin
@@ -56,18 +65,22 @@ mv $HOME/go/bin/arkeod ~/.arkeo/cosmovisor/upgrades/v1.0.13/bin/
 ```
 
 ### Create symlinks
+
 ```js
 sudo ln -s ~/.arkeo/cosmovisor/genesis ~/.arkeo/cosmovisor/current -f
 sudo ln -s ~/.arkeo/cosmovisor/current/bin/arkeod /usr/local/bin/arkeod -f
 ```
 
 ## Download and install Cosmovisor
+
 ```js
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
 ```
 
 ## Run node
+
 ### Create service
+
 ```js
 sudo tee /etc/systemd/system/arkeod.service > /dev/null << EOF
 [Unit]
@@ -93,7 +106,9 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
+
 ### Clone Arkeo repo and build arkeod v1.0.13
+
 ```js
 cd $HOME
 git clone https://github.com/arkeonetwork.git
@@ -102,12 +117,15 @@ git checkout v1.0.13
 ```
 
 ### Build binaries
+
 ```js
 make install
 ```
 
 ## Run node
+
 ### Create service
+
 ```js
 sudo tee /etc/systemd/system/arkeod.service > /dev/null << EOF
 [Unit]
@@ -128,13 +146,16 @@ EOF
 ```
 
 ### Enable service
+
 ```js
 sudo systemctl daemon-reload
 sudo systemctl enable arkeod
 ```
 
 ## Node configuration
+
 ### Set config
+
 ```js
 arkeod config chain-id arkeo-main-v1
 arkeod config keyring-backend os
@@ -142,25 +163,32 @@ arkeod config node tcp://localhost:26657
 ```
 
 ### Initialize the node
+
 ```js
 arkeod init NAME_OF_YOUR_VALIDATOR --chain-id arkeo-main-v1
 ```
 
 ### Download genesis and addrbook
+
 ```js
 curl https://snapshots.noders.services/arkeo/genesis.json -o ~/.arkeo/config/genesis.json
 curl https://snapshots.noders.services/arkeo/addrbook.json -o ~/.arkeo/config/addrbook.json
 ```
+
 ### Add peers
+
 ```js
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"4f1a4cd780aebef488151e71f938453f9059f995@arkeo-rpc.noders.services:22856\"/" ~/.arkeo/config/config.toml
 ```
 
 ### Set minimum gas price
+
 ```js
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001uarkeo\"|" ~/.arkeo/config/app.toml
 ```
+
 ### Set pruning
+
 ```js
 sed -i \
   -e 's|^pruning *=.*|pruning = "custom"|' \
@@ -195,6 +223,7 @@ sed -i.bak -e "s%:26658%:${arkeod_PORT}658%g" \
 ```
 
 ### Start node and check logs
+
 ```js
 sudo systemctl start arkeod && sudo journalctl -u arkeod -f --no-hostname -o cat
 ```

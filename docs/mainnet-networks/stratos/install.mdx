@@ -1,12 +1,13 @@
 ---
 hide_table_of_contents: false
-title: Installation
+title: 'Installation'
 sidebar_position: 2
 ---
 
 <div class="h1-with-icon icon-stratos">
-# Installation
+  # Installation
 </div>
+
 ###### Chain ID: `stratos-1` | Current Node Version: `v0.12.0`
 
 ## Install dependencies
@@ -18,6 +19,7 @@ sudo apt -qy upgrade
 ```
 
 ## Install GO
+
 ```js
 ver="1.21.3" &&
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" &&
@@ -30,13 +32,17 @@ go version
 ```
 
 ## Install with Cosmovisor
+
 :::note ADVANCED ROUTE
 
 Cosmosvisor is a process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If a proposal is approved, cosmosvisor can automatically download the new binary, stop the current one, switch to the new binary, and restart the node with the new binary.
 
 :::
+
 ### Download and build binaries
+
 ### Clone Stratos repo and build stchaind v0.12.0
+
 ```js
 cd $HOME
 git clone https://github.com/stratosnet/stratos-chain.git
@@ -45,10 +51,13 @@ git checkout v0.12.0
 ```
 
 ### Build binaries
+
 ```js
 make install
 ```
+
 ### Prepare binaries for Cosmovisor
+
 ```js
 cd $HOME
 mkdir -p ~/.stchaind/cosmovisor/upgrades/v0.12.0/bin
@@ -56,18 +65,22 @@ mv $HOME/go/bin/stchaind ~/.stchaind/cosmovisor/upgrades/v0.12.0/bin/
 ```
 
 ### Create symlinks
+
 ```js
 sudo ln -s ~/.stchaind/cosmovisor/genesis ~/.stchaind/cosmovisor/current -f
 sudo ln -s ~/.stchaind/cosmovisor/current/bin/stchaind /usr/local/bin/stchaind -f
 ```
 
 ## Download and install Cosmovisor
+
 ```js
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
 ```
 
 ## Run node
+
 ### Create service
+
 ```js
 sudo tee /etc/systemd/system/stchaind.service > /dev/null << EOF
 [Unit]
@@ -93,7 +106,9 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
+
 ### Clone Stratos repo and build stchaind v0.12.0
+
 ```js
 cd $HOME
 git clone https://github.com/stratosnet/stratos-chain.git
@@ -102,12 +117,15 @@ git checkout v0.12.0
 ```
 
 ### Build binaries
+
 ```js
 make install
 ```
 
 ## Run node
+
 ### Create service
+
 ```js
 sudo tee /etc/systemd/system/stchaind.service > /dev/null << EOF
 [Unit]
@@ -128,13 +146,16 @@ EOF
 ```
 
 ### Enable service
+
 ```js
 sudo systemctl daemon-reload
 sudo systemctl enable stchaind
 ```
 
 ## Node configuration
+
 ### Set config
+
 ```js
 stchaind config chain-id stratos-1
 stchaind config keyring-backend os
@@ -142,25 +163,32 @@ stchaind config node tcp://localhost:26657
 ```
 
 ### Initialize the node
+
 ```js
 stchaind init NAME_OF_YOUR_VALIDATOR --chain-id stratos-1
 ```
 
 ### Download genesis and addrbook
+
 ```js
 curl https://snapshots.noders.services/stratos/genesis.json -o ~/.stchaind/config/genesis.json
 curl https://snapshots.noders.services/stratos/addrbook.json -o ~/.stchaind/config/addrbook.json
 ```
+
 ### Add peers
+
 ```js
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"71f6b523df0c5cbb1995a14e7eac46a9befcad37@stratos-rpc.noders.services:21856\"/" ~/.stchaind/config/config.toml
 ```
 
 ### Set minimum gas price
+
 ```js
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001wei\"|" ~/.stchaind/config/app.toml
 ```
+
 ### Set pruning
+
 ```js
 sed -i \
   -e 's|^pruning *=.*|pruning = "custom"|' \
@@ -195,6 +223,7 @@ sed -i.bak -e "s%:26658%:${stchaind_PORT}658%g" \
 ```
 
 ### Start node and check logs
+
 ```js
 sudo systemctl start stchaind && sudo journalctl -u stchaind -f --no-hostname -o cat
 ```

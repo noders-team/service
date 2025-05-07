@@ -22,9 +22,9 @@ yarn-error.log*
 .idea
 .vscode
 
-live-peers.mdx
-!docs/mainnet-networks/template/live-peers.mdx
-!docs/testnet-networks/template/live-peers.mdx
+seeds-and-peers.mdx
+!docs/mainnet-networks/template/seeds-and-peers.mdx
+!docs/testnet-networks/template/seeds-and-peers.mdx
 
 snapshot.mdx
 !docs/mainnet-networks/template/snapshot.mdx

@@ -38,6 +38,7 @@ function readBlockchainConfig {
   ENDPOINT_GRPC=$(grep -oE '^ENDPOINT_GRPC=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   ENDPOINT_PEER=$(grep -oE '^ENDPOINT_PEER=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   ENDPOINT_COSMOSLIST=$(grep -oE '^ENDPOINT_COSMOSLIST=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  ENDPOINT_SEED=$(grep -oE '^ENDPOINT_SEED=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
 
   # Social
   SOCIAL_WEBSITE=$(grep -oE '^SOCIAL_WEBSITE=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
@@ -94,6 +95,9 @@ function enrichBlockchainConfig {
     peer_address=$(echo ${ENDPOINT_RPC} | sed -e "s/https\:\/\///")
     peer_addr=$(curl -s "${ENDPOINT_API}/cosmos/base/tendermint/v1beta1/node_info" | jq -r '.default_node_info.listen_addr' | sed -e 's/.*://')
     ENDPOINT_PEER="${peer_id}@${peer_address}:${peer_addr}"
+  fi
+  if [ -z "${ENDPOINT_SEED}" ]; then
+    ENDPOINT_SEED=${ENDPOINT_PEER}
   fi
 
   echo "Updated ENDPOINT_PEER: ${ENDPOINT_PEER}"
@@ -168,6 +172,7 @@ function replacePageVariables {
   sed -i '' "s|\[ENDPOINT_GRPC\]|${ENDPOINT_GRPC}|g" "$1"
   sed -i '' "s|\[ENDPOINT_PEER\]|${ENDPOINT_PEER}|g" "$1"
   sed -i '' "s|\[ENDPOINT_COSMOSLIST\]|${ENDPOINT_COSMOSLIST}|g" "$1"
+  sed -i '' "s|\[ENDPOINT_SEED\]|${ENDPOINT_SEED}|g" "$1"
 
   # Social
   sed -i '' "s|\[SOCIAL_WEBSITE\]|${SOCIAL_WEBSITE}|g" "$1"
@@ -266,8 +271,8 @@ function updateLivePeers {
     LIVE_PEERS_ALL=$(echo "${LIVE_PEERS_RAW}" | paste -sd "," -)
     LIVE_PEERS_RANDOM=$(echo "${LIVE_PEERS_RAW}" | sort --random-sort | head -n 5 | paste -sd "," -)
 
-    CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/live-peers.mdx"
-    cp "../docs/mainnet-networks/template/live-peers.mdx" "${CHAIN_PAGE_PATH}"
+    CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/seeds-and-peers.mdx"
+    cp "../docs/mainnet-networks/template/seeds-and-peers.mdx" "${CHAIN_PAGE_PATH}"
     echo "${CHAIN_PAGE_PATH}"
 
     replacePageVariables "${CHAIN_PAGE_PATH}"
@@ -432,8 +437,8 @@ function updateLivePeers {
     LIVE_PEERS_ALL=$(echo "${LIVE_PEERS_RAW}" | paste -sd "," -)
     LIVE_PEERS_RANDOM=$(echo "${LIVE_PEERS_RAW}" | sort --random-sort | head -n 5 | paste -sd "," -)
 
-    CHAIN_PAGE_PATH="../docs/testnet-networks/${CHAIN_SYSTEM_NAME}/live-peers.mdx"
-    cp "../docs/testnet-networks/template/live-peers.mdx" "${CHAIN_PAGE_PATH}"
+    CHAIN_PAGE_PATH="../docs/testnet-networks/${CHAIN_SYSTEM_NAME}/seeds-and-peers.mdx"
+    cp "../docs/testnet-networks/template/seeds-and-peers.mdx" "${CHAIN_PAGE_PATH}"
     echo "${CHAIN_PAGE_PATH}"
 
     replacePageVariables "${CHAIN_PAGE_PATH}"

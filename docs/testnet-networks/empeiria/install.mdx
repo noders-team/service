@@ -1,12 +1,13 @@
 ---
 hide_table_of_contents: false
-title: Installation
+title: 'Installation'
 sidebar_position: 2
 ---
 
 <div class="h1-with-icon icon-empeiria">
-# Installation
+  # Installation
 </div>
+
 ###### Chain ID: `empe-testnet-2` | Current Node Version: `v0.3.0`
 
 ## Install dependencies
@@ -18,6 +19,7 @@ sudo apt -qy upgrade
 ```
 
 ## Install GO
+
 ```js
 ver="1.21.3" &&
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" &&
@@ -30,13 +32,17 @@ go version
 ```
 
 ## Install with Cosmovisor
+
 :::note ADVANCED ROUTE
 
 Cosmosvisor is a process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If a proposal is approved, cosmosvisor can automatically download the new binary, stop the current one, switch to the new binary, and restart the node with the new binary.
 
 :::
+
 ### Download and build binaries
+
 ### Clone Empeiria repo and build emped v0.3.0
+
 ```js
 cd $HOME
 git clone https://github.com/empe-io.git
@@ -45,10 +51,13 @@ git checkout v0.3.0
 ```
 
 ### Build binaries
+
 ```js
 make install
 ```
+
 ### Prepare binaries for Cosmovisor
+
 ```js
 cd $HOME
 mkdir -p ~/.empe-chain/cosmovisor/upgrades/v0.3.0/bin
@@ -56,18 +65,22 @@ mv $HOME/go/bin/emped ~/.empe-chain/cosmovisor/upgrades/v0.3.0/bin/
 ```
 
 ### Create symlinks
+
 ```js
 sudo ln -s ~/.empe-chain/cosmovisor/genesis ~/.empe-chain/cosmovisor/current -f
 sudo ln -s ~/.empe-chain/cosmovisor/current/bin/emped /usr/local/bin/emped -f
 ```
 
 ## Download and install Cosmovisor
+
 ```js
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
 ```
 
 ## Run node
+
 ### Create service
+
 ```js
 sudo tee /etc/systemd/system/emped.service > /dev/null << EOF
 [Unit]
@@ -93,7 +106,9 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
+
 ### Clone Empeiria repo and build emped v0.3.0
+
 ```js
 cd $HOME
 git clone https://github.com/empe-io.git
@@ -102,12 +117,15 @@ git checkout v0.3.0
 ```
 
 ### Build binaries
+
 ```js
 make install
 ```
 
 ## Run node
+
 ### Create service
+
 ```js
 sudo tee /etc/systemd/system/emped.service > /dev/null << EOF
 [Unit]
@@ -128,13 +146,16 @@ EOF
 ```
 
 ### Enable service
+
 ```js
 sudo systemctl daemon-reload
 sudo systemctl enable emped
 ```
 
 ## Node configuration
+
 ### Set config
+
 ```js
 emped config chain-id empe-testnet-2
 emped config keyring-backend os
@@ -142,25 +163,32 @@ emped config node tcp://localhost:26657
 ```
 
 ### Initialize the node
+
 ```js
 emped init NAME_OF_YOUR_VALIDATOR --chain-id empe-testnet-2
 ```
 
 ### Download genesis and addrbook
+
 ```js
 curl https://snapshots-t.noders.services/empeiria/genesis.json -o ~/.empe-chain/config/genesis.json
 curl https://snapshots-t.noders.services/empeiria/addrbook.json -o ~/.empe-chain/config/addrbook.json
 ```
+
 ### Add peers
+
 ```js
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"5fc98f2ec4b2a6001aa5655c9852d259e83a8e74@empeiria-t-rpc.noders.services:11256\"/" ~/.empe-chain/config/config.toml
 ```
 
 ### Set minimum gas price
+
 ```js
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001uempe\"|" ~/.empe-chain/config/app.toml
 ```
+
 ### Set pruning
+
 ```js
 sed -i \
   -e 's|^pruning *=.*|pruning = "custom"|' \
@@ -195,6 +223,7 @@ sed -i.bak -e "s%:26658%:${emped_PORT}658%g" \
 ```
 
 ### Start node and check logs
+
 ```js
 sudo systemctl start emped && sudo journalctl -u emped -f --no-hostname -o cat
 ```

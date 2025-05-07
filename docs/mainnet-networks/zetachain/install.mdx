@@ -1,12 +1,13 @@
 ---
 hide_table_of_contents: false
-title: Installation
+title: 'Installation'
 sidebar_position: 2
 ---
 
 <div class="h1-with-icon icon-zetachain">
-# Installation
+  # Installation
 </div>
+
 ###### Chain ID: `zetachain_7000-1` | Current Node Version: `v29.1.2`
 
 ## Install dependencies
@@ -18,6 +19,7 @@ sudo apt -qy upgrade
 ```
 
 ## Install GO
+
 ```js
 ver="1.21.3" &&
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" &&
@@ -30,13 +32,17 @@ go version
 ```
 
 ## Install with Cosmovisor
+
 :::note ADVANCED ROUTE
 
 Cosmosvisor is a process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If a proposal is approved, cosmosvisor can automatically download the new binary, stop the current one, switch to the new binary, and restart the node with the new binary.
 
 :::
+
 ### Download and build binaries
+
 ### Clone Zetachain repo and build zetacored v29.1.2
+
 ```js
 cd $HOME
 git clone https://github.com/zeta-chain.git
@@ -45,10 +51,13 @@ git checkout v29.1.2
 ```
 
 ### Build binaries
+
 ```js
 make install
 ```
+
 ### Prepare binaries for Cosmovisor
+
 ```js
 cd $HOME
 mkdir -p ~/.zetacored/cosmovisor/upgrades/v29.1.2/bin
@@ -56,18 +65,22 @@ mv $HOME/go/bin/zetacored ~/.zetacored/cosmovisor/upgrades/v29.1.2/bin/
 ```
 
 ### Create symlinks
+
 ```js
 sudo ln -s ~/.zetacored/cosmovisor/genesis ~/.zetacored/cosmovisor/current -f
 sudo ln -s ~/.zetacored/cosmovisor/current/bin/zetacored /usr/local/bin/zetacored -f
 ```
 
 ## Download and install Cosmovisor
+
 ```js
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
 ```
 
 ## Run node
+
 ### Create service
+
 ```js
 sudo tee /etc/systemd/system/zetacored.service > /dev/null << EOF
 [Unit]
@@ -93,7 +106,9 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
+
 ### Clone Zetachain repo and build zetacored v29.1.2
+
 ```js
 cd $HOME
 git clone https://github.com/zeta-chain.git
@@ -102,12 +117,15 @@ git checkout v29.1.2
 ```
 
 ### Build binaries
+
 ```js
 make install
 ```
 
 ## Run node
+
 ### Create service
+
 ```js
 sudo tee /etc/systemd/system/zetacored.service > /dev/null << EOF
 [Unit]
@@ -128,13 +146,16 @@ EOF
 ```
 
 ### Enable service
+
 ```js
 sudo systemctl daemon-reload
 sudo systemctl enable zetacored
 ```
 
 ## Node configuration
+
 ### Set config
+
 ```js
 zetacored config chain-id zetachain_7000-1
 zetacored config keyring-backend os
@@ -142,25 +163,32 @@ zetacored config node tcp://localhost:26657
 ```
 
 ### Initialize the node
+
 ```js
 zetacored init NAME_OF_YOUR_VALIDATOR --chain-id zetachain_7000-1
 ```
 
 ### Download genesis and addrbook
+
 ```js
 curl https://snapshots.noders.services/zetachain/genesis.json -o ~/.zetacored/config/genesis.json
 curl https://snapshots.noders.services/zetachain/addrbook.json -o ~/.zetacored/config/addrbook.json
 ```
+
 ### Add peers
+
 ```js
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"d055168f4afe65bbecb951ed1158307ce5b98cc2@zetachain-rpc.noders.services:22556\"/" ~/.zetacored/config/config.toml
 ```
 
 ### Set minimum gas price
+
 ```js
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001azeta\"|" ~/.zetacored/config/app.toml
 ```
+
 ### Set pruning
+
 ```js
 sed -i \
   -e 's|^pruning *=.*|pruning = "custom"|' \
@@ -195,6 +223,7 @@ sed -i.bak -e "s%:26658%:${zetacored_PORT}658%g" \
 ```
 
 ### Start node and check logs
+
 ```js
 sudo systemctl start zetacored && sudo journalctl -u zetacored -f --no-hostname -o cat
 ```

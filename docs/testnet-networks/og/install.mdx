@@ -1,12 +1,13 @@
 ---
 hide_table_of_contents: false
-title: Installation
+title: 'Installation'
 sidebar_position: 2
 ---
 
 <div class="h1-with-icon icon-og">
-# Installation
+  # Installation
 </div>
+
 ###### Chain ID: `zgtendermint_16600-2` | Current Node Version: `v0.5.0.1`
 
 ## Install dependencies
@@ -18,6 +19,7 @@ sudo apt -qy upgrade
 ```
 
 ## Install GO
+
 ```js
 ver="1.21.3" &&
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" &&
@@ -30,13 +32,17 @@ go version
 ```
 
 ## Install with Cosmovisor
+
 :::note ADVANCED ROUTE
 
 Cosmosvisor is a process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If a proposal is approved, cosmosvisor can automatically download the new binary, stop the current one, switch to the new binary, and restart the node with the new binary.
 
 :::
+
 ### Download and build binaries
+
 ### Clone ZeroGravity repo and build 0gchaind v0.5.0.1
+
 ```js
 cd $HOME
 git clone https://github.com/0glabs/0g-chain.git
@@ -45,10 +51,13 @@ git checkout v0.5.0.1
 ```
 
 ### Build binaries
+
 ```js
 make install
 ```
+
 ### Prepare binaries for Cosmovisor
+
 ```js
 cd $HOME
 mkdir -p ~/.0gchain/cosmovisor/upgrades/v0.5.0.1/bin
@@ -56,18 +65,22 @@ mv $HOME/go/bin/0gchaind ~/.0gchain/cosmovisor/upgrades/v0.5.0.1/bin/
 ```
 
 ### Create symlinks
+
 ```js
 sudo ln -s ~/.0gchain/cosmovisor/genesis ~/.0gchain/cosmovisor/current -f
 sudo ln -s ~/.0gchain/cosmovisor/current/bin/0gchaind /usr/local/bin/0gchaind -f
 ```
 
 ## Download and install Cosmovisor
+
 ```js
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
 ```
 
 ## Run node
+
 ### Create service
+
 ```js
 sudo tee /etc/systemd/system/0gchaind.service > /dev/null << EOF
 [Unit]
@@ -93,7 +106,9 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
+
 ### Clone ZeroGravity repo and build 0gchaind v0.5.0.1
+
 ```js
 cd $HOME
 git clone https://github.com/0glabs/0g-chain.git
@@ -102,12 +117,15 @@ git checkout v0.5.0.1
 ```
 
 ### Build binaries
+
 ```js
 make install
 ```
 
 ## Run node
+
 ### Create service
+
 ```js
 sudo tee /etc/systemd/system/0gchaind.service > /dev/null << EOF
 [Unit]
@@ -128,13 +146,16 @@ EOF
 ```
 
 ### Enable service
+
 ```js
 sudo systemctl daemon-reload
 sudo systemctl enable 0gchaind
 ```
 
 ## Node configuration
+
 ### Set config
+
 ```js
 0gchaind config chain-id zgtendermint_16600-2
 0gchaind config keyring-backend os
@@ -142,25 +163,32 @@ sudo systemctl enable 0gchaind
 ```
 
 ### Initialize the node
+
 ```js
 0gchaind init NAME_OF_YOUR_VALIDATOR --chain-id zgtendermint_16600-2
 ```
 
 ### Download genesis and addrbook
+
 ```js
 curl https://snapshots-t.noders.services/og/genesis.json -o ~/.0gchain/config/genesis.json
 curl https://snapshots-t.noders.services/og/addrbook.json -o ~/.0gchain/config/addrbook.json
 ```
+
 ### Add peers
+
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"a9b097b76283cbf2e0aa9275b77326b8bcf952ee@og-t-rpc.noders.services:23856\"/" ~/.0gchain/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"d9fee544b90d15c4f024e52b6c5b2fd9fd199514@og-t-rpc.noders.services:23856\"/" ~/.0gchain/config/config.toml
 ```
 
 ### Set minimum gas price
+
 ```js
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001ua0gi\"|" ~/.0gchain/config/app.toml
 ```
+
 ### Set pruning
+
 ```js
 sed -i \
   -e 's|^pruning *=.*|pruning = "custom"|' \
@@ -195,6 +223,7 @@ sed -i.bak -e "s%:26658%:${0gchaind_PORT}658%g" \
 ```
 
 ### Start node and check logs
+
 ```js
 sudo systemctl start 0gchaind && sudo journalctl -u 0gchaind -f --no-hostname -o cat
 ```

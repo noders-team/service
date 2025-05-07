@@ -1,12 +1,13 @@
 ---
 hide_table_of_contents: false
-title: Installation
+title: 'Installation'
 sidebar_position: 2
 ---
 
 <div class="h1-with-icon icon-andromeda">
-# Installation
+  # Installation
 </div>
+
 ###### Chain ID: `andromeda-1` | Current Node Version: `v2.0.0`
 
 ## Install dependencies
@@ -18,6 +19,7 @@ sudo apt -qy upgrade
 ```
 
 ## Install GO
+
 ```js
 ver="1.21.3" &&
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" &&
@@ -30,13 +32,17 @@ go version
 ```
 
 ## Install with Cosmovisor
+
 :::note ADVANCED ROUTE
 
 Cosmosvisor is a process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If a proposal is approved, cosmosvisor can automatically download the new binary, stop the current one, switch to the new binary, and restart the node with the new binary.
 
 :::
+
 ### Download and build binaries
+
 ### Clone Andromeda repo and build andromedad v2.0.0
+
 ```js
 cd $HOME
 git clone https://github.com/andromedaprotocol.git
@@ -45,10 +51,13 @@ git checkout v2.0.0
 ```
 
 ### Build binaries
+
 ```js
 make install
 ```
+
 ### Prepare binaries for Cosmovisor
+
 ```js
 cd $HOME
 mkdir -p ~/.andromeda/cosmovisor/upgrades/v2.0.0/bin
@@ -56,18 +65,22 @@ mv $HOME/go/bin/andromedad ~/.andromeda/cosmovisor/upgrades/v2.0.0/bin/
 ```
 
 ### Create symlinks
+
 ```js
 sudo ln -s ~/.andromeda/cosmovisor/genesis ~/.andromeda/cosmovisor/current -f
 sudo ln -s ~/.andromeda/cosmovisor/current/bin/andromedad /usr/local/bin/andromedad -f
 ```
 
 ## Download and install Cosmovisor
+
 ```js
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
 ```
 
 ## Run node
+
 ### Create service
+
 ```js
 sudo tee /etc/systemd/system/andromedad.service > /dev/null << EOF
 [Unit]
@@ -93,7 +106,9 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
+
 ### Clone Andromeda repo and build andromedad v2.0.0
+
 ```js
 cd $HOME
 git clone https://github.com/andromedaprotocol.git
@@ -102,12 +117,15 @@ git checkout v2.0.0
 ```
 
 ### Build binaries
+
 ```js
 make install
 ```
 
 ## Run node
+
 ### Create service
+
 ```js
 sudo tee /etc/systemd/system/andromedad.service > /dev/null << EOF
 [Unit]
@@ -128,13 +146,16 @@ EOF
 ```
 
 ### Enable service
+
 ```js
 sudo systemctl daemon-reload
 sudo systemctl enable andromedad
 ```
 
 ## Node configuration
+
 ### Set config
+
 ```js
 andromedad config chain-id andromeda-1
 andromedad config keyring-backend os
@@ -142,25 +163,32 @@ andromedad config node tcp://localhost:26657
 ```
 
 ### Initialize the node
+
 ```js
 andromedad init NAME_OF_YOUR_VALIDATOR --chain-id andromeda-1
 ```
 
 ### Download genesis and addrbook
+
 ```js
 curl https://snapshots.noders.services/andromeda/genesis.json -o ~/.andromeda/config/genesis.json
 curl https://snapshots.noders.services/andromeda/addrbook.json -o ~/.andromeda/config/addrbook.json
 ```
+
 ### Add peers
+
 ```js
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"c1cde7020a3f96c7480702ede7ce470f4140bb8f@andromeda-rpc.noders.services:21256\"/" ~/.andromeda/config/config.toml
 ```
 
 ### Set minimum gas price
+
 ```js
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001uandr\"|" ~/.andromeda/config/app.toml
 ```
+
 ### Set pruning
+
 ```js
 sed -i \
   -e 's|^pruning *=.*|pruning = "custom"|' \
@@ -195,6 +223,7 @@ sed -i.bak -e "s%:26658%:${andromedad_PORT}658%g" \
 ```
 
 ### Start node and check logs
+
 ```js
 sudo systemctl start andromedad && sudo journalctl -u andromedad -f --no-hostname -o cat
 ```

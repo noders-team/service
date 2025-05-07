@@ -1,8 +1,9 @@
 ---
 title: 'Celestia'
 hide_title: true
-hide_table_of_contents: true
+hide_table_of_contents: false
 ---
+
 
 import ChainLayout from '@site/src/components/ChainLayout';
 import ChainHero from '@site/src/components/ChainHero';
@@ -13,11 +14,12 @@ import ToolsGrid from '@site/src/components/ToolsGrid';
   <ChainHero
     name="Celestia"
     iconUrl="img/celestia-icon.svg"
+    bgColor="#7B2BF9"
     scope="mainnet"
     chainId="celestia"
     nodeVersion="v3.8.1"
     token="TIA"
-    stakeUrl="https://wallet.keplr.app/?modal=staking[STAKE_URL]chain=celestia[STAKE_URL]validator_address=celestiavaloper139mu0a0ucz0gmrkavm5wjar2lpx7yvxq3e25e5[STAKE_URL]step_id=3[STAKE_URL]action_id=stake"
+    stakeUrl="https://wallet.keplr.app/?modal=staking&chain=celestia&validator_address=celestiavaloper139mu0a0ucz0gmrkavm5wjar2lpx7yvxq3e25e5&step_id=3&action_id=stake"
     restakeUrl="https://restake.app/celestia/celestiavaloper139mu0a0ucz0gmrkavm5wjar2lpx7yvxq3e25e5"
     websiteUrl="https://celestia.org/"
     githubUrl="https://github.com/celestiaorg/celestia-app"
@@ -25,8 +27,8 @@ import ToolsGrid from '@site/src/components/ToolsGrid';
     discordUrl="https://discord.gg/celestiacommunity"
   />
 
-<ProductLinks explorerUrl="https://celestiahub.org/explorer" appUrl="https://celestiahub.org" appImageUrl="img/products/celestia-community-app.png" />
+  <ProductLinks explorerUrl="https://celestiahub.org/explorer" appUrl="https://celestiahub.org" appImageUrl="img/products/celestia-community-app.png"/>
 
-<ToolsGrid chainName="celestia" />
+  <ToolsGrid chainName="celestia"/>
 
 </ChainLayout>

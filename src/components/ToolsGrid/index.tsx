@@ -110,13 +110,9 @@ function ToolsGrid({ chainName }: ToolsGridProps): React.ReactElement {
           <ToolCard icon={PiGraph} linkUrl={chainName + '/endpoints'} title="RPC, API, gRPC" />
           <ToolCard icon={PiLightning} linkUrl={chainName + '/statesync'} title="State Sync" />
           <ToolCard icon={PiDatabase} linkUrl={chainName + '/snapshot'} title="Node Snapshot" />
-          <ToolCard icon={PiGitPullRequest} linkUrl={chainName + '/live-peers'} title="Live Peers" />
-          <ToolCard icon={PiFediverseLogo} linkUrl={chainName + '/seed-node'} title="Seed Node" />
-          <ToolCard
-            icon={PiFediverseLogo}
-            linkUrl={chainName + '/install#download-genesis-and-addrbook'}
-            title="Address Book"
-          />
+          <ToolCard icon={PiGitPullRequest} linkUrl={chainName + '/seeds-and-peers'} title="Live Peers" />
+          <ToolCard icon={PiFediverseLogo} linkUrl={chainName + '/seeds-and-peers'} title="Seed Node" />
+          <ToolCard icon={PiFediverseLogo} linkUrl={chainName + '/seeds-and-peers#address-book'} title="Address Book" />
         </Box>
       </Box>
 

@@ -1,12 +1,13 @@
 ---
 hide_table_of_contents: false
-title: Installation
+title: 'Installation'
 sidebar_position: 2
 ---
 
 <div class="h1-with-icon icon-humans">
-# Installation
+  # Installation
 </div>
+
 ###### Chain ID: `humans_1089-1` | Current Node Version: `v1.0.0`
 
 ## Install dependencies
@@ -18,6 +19,7 @@ sudo apt -qy upgrade
 ```
 
 ## Install GO
+
 ```js
 ver="1.21.3" &&
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" &&
@@ -30,13 +32,17 @@ go version
 ```
 
 ## Install with Cosmovisor
+
 :::note ADVANCED ROUTE
 
 Cosmosvisor is a process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If a proposal is approved, cosmosvisor can automatically download the new binary, stop the current one, switch to the new binary, and restart the node with the new binary.
 
 :::
+
 ### Download and build binaries
+
 ### Clone Humans repo and build humansd v1.0.0
+
 ```js
 cd $HOME
 git clone https://github.com/humansdotai.git
@@ -45,10 +51,13 @@ git checkout v1.0.0
 ```
 
 ### Build binaries
+
 ```js
 make install
 ```
+
 ### Prepare binaries for Cosmovisor
+
 ```js
 cd $HOME
 mkdir -p ~/.humansd/cosmovisor/upgrades/v1.0.0/bin
@@ -56,18 +65,22 @@ mv $HOME/go/bin/humansd ~/.humansd/cosmovisor/upgrades/v1.0.0/bin/
 ```
 
 ### Create symlinks
+
 ```js
 sudo ln -s ~/.humansd/cosmovisor/genesis ~/.humansd/cosmovisor/current -f
 sudo ln -s ~/.humansd/cosmovisor/current/bin/humansd /usr/local/bin/humansd -f
 ```
 
 ## Download and install Cosmovisor
+
 ```js
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
 ```
 
 ## Run node
+
 ### Create service
+
 ```js
 sudo tee /etc/systemd/system/humansd.service > /dev/null << EOF
 [Unit]
@@ -93,7 +106,9 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
+
 ### Clone Humans repo and build humansd v1.0.0
+
 ```js
 cd $HOME
 git clone https://github.com/humansdotai.git
@@ -102,12 +117,15 @@ git checkout v1.0.0
 ```
 
 ### Build binaries
+
 ```js
 make install
 ```
 
 ## Run node
+
 ### Create service
+
 ```js
 sudo tee /etc/systemd/system/humansd.service > /dev/null << EOF
 [Unit]
@@ -128,13 +146,16 @@ EOF
 ```
 
 ### Enable service
+
 ```js
 sudo systemctl daemon-reload
 sudo systemctl enable humansd
 ```
 
 ## Node configuration
+
 ### Set config
+
 ```js
 humansd config chain-id humans_1089-1
 humansd config keyring-backend os
@@ -142,25 +163,32 @@ humansd config node tcp://localhost:26657
 ```
 
 ### Initialize the node
+
 ```js
 humansd init NAME_OF_YOUR_VALIDATOR --chain-id humans_1089-1
 ```
 
 ### Download genesis and addrbook
+
 ```js
 curl https://snapshots.noders.services/humans/genesis.json -o ~/.humansd/config/genesis.json
 curl https://snapshots.noders.services/humans/addrbook.json -o ~/.humansd/config/addrbook.json
 ```
+
 ### Add peers
+
 ```js
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"284fa3bdcdfd0d5aba7047db88f26d7a8ef38ed7@humans-rpc.noders.services:18456\"/" ~/.humansd/config/config.toml
 ```
 
 ### Set minimum gas price
+
 ```js
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001aheart\"|" ~/.humansd/config/app.toml
 ```
+
 ### Set pruning
+
 ```js
 sed -i \
   -e 's|^pruning *=.*|pruning = "custom"|' \
@@ -195,6 +223,7 @@ sed -i.bak -e "s%:26658%:${humansd_PORT}658%g" \
 ```
 
 ### Start node and check logs
+
 ```js
 sudo systemctl start humansd && sudo journalctl -u humansd -f --no-hostname -o cat
 ```
