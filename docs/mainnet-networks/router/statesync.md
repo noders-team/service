@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-router">
 # State sync
 </div>
-###### Chain ID: `null` | Current Node Version: `v1.6.0`
+###### Chain ID: `router_9600-1` | Current Node Version: `v1.6.0`
 
 ```bash
 SNAP_RPC=https://router-rpc.noders.services:443 && \
@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop routerd && routerd tendermint unsafe-reset-all --home ~/.routerd --keep-addr-book
 ```
 ```bash
-peers="null@router-rpc.noders.services:null"
+peers="3dc22c2dbe999e5c68e59b8a8de32c45785632da@router-rpc.noders.services:23756"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.routerd/config/config.toml
 ```
 ```bash

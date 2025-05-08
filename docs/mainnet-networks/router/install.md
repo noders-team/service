@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-router">
 # Installation
 </div>
-###### Chain ID: `null` | Current Node Version: `v1.6.0`
+###### Chain ID: `router_9600-1` | Current Node Version: `v1.6.0`
 
 ## Install dependencies
 
@@ -136,14 +136,14 @@ sudo systemctl enable routerd
 ## Node configuration
 ### Set config
 ```js
-routerd config chain-id null
+routerd config chain-id router_9600-1
 routerd config keyring-backend os
 routerd config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-routerd init NAME_OF_YOUR_VALIDATOR --chain-id null
+routerd init NAME_OF_YOUR_VALIDATOR --chain-id router_9600-1
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://snapshots.noders.services/router/addrbook.json -o ~/.routerd/config
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"null@router-rpc.noders.services:null\"/" ~/.routerd/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"3dc22c2dbe999e5c68e59b8a8de32c45785632da@router-rpc.noders.services:23756\"/" ~/.routerd/config/config.toml
 ```
 
 ### Set minimum gas price

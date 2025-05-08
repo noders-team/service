@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-router">
 # Upgrade
 </div>
-###### Chain ID: `null` | Current Node Version: `v1.6.0`
+###### Chain ID: `router_9600-1` | Current Node Version: `v1.6.0`
 
 
 # Clone Router repository

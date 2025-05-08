@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-router">
 # Router
 </div>
-###### Chain ID: `null` | Current Node Version: `v1.6.0`
+###### Chain ID: `router_9600-1` | Current Node Version: `v1.6.0`
 
 
 The Router Chain is a layer 1 blockchain that leverages tendermint’s Byzantine Fault Tolerant (BFT) consensus engine

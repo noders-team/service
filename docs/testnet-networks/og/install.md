@@ -153,7 +153,7 @@ curl https://snapshots-t.noders.services/og/addrbook.json -o ~/.0gchain/config/a
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"a9b097b76283cbf2e0aa9275b77326b8bcf952ee@og-t-rpc.noders.services:23856\"/" ~/.0gchain/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"d9fee544b90d15c4f024e52b6c5b2fd9fd199514@og-t-rpc.noders.services:23856\"/" ~/.0gchain/config/config.toml
 ```
 
 ### Set minimum gas price
