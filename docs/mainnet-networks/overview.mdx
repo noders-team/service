@@ -35,7 +35,7 @@ Welcome to our Cosmos Guides Service, the premier destination for comprehensive 
 
 <CardLayout autoFitEnabled={true}>
     <Card
-        to="https://nodersteam.com/networks/"
+        to="https://noders.team/networks"
         header={{
             label: "[NODERS]TEAM",
             translateId: "development-setup",

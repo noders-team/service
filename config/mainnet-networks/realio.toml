@@ -1,0 +1,49 @@
+# Blockchain
+CHAIN_NAME="Realio"
+CHAIN_SYSTEM_NAME="realio"
+CHAIN_ID="auto"
+VERSION="auto"
+CHAIN_DESCRIPTION="""# Realio: A Decentralized Blockchain for Real-World Applications
+
+Realio is a blockchain platform designed to support real-world applications. It is built on the Cosmos SDK and uses Tendermint as its consensus engine.
+
+"""
+[CHAIN_DESCRIPTION_END]
+
+CHAIN_DENOM="ario"
+CHAIN_FEES="10000000000000000"
+
+# Binary
+DAEMON_NAME="realiod"
+DAEMON_SERVICE="realio.service"
+DAEMON_HOME="~/.realio-network"
+
+# Endpoints
+ENDPOINT_RPC="https://realio-rpc.noders.services"
+ENDPOINT_API="https://realio-api.noders.services"
+ENDPOINT_JRPC="https://realio-jsonrpc.noders.services"
+ENDPOINT_GRPC="https://realio-grpc.noders.services:443"
+ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/realio"
+
+# Social
+SOCIAL_WEBSITE="https://www.realio.network/"
+SOCIAL_GITHUB="https://github.com/realio-network"
+SOCIAL_DISCORD="https://discord.com/invite/Nv9EUbRnKb"
+SOCIAL_X="https://twitter.com/realio_network"
+SOCIAL_TELEGRAM=""
+
+# Other
+DOWNLOAD_URL="https://snapshots.noders.services/rebus"
+GITHUB_FOLDER_NAME="auto"
+VALIDATOR_LINK="https://rebus.explorers.guru/validator/rebusvaloper1ssvn4vrw8c40r6zgyhhxclhp36n75sulca02pl"
+
+# Updates
+UPDATE_MAIN=true
+UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
+UPDATE_UPGRADE=true
+UPDATE_SNAPSHOT=true
+UPDATE_STATESYNC=true
+UPDATE_LIVE_PEERS=true
+UPDATE_CLI_CHEATSHEET=true

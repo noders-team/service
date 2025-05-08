@@ -154,10 +154,24 @@
     "scope": "mainnet"
   },
   {
+    "name": "realio",
+    "pretty_name": "Realio",
+    "chain_id": "realionetwork_3301-1",
+    "logo_url": "img/realio-icon.svg",
+    "scope": "mainnet"
+  },
+  {
     "name": "rebus",
     "pretty_name": "Rebus",
     "chain_id": "reb_1111-1",
     "logo_url": "img/rebus-icon.svg",
+    "scope": "mainnet"
+  },
+  {
+    "name": "router",
+    "pretty_name": "Router",
+    "chain_id": "router_9600-1",
+    "logo_url": "img/router-icon.svg",
     "scope": "mainnet"
   },
   {
