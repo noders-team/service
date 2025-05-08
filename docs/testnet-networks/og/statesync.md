@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop 0gchaind && 0gchaind tendermint unsafe-reset-all --home ~/.0gchain --keep-addr-book
 ```
 ```bash
-peers="a9b097b76283cbf2e0aa9275b77326b8bcf952ee@og-t-rpc.noders.services:23856"
+peers="d9fee544b90d15c4f024e52b6c5b2fd9fd199514@og-t-rpc.noders.services:23856"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.0gchain/config/config.toml
 ```
 ```bash
