@@ -1,0 +1,229 @@
+---
+hide_table_of_contents: false
+title: 'Installation'
+sidebar_position: 2
+---
+
+<div class="h1-with-icon icon-realio">
+  # Installation
+</div>
+
+###### Chain ID: `realionetwork_3301-1` | Current Node Version: `v1.0.2`
+
+## Install dependencies
+
+```js
+sudo apt -q update
+sudo apt -qy install curl git jq lz4 build-essential
+sudo apt -qy upgrade
+```
+
+## Install GO
+
+```js
+ver="1.21.3" &&
+wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" &&
+sudo rm -rf /usr/local/go &&
+sudo tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz" &&
+rm "go$ver.linux-amd64.tar.gz" &&
+echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> $HOME/.bash_profile &&
+source $HOME/.bash_profile &&
+go version
+```
+
+## Install with Cosmovisor
+
+:::note ADVANCED ROUTE
+
+Cosmosvisor is a process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If a proposal is approved, cosmosvisor can automatically download the new binary, stop the current one, switch to the new binary, and restart the node with the new binary.
+
+:::
+
+### Download and build binaries
+
+### Clone Realio repo and build realiod v1.0.2
+
+```js
+cd $HOME
+git clone https://github.com/realio-network.git
+cd realio-network
+git checkout v1.0.2
+```
+
+### Build binaries
+
+```js
+make install
+```
+
+### Prepare binaries for Cosmovisor
+
+```js
+cd $HOME
+mkdir -p ~/.realio-network/cosmovisor/upgrades/v1.0.2/bin
+mv $HOME/go/bin/realiod ~/.realio-network/cosmovisor/upgrades/v1.0.2/bin/
+```
+
+### Create symlinks
+
+```js
+sudo ln -s ~/.realio-network/cosmovisor/genesis ~/.realio-network/cosmovisor/current -f
+sudo ln -s ~/.realio-network/cosmovisor/current/bin/realiod /usr/local/bin/realiod -f
+```
+
+## Download and install Cosmovisor
+
+```js
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
+```
+
+## Run node
+
+### Create service
+
+```js
+sudo tee /etc/systemd/system/realiod.service > /dev/null << EOF
+[Unit]
+Description=realio node service
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which cosmovisor) run start
+Restart=on-failure
+RestartSec=10
+LimitNOFILE=65535
+Environment="DAEMON_HOME=~/.realio-network"
+Environment="DAEMON_NAME=realiod"
+Environment="UNSAFE_SKIP_BACKUP=true"
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/.realio-network/cosmovisor/current/bin"
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
+## Install without Cosmovisor
+
+### Download and build binaries
+
+### Clone Realio repo and build realiod v1.0.2
+
+```js
+cd $HOME
+git clone https://github.com/realio-network.git
+cd realio-network
+git checkout v1.0.2
+```
+
+### Build binaries
+
+```js
+make install
+```
+
+## Run node
+
+### Create service
+
+```js
+sudo tee /etc/systemd/system/realiod.service > /dev/null << EOF
+[Unit]
+Description=realio node service
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which realiod) start
+Restart=on-failure
+RestartSec=10
+LimitNOFILE=65535
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
+### Enable service
+
+```js
+sudo systemctl daemon-reload
+sudo systemctl enable realiod
+```
+
+## Node configuration
+
+### Set config
+
+```js
+realiod config chain-id realionetwork_3301-1
+realiod config keyring-backend os
+realiod config node tcp://localhost:26657
+```
+
+### Initialize the node
+
+```js
+realiod init NAME_OF_YOUR_VALIDATOR --chain-id realionetwork_3301-1
+```
+
+### Download genesis and addrbook
+
+```js
+curl https://snapshots.noders.services/realio/genesis.json -o ~/.realio-network/config/genesis.json
+curl https://snapshots.noders.services/realio/addrbook.json -o ~/.realio-network/config/addrbook.json
+```
+
+### Add peers
+
+```js
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"990b38ffdec10e168fba6187a71c9c1f7aa53300@realio-rpc.noders.services:12056\"/" ~/.realio-network/config/config.toml
+```
+
+### Set minimum gas price
+
+```js
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001ario\"|" ~/.realio-network/config/app.toml
+```
+
+### Set pruning
+
+```js
+sed -i \
+  -e 's|^pruning *=.*|pruning = "custom"|' \
+  -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
+  -e 's|^pruning-keep-every *=.*|pruning-keep-every = "0"|' \
+  -e 's|^pruning-interval *=.*|pruning-interval = "19"|' \
+  ~/.realio-network/config/app.toml
+```
+
+### Set custom ports
+
+```bash
+echo "export realiod_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+```
+
+```js
+# Set custom ports in app.toml
+sed -i.bak -e "s%:1317%:${realiod_PORT}317%g" \
+-e "s%:8080%:${realiod_PORT}080%g" \
+-e "s%:9090%:${realiod_PORT}090%g" \
+-e "s%:9091%:${realiod_PORT}091%g" \
+-e "s%:8545%:${realiod_PORT}545%g" \
+-e "s%:8546%:${realiod_PORT}546%g" \
+-e "s%:6065%:${realiod_PORT}065%g" ~/.realio-network/config/app.toml
+
+# Set custom ports in config.toml file
+sed -i.bak -e "s%:26658%:${realiod_PORT}658%g" \
+-e "s%:26657%:${realiod_PORT}657%g" \
+-e "s%:6060%:${realiod_PORT}060%g" \
+-e "s%:26656%:${realiod_PORT}656%g" \
+-e "s%:26660%:${realiod_PORT}660%g" ~/.realio-network/config/config.toml
+```
+
+### Start node and check logs
+
+```js
+sudo systemctl start realiod && sudo journalctl -u realiod -f --no-hostname -o cat
+```
