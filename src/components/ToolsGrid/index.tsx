@@ -23,8 +23,8 @@ import Typography from '@mui/material/Typography';
 import SimpleCard from '@/components/SimpleCard';
 import { IconBaseProps } from 'react-icons';
 import { useTheme } from '@mui/material/styles';
-import { Link } from 'react-router-dom';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { useHistory } from '@docusaurus/router';
 
 type ToolCardProps = {
   icon: React.ComponentType<IconBaseProps>;
@@ -34,18 +34,28 @@ type ToolCardProps = {
 
 function ToolCard({ icon: Icon, linkUrl, title }: ToolCardProps): React.ReactElement {
   const isMobile = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+  const history = useHistory();
+  const handleClick = (url: string) => {
+    history.push(url);
+  };
+
   return (
-    <Link to={linkUrl} style={{ textDecoration: 'none', color: 'inherit' }}>
-      <SimpleCard flexDirection="column" gap={3} padding={isMobile ? 2 : 3} cursor="pointer" height="100%">
-        <Icon size={32} opacity={0.2} />
-        <Box display="flex" justifyContent="space-between" alignItems="center">
-          <Typography variant="subtitle1" sx={{ fontWeight: 600, lineHeight: 'normal' }}>
-            {title}
-          </Typography>
-          <PiArrowRightBold size={24} opacity={0.2} />
-        </Box>
-      </SimpleCard>
-    </Link>
+    <SimpleCard
+      flexDirection="column"
+      gap={3}
+      padding={isMobile ? 2 : 3}
+      cursor="pointer"
+      height="100%"
+      onClick={() => handleClick(linkUrl)}
+    >
+      <Icon size={32} opacity={0.2} />
+      <Box display="flex" justifyContent="space-between" alignItems="center">
+        <Typography variant="subtitle1" sx={{ fontWeight: 600, lineHeight: 'normal' }}>
+          {title}
+        </Typography>
+        <PiArrowRightBold size={24} opacity={0.2} />
+      </Box>
+    </SimpleCard>
   );
 }
 

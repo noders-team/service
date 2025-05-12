@@ -10,12 +10,24 @@ import Illustration from '@site/src/components/Illustration';
 import React from 'react';
 import { FaArrowRight } from 'react-icons/fa6';
 import { useTheme } from '@mui/material';
+import { useHistory } from '@docusaurus/router';
 
 function Home() {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up('md'));
   const bgImage = useBaseUrl('img/home-page/anim-bg.png');
   const bgImageAnimated = useBaseUrl('img/home-page/anim-blocks.webp');
+  const history = useHistory();
+  const mainnetUrl = useBaseUrl('mainnet-networks/overview');
+  const testnetUrl = useBaseUrl('testnet-networks/overview');
+
+  const handleMainnetClick = () => {
+    history.push(mainnetUrl);
+  };
+
+  const handleTestnetClick = () => {
+    history.push(testnetUrl);
+  };
 
   return (
     <Container maxWidth="lg" disableGutters>
@@ -88,18 +100,13 @@ function Home() {
             <Box display="flex" gap={2} pt={1} sx={{ flexDirection: { xs: 'column', md: 'row' } }}>
               <Button
                 variant="contained"
-                href={useBaseUrl('mainnet-networks/overview')}
+                onClick={handleMainnetClick}
                 endIcon={<FaArrowRight size={14} />}
                 size="large"
               >
                 Mainnet Networks
               </Button>
-              <Button
-                variant="outlined"
-                href={useBaseUrl('testnet-networks/overview')}
-                endIcon={<FaArrowRight size={14} />}
-                size="large"
-              >
+              <Button variant="outlined" onClick={handleTestnetClick} endIcon={<FaArrowRight size={14} />} size="large">
                 Testnet Networks
               </Button>
             </Box>
@@ -129,7 +136,7 @@ function Home() {
               borderColor="divider"
               sx={{
                 paddingY: { xs: 2, lg: 3 },
-                paddingX: { xs: 3, md: 0},
+                paddingX: { xs: 3, md: 0 },
               }}
             >
               <Box display="flex" pb={1} sx={{ maxWidth: { xs: '30%', md: 'unset' } }}>
