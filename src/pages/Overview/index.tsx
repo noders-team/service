@@ -19,6 +19,7 @@ function Overview({ scope }: Props): React.JSX.Element {
   const chainsUrl = useBaseUrl('chains.json');
   const networksImgUrl = useBaseUrl('/img/overview-page/networks.webp');
   const blockPulseImgUrl = useBaseUrl('/img/overview-page/blockpulse.webp');
+  const scopePrettyName = scope === 'mainnet' ? 'Mainnet' : 'Testnet';
 
   // TODO: enable
   const showBlockpulse = false;
@@ -54,7 +55,7 @@ function Overview({ scope }: Props): React.JSX.Element {
         }}
       >
         <Box display="flex" flexDirection="column" gap={2}>
-          <Typography variant="h3">Mainnet networks</Typography>
+          <Typography variant="h3">{scopePrettyName} networks</Typography>
           <Typography variant="body1">
             Our service is designed to empower developers and enthusiasts alike with detailed, step-by-step guides for
             running and maintaining nodes
