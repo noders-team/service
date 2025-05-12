@@ -199,6 +199,8 @@ export default function MuiThemeProvider(props) {
     root.style.setProperty('--ifm-code-background', theme.palette.background.paper);
     root.style.setProperty('--ifm-code-font-size', '95%');
 
+    root.style.setProperty('--ifm-toc-border-color', theme.palette.divider);
+
     if (colorMode === 'dark') {
       root.style.setProperty('--ifm-background-color', theme.palette.background.default);
       root.style.setProperty('--ifm-background-surface-color', theme.palette.background.default);

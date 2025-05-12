@@ -25,6 +25,21 @@ footer {
   display: none;
 }
 
+/* DISABLE PADDING BOTTOM */
+.padding-bottom--lg {
+  padding-bottom: 0 !important;
+}
+
+
+
+
+
+
+
+
+
+/* OLD STYLES */
+
 /* Image Styles */
 .diagram-image {
   border-radius: 8px;
