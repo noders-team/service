@@ -5,6 +5,9 @@ import { Chain } from '@/types/Chain';
 import chainService from '@/service/chainService';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Illustration from '@/components/Illustration';
+import SimpleCard from '@/components/SimpleCard';
+import { PiPlanetFill } from 'react-icons/pi';
+import { FaGithub, FaTelegram, FaXTwitter } from 'react-icons/fa6';
 
 type Props = {
   scope: string;
@@ -26,8 +29,12 @@ function Overview({ scope }: Props): React.JSX.Element {
       });
   }, []);
 
+  const handleSimpleCardClick = (url: string) => {
+    window.open(url, '_blank');
+  };
+
   return (
-    <Box display="flex" flexDirection="column">
+    <Box display="flex" flexDirection="column" pb={15}>
       <Box
         display="flex"
         flexDirection="column"
@@ -189,6 +196,75 @@ function Overview({ scope }: Props): React.JSX.Element {
               </Box>
             </Box>
           </Box>
+        </Box>
+      </Box>
+
+      <Box display="flex" flexDirection="column" pt={10}>
+        <Typography variant="h4" sx={{ fontSize: '32px', fontWeight: 500, lineHeight: '40px' }}>
+          Our social resources
+        </Typography>
+        <Typography variant="body1" sx={{ pt: 2 }}>
+          Official links of social networks of NODERS LLC
+        </Typography>
+        <Box
+          display="grid"
+          pt={4}
+          gap={2}
+          sx={{
+            gridTemplateColumns: {
+              xs: 'repeat(2, 1fr)',
+              sm: 'repeat(4, 1fr)',
+            },
+          }}
+        >
+          <SimpleCard
+            flexDirection="column"
+            cursor="pointer"
+            gap={3}
+            padding={3}
+            onClick={() => handleSimpleCardClick('https://noders.team')}
+          >
+            <PiPlanetFill size={32} opacity={0.2} />
+            <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
+              Website
+            </Typography>
+          </SimpleCard>
+          <SimpleCard
+            flexDirection="column"
+            cursor="pointer"
+            gap={3}
+            padding={3}
+            onClick={() => handleSimpleCardClick('https://github.com/noders-team')}
+          >
+            <FaGithub size={32} opacity={0.2} />
+            <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
+              GitHub
+            </Typography>
+          </SimpleCard>
+          <SimpleCard
+            flexDirection="column"
+            cursor="pointer"
+            gap={3}
+            padding={3}
+            onClick={() => handleSimpleCardClick('https://x.com/NODERS_TEAM')}
+          >
+            <FaXTwitter size={32} opacity={0.2} />
+            <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
+              X
+            </Typography>
+          </SimpleCard>
+          <SimpleCard
+            flexDirection="column"
+            cursor="pointer"
+            gap={3}
+            padding={3}
+            onClick={() => handleSimpleCardClick('https://t.me/nodersteam')}
+          >
+            <FaTelegram size={32} opacity={0.2} />
+            <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
+              Telegram
+            </Typography>
+          </SimpleCard>
         </Box>
       </Box>
     </Box>

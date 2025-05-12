@@ -163,7 +163,7 @@ export default function Footer() {
             </Typography>
             <Stack direction="row" pt={2} spacing={3}>
               <IconLink icon={FaXTwitter} size={24} href="https://x.com/NODERS_TEAM" title="X.com" />
-              <IconLink icon={FaTelegram} size={24} href="https://t.me/noders_team" title="Telegram" />
+              <IconLink icon={FaTelegram} size={24} href="https://t.me/nodersteam" title="Telegram" />
               <IconLink icon={FaGithub} size={24} href="https://github.com/noders-team" title="Github" />
             </Stack>
           </Grid>

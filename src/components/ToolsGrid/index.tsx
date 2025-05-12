@@ -36,14 +36,7 @@ function ToolCard({ icon: Icon, linkUrl, title }: ToolCardProps): React.ReactEle
   const isMobile = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   return (
     <Link to={linkUrl} style={{ textDecoration: 'none', color: 'inherit' }}>
-      <SimpleCard
-        flexDirection="column"
-        gap={3}
-        padding={isMobile ? 2 : 3}
-        borderRadius={2}
-        cursor="pointer"
-        height="100%"
-      >
+      <SimpleCard flexDirection="column" gap={3} padding={isMobile ? 2 : 3} cursor="pointer" height="100%">
         <Icon size={32} opacity={0.2} />
         <Box display="flex" justifyContent="space-between" alignItems="center">
           <Typography variant="subtitle1" sx={{ fontWeight: 600, lineHeight: 'normal' }}>

@@ -45,7 +45,13 @@ function ProductLinks({ explorerUrl, faucetUrl, appUrl, appImageUrl }: Props): R
       }}
     >
       {explorerUrl && (
-        <SimpleCard gap={3} alignItems="center" borderRadius={2} paddingRight={3} onClick={() => handleClick(explorerUrl)} cursor="pointer">
+        <SimpleCard
+          gap={3}
+          alignItems="center"
+          paddingRight={3}
+          onClick={() => handleClick(explorerUrl)}
+          cursor="pointer"
+        >
           <Box component="img" src={explorerImageUrl} alt="Explorer" width={120} height={120} />
           <Box display="flex" flexDirection="column" gap={1} flexGrow={1}>
             <Box display="flex" justifyContent="space-between" alignItems="center">
@@ -61,7 +67,13 @@ function ProductLinks({ explorerUrl, faucetUrl, appUrl, appImageUrl }: Props): R
         </SimpleCard>
       )}
       {faucetUrl && (
-        <SimpleCard gap={3} alignItems="center" borderRadius={2} paddingRight={3} onClick={() => handleClick(faucetUrl)} cursor="pointer">
+        <SimpleCard
+          gap={3}
+          alignItems="center"
+          paddingRight={3}
+          onClick={() => handleClick(faucetUrl)}
+          cursor="pointer"
+        >
           <Box component="img" src={faucetImageUrl} alt="Faucet" width={120} height={120} />
           <Box display="flex" flexDirection="column" gap={1} flexGrow={1}>
             <Box display="flex" justifyContent="space-between" alignItems="center">
@@ -77,7 +89,7 @@ function ProductLinks({ explorerUrl, faucetUrl, appUrl, appImageUrl }: Props): R
         </SimpleCard>
       )}
       {appUrl && (
-        <SimpleCard gap={3} alignItems="center" borderRadius={2} paddingRight={3} onClick={() => handleClick(appUrl)} cursor="pointer">
+        <SimpleCard gap={3} alignItems="center" paddingRight={3} onClick={() => handleClick(appUrl)} cursor="pointer">
           <Box component="img" src={hubAppImageUrl} alt="Community App" width={120} height={120} />
           <Box display="flex" flexDirection="column" gap={1} flexGrow={1}>
             <Box display="flex" justifyContent="space-between" alignItems="center">
