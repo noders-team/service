@@ -16,6 +16,7 @@ function readBlockchainConfig {
   RESTAKE_URL=$(grep -oE '^RESTAKE_URL=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   VALIDATOR_URL=$(grep -oE '^VALIDATOR_URL=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   EXPLORER_URL=$(grep -oE '^EXPLORER_URL=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  FAUCET_URL=$(grep -oE '^FAUCET_URL=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   APP_URL=$(grep -oE '^APP_URL=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   APP_IMAGE=$(grep -oE '^APP_IMAGE=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
 
@@ -68,6 +69,22 @@ function readBlockchainConfig {
   UPDATE_CLI_CHEATSHEET=$(grep -oE '^UPDATE_CLI_CHEATSHEET=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   UPDATE_ENDPOINTS=$(grep -oE '^UPDATE_ENDPOINTS=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   JRPC_SECTION=""
+
+  # Feature toggles
+  SHOW_INSTALLATION_GUIDE=$(grep -oE '^SHOW_INSTALLATION_GUIDE=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  SHOW_UPGRADE_GUIDE=$(grep -oE '^SHOW_UPGRADE_GUIDE=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  SHOW_GENESIS=$(grep -oE '^SHOW_GENESIS=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  SHOW_CLI=$(grep -oE '^SHOW_CLI=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  SHOW_ENDPOINTS=$(grep -oE '^SHOW_ENDPOINTS=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  SHOW_STATE_SYNC=$(grep -oE '^SHOW_STATE_SYNC=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  SHOW_SNAPSHOT=$(grep -oE '^SHOW_SNAPSHOT=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  SHOW_LIVE_PEERS=$(grep -oE '^SHOW_LIVE_PEERS=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  SHOW_SEED=$(grep -oE '^SHOW_SEED=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  SHOW_ADDRESS_BOOK=$(grep -oE '^SHOW_ADDRESS_BOOK=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  SHOW_EXPLORERS_LIST=$(grep -oE '^SHOW_EXPLORERS_LIST=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  SHOW_PUBLIC_ENDPOINTS=$(grep -oE '^SHOW_PUBLIC_ENDPOINTS=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  SHOW_USEFUL_TOOLS=$(grep -oE '^SHOW_USEFUL_TOOLS=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  SHOW_UPGRADE_WATCHER=$(grep -oE '^SHOW_UPGRADE_WATCHER=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
 }
 
 function enrichBlockchainConfig {
@@ -152,6 +169,7 @@ function replacePageVariables {
   sed -i '' "s|\[RESTAKE_URL\]|${escaped_restake_url}|g" "$1"
   sed -i '' "s|\[VALIDATOR_URL\]|${VALIDATOR_URL}|g" "$1"
   sed -i '' "s|\[EXPLORER_URL\]|${EXPLORER_URL}|g" "$1"
+  sed -i '' "s|\[FAUCET_URL\]|${FAUCET_URL}|g" "$1"
   sed -i '' "s|\[APP_URL\]|${APP_URL}|g" "$1"
   sed -i '' "s|\[APP_IMAGE\]|${APP_IMAGE}|g" "$1"
 
@@ -197,6 +215,22 @@ function replacePageVariables {
   sed -i '' "s@\[SNAP_ARCHIVE_DOWNLOAD_COMMAND\]@${SNAP_ARCHIVE_DOWNLOAD_COMMAND}@g" "$1"
   sed -i '' "s|\[LIVE_PEERS_RANDOM\]|${LIVE_PEERS_RANDOM}|g" "$1"
   sed -i '' "s|\[VERSION_HAND\]|${VERSION_HAND}|g" "$1"
+
+  # Feature toggles
+  sed -i '' "s|'\[SHOW_INSTALLATION_GUIDE\]'|${SHOW_INSTALLATION_GUIDE:-false}|g" "$1"
+  sed -i '' "s|'\[SHOW_UPGRADE_GUIDE\]'|${SHOW_UPGRADE_GUIDE:-false}|g" "$1"
+  sed -i '' "s|'\[SHOW_GENESIS\]'|${SHOW_GENESIS:-false}|g" "$1"
+  sed -i '' "s|'\[SHOW_CLI\]'|${SHOW_CLI:-false}|g" "$1"
+  sed -i '' "s|'\[SHOW_ENDPOINTS\]'|${SHOW_ENDPOINTS:-false}|g" "$1"
+  sed -i '' "s|'\[SHOW_STATE_SYNC\]'|${SHOW_STATE_SYNC:-false}|g" "$1"
+  sed -i '' "s|'\[SHOW_SNAPSHOT\]'|${SHOW_SNAPSHOT:-false}|g" "$1"
+  sed -i '' "s|'\[SHOW_LIVE_PEERS\]'|${SHOW_LIVE_PEERS:-false}|g" "$1"
+  sed -i '' "s|'\[SHOW_SEED\]'|${SHOW_SEED:-false}|g" "$1"
+  sed -i '' "s|'\[SHOW_ADDRESS_BOOK\]'|${SHOW_ADDRESS_BOOK:-false}|g" "$1"
+  sed -i '' "s|'\[SHOW_EXPLORERS_LIST\]'|${SHOW_EXPLORERS_LIST:-false}|g" "$1"
+  sed -i '' "s|'\[SHOW_PUBLIC_ENDPOINTS\]'|${SHOW_PUBLIC_ENDPOINTS:-false}|g" "$1"
+  sed -i '' "s|'\[SHOW_USEFUL_TOOLS\]'|${SHOW_USEFUL_TOOLS:-false}|g" "$1"
+  sed -i '' "s|'\[SHOW_UPGRADE_WATCHER\]'|${SHOW_UPGRADE_WATCHER:-false}|g" "$1"
 }
 
 #####################################################################################################################################################################
@@ -351,7 +385,7 @@ function updateEndpoints {
     echo "${CHAIN_PAGE_PATH}"
 
     if [ -n "${ENDPOINT_JRPC}" ]; then
-    
+
       JRPC_SECTION="
 ## JSON RPC
 \`\`\`bash

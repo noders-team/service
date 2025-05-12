@@ -6,13 +6,13 @@ import Typography from '@mui/material/Typography';
 import { PiArrowUpRightBold } from 'react-icons/pi';
 
 type Props = {
-  explorerUrl?: string;
-  faucetUrl?: string;
   appUrl?: string;
   appImageUrl?: string;
+  explorerUrl?: string;
+  faucetUrl?: string;
 };
 
-function ProductLinks({ explorerUrl, faucetUrl, appUrl, appImageUrl }: Props): React.JSX.Element {
+function ProductLinks({ appUrl, appImageUrl, explorerUrl, faucetUrl }: Props): React.JSX.Element {
   if (!explorerUrl && !faucetUrl && !appUrl) {
     return null;
   }

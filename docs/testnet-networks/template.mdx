@@ -4,7 +4,6 @@ hide_title: true
 hide_table_of_contents: false
 ---
 
-
 import ChainLayout from '@site/src/components/ChainLayout';
 import ChainHero from '@site/src/components/ChainHero';
 import ProductLinks from '@site/src/components/ProductLinks';
@@ -27,8 +26,29 @@ import ToolsGrid from '@site/src/components/ToolsGrid';
     discordUrl="[SOCIAL_DISCORD]"
   />
 
-  <ProductLinks explorerUrl="[EXPLORER_URL]" appUrl="[APP_URL]" appImageUrl="img/products/[APP_IMAGE]"/>
+  <ProductLinks
+    appUrl="[APP_URL]"
+    appImageUrl="img/products/[APP_IMAGE]"
+    explorerUrl="[EXPLORER_URL]"
+    faucetUrl="[FAUCET_URL]"
+  />
 
-  <ToolsGrid chainName="[CHAIN_SYSTEM_NAME]"/>
+  <ToolsGrid
+    chainName="[CHAIN_SYSTEM_NAME]"
+    showInstall={'[SHOW_INSTALLATION_GUIDE]'}
+    showUpgrade={'[SHOW_UPGRADE_GUIDE]'}
+    showGenesis={'[SHOW_GENESIS]'}
+    showCli={'[SHOW_CLI]'}
+    showEndpoints={'[SHOW_ENDPOINTS]'}
+    showStateSync={'[SHOW_STATE_SYNC]'}
+    showSnapshot={'[SHOW_SNAPSHOT]'}
+    showLivePeers={'[SHOW_LIVE_PEERS]'}
+    showSeed={'[SHOW_SEED]'}
+    showAddressBook={'[SHOW_ADDRESS_BOOK]'}
+    showExplorersList={'[SHOW_EXPLORERS_LIST]'}
+    showPublicEndpoints={'[SHOW_PUBLIC_ENDPOINTS]'}
+    showUsefulTools={'[SHOW_USEFUL_TOOLS]'}
+    showUpgradeWatcher={'[SHOW_UPGRADE_WATCHER]'}
+  />
 
 </ChainLayout>
