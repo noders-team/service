@@ -40,6 +40,8 @@ export default function NavBarLinks(props: any): React.JSX.Element {
           transition: (theme) => theme.transitions.create('all'),
           '&:hover': {
             opacity: 1,
+            color: 'primary.main',
+            cursor: 'pointer',
           },
         }}
         onClick={() => handleClick(mainnetHref)}
@@ -59,6 +61,8 @@ export default function NavBarLinks(props: any): React.JSX.Element {
           transition: (theme) => theme.transitions.create('all'),
           '&:hover': {
             opacity: 1,
+            color: 'primary.main',
+            cursor: 'pointer',
           },
         }}
         onClick={() => handleClick(testnetHref)}
