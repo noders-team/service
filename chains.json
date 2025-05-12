@@ -213,7 +213,7 @@
     "name": "zetachain",
     "pretty_name": "Zetachain",
     "chain_id": "zetachain_7000-1",
-    "logo_url": "img/zeta-icon.svg",
+    "logo_url": "img/zetachain-icon.svg",
     "scope": "mainnet"
   },
   {
@@ -388,7 +388,7 @@
     "name": "zetachain",
     "pretty_name": "Zetachain",
     "chain_id": "athens_7001-1",
-    "logo_url": "img/zeta-icon.svg",
+    "logo_url": "img/zetachain-icon.svg",
     "scope": "testnet"
   }
 ]
