@@ -5,7 +5,7 @@ CHAIN_ICON="desmos-icon.svg"
 CHAIN_BACKGROUND_COLOR=""
 
 # Blockchain
-CHAIN_ID="auto"\
+CHAIN_ID="auto"
 CHAIN_DENOM="udsm"
 CHAIN_FEES="20000"
 

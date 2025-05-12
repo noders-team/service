@@ -8,7 +8,7 @@ sidebar_position: 3
   # Upgrade
 </div>
 
-###### Chain ID: `auto` | Current Node Version: `auto`
+###### Chain ID: `router_9600-1` | Current Node Version: `v1.6.0`
 
 # Clone Router repository
 
@@ -17,7 +17,7 @@ cd $HOME
 rm -rf router-protocol
 git clone https://github.com/router-protocol.git
 cd router-protocol
-git checkout auto
+git checkout v1.6.0
 ```
 
 # Build binaries
@@ -29,8 +29,8 @@ make build
 # Prepare binaries for Cosmovisor
 
 ```js
-mkdir -p ~/.routerd/cosmovisor/upgrades/auto/bin
-mv build/routerd ~/.routerd/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.routerd/cosmovisor/upgrades/v1.6.0/bin
+mv build/routerd ~/.routerd/cosmovisor/upgrades/v1.6.0/bin/
 rm -rf build
 ```
 
@@ -43,7 +43,7 @@ cd $HOME
 rm -rf router-protocol
 git clone https://github.com/router-protocol.git
 cd router-protocol
-git checkout auto
+git checkout v1.6.0
 ```
 
 ## Build binaries
