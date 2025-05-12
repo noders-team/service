@@ -6,8 +6,9 @@ import chainService from '@/service/chainService';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Illustration from '@/components/Illustration';
 import SimpleCard from '@/components/SimpleCard';
-import { PiPlanetFill } from 'react-icons/pi';
+import { PiArrowUpRightBold, PiPlanetFill } from 'react-icons/pi';
 import { FaGithub, FaTelegram, FaXTwitter } from 'react-icons/fa6';
+import Button from '@mui/material/Button';
 
 type Props = {
   scope: string;
@@ -16,6 +17,7 @@ type Props = {
 function Overview({ scope }: Props): React.JSX.Element {
   const [chains, setChains] = React.useState<Chain[]>([]);
   const chainsUrl = useBaseUrl('chains.json');
+  const blockPulseImgUrl = useBaseUrl('/img/overview-page/blockpulse.webp');
 
   React.useEffect(() => {
     const promise =
@@ -35,6 +37,7 @@ function Overview({ scope }: Props): React.JSX.Element {
 
   return (
     <Box display="flex" flexDirection="column" pb={15}>
+      {/* OVERVIEW HERO */}
       <Box
         display="flex"
         flexDirection="column"
@@ -76,6 +79,7 @@ function Overview({ scope }: Props): React.JSX.Element {
         </Box>
       </Box>
 
+      {/* OUR SERVICES */}
       <Box display="flex" flexDirection="column" pt={6} gap={3}>
         <Typography variant="h4" sx={{ fontSize: '32px', fontWeight: 500, lineHeight: '40px' }}>
           Our service includes
@@ -199,6 +203,33 @@ function Overview({ scope }: Props): React.JSX.Element {
         </Box>
       </Box>
 
+      {/* OUR PRODUCTS */}
+      <Box display="flex" mt={3} bgcolor="background.paper" borderRadius={6} minHeight="330px">
+        <Box display="flex" flexDirection="column" justifyContent="space-between" padding={5}>
+          <Box display="flex" flexDirection="column" gap={2}>
+            <Typography variant="overline" sx={{ fontWeight: 600 }}>
+              Our Products
+            </Typography>
+            <Typography variant="h4" sx={{ fontSize: '32px', fontWeight: 500 }}>
+              Blockpulse
+            </Typography>
+            <Typography variant="subtitle1" sx={{ opacity: 0.6 }}>
+              A powerful and user-friendly blockchain explorer & analytics tool
+            </Typography>
+          </Box>
+          <Button
+            variant="contained"
+            size="large"
+            sx={{ alignSelf: 'flex-start' }}
+            endIcon={<PiArrowUpRightBold size={24} opacity={0.2} />}
+          >
+            Explore networks
+          </Button>
+        </Box>
+        <Box component="img" src={blockPulseImgUrl} alt="Blockpulse" />
+      </Box>
+
+      {/* SOCIAL RESOURCES */}
       <Box display="flex" flexDirection="column" pt={10}>
         <Typography variant="h4" sx={{ fontSize: '32px', fontWeight: 500, lineHeight: '40px' }}>
           Our social resources
