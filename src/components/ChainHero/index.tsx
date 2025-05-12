@@ -84,16 +84,10 @@ function ChainHero({
         </Box>
 
         <Box display="flex" alignItems="center" gap={2}>
-          {websiteUrl && (
-            <IconLink icon={<FaGlobe />} href={websiteUrl} width={20} height={20} target="_blank" title="Website" />
-          )}
-          {githubUrl && (
-            <IconLink icon={<FaGithub />} href={githubUrl} width={24} height={24} target="_blank" title="Github" />
-          )}
-          {xUrl && <IconLink icon={<FaXTwitter />} href={xUrl} width={24} height={24} target="_blank" title="X" />}
-          {discordUrl && (
-            <IconLink icon={<FaDiscord />} href={discordUrl} width={24} height={24} target="_blank" title="Discord" />
-          )}
+          {websiteUrl && <IconLink icon={FaGlobe} href={websiteUrl} size={24} opacity={1} title="Website" />}
+          {githubUrl && <IconLink icon={FaGithub} href={githubUrl} size={24} opacity={1} title="Github" />}
+          {xUrl && <IconLink icon={FaXTwitter} href={xUrl} size={24} opacity={1} title="X" />}
+          {discordUrl && <IconLink icon={FaDiscord} href={discordUrl} size={24} opacity={1} title="Discord" />}
         </Box>
       </Box>
 

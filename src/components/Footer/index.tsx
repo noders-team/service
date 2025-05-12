@@ -9,14 +9,15 @@ import Grid from '@mui/material/Grid';
 import { FaGithub, FaTelegram, FaXTwitter } from 'react-icons/fa6';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import SvgIcon from '@mui/material/SvgIcon';
+import IconLink from '@/components/IconLink';
 
 const ArrowIcon = () => (
   <SvgIcon sx={{ fontSize: '24px', ml: 1 }}>
-    <path 
-      fillRule="evenodd" 
-      clipRule="evenodd" 
-      d="M10.166 9.88298V10.55H11.5V9.88298V5.16702C11.5 4.79863 11.2014 4.5 10.833 4.5H6.11703H5.45002V5.83403H6.11703H9.22266L4.97165 10.085L4.5 10.5567L5.4433 11.5L5.91496 11.0283L10.166 6.77732V9.88298Z" 
-      fill="currentColor" 
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M10.166 9.88298V10.55H11.5V9.88298V5.16702C11.5 4.79863 11.2014 4.5 10.833 4.5H6.11703H5.45002V5.83403H6.11703H9.22266L4.97165 10.085L4.5 10.5567L5.4433 11.5L5.91496 11.0283L10.166 6.77732V9.88298Z"
+      fill="currentColor"
       fillOpacity="0.6"
     />
   </SvgIcon>
@@ -161,16 +162,9 @@ export default function Footer() {
               Socials
             </Typography>
             <Stack direction="row" pt={2} spacing={3}>
-              <Link href="https://x.com/NODERS_TEAM" target="_blank" aria-label="Twitter" sx={{color: 'inherit', opacity: 0.6}}>
-                <FaXTwitter size={24}/>
-              </Link>
-              <Link href="https://t.me/noders_team" target="_blank" aria-label="Telegram Channel"
-                    sx={{color: 'inherit', opacity: 0.6}}>
-                <FaTelegram size={24}/>
-              </Link>
-              <Link href="https://github.com/noders-team" target="_blank" aria-label="GitHub" sx={{color: 'inherit', opacity: 0.6}}>
-                <FaGithub size={24}/>
-              </Link>
+              <IconLink icon={FaXTwitter} size={24} href="https://x.com/NODERS_TEAM" title="X.com" />
+              <IconLink icon={FaTelegram} size={24} href="https://t.me/noders_team" title="Telegram" />
+              <IconLink icon={FaGithub} size={24} href="https://github.com/noders-team" title="Github" />
             </Stack>
           </Grid>
         </Grid>

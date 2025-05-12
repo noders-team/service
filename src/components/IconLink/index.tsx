@@ -3,22 +3,20 @@ import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 
 type Props = {
-  icon: React.ReactNode;
+  icon: React.ElementType;
   href: string;
-  width?: number | string;
-  height?: number | string;
+  size?: number | string;
   target?: string;
   title?: string;
+  opacity?: number;
 }
 
-export default function IconLink({ icon, href, width, height, target, title }: Props): React.JSX.Element {
+export default function IconLink({ icon: IconComponent, href, size, target, title, opacity }: Props): React.JSX.Element {
   const iconStyle = {
     color: 'inherit',
-    opacity: 0.6,
-    width: width || '40px',
-    height: height || '40px',
-    display: 'flex',
-    alignItems: 'center',
+    opacity: opacity || 0.6,
+    width: size,
+    height: size,
     transition: 'all 0.2s',
     '&:hover': {
       opacity: 1,
@@ -34,7 +32,12 @@ export default function IconLink({ icon, href, width, height, target, title }: P
       title={title}
       sx={iconStyle}
     >
-      {icon}
+      <Box
+        component={IconComponent}
+        display="block"
+        width="100%"
+        height="100%"
+      />
     </Box>
   );
 }
