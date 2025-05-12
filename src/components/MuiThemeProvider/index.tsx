@@ -45,6 +45,7 @@ export default function MuiThemeProvider(props) {
       h5: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
       h6: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
       subtitle2: { fontSize: '14px', fontWeight: 600 },
+      overline: { fontWeight: 600, opacity: 0.6 },
     },
     components: {
       MuiButton: {
