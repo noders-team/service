@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Router"
 CHAIN_SYSTEM_NAME="router"
+CHAIN_ICON="router-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# The Router blockchain is a decentralized network built using the Cosmos SDK.
-
-The Router Chain is a layer 1 blockchain that leverages tendermint’s Byzantine Fault Tolerant (BFT) consensus engine
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="route"
 CHAIN_FEES="100000000000000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="routerd"
 DAEMON_SERVICE="router.service"
 DAEMON_HOME="~/.routerd"

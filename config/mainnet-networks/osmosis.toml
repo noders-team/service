@@ -1,21 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Osmosis"
 CHAIN_SYSTEM_NAME="osmosis"
+CHAIN_ICON="osmosis-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Osmosis: DeFi Innovation on Cosmos
-
-Osmosis is a leading decentralized exchange (DEX) and automated market maker (AMM) on the Cosmos blockchain, revolutionizing DeFi with unparalleled customization and interoperability. It enables advanced DeFi features for liquidity providers and traders, fostering cross-chain liquidity and novel financial products. With customizable AMM pools, Inter-Blockchain Communication (IBC) protocol integration, superfluid staking, and community-driven governance, Osmosis is at the forefront of DeFi innovation, offering dynamic yield farming and sophisticated trading strategies within the Cosmos ecosystem.
-
-Discover more about Osmosis and its innovative features by visiting their official site.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="uosmo"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="osmosisd"
 DAEMON_SERVICE="osmosisd.service"
 DAEMON_HOME="~/.osmosisd"

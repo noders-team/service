@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Galactica"
 CHAIN_SYSTEM_NAME="galactica"
+CHAIN_ICON="galactica-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Galactica: We need to solve Identity, Compliance & Privacy
-
-Galactica Network presents itself as a pioneering platform in the Web3 space, aiming to establish the first on-chain nation-state. It's focused on fostering Sybil-resistant, reputation-based systems and decentralized societies (DeSoc), enhancing DeFi and DAOs for a more accountable and compliant future. Galactica emphasizes a community-driven approach, seeking builders to create a better future through innovative DeFi solutions, DAO structures, and a comprehensive DeSoc stack
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="agnet"
 CHAIN_FEES="300000000000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="galacticad"
 DAEMON_SERVICE="galactica.service"
 DAEMON_HOME="~/.galactica"

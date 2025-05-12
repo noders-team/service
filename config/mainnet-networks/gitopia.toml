@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Gitopia"
 CHAIN_SYSTEM_NAME="gitopia"
+CHAIN_ICON="gitopia-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Gitopia: Empowering Developer Collaboration
-
-Gitopia leverages blockchain to offer a decentralized code hosting platform, ensuring transparency, security, and immutability. It addresses centralization issues, promoting open-source development and community-driven projects. Features include decentralized governance, collaboration tools, and incentive mechanisms to reward contributions. Ideal for projects valuing transparency and community involvement, Gitopia fosters a secure, collaborative environment for developers globally.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="ulore"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="gitopiad"
 DAEMON_SERVICE="gitopiad.service"
 DAEMON_HOME="~/.gitopia"

@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Rebus"
 CHAIN_SYSTEM_NAME="rebus"
+CHAIN_ICON="rebus-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Rebuschain: Bridging TradFi and DeFi
-
-Rebuschain innovatively connects traditional finance with decentralized finance, enabling digitization and free movement of financial assets across blockchain ecosystems. It emphasizes interoperability, asset tokenization, decentralized governance, compliance, security, and cross-chain liquidity. This facilitates DeFi integration for traditional assets, cross-chain financial services, and enhanced market access, aiming for a more inclusive and interconnected financial ecosystem, fostering new opportunities in asset management and financial services.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="arebus"
 CHAIN_FEES="300000000000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="rebusd"
 DAEMON_SERVICE="rebusd.service"
 DAEMON_HOME="~/.rebusd"

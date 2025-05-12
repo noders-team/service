@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Pell"
 CHAIN_SYSTEM_NAME="pell"
+CHAIN_ICON="pell-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Pell ｜ BTC Restaking
-
-The First & Omnichain BTC Restaking Network, extending BTCFi into the cryptoeconomic security domain and fully unlocking Bitcoin's potential.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="apell"
 CHAIN_FEES="300000000000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="pellcored"
 DAEMON_SERVICE="pell.service"
 DAEMON_HOME="~/.pellcored"

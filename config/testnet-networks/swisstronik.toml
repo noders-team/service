@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Swisstronik"
 CHAIN_SYSTEM_NAME="swisstronik"
+CHAIN_ICON="swisstronik-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Swisstronik: Pioneering the Fusion of Electronics and Blockchain
-
-Swisstronik emerges as a trailblazer at the intersection of electronics and blockchain technology, offering innovative solutions that redefine security, transparency, and efficiency in electronic transactions and operations. By harmoniously integrating cutting-edge electronic technologies with the immutable security of blockchain, Swisstronik is setting new standards for the digital era, ensuring that every transaction and operation benefits from unparalleled security and reliability. This pioneering approach not only enhances the functionality and trustworthiness of electronic systems but also opens up new avenues for the application of blockchain technology in the electronics industry.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="uswtr"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="swisstronikd"
 DAEMON_SERVICE="swisstronik.service"
 DAEMON_HOME="~/.swisstronik"

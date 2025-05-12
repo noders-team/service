@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Zetachain"
 CHAIN_SYSTEM_NAME="zetachain"
+CHAIN_ICON="zetachain-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# ZetaChain: Unifying Chains for a Connected Blockchain World
-
-ZetaChain aims to revolutionize the blockchain landscape by offering a truly interoperable platform that connects disparate blockchain networks, enabling seamless communication and transactions across different ecosystems. As a multi-chain protocol, ZetaChain facilitates the transfer of data and value between all blockchains, whether they are public, private, or consortium, without requiring intermediaries. This open infrastructure supports smart contracts, allowing developers to build applications that can interact with any blockchain from a single platform. ZetaChain's innovative approach not only enhances efficiency and scalability but also opens up new possibilities for decentralized applications, fostering a more integrated and collaborative blockchain environment.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="azeta"
 CHAIN_FEES="300000000000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="zetacored"
 DAEMON_SERVICE="zetacore.service"
 DAEMON_HOME="~/.zetacored"

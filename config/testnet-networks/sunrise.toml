@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Sunrise"
 CHAIN_SYSTEM_NAME="sunrise"
+CHAIN_ICON="sunrise-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION=""" # Sunrise
-
-Sunrise is a specialized Data Availability Layer for Proof of Liquidity.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="uvrise"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="sunrised"
 DAEMON_SERVICE="sunrise.service"
 DAEMON_HOME="~/.sunrise"

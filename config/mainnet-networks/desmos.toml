@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Desmos"
 CHAIN_SYSTEM_NAME="desmos"
-CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Desmos: Empowering Decentralized Social Networking
+CHAIN_ICON="desmos-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
 
-Desmos revolutionizes social media, focusing on user empowerment, data sovereignty, and censorship resistance. It features decentralized identities for user privacy, content monetization through cryptocurrencies, and community-driven governance. Ensuring interoperability with other DApps, Desmos fosters an open ecosystem for diverse social interactions, challenging traditional social platforms by prioritizing privacy, freedom of expression, and direct creator compensation.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
+# Blockchain
+CHAIN_ID="auto"\
 CHAIN_DENOM="udsm"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="desmos"
 DAEMON_SERVICE="desmos.service"
 DAEMON_HOME="~/.desmos"

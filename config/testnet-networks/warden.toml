@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Warden"
 CHAIN_SYSTEM_NAME="warden"
+CHAIN_ICON="warden-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Warden Protocol: Enhancing Security in DeFi
-
-Warden Protocol stands as a beacon of innovation in the decentralized finance (DeFi) landscape, focusing on bolstering security measures for blockchain transactions and smart contracts. Aimed at mitigating the risks associated with DeFi operations, Warden Protocol introduces a suite of security tools and services designed to protect users and developers from vulnerabilities, hacks, and financial losses.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="uward"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="wardend"
 DAEMON_SERVICE="warden.service"
 DAEMON_HOME="~/.warden"

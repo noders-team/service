@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Kopi"
 CHAIN_SYSTEM_NAME="kopi"
+CHAIN_ICON="kopi-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION=""" # Kopi
-
-Kopi is the latest project in DeFi and offers a decentralized exchange as well as its own supply managed coins (kCoins).
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="ukopi"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="uxkp"
 DAEMON_SERVICE="kopi.service"
 DAEMON_HOME="~/.kopid"

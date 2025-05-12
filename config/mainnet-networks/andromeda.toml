@@ -1,19 +1,17 @@
-# Blockchain
+# App
 CHAIN_NAME="Andromeda"
 CHAIN_SYSTEM_NAME="andromeda"
+CHAIN_ICON="andromeda-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Andromeda Protocol: Unveiling the aOS
-
-The Andromeda Protocol heralds a new era in decentralized technology with its Andromeda Operating System (aOS), the first decentralized, on-chain operating system. It facilitates seamless development across blockchains, offering a unique suite of Web3 tools and utilities. Key features include multi-chain support, IBC for easy data transport, accessible tools for creators, rapid development with Andromeda Digital Objects (ADOs), and extensive integration with major blockchain platforms. Andromeda aims to enhance Web3 accessibility, efficiency, and scalability, fostering a rich ecosystem for developers and creators globally.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
+CHAIN_DENOM_PRETTY="ANDR"
 CHAIN_DENOM="uandr"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="andromedad"
 DAEMON_SERVICE="andromedad.service"
 DAEMON_HOME="~/.andromeda"

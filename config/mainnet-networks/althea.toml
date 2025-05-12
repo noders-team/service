@@ -1,16 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Althea"
 CHAIN_SYSTEM_NAME="althea"
-CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Althea L1 is a high-availability Hybrid EVM blockchain purpose-built for networked infrastructure and connectivity.
-"""
-[CHAIN_DESCRIPTION_END]
+CHAIN_ICON="althea-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
 
+# Blockchain
+CHAIN_ID="auto"
 CHAIN_DENOM="aalthea"
 CHAIN_FEES="300000000000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="althea"
 DAEMON_SERVICE="althea.service"
 DAEMON_HOME="~/.althea"

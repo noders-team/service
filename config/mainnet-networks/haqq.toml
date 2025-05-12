@@ -1,20 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Haqq"
 CHAIN_SYSTEM_NAME="haqq"
+CHAIN_ICON="haqq-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""
-# IslamicCoin: A Shariah-Compliant Digital Currency
-
-IslamicCoin is designed for the Islamic community, ensuring Shariah compliance, promoting ethical investments, and supporting financial inclusion. It leverages blockchain for transparency and security, incorporates charitable mechanisms for Zakat and Sadaqah, and facilitates investments with a positive social impact. IslamicCoin aims to bridge traditional Islamic finance with modern digital currencies, offering a platform for global accessibility and ethical financial practices, appealing to Muslims and ethical investors alike.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="aISLM"
 CHAIN_FEES="300000000000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="haqqd"
 DAEMON_SERVICE="haqqd.service"
 DAEMON_HOME="~/.haqqd"

@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Empeiria"
 CHAIN_SYSTEM_NAME="empeiria"
+CHAIN_ICON="empeiria-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION=""" # Empeiria
-
-Empeiria is the first End-to-End Verifiable Data Infrastructure (EVDI). It enables seamless web3 adoption through one-click deployment, empowering organizations with the data of the future.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="uempe"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="emped"
 DAEMON_SERVICE="empeiria.service"
 DAEMON_HOME="~/.empe-chain"

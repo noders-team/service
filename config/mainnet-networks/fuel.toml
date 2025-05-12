@@ -1,18 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Fuel"
 CHAIN_SYSTEM_NAME="fuel"
+CHAIN_ICON="fuel-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Fuel
-Fuel addresses a creeping centralization infecting the blockchain ecosystem, igniting a high-throughput architecture built for mass adoption, retaining low node requirements.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="fuel"
 CHAIN_FEES="10"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="fuelsequencerd"
 DAEMON_SERVICE="fuel.service"
 DAEMON_HOME="~/.fuelsequencer"

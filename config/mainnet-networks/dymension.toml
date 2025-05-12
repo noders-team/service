@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Dymension"
 CHAIN_SYSTEM_NAME="dymension"
+CHAIN_ICON="dymension-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Dymension: Scaling and Interoperability for Blockchains
-
-Dymension introduces a Layer 2 scaling solution using rollup technology to boost Layer 1 blockchains like Ethereum. It emphasizes scalability, interoperability, reduced transaction costs, enhanced security, and developer support. Ideal for high-throughput applications in DeFi, gaming, and NFTs, Dymension facilitates efficient, cost-effective transactions and cross-chain interactions, advancing the blockchain ecosystem towards greater adoption and innovation.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="adym"
 CHAIN_FEES="300000000000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="dymd"
 DAEMON_SERVICE="dymd.service"
 DAEMON_HOME="~/.dymension"

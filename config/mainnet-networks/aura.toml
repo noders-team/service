@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Aura"
 CHAIN_SYSTEM_NAME="aura"
+CHAIN_ICON="aura-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Aura Network: Accelerating Global NFT Adoption
-
-Aura Network, a Layer-1 blockchain, focuses on scalability, interoperability, and user experience to drive NFT adoption. It offers high transaction efficiency, seamless cross-chain communication, developer-friendly tools, intuitive user interfaces, and an energy-efficient consensus mechanism. Ideal for dApps, NFT marketplaces, gaming, and social media, Aura Network aims to enhance blockchain accessibility and foster a sustainable, interconnected digital ecosystem.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="uaura"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="aurad"
 DAEMON_SERVICE="aurad.service"
 DAEMON_HOME="~/.aura"

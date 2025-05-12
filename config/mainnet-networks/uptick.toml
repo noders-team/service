@@ -1,21 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Uptick"
 CHAIN_SYSTEM_NAME="uptick"
+CHAIN_ICON="uptick-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Uptick Project: Revolutionizing Digital Collectibles
-
-The Uptick Project leverages blockchain to transform digital collectibles and NFTs, offering a secure and transparent platform for artists, creators, and collectors. Key features include a comprehensive NFT marketplace, intuitive creator tools for minting NFTs, decentralized operations for enhanced security, cross-chain functionality for broad accessibility, and a strong focus on community engagement through social features and collaboration tools. Uptick is redefining digital ownership and creativity, bridging diverse blockchain networks to enrich the digital art, gaming, and entertainment sectors.
-
-Explore the future of digital collectibles with Uptick Project.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="auptick"
 CHAIN_FEES="300000000000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="uptickd"
 DAEMON_SERVICE="uptickd.service"
 DAEMON_HOME="~/.uptickd"

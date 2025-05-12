@@ -1,22 +1,17 @@
-# Blockchain
+# App
 CHAIN_NAME="Jackal"
 CHAIN_SYSTEM_NAME="jackal"
+CHAIN_ICON="jackal-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
 VERSION_HAND="v3.2.1"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Jackal Protocol: Pioneering Decentralized Data Storage
-
-Jackal Protocol introduces a decentralized file storage solution, enhancing security, efficiency, and cost-effectiveness. It emphasizes privacy, data sovereignty, and global access, decentralizing storage across numerous nodes for enhanced security and redundancy. Features include advanced encryption for privacy, reduced costs by utilizing unused storage space, scalability, and interoperability with various blockchain networks. Jackal Protocol supports a wide range of applications, including secure data backup, decentralized web hosting, and content delivery, marking a significant shift towards a more secure, user-controlled internet.
-
-Explore Jackal Protocol's vision for a decentralized web.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="ujckl"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="canined"
 DAEMON_SERVICE="canined.service"
 DAEMON_HOME="~/.canine"

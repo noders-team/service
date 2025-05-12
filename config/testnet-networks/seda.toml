@@ -1,21 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Seda"
 CHAIN_SYSTEM_NAME="seda"
+CHAIN_ICON="seda-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# SEDA: Simplifying Decentralized Finance
-
-SEDA is at the forefront of the decentralized finance revolution, offering a comprehensive platform designed to democratize access to financial services. By leveraging blockchain technology, SEDA introduces a transparent, secure, and accessible ecosystem where users can engage in lending, borrowing, and trading without the need for traditional financial intermediaries.
-
-This platform is built with the user in mind, featuring an intuitive interface that makes navigating the complexities of DeFi straightforward. SEDA's innovative protocols ensure high liquidity, low slippage, and competitive yields across a variety of digital assets.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="aseda"
 CHAIN_FEES="300000000000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="sedad"
 DAEMON_SERVICE="seda.service"
 DAEMON_HOME="~/.sedad"

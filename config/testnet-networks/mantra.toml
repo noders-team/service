@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Mantra"
 CHAIN_SYSTEM_NAME="mantra"
+CHAIN_ICON="mantra-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION=""" (PRIVATE TESTNET) # Mantra Chain: The Gateway for Regulated Real-World Asset Tokenization
-
-Mantra Chain emerges as a pioneering Layer 1 blockchain, strategically crafted to bridge traditional finance (TradFi) and decentralized finance (DeFi). Its foundation rests on a solid infrastructure built for the tokenization of real-world assets (RWAs), ensuring adherence to regulatory requirements essential for institutional trust and security. This platform serves as a compliant framework that empowers institutions, businesses, developers, and users to seamlessly create, trade, and manage RWAs at the protocol level.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="uom"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="mantrachaind"
 DAEMON_SERVICE="mantrachaind.service"
 DAEMON_HOME="~/.mantrachaind"

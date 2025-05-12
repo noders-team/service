@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="CrossFI"
 CHAIN_SYSTEM_NAME="crossfi"
+CHAIN_ICON="crossfi-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# CrossFi: Pioneering Cross-Chain Finance for Universal Accessibility
-
-CrossFi leverages cutting-edge blockchain technology to facilitate seamless cross-chain financial transactions, enhancing interoperability and accessibility across diverse blockchain networks. It aims to solve the prevalent issues of liquidity fragmentation and high transaction costs in decentralized finance (DeFi) by enabling efficient asset transfers and interactions between different blockchains. CrossFi's innovative approach not only broadens the scope of DeFi applications but also ensures that users enjoy a unified, cost-effective, and transparent financial ecosystem. With its commitment to removing barriers between isolated blockchain networks, CrossFi is setting new standards for a truly interconnected and inclusive digital finance landscape.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="mpx"
 CHAIN_FEES="300000000000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="crossfid"
 DAEMON_SERVICE="crossfi.service"
 DAEMON_HOME="~/.mineplex-chain"

@@ -1,21 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Kyve"
 CHAIN_SYSTEM_NAME="kyve"
+CHAIN_ICON="kyve-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# KYVE Network: Revolutionizing Blockchain Data Integrity
-
-KYVE Network transforms data storage and validation across blockchains, ensuring data remains unchanged and accessible. It emphasizes decentralized storage, accurate data validation, interoperability, customizable data pools, and a token-based incentive mechanism. KYVE supports diverse applications, from enhancing blockchain scalability to enabling secure cross-chain bridges, making it pivotal for future decentralized data ecosystems.
-
-Discover how KYVE is shaping the future of data integrity on the blockchain.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="ukyve"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="kyved"
 DAEMON_SERVICE="kyved.service"
 DAEMON_HOME="~/.kyve"

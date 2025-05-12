@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Airchains"
 CHAIN_SYSTEM_NAME="airchains"
+CHAIN_ICON="airchains-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION=""" # Airchains
-
-Airchains is a platform that provides tools for creating modular blockchain solutions. It enables developers to quickly deploy blockchains with integration across various networks, enhancing interoperability and scalability. The platform offers automated deployment processes, chain and bridge management, and supports various protocols and standards. Airchains aims to reduce complexity and accelerate the time to market for blockchain applications. For more detailed information, visit Airchains.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="uamf"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="junctiond"
 DAEMON_SERVICE="junctiond.service"
 DAEMON_HOME="~/.junction"

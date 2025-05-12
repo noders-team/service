@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Side"
 CHAIN_SYSTEM_NAME="side"
+CHAIN_ICON="side-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Side Protocol: Revolutionizing Web3 Exchanges
-
-Side Protocol emerges as a pivotal exchange layer for Web3, aiming to redefine decentralized finance (DeFi) by ensuring secure, transparent, and efficient cryptocurrency transactions. Embracing user-centric and developer-friendly approaches, it offers a robust platform that simplifies DeFi integration and usage. Through its commitment to innovation and reliability, Side Protocol is set to empower the digital asset space, facilitating a seamless exchange experience across the Web3 ecosystem.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="uside"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="sided"
 DAEMON_SERVICE="sided.service"
 DAEMON_HOME="~/.side"

@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Story"
 CHAIN_SYSTEM_NAME="story"
+CHAIN_ICON="story-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="devnet-1"
-VERSION="v1.1.0"
-CHAIN_DESCRIPTION=""" # Story Protocol
-
-Story is the World’s IP Blockchain, onramping Programmable IP to power the next generation of AI, DeFi, and consumer applications.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="aip"
 CHAIN_FEES="300000000000"
 
 # Binary
+VERSION="v1.1.0"
 DAEMON_NAME="story"
 DAEMON_SERVICE="story.service"
 DAEMON_HOME="~/.story"

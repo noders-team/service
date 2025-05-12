@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="ZeroGravity"
 CHAIN_SYSTEM_NAME="og"
+CHAIN_ICON="og-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION=""" # ZeroGravity: the first data availability system with a built-in general purpose storage layer that is super scalable and decentralized.
-
-The scalability of 0G hinges on the idea of separating the workflow of data availability into data publishing lane and data storage lane. Large volume of data transfers happen on the data storage lane that is supported by the storage layer which achieves the horizontal scalability through well designed partitioning, while the data publishing lane guarantees the data availability property through consensus of data availability sampling which only requires tiny data flowing through the consensus protocol to avoid the broadcasting bottleneck. Data storage is an integral part of data availability because it must answer the question of where the data is published.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="ua0gi"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="0gchaind"
 DAEMON_HOME="~/.0gchain"
 

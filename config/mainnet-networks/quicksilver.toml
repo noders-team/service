@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Quicksilver"
 CHAIN_SYSTEM_NAME="quicksilver"
+CHAIN_ICON="quicksilver-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Quicksilver: Enhancing DeFi via Liquid Staking on Cosmos
-
-Quicksilver introduces liquid staking to the Cosmos ecosystem, unlocking liquidity for staked assets while maintaining network security participation. It features liquid staking derivatives, cross-chain functionality through the IBC protocol, decentralized governance, high security, and yield optimization. This protocol enables greater capital efficiency and a vibrant DeFi ecosystem, offering opportunities for lending, borrowing, and trading staked assets across chains, thus innovating within DeFi and Cosmos.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="uqck"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="quicksilverd"
 DAEMON_SERVICE="quicksilverd.service"
 DAEMON_HOME="~/.quicksilverd"

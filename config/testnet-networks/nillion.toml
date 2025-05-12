@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Nillion"
 CHAIN_SYSTEM_NAME="nillion"
+CHAIN_ICON="nillion-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Nillion
-
-Nillion is a decentralized privacy-preserving computation network that enables secure data processing and storage without exposing sensitive information.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="unil"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="nilliond"
 DAEMON_SERVICE="nillion.service"
 DAEMON_HOME="~/.nilliond"

@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="XRPL EVM"
 CHAIN_SYSTEM_NAME="xrp"
+CHAIN_ICON="xrp-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION=""" # XRPL EVM
-
-Sidechain is a fast and secure sidechain connected to XRP Ledger via an Axelar bridge. Powered by eXRP as its native token, it offers low-cost transactions and impressive speed.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="apoa"
 CHAIN_FEES="300000000000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="exrpd"
 DAEMON_SERVICE="xrp.service"
 DAEMON_HOME="~/.exrpd"

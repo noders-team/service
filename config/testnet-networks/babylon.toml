@@ -1,17 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Babylon"
 CHAIN_SYSTEM_NAME="babylon"
+CHAIN_ICON="babylon-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="bbn-test-5"
-VERSION="auto"
-CHAIN_DESCRIPTION=""" # Babylon is building native use-cases for Bitcoin! Stake your BTC to secure decentralized networks and receive rewards—all while maintaining self-custody.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="ubbn"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="babylond"
 DAEMON_SERVICE="babylon.service"
 DAEMON_HOME="~/.babylond"

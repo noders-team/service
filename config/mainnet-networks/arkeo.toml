@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Arkeo"
 CHAIN_SYSTEM_NAME="arkeo"
+CHAIN_ICON="arkeo-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION=""" # Arkeo
-
-Arkeo was created to provide decentralized applications with increased development velocity, censorship-resistance, and most importantly to be a needed tool in fully decentralizing the UI layer of the web3 stack, all while reducing reliance on centralized data sources. In short, Arkeo is a free-market solution for decentralized infrastructure.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="uarkeo"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="arkeod"
 DAEMON_SERVICE="arkeo.service"
 DAEMON_HOME="~/.arkeo"

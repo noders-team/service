@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="BitSong"
 CHAIN_SYSTEM_NAME="bitsong"
+CHAIN_ICON="bitsong-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# BitSong: A New Era in Music Streaming
-
-BitSong revolutionizes music streaming with blockchain, offering direct artist compensation, decentralized distribution, tokenization of music assets, fan engagement rewards, and transparent royalties management. It aims to solve industry inefficiencies, enhancing fairness and connection between artists and fans. BitSong opens up new investment opportunities, facilitates crowdfunding, and streamlines music licensing, marking a significant shift towards a more equitable and transparent music ecosystem.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="ubtsg"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="bitsongd"
 DAEMON_SERVICE="bitsongd.service"
 DAEMON_HOME="~/.bitsongd"

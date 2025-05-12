@@ -1,21 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="UX"
 CHAIN_SYSTEM_NAME="umee"
+CHAIN_ICON="umee-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# UX.XYZ: Elevating Blockchain Usability
-
-UX.XYZ pioneers integrating UX design with blockchain to enhance dApp accessibility and engagement. It focuses on user-centric design, interoperability, accessibility, customizable experiences, and robust security. This initiative aims to simplify blockchain for wider adoption, impacting areas like DeFi, NFT marketplaces, decentralized social media, and e-commerce. By prioritizing user experience, UX.XYZ strives to make decentralized applications more intuitive and accessible, encouraging broader participation in the blockchain ecosystem.
-
-Discover how UX.XYZ is reshaping blockchain usability.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="uumee"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="umeed"
 DAEMON_SERVICE="umeed.service"
 DAEMON_HOME="~/.umee"
