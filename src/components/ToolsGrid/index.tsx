@@ -25,6 +25,7 @@ import { IconBaseProps } from 'react-icons';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useHistory } from '@docusaurus/router';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 type ToolCardProps = {
   icon: React.ComponentType<IconBaseProps>;
@@ -62,6 +63,7 @@ function ToolCard({ icon: Icon, linkUrl, title }: ToolCardProps): React.ReactEle
 
 type ToolsGridProps = {
   chainName: string;
+  scope: string;
 
   // Node Installation
   showInstall: boolean;
@@ -86,7 +88,9 @@ type ToolsGridProps = {
 
 function ToolsGrid(props: ToolsGridProps): React.ReactElement {
   const theme = useTheme();
-  const { chainName } = props;
+  const { chainName, scope } = props;
+  const linkUrl =
+    scope === 'mainnet' ? useBaseUrl(`/mainnet-networks/${chainName}`) : useBaseUrl(`testnet-networks/${chainName}`);
 
   const showNodeInstallation = props.showInstall || props.showUpgrade || props.showGenesis || props.showCli;
   const showEndpointsAndSync =
@@ -118,12 +122,12 @@ function ToolsGrid(props: ToolsGridProps): React.ReactElement {
               },
             }}
           >
-            {props.showInstall && <ToolCard icon={PiBookOpenText} linkUrl="install" title="Installation Guide" />}
-            {props.showUpgrade && <ToolCard icon={PiFileCode} linkUrl="upgrade" title="Upgrade Guide" />}
+            {props.showInstall && <ToolCard icon={PiBookOpenText} linkUrl={linkUrl+"/install"} title="Installation Guide" />}
+            {props.showUpgrade && <ToolCard icon={PiFileCode} linkUrl={linkUrl+"/upgrade"} title="Upgrade Guide" />}
             {props.showGenesis && (
-              <ToolCard icon={PiAtom} linkUrl="install#download-genesis-and-addrbook" title="Genesis File" />
+              <ToolCard icon={PiAtom} linkUrl={linkUrl+"/install#download-genesis-and-addrbook"} title="Genesis File" />
             )}
-            {props.showCli && <ToolCard icon={PiTerminalWindow} linkUrl="cli-cheatsheet" title="CLI Cheatsheet" />}
+            {props.showCli && <ToolCard icon={PiTerminalWindow} linkUrl={linkUrl+"/cli-cheatsheet"} title="CLI Cheatsheet" />}
           </Box>
         </Box>
       )}
@@ -145,13 +149,13 @@ function ToolsGrid(props: ToolsGridProps): React.ReactElement {
               },
             }}
           >
-            {props.showEndpoints && <ToolCard icon={PiGraph} linkUrl="endpoints" title="RPC, API, gRPC" />}
-            {props.showStateSync && <ToolCard icon={PiLightning} linkUrl="statesync" title="State Sync" />}
-            {props.showSnapshot && <ToolCard icon={PiDatabase} linkUrl="snapshot" title="Node Snapshot" />}
-            {props.showLivePeers && <ToolCard icon={PiGitPullRequest} linkUrl="seeds-and-peers" title="Live Peers" />}
-            {props.showSeed && <ToolCard icon={PiFediverseLogo} linkUrl="seeds-and-peers" title="Seed Node" />}
+            {props.showEndpoints && <ToolCard icon={PiGraph} linkUrl={linkUrl+"/endpoints"} title="RPC, API, gRPC" />}
+            {props.showStateSync && <ToolCard icon={PiLightning} linkUrl={linkUrl+"/statesync"} title="State Sync" />}
+            {props.showSnapshot && <ToolCard icon={PiDatabase} linkUrl={linkUrl+"/snapshot"} title="Node Snapshot" />}
+            {props.showLivePeers && <ToolCard icon={PiGitPullRequest} linkUrl={linkUrl+"/seeds-and-peers"} title="Live Peers" />}
+            {props.showSeed && <ToolCard icon={PiFediverseLogo} linkUrl={linkUrl+"/seeds-and-peers"} title="Seed Node" />}
             {props.showAddressBook && (
-              <ToolCard icon={PiFediverseLogo} linkUrl="seeds-and-peers#address-book" title="Address Book" />
+              <ToolCard icon={PiFediverseLogo} linkUrl={linkUrl+"/seeds-and-peers#address-book"} title="Address Book" />
             )}
           </Box>
         </Box>
@@ -174,12 +178,12 @@ function ToolsGrid(props: ToolsGridProps): React.ReactElement {
               },
             }}
           >
-            {props.showExplorersList && <ToolCard icon={PiCubeFocus} linkUrl="explorers" title="Explorers list" />}
+            {props.showExplorersList && <ToolCard icon={PiCubeFocus} linkUrl={linkUrl+"/explorers"} title="Explorers list" />}
             {props.showPublicEndpoints && (
-              <ToolCard icon={PiBroadcast} linkUrl="public-endpoints" title="Public Endpoints" />
+              <ToolCard icon={PiBroadcast} linkUrl={linkUrl+"/public-endpoints"} title="Public Endpoints" />
             )}
-            {props.showUsefulTools && <ToolCard icon={PiToolbox} linkUrl="useful-tools" title="Useful Tools" />}
-            {props.showUpgradeWatcher && <ToolCard icon={PiTarget} linkUrl="upgrade-watcher" title="Upgrade Watcher" />}
+            {props.showUsefulTools && <ToolCard icon={PiToolbox} linkUrl={linkUrl+"/useful-tools"} title="Useful Tools" />}
+            {props.showUpgradeWatcher && <ToolCard icon={PiTarget} linkUrl={linkUrl+"/upgrade-watcher"} title="Upgrade Watcher" />}
           </Box>
         </Box>
       )}
