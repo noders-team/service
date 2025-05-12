@@ -129,8 +129,7 @@ function Home() {
               borderColor="divider"
               sx={{
                 paddingY: { xs: 2, lg: 3 },
-                paddingRight: { xs: 0, md: 2 },
-                paddingLeft: { xs: 3 },
+                paddingX: { xs: 3, md: 0},
               }}
             >
               <Box display="flex" pb={1} sx={{ maxWidth: { xs: '30%', md: 'unset' } }}>
@@ -152,9 +151,8 @@ function Home() {
               borderBottom={!isDesktop ? 1 : 0}
               borderColor="divider"
               sx={{
-                paddingY: { xs: 2, md: 2, lg: 3 },
-                paddingRight: { xs: 3, md: 5, lg: 2 },
-                paddingLeft: { xs: 2, md: 3 },
+                paddingY: { xs: 2, lg: 3 },
+                paddingX: 3,
               }}
             >
               <Box display="flex" pb={1} sx={{ maxWidth: { xs: '30%', md: 'unset' } }}>
@@ -176,8 +174,7 @@ function Home() {
               borderColor="divider"
               sx={{
                 paddingY: { xs: 2, lg: 3 },
-                paddingRight: { xs: 0, md: 2 },
-                paddingLeft: { xs: 3 },
+                paddingX: 3,
               }}
             >
               <Box display="flex" pb={1} sx={{ maxWidth: { xs: '30%', md: 'unset' } }}>
@@ -197,8 +194,7 @@ function Home() {
               gap={2}
               sx={{
                 paddingY: { xs: 2, lg: 3 },
-                paddingRight: { xs: 3, md: 5 },
-                paddingLeft: { xs: 2, md: 3 },
+                paddingX: 3,
               }}
             >
               <Box display="flex" pb={1} sx={{ maxWidth: { xs: '30%', md: 'unset' } }}>

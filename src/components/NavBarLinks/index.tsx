@@ -10,13 +10,12 @@ import TestnetIcon from "@site/static/img/testnet-icon.svg"
 export default function NavBarLinks(props: any): React.JSX.Element {
   const isMobile = props?.mobile === true;
   const isDesktop = useMediaQuery('(min-width: 997px)');
+  const mainnetHref = useBaseUrl("mainnet-networks/overview");
+  const testnetHref = useBaseUrl("testnet-networks/overview");
 
   if (!isMobile && !isDesktop) {
     return null;
   }
-
-  const mainnetHref = useBaseUrl("mainnet-networks/overview");
-  const testnetHref = useBaseUrl("testnet-networks/overview");
 
   return (
     <Box
