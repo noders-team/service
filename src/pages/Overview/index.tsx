@@ -17,7 +17,11 @@ type Props = {
 function Overview({ scope }: Props): React.JSX.Element {
   const [chains, setChains] = React.useState<Chain[]>([]);
   const chainsUrl = useBaseUrl('chains.json');
+  const networksImgUrl = useBaseUrl('/img/overview-page/networks.webp');
   const blockPulseImgUrl = useBaseUrl('/img/overview-page/blockpulse.webp');
+
+  // TODO: enable
+  const showBlockpulse = false;
 
   React.useEffect(() => {
     const promise =
@@ -31,7 +35,7 @@ function Overview({ scope }: Props): React.JSX.Element {
       });
   }, []);
 
-  const handleSimpleCardClick = (url: string) => {
+  const handleOpenLink = (url: string) => {
     window.open(url, '_blank');
   };
 
@@ -203,18 +207,19 @@ function Overview({ scope }: Props): React.JSX.Element {
         </Box>
       </Box>
 
-      {/* OUR PRODUCTS */}
-      <Box display="flex" mt={3} bgcolor="background.paper" borderRadius={6} minHeight="330px">
+      {/* OUR VALIDATED NETWORKS */}
+      <Box display="flex" mt={6} bgcolor="background.paper" borderRadius={6} minHeight="330px" overflow="hidden">
+        <Box component="img" src={networksImgUrl} alt="Validated Networks" sx={{ objectFit: 'cover' }} />
         <Box display="flex" flexDirection="column" justifyContent="space-between" padding={5}>
           <Box display="flex" flexDirection="column" gap={2}>
             <Typography variant="overline" sx={{ fontWeight: 600 }}>
-              Our Products
+              Staking
             </Typography>
             <Typography variant="h4" sx={{ fontSize: '32px', fontWeight: 500 }}>
-              Blockpulse
+              Our Validated Networks
             </Typography>
             <Typography variant="subtitle1" sx={{ opacity: 0.6 }}>
-              A powerful and user-friendly blockchain explorer & analytics tool
+              Earn passive income using our non-custodial staking
             </Typography>
           </Box>
           <Button
@@ -222,12 +227,41 @@ function Overview({ scope }: Props): React.JSX.Element {
             size="large"
             sx={{ alignSelf: 'flex-start' }}
             endIcon={<PiArrowUpRightBold size={24} opacity={0.2} />}
+            onClick={() => handleOpenLink("https://noders.team/networks")}
           >
-            Explore networks
+            Stake with NODERS
           </Button>
         </Box>
-        <Box component="img" src={blockPulseImgUrl} alt="Blockpulse" />
       </Box>
+
+      {/* OUR PRODUCTS */}
+      {showBlockpulse && (
+        <Box display="flex" mt={3} bgcolor="background.paper" borderRadius={6} minHeight="330px" overflow="hidden">
+          <Box display="flex" flexDirection="column" justifyContent="space-between" padding={5}>
+            <Box display="flex" flexDirection="column" gap={2}>
+              <Typography variant="overline" sx={{ fontWeight: 600 }}>
+                Our Products
+              </Typography>
+              <Typography variant="h4" sx={{ fontSize: '32px', fontWeight: 500 }}>
+                Blockpulse
+              </Typography>
+              <Typography variant="subtitle1" sx={{ opacity: 0.6 }}>
+                A powerful and user-friendly blockchain explorer & analytics tool
+              </Typography>
+            </Box>
+            <Button
+              variant="contained"
+              size="large"
+              sx={{ alignSelf: 'flex-start' }}
+              endIcon={<PiArrowUpRightBold size={24} opacity={0.2} />}
+              onClick={() => handleOpenLink("https://blockpulse.pro")}
+            >
+              Explore networks
+            </Button>
+          </Box>
+          <Box component="img" src={blockPulseImgUrl} alt="Blockpulse" sx={{ objectFit: 'cover' }} />
+        </Box>
+      )}
 
       {/* SOCIAL RESOURCES */}
       <Box display="flex" flexDirection="column" pt={10}>
@@ -253,7 +287,7 @@ function Overview({ scope }: Props): React.JSX.Element {
             cursor="pointer"
             gap={3}
             padding={3}
-            onClick={() => handleSimpleCardClick('https://noders.team')}
+            onClick={() => handleOpenLink('https://noders.team')}
           >
             <PiPlanetFill size={32} opacity={0.2} />
             <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
@@ -265,7 +299,7 @@ function Overview({ scope }: Props): React.JSX.Element {
             cursor="pointer"
             gap={3}
             padding={3}
-            onClick={() => handleSimpleCardClick('https://github.com/noders-team')}
+            onClick={() => handleOpenLink('https://github.com/noders-team')}
           >
             <FaGithub size={32} opacity={0.2} />
             <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
@@ -277,7 +311,7 @@ function Overview({ scope }: Props): React.JSX.Element {
             cursor="pointer"
             gap={3}
             padding={3}
-            onClick={() => handleSimpleCardClick('https://x.com/NODERS_TEAM')}
+            onClick={() => handleOpenLink('https://x.com/NODERS_TEAM')}
           >
             <FaXTwitter size={32} opacity={0.2} />
             <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
@@ -289,7 +323,7 @@ function Overview({ scope }: Props): React.JSX.Element {
             cursor="pointer"
             gap={3}
             padding={3}
-            onClick={() => handleSimpleCardClick('https://t.me/nodersteam')}
+            onClick={() => handleOpenLink('https://t.me/nodersteam')}
           >
             <FaTelegram size={32} opacity={0.2} />
             <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
