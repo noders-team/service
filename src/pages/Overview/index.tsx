@@ -60,13 +60,13 @@ function Overview({ scope }: Props): React.JSX.Element {
             running and maintaining nodes
           </Typography>
         </Box>
-        <Box display="flex" gap={2}>
+        <Box display="flex" gap={2} mt={2}>
           <Box
             display="flex"
             flexDirection="column"
             gap={1}
             sx={{
-              minWidth: { sx: '145px', sm: '160px' },
+              minWidth: { xs: '145px', sm: '160px' },
             }}
           >
             <Typography variant="overline">Networks</Typography>
@@ -96,7 +96,16 @@ function Overview({ scope }: Props): React.JSX.Element {
               borderBottom: (theme) => `1px solid ${theme.palette.divider}`,
             }}
           >
-            <Box display="flex" flex={1} gap={5} paddingY={3} paddingX={2}>
+            <Box
+              display="flex"
+              flex={1}
+              paddingY={3}
+              paddingX={2}
+              sx={{
+                flexDirection: { xs: 'column', md: 'row' },
+                gap: { xs: 2, sm: 3, md: 5 },
+              }}
+            >
               <Box display="flex" alignItems="flex-start" sx={{ maxWidth: { xs: '30%', md: 'unset' } }}>
                 <Illustration src="img/home-page/sync.svg" alt="Sync" width={114} />
               </Box>
@@ -121,10 +130,11 @@ function Overview({ scope }: Props): React.JSX.Element {
             <Box
               display="flex"
               flex={1}
-              gap={5}
               paddingY={3}
               paddingLeft={3}
               sx={{
+                flexDirection: { xs: 'column', md: 'row' },
+                gap: { xs: 2, sm: 3, md: 5 },
                 borderLeft: (theme) => `1px solid ${theme.palette.divider}`,
               }}
             >
@@ -156,7 +166,16 @@ function Overview({ scope }: Props): React.JSX.Element {
               borderBottom: (theme) => `1px solid ${theme.palette.divider}`,
             }}
           >
-            <Box display="flex" flex={1} gap={5} paddingY={3} paddingX={2}>
+            <Box
+              display="flex"
+              flex={1}
+              paddingY={3}
+              paddingX={2}
+              sx={{
+                flexDirection: { xs: 'column', md: 'row' },
+                gap: { xs: 2, sm: 3, md: 5 },
+              }}
+            >
               <Box display="flex" alignItems="flex-start" sx={{ maxWidth: { xs: '30%', md: 'unset' } }}>
                 <Illustration src="img/home-page/explorer.svg" alt="Sync" width={114} />
               </Box>
@@ -178,10 +197,11 @@ function Overview({ scope }: Props): React.JSX.Element {
             <Box
               display="flex"
               flex={1}
-              gap={5}
               paddingY={3}
               paddingLeft={3}
               sx={{
+                flexDirection: { xs: 'column', md: 'row' },
+                gap: { xs: 2, sm: 3, md: 5 },
                 borderLeft: (theme) => `1px solid ${theme.palette.divider}`,
               }}
             >
@@ -208,8 +228,25 @@ function Overview({ scope }: Props): React.JSX.Element {
       </Box>
 
       {/* OUR VALIDATED NETWORKS */}
-      <Box display="flex" mt={6} bgcolor="background.paper" borderRadius={6} minHeight="330px" overflow="hidden">
-        <Box component="img" src={networksImgUrl} alt="Validated Networks" sx={{ objectFit: 'cover' }} />
+      <Box
+        display="flex"
+        mt={6}
+        bgcolor="background.paper"
+        borderRadius={6}
+        minHeight="330px"
+        overflow="hidden"
+        sx={{ flexDirection: { xs: 'column', md: 'row' } }}
+      >
+        <Box
+          component="img"
+          src={networksImgUrl}
+          alt="Validated Networks"
+          sx={{
+            objectFit: 'cover',
+            maxHeight: { xs: '240px', md: 'unset' },
+            maxWidth: { xs: '100%', md: '50%' },
+          }}
+        />
         <Box display="flex" flexDirection="column" justifyContent="space-between" padding={5}>
           <Box display="flex" flexDirection="column" gap={2}>
             <Typography variant="overline" sx={{ fontWeight: 600 }}>
@@ -225,9 +262,9 @@ function Overview({ scope }: Props): React.JSX.Element {
           <Button
             variant="contained"
             size="large"
-            sx={{ alignSelf: 'flex-start' }}
+            sx={{ alignSelf: 'flex-start', mt: 2 }}
             endIcon={<PiArrowUpRightBold size={24} opacity={0.2} />}
-            onClick={() => handleOpenLink("https://noders.team/networks")}
+            onClick={() => handleOpenLink('https://noders.team/networks')}
           >
             Stake with NODERS
           </Button>
@@ -236,7 +273,15 @@ function Overview({ scope }: Props): React.JSX.Element {
 
       {/* OUR PRODUCTS */}
       {showBlockpulse && (
-        <Box display="flex" mt={3} bgcolor="background.paper" borderRadius={6} minHeight="330px" overflow="hidden">
+        <Box
+          display="flex"
+          mt={3}
+          bgcolor="background.paper"
+          borderRadius={6}
+          minHeight="330px"
+          overflow="hidden"
+          sx={{ flexDirection: { xs: 'column', md: 'row' } }}
+        >
           <Box display="flex" flexDirection="column" justifyContent="space-between" padding={5}>
             <Box display="flex" flexDirection="column" gap={2}>
               <Typography variant="overline" sx={{ fontWeight: 600 }}>
@@ -254,12 +299,21 @@ function Overview({ scope }: Props): React.JSX.Element {
               size="large"
               sx={{ alignSelf: 'flex-start' }}
               endIcon={<PiArrowUpRightBold size={24} opacity={0.2} />}
-              onClick={() => handleOpenLink("https://blockpulse.pro")}
+              onClick={() => handleOpenLink('https://blockpulse.pro')}
             >
               Explore networks
             </Button>
           </Box>
-          <Box component="img" src={blockPulseImgUrl} alt="Blockpulse" sx={{ objectFit: 'cover' }} />
+          <Box
+            component="img"
+            src={blockPulseImgUrl}
+            alt="Blockpulse"
+            sx={{
+              objectFit: 'cover',
+              maxHeight: { xs: '240px', md: 'unset' },
+              maxWidth: { xs: '100%', md: '50%' },
+            }}
+          />
         </Box>
       )}
 
