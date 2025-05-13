@@ -1,19 +1,25 @@
-# Blockchain
+# App
 CHAIN_NAME="DoraVota"
 CHAIN_SYSTEM_NAME="dora"
+CHAIN_ICON="dora-icon.svg"
+CHAIN_BACKGROUND_COLOR="#7B2BF9"
+
+# NODERS
+STAKE_URL=""
+RESTAKE_URL=""
+VALIDATOR_URL="https://vota-bobtail-explorer.dorafactory.org/vota-bobtail/staking/doravaloper1zyhzwtehcs4y8pgdhz6a5aqmnaycns57vpetlc"
+EXPLORER_URL=""
+APP_URL=""
+APP_IMAGE=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Dora: Funding the everlasting hacker movement.
-
-Dora Vota is the appchain supporting decentralized governance and privacy on-chain communication. Currently, the appchain is hosting major quadratic funding and MACI (Minimal Anti-collusion Infrastructure) / aMACI (anonymous MACI) rounds.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
+CHAIN_DENOM_PRETTY=""
 CHAIN_DENOM="peaka"
 CHAIN_FEES="3000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="dorad"
 DAEMON_SERVICE="dora.service"
 DAEMON_HOME="~/.dorad"
@@ -25,6 +31,7 @@ ENDPOINT_JRPC=""
 ENDPOINT_GRPC="https://dora-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST=""
+ENDPOINT_SEED=""
 
 # Social
 SOCIAL_WEBSITE="https://dorafactory.org/"
@@ -36,7 +43,6 @@ SOCIAL_TELEGRAM=""
 # Other
 DOWNLOAD_URL="https://snapshots-t.noders.services/dora"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://vota-bobtail-explorer.dorafactory.org/vota-bobtail/staking/doravaloper1zyhzwtehcs4y8pgdhz6a5aqmnaycns57vpetlc"
 
 # Updates
 UPDATE_MAIN=true
@@ -47,3 +53,23 @@ UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true
 UPDATE_LIVE_PEERS=true
 UPDATE_CLI_CHEATSHEET=true
+UPDATE_ENDPOINTS=true
+
+# Feature toggles
+# Node installation
+SHOW_INSTALLATION_GUIDE=true
+SHOW_UPGRADE_GUIDE=true
+SHOW_GENESIS=true
+SHOW_CLI=true
+# Endpoints and Sync
+SHOW_ENDPOINTS=true
+SHOW_STATE_SYNC=true
+SHOW_SNAPSHOT=true
+SHOW_LIVE_PEERS=true
+SHOW_SEED=true
+SHOW_ADDRESS_BOOK=true
+# Tools
+SHOW_EXPLORERS_LIST=false
+SHOW_PUBLIC_ENDPOINTS=false
+SHOW_USEFUL_TOOLS=false
+SHOW_UPGRADE_WATCHER=false
