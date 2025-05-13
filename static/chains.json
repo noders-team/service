@@ -238,13 +238,6 @@
     "scope": "testnet"
   },
   {
-    "name": "babylon",
-    "pretty_name": "Babylon",
-    "chain_id": "bbn-test-5",
-    "logo_url": "img/babylon-icon.svg",
-    "scope": "testnet"
-  },
-  {
     "name": "celestia",
     "pretty_name": "Celestia",
     "chain_id": "mocha-4",
@@ -354,13 +347,6 @@
     "pretty_name": "Sunrise",
     "chain_id": "sunrise-test-0.2",
     "logo_url": "img/sunrise-icon.svg",
-    "scope": "testnet"
-  },
-  {
-    "name": "swisstronik",
-    "pretty_name": "Swisstronik",
-    "chain_id": "swisstronik_1291-1",
-    "logo_url": "img/swisstronik-icon.svg",
     "scope": "testnet"
   },
   {
