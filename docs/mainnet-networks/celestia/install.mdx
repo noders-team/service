@@ -1,13 +1,18 @@
 ---
-hide_table_of_contents: false
-title: Installation
+title: 'Installation'
 sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-celestia">
-# Installation
-</div>
-###### Chain ID: `celestia` | Current Node Version: `v3.0.2`
+import PageTitle from "@site/src/components/PageTitle";
+
+<PageTitle
+  iconUrl="img/celestia-icon.svg"
+  title="Public Endpoints"
+  chainId="celestia"
+  version="v3.8.1"
+/>
 
 ## Install dependencies
 
@@ -263,7 +268,7 @@ ExecStart=$(which celestia) bridge start \
 --gateway.port <PORT> \
 --metrics.tls=true \
 --metrics \
---metrics.endpoint otel.celestia.observer 
+--metrics.endpoint otel.celestia.observer
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535

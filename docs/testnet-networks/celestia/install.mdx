@@ -1,13 +1,18 @@
 ---
-hide_table_of_contents: false
-title: Installation
+title: 'Installation'
 sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-celestia">
-# Installation
-</div>
-###### Chain ID: `mocha-4` | Current Node Version: `v1.11.0`
+import PageTitle from "@site/src/components/PageTitle";
+
+<PageTitle
+  iconUrl="img/celestia-icon.svg"
+  title="Public Endpoints"
+  chainId="mocha-4"
+  version="3.8.1-mocha"
+/>
 
 ## Install dependencies
 
@@ -265,7 +270,7 @@ ExecStart=$(which celestia) bridge start \
 --gateway.port <PORT> \
 --metrics.tls=true \
 --metrics \
---metrics.endpoint otel.celestia.observer 
+--metrics.endpoint otel.celestia.observer
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
