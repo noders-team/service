@@ -10,7 +10,8 @@ RESTAKE_URL="https://restake.app/celestia/celestiavaloper139mu0a0ucz0gmrkavm5wja
 VALIDATOR_URL="https://celestia.explorers.guru/validator/celestiavaloper139mu0a0ucz0gmrkavm5wjar2lpx7yvxq3e25e5"
 EXPLORER_URL="https://celestiahub.org/explorer"
 APP_URL="https://celestiahub.org"
-APP_IMAGE="celestia-community-app.png"
+APP_IMAGE="celestia-app.png"
+FAUCET_URL=""
 
 # Blockchain
 CHAIN_ID="auto"

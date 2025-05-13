@@ -2,7 +2,16 @@
 CHAIN_NAME="Namada"
 CHAIN_SYSTEM_NAME="namada"
 CHAIN_ICON="namada-icon.svg"
-CHAIN_BACKGROUND_COLOR=""
+CHAIN_BACKGROUND_COLOR="#61FEFE"
+
+# NODERS
+STAKE_URL="https://namadillo.noders.services/staking/bonding/increment"
+RESTAKE_URL=""
+VALIDATOR_URL="https://namada.coverlet.io/validators/2A8B3E24756A4782D26169B60AB9418816668101220F705DDDDA3C47334ADF5E"
+EXPLORER_URL=""
+APP_URL="https://namadahub.org"
+APP_IMAGE="namada-app.png"
+FAUCET_URL=""
 
 # Blockchain
 CHAIN_ID="namada.5f5de2dd1b88cba30586420"
@@ -23,6 +32,7 @@ ENDPOINT_JRPC=""
 ENDPOINT_GRPC=""
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/namada"
+ENDPOINT_SEED=""
 
 # Social
 SOCIAL_WEBSITE="https://namada.net/"
@@ -34,7 +44,6 @@ SOCIAL_TELEGRAM="https://t.me/+pjXZFdE9s-s2OGVi"
 # Other
 SNAPSHOT_URL=""
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://namada.coverlet.io/validators/2A8B3E24756A4782D26169B60AB9418816668101220F705DDDDA3C47334ADF5E"
 
 # Updates
 UPDATE_MAIN=true

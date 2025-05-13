@@ -2,10 +2,20 @@
 CHAIN_NAME="Zetachain"
 CHAIN_SYSTEM_NAME="zetachain"
 CHAIN_ICON="zetachain-icon.svg"
-CHAIN_BACKGROUND_COLOR=""
+CHAIN_BACKGROUND_COLOR="#1B5841"
+
+# NODERS
+STAKE_URL="https://wallet.keplr.app/?modal=staking&chain=zetachain_7000-1&validator_address=zetavaloper1r66jlz6qvq74apsx4r5696jkrusn5uvvvcgvn9&step_id=3&action_id=stake"
+RESTAKE_URL="https://restake.app/zetachain/zetavaloper1r66jlz6qvq74apsx4r5696jkrusn5uvvvcgvn9/stake"
+VALIDATOR_URL=""
+EXPLORER_URL=""
+APP_URL="https://zetaresources.org"
+APP_IMAGE="zetachain-app.png"
+FAUCET_URL=""
 
 # Blockchain
 CHAIN_ID="auto"
+CHAIN_DENOM_PRETTY="ZETA"
 CHAIN_DENOM="azeta"
 CHAIN_FEES="300000000000"
 
@@ -22,6 +32,7 @@ ENDPOINT_JRPC="https://zetachain-jsonrpc.noders.services"
 ENDPOINT_GRPC="https://zetachain-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/zetachain"
+ENDPOINT_SEED=""
 
 # Social
 SOCIAL_WEBSITE="https://www.zetachain.com/"
@@ -33,7 +44,6 @@ SOCIAL_TELEGRAM="https://t.me/zetachainofficial"
 # Other
 SNAPSHOT_URL="https://snapshots.noders.services/zwtachain"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://zetachain.explorers.guru/validator/zetavaloper1r66jlz6qvq74apsx4r5696jkrusn5uvvvcgvn9"
 
 # Updates
 UPDATE_MAIN=true
