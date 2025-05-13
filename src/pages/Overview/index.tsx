@@ -19,7 +19,19 @@ function Overview({ scope }: Props): React.JSX.Element {
   const chainsUrl = useBaseUrl('chains.json');
   const networksImgUrl = useBaseUrl('/img/overview-page/networks.webp');
   const blockPulseImgUrl = useBaseUrl('/img/overview-page/blockpulse.webp');
-  const scopePrettyName = scope === 'mainnet' ? 'Mainnet' : 'Testnet';
+
+  let scopePrettyName: string;
+  let bgImgUrl: string;
+  let bgAnimUrl: string;
+  if (scope && scope.toLowerCase() === 'mainnet') {
+    scopePrettyName = 'Mainnet';
+    bgImgUrl = useBaseUrl('/img/overview-page/mainnet-bg.webp');
+    bgAnimUrl = useBaseUrl('/img/overview-page/mainnet-bg-anim.svg');
+  } else {
+    scopePrettyName = 'Testnet';
+    bgImgUrl = useBaseUrl('/img/overview-page/testnet-bg.webp');
+    bgAnimUrl = useBaseUrl('/img/overview-page/testnet-bg-anim.svg');
+  }
 
   // TODO: enable
   const showBlockpulse = false;
@@ -52,11 +64,21 @@ function Overview({ scope }: Props): React.JSX.Element {
         sx={{
           borderRadius: (theme) => theme.spacing(3),
           border: (theme) => `1px solid ${theme.palette.divider}`,
+          backgroundImage: {
+            xs: `url(${bgImgUrl})`,
+            md: `url(${bgAnimUrl}), url(${bgImgUrl})`,
+          },
+          backgroundSize: {
+            xs: 'cover',
+            lg: 'contain',
+          },
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'right',
         }}
       >
         <Box display="flex" flexDirection="column" gap={2}>
           <Typography variant="h3">{scopePrettyName} networks</Typography>
-          <Typography variant="body1">
+          <Typography variant="body1" sx={{ maxWidth: "540px", opacity: 0.6 }}>
             Our service is designed to empower developers and enthusiasts alike with detailed, step-by-step guides for
             running and maintaining nodes
           </Typography>
