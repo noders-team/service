@@ -1,6 +1,6 @@
-import * as React from 'react';
+import React from 'react';
 
-export default function NavBarTools(...props: any): JSX.Element {
+export default function NavBarTools(...props: any): React.JSX.Element {
   return (
     <div>Tools</div>
   );
