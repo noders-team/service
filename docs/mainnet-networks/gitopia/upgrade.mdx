@@ -1,16 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'Upgrade'
-sidebar_position: 3
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-gitopia">
-  # Upgrade
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `gitopia` | Current Node Version: `v5.1.0`
+<PageTitle
+  iconUrl="img/gitopia-icon.svg"
+  title="Upgrade"
+  chainId="gitopia"
+  version="v5.1.0"
+/>
 
-# Clone Gitopia repository
+## Clone Gitopia repository
 
 ```js
 cd $HOME
@@ -20,13 +24,13 @@ cd gitopia
 git checkout v5.1.0
 ```
 
-# Build binaries
+## Build binaries
 
 ```js
 make build
 ```
 
-# Prepare binaries for Cosmovisor
+## Prepare binaries for Cosmovisor
 
 ```js
 mkdir -p ~/.gitopia/cosmovisor/upgrades/v5.1.0/bin

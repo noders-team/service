@@ -1,14 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'State sync'
 sidebar_position: 4
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-mantra">
-  # State sync
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `mantra-dukong-1` | Current Node Version: `v4.0.0`
+<PageTitle
+  iconUrl="img/mantra-icon.svg"
+  title="State sync"
+  chainId="mantra-dukong-1"
+  version="v4.0.0"
+/>
+
+## How to enable state sync
 
 ```bash
 SNAP_RPC=https://mantra-t-rpc.noders.services:443 && \

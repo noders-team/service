@@ -1,16 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'Upgrade'
-sidebar_position: 3
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-stratos">
-  # Upgrade
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `stratos-1` | Current Node Version: `v0.12.0`
+<PageTitle
+  iconUrl="img/stratos-icon.svg"
+  title="Upgrade"
+  chainId="stratos-1"
+  version="v0.12.0"
+/>
 
-# Clone Stratos repository
+## Clone Stratos repository
 
 ```js
 cd $HOME
@@ -20,13 +24,13 @@ cd stratos-chain
 git checkout v0.12.0
 ```
 
-# Build binaries
+## Build binaries
 
 ```js
 make build
 ```
 
-# Prepare binaries for Cosmovisor
+## Prepare binaries for Cosmovisor
 
 ```js
 mkdir -p ~/.stchaind/cosmovisor/upgrades/v0.12.0/bin

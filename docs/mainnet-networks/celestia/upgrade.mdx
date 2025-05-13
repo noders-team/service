@@ -1,16 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'Upgrade'
-sidebar_position: 3
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-celestia">
-  # Upgrade
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `celestia` | Current Node Version: `v3.8.1`
+<PageTitle
+  iconUrl="img/celestia-icon.svg"
+  title="Upgrade"
+  chainId="celestia"
+  version="v3.8.1"
+/>
 
-# Clone Celestia repository
+## Clone Celestia repository
 
 ```js
 cd $HOME
@@ -20,13 +24,13 @@ cd celestia-app
 git checkout v3.8.1
 ```
 
-# Build binaries
+## Build binaries
 
 ```js
 make build
 ```
 
-# Prepare binaries for Cosmovisor
+## Prepare binaries for Cosmovisor
 
 ```js
 mkdir -p ~/.celestia-app/cosmovisor/upgrades/v3.8.1/bin

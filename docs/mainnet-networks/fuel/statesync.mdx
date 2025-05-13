@@ -1,14 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'State sync'
 sidebar_position: 4
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-fuel">
-  # State sync
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `seq-mainnet-1` | Current Node Version: `seq-mainnet-1.2-improved-sidecar`
+<PageTitle
+  iconUrl="img/fuel-icon.svg"
+  title="State sync"
+  chainId="seq-mainnet-1"
+  version="seq-mainnet-1.2-improved-sidecar"
+/>
+
+## How to enable state sync
 
 ```bash
 SNAP_RPC=https://fuel-rpc.noders.services:443 && \

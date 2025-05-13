@@ -1,14 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'State sync'
 sidebar_position: 4
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-og">
-  # State sync
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `zgtendermint_16600-2` | Current Node Version: `v0.5.0.1`
+<PageTitle
+  iconUrl="img/og-icon.svg"
+  title="State sync"
+  chainId="zgtendermint_16600-2"
+  version="v0.5.0.1"
+/>
+
+## How to enable state sync
 
 ```bash
 SNAP_RPC=https://og-t-rpc.noders.services:443 && \

@@ -1,14 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'State sync'
 sidebar_position: 4
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-lava">
-  # State sync
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `lava-testnet-2` | Current Node Version: `v5.4.0`
+<PageTitle
+  iconUrl="img/lava-icon.svg"
+  title="State sync"
+  chainId="lava-testnet-2"
+  version="v5.4.0"
+/>
+
+## How to enable state sync
 
 ```bash
 SNAP_RPC=https://lava-t-rpc.noders.services:443 && \

@@ -1,14 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'State sync'
 sidebar_position: 4
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-osmosis">
-  # State sync
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `osmo-test-5` | Current Node Version: `29.0.0-rc1`
+<PageTitle
+  iconUrl="img/osmosis-icon.svg"
+  title="State sync"
+  chainId="osmo-test-5"
+  version="29.0.0-rc1"
+/>
+
+## How to enable state sync
 
 ```bash
 SNAP_RPC=https://osmosis-t-rpc.noders.services:443 && \

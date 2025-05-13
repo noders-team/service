@@ -1,14 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'State sync'
 sidebar_position: 4
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-pell">
-  # State sync
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `ignite_186-1` | Current Node Version: `v1.3.0`
+<PageTitle
+  iconUrl="img/pell-icon.svg"
+  title="State sync"
+  chainId="ignite_186-1"
+  version="v1.3.0"
+/>
+
+## How to enable state sync
 
 ```bash
 SNAP_RPC=https://pell-t-rpc.noders.services:443 && \

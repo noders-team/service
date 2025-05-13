@@ -1,16 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'Upgrade'
-sidebar_position: 3
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-haqq">
-  # Upgrade
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `haqq_11235-1` | Current Node Version: `v1.8.2`
+<PageTitle
+  iconUrl="img/haqq-icon.svg"
+  title="Upgrade"
+  chainId="haqq_11235-1"
+  version="v1.8.2"
+/>
 
-# Clone Haqq repository
+## Clone Haqq repository
 
 ```js
 cd $HOME
@@ -20,13 +24,13 @@ cd haqq-network
 git checkout v1.8.2
 ```
 
-# Build binaries
+## Build binaries
 
 ```js
 make build
 ```
 
-# Prepare binaries for Cosmovisor
+## Prepare binaries for Cosmovisor
 
 ```js
 mkdir -p ~/.haqqd/cosmovisor/upgrades/v1.8.2/bin

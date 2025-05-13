@@ -1,16 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'Upgrade'
-sidebar_position: 3
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-kyve">
-  # Upgrade
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `kyve-1` | Current Node Version: `v2.1.0`
+<PageTitle
+  iconUrl="img/kyve-icon.svg"
+  title="Upgrade"
+  chainId="kyve-1"
+  version="v2.1.0"
+/>
 
-# Clone Kyve repository
+## Clone Kyve repository
 
 ```js
 cd $HOME
@@ -20,13 +24,13 @@ cd KYVENetwork
 git checkout v2.1.0
 ```
 
-# Build binaries
+## Build binaries
 
 ```js
 make build
 ```
 
-# Prepare binaries for Cosmovisor
+## Prepare binaries for Cosmovisor
 
 ```js
 mkdir -p ~/.kyve/cosmovisor/upgrades/v2.1.0/bin

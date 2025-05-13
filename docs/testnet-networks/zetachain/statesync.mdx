@@ -1,14 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'State sync'
 sidebar_position: 4
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-zetachain">
-  # State sync
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `athens_7001-1` | Current Node Version: `v30.0.0`
+<PageTitle
+  iconUrl="img/zetachain-icon.svg"
+  title="State sync"
+  chainId="athens_7001-1"
+  version="v30.0.0"
+/>
+
+## How to enable state sync
 
 ```bash
 SNAP_RPC=https://zetachain-t-rpc.noders.services:443 && \

@@ -1,14 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'State sync'
 sidebar_position: 4
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-haqq">
-  # State sync
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `haqq_11235-1` | Current Node Version: `v1.8.2`
+<PageTitle
+  iconUrl="img/haqq-icon.svg"
+  title="State sync"
+  chainId="haqq_11235-1"
+  version="v1.8.2"
+/>
+
+## How to enable state sync
 
 ```bash
 SNAP_RPC=https://haqq-rpc.noders.services:443 && \

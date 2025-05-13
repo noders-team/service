@@ -1,16 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'Upgrade'
-sidebar_position: 3
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-zenrock">
-  # Upgrade
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `diamond-1` | Current Node Version: `v6.1.16`
+<PageTitle
+  iconUrl="img/zenrock-icon.svg"
+  title="Upgrade"
+  chainId="diamond-1"
+  version="v6.1.16"
+/>
 
-# Clone Zenrock repository
+## Clone Zenrock repository
 
 ```js
 cd $HOME
@@ -20,13 +24,13 @@ cd zrchain
 git checkout v6.1.16
 ```
 
-# Build binaries
+## Build binaries
 
 ```js
 make build
 ```
 
-# Prepare binaries for Cosmovisor
+## Prepare binaries for Cosmovisor
 
 ```js
 mkdir -p ~/.zrchain/cosmovisor/upgrades/v6.1.16/bin

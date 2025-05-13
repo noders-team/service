@@ -1,14 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'State sync'
 sidebar_position: 4
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-seda">
-  # State sync
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `seda-1-testnet` | Current Node Version: `1.0.0-rc.2`
+<PageTitle
+  iconUrl="img/seda-icon.svg"
+  title="State sync"
+  chainId="seda-1-testnet"
+  version="1.0.0-rc.2"
+/>
+
+## How to enable state sync
 
 ```bash
 SNAP_RPC=https://seda-t-rpc.noders.services:443 && \

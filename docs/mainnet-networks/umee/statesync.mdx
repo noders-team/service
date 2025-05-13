@@ -1,14 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'State sync'
 sidebar_position: 4
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-umee">
-  # State sync
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `umee-1` | Current Node Version: `v6.7.3`
+<PageTitle
+  iconUrl="img/umee-icon.svg"
+  title="State sync"
+  chainId="umee-1"
+  version="v6.7.3"
+/>
+
+## How to enable state sync
 
 ```bash
 SNAP_RPC=https://umee-rpc.noders.services:443 && \

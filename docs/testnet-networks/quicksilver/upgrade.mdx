@@ -1,16 +1,18 @@
 ---
-hide_table_of_contents: false
 title: 'Upgrade'
-sidebar_position: 3
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-quicksilver">
-  # Upgrade
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `rhye-3` | Current Node Version: `v1.8.0-rc.1`
-
-# With Cosmovisor
+<PageTitle
+  iconUrl="img/quicksilver-icon.svg"
+  title="Upgrade"
+  chainId="rhye-3"
+  version="v1.8.0-rc.1"
+/>
 
 ## Clone Quicksilver repository
 
@@ -54,7 +56,7 @@ git checkout v1.8.0-rc.1
 make install
 ```
 
-### Restart node and check logs
+## Restart node and check logs
 
 ```js
 sudo systemctl restart quicksilverd && sudo journalctl -u quicksilverd -f --no-hostname -o cat

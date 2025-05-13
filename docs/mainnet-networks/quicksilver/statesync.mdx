@@ -1,14 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'State sync'
 sidebar_position: 4
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-quicksilver">
-  # State sync
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `quicksilver-2` | Current Node Version: `v1.8.1`
+<PageTitle
+  iconUrl="img/quicksilver-icon.svg"
+  title="State sync"
+  chainId="quicksilver-2"
+  version="v1.8.1"
+/>
+
+## How to enable state sync
 
 ```bash
 SNAP_RPC=https://quicksilver-rpc.noders.services:443 && \

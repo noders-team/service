@@ -1,14 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'State sync'
 sidebar_position: 4
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-atomone">
-  # State sync
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `atomone-testnet-1` | Current Node Version: `v2.0.0-rc1`
+<PageTitle
+  iconUrl="img/atomone-icon.svg"
+  title="State sync"
+  chainId="atomone-testnet-1"
+  version="v2.0.0-rc1"
+/>
+
+## How to enable state sync
 
 ```bash
 SNAP_RPC=https://atomone-t-rpc.noders.services:443 && \

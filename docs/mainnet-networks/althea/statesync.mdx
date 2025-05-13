@@ -1,14 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'State sync'
 sidebar_position: 4
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-althea">
-  # State sync
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `althea_258432-1` | Current Node Version: `v1.5.1`
+<PageTitle
+  iconUrl="img/althea-icon.svg"
+  title="State sync"
+  chainId="althea_258432-1"
+  version="v1.5.1"
+/>
+
+## How to enable state sync
 
 ```bash
 SNAP_RPC=https://althea-rpc.noders.services:443 && \

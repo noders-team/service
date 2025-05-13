@@ -1,14 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'State sync'
 sidebar_position: 4
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-desmos">
-  # State sync
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `desmos-mainnet` | Current Node Version: `v7.1.0`
+<PageTitle
+  iconUrl="img/desmos-icon.svg"
+  title="State sync"
+  chainId="desmos-mainnet"
+  version="v7.1.0"
+/>
+
+## How to enable state sync
 
 ```bash
 SNAP_RPC=https://desmos-rpc.noders.services:443 && \

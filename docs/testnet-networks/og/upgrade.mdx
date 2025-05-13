@@ -1,16 +1,18 @@
 ---
-hide_table_of_contents: false
 title: 'Upgrade'
-sidebar_position: 3
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-og">
-  # Upgrade
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `zgtendermint_16600-2` | Current Node Version: `v0.5.0.1`
-
-# With Cosmovisor
+<PageTitle
+  iconUrl="img/og-icon.svg"
+  title="Upgrade"
+  chainId="zgtendermint_16600-2"
+  version="v0.5.0.1"
+/>
 
 ## Clone ZeroGravity repository
 
@@ -54,7 +56,7 @@ git checkout v0.5.0.1
 make install
 ```
 
-### Restart node and check logs
+## Restart node and check logs
 
 ```js
 sudo systemctl restart 0gchaind && sudo journalctl -u 0gchaind -f --no-hostname -o cat

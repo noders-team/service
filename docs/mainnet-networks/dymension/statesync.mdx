@@ -1,14 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'State sync'
 sidebar_position: 4
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-dymension">
-  # State sync
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `dymension_1100-1` | Current Node Version: `v3.2.0`
+<PageTitle
+  iconUrl="img/dymension-icon.svg"
+  title="State sync"
+  chainId="dymension_1100-1"
+  version="v3.2.0"
+/>
+
+## How to enable state sync
 
 ```bash
 SNAP_RPC=https://dymension-rpc.noders.services:443 && \

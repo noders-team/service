@@ -1,14 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'State sync'
 sidebar_position: 4
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-empeiria">
-  # State sync
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `empe-testnet-2` | Current Node Version: `v0.3.0`
+<PageTitle
+  iconUrl="img/empeiria-icon.svg"
+  title="State sync"
+  chainId="empe-testnet-2"
+  version="v0.3.0"
+/>
+
+## How to enable state sync
 
 ```bash
 SNAP_RPC=https://empeiria-t-rpc.noders.services:443 && \

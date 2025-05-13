@@ -1,16 +1,18 @@
 ---
-hide_table_of_contents: false
 title: 'Upgrade'
-sidebar_position: 3
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-crossfi">
-  # Upgrade
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `crossfi-evm-testnet-1` | Current Node Version: `v0.4.0`
-
-# With Cosmovisor
+<PageTitle
+  iconUrl="img/crossfi-icon.svg"
+  title="Upgrade"
+  chainId="crossfi-evm-testnet-1"
+  version="v0.4.0"
+/>
 
 ## Clone CrossFI repository
 
@@ -54,7 +56,7 @@ git checkout v0.4.0
 make install
 ```
 
-### Restart node and check logs
+## Restart node and check logs
 
 ```js
 sudo systemctl restart crossfid && sudo journalctl -u crossfid -f --no-hostname -o cat

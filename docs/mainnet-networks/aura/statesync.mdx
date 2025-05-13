@@ -1,14 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'State sync'
 sidebar_position: 4
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-aura">
-  # State sync
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `aura_6322-2` | Current Node Version: `v0.9.3`
+<PageTitle
+  iconUrl="img/aura-icon.svg"
+  title="State sync"
+  chainId="aura_6322-2"
+  version="v0.9.3"
+/>
+
+## How to enable state sync
 
 ```bash
 SNAP_RPC=https://aura-rpc.noders.services:443 && \

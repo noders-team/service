@@ -1,14 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'State sync'
 sidebar_position: 4
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-celestia">
-  # State sync
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `mocha-4` | Current Node Version: `3.8.1-mocha`
+<PageTitle
+  iconUrl="img/celestia-icon.svg"
+  title="State sync"
+  chainId="mocha-4"
+  version="3.8.1-mocha"
+/>
+
+## How to enable state sync
 
 ```bash
 SNAP_RPC=https://celestia-t-rpc.noders.services:443 && \

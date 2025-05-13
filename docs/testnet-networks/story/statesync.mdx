@@ -1,14 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'State sync'
 sidebar_position: 4
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-story">
-  # State sync
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `devnet-1` | Current Node Version: `v1.1.0`
+<PageTitle
+  iconUrl="img/story-icon.svg"
+  title="State sync"
+  chainId="devnet-1"
+  version="v1.1.0"
+/>
+
+## How to enable state sync
 
 ```bash
 SNAP_RPC=https://story-t-rpc.noders.services:443 && \

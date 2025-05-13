@@ -1,16 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'Upgrade'
-sidebar_position: 3
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-desmos">
-  # Upgrade
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `desmos-mainnet` | Current Node Version: `v7.1.0`
+<PageTitle
+  iconUrl="img/desmos-icon.svg"
+  title="Upgrade"
+  chainId="desmos-mainnet"
+  version="v7.1.0"
+/>
 
-# Clone Desmos repository
+## Clone Desmos repository
 
 ```js
 cd $HOME
@@ -20,13 +24,13 @@ cd desmos-labs
 git checkout v7.1.0
 ```
 
-# Build binaries
+## Build binaries
 
 ```js
 make build
 ```
 
-# Prepare binaries for Cosmovisor
+## Prepare binaries for Cosmovisor
 
 ```js
 mkdir -p ~/.desmos/cosmovisor/upgrades/v7.1.0/bin

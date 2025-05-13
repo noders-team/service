@@ -1,16 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'Upgrade'
-sidebar_position: 3
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-jackal">
-  # Upgrade
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `jackal-1` | Current Node Version: `v3.2.1`
+<PageTitle
+  iconUrl="img/jackal-icon.svg"
+  title="Upgrade"
+  chainId="jackal-1"
+  version="v3.2.1"
+/>
 
-# Clone Jackal repository
+## Clone Jackal repository
 
 ```js
 cd $HOME
@@ -20,13 +24,13 @@ cd canine-chain
 git checkout v3.2.1
 ```
 
-# Build binaries
+## Build binaries
 
 ```js
 make build
 ```
 
-# Prepare binaries for Cosmovisor
+## Prepare binaries for Cosmovisor
 
 ```js
 mkdir -p ~/.canine/cosmovisor/upgrades/v3.2.1/bin

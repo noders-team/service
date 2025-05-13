@@ -1,16 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'Upgrade'
-sidebar_position: 3
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-quicksilver">
-  # Upgrade
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `quicksilver-2` | Current Node Version: `v1.8.1`
+<PageTitle
+  iconUrl="img/quicksilver-icon.svg"
+  title="Upgrade"
+  chainId="quicksilver-2"
+  version="v1.8.1"
+/>
 
-# Clone Quicksilver repository
+## Clone Quicksilver repository
 
 ```js
 cd $HOME
@@ -20,13 +24,13 @@ cd quicksilver-zone
 git checkout v1.8.1
 ```
 
-# Build binaries
+## Build binaries
 
 ```js
 make build
 ```
 
-# Prepare binaries for Cosmovisor
+## Prepare binaries for Cosmovisor
 
 ```js
 mkdir -p ~/.quicksilverd/cosmovisor/upgrades/v1.8.1/bin

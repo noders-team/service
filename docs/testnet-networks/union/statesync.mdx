@@ -1,14 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'State sync'
 sidebar_position: 4
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-union">
-  # State sync
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `union-testnet-9` | Current Node Version: `v0.25.0`
+<PageTitle
+  iconUrl="img/union-icon.svg"
+  title="State sync"
+  chainId="union-testnet-9"
+  version="v0.25.0"
+/>
+
+## How to enable state sync
 
 ```bash
 SNAP_RPC=https://union-t-rpc.noders.services:443 && \

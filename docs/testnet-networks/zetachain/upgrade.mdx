@@ -1,16 +1,18 @@
 ---
-hide_table_of_contents: false
 title: 'Upgrade'
-sidebar_position: 3
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-zetachain">
-  # Upgrade
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `athens_7001-1` | Current Node Version: `v30.0.0`
-
-# With Cosmovisor
+<PageTitle
+  iconUrl="img/zetachain-icon.svg"
+  title="Upgrade"
+  chainId="athens_7001-1"
+  version="v30.0.0"
+/>
 
 ## Clone Zetachain repository
 
@@ -54,7 +56,7 @@ git checkout v30.0.0
 make install
 ```
 
-### Restart node and check logs
+## Restart node and check logs
 
 ```js
 sudo systemctl restart zetacored && sudo journalctl -u zetacored -f --no-hostname -o cat

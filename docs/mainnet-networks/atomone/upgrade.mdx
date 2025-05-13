@@ -1,16 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'Upgrade'
-sidebar_position: 3
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-atomone">
-  # Upgrade
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `atomone-1` | Current Node Version: `v1.1.2`
+<PageTitle
+  iconUrl="img/atomone-icon.svg"
+  title="Upgrade"
+  chainId="atomone-1"
+  version="v1.1.2"
+/>
 
-# Clone Atomone repository
+## Clone Atomone repository
 
 ```js
 cd $HOME
@@ -20,13 +24,13 @@ cd atomone
 git checkout v1.1.2
 ```
 
-# Build binaries
+## Build binaries
 
 ```js
 make build
 ```
 
-# Prepare binaries for Cosmovisor
+## Prepare binaries for Cosmovisor
 
 ```js
 mkdir -p ~/.atomone/cosmovisor/upgrades/v1.1.2/bin

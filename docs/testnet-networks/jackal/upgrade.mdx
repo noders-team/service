@@ -1,16 +1,18 @@
 ---
-hide_table_of_contents: false
 title: 'Upgrade'
-sidebar_position: 3
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-jackal">
-  # Upgrade
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `lupulella-2` | Current Node Version: `canary-17-gb6ed8056`
-
-# With Cosmovisor
+<PageTitle
+  iconUrl="img/jackal-icon.svg"
+  title="Upgrade"
+  chainId="lupulella-2"
+  version="canary-17-gb6ed8056"
+/>
 
 ## Clone Jackal repository
 
@@ -54,7 +56,7 @@ git checkout canary-17-gb6ed8056
 make install
 ```
 
-### Restart node and check logs
+## Restart node and check logs
 
 ```js
 sudo systemctl restart canined && sudo journalctl -u canined -f --no-hostname -o cat

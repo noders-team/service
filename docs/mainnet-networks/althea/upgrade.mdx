@@ -1,16 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'Upgrade'
-sidebar_position: 3
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-althea">
-  # Upgrade
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `althea_258432-1` | Current Node Version: `v1.5.1`
+<PageTitle
+  iconUrl="img/althea-icon.svg"
+  title="Upgrade"
+  chainId="althea_258432-1"
+  version="v1.5.1"
+/>
 
-# Clone Althea repository
+## Clone Althea repository
 
 ```js
 cd $HOME
@@ -20,13 +24,13 @@ cd althea-chain
 git checkout v1.5.1
 ```
 
-# Build binaries
+## Build binaries
 
 ```js
 make build
 ```
 
-# Prepare binaries for Cosmovisor
+## Prepare binaries for Cosmovisor
 
 ```js
 mkdir -p ~/.althea/cosmovisor/upgrades/v1.5.1/bin

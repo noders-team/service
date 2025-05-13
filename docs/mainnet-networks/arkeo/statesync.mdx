@@ -1,14 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'State sync'
 sidebar_position: 4
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-arkeo">
-  # State sync
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `arkeo-main-v1` | Current Node Version: `v1.0.13`
+<PageTitle
+  iconUrl="img/arkeo-icon.svg"
+  title="State sync"
+  chainId="arkeo-main-v1"
+  version="v1.0.13"
+/>
+
+## How to enable state sync
 
 ```bash
 SNAP_RPC=https://arkeo-rpc.noders.services:443 && \

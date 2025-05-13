@@ -1,14 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'State sync'
 sidebar_position: 4
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-router">
-  # State sync
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `router_9600-1` | Current Node Version: `v1.6.0`
+<PageTitle
+  iconUrl="img/router-icon.svg"
+  title="State sync"
+  chainId="router_9600-1"
+  version="v1.6.0"
+/>
+
+## How to enable state sync
 
 ```bash
 SNAP_RPC=https://router-rpc.noders.services:443 && \

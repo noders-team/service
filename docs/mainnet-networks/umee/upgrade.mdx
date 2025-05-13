@@ -1,16 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'Upgrade'
-sidebar_position: 3
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-umee">
-  # Upgrade
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `umee-1` | Current Node Version: `v6.7.3`
+<PageTitle
+  iconUrl="img/umee-icon.svg"
+  title="Upgrade"
+  chainId="umee-1"
+  version="v6.7.3"
+/>
 
-# Clone UX repository
+## Clone UX repository
 
 ```js
 cd $HOME
@@ -20,13 +24,13 @@ cd umee-network
 git checkout v6.7.3
 ```
 
-# Build binaries
+## Build binaries
 
 ```js
 make build
 ```
 
-# Prepare binaries for Cosmovisor
+## Prepare binaries for Cosmovisor
 
 ```js
 mkdir -p ~/.umee/cosmovisor/upgrades/v6.7.3/bin

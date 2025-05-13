@@ -1,16 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'Upgrade'
-sidebar_position: 3
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-aura">
-  # Upgrade
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `aura_6322-2` | Current Node Version: `v0.9.3`
+<PageTitle
+  iconUrl="img/aura-icon.svg"
+  title="Upgrade"
+  chainId="aura_6322-2"
+  version="v0.9.3"
+/>
 
-# Clone Aura repository
+## Clone Aura repository
 
 ```js
 cd $HOME
@@ -20,13 +24,13 @@ cd aura-nw
 git checkout v0.9.3
 ```
 
-# Build binaries
+## Build binaries
 
 ```js
 make build
 ```
 
-# Prepare binaries for Cosmovisor
+## Prepare binaries for Cosmovisor
 
 ```js
 mkdir -p ~/.aura/cosmovisor/upgrades/v0.9.3/bin

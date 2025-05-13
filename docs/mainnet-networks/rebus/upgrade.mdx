@@ -1,16 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'Upgrade'
-sidebar_position: 3
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-rebus">
-  # Upgrade
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `reb_1111-1` | Current Node Version: `v0.5.0`
+<PageTitle
+  iconUrl="img/rebus-icon.svg"
+  title="Upgrade"
+  chainId="reb_1111-1"
+  version="v0.5.0"
+/>
 
-# Clone Rebus repository
+## Clone Rebus repository
 
 ```js
 cd $HOME
@@ -20,13 +24,13 @@ cd rebuschain
 git checkout v0.5.0
 ```
 
-# Build binaries
+## Build binaries
 
 ```js
 make build
 ```
 
-# Prepare binaries for Cosmovisor
+## Prepare binaries for Cosmovisor
 
 ```js
 mkdir -p ~/.rebusd/cosmovisor/upgrades/v0.5.0/bin

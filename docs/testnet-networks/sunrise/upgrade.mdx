@@ -1,16 +1,18 @@
 ---
-hide_table_of_contents: false
 title: 'Upgrade'
-sidebar_position: 3
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-sunrise">
-  # Upgrade
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `sunrise-test-0.2` | Current Node Version: `v0.2.6`
-
-# With Cosmovisor
+<PageTitle
+  iconUrl="img/sunrise-icon.svg"
+  title="Upgrade"
+  chainId="sunrise-test-0.2"
+  version="v0.2.6"
+/>
 
 ## Clone Sunrise repository
 
@@ -54,7 +56,7 @@ git checkout v0.2.6
 make install
 ```
 
-### Restart node and check logs
+## Restart node and check logs
 
 ```js
 sudo systemctl restart sunrised && sudo journalctl -u sunrised -f --no-hostname -o cat
