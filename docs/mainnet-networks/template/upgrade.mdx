@@ -1,16 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'Upgrade'
-sidebar_position: 3
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-[CHAIN_SYSTEM_NAME]">
-  # Upgrade
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `[CHAIN_ID]` | Current Node Version: `[VERSION]`
+<PageTitle
+  iconUrl="img/[CHAIN_ICON]"
+  title="Upgrade"
+  chainId="[CHAIN_ID]"
+  version="[VERSION]"
+/>
 
-# Clone [CHAIN_NAME] repository
+## Clone [CHAIN_NAME] repository
 
 ```js
 cd $HOME
@@ -20,13 +24,13 @@ cd [GITHUB_FOLDER_NAME]
 git checkout [VERSION]
 ```
 
-# Build binaries
+## Build binaries
 
 ```js
 make build
 ```
 
-# Prepare binaries for Cosmovisor
+## Prepare binaries for Cosmovisor
 
 ```js
 mkdir -p [DAEMON_HOME]/cosmovisor/upgrades/[VERSION]/bin

@@ -1,29 +1,23 @@
 ---
+title: 'Public Endpoints'
+sidebar_position: 6
+hide_title: true
 hide_table_of_contents: false
-title: 'Public endpoints'
-sidebar_position: 3
 ---
 
-<div class="h1-with-icon icon-[CHAIN_SYSTEM_NAME]">
-  # Public endpoints
-</div>
+import PageTitle from "@site/src/components/PageTitle";
+import Endpoints from "@site/src/components/Endpoints";
 
-## REST
+<PageTitle
+  iconUrl="img/[CHAIN_ICON]"
+  title="Public Endpoints"
+  chainId="[CHAIN_ID]"
+  version="[VERSION]"
+/>
 
-```bash
-[ENDPOINT_API]
-```
-
-## RPC
-
-```bash
-[ENDPOINT_RPC]
-```
-
-## GRPC
-
-```bash
-[ENDPOINT_GRPC]
-```
-
-[JRPC_SECTION]
+<Endpoints
+  api="[ENDPOINT_API]"
+  rpc="[ENDPOINT_RPC]"
+  grpc="[ENDPOINT_GRPC]"
+  jsonRpc="[ENDPOINT_JRPC]"
+/>

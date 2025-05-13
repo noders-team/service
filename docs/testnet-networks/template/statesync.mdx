@@ -1,14 +1,20 @@
 ---
-hide_table_of_contents: false
 title: 'State sync'
 sidebar_position: 4
+hide_title: true
+hide_table_of_contents: false
 ---
 
-<div class="h1-with-icon icon-[CHAIN_SYSTEM_NAME]">
-  # State sync
-</div>
+import PageTitle from "@site/src/components/PageTitle";
 
-###### Chain ID: `[CHAIN_ID]` | Current Node Version: `[VERSION]`
+<PageTitle
+  iconUrl="img/[CHAIN_ICON]"
+  title="State sync"
+  chainId="[CHAIN_ID]"
+  version="[VERSION]"
+/>
+
+## How to enable state sync
 
 ```bash
 SNAP_RPC=[ENDPOINT_RPC]:443 && \
