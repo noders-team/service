@@ -2,7 +2,7 @@
 CHAIN_NAME="BitSong"
 CHAIN_SYSTEM_NAME="bitsong"
 CHAIN_ICON="bitsong-icon.svg"
-CHAIN_BACKGROUND_COLOR=""
+CHAIN_BACKGROUND_COLOR="#F42172"
 
 # Blockchain
 CHAIN_ID="auto"

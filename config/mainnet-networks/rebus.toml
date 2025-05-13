@@ -2,7 +2,7 @@
 CHAIN_NAME="Rebus"
 CHAIN_SYSTEM_NAME="rebus"
 CHAIN_ICON="rebus-icon.svg"
-CHAIN_BACKGROUND_COLOR=""
+CHAIN_BACKGROUND_COLOR="#FD3FB1"
 
 # Blockchain
 CHAIN_ID="auto"

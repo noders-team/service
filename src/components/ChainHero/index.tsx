@@ -50,9 +50,9 @@ function ChainHero({
   const isMobile = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   const showStakingButtons = stakeUrl || restakeUrl;
 
-  let bgColorString = alpha(theme.palette.primary.main, 0.6);
+  let bgColorString = alpha(theme.palette.primary.main, 0.5);
   if (bgColor && bgColor !== '[CHAIN_BACKGROUND_COLOR]') {
-    bgColorString = alpha(bgColor, 0.6);
+    bgColorString = alpha(bgColor, 0.5);
   }
 
   const handleLinkClick = (url: string) => {

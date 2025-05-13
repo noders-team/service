@@ -2,10 +2,20 @@
 CHAIN_NAME="Story"
 CHAIN_SYSTEM_NAME="story"
 CHAIN_ICON="story-icon.svg"
-CHAIN_BACKGROUND_COLOR=""
+CHAIN_BACKGROUND_COLOR="#EEE9EA"
+
+# NODERS
+STAKE_URL=""
+RESTAKE_URL=""
+VALIDATOR_URL=""
+EXPLORER_URL="https://ipstoryhub.org/explorer"
+APP_URL="https://ipstoryhub.org"
+APP_IMAGE="story-app.png"
+FAUCET_URL=""
 
 # Blockchain
 CHAIN_ID="devnet-1"
+CHAIN_DENOM_PRETTY="IP"
 CHAIN_DENOM="aip"
 CHAIN_FEES="300000000000"
 
@@ -22,6 +32,7 @@ ENDPOINT_JRPC="https://story-t-jsonrpc.noders.services"
 ENDPOINT_GRPC=""
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/story"
+ENDPOINT_SEED=""
 
 # Social
 SOCIAL_WEBSITE="https://www.story.foundation/"
@@ -33,7 +44,6 @@ SOCIAL_TELEGRAM=""
 # Other
 SNAPSHOT_URL="https://snapshots-t.noders.services/story"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL=""
 
 # Updates
 UPDATE_MAIN=true

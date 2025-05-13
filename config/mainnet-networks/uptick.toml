@@ -2,7 +2,7 @@
 CHAIN_NAME="Uptick"
 CHAIN_SYSTEM_NAME="uptick"
 CHAIN_ICON="uptick-icon.svg"
-CHAIN_BACKGROUND_COLOR=""
+CHAIN_BACKGROUND_COLOR="#7600F3"
 
 # Blockchain
 CHAIN_ID="auto"

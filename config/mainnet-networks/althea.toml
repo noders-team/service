@@ -2,7 +2,7 @@
 CHAIN_NAME="Althea"
 CHAIN_SYSTEM_NAME="althea"
 CHAIN_ICON="althea-icon.svg"
-CHAIN_BACKGROUND_COLOR=""
+CHAIN_BACKGROUND_COLOR="#5DA9FF"
 
 # Blockchain
 CHAIN_ID="auto"

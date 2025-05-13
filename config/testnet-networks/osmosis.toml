@@ -2,7 +2,7 @@
 CHAIN_NAME="Osmosis"
 CHAIN_SYSTEM_NAME="osmosis"
 CHAIN_ICON="osmosis-icon.svg"
-CHAIN_BACKGROUND_COLOR=""
+CHAIN_BACKGROUND_COLOR="#AB00C2"
 
 # Blockchain
 CHAIN_ID="auto"

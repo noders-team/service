@@ -2,7 +2,7 @@
 CHAIN_NAME="Gitopia"
 CHAIN_SYSTEM_NAME="gitopia"
 CHAIN_ICON="gitopia-icon.svg"
-CHAIN_BACKGROUND_COLOR=""
+CHAIN_BACKGROUND_COLOR="#7269CA"
 
 # Blockchain
 CHAIN_ID="auto"

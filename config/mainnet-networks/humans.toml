@@ -2,7 +2,7 @@
 CHAIN_NAME="Humans"
 CHAIN_SYSTEM_NAME="humans"
 CHAIN_ICON="humans-icon.svg"
-CHAIN_BACKGROUND_COLOR=""
+CHAIN_BACKGROUND_COLOR="#5EFEC6"
 
 # Blockchain
 CHAIN_ID="auto"

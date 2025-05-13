@@ -2,7 +2,7 @@
 CHAIN_NAME="Realio"
 CHAIN_SYSTEM_NAME="realio"
 CHAIN_ICON="realio-icon.svg"
-CHAIN_BACKGROUND_COLOR=""
+CHAIN_BACKGROUND_COLOR="#67676799"
 
 # Blockchain
 CHAIN_ID="auto"

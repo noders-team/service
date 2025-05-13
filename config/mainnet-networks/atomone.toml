@@ -2,7 +2,7 @@
 CHAIN_NAME="Atomone"
 CHAIN_SYSTEM_NAME="atomone"
 CHAIN_ICON="atomone-icon.svg"
-CHAIN_BACKGROUND_COLOR=""
+CHAIN_BACKGROUND_COLOR="#1F1E2E"
 
 # Blockchain
 CHAIN_ID="auto"

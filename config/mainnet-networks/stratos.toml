@@ -2,7 +2,7 @@
 CHAIN_NAME="Stratos"
 CHAIN_SYSTEM_NAME="stratos"
 CHAIN_ICON="stratos-icon.svg"
-CHAIN_BACKGROUND_COLOR=""
+CHAIN_BACKGROUND_COLOR="#33948A"
 
 # Blockchain
 CHAIN_ID="auto"

@@ -2,10 +2,20 @@
 CHAIN_NAME="Airchains"
 CHAIN_SYSTEM_NAME="airchains"
 CHAIN_ICON="airchains-icon.svg"
-CHAIN_BACKGROUND_COLOR=""
+CHAIN_BACKGROUND_COLOR="#7F61EE"
+
+# NODERS
+STAKE_URL=""
+RESTAKE_URL=""
+VALIDATOR_URL=""
+EXPLORER_URL=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL="https://faucet.noders.services/airchains"
 
 # Blockchain
 CHAIN_ID="auto"
+CHAIN_DENOM_PRETTY="AMF"
 CHAIN_DENOM="uamf"
 CHAIN_FEES="20000"
 
@@ -22,6 +32,7 @@ ENDPOINT_JRPC=""
 ENDPOINT_GRPC="https://airchains-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/airchains"
+ENDPOINT_SEED=""
 
 # Social
 SOCIAL_WEBSITE="https://www.airchains.io/"
@@ -33,7 +44,6 @@ SOCIAL_TELEGRAM=""
 # Other
 SNAPSHOT_URL="https://snapshots-t.noders.services/airchains"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://explorer.stavr.tech/Airchains-Testnet/staking/airvaloper1z6q26lprv70xgztfzgnfxgm7t57xh0p0hugz54"
 
 # Updates
 UPDATE_MAIN=true

@@ -2,7 +2,7 @@
 CHAIN_NAME="Nillion"
 CHAIN_SYSTEM_NAME="nillion"
 CHAIN_ICON="nillion-icon.svg"
-CHAIN_BACKGROUND_COLOR="#331BF2"
+CHAIN_BACKGROUND_COLOR="#0000FE"
 
 # NODERS
 STAKE_URL="https://wallet.keplr.app/chains/nillion?modal=staking&chain=nillion-1&validator_address=nillionvaloper12dzevy6zu7kyqvx6hsa4ajru8835wga6k0tphu&step_id=3&action_id=stake"

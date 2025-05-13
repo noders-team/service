@@ -2,7 +2,7 @@
 CHAIN_NAME="Sunrise"
 CHAIN_SYSTEM_NAME="sunrise"
 CHAIN_ICON="sunrise-icon.svg"
-CHAIN_BACKGROUND_COLOR=""
+CHAIN_BACKGROUND_COLOR="#EDBC64"
 
 # Blockchain
 CHAIN_ID="auto"

@@ -2,7 +2,7 @@
 CHAIN_NAME="Desmos"
 CHAIN_SYSTEM_NAME="desmos"
 CHAIN_ICON="desmos-icon.svg"
-CHAIN_BACKGROUND_COLOR=""
+CHAIN_BACKGROUND_COLOR="#E97E58"
 
 # Blockchain
 CHAIN_ID="auto"

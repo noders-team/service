@@ -2,7 +2,7 @@
 CHAIN_NAME="Warden"
 CHAIN_SYSTEM_NAME="warden"
 CHAIN_ICON="warden-icon.svg"
-CHAIN_BACKGROUND_COLOR=""
+CHAIN_BACKGROUND_COLOR="#CAFF93"
 
 # Blockchain
 CHAIN_ID="auto"

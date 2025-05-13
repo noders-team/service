@@ -4,14 +4,25 @@ CHAIN_SYSTEM_NAME="og"
 CHAIN_ICON="og-icon.svg"
 CHAIN_BACKGROUND_COLOR=""
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL=""
+VALIDATOR_URL=""
+EXPLORER_URL="https://0ghub.org/explorer"
+APP_URL="https://0ghub.org/"
+APP_IMAGE="og-app.png"
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
+CHAIN_DENOM_PRETTY="A0GI"
 CHAIN_DENOM="ua0gi"
 CHAIN_FEES="20000"
 
 # Binary
 VERSION="auto"
 DAEMON_NAME="0gchaind"
+DAEMON_SERVICE="og.service"
 DAEMON_HOME="~/.0gchain"
 
 # Endpoints
@@ -21,6 +32,7 @@ ENDPOINT_JRPC="https://og-t-json.noders.services"
 ENDPOINT_GRPC="https://og-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/og"
+ENDPOINT_SEED=""
 
 # Social
 SOCIAL_WEBSITE="https://0g.ai/"

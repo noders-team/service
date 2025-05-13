@@ -2,7 +2,7 @@
 CHAIN_NAME="Quicksilver"
 CHAIN_SYSTEM_NAME="quicksilver"
 CHAIN_ICON="quicksilver-icon.svg"
-CHAIN_BACKGROUND_COLOR=""
+CHAIN_BACKGROUND_COLOR="#75757599"
 
 # Blockchain
 CHAIN_ID="auto"

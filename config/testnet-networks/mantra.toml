@@ -2,7 +2,7 @@
 CHAIN_NAME="Mantra"
 CHAIN_SYSTEM_NAME="mantra"
 CHAIN_ICON="mantra-icon.svg"
-CHAIN_BACKGROUND_COLOR=""
+CHAIN_BACKGROUND_COLOR="#FE99D0"
 
 # Blockchain
 CHAIN_ID="auto"

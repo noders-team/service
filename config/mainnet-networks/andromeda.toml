@@ -2,7 +2,7 @@
 CHAIN_NAME="Andromeda"
 CHAIN_SYSTEM_NAME="andromeda"
 CHAIN_ICON="andromeda-icon.svg"
-CHAIN_BACKGROUND_COLOR=""
+CHAIN_BACKGROUND_COLOR="#EC2842"
 
 # Blockchain
 CHAIN_ID="auto"

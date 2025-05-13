@@ -2,7 +2,7 @@
 CHAIN_NAME="Zenrock"
 CHAIN_SYSTEM_NAME="zenrock"
 CHAIN_ICON="zenrock-icon.svg"
-CHAIN_BACKGROUND_COLOR=""
+CHAIN_BACKGROUND_COLOR="#050C40"
 
 # Blockchain
 CHAIN_ID="auto"

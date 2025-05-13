@@ -2,10 +2,20 @@
 CHAIN_NAME="Zetachain"
 CHAIN_SYSTEM_NAME="zetachain"
 CHAIN_ICON="zetachain-icon.svg"
-CHAIN_BACKGROUND_COLOR=""
+CHAIN_BACKGROUND_COLOR="#1A563E"
+
+# NODERS
+STAKE_URL=""
+RESTAKE_URL=""
+VALIDATOR_URL=""
+EXPLORER_URL=""
+APP_URL="https://zetaresources.org"
+APP_IMAGE="zetachain-app.png"
+FAUCET_URL=""
 
 # Blockchain
 CHAIN_ID="auto"
+CHAIN_DENOM_PRETTY="ZETA"
 CHAIN_DENOM="azeta"
 CHAIN_FEES="300000000000"
 
@@ -22,6 +32,7 @@ ENDPOINT_JRPC="https://zetachain-t-jsonrpc.noders.services"
 ENDPOINT_GRPC="https://zetachain-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/zetachain"
+ENDPOINT_SEED=""
 
 # Social
 SOCIAL_WEBSITE="https://www.zetachain.com/"
@@ -33,7 +44,6 @@ SOCIAL_TELEGRAM="https://t.me/zetachainofficial"
 # Other
 SNAPSHOT_URL="https://snapshots-t.noders.services/zetachain"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://athens.explorer.zetachain.com/address/0x49A17CCa0Fd5cb5AE9056Bbac316D3FCe098Aed2"
 
 # Updates
 UPDATE_MAIN=true

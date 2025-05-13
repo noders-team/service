@@ -2,7 +2,7 @@
 CHAIN_NAME="Arkeo"
 CHAIN_SYSTEM_NAME="arkeo"
 CHAIN_ICON="arkeo-icon.svg"
-CHAIN_BACKGROUND_COLOR=""
+CHAIN_BACKGROUND_COLOR="#3CE2FB"
 
 # Blockchain
 CHAIN_ID="auto"

@@ -2,7 +2,7 @@
 CHAIN_NAME="Axone"
 CHAIN_SYSTEM_NAME="axone"
 CHAIN_ICON="axone-icon.svg"
-CHAIN_BACKGROUND_COLOR=""
+CHAIN_BACKGROUND_COLOR="#FB5F03"
 
 # Blockchain
 CHAIN_ID="auto"

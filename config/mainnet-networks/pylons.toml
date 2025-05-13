@@ -2,7 +2,7 @@
 CHAIN_NAME="Pylons"
 CHAIN_SYSTEM_NAME="pylons"
 CHAIN_ICON="pylons-icon.svg"
-CHAIN_BACKGROUND_COLOR=""
+CHAIN_BACKGROUND_COLOR="#EF4520"
 
 # Blockchain
 CHAIN_ID="auto"
