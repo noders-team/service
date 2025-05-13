@@ -259,6 +259,13 @@
     "scope": "testnet"
   },
   {
+    "name": "dora",
+    "pretty_name": "DoraVota",
+    "chain_id": "vota-bobtail",
+    "logo_url": "img/dora-icon.svg",
+    "scope": "testnet"
+  },
+  {
     "name": "empeiria",
     "pretty_name": "Empeiria",
     "chain_id": "empe-testnet-2",
