@@ -68,7 +68,6 @@ function readBlockchainConfig {
   UPDATE_LIVE_PEERS=$(grep -oE '^UPDATE_LIVE_PEERS=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   UPDATE_CLI_CHEATSHEET=$(grep -oE '^UPDATE_CLI_CHEATSHEET=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   UPDATE_ENDPOINTS=$(grep -oE '^UPDATE_ENDPOINTS=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
-  JRPC_SECTION=""
 
   # Feature toggles
   SHOW_INSTALLATION_GUIDE=$(grep -oE '^SHOW_INSTALLATION_GUIDE=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
@@ -193,7 +192,6 @@ function replacePageVariables {
   sed -i '' "s|\[ENDPOINT_PEER\]|${ENDPOINT_PEER}|g" "$1"
   sed -i '' "s|\[ENDPOINT_COSMOSLIST\]|${ENDPOINT_COSMOSLIST}|g" "$1"
   sed -i '' "s|\[ENDPOINT_SEED\]|${ENDPOINT_SEED}|g" "$1"
-  sed -i '' "s|\[JRPC_SECTION\]|${JRPC_SECTION}|g" "$1"
 
   # Social
   sed -i '' "s|\[SOCIAL_WEBSITE\]|${SOCIAL_WEBSITE}|g" "$1"
@@ -383,16 +381,6 @@ function updateEndpoints {
     CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/endpoints.mdx"
     cp "../docs/mainnet-networks/template/endpoints.mdx" "${CHAIN_PAGE_PATH}"
     echo "${CHAIN_PAGE_PATH}"
-
-    if [ -n "${ENDPOINT_JRPC}" ]; then
-
-      JRPC_SECTION="
-## JSON RPC
-\`\`\`bash
-${ENDPOINT_JRPC}
-\`\`\`"
-
-    fi
 
     replacePageVariables "${CHAIN_PAGE_PATH}"
   fi

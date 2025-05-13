@@ -5,12 +5,13 @@ CHAIN_ICON="namada-icon.svg"
 CHAIN_BACKGROUND_COLOR=""
 
 # Blockchain
-CHAIN_ID="auto"
+CHAIN_ID="namada.5f5de2dd1b88cba30586420"
+CHAIN_DENOM_PRETTY="NAM"
 CHAIN_DENOM="NAM"
 CHAIN_FEES="1"
 
 # Binary
-VERSION="auto"
+VERSION="v1.0.0"
 DAEMON_NAME="namadad"
 DAEMON_SERVICE="namada.service"
 DAEMON_HOME="~/.local"
@@ -44,6 +45,7 @@ UPDATE_SNAPSHOT=false
 UPDATE_STATESYNC=false
 UPDATE_LIVE_PEERS=false
 UPDATE_CLI_CHEATSHEET=false
+UPDATE_ENDPOINTS=true
 
 # Feature toggles
 # Node installation
