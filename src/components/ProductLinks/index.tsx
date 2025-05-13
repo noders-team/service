@@ -32,6 +32,9 @@ function ProductLinks({ appUrl, appImageUrl, explorerUrl, faucetUrl }: Props): R
     },
   };
 
+  const activeLinksCount = [appUrl, explorerUrl, faucetUrl].filter(Boolean).length;
+  const gridColumns = activeLinksCount === 3 ? 2 : activeLinksCount;
+
   return (
     <Box
       display="grid"
@@ -40,10 +43,26 @@ function ProductLinks({ appUrl, appImageUrl, explorerUrl, faucetUrl }: Props): R
       sx={{
         gridTemplateColumns: {
           xs: 'repeat(1, 1fr)',
-          sm: 'repeat(2, 1fr)',
+          sm: `repeat(${gridColumns}, 1fr)`,
         },
       }}
     >
+      {appUrl && (
+        <SimpleCard gap={3} alignItems="center" paddingRight={3} onClick={() => handleClick(appUrl)} cursor="pointer">
+          <Box component="img" src={hubAppImageUrl} alt="Community App" width={120} height={120} />
+          <Box display="flex" flexDirection="column" gap={1} flexGrow={1}>
+            <Box display="flex" justifyContent="space-between" alignItems="center">
+              <Typography variant="h6" sx={{ fontSize: '18px', fontWeight: 600, ...typographyStyle }}>
+                CommunityApp
+              </Typography>
+              <PiArrowUpRightBold size={24} opacity={0.2} />
+            </Box>
+            <Typography variant="body2" sx={{ opacity: 0.5, ...typographyStyle }}>
+              One-stop portal for end-users, developers and researchers
+            </Typography>
+          </Box>
+        </SimpleCard>
+      )}
       {explorerUrl && (
         <SimpleCard
           gap={3}
@@ -84,22 +103,6 @@ function ProductLinks({ appUrl, appImageUrl, explorerUrl, faucetUrl }: Props): R
             </Box>
             <Typography variant="body2" sx={{ opacity: 0.5, ...typographyStyle }}>
               Claim testnet tokens for testing and build on the network
-            </Typography>
-          </Box>
-        </SimpleCard>
-      )}
-      {appUrl && (
-        <SimpleCard gap={3} alignItems="center" paddingRight={3} onClick={() => handleClick(appUrl)} cursor="pointer">
-          <Box component="img" src={hubAppImageUrl} alt="Community App" width={120} height={120} />
-          <Box display="flex" flexDirection="column" gap={1} flexGrow={1}>
-            <Box display="flex" justifyContent="space-between" alignItems="center">
-              <Typography variant="h6" sx={{ fontSize: '18px', fontWeight: 600, ...typographyStyle }}>
-                CommunityApp
-              </Typography>
-              <PiArrowUpRightBold size={24} opacity={0.2} />
-            </Box>
-            <Typography variant="body2" sx={{ opacity: 0.5, ...typographyStyle }}>
-              One-stop portal for end-users, developers and researchers
             </Typography>
           </Box>
         </SimpleCard>
