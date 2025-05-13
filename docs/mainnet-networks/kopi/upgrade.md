@@ -7,7 +7,7 @@ sidebar_position: 3
 <div class="h1-with-icon icon-kopi">
 # Upgrade
 </div>
-###### Chain ID: `luwak-1` | Current Node Version: `v19`
+###### Chain ID: `luwak-1` | Current Node Version: `v20.1`
 
 
 # Clone Kopi repository
@@ -16,7 +16,7 @@ cd $HOME
 rm -rf kopi
 git clone https://github.com/kopi-money/kopi.git
 cd kopi
-git checkout v19
+git checkout v20.1
  ```
 
 # Build binaries
@@ -26,8 +26,8 @@ make build
 
 # Prepare binaries for Cosmovisor
 ```js
-mkdir -p ~/.kopid/cosmovisor/upgrades/v19/bin
-mv build/uxkp ~/.kopid/cosmovisor/upgrades/v19/bin/
+mkdir -p ~/.kopid/cosmovisor/upgrades/v20.1/bin
+mv build/uxkp ~/.kopid/cosmovisor/upgrades/v20.1/bin/
 rm -rf build
 ```
 
@@ -38,7 +38,7 @@ cd $HOME
 rm -rf kopi
 git clone https://github.com/kopi-money/kopi.git
 cd kopi
-git checkout v19
+git checkout v20.1
  ```
 
 ## Build binaries

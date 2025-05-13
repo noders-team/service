@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-kopi">
 # Installation
 </div>
-###### Chain ID: `luwak-1` | Current Node Version: `v19`
+###### Chain ID: `luwak-1` | Current Node Version: `v20.1`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Kopi repo and build uxkp v19
+### Clone Kopi repo and build uxkp v20.1
 ```js
 cd $HOME
 git clone https://github.com/kopi-money/kopi.git
 cd kopi
-git checkout v19
+git checkout v20.1
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.kopid/cosmovisor/upgrades/v19/bin
-mv $HOME/go/bin/uxkp ~/.kopid/cosmovisor/upgrades/v19/bin/
+mkdir -p ~/.kopid/cosmovisor/upgrades/v20.1/bin
+mv $HOME/go/bin/uxkp ~/.kopid/cosmovisor/upgrades/v20.1/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Kopi repo and build uxkp v19
+### Clone Kopi repo and build uxkp v20.1
 ```js
 cd $HOME
 git clone https://github.com/kopi-money/kopi.git
 cd kopi
-git checkout v19
+git checkout v20.1
 ```
 
 ### Build binaries

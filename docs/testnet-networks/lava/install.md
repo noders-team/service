@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-lava">
 # Installation
 </div>
-###### Chain ID: `lava-testnet-2` | Current Node Version: `v5.3.0`
+###### Chain ID: `lava-testnet-2` | Current Node Version: `v5.4.0`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Lava repo and build lavad v5.3.0
+### Clone Lava repo and build lavad v5.4.0
 ```js
 cd $HOME
 git clone https://github.com/lavanet.git
 cd lavanet
-git checkout v5.3.0
+git checkout v5.4.0
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.lava/cosmovisor/upgrades/v5.3.0/bin
-mv $HOME/go/bin/lavad ~/.lava/cosmovisor/upgrades/v5.3.0/bin/
+mkdir -p ~/.lava/cosmovisor/upgrades/v5.4.0/bin
+mv $HOME/go/bin/lavad ~/.lava/cosmovisor/upgrades/v5.4.0/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Lava repo and build lavad v5.3.0
+### Clone Lava repo and build lavad v5.4.0
 ```js
 cd $HOME
 git clone https://github.com/lavanet.git
 cd lavanet
-git checkout v5.3.0
+git checkout v5.4.0
 ```
 
 ### Build binaries

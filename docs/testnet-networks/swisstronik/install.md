@@ -7,7 +7,7 @@ sidebar_position: 2
 <div class="h1-with-icon icon-swisstronik">
 # Installation
 </div>
-###### Chain ID: `swisstronik_1291-1` | Current Node Version: `v1.0.8`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 ## Install dependencies
 
@@ -36,12 +36,12 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 :::
 ### Download and build binaries
-### Clone Swisstronik repo and build swisstronikd v1.0.8
+### Clone Swisstronik repo and build swisstronikd auto
 ```js
 cd $HOME
 git clone https://github.com/SigmaGmbH.git
 cd SigmaGmbH
-git checkout v1.0.8
+git checkout auto
 ```
 
 ### Build binaries
@@ -51,8 +51,8 @@ make install
 ### Prepare binaries for Cosmovisor
 ```js
 cd $HOME
-mkdir -p ~/.swisstronik/cosmovisor/upgrades/v1.0.8/bin
-mv $HOME/go/bin/swisstronikd ~/.swisstronik/cosmovisor/upgrades/v1.0.8/bin/
+mkdir -p ~/.swisstronik/cosmovisor/upgrades/auto/bin
+mv $HOME/go/bin/swisstronikd ~/.swisstronik/cosmovisor/upgrades/auto/bin/
 ```
 
 ### Create symlinks
@@ -93,12 +93,12 @@ EOF
 ## Install without Cosmovisor
 
 ### Download and build binaries
-### Clone Swisstronik repo and build swisstronikd v1.0.8
+### Clone Swisstronik repo and build swisstronikd auto
 ```js
 cd $HOME
 git clone https://github.com/SigmaGmbH.git
 cd SigmaGmbH
-git checkout v1.0.8
+git checkout auto
 ```
 
 ### Build binaries
@@ -136,14 +136,14 @@ sudo systemctl enable swisstronikd
 ## Node configuration
 ### Set config
 ```js
-swisstronikd config chain-id swisstronik_1291-1
+swisstronikd config chain-id auto
 swisstronikd config keyring-backend os
 swisstronikd config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 ```js
-swisstronikd init NAME_OF_YOUR_VALIDATOR --chain-id swisstronik_1291-1
+swisstronikd init NAME_OF_YOUR_VALIDATOR --chain-id auto
 ```
 
 ### Download genesis and addrbook
@@ -153,7 +153,7 @@ curl https://snapshots-t.noders.services/swisstronik/addrbook.json -o ~/.swisstr
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"1db22294bec0fd095eaa4a3f2381aef5105b538c@swisstronik-t-rpc.noders.services:26656\"/" ~/.swisstronik/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@swisstronik-t-rpc.noders.services:\"/" ~/.swisstronik/config/config.toml
 ```
 
 ### Set minimum gas price

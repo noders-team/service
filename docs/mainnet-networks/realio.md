@@ -30,7 +30,7 @@ Official links of social networks of projects
 
 <CardLayout autoFitEnabled={true}>
     <Card
-        to="https://rebus.explorers.guru/validator/rebusvaloper1ssvn4vrw8c40r6zgyhhxclhp36n75sulca02pl"
+        to="https://ping.pub/realio/staking/realiovaloper1q0ju3af59l2kp2vfywcjrmj07tkgkg0s9zfh03"
         header={{
             label: "[NODERS]TEAM",
             translateId: "development-setup",

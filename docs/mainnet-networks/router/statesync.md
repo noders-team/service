@@ -20,7 +20,7 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 sudo systemctl stop routerd && routerd tendermint unsafe-reset-all --home ~/.routerd --keep-addr-book
 ```
 ```bash
-peers="3dc22c2dbe999e5c68e59b8a8de32c45785632da@router-rpc.noders.services:23756"
+peers="7406480265ca3f45cce81737abd245f3d3e6a8bb@router-rpc.noders.services:23756"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.routerd/config/config.toml
 ```
 ```bash

@@ -10,7 +10,7 @@ import CardLayout from "../../src/layouts/CardLayout"
 <div class="h1-with-icon icon-swisstronik">
 # Swisstronik
 </div>
-###### Chain ID: `swisstronik_1291-1` | Current Node Version: `v1.0.8`
+###### Chain ID: `auto` | Current Node Version: `auto`
 
 
 Swisstronik emerges as a trailblazer at the intersection of electronics and blockchain technology, offering innovative solutions that redefine security, transparency, and efficiency in electronic transactions and operations. By harmoniously integrating cutting-edge electronic technologies with the immutable security of blockchain, Swisstronik is setting new standards for the digital era, ensuring that every transaction and operation benefits from unparalleled security and reliability. This pioneering approach not only enhances the functionality and trustworthiness of electronic systems but also opens up new avenues for the application of blockchain technology in the electronics industry.

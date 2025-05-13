@@ -153,7 +153,7 @@ curl https://snapshots.noders.services/router/addrbook.json -o ~/.routerd/config
 ```
 ### Add peers
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"3dc22c2dbe999e5c68e59b8a8de32c45785632da@router-rpc.noders.services:23756\"/" ~/.routerd/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"7406480265ca3f45cce81737abd245f3d3e6a8bb@router-rpc.noders.services:23756\"/" ~/.routerd/config/config.toml
 ```
 
 ### Set minimum gas price

@@ -7,7 +7,7 @@ sidebar_position: 4
 <div class="h1-with-icon icon-lava">
 # State sync
 </div>
-###### Chain ID: `lava-testnet-2` | Current Node Version: `v5.3.0`
+###### Chain ID: `lava-testnet-2` | Current Node Version: `v5.4.0`
 
 ```bash
 SNAP_RPC=https://lava-t-rpc.noders.services:443 && \
