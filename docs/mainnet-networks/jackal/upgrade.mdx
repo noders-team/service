@@ -1,0 +1,63 @@
+---
+title: 'Upgrade'
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
+---
+
+import PageTitle from "@site/src/components/PageTitle";
+
+<PageTitle
+  iconUrl="img/jackal-icon.svg"
+  title="Upgrade"
+  chainId="jackal-1"
+  version="v3.2.1"
+/>
+
+## Clone Jackal repository
+
+```js
+cd $HOME
+rm -rf canine-chain
+git clone https://github.com/JackalLabs/canine-chain.git
+cd canine-chain
+git checkout v3.2.1
+```
+
+## Build binaries
+
+```js
+make build
+```
+
+## Prepare binaries for Cosmovisor
+
+```js
+mkdir -p ~/.canine/cosmovisor/upgrades/v3.2.1/bin
+mv build/canined ~/.canine/cosmovisor/upgrades/v3.2.1/bin/
+rm -rf build
+```
+
+# Without Cosmovisor
+
+## Clone Jackal repository
+
+```js
+cd $HOME
+rm -rf canine-chain
+git clone https://github.com/JackalLabs/canine-chain.git
+cd canine-chain
+git checkout v3.2.1
+```
+
+## Build binaries
+
+```js
+make install
+```
+
+## Restart node and check logs
+
+```js
+sudo systemctl restart canined && sudo journalctl -u canined -f --no-hostname -o cat
+```

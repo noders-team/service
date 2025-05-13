@@ -1,5 +1,6 @@
 import Box from '@mui/material/Box';
 import React from 'react';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 interface IllustrationProps {
   src: string;
@@ -8,17 +9,19 @@ interface IllustrationProps {
   height?: number | string;
 }
 
-function Illustration({ src, alt = '', width = 'auto', height = 'auto', ...props }: IllustrationProps) {  
+function Illustration({ src, alt = '', width = 'auto', height = 'auto', ...props }: IllustrationProps) {
+  const basedSrcUrl = useBaseUrl(src);
+
   return (
-    <Box 
-      component="img" 
-      src={src}
-      alt={alt} 
-      sx={{ 
-        width, 
+    <Box
+      component="img"
+      src={basedSrcUrl}
+      alt={alt}
+      sx={{
+        width,
         height,
-        objectFit: 'contain'
-      }} 
+        objectFit: 'contain',
+      }}
       {...props}
     />
   );

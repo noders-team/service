@@ -1,0 +1,63 @@
+---
+title: 'Upgrade'
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
+---
+
+import PageTitle from "@site/src/components/PageTitle";
+
+<PageTitle
+  iconUrl="img/nillion-icon.svg"
+  title="Upgrade"
+  chainId="nillion-chain-testnet-1"
+  version="v0.2.1"
+/>
+
+## Clone Nillion repository
+
+```js
+cd $HOME
+rm -rf NillionNetwork
+git clone https://github.com/NillionNetwork.git
+cd NillionNetwork
+git checkout v0.2.1
+```
+
+## Build binaries
+
+```js
+make build
+```
+
+## Prepare binaries for Cosmovisor
+
+```js
+mkdir -p ~/.nilliond/cosmovisor/upgrades/v0.2.1/bin
+mv build/nilliond ~/.nilliond/cosmovisor/upgrades/v0.2.1/bin/
+rm -rf build
+```
+
+# Without Cosmovisor
+
+## Clone Nillion repository
+
+```js
+cd $HOME
+rm -rf NillionNetwork
+git clone https://github.com/NillionNetwork.git
+cd NillionNetwork
+git checkout v0.2.1
+```
+
+## Build binaries
+
+```js
+make install
+```
+
+## Restart node and check logs
+
+```js
+sudo systemctl restart nilliond && sudo journalctl -u nilliond -f --no-hostname -o cat
+```

@@ -28,6 +28,12 @@ export default function MuiThemeProvider(props) {
         default: '#04060B',
         paper: '#111317',
       },
+      success: {
+        main: '#09C37C',
+      },
+      warning: {
+        main: '#FF9807',
+      },
       divider: '#1F232E',
     },
     typography: {
@@ -38,6 +44,8 @@ export default function MuiThemeProvider(props) {
       h4: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
       h5: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
       h6: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
+      subtitle2: { fontSize: '14px', fontWeight: 600 },
+      overline: { fontWeight: 600, opacity: 0.6 },
     },
     components: {
       MuiButton: {
@@ -57,12 +65,18 @@ export default function MuiThemeProvider(props) {
               borderColor: '#3880FF',
             },
           },
+          sizeMedium: {
+            fontSize: '14px',
+            lineHeight: '16px',
+            fontWeight: 600,
+            padding: '12px 24px',
+          },
           sizeLarge: {
             borderRadius: 8,
             fontSize: '1rem',
             lineHeight: '1.5',
             padding: '12px 24px',
-          }
+          },
         },
       },
       MuiTab: {
@@ -93,7 +107,7 @@ export default function MuiThemeProvider(props) {
         },
       },
     },
-  }
+  };
 
   const light: ThemeOptions = {
     palette: {
@@ -107,7 +121,7 @@ export default function MuiThemeProvider(props) {
       background: {
         default: '#ffffff',
         paper: '#f6f8fa',
-      }
+      },
     },
     typography: {
       fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
@@ -157,14 +171,10 @@ export default function MuiThemeProvider(props) {
         },
       },
     },
-  }
+  };
 
   const palette = isDark ? dark : light;
-  const theme = React.useMemo(
-    () =>
-      createTheme(palette),
-    [colorMode],
-  );
+  const theme = React.useMemo(() => createTheme(palette), [colorMode]);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -189,6 +199,8 @@ export default function MuiThemeProvider(props) {
     root.style.setProperty('--ifm-code-background', theme.palette.background.paper);
     root.style.setProperty('--ifm-code-font-size', '95%');
 
+    root.style.setProperty('--ifm-toc-border-color', theme.palette.divider);
+
     if (colorMode === 'dark') {
       root.style.setProperty('--ifm-background-color', theme.palette.background.default);
       root.style.setProperty('--ifm-background-surface-color', theme.palette.background.default);
@@ -205,9 +217,7 @@ export default function MuiThemeProvider(props) {
 
   return (
     <CacheProvider value={emotionCache}>
-      <ThemeProvider theme={theme}>
-        {props.children}
-      </ThemeProvider>
+      <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
     </CacheProvider>
   );
 }

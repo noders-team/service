@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Axone"
 CHAIN_SYSTEM_NAME="axone"
+CHAIN_ICON="axone-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION=""" # Axone
-
-Axone's intuitive protocol lets you orchestrate sophisticated AI processes with ease. Seamlessly link resources, models, and data. Create powerful AI workflows with trust-minimized collaboration. Ensure fair rewards for every contribution. That's the Axone promise.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="uaxone"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="axoned"
 DAEMON_SERVICE="axone.service"
 DAEMON_HOME="~/.axoned"
@@ -34,9 +31,9 @@ SOCIAL_X="https://x.com/axonexyz"
 SOCIAL_TELEGRAM=""
 
 # Other
-DOWNLOAD_URL="https://snapshots-t.noders.services/axone"
+SNAPSHOT_URL="https://snapshots-t.noders.services/axone"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://testnet.axone.explorers.guru/validator/axonevaloper1zux0q0unnu9s0sz9kfy074e0rp7cj909yf4hc8"
+VALIDATOR_URL="https://testnet.axone.explorers.guru/validator/axonevaloper1zux0q0unnu9s0sz9kfy074e0rp7cj909yf4hc8"
 
 # Updates
 UPDATE_MAIN=true
@@ -47,3 +44,23 @@ UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true
 UPDATE_LIVE_PEERS=true
 UPDATE_CLI_CHEATSHEET=true
+UPDATE_ENDPOINTS=true
+
+# Feature toggles
+# Node installation
+SHOW_INSTALLATION_GUIDE=true
+SHOW_UPGRADE_GUIDE=true
+SHOW_GENESIS=true
+SHOW_CLI=true
+# Endpoints and Sync
+SHOW_ENDPOINTS=true
+SHOW_STATE_SYNC=true
+SHOW_SNAPSHOT=true
+SHOW_LIVE_PEERS=true
+SHOW_SEED=true
+SHOW_ADDRESS_BOOK=true
+# Tools
+SHOW_EXPLORERS_LIST=false
+SHOW_PUBLIC_ENDPOINTS=false
+SHOW_USEFUL_TOOLS=false
+SHOW_UPGRADE_WATCHER=false

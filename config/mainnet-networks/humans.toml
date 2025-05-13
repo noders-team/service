@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Humans"
 CHAIN_SYSTEM_NAME="humans"
+CHAIN_ICON="humans-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Humans.ai: Ethical AI on Blockchain
-
-Humans.ai integrates blockchain with AI for decentralized, ethical AI development, emphasizing community-driven innovation and ethical governance. It features a tokenized economy for rewarding contributions, prioritizes data privacy, and supports cross-industry AI applications. Aimed at fostering responsible AI development, Humans.ai champions transparency, user privacy, and equitable value distribution, setting a new standard for AI technologies across healthcare, finance, education, and more.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="aheart"
 CHAIN_FEES="300000000000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="humansd"
 DAEMON_SERVICE="humansd.service"
 DAEMON_HOME="~/.humansd"
@@ -34,9 +31,9 @@ SOCIAL_X="https://twitter.com/humansdotai"
 SOCIAL_TELEGRAM="https://t.me/humansdotai"
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/humans"
+SNAPSHOT_URL="https://snapshots.noders.services/humans"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://humans.explorers.guru/validator/humanvaloper1xl4lxgvwesnehdkfpn92ku8fk99lkrk6kmjc98"
+VALIDATOR_URL="https://humans.explorers.guru/validator/humanvaloper1xl4lxgvwesnehdkfpn92ku8fk99lkrk6kmjc98"
 
 # Updates
 UPDATE_MAIN=true
@@ -47,3 +44,23 @@ UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true
 UPDATE_LIVE_PEERS=true
 UPDATE_CLI_CHEATSHEET=true
+UPDATE_ENDPOINTS=true
+
+# Feature toggles
+# Node installation
+SHOW_INSTALLATION_GUIDE=true
+SHOW_UPGRADE_GUIDE=true
+SHOW_GENESIS=true
+SHOW_CLI=true
+# Endpoints and Sync
+SHOW_ENDPOINTS=true
+SHOW_STATE_SYNC=true
+SHOW_SNAPSHOT=true
+SHOW_LIVE_PEERS=true
+SHOW_SEED=true
+SHOW_ADDRESS_BOOK=true
+# Tools
+SHOW_EXPLORERS_LIST=false
+SHOW_PUBLIC_ENDPOINTS=false
+SHOW_USEFUL_TOOLS=false
+SHOW_UPGRADE_WATCHER=false

@@ -1,0 +1,63 @@
+---
+title: 'Upgrade'
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
+---
+
+import PageTitle from "@site/src/components/PageTitle";
+
+<PageTitle
+  iconUrl="img/desmos-icon.svg"
+  title="Upgrade"
+  chainId="desmos-mainnet"
+  version="v7.1.0"
+/>
+
+## Clone Desmos repository
+
+```js
+cd $HOME
+rm -rf desmos-labs
+git clone https://github.com/desmos-labs.git
+cd desmos-labs
+git checkout v7.1.0
+```
+
+## Build binaries
+
+```js
+make build
+```
+
+## Prepare binaries for Cosmovisor
+
+```js
+mkdir -p ~/.desmos/cosmovisor/upgrades/v7.1.0/bin
+mv build/desmos ~/.desmos/cosmovisor/upgrades/v7.1.0/bin/
+rm -rf build
+```
+
+# Without Cosmovisor
+
+## Clone Desmos repository
+
+```js
+cd $HOME
+rm -rf desmos-labs
+git clone https://github.com/desmos-labs.git
+cd desmos-labs
+git checkout v7.1.0
+```
+
+## Build binaries
+
+```js
+make install
+```
+
+## Restart node and check logs
+
+```js
+sudo systemctl restart desmos && sudo journalctl -u desmos -f --no-hostname -o cat
+```

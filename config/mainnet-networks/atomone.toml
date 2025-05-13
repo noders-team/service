@@ -1,16 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Atomone"
 CHAIN_SYSTEM_NAME="atomone"
-CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Atomone: The vision behind this AtomOne fork is to be an alternative minimal fork of Gaia ("cosmoshub4") running alongside Gaia to prepare for all contingencies, and also to operate as a political party base in relation to Gaia. We strive to complement the broader Cosmos ecosystem while introducing innovative solutions and perspectives. Our goals are not just to resolve current challenges but are also to set a new precedent for adaptive and responsive self-organization in the multichain multitoken universe that we call the Cosmos.
-"""
-[CHAIN_DESCRIPTION_END]
+CHAIN_ICON="atomone-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
 
+# Blockchain
+CHAIN_ID="auto"
 CHAIN_DENOM="uatone"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="atomoned"
 DAEMON_SERVICE="atomone.service"
 DAEMON_HOME="~/.atomone"
@@ -31,9 +31,9 @@ SOCIAL_X="https://x.com/_atomone"
 SOCIAL_TELEGRAM=""
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/atomone"
+SNAPSHOT_URL="https://snapshots.noders.services/atomone"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://ping.pub/atomone/staking/atonevaloper1f2r68y2htcmp4rfe2wfn9f3nvzh9xsq9y0vdyz"
+VALIDATOR_URL="https://ping.pub/atomone/staking/atonevaloper1f2r68y2htcmp4rfe2wfn9f3nvzh9xsq9y0vdyz"
 
 # Updates
 UPDATE_MAIN=true
@@ -44,3 +44,23 @@ UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true
 UPDATE_LIVE_PEERS=true
 UPDATE_CLI_CHEATSHEET=true
+UPDATE_ENDPOINTS=true
+
+# Feature toggles
+# Node installation
+SHOW_INSTALLATION_GUIDE=true
+SHOW_UPGRADE_GUIDE=true
+SHOW_GENESIS=true
+SHOW_CLI=true
+# Endpoints and Sync
+SHOW_ENDPOINTS=true
+SHOW_STATE_SYNC=true
+SHOW_SNAPSHOT=true
+SHOW_LIVE_PEERS=true
+SHOW_SEED=true
+SHOW_ADDRESS_BOOK=true
+# Tools
+SHOW_EXPLORERS_LIST=false
+SHOW_PUBLIC_ENDPOINTS=false
+SHOW_USEFUL_TOOLS=false
+SHOW_UPGRADE_WATCHER=false

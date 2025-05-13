@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Pylons"
 CHAIN_SYSTEM_NAME="pylons"
+CHAIN_ICON="pylons-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Pylons: Enabling Seamless Blockchain Integration for Digital Assets
-
-Pylons.tech is at the forefront of blockchain development, specializing in digital items and NFTs. It streamlines the creation of freemium DApps, marrying mobile Web3 experiences with traditional in-app purchases. Designed to facilitate easy onboarding, Pylons removes barriers like KYC and initial token buys, making on-chain gaming as accessible as its mainstream counterpart. Its innovative fiat bridge furthers this mission, ensuring direct purchases of digital assets, thereby democratizing access to the blockchain ecosystem.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="ubedrock"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="pylonsd"
 DAEMON_SERVICE="pylons.service"
 DAEMON_HOME="~/.pylonsd"
@@ -34,9 +31,9 @@ SOCIAL_X="https://twitter.com/pylonstech"
 SOCIAL_TELEGRAM=""
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/pylons"
+SNAPSHOT_URL="https://snapshots.noders.services/pylons"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://pylons.explorers.guru/validator/pylovaloper1yc06qqa99vz50jrh64fctt0gvjj7pp7n7029c7"
+VALIDATOR_URL="https://pylons.explorers.guru/validator/pylovaloper1yc06qqa99vz50jrh64fctt0gvjj7pp7n7029c7"
 
 # Updates
 UPDATE_MAIN=true
@@ -47,3 +44,23 @@ UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true
 UPDATE_LIVE_PEERS=true
 UPDATE_CLI_CHEATSHEET=true
+UPDATE_ENDPOINTS=true
+
+# Feature toggles
+# Node installation
+SHOW_INSTALLATION_GUIDE=true
+SHOW_UPGRADE_GUIDE=true
+SHOW_GENESIS=true
+SHOW_CLI=true
+# Endpoints and Sync
+SHOW_ENDPOINTS=true
+SHOW_STATE_SYNC=true
+SHOW_SNAPSHOT=true
+SHOW_LIVE_PEERS=true
+SHOW_SEED=true
+SHOW_ADDRESS_BOOK=true
+# Tools
+SHOW_EXPLORERS_LIST=false
+SHOW_PUBLIC_ENDPOINTS=false
+SHOW_USEFUL_TOOLS=false
+SHOW_UPGRADE_WATCHER=false

@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Pell"
 CHAIN_SYSTEM_NAME="pell"
+CHAIN_ICON="pell-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Pell ｜ BTC Restaking
-
-The First & Omnichain BTC Restaking Network, extending BTCFi into the cryptoeconomic security domain and fully unlocking Bitcoin's potential.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="apell"
 CHAIN_FEES="300000000000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="pellcored"
 DAEMON_SERVICE="pell.service"
 DAEMON_HOME="~/.pellcored"
@@ -34,9 +31,9 @@ SOCIAL_X="https://x.com/Pell_Network"
 SOCIAL_TELEGRAM="https://t.me/pellnetwork_chat"
 
 # Other
-DOWNLOAD_URL="https://snapshots-t.noders.services/pell"
+SNAPSHOT_URL="https://snapshots-t.noders.services/pell"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://testnet.pell.explorers.guru/validator/pellvaloper1qkvwaakuf2expvp22kys5z9p8jt9c3dxfjwk0z"
+VALIDATOR_URL="https://testnet.pell.explorers.guru/validator/pellvaloper1qkvwaakuf2expvp22kys5z9p8jt9c3dxfjwk0z"
 
 # Updates
 UPDATE_MAIN=true
@@ -47,3 +44,23 @@ UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true
 UPDATE_LIVE_PEERS=true
 UPDATE_CLI_CHEATSHEET=true
+UPDATE_ENDPOINTS=true
+
+# Feature toggles
+# Node installation
+SHOW_INSTALLATION_GUIDE=true
+SHOW_UPGRADE_GUIDE=true
+SHOW_GENESIS=true
+SHOW_CLI=true
+# Endpoints and Sync
+SHOW_ENDPOINTS=true
+SHOW_STATE_SYNC=true
+SHOW_SNAPSHOT=true
+SHOW_LIVE_PEERS=true
+SHOW_SEED=true
+SHOW_ADDRESS_BOOK=true
+# Tools
+SHOW_EXPLORERS_LIST=false
+SHOW_PUBLIC_ENDPOINTS=false
+SHOW_USEFUL_TOOLS=false
+SHOW_UPGRADE_WATCHER=false

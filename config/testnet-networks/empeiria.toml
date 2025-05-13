@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Empeiria"
 CHAIN_SYSTEM_NAME="empeiria"
+CHAIN_ICON="empeiria-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION=""" # Empeiria
-
-Empeiria is the first End-to-End Verifiable Data Infrastructure (EVDI). It enables seamless web3 adoption through one-click deployment, empowering organizations with the data of the future.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="uempe"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="emped"
 DAEMON_SERVICE="empeiria.service"
 DAEMON_HOME="~/.empe-chain"
@@ -34,9 +31,9 @@ SOCIAL_X="https://twitter.com/empe_io"
 SOCIAL_TELEGRAM="https://t.me/web3Empeiria"
 
 # Other
-DOWNLOAD_URL="https://snapshots-t.noders.services/empeiria"
+SNAPSHOT_URL="https://snapshots-t.noders.services/empeiria"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://explorer.stavr.tech/Empeiria-Testnet/staking/empevaloper1ghmjf5nhwqzvd7ztkrf3d5c383lmmsc9az392s"
+VALIDATOR_URL="https://explorer.stavr.tech/Empeiria-Testnet/staking/empevaloper1ghmjf5nhwqzvd7ztkrf3d5c383lmmsc9az392s"
 
 # Updates
 UPDATE_MAIN=true
@@ -47,3 +44,23 @@ UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true
 UPDATE_LIVE_PEERS=true
 UPDATE_CLI_CHEATSHEET=true
+UPDATE_ENDPOINTS=true
+
+# Feature toggles
+# Node installation
+SHOW_INSTALLATION_GUIDE=true
+SHOW_UPGRADE_GUIDE=true
+SHOW_GENESIS=true
+SHOW_CLI=true
+# Endpoints and Sync
+SHOW_ENDPOINTS=true
+SHOW_STATE_SYNC=true
+SHOW_SNAPSHOT=true
+SHOW_LIVE_PEERS=true
+SHOW_SEED=true
+SHOW_ADDRESS_BOOK=true
+# Tools
+SHOW_EXPLORERS_LIST=false
+SHOW_PUBLIC_ENDPOINTS=false
+SHOW_USEFUL_TOOLS=false
+SHOW_UPGRADE_WATCHER=false

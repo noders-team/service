@@ -1,20 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Haqq"
 CHAIN_SYSTEM_NAME="haqq"
+CHAIN_ICON="haqq-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""
-# IslamicCoin: A Shariah-Compliant Digital Currency
-
-IslamicCoin is designed for the Islamic community, ensuring Shariah compliance, promoting ethical investments, and supporting financial inclusion. It leverages blockchain for transparency and security, incorporates charitable mechanisms for Zakat and Sadaqah, and facilitates investments with a positive social impact. IslamicCoin aims to bridge traditional Islamic finance with modern digital currencies, offering a platform for global accessibility and ethical financial practices, appealing to Muslims and ethical investors alike.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="aISLM"
 CHAIN_FEES="300000000000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="haqqd"
 DAEMON_SERVICE="haqqd.service"
 DAEMON_HOME="~/.haqqd"
@@ -35,9 +31,9 @@ SOCIAL_X="https://twitter.com/The_HaqqNetwork"
 SOCIAL_TELEGRAM="https://t.me/islamiccoin_int"
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/haqq"
+SNAPSHOT_URL="https://snapshots.noders.services/haqq"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://haqq.explorers.guru/validator/haqqvaloper1hgggrfgjeu4d5nveh03c6w37magsuqcy84p44t"
+VALIDATOR_URL="https://haqq.explorers.guru/validator/haqqvaloper1hgggrfgjeu4d5nveh03c6w37magsuqcy84p44t"
 
 # Updates
 UPDATE_MAIN=true
@@ -48,3 +44,23 @@ UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true
 UPDATE_LIVE_PEERS=true
 UPDATE_CLI_CHEATSHEET=true
+UPDATE_ENDPOINTS=true
+
+# Feature toggles
+# Node installation
+SHOW_INSTALLATION_GUIDE=true
+SHOW_UPGRADE_GUIDE=true
+SHOW_GENESIS=true
+SHOW_CLI=true
+# Endpoints and Sync
+SHOW_ENDPOINTS=true
+SHOW_STATE_SYNC=true
+SHOW_SNAPSHOT=true
+SHOW_LIVE_PEERS=true
+SHOW_SEED=true
+SHOW_ADDRESS_BOOK=true
+# Tools
+SHOW_EXPLORERS_LIST=false
+SHOW_PUBLIC_ENDPOINTS=false
+SHOW_USEFUL_TOOLS=false
+SHOW_UPGRADE_WATCHER=false

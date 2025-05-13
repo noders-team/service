@@ -1,0 +1,63 @@
+---
+title: 'Upgrade'
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
+---
+
+import PageTitle from "@site/src/components/PageTitle";
+
+<PageTitle
+  iconUrl="img/realio-icon.svg"
+  title="Upgrade"
+  chainId="realionetwork_3301-1"
+  version="v1.0.2"
+/>
+
+## Clone Realio repository
+
+```js
+cd $HOME
+rm -rf realio-network
+git clone https://github.com/realio-network.git
+cd realio-network
+git checkout v1.0.2
+```
+
+## Build binaries
+
+```js
+make build
+```
+
+## Prepare binaries for Cosmovisor
+
+```js
+mkdir -p ~/.realio-network/cosmovisor/upgrades/v1.0.2/bin
+mv build/realiod ~/.realio-network/cosmovisor/upgrades/v1.0.2/bin/
+rm -rf build
+```
+
+# Without Cosmovisor
+
+## Clone Realio repository
+
+```js
+cd $HOME
+rm -rf realio-network
+git clone https://github.com/realio-network.git
+cd realio-network
+git checkout v1.0.2
+```
+
+## Build binaries
+
+```js
+make install
+```
+
+## Restart node and check logs
+
+```js
+sudo systemctl restart realiod && sudo journalctl -u realiod -f --no-hostname -o cat
+```

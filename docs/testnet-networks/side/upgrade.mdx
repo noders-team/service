@@ -1,0 +1,63 @@
+---
+title: 'Upgrade'
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
+---
+
+import PageTitle from "@site/src/components/PageTitle";
+
+<PageTitle
+  iconUrl="img/side-icon.svg"
+  title="Upgrade"
+  chainId="sidechain-testnet-4"
+  version="v0.9.5"
+/>
+
+## Clone Side repository
+
+```js
+cd $HOME
+rm -rf sideprotocol
+git clone https://github.com/sideprotocol.git
+cd sideprotocol
+git checkout v0.9.5
+```
+
+## Build binaries
+
+```js
+make build
+```
+
+## Prepare binaries for Cosmovisor
+
+```js
+mkdir -p ~/.side/cosmovisor/upgrades/v0.9.5/bin
+mv build/sided ~/.side/cosmovisor/upgrades/v0.9.5/bin/
+rm -rf build
+```
+
+# Without Cosmovisor
+
+## Clone Side repository
+
+```js
+cd $HOME
+rm -rf sideprotocol
+git clone https://github.com/sideprotocol.git
+cd sideprotocol
+git checkout v0.9.5
+```
+
+## Build binaries
+
+```js
+make install
+```
+
+## Restart node and check logs
+
+```js
+sudo systemctl restart sided && sudo journalctl -u sided -f --no-hostname -o cat
+```

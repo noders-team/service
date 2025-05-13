@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Arkeo"
 CHAIN_SYSTEM_NAME="arkeo"
+CHAIN_ICON="arkeo-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION=""" # Arkeo
-
-Arkeo was created to provide decentralized applications with increased development velocity, censorship-resistance, and most importantly to be a needed tool in fully decentralizing the UI layer of the web3 stack, all while reducing reliance on centralized data sources. In short, Arkeo is a free-market solution for decentralized infrastructure.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="uarkeo"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="arkeod"
 DAEMON_SERVICE="arkeo.service"
 DAEMON_HOME="~/.arkeo"
@@ -34,9 +31,9 @@ SOCIAL_X="https://twitter.com/arkeonetwork"
 SOCIAL_TELEGRAM=""
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/arkeo"
+SNAPSHOT_URL="https://snapshots.noders.services/arkeo"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://exp.utsa.tech/arkeo-main/staking/arkeovaloper1rnfgv6uhry6ywl880mgz4rmxm8csqwd74plfuu"
+VALIDATOR_URL="https://exp.utsa.tech/arkeo-main/staking/arkeovaloper1rnfgv6uhry6ywl880mgz4rmxm8csqwd74plfuu"
 
 # Updates
 UPDATE_MAIN=true
@@ -47,3 +44,23 @@ UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true
 UPDATE_LIVE_PEERS=true
 UPDATE_CLI_CHEATSHEET=true
+UPDATE_ENDPOINTS=true
+
+# Feature toggles
+# Node installation
+SHOW_INSTALLATION_GUIDE=true
+SHOW_UPGRADE_GUIDE=true
+SHOW_GENESIS=true
+SHOW_CLI=true
+# Endpoints and Sync
+SHOW_ENDPOINTS=true
+SHOW_STATE_SYNC=true
+SHOW_SNAPSHOT=true
+SHOW_LIVE_PEERS=true
+SHOW_SEED=true
+SHOW_ADDRESS_BOOK=true
+# Tools
+SHOW_EXPLORERS_LIST=false
+SHOW_PUBLIC_ENDPOINTS=false
+SHOW_USEFUL_TOOLS=false
+SHOW_UPGRADE_WATCHER=false

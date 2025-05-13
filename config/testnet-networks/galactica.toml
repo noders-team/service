@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Galactica"
 CHAIN_SYSTEM_NAME="galactica"
+CHAIN_ICON="galactica-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Galactica: We need to solve Identity, Compliance & Privacy
-
-Galactica Network presents itself as a pioneering platform in the Web3 space, aiming to establish the first on-chain nation-state. It's focused on fostering Sybil-resistant, reputation-based systems and decentralized societies (DeSoc), enhancing DeFi and DAOs for a more accountable and compliant future. Galactica emphasizes a community-driven approach, seeking builders to create a better future through innovative DeFi solutions, DAO structures, and a comprehensive DeSoc stack
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="agnet"
 CHAIN_FEES="300000000000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="galacticad"
 DAEMON_SERVICE="galactica.service"
 DAEMON_HOME="~/.galactica"
@@ -34,9 +31,9 @@ SOCIAL_X="https://twitter.com/GalacticaNet"
 SOCIAL_TELEGRAM="https://t.me/TheCypherState"
 
 # Other
-DOWNLOAD_URL="https://snapshots-t.noders.services/galactica"
+SNAPSHOT_URL="https://snapshots-t.noders.services/galactica"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://explorer.nodestake.org/galactica-testnet/staking/galavaloper1p0gs5uq44usv2fnx0qcw785jj2ey76svjtlgx7"
+VALIDATOR_URL="https://explorer.nodestake.org/galactica-testnet/staking/galavaloper1p0gs5uq44usv2fnx0qcw785jj2ey76svjtlgx7"
 
 # Updates
 UPDATE_MAIN=true
@@ -47,3 +44,23 @@ UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true
 UPDATE_LIVE_PEERS=true
 UPDATE_CLI_CHEATSHEET=true
+UPDATE_ENDPOINTS=true
+
+# Feature toggles
+# Node installation
+SHOW_INSTALLATION_GUIDE=true
+SHOW_UPGRADE_GUIDE=true
+SHOW_GENESIS=true
+SHOW_CLI=true
+# Endpoints and Sync
+SHOW_ENDPOINTS=true
+SHOW_STATE_SYNC=true
+SHOW_SNAPSHOT=true
+SHOW_LIVE_PEERS=true
+SHOW_SEED=true
+SHOW_ADDRESS_BOOK=true
+# Tools
+SHOW_EXPLORERS_LIST=false
+SHOW_PUBLIC_ENDPOINTS=false
+SHOW_USEFUL_TOOLS=false
+SHOW_UPGRADE_WATCHER=false

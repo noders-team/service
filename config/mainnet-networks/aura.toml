@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Aura"
 CHAIN_SYSTEM_NAME="aura"
+CHAIN_ICON="aura-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Aura Network: Accelerating Global NFT Adoption
-
-Aura Network, a Layer-1 blockchain, focuses on scalability, interoperability, and user experience to drive NFT adoption. It offers high transaction efficiency, seamless cross-chain communication, developer-friendly tools, intuitive user interfaces, and an energy-efficient consensus mechanism. Ideal for dApps, NFT marketplaces, gaming, and social media, Aura Network aims to enhance blockchain accessibility and foster a sustainable, interconnected digital ecosystem.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="uaura"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="aurad"
 DAEMON_SERVICE="aurad.service"
 DAEMON_HOME="~/.aura"
@@ -34,9 +31,9 @@ SOCIAL_X="https://twitter.com/AuraNetworkHQ"
 SOCIAL_TELEGRAM="https://t.me/AuraNetworkOfficial"
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/aura"
+SNAPSHOT_URL="https://snapshots.noders.services/aura"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://aurascan.io/validators/auravaloper1vvqz6j3ucxr6n0ejdz4ck602lnyjew93cgcw4m"
+VALIDATOR_URL="https://aurascan.io/validators/auravaloper1vvqz6j3ucxr6n0ejdz4ck602lnyjew93cgcw4m"
 
 # Updates
 UPDATE_MAIN=true
@@ -47,3 +44,23 @@ UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true
 UPDATE_LIVE_PEERS=true
 UPDATE_CLI_CHEATSHEET=true
+UPDATE_ENDPOINTS=true
+
+# Feature toggles
+# Node installation
+SHOW_INSTALLATION_GUIDE=true
+SHOW_UPGRADE_GUIDE=true
+SHOW_GENESIS=true
+SHOW_CLI=true
+# Endpoints and Sync
+SHOW_ENDPOINTS=true
+SHOW_STATE_SYNC=true
+SHOW_SNAPSHOT=true
+SHOW_LIVE_PEERS=true
+SHOW_SEED=true
+SHOW_ADDRESS_BOOK=true
+# Tools
+SHOW_EXPLORERS_LIST=false
+SHOW_PUBLIC_ENDPOINTS=false
+SHOW_USEFUL_TOOLS=false
+SHOW_UPGRADE_WATCHER=false

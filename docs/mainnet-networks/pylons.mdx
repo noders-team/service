@@ -1,0 +1,55 @@
+---
+title: 'Pylons'
+hide_title: true
+hide_table_of_contents: false
+---
+
+import ChainLayout from '@site/src/components/ChainLayout';
+import ChainHero from '@site/src/components/ChainHero';
+import ProductLinks from '@site/src/components/ProductLinks';
+import ToolsGrid from '@site/src/components/ToolsGrid';
+
+<ChainLayout>
+  <ChainHero
+    name="Pylons"
+    iconUrl="img/pylons-icon.svg"
+    bgColor=""
+    scope="mainnet"
+    chainId="pylons-mainnet-1"
+    nodeVersion="v1.1.4"
+    token=""
+    stakeUrl=""
+    restakeUrl=""
+    websiteUrl="https://www.pylons.tech/home/"
+    githubUrl="https://github.com/Pylons-tech/pylons"
+    xUrl="https://twitter.com/pylonstech"
+    discordUrl="https://discord.gg/pylons"
+  />
+
+  <ProductLinks
+    appUrl=""
+    appImageUrl="img/products/"
+    explorerUrl=""
+    faucetUrl=""
+  />
+
+  <ToolsGrid
+    chainName="pylons"
+    scope="mainnet"
+    showInstall={true}
+    showUpgrade={true}
+    showGenesis={true}
+    showCli={true}
+    showEndpoints={true}
+    showStateSync={true}
+    showSnapshot={true}
+    showLivePeers={true}
+    showSeed={true}
+    showAddressBook={true}
+    showExplorersList={false}
+    showPublicEndpoints={false}
+    showUsefulTools={false}
+    showUpgradeWatcher={false}
+  />
+
+</ChainLayout>

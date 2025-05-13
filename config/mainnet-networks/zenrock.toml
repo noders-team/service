@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Zenrock"
 CHAIN_SYSTEM_NAME="zenrock"
+CHAIN_ICON="zenrock-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Zenrock
-
-Zenrock enables decentralized key management for builders of cross-chain protocols and wallets to unlock omnichain security.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="urock"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="zenrockd"
 DAEMON_SERVICE="zenrock.service"
 DAEMON_HOME="~/.zrchain"
@@ -34,9 +31,9 @@ SOCIAL_X="https://x.com/OfficialZenrock"
 SOCIAL_TELEGRAM="https://t.me/officialZenrock"
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/zenrock"
+SNAPSHOT_URL="https://snapshots.noders.services/zenrock"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://testnet.itrocket.net/zenrock/staking/zenvaloper1jmxxnpl4saratjf46dsv3kfk5ny3qk0923fdwn"
+VALIDATOR_URL="https://testnet.itrocket.net/zenrock/staking/zenvaloper1jmxxnpl4saratjf46dsv3kfk5ny3qk0923fdwn"
 
 # Updates
 UPDATE_MAIN=true
@@ -47,3 +44,23 @@ UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true
 UPDATE_LIVE_PEERS=true
 UPDATE_CLI_CHEATSHEET=true
+UPDATE_ENDPOINTS=true
+
+# Feature toggles
+# Node installation
+SHOW_INSTALLATION_GUIDE=true
+SHOW_UPGRADE_GUIDE=true
+SHOW_GENESIS=true
+SHOW_CLI=true
+# Endpoints and Sync
+SHOW_ENDPOINTS=true
+SHOW_STATE_SYNC=true
+SHOW_SNAPSHOT=true
+SHOW_LIVE_PEERS=true
+SHOW_SEED=true
+SHOW_ADDRESS_BOOK=true
+# Tools
+SHOW_EXPLORERS_LIST=false
+SHOW_PUBLIC_ENDPOINTS=false
+SHOW_USEFUL_TOOLS=false
+SHOW_UPGRADE_WATCHER=false

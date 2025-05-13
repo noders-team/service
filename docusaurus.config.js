@@ -15,7 +15,7 @@ const config = {
   url: 'https://noders.services',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/service/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -48,6 +48,12 @@ const config = {
           --ifm-background-color: #04060B!important;
           --ifm-background-surface-color: #04060B!important;
           --ifm-navbar-background-color: #04060B!important;
+        }
+
+        @font-face {
+          font-family: 'Consolas';
+          src: local('Consolas');
+          font-display: swap;
         }
       `
     }

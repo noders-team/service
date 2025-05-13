@@ -1,0 +1,55 @@
+---
+title: 'Namada'
+hide_title: true
+hide_table_of_contents: false
+---
+
+import ChainLayout from '@site/src/components/ChainLayout';
+import ChainHero from '@site/src/components/ChainHero';
+import ProductLinks from '@site/src/components/ProductLinks';
+import ToolsGrid from '@site/src/components/ToolsGrid';
+
+<ChainLayout>
+  <ChainHero
+    name="Namada"
+    iconUrl="img/namada-icon.svg"
+    bgColor=""
+    scope="mainnet"
+    chainId="namada.5f5de2dd1b88cba30586420"
+    nodeVersion="v1.0.0"
+    token="NAM"
+    stakeUrl=""
+    restakeUrl=""
+    websiteUrl="https://namada.net/"
+    githubUrl="https://github.com/anoma/namada"
+    xUrl="https://twitter.com/namada"
+    discordUrl="https://discord.com/invite/namada"
+  />
+
+  <ProductLinks
+    appUrl=""
+    appImageUrl="img/products/"
+    explorerUrl=""
+    faucetUrl=""
+  />
+
+  <ToolsGrid
+    chainName="namada"
+    scope="mainnet"
+    showInstall={true}
+    showUpgrade={false}
+    showGenesis={false}
+    showCli={true}
+    showEndpoints={true}
+    showStateSync={false}
+    showSnapshot={false}
+    showLivePeers={false}
+    showSeed={false}
+    showAddressBook={false}
+    showExplorersList={false}
+    showPublicEndpoints={false}
+    showUsefulTools={false}
+    showUpgradeWatcher={false}
+  />
+
+</ChainLayout>

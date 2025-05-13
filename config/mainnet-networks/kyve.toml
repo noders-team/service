@@ -1,21 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Kyve"
 CHAIN_SYSTEM_NAME="kyve"
+CHAIN_ICON="kyve-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# KYVE Network: Revolutionizing Blockchain Data Integrity
-
-KYVE Network transforms data storage and validation across blockchains, ensuring data remains unchanged and accessible. It emphasizes decentralized storage, accurate data validation, interoperability, customizable data pools, and a token-based incentive mechanism. KYVE supports diverse applications, from enhancing blockchain scalability to enabling secure cross-chain bridges, making it pivotal for future decentralized data ecosystems.
-
-Discover how KYVE is shaping the future of data integrity on the blockchain.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="ukyve"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="kyved"
 DAEMON_SERVICE="kyved.service"
 DAEMON_HOME="~/.kyve"
@@ -36,9 +31,9 @@ SOCIAL_X="https://twitter.com/KYVENetwork"
 SOCIAL_TELEGRAM="https://t.me/kyvenet"
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/kyve"
+SNAPSHOT_URL="https://snapshots.noders.services/kyve"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://kyve.explorers.guru/validator/kyvevaloper1sfwfat9p9k7datgy0kzge7pv0szcd5ycc0jxre"
+VALIDATOR_URL="https://kyve.explorers.guru/validator/kyvevaloper1sfwfat9p9k7datgy0kzge7pv0szcd5ycc0jxre"
 
 # Updates
 UPDATE_MAIN=true
@@ -49,3 +44,23 @@ UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true
 UPDATE_LIVE_PEERS=true
 UPDATE_CLI_CHEATSHEET=true
+UPDATE_ENDPOINTS=true
+
+# Feature toggles
+# Node installation
+SHOW_INSTALLATION_GUIDE=true
+SHOW_UPGRADE_GUIDE=true
+SHOW_GENESIS=true
+SHOW_CLI=true
+# Endpoints and Sync
+SHOW_ENDPOINTS=true
+SHOW_STATE_SYNC=true
+SHOW_SNAPSHOT=true
+SHOW_LIVE_PEERS=true
+SHOW_SEED=true
+SHOW_ADDRESS_BOOK=true
+# Tools
+SHOW_EXPLORERS_LIST=false
+SHOW_PUBLIC_ENDPOINTS=false
+SHOW_USEFUL_TOOLS=false
+SHOW_UPGRADE_WATCHER=false

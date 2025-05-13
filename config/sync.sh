@@ -5,17 +5,30 @@
 #####################################################################################################################################################################
 
 function readBlockchainConfig {
-  # Blockchain
+  # App
   CHAIN_NAME=$(grep -oE '^CHAIN_NAME=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   CHAIN_SYSTEM_NAME=$(grep -oE '^CHAIN_SYSTEM_NAME=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
-  CHAIN_DESCRIPTION=$(awk '/^CHAIN_DESCRIPTION="""/,/^\[CHAIN_DESCRIPTION_END\]/{if (!/^CHAIN_DESCRIPTION="""/ && !/^\[CHAIN_DESCRIPTION_END\]/ && !/^"""/) print}' "${config_file}")
+  CHAIN_ICON=$(grep -oE '^CHAIN_ICON=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  CHAIN_BACKGROUND_COLOR=$(grep -oE '^CHAIN_BACKGROUND_COLOR=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+
+  # Noders
+  STAKE_URL=$(grep -oE '^STAKE_URL=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  RESTAKE_URL=$(grep -oE '^RESTAKE_URL=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  VALIDATOR_URL=$(grep -oE '^VALIDATOR_URL=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  EXPLORER_URL=$(grep -oE '^EXPLORER_URL=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  FAUCET_URL=$(grep -oE '^FAUCET_URL=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  APP_URL=$(grep -oE '^APP_URL=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  APP_IMAGE=$(grep -oE '^APP_IMAGE=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+
+  # Blockchain
   CHAIN_ID=$(grep -oE '^CHAIN_ID=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  CHAIN_DENOM_PRETTY=$(grep -oE '^CHAIN_DENOM_PRETTY=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   CHAIN_DENOM=$(grep -oE '^CHAIN_DENOM=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   CHAIN_FEES=$(grep -oE '^CHAIN_FEES=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
 
   # Binary
-  DAEMON_NAME=$(grep -oE '^DAEMON_NAME=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   VERSION=$(grep -oE '^VERSION=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  DAEMON_NAME=$(grep -oE '^DAEMON_NAME=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   DAEMON_SERVICE=$(grep -oE '^DAEMON_SERVICE=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   DAEMON_HOME=$(grep -oE '^DAEMON_HOME=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
 
@@ -26,12 +39,7 @@ function readBlockchainConfig {
   ENDPOINT_GRPC=$(grep -oE '^ENDPOINT_GRPC=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   ENDPOINT_PEER=$(grep -oE '^ENDPOINT_PEER=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   ENDPOINT_COSMOSLIST=$(grep -oE '^ENDPOINT_COSMOSLIST=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
-
-  ENDPOINT_RPC_BLOCK=""
-  ENDPOINT_API_BLOCK=""
-  ENDPOINT_JRPC_BLOCK=""
-  ENDPOINT_GRPC_BLOCK=""
-  ENDPOINT_COSMOSLIST_BLOCK=""
+  ENDPOINT_SEED=$(grep -oE '^ENDPOINT_SEED=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
 
   # Social
   SOCIAL_WEBSITE=$(grep -oE '^SOCIAL_WEBSITE=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
@@ -40,24 +48,15 @@ function readBlockchainConfig {
   SOCIAL_X=$(grep -oE '^SOCIAL_X=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   SOCIAL_TELEGRAM=$(grep -oE '^SOCIAL_TELEGRAM=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
 
-  SOCIAL_WEBSITE_BLOCK=""
-  SOCIAL_GITHUB_BLOCK=""
-  SOCIAL_SOCIAL_DISCORD_BLOCK=""
-  SOCIAL_X_BLOCK=""
-  SOCIAL_TELEGRAM_BLOCK=""
-
-
   # Other
-  DOWNLOAD_URL=$(grep -oE '^DOWNLOAD_URL=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  SNAPSHOT_URL=$(grep -oE '^SNAPSHOT_URL=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   GITHUB_FOLDER_NAME=$(grep -oE '^GITHUB_FOLDER_NAME=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
-  VALIDATOR_LINK=$(grep -oE '^VALIDATOR_LINK=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   LIVE_PEERS_COUNT=""
   LIVE_PEERS_ALL=""
   LIVE_PEERS_RANDOM=""
   TIMESTAMP=""
   SIZE=""
   VERSION_HAND=$(grep -oE '^VERSION_HAND=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
-
 
   # Updates
   UPDATE_MAIN=$(grep -oE '^UPDATE_MAIN=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
@@ -68,6 +67,23 @@ function readBlockchainConfig {
   UPDATE_STATESYNC=$(grep -oE '^UPDATE_STATESYNC=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   UPDATE_LIVE_PEERS=$(grep -oE '^UPDATE_LIVE_PEERS=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   UPDATE_CLI_CHEATSHEET=$(grep -oE '^UPDATE_CLI_CHEATSHEET=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  UPDATE_ENDPOINTS=$(grep -oE '^UPDATE_ENDPOINTS=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+
+  # Feature toggles
+  SHOW_INSTALLATION_GUIDE=$(grep -oE '^SHOW_INSTALLATION_GUIDE=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  SHOW_UPGRADE_GUIDE=$(grep -oE '^SHOW_UPGRADE_GUIDE=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  SHOW_GENESIS=$(grep -oE '^SHOW_GENESIS=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  SHOW_CLI=$(grep -oE '^SHOW_CLI=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  SHOW_ENDPOINTS=$(grep -oE '^SHOW_ENDPOINTS=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  SHOW_STATE_SYNC=$(grep -oE '^SHOW_STATE_SYNC=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  SHOW_SNAPSHOT=$(grep -oE '^SHOW_SNAPSHOT=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  SHOW_LIVE_PEERS=$(grep -oE '^SHOW_LIVE_PEERS=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  SHOW_SEED=$(grep -oE '^SHOW_SEED=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  SHOW_ADDRESS_BOOK=$(grep -oE '^SHOW_ADDRESS_BOOK=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  SHOW_EXPLORERS_LIST=$(grep -oE '^SHOW_EXPLORERS_LIST=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  SHOW_PUBLIC_ENDPOINTS=$(grep -oE '^SHOW_PUBLIC_ENDPOINTS=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  SHOW_USEFUL_TOOLS=$(grep -oE '^SHOW_USEFUL_TOOLS=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  SHOW_UPGRADE_WATCHER=$(grep -oE '^SHOW_UPGRADE_WATCHER=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
 }
 
 function enrichBlockchainConfig {
@@ -97,6 +113,9 @@ function enrichBlockchainConfig {
     peer_address=$(echo ${ENDPOINT_RPC} | sed -e "s/https\:\/\///")
     peer_addr=$(curl -s "${ENDPOINT_API}/cosmos/base/tendermint/v1beta1/node_info" | jq -r '.default_node_info.listen_addr' | sed -e 's/.*://')
     ENDPOINT_PEER="${peer_id}@${peer_address}:${peer_addr}"
+  fi
+  if [ -z "${ENDPOINT_SEED}" ]; then
+    ENDPOINT_SEED=${ENDPOINT_PEER}
   fi
 
   echo "Updated ENDPOINT_PEER: ${ENDPOINT_PEER}"
@@ -135,62 +154,81 @@ function escapeSpecialChars {
 }
 
 function replacePageVariables {
+  # App
+  sed -i '' "s|\[CHAIN_NAME\]|${CHAIN_NAME}|g" "$1"
+  sed -i '' "s|\[CHAIN_SYSTEM_NAME\]|${CHAIN_SYSTEM_NAME}|g" "$1"
+  sed -i '' "s|\[CHAIN_ICON\]|${CHAIN_ICON}|g" "$1"
+  sed -i '' "s|\[CHAIN_SCOPE\]|${CHAIN_SCOPE}|g" "$1"
+  sed -i '' "s|\[CHAIN_BACKGROUND_COLOR\]|${CHAIN_BACKGROUND_COLOR}|g" "$1"
+
+  # Noders
+  escaped_stake_url=$(escapeSpecialChars "${STAKE_URL}")
+  sed -i '' "s|\[STAKE_URL\]|${escaped_stake_url}|g" "$1"
+  escaped_restake_url=$(escapeSpecialChars "${RESTAKE_URL}")
+  sed -i '' "s|\[RESTAKE_URL\]|${escaped_restake_url}|g" "$1"
+  sed -i '' "s|\[VALIDATOR_URL\]|${VALIDATOR_URL}|g" "$1"
+  sed -i '' "s|\[EXPLORER_URL\]|${EXPLORER_URL}|g" "$1"
+  sed -i '' "s|\[FAUCET_URL\]|${FAUCET_URL}|g" "$1"
+  sed -i '' "s|\[APP_URL\]|${APP_URL}|g" "$1"
+  sed -i '' "s|\[APP_IMAGE\]|${APP_IMAGE}|g" "$1"
 
   # Blockchain
-  sed -i'' "s|\[CHAIN_NAME\]|${CHAIN_NAME}|g" $1
-  sed -i'' "s|\[CHAIN_SYSTEM_NAME\]|${CHAIN_SYSTEM_NAME}|g" $1
-  sed -i'' "s|\[CHAIN_ID\]|${CHAIN_ID}|g" $1
-  perl -i -0pe "s|\[CHAIN_DESCRIPTION\].*?\[CHAIN_DESCRIPTION_END\]|${CHAIN_DESCRIPTION}|s" "$1"
-  sed -i'' "s|\[CHAIN_DENOM\]|${CHAIN_DENOM}|g" $1
-  sed -i'' "s|\[CHAIN_FEES\]|${CHAIN_FEES}|g" $1
+  sed -i '' "s|\[CHAIN_ID\]|${CHAIN_ID}|g" "$1"
+  sed -i '' "s|\[CHAIN_DENOM_PRETTY\]|${CHAIN_DENOM_PRETTY}|g" "$1"
+  sed -i '' "s|\[CHAIN_DENOM\]|${CHAIN_DENOM}|g" "$1"
+  sed -i '' "s|\[CHAIN_FEES\]|${CHAIN_FEES}|g" "$1"
 
   # Binary
-  sed -i'' "s|\[DAEMON_NAME\]|${DAEMON_NAME}|g" $1
-  sed -i'' "s|\[VERSION\]|${VERSION}|g" $1
-  sed -i'' "s|\[DAEMON_SERVICE\]|${DAEMON_SERVICE}|g" $1
-  sed -i'' "s|\[DAEMON_HOME\]|${DAEMON_HOME}|g" $1
+  sed -i '' "s|\[VERSION\]|${VERSION}|g" "$1"
+  sed -i '' "s|\[DAEMON_NAME\]|${DAEMON_NAME}|g" "$1"
+  sed -i '' "s|\[DAEMON_SERVICE\]|${DAEMON_SERVICE}|g" "$1"
+  sed -i '' "s|\[DAEMON_HOME\]|${DAEMON_HOME}|g" "$1"
 
   # Endpoints
-  sed -i'' "s|\[ENDPOINT_RPC\]|${ENDPOINT_RPC}|g" $1
-  sed -i'' "s|\[ENDPOINT_API\]|${ENDPOINT_API}|g" $1
-  sed -i'' "s|\[ENDPOINT_JRPC\]|${ENDPOINT_JRPC}|g" $1
-  sed -i'' "s|\[ENDPOINT_GRPC\]|${ENDPOINT_GRPC}|g" $1
-  sed -i'' "s|\[ENDPOINT_PEER\]|${ENDPOINT_PEER}|g" $1
-  sed -i'' "s|\[ENDPOINT_COSMOSLIST\]|${ENDPOINT_COSMOSLIST}|g" $1
-
-  sed -i'' "s|\[ENDPOINT_RPC_BLOCK\]|${ENDPOINT_RPC_BLOCK}|g" $1
-  sed -i'' "s|\[ENDPOINT_API_BLOCK\]|${ENDPOINT_API_BLOCK}|g" $1
-  sed -i'' "s|\[ENDPOINT_JRPC_BLOCK\]|${ENDPOINT_JRPC_BLOCK}|g" $1
-  sed -i'' "s|\[ENDPOINT_GRPC_BLOCK\]|${ENDPOINT_GRPC_BLOCK}|g" $1
-  sed -i'' "s|\[ENDPOINT_COSMOSLIST_BLOCK\]|${ENDPOINT_COSMOSLIST_BLOCK}|g" $1
+  sed -i '' "s|\[ENDPOINT_RPC\]|${ENDPOINT_RPC}|g" "$1"
+  sed -i '' "s|\[ENDPOINT_API\]|${ENDPOINT_API}|g" "$1"
+  sed -i '' "s|\[ENDPOINT_JRPC\]|${ENDPOINT_JRPC}|g" "$1"
+  sed -i '' "s|\[ENDPOINT_GRPC\]|${ENDPOINT_GRPC}|g" "$1"
+  sed -i '' "s|\[ENDPOINT_PEER\]|${ENDPOINT_PEER}|g" "$1"
+  sed -i '' "s|\[ENDPOINT_COSMOSLIST\]|${ENDPOINT_COSMOSLIST}|g" "$1"
+  sed -i '' "s|\[ENDPOINT_SEED\]|${ENDPOINT_SEED}|g" "$1"
 
   # Social
-  sed -i'' "s|\[SOCIAL_WEBSITE\]|${SOCIAL_WEBSITE}|g" $1
-  sed -i'' "s|\[SOCIAL_GITHUB\]|${SOCIAL_GITHUB}|g" $1
-  sed -i'' "s|\[SOCIAL_DISCORD\]|${SOCIAL_DISCORD}|g" $1
-  sed -i'' "s|\[SOCIAL_X\]|${SOCIAL_X}|g" $1
-  sed -i'' "s|\[SOCIAL_TELEGRAM\]|${SOCIAL_TELEGRAM}|g" $1
-
-  sed -i'' "s|\[SOCIAL_WEBSITE_BLOCK\]|${SOCIAL_WEBSITE_BLOCK}|g" $1
-  sed -i'' "s|\[SOCIAL_GITHUB_BLOCK\]|${SOCIAL_GITHUB_BLOCK}|g" $1
-  sed -i'' "s|\[SOCIAL_DISCORD_BLOCK\]|${SOCIAL_DISCORD_BLOCK}|g" $1
-  sed -i'' "s|\[SOCIAL_X_BLOCK\]|${SOCIAL_X_BLOCK}|g" $1
-  sed -i'' "s|\[SOCIAL_TELEGRAM_BLOCK\]|${SOCIAL_TELEGRAM_BLOCK}|g" $1
+  sed -i '' "s|\[SOCIAL_WEBSITE\]|${SOCIAL_WEBSITE}|g" "$1"
+  sed -i '' "s|\[SOCIAL_GITHUB\]|${SOCIAL_GITHUB}|g" "$1"
+  sed -i '' "s|\[SOCIAL_DISCORD\]|${SOCIAL_DISCORD}|g" "$1"
+  sed -i '' "s|\[SOCIAL_X\]|${SOCIAL_X}|g" "$1"
+  sed -i '' "s|\[SOCIAL_TELEGRAM\]|${SOCIAL_TELEGRAM}|g" "$1"
 
   # Other
-  sed -i'' "s|\[DOWNLOAD_URL\]|${DOWNLOAD_URL}|g" $1
-  sed -i'' "s|\[GITHUB_FOLDER_NAME\]|${GITHUB_FOLDER_NAME}|g" $1
-  sed -i'' "s|\[LIVE_PEERS_COUNT\]|${LIVE_PEERS_COUNT}|g" $1
-  sed -i'' "s|\[LIVE_PEERS_ALL\]|${LIVE_PEERS_ALL}|g" $1
-  sed -i'' "s|\[TIMESTAMP\]|${TIMESTAMP}|g" $1
-  sed -i'' "s|\[SIZE\]|${SIZE}|g" $1
-  sed -i'' "s|\[SNAP_LATEST_BLOCK\]|${SNAP_LATEST_BLOCK}|g" $1
-  sed -i'' "s|\[SNAP_ARCHIVE_NAME\]|${SNAP_ARCHIVE_NAME}|g" $1
-  sed -i'' "s|\[SNAP_ARCHIVE_LINK\]|${SNAP_ARCHIVE_LINK}|g" $1
-  sed -i'' "s@\[SNAP_ARCHIVE_DOWNLOAD_COMMAND\]@${SNAP_ARCHIVE_DOWNLOAD_COMMAND}@g" $1
-  sed -i'' "s|\[LIVE_PEERS_RANDOM\]|${LIVE_PEERS_RANDOM}|g" $1
-  sed -i'' "s|\[VALIDATOR_LINK\]|${VALIDATOR_LINK}|g" $1
-  sed -i'' "s|\[VERSION_HAND\]|${VERSION_HAND}|g" $1
+  sed -i '' "s|\[SNAPSHOT_URL\]|${SNAPSHOT_URL}|g" "$1"
+  sed -i '' "s|\[GITHUB_FOLDER_NAME\]|${GITHUB_FOLDER_NAME}|g" "$1"
+  sed -i '' "s|\[LIVE_PEERS_COUNT\]|${LIVE_PEERS_COUNT}|g" "$1"
+  sed -i '' "s|\[LIVE_PEERS_ALL\]|${LIVE_PEERS_ALL}|g" "$1"
+  sed -i '' "s|\[TIMESTAMP\]|${TIMESTAMP}|g" "$1"
+  sed -i '' "s|\[SIZE\]|${SIZE}|g" "$1"
+  sed -i '' "s|\[SNAP_LATEST_BLOCK\]|${SNAP_LATEST_BLOCK}|g" "$1"
+  sed -i '' "s|\[SNAP_ARCHIVE_NAME\]|${SNAP_ARCHIVE_NAME}|g" "$1"
+  sed -i '' "s|\[SNAP_ARCHIVE_LINK\]|${SNAP_ARCHIVE_LINK}|g" "$1"
+  sed -i '' "s@\[SNAP_ARCHIVE_DOWNLOAD_COMMAND\]@${SNAP_ARCHIVE_DOWNLOAD_COMMAND}@g" "$1"
+  sed -i '' "s|\[LIVE_PEERS_RANDOM\]|${LIVE_PEERS_RANDOM}|g" "$1"
+  sed -i '' "s|\[VERSION_HAND\]|${VERSION_HAND}|g" "$1"
+
+  # Feature toggles
+  sed -i '' "s|'\[SHOW_INSTALLATION_GUIDE\]'|${SHOW_INSTALLATION_GUIDE:-false}|g" "$1"
+  sed -i '' "s|'\[SHOW_UPGRADE_GUIDE\]'|${SHOW_UPGRADE_GUIDE:-false}|g" "$1"
+  sed -i '' "s|'\[SHOW_GENESIS\]'|${SHOW_GENESIS:-false}|g" "$1"
+  sed -i '' "s|'\[SHOW_CLI\]'|${SHOW_CLI:-false}|g" "$1"
+  sed -i '' "s|'\[SHOW_ENDPOINTS\]'|${SHOW_ENDPOINTS:-false}|g" "$1"
+  sed -i '' "s|'\[SHOW_STATE_SYNC\]'|${SHOW_STATE_SYNC:-false}|g" "$1"
+  sed -i '' "s|'\[SHOW_SNAPSHOT\]'|${SHOW_SNAPSHOT:-false}|g" "$1"
+  sed -i '' "s|'\[SHOW_LIVE_PEERS\]'|${SHOW_LIVE_PEERS:-false}|g" "$1"
+  sed -i '' "s|'\[SHOW_SEED\]'|${SHOW_SEED:-false}|g" "$1"
+  sed -i '' "s|'\[SHOW_ADDRESS_BOOK\]'|${SHOW_ADDRESS_BOOK:-false}|g" "$1"
+  sed -i '' "s|'\[SHOW_EXPLORERS_LIST\]'|${SHOW_EXPLORERS_LIST:-false}|g" "$1"
+  sed -i '' "s|'\[SHOW_PUBLIC_ENDPOINTS\]'|${SHOW_PUBLIC_ENDPOINTS:-false}|g" "$1"
+  sed -i '' "s|'\[SHOW_USEFUL_TOOLS\]'|${SHOW_USEFUL_TOOLS:-false}|g" "$1"
+  sed -i '' "s|'\[SHOW_UPGRADE_WATCHER\]'|${SHOW_UPGRADE_WATCHER:-false}|g" "$1"
 }
 
 #####################################################################################################################################################################
@@ -199,44 +237,9 @@ function replacePageVariables {
 
 function updateMain {
   if [ "$UPDATE_MAIN" = true ] ; then
-    CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}.md"
-    cp "../docs/mainnet-networks/template.md" "${CHAIN_PAGE_PATH}"
+    CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}.mdx"
+    cp "../docs/mainnet-networks/template.mdx" "${CHAIN_PAGE_PATH}"
     echo "${CHAIN_PAGE_PATH}"
-
-    # Endpoints
-    if [ -n "${ENDPOINT_RPC}" ] ; then
-      ENDPOINT_RPC_BLOCK="<SmallCard to=\"${ENDPOINT_RPC}\" header={{label: \"RPC Endpoint\", translateId: \"rpc-endpoint\"}}/>"
-    fi
-    if [ -n "${ENDPOINT_API}" ] ; then
-      ENDPOINT_API_BLOCK="<SmallCard to=\"${ENDPOINT_API}\" header={{label: \"API Endpoint\", translateId: \"api-endpoint\"}}/>"
-    fi
-    if [ -n "${ENDPOINT_JRPC}" ] ; then
-      ENDPOINT_JRPC_BLOCK="<SmallCard to=\"${ENDPOINT_JRPC}\" header={{label: \"json-RPC Endpoint\", translateId: \"jrpc-endpoint\"}}/>"
-    fi
-    if [ -n "${ENDPOINT_GRPC}" ] ; then
-      ENDPOINT_GRPC_BLOCK="<SmallCard to=\"${ENDPOINT_GRPC}\" header={{label: \"gRPC Endpoint\", translateId: \"grpc-endpoint\"}}/>"
-    fi
-    if [ -n "${ENDPOINT_COSMOSLIST}" ] ; then
-      ENDPOINT_COSMOSLIST_BLOCK="<SmallCard to=\"${ENDPOINT_COSMOSLIST}\" header={{label: \"Cosmoslist Endpoint\", translateId: \"cosmoslist-endpoint\"}}/>"
-    fi
-
-    # Social
-
-    if [ -n "${SOCIAL_WEBSITE}" ] ; then
-      SOCIAL_WEBSITE_BLOCK="<SmallCard to=\"${SOCIAL_WEBSITE}\" header={{label: \"Website\", translateId: \"social-telegram\"}} iconPath=\"img/website-icon.svg\"/>"
-    fi
-    if [ -n "${SOCIAL_GITHUB}" ] ; then
-      SOCIAL_GITHUB_BLOCK="<SmallCard to=\"${SOCIAL_GITHUB}\" header={{label: \"GitHub\", translateId: \"social-telegram\"}} iconPath=\"img/github-icon.svg\"/>"
-    fi
-    if [ -n "${SOCIAL_DISCORD}" ] ; then
-      SOCIAL_DISCORD_BLOCK="<SmallCard to=\"${SOCIAL_DISCORD}\" header={{label: \"Discord\", translateId: \"social-telegram\"}} iconPath=\"img/discord-icon.svg\"/>"
-    fi
-    if [ -n "${SOCIAL_X}" ] ; then
-      SOCIAL_X_BLOCK="<SmallCard to=\"${SOCIAL_X}\" header={{label: \"X\", translateId: \"social-telegram\"}} iconPath=\"img/x-icon.svg\"/>"
-    fi
-    if [ -n "${SOCIAL_TELEGRAM}" ] ; then
-      SOCIAL_TELEGRAM_BLOCK="<SmallCard to=\"${SOCIAL_TELEGRAM}\" header={{label: \"Telegram\", translateId: \"social-telegram\"}} iconPath=\"img/telegram-icon.svg\"/>"
-    fi
 
     replacePageVariables "${CHAIN_PAGE_PATH}"
   fi
@@ -255,8 +258,8 @@ function updateCategory {
 
 function updateInstall {
   if [ "$UPDATE_INSTALL" = true ] ; then
-    CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/install.md"
-    cp "../docs/mainnet-networks/template/install.md" "${CHAIN_PAGE_PATH}"
+    CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/install.mdx"
+    cp "../docs/mainnet-networks/template/install.mdx" "${CHAIN_PAGE_PATH}"
     echo "${CHAIN_PAGE_PATH}"
 
     replacePageVariables "${CHAIN_PAGE_PATH}"
@@ -265,8 +268,8 @@ function updateInstall {
 
 function updateUpgrade {
   if [ "$UPDATE_UPGRADE" = true ] ; then
-    CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/upgrade.md"
-    cp "../docs/mainnet-networks/template/upgrade.md" "${CHAIN_PAGE_PATH}"
+    CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/upgrade.mdx"
+    cp "../docs/mainnet-networks/template/upgrade.mdx" "${CHAIN_PAGE_PATH}"
     echo "${CHAIN_PAGE_PATH}"
 
     replacePageVariables "${CHAIN_PAGE_PATH}"
@@ -275,8 +278,8 @@ function updateUpgrade {
 
 function updateSnapshot {
   if [ "$UPDATE_SNAPSHOT" = true ] ; then
-    CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/snapshot.md"
-    cp "../docs/mainnet-networks/template/snapshot.md" "${CHAIN_PAGE_PATH}"
+    CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/snapshot.mdx"
+    cp "../docs/mainnet-networks/template/snapshot.mdx" "${CHAIN_PAGE_PATH}"
     echo "${CHAIN_PAGE_PATH}"
 
     replacePageVariables "${CHAIN_PAGE_PATH}"
@@ -285,8 +288,8 @@ function updateSnapshot {
 
 function updateStatesync {
   if [ "$UPDATE_STATESYNC" = true ] ; then
-    CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/statesync.md"
-    cp "../docs/mainnet-networks/template/statesync.md" "${CHAIN_PAGE_PATH}"
+    CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/statesync.mdx"
+    cp "../docs/mainnet-networks/template/statesync.mdx" "${CHAIN_PAGE_PATH}"
     echo "${CHAIN_PAGE_PATH}"
 
     replacePageVariables "${CHAIN_PAGE_PATH}"
@@ -303,8 +306,8 @@ function updateLivePeers {
     LIVE_PEERS_ALL=$(echo "${LIVE_PEERS_RAW}" | paste -sd "," -)
     LIVE_PEERS_RANDOM=$(echo "${LIVE_PEERS_RAW}" | sort --random-sort | head -n 5 | paste -sd "," -)
 
-    CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/live-peers.md"
-    cp "../docs/mainnet-networks/template/live-peers.md" "${CHAIN_PAGE_PATH}"
+    CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/seeds-and-peers.mdx"
+    cp "../docs/mainnet-networks/template/seeds-and-peers.mdx" "${CHAIN_PAGE_PATH}"
     echo "${CHAIN_PAGE_PATH}"
 
     replacePageVariables "${CHAIN_PAGE_PATH}"
@@ -356,8 +359,8 @@ function updateSnapshotInfo {
 
   SNAP_ARCHIVE_LINK="${url}"
 
-  CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/snapshot.md"
-  cp "../docs/mainnet-networks/template/snapshot.md" "${CHAIN_PAGE_PATH}"
+  CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/snapshot.mdx"
+  cp "../docs/mainnet-networks/template/snapshot.mdx" "${CHAIN_PAGE_PATH}"
   echo "${CHAIN_PAGE_PATH}"
 
   replacePageVariables "${CHAIN_PAGE_PATH}"
@@ -365,17 +368,29 @@ function updateSnapshotInfo {
 
 function updateCLICheatsheet {
   if [ "$UPDATE_CLI_CHEATSHEET" = true ] ; then
-    CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/cli-cheatsheet.md"
-    cp "../docs/mainnet-networks/template/cli-cheatsheet.md" "${CHAIN_PAGE_PATH}"
+    CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/cli-cheatsheet.mdx"
+    cp "../docs/mainnet-networks/template/cli-cheatsheet.mdx" "${CHAIN_PAGE_PATH}"
     echo "${CHAIN_PAGE_PATH}"
 
     replacePageVariables "${CHAIN_PAGE_PATH}"
   fi
 }
 
+function updateEndpoints {
+  if [ "$UPDATE_ENDPOINTS" = true ] ; then
+    CHAIN_PAGE_PATH="../docs/mainnet-networks/${CHAIN_SYSTEM_NAME}/endpoints.mdx"
+    cp "../docs/mainnet-networks/template/endpoints.mdx" "${CHAIN_PAGE_PATH}"
+    echo "${CHAIN_PAGE_PATH}"
+
+    replacePageVariables "${CHAIN_PAGE_PATH}"
+  fi
+}
+
+
 #####################################################################################################################################################################
 #                                                                              INSTALL MAINNET                                                                      #
 #####################################################################################################################################################################
+CHAIN_SCOPE=mainnet
 for config_file in "mainnet-networks"/*
 do
   echo "${config_file}"
@@ -391,8 +406,7 @@ do
   updateSnapshotInfo
   updateLivePeers
   updateCLICheatsheet
-
-  #echo ${LIVE_PEERS_RANDOM}
+  updateEndpoints
 done
 
 #####################################################################################################################################################################
@@ -401,44 +415,9 @@ done
 
 function updateMain {
   if [ "$UPDATE_MAIN" = true ] ; then
-    CHAIN_PAGE_PATH="../docs/testnet-networks/${CHAIN_SYSTEM_NAME}.md"
-    cp "../docs/testnet-networks/template.md" "${CHAIN_PAGE_PATH}"
+    CHAIN_PAGE_PATH="../docs/testnet-networks/${CHAIN_SYSTEM_NAME}.mdx"
+    cp "../docs/testnet-networks/template.mdx" "${CHAIN_PAGE_PATH}"
     echo "${CHAIN_PAGE_PATH}"
-
-    # Endpoints
-    if [ -n "${ENDPOINT_RPC}" ] ; then
-      ENDPOINT_RPC_BLOCK="<SmallCard to=\"${ENDPOINT_RPC}\" header={{label: \"RPC Endpoint\", translateId: \"rpc-endpoint\"}}/>"
-    fi
-    if [ -n "${ENDPOINT_API}" ] ; then
-      ENDPOINT_API_BLOCK="<SmallCard to=\"${ENDPOINT_API}\" header={{label: \"API Endpoint\", translateId: \"api-endpoint\"}}/>"
-    fi
-    if [ -n "${ENDPOINT_JRPC}" ] ; then
-      ENDPOINT_JRPC_BLOCK="<SmallCard to=\"${ENDPOINT_JRPC}\" header={{label: \"json-RPC Endpoint\", translateId: \"jrpc-endpoint\"}}/>"
-    fi
-    if [ -n "${ENDPOINT_GRPC}" ] ; then
-      ENDPOINT_GRPC_BLOCK="<SmallCard to=\"${ENDPOINT_GRPC}\" header={{label: \"gRPC Endpoint\", translateId: \"grpc-endpoint\"}}/>"
-    fi
-    if [ -n "${ENDPOINT_COSMOSLIST}" ] ; then
-      ENDPOINT_COSMOSLIST_BLOCK="<SmallCard to=\"${ENDPOINT_COSMOSLIST}\" header={{label: \"Cosmoslist Endpoint\", translateId: \"cosmoslist-endpoint\"}}/>"
-    fi
-
-    # Social
-
-    if [ -n "${SOCIAL_WEBSITE}" ] ; then
-      SOCIAL_WEBSITE_BLOCK="<SmallCard to=\"${SOCIAL_WEBSITE}\" header={{label: \"Website\", translateId: \"social-telegram\"}} iconPath=\"img/website-icon.svg\"/>"
-    fi
-    if [ -n "${SOCIAL_GITHUB}" ] ; then
-      SOCIAL_GITHUB_BLOCK="<SmallCard to=\"${SOCIAL_GITHUB}\" header={{label: \"GitHub\", translateId: \"social-telegram\"}} iconPath=\"img/github-icon.svg\"/>"
-    fi
-    if [ -n "${SOCIAL_DISCORD}" ] ; then
-      SOCIAL_DISCORD_BLOCK="<SmallCard to=\"${SOCIAL_DISCORD}\" header={{label: \"Discord\", translateId: \"social-telegram\"}} iconPath=\"img/discord-icon.svg\"/>"
-    fi
-    if [ -n "${SOCIAL_X}" ] ; then
-      SOCIAL_X_BLOCK="<SmallCard to=\"${SOCIAL_X}\" header={{label: \"X\", translateId: \"social-telegram\"}} iconPath=\"img/x-icon.svg\"/>"
-    fi
-    if [ -n "${SOCIAL_TELEGRAM}" ] ; then
-      SOCIAL_TELEGRAM_BLOCK="<SmallCard to=\"${SOCIAL_TELEGRAM}\" header={{label: \"Telegram\", translateId: \"social-telegram\"}} iconPath=\"img/telegram-icon.svg\"/>"
-    fi
 
     replacePageVariables "${CHAIN_PAGE_PATH}"
   fi
@@ -457,8 +436,8 @@ function updateCategory {
 
 function updateInstall {
   if [ "$UPDATE_INSTALL" = true ] ; then
-    CHAIN_PAGE_PATH="../docs/testnet-networks/${CHAIN_SYSTEM_NAME}/install.md"
-    cp "../docs/testnet-networks/template/install.md" "${CHAIN_PAGE_PATH}"
+    CHAIN_PAGE_PATH="../docs/testnet-networks/${CHAIN_SYSTEM_NAME}/install.mdx"
+    cp "../docs/testnet-networks/template/install.mdx" "${CHAIN_PAGE_PATH}"
     echo "${CHAIN_PAGE_PATH}"
 
     replacePageVariables "${CHAIN_PAGE_PATH}"
@@ -467,8 +446,8 @@ function updateInstall {
 
 function updateUpgrade {
   if [ "$UPDATE_UPGRADE" = true ] ; then
-    CHAIN_PAGE_PATH="../docs/testnet-networks/${CHAIN_SYSTEM_NAME}/upgrade.md"
-    cp "../docs/testnet-networks/template/upgrade.md" "${CHAIN_PAGE_PATH}"
+    CHAIN_PAGE_PATH="../docs/testnet-networks/${CHAIN_SYSTEM_NAME}/upgrade.mdx"
+    cp "../docs/testnet-networks/template/upgrade.mdx" "${CHAIN_PAGE_PATH}"
     echo "${CHAIN_PAGE_PATH}"
 
     replacePageVariables "${CHAIN_PAGE_PATH}"
@@ -477,8 +456,8 @@ function updateUpgrade {
 
 function updateSnapshot {
   if [ "$UPDATE_SNAPSHOT" = true ] ; then
-    CHAIN_PAGE_PATH="../docs/testnet-networks/${CHAIN_SYSTEM_NAME}/snapshot.md"
-    cp "../docs/testnet-networks/template/snapshot.md" "${CHAIN_PAGE_PATH}"
+    CHAIN_PAGE_PATH="../docs/testnet-networks/${CHAIN_SYSTEM_NAME}/snapshot.mdx"
+    cp "../docs/testnet-networks/template/snapshot.mdx" "${CHAIN_PAGE_PATH}"
     echo "${CHAIN_PAGE_PATH}"
 
     replacePageVariables "${CHAIN_PAGE_PATH}"
@@ -487,8 +466,8 @@ function updateSnapshot {
 
 function updateStatesync {
   if [ "$UPDATE_STATESYNC" = true ] ; then
-    CHAIN_PAGE_PATH="../docs/testnet-networks/${CHAIN_SYSTEM_NAME}/statesync.md"
-    cp "../docs/testnet-networks/template/statesync.md" "${CHAIN_PAGE_PATH}"
+    CHAIN_PAGE_PATH="../docs/testnet-networks/${CHAIN_SYSTEM_NAME}/statesync.mdx"
+    cp "../docs/testnet-networks/template/statesync.mdx" "${CHAIN_PAGE_PATH}"
     echo "${CHAIN_PAGE_PATH}"
 
     replacePageVariables "${CHAIN_PAGE_PATH}"
@@ -505,8 +484,8 @@ function updateLivePeers {
     LIVE_PEERS_ALL=$(echo "${LIVE_PEERS_RAW}" | paste -sd "," -)
     LIVE_PEERS_RANDOM=$(echo "${LIVE_PEERS_RAW}" | sort --random-sort | head -n 5 | paste -sd "," -)
 
-    CHAIN_PAGE_PATH="../docs/testnet-networks/${CHAIN_SYSTEM_NAME}/live-peers.md"
-    cp "../docs/testnet-networks/template/live-peers.md" "${CHAIN_PAGE_PATH}"
+    CHAIN_PAGE_PATH="../docs/testnet-networks/${CHAIN_SYSTEM_NAME}/seeds-and-peers.mdx"
+    cp "../docs/testnet-networks/template/seeds-and-peers.mdx" "${CHAIN_PAGE_PATH}"
     echo "${CHAIN_PAGE_PATH}"
 
     replacePageVariables "${CHAIN_PAGE_PATH}"
@@ -558,8 +537,8 @@ function updateSnapshotInfo {
 
   SNAP_ARCHIVE_LINK="${url}"
 
-  CHAIN_PAGE_PATH="../docs/testnet-networks/${CHAIN_SYSTEM_NAME}/snapshot.md"
-  cp "../docs/testnet-networks/template/snapshot.md" "${CHAIN_PAGE_PATH}"
+  CHAIN_PAGE_PATH="../docs/testnet-networks/${CHAIN_SYSTEM_NAME}/snapshot.mdx"
+  cp "../docs/testnet-networks/template/snapshot.mdx" "${CHAIN_PAGE_PATH}"
   echo "${CHAIN_PAGE_PATH}"
 
   replacePageVariables "${CHAIN_PAGE_PATH}"
@@ -567,8 +546,18 @@ function updateSnapshotInfo {
 
 function updateCLICheatsheet {
   if [ "$UPDATE_CLI_CHEATSHEET" = true ] ; then
-    CHAIN_PAGE_PATH="../docs/testnet-networks/${CHAIN_SYSTEM_NAME}/cli-cheatsheet.md"
-    cp "../docs/testnet-networks/template/cli-cheatsheet.md" "${CHAIN_PAGE_PATH}"
+    CHAIN_PAGE_PATH="../docs/testnet-networks/${CHAIN_SYSTEM_NAME}/cli-cheatsheet.mdx"
+    cp "../docs/testnet-networks/template/cli-cheatsheet.mdx" "${CHAIN_PAGE_PATH}"
+    echo "${CHAIN_PAGE_PATH}"
+
+    replacePageVariables "${CHAIN_PAGE_PATH}"
+  fi
+}
+
+function updateEndpoints {
+  if [ "$UPDATE_ENDPOINTS" = true ] ; then
+    CHAIN_PAGE_PATH="../docs/testnet-networks/${CHAIN_SYSTEM_NAME}/endpoints.mdx"
+    cp "../docs/testnet-networks/template/endpoints.mdx" "${CHAIN_PAGE_PATH}"
     echo "${CHAIN_PAGE_PATH}"
 
     replacePageVariables "${CHAIN_PAGE_PATH}"
@@ -578,7 +567,7 @@ function updateCLICheatsheet {
 #####################################################################################################################################################################
 #                                                                              INSTALL TESTNET                                                                      #
 #####################################################################################################################################################################
-
+CHAIN_SCOPE=testnet
 for config_file in "testnet-networks"/*
 do
   echo "${config_file}"
@@ -594,6 +583,5 @@ do
   updateSnapshotInfo
   updateLivePeers
   updateCLICheatsheet
-
-  #echo ${LIVE_PEERS_RANDOM}
+  updateEndpoints
 done

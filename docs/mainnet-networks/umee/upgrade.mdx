@@ -1,0 +1,63 @@
+---
+title: 'Upgrade'
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
+---
+
+import PageTitle from "@site/src/components/PageTitle";
+
+<PageTitle
+  iconUrl="img/umee-icon.svg"
+  title="Upgrade"
+  chainId="umee-1"
+  version="v6.7.3"
+/>
+
+## Clone UX repository
+
+```js
+cd $HOME
+rm -rf umee-network
+git clone https://github.com/umee-network.git
+cd umee-network
+git checkout v6.7.3
+```
+
+## Build binaries
+
+```js
+make build
+```
+
+## Prepare binaries for Cosmovisor
+
+```js
+mkdir -p ~/.umee/cosmovisor/upgrades/v6.7.3/bin
+mv build/umeed ~/.umee/cosmovisor/upgrades/v6.7.3/bin/
+rm -rf build
+```
+
+# Without Cosmovisor
+
+## Clone UX repository
+
+```js
+cd $HOME
+rm -rf umee-network
+git clone https://github.com/umee-network.git
+cd umee-network
+git checkout v6.7.3
+```
+
+## Build binaries
+
+```js
+make install
+```
+
+## Restart node and check logs
+
+```js
+sudo systemctl restart umeed && sudo journalctl -u umeed -f --no-hostname -o cat
+```

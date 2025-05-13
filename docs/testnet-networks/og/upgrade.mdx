@@ -1,0 +1,63 @@
+---
+title: 'Upgrade'
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
+---
+
+import PageTitle from "@site/src/components/PageTitle";
+
+<PageTitle
+  iconUrl="img/og-icon.svg"
+  title="Upgrade"
+  chainId="zgtendermint_16600-2"
+  version="v0.5.0.1"
+/>
+
+## Clone ZeroGravity repository
+
+```js
+cd $HOME
+rm -rf 0g-chain
+git clone https://github.com/0glabs/0g-chain.git
+cd 0g-chain
+git checkout v0.5.0.1
+```
+
+## Build binaries
+
+```js
+make build
+```
+
+## Prepare binaries for Cosmovisor
+
+```js
+mkdir -p ~/.0gchain/cosmovisor/upgrades/v0.5.0.1/bin
+mv build/0gchaind ~/.0gchain/cosmovisor/upgrades/v0.5.0.1/bin/
+rm -rf build
+```
+
+# Without Cosmovisor
+
+## Clone ZeroGravity repository
+
+```js
+cd $HOME
+rm -rf 0g-chain
+git clone https://github.com/0glabs/0g-chain.git
+cd 0g-chain
+git checkout v0.5.0.1
+```
+
+## Build binaries
+
+```js
+make install
+```
+
+## Restart node and check logs
+
+```js
+sudo systemctl restart 0gchaind && sudo journalctl -u 0gchaind -f --no-hostname -o cat
+```

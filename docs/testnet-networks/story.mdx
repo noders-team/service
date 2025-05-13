@@ -1,0 +1,55 @@
+---
+title: 'Story'
+hide_title: true
+hide_table_of_contents: false
+---
+
+import ChainLayout from '@site/src/components/ChainLayout';
+import ChainHero from '@site/src/components/ChainHero';
+import ProductLinks from '@site/src/components/ProductLinks';
+import ToolsGrid from '@site/src/components/ToolsGrid';
+
+<ChainLayout>
+  <ChainHero
+    name="Story"
+    iconUrl="img/story-icon.svg"
+    bgColor=""
+    scope="testnet"
+    chainId="devnet-1"
+    nodeVersion="v1.1.0"
+    token=""
+    stakeUrl=""
+    restakeUrl=""
+    websiteUrl="https://www.story.foundation/"
+    githubUrl="https://github.com/piplabs/story"
+    xUrl="https://x.com/StoryProtocol"
+    discordUrl="https://discord.gg/storyprotocol"
+  />
+
+  <ProductLinks
+    appUrl=""
+    appImageUrl="img/products/"
+    explorerUrl=""
+    faucetUrl=""
+  />
+
+  <ToolsGrid
+    chainName="story"
+    scope="testnet"
+    showInstall={true}
+    showUpgrade={true}
+    showGenesis={true}
+    showCli={true}
+    showEndpoints={true}
+    showStateSync={true}
+    showSnapshot={true}
+    showLivePeers={true}
+    showSeed={true}
+    showAddressBook={true}
+    showExplorersList={false}
+    showPublicEndpoints={false}
+    showUsefulTools={false}
+    showUpgradeWatcher={false}
+  />
+
+</ChainLayout>

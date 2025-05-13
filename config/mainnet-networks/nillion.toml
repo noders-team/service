@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Nillion"
 CHAIN_SYSTEM_NAME="nillion"
+CHAIN_ICON="nillion-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Nillion
-
-Nillion is a decentralized privacy-preserving computation network that enables secure data processing and storage without exposing sensitive information.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="unil"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="nilliond"
 DAEMON_SERVICE="nillion.service"
 DAEMON_HOME="~/.nilliond"
@@ -34,9 +31,9 @@ SOCIAL_X="https://x.com/nillionnetwork"
 SOCIAL_TELEGRAM="https://t.me/nillionnetwork"
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/nillion-mainnet/"
+SNAPSHOT_URL="https://snapshots.noders.services/nillion-mainnet/"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://nillion.explorers.guru/validator/nillionvaloper12dzevy6zu7kyqvx6hsa4ajru8835wga6k0tphu"
+VALIDATOR_URL="https://nillion.explorers.guru/validator/nillionvaloper12dzevy6zu7kyqvx6hsa4ajru8835wga6k0tphu"
 
 # Updates
 UPDATE_MAIN=true
@@ -47,3 +44,23 @@ UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true
 UPDATE_LIVE_PEERS=true
 UPDATE_CLI_CHEATSHEET=true
+UPDATE_ENDPOINTS=true
+
+# Feature toggles
+# Node installation
+SHOW_INSTALLATION_GUIDE=true
+SHOW_UPGRADE_GUIDE=true
+SHOW_GENESIS=true
+SHOW_CLI=true
+# Endpoints and Sync
+SHOW_ENDPOINTS=true
+SHOW_STATE_SYNC=true
+SHOW_SNAPSHOT=true
+SHOW_LIVE_PEERS=true
+SHOW_SEED=true
+SHOW_ADDRESS_BOOK=true
+# Tools
+SHOW_EXPLORERS_LIST=false
+SHOW_PUBLIC_ENDPOINTS=false
+SHOW_USEFUL_TOOLS=false
+SHOW_UPGRADE_WATCHER=false

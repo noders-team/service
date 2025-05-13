@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Mantra"
 CHAIN_SYSTEM_NAME="mantra"
+CHAIN_ICON="mantra-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION=""" (PRIVATE TESTNET) # Mantra Chain: The Gateway for Regulated Real-World Asset Tokenization
-
-Mantra Chain emerges as a pioneering Layer 1 blockchain, strategically crafted to bridge traditional finance (TradFi) and decentralized finance (DeFi). Its foundation rests on a solid infrastructure built for the tokenization of real-world assets (RWAs), ensuring adherence to regulatory requirements essential for institutional trust and security. This platform serves as a compliant framework that empowers institutions, businesses, developers, and users to seamlessly create, trade, and manage RWAs at the protocol level.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="uom"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="mantrachaind"
 DAEMON_SERVICE="mantrachaind.service"
 DAEMON_HOME="~/.mantrachaind"
@@ -34,9 +31,9 @@ SOCIAL_X="https://twitter.com/MANTRA_Chain"
 SOCIAL_TELEGRAM="https://t.me/MANTRA_Chain"
 
 # Other
-DOWNLOAD_URL="https://snapshots-t.noders.services/mantra"
+SNAPSHOT_URL="https://snapshots-t.noders.services/mantra"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://explorer.stavr.tech/MANTRA-Hongbai/staking/mantravaloper1aysxyetv0y7sfe0v70akyjn3kkjc6qyt5dlewa"
+VALIDATOR_URL="https://explorer.stavr.tech/MANTRA-Hongbai/staking/mantravaloper1aysxyetv0y7sfe0v70akyjn3kkjc6qyt5dlewa"
 
 # Updates
 UPDATE_MAIN=true
@@ -47,3 +44,23 @@ UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true
 UPDATE_LIVE_PEERS=true
 UPDATE_CLI_CHEATSHEET=true
+UPDATE_ENDPOINTS=true
+
+# Feature toggles
+# Node installation
+SHOW_INSTALLATION_GUIDE=true
+SHOW_UPGRADE_GUIDE=true
+SHOW_GENESIS=true
+SHOW_CLI=true
+# Endpoints and Sync
+SHOW_ENDPOINTS=true
+SHOW_STATE_SYNC=true
+SHOW_SNAPSHOT=true
+SHOW_LIVE_PEERS=true
+SHOW_SEED=true
+SHOW_ADDRESS_BOOK=true
+# Tools
+SHOW_EXPLORERS_LIST=false
+SHOW_PUBLIC_ENDPOINTS=false
+SHOW_USEFUL_TOOLS=false
+SHOW_UPGRADE_WATCHER=false

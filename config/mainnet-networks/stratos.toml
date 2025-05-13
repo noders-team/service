@@ -1,22 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Stratos"
 CHAIN_SYSTEM_NAME="stratos"
+CHAIN_ICON="stratos-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Stratos: Future-Proof Decentralized Data Storage
-
-Stratos is transforming data storage for the web with its blockchain-based, decentralized platform. Offering enhanced security, scalability, and data sovereignty, it challenges conventional cloud storage paradigms. Stratos is designed for rapid data access, a token economy rewarding users, and seamless interoperability for diverse applications. Ideal for dApps, analytics, content distribution, and secure archiving, Stratos is paving the way towards a user-driven digital era.
-
-Explore Stratos for a decentralized data storage solution.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
-
 CHAIN_DENOM="wei"
 CHAIN_FEES="300000000000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="stchaind"
 DAEMON_SERVICE="stchaind.service"
 DAEMON_HOME="~/.stchaind"
@@ -37,9 +31,9 @@ SOCIAL_X="https://twitter.com/Stratos_Network"
 SOCIAL_TELEGRAM="https://t.me/StratosOfficial"
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/stratos"
+SNAPSHOT_URL="https://snapshots.noders.services/stratos"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://explorer.thestratos.org/stratos/validators/stvaloper1ghkn8ra63422mcepdk0zzglzy6qax637g6fhzm"
+VALIDATOR_URL="https://explorer.thestratos.org/stratos/validators/stvaloper1ghkn8ra63422mcepdk0zzglzy6qax637g6fhzm"
 
 # Updates
 UPDATE_MAIN=true
@@ -50,3 +44,23 @@ UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true
 UPDATE_LIVE_PEERS=true
 UPDATE_CLI_CHEATSHEET=true
+UPDATE_ENDPOINTS=true
+
+# Feature toggles
+# Node installation
+SHOW_INSTALLATION_GUIDE=true
+SHOW_UPGRADE_GUIDE=true
+SHOW_GENESIS=true
+SHOW_CLI=true
+# Endpoints and Sync
+SHOW_ENDPOINTS=true
+SHOW_STATE_SYNC=true
+SHOW_SNAPSHOT=true
+SHOW_LIVE_PEERS=true
+SHOW_SEED=true
+SHOW_ADDRESS_BOOK=true
+# Tools
+SHOW_EXPLORERS_LIST=false
+SHOW_PUBLIC_ENDPOINTS=false
+SHOW_USEFUL_TOOLS=false
+SHOW_UPGRADE_WATCHER=false

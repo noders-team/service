@@ -1,0 +1,63 @@
+---
+title: 'Upgrade'
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
+---
+
+import PageTitle from "@site/src/components/PageTitle";
+
+<PageTitle
+  iconUrl="img/empeiria-icon.svg"
+  title="Upgrade"
+  chainId="empe-testnet-2"
+  version="v0.3.0"
+/>
+
+## Clone Empeiria repository
+
+```js
+cd $HOME
+rm -rf empe-io
+git clone https://github.com/empe-io.git
+cd empe-io
+git checkout v0.3.0
+```
+
+## Build binaries
+
+```js
+make build
+```
+
+## Prepare binaries for Cosmovisor
+
+```js
+mkdir -p ~/.empe-chain/cosmovisor/upgrades/v0.3.0/bin
+mv build/emped ~/.empe-chain/cosmovisor/upgrades/v0.3.0/bin/
+rm -rf build
+```
+
+# Without Cosmovisor
+
+## Clone Empeiria repository
+
+```js
+cd $HOME
+rm -rf empe-io
+git clone https://github.com/empe-io.git
+cd empe-io
+git checkout v0.3.0
+```
+
+## Build binaries
+
+```js
+make install
+```
+
+## Restart node and check logs
+
+```js
+sudo systemctl restart emped && sudo journalctl -u emped -f --no-hostname -o cat
+```

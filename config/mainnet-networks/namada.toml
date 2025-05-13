@@ -1,19 +1,17 @@
-# Blockchain
+# App
 CHAIN_NAME="Namada"
 CHAIN_SYSTEM_NAME="namada"
-CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION=""" # Namada
+CHAIN_ICON="namada-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
 
-is a Proof-of-Stake L1 for interchain asset-agnostic privacy. Namada uses CometBFT consensus and enables multi-asset shielded transfers for any native or non-native asset. Namada features full IBC protocol support, a natively integrated Ethereum bridge, a modern proof-of-stake system with automatic reward compounding and cubic slashing, and a stake-weighted governance signalling mechanism. Users of shielded transfers are rewarded for their contributions to the privacy set in the form of native protocol tokens. A multi-asset shielded transfer wallet is provided in order to facilitate safe and private user interaction with the protocol.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
+# Blockchain
+CHAIN_ID="namada.5f5de2dd1b88cba30586420"
+CHAIN_DENOM_PRETTY="NAM"
 CHAIN_DENOM="NAM"
 CHAIN_FEES="1"
 
 # Binary
+VERSION="v1.0.0"
 DAEMON_NAME="namadad"
 DAEMON_SERVICE="namada.service"
 DAEMON_HOME="~/.local"
@@ -34,12 +32,12 @@ SOCIAL_X="https://twitter.com/namada"
 SOCIAL_TELEGRAM="https://t.me/+pjXZFdE9s-s2OGVi"
 
 # Other
-DOWNLOAD_URL=""
+SNAPSHOT_URL=""
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://namada.coverlet.io/validators/2A8B3E24756A4782D26169B60AB9418816668101220F705DDDDA3C47334ADF5E"
+VALIDATOR_URL="https://namada.coverlet.io/validators/2A8B3E24756A4782D26169B60AB9418816668101220F705DDDDA3C47334ADF5E"
 
 # Updates
-UPDATE_MAIN=false
+UPDATE_MAIN=true
 UPDATE_CATEGORY=false
 UPDATE_INSTALL=false
 UPDATE_UPGRADE=false
@@ -47,3 +45,23 @@ UPDATE_SNAPSHOT=false
 UPDATE_STATESYNC=false
 UPDATE_LIVE_PEERS=false
 UPDATE_CLI_CHEATSHEET=false
+UPDATE_ENDPOINTS=true
+
+# Feature toggles
+# Node installation
+SHOW_INSTALLATION_GUIDE=true
+SHOW_UPGRADE_GUIDE=false
+SHOW_GENESIS=false
+SHOW_CLI=true
+# Endpoints and Sync
+SHOW_ENDPOINTS=true
+SHOW_STATE_SYNC=false
+SHOW_SNAPSHOT=false
+SHOW_LIVE_PEERS=false
+SHOW_SEED=false
+SHOW_ADDRESS_BOOK=false
+# Tools
+SHOW_EXPLORERS_LIST=false
+SHOW_PUBLIC_ENDPOINTS=false
+SHOW_USEFUL_TOOLS=false
+SHOW_UPGRADE_WATCHER=false

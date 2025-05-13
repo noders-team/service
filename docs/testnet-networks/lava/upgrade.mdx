@@ -1,0 +1,63 @@
+---
+title: 'Upgrade'
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
+---
+
+import PageTitle from "@site/src/components/PageTitle";
+
+<PageTitle
+  iconUrl="img/lava-icon.svg"
+  title="Upgrade"
+  chainId="lava-testnet-2"
+  version="v5.4.0"
+/>
+
+## Clone Lava repository
+
+```js
+cd $HOME
+rm -rf lavanet
+git clone https://github.com/lavanet.git
+cd lavanet
+git checkout v5.4.0
+```
+
+## Build binaries
+
+```js
+make build
+```
+
+## Prepare binaries for Cosmovisor
+
+```js
+mkdir -p ~/.lava/cosmovisor/upgrades/v5.4.0/bin
+mv build/lavad ~/.lava/cosmovisor/upgrades/v5.4.0/bin/
+rm -rf build
+```
+
+# Without Cosmovisor
+
+## Clone Lava repository
+
+```js
+cd $HOME
+rm -rf lavanet
+git clone https://github.com/lavanet.git
+cd lavanet
+git checkout v5.4.0
+```
+
+## Build binaries
+
+```js
+make install
+```
+
+## Restart node and check logs
+
+```js
+sudo systemctl restart lavad && sudo journalctl -u lavad -f --no-hostname -o cat
+```

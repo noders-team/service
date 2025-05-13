@@ -1,0 +1,55 @@
+---
+title: 'Empeiria'
+hide_title: true
+hide_table_of_contents: false
+---
+
+import ChainLayout from '@site/src/components/ChainLayout';
+import ChainHero from '@site/src/components/ChainHero';
+import ProductLinks from '@site/src/components/ProductLinks';
+import ToolsGrid from '@site/src/components/ToolsGrid';
+
+<ChainLayout>
+  <ChainHero
+    name="Empeiria"
+    iconUrl="img/empeiria-icon.svg"
+    bgColor=""
+    scope="testnet"
+    chainId="empe-testnet-2"
+    nodeVersion="v0.3.0"
+    token=""
+    stakeUrl=""
+    restakeUrl=""
+    websiteUrl="https://empe.io/"
+    githubUrl="https://github.com/empe-io"
+    xUrl="https://twitter.com/empe_io"
+    discordUrl=""
+  />
+
+  <ProductLinks
+    appUrl=""
+    appImageUrl="img/products/"
+    explorerUrl=""
+    faucetUrl=""
+  />
+
+  <ToolsGrid
+    chainName="empeiria"
+    scope="testnet"
+    showInstall={true}
+    showUpgrade={true}
+    showGenesis={true}
+    showCli={true}
+    showEndpoints={true}
+    showStateSync={true}
+    showSnapshot={true}
+    showLivePeers={true}
+    showSeed={true}
+    showAddressBook={true}
+    showExplorersList={false}
+    showPublicEndpoints={false}
+    showUsefulTools={false}
+    showUpgradeWatcher={false}
+  />
+
+</ChainLayout>

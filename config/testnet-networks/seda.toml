@@ -1,21 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Seda"
 CHAIN_SYSTEM_NAME="seda"
+CHAIN_ICON="seda-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# SEDA: Simplifying Decentralized Finance
-
-SEDA is at the forefront of the decentralized finance revolution, offering a comprehensive platform designed to democratize access to financial services. By leveraging blockchain technology, SEDA introduces a transparent, secure, and accessible ecosystem where users can engage in lending, borrowing, and trading without the need for traditional financial intermediaries.
-
-This platform is built with the user in mind, featuring an intuitive interface that makes navigating the complexities of DeFi straightforward. SEDA's innovative protocols ensure high liquidity, low slippage, and competitive yields across a variety of digital assets.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="aseda"
 CHAIN_FEES="300000000000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="sedad"
 DAEMON_SERVICE="seda.service"
 DAEMON_HOME="~/.sedad"
@@ -36,9 +31,9 @@ SOCIAL_X="https://twitter.com/sedaprotocol"
 SOCIAL_TELEGRAM="https://t.me/sedaprotocol"
 
 # Other
-DOWNLOAD_URL="https://snapshots-t.noders.services/seda"
+SNAPSHOT_URL="https://snapshots-t.noders.services/seda"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://testnet.seda.explorers.guru/validator/sedavaloper1ws3x9g0e7sx7zaxvtmtjmrdz2fgttr0x57csd9"
+VALIDATOR_URL="https://testnet.seda.explorers.guru/validator/sedavaloper1ws3x9g0e7sx7zaxvtmtjmrdz2fgttr0x57csd9"
 
 # Updates
 UPDATE_MAIN=true
@@ -49,3 +44,23 @@ UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true
 UPDATE_LIVE_PEERS=true
 UPDATE_CLI_CHEATSHEET=true
+UPDATE_ENDPOINTS=true
+
+# Feature toggles
+# Node installation
+SHOW_INSTALLATION_GUIDE=true
+SHOW_UPGRADE_GUIDE=true
+SHOW_GENESIS=true
+SHOW_CLI=true
+# Endpoints and Sync
+SHOW_ENDPOINTS=true
+SHOW_STATE_SYNC=true
+SHOW_SNAPSHOT=true
+SHOW_LIVE_PEERS=true
+SHOW_SEED=true
+SHOW_ADDRESS_BOOK=true
+# Tools
+SHOW_EXPLORERS_LIST=false
+SHOW_PUBLIC_ENDPOINTS=false
+SHOW_USEFUL_TOOLS=false
+SHOW_UPGRADE_WATCHER=false

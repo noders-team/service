@@ -1,19 +1,16 @@
-# Blockchain
+# App
 CHAIN_NAME="Desmos"
 CHAIN_SYSTEM_NAME="desmos"
+CHAIN_ICON="desmos-icon.svg"
+CHAIN_BACKGROUND_COLOR=""
+
+# Blockchain
 CHAIN_ID="auto"
-VERSION="auto"
-CHAIN_DESCRIPTION="""# Desmos: Empowering Decentralized Social Networking
-
-Desmos revolutionizes social media, focusing on user empowerment, data sovereignty, and censorship resistance. It features decentralized identities for user privacy, content monetization through cryptocurrencies, and community-driven governance. Ensuring interoperability with other DApps, Desmos fosters an open ecosystem for diverse social interactions, challenging traditional social platforms by prioritizing privacy, freedom of expression, and direct creator compensation.
-
-"""
-[CHAIN_DESCRIPTION_END]
-
 CHAIN_DENOM="udsm"
 CHAIN_FEES="20000"
 
 # Binary
+VERSION="auto"
 DAEMON_NAME="desmos"
 DAEMON_SERVICE="desmos.service"
 DAEMON_HOME="~/.desmos"
@@ -34,9 +31,9 @@ SOCIAL_X="https://twitter.com/desmosnetwork"
 SOCIAL_TELEGRAM="https://t.me/desmosnetwork"
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/desmos"
+SNAPSHOT_URL="https://snapshots.noders.services/desmos"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://ping.pub/desmos/staking/desmosvaloper1pequu0gsvh9ay5rx2xyg6j7eratwufu560dpnu"
+VALIDATOR_URL="https://ping.pub/desmos/staking/desmosvaloper1pequu0gsvh9ay5rx2xyg6j7eratwufu560dpnu"
 
 # Updates
 UPDATE_MAIN=true
@@ -47,3 +44,23 @@ UPDATE_SNAPSHOT=true
 UPDATE_STATESYNC=true
 UPDATE_LIVE_PEERS=true
 UPDATE_CLI_CHEATSHEET=true
+UPDATE_ENDPOINTS=true
+
+# Feature toggles
+# Node installation
+SHOW_INSTALLATION_GUIDE=true
+SHOW_UPGRADE_GUIDE=true
+SHOW_GENESIS=true
+SHOW_CLI=true
+# Endpoints and Sync
+SHOW_ENDPOINTS=true
+SHOW_STATE_SYNC=true
+SHOW_SNAPSHOT=true
+SHOW_LIVE_PEERS=true
+SHOW_SEED=true
+SHOW_ADDRESS_BOOK=true
+# Tools
+SHOW_EXPLORERS_LIST=false
+SHOW_PUBLIC_ENDPOINTS=false
+SHOW_USEFUL_TOOLS=false
+SHOW_UPGRADE_WATCHER=false
