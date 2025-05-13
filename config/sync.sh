@@ -162,80 +162,80 @@ function replacePageVariables {
   fi
 
   # App
-  $SED_CMD "s|\[CHAIN_NAME\]|${CHAIN_NAME}|g" "$1"
-  $SED_CMD "s|\[CHAIN_SYSTEM_NAME\]|${CHAIN_SYSTEM_NAME}|g" "$1"
-  $SED_CMD "s|\[CHAIN_ICON\]|${CHAIN_ICON}|g" "$1"
-  $SED_CMD "s|\[CHAIN_SCOPE\]|${CHAIN_SCOPE}|g" "$1"
-  $SED_CMD "s|\[CHAIN_BACKGROUND_COLOR\]|${CHAIN_BACKGROUND_COLOR}|g" "$1"
+  $SED_CMD "s|\[CHAIN_NAME\]|${CHAIN_NAME}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[CHAIN_SYSTEM_NAME\]|${CHAIN_SYSTEM_NAME}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[CHAIN_ICON\]|${CHAIN_ICON}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[CHAIN_SCOPE\]|${CHAIN_SCOPE}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[CHAIN_BACKGROUND_COLOR\]|${CHAIN_BACKGROUND_COLOR}|g" "$1" 2>/dev/null
 
   # Noders
   escaped_stake_url=$(escapeSpecialChars "${STAKE_URL}")
-  $SED_CMD "s|\[STAKE_URL\]|${escaped_stake_url}|g" "$1"
+  $SED_CMD "s|\[STAKE_URL\]|${escaped_stake_url}|g" "$1" 2>/dev/null
   escaped_restake_url=$(escapeSpecialChars "${RESTAKE_URL}")
-  $SED_CMD "s|\[RESTAKE_URL\]|${escaped_restake_url}|g" "$1"
-  $SED_CMD "s|\[VALIDATOR_URL\]|${VALIDATOR_URL}|g" "$1"
-  $SED_CMD "s|\[EXPLORER_URL\]|${EXPLORER_URL}|g" "$1"
-  $SED_CMD "s|\[FAUCET_URL\]|${FAUCET_URL}|g" "$1"
-  $SED_CMD "s|\[APP_URL\]|${APP_URL}|g" "$1"
-  $SED_CMD "s|\[APP_IMAGE\]|${APP_IMAGE}|g" "$1"
+  $SED_CMD "s|\[RESTAKE_URL\]|${escaped_restake_url}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[VALIDATOR_URL\]|${VALIDATOR_URL}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[EXPLORER_URL\]|${EXPLORER_URL}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[FAUCET_URL\]|${FAUCET_URL}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[APP_URL\]|${APP_URL}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[APP_IMAGE\]|${APP_IMAGE}|g" "$1" 2>/dev/null
 
   # Blockchain
-  $SED_CMD "s|\[CHAIN_ID\]|${CHAIN_ID}|g" "$1"
-  $SED_CMD "s|\[CHAIN_DENOM_PRETTY\]|${CHAIN_DENOM_PRETTY}|g" "$1"
-  $SED_CMD "s|\[CHAIN_DENOM\]|${CHAIN_DENOM}|g" "$1"
-  $SED_CMD "s|\[CHAIN_FEES\]|${CHAIN_FEES}|g" "$1"
+  $SED_CMD "s|\[CHAIN_ID\]|${CHAIN_ID}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[CHAIN_DENOM_PRETTY\]|${CHAIN_DENOM_PRETTY}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[CHAIN_DENOM\]|${CHAIN_DENOM}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[CHAIN_FEES\]|${CHAIN_FEES}|g" "$1" 2>/dev/null
 
   # Binary
-  $SED_CMD "s|\[VERSION\]|${VERSION}|g" "$1"
-  $SED_CMD "s|\[DAEMON_NAME\]|${DAEMON_NAME}|g" "$1"
-  $SED_CMD "s|\[DAEMON_SERVICE\]|${DAEMON_SERVICE}|g" "$1"
-  $SED_CMD "s|\[DAEMON_HOME\]|${DAEMON_HOME}|g" "$1"
+  $SED_CMD "s|\[VERSION\]|${VERSION}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[DAEMON_NAME\]|${DAEMON_NAME}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[DAEMON_SERVICE\]|${DAEMON_SERVICE}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[DAEMON_HOME\]|${DAEMON_HOME}|g" "$1" 2>/dev/null
 
   # Endpoints
-  $SED_CMD "s|\[ENDPOINT_RPC\]|${ENDPOINT_RPC}|g" "$1"
-  $SED_CMD "s|\[ENDPOINT_API\]|${ENDPOINT_API}|g" "$1"
-  $SED_CMD "s|\[ENDPOINT_JRPC\]|${ENDPOINT_JRPC}|g" "$1"
-  $SED_CMD "s|\[ENDPOINT_GRPC\]|${ENDPOINT_GRPC}|g" "$1"
-  $SED_CMD "s|\[ENDPOINT_PEER\]|${ENDPOINT_PEER}|g" "$1"
-  $SED_CMD "s|\[ENDPOINT_COSMOSLIST\]|${ENDPOINT_COSMOSLIST}|g" "$1"
-  $SED_CMD "s|\[ENDPOINT_SEED\]|${ENDPOINT_SEED}|g" "$1"
+  $SED_CMD "s|\[ENDPOINT_RPC\]|${ENDPOINT_RPC}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[ENDPOINT_API\]|${ENDPOINT_API}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[ENDPOINT_JRPC\]|${ENDPOINT_JRPC}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[ENDPOINT_GRPC\]|${ENDPOINT_GRPC}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[ENDPOINT_PEER\]|${ENDPOINT_PEER}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[ENDPOINT_COSMOSLIST\]|${ENDPOINT_COSMOSLIST}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[ENDPOINT_SEED\]|${ENDPOINT_SEED}|g" "$1" 2>/dev/null
 
   # Social
-  $SED_CMD "s|\[SOCIAL_WEBSITE\]|${SOCIAL_WEBSITE}|g" "$1"
-  $SED_CMD "s|\[SOCIAL_GITHUB\]|${SOCIAL_GITHUB}|g" "$1"
-  $SED_CMD "s|\[SOCIAL_DISCORD\]|${SOCIAL_DISCORD}|g" "$1"
-  $SED_CMD "s|\[SOCIAL_X\]|${SOCIAL_X}|g" "$1"
-  $SED_CMD "s|\[SOCIAL_TELEGRAM\]|${SOCIAL_TELEGRAM}|g" "$1"
+  $SED_CMD "s|\[SOCIAL_WEBSITE\]|${SOCIAL_WEBSITE}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[SOCIAL_GITHUB\]|${SOCIAL_GITHUB}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[SOCIAL_DISCORD\]|${SOCIAL_DISCORD}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[SOCIAL_X\]|${SOCIAL_X}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[SOCIAL_TELEGRAM\]|${SOCIAL_TELEGRAM}|g" "$1" 2>/dev/null
 
   # Other
-  $SED_CMD "s|\[SNAPSHOT_URL\]|${SNAPSHOT_URL}|g" "$1"
-  $SED_CMD "s|\[GITHUB_FOLDER_NAME\]|${GITHUB_FOLDER_NAME}|g" "$1"
-  $SED_CMD "s|\[LIVE_PEERS_COUNT\]|${LIVE_PEERS_COUNT}|g" "$1"
-  $SED_CMD "s|\[LIVE_PEERS_ALL\]|${LIVE_PEERS_ALL}|g" "$1"
-  $SED_CMD "s|\[TIMESTAMP\]|${TIMESTAMP}|g" "$1"
-  $SED_CMD "s|\[SIZE\]|${SIZE}|g" "$1"
-  $SED_CMD "s|\[SNAP_LATEST_BLOCK\]|${SNAP_LATEST_BLOCK}|g" "$1"
-  $SED_CMD "s|\[SNAP_ARCHIVE_NAME\]|${SNAP_ARCHIVE_NAME}|g" "$1"
-  $SED_CMD "s|\[SNAP_ARCHIVE_LINK\]|${SNAP_ARCHIVE_LINK}|g" "$1"
-  $SED_CMD "s@\[SNAP_ARCHIVE_DOWNLOAD_COMMAND\]@${SNAP_ARCHIVE_DOWNLOAD_COMMAND}@g" "$1"
-  $SED_CMD "s|\[LIVE_PEERS_RANDOM\]|${LIVE_PEERS_RANDOM}|g" "$1"
-  $SED_CMD "s|\[VERSION_HAND\]|${VERSION_HAND}|g" "$1"
+  $SED_CMD "s|\[SNAPSHOT_URL\]|${SNAPSHOT_URL}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[GITHUB_FOLDER_NAME\]|${GITHUB_FOLDER_NAME}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[LIVE_PEERS_COUNT\]|${LIVE_PEERS_COUNT}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[LIVE_PEERS_ALL\]|${LIVE_PEERS_ALL}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[TIMESTAMP\]|${TIMESTAMP}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[SIZE\]|${SIZE}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[SNAP_LATEST_BLOCK\]|${SNAP_LATEST_BLOCK}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[SNAP_ARCHIVE_NAME\]|${SNAP_ARCHIVE_NAME}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[SNAP_ARCHIVE_LINK\]|${SNAP_ARCHIVE_LINK}|g" "$1" 2>/dev/null
+  $SED_CMD "s@\[SNAP_ARCHIVE_DOWNLOAD_COMMAND\]@${SNAP_ARCHIVE_DOWNLOAD_COMMAND}@g" "$1" 2>/dev/null
+  $SED_CMD "s|\[LIVE_PEERS_RANDOM\]|${LIVE_PEERS_RANDOM}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[VERSION_HAND\]|${VERSION_HAND}|g" "$1" 2>/dev/null
 
   # Feature toggles
-  $SED_CMD "s|'\[SHOW_INSTALLATION_GUIDE\]'|${SHOW_INSTALLATION_GUIDE:-false}|g" "$1"
-  $SED_CMD "s|'\[SHOW_UPGRADE_GUIDE\]'|${SHOW_UPGRADE_GUIDE:-false}|g" "$1"
-  $SED_CMD "s|'\[SHOW_GENESIS\]'|${SHOW_GENESIS:-false}|g" "$1"
-  $SED_CMD "s|'\[SHOW_CLI\]'|${SHOW_CLI:-false}|g" "$1"
-  $SED_CMD "s|'\[SHOW_ENDPOINTS\]'|${SHOW_ENDPOINTS:-false}|g" "$1"
-  $SED_CMD "s|'\[SHOW_STATE_SYNC\]'|${SHOW_STATE_SYNC:-false}|g" "$1"
-  $SED_CMD "s|'\[SHOW_SNAPSHOT\]'|${SHOW_SNAPSHOT:-false}|g" "$1"
-  $SED_CMD "s|'\[SHOW_LIVE_PEERS\]'|${SHOW_LIVE_PEERS:-false}|g" "$1"
-  $SED_CMD "s|'\[SHOW_SEED\]'|${SHOW_SEED:-false}|g" "$1"
-  $SED_CMD "s|'\[SHOW_ADDRESS_BOOK\]'|${SHOW_ADDRESS_BOOK:-false}|g" "$1"
-  $SED_CMD "s|'\[SHOW_EXPLORERS_LIST\]'|${SHOW_EXPLORERS_LIST:-false}|g" "$1"
-  $SED_CMD "s|'\[SHOW_PUBLIC_ENDPOINTS\]'|${SHOW_PUBLIC_ENDPOINTS:-false}|g" "$1"
-  $SED_CMD "s|'\[SHOW_USEFUL_TOOLS\]'|${SHOW_USEFUL_TOOLS:-false}|g" "$1"
-  $SED_CMD "s|'\[SHOW_UPGRADE_WATCHER\]'|${SHOW_UPGRADE_WATCHER:-false}|g" "$1"
+  $SED_CMD "s|'\[SHOW_INSTALLATION_GUIDE\]'|${SHOW_INSTALLATION_GUIDE:-false}|g" "$1" 2>/dev/null
+  $SED_CMD "s|'\[SHOW_UPGRADE_GUIDE\]'|${SHOW_UPGRADE_GUIDE:-false}|g" "$1" 2>/dev/null
+  $SED_CMD "s|'\[SHOW_GENESIS\]'|${SHOW_GENESIS:-false}|g" "$1" 2>/dev/null
+  $SED_CMD "s|'\[SHOW_CLI\]'|${SHOW_CLI:-false}|g" "$1" 2>/dev/null
+  $SED_CMD "s|'\[SHOW_ENDPOINTS\]'|${SHOW_ENDPOINTS:-false}|g" "$1" 2>/dev/null
+  $SED_CMD "s|'\[SHOW_STATE_SYNC\]'|${SHOW_STATE_SYNC:-false}|g" "$1" 2>/dev/null
+  $SED_CMD "s|'\[SHOW_SNAPSHOT\]'|${SHOW_SNAPSHOT:-false}|g" "$1" 2>/dev/null
+  $SED_CMD "s|'\[SHOW_LIVE_PEERS\]'|${SHOW_LIVE_PEERS:-false}|g" "$1" 2>/dev/null
+  $SED_CMD "s|'\[SHOW_SEED\]'|${SHOW_SEED:-false}|g" "$1" 2>/dev/null
+  $SED_CMD "s|'\[SHOW_ADDRESS_BOOK\]'|${SHOW_ADDRESS_BOOK:-false}|g" "$1" 2>/dev/null
+  $SED_CMD "s|'\[SHOW_EXPLORERS_LIST\]'|${SHOW_EXPLORERS_LIST:-false}|g" "$1" 2>/dev/null
+  $SED_CMD "s|'\[SHOW_PUBLIC_ENDPOINTS\]'|${SHOW_PUBLIC_ENDPOINTS:-false}|g" "$1" 2>/dev/null
+  $SED_CMD "s|'\[SHOW_USEFUL_TOOLS\]'|${SHOW_USEFUL_TOOLS:-false}|g" "$1" 2>/dev/null
+  $SED_CMD "s|'\[SHOW_UPGRADE_WATCHER\]'|${SHOW_UPGRADE_WATCHER:-false}|g" "$1" 2>/dev/null
 }
 
 #####################################################################################################################################################################
