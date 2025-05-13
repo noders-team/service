@@ -31,9 +31,9 @@ SOCIAL_X="https://twitter.com/realio_network"
 SOCIAL_TELEGRAM=""
 
 # Other
-DOWNLOAD_URL="https://snapshots.noders.services/rebus"
+DOWNLOAD_URL="https://snapshots.noders.services/realio"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://rebus.explorers.guru/validator/rebusvaloper1ssvn4vrw8c40r6zgyhhxclhp36n75sulca02pl"
+VALIDATOR_LINK="https://ping.pub/realio/staking/realiovaloper1q0ju3af59l2kp2vfywcjrmj07tkgkg0s9zfh03"
 
 # Updates
 UPDATE_MAIN=true

@@ -373,3 +373,7 @@ code .variable {
 .icon-fuel {
     background-image: url('../../static/img/fuel-icon.svg');
 }
+
+.icon-dora {
+  background-image: url('../../static/img/dora-icon.svg');
+}
