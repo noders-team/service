@@ -9,9 +9,11 @@ type Props = {
 function CodeText({ text }: Props) {
   return (
     <Box
+      display="flex"
       paddingY={0.5}
       paddingX={1}
       borderRadius={2}
+      alignItems="center"
       sx={{
         backgroundColor: '#20222C',
       }}
