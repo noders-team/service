@@ -321,7 +321,7 @@ sudo journalctl -u 0gchaind -f --no-hostname -o cat
 cd $HOME
 sudo systemctl stop 0gchaind
 sudo systemctl disable 0gchaind
-sudo rm /etc/systemd/system/
+sudo rm /etc/systemd/system/og.service
 sudo systemctl daemon-reload
 rm -f $(which 0gchaind)
 rm -rf ~/.0gchain
