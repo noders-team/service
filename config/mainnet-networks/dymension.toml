@@ -2,7 +2,7 @@
 CHAIN_NAME="Dymension"
 CHAIN_SYSTEM_NAME="dymension"
 CHAIN_ICON="dymension-icon.svg"
-CHAIN_BACKGROUND_COLOR="#F1E1D4"
+CHAIN_BACKGROUND_COLOR="#dbb447"
 
 # NODERS
 STAKE_URL="https://wallet.keplr.app/?modal=staking&chain=dymension_1100-1&validator_address=dymvaloper1ta56hcqaxj55wu8emarnw090gk5uq4366uz572&step_id=3&action_id=stake"
