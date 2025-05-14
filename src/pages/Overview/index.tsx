@@ -97,20 +97,22 @@ function Overview({ scope }: Props): React.JSX.Element {
           </Box>
           <Box display="flex" flexDirection="column" gap={1}>
             <Typography variant="overline">Type</Typography>
-            <Box px={1} py={0.5} bgcolor="background.paper" borderRadius={2}>
-              <Typography variant="subtitle2" sx={{ fontWeight: 500 }}>
-                Cosmos
-              </Typography>
-            </Box>
-            <Box px={1} py={0.5} bgcolor="background.paper" borderRadius={2}>
-              <Typography variant="subtitle2" sx={{ fontWeight: 500 }}>
-                EVM
-              </Typography>
-            </Box>
-            <Box px={1} py={0.5} bgcolor="background.paper" borderRadius={2}>
-              <Typography variant="subtitle2" sx={{ fontWeight: 500 }}>
-                Polkadot
-              </Typography>
+            <Box display="flex" gap={0.5}>
+              <Box px={1} py={0.5} bgcolor="background.paper" borderRadius={2}>
+                <Typography variant="subtitle2" sx={{ fontWeight: 500 }}>
+                  Cosmos
+                </Typography>
+              </Box>
+              <Box px={1} py={0.5} bgcolor="background.paper" borderRadius={2}>
+                <Typography variant="subtitle2" sx={{ fontWeight: 500 }}>
+                  EVM
+                </Typography>
+              </Box>
+              <Box px={1} py={0.5} bgcolor="background.paper" borderRadius={2}>
+                <Typography variant="subtitle2" sx={{ fontWeight: 500 }}>
+                  Polkadot
+                </Typography>
+              </Box>
             </Box>
           </Box>
         </Box>
