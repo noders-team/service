@@ -10,7 +10,7 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/dora-icon.svg"
   title="Installation"
-  chainId="null"
+  chainId="vota-bobtail"
   version="v0.4.2"
 />
 
@@ -161,7 +161,7 @@ sudo systemctl enable dorad
 ### Set config
 
 ```js
-dorad config chain-id null
+dorad config chain-id vota-bobtail
 dorad config keyring-backend os
 dorad config node tcp://localhost:26657
 ```
@@ -169,7 +169,7 @@ dorad config node tcp://localhost:26657
 ### Initialize the node
 
 ```js
-dorad init NAME_OF_YOUR_VALIDATOR --chain-id null
+dorad init NAME_OF_YOUR_VALIDATOR --chain-id vota-bobtail
 ```
 
 ### Download genesis and addrbook
@@ -182,7 +182,7 @@ curl https://snapshots-t.noders.services/dora/addrbook.json -o ~/.dorad/config/a
 ### Add peers
 
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"null@dora-t-rpc.noders.services:null\"/" ~/.dorad/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"c3cd074e26cfc745d797f726b2909fdcca2b85ac@dora-t-rpc.noders.services:37656\"/" ~/.dorad/config/config.toml
 ```
 
 ### Set minimum gas price

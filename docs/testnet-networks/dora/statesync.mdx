@@ -10,7 +10,7 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/dora-icon.svg"
   title="State sync"
-  chainId="null"
+  chainId="vota-bobtail"
   version="v0.4.2"
 />
 
@@ -29,7 +29,7 @@ sudo systemctl stop dorad && dorad tendermint unsafe-reset-all --home ~/.dorad -
 ```
 
 ```bash
-peers="null@dora-t-rpc.noders.services:null"
+peers="c3cd074e26cfc745d797f726b2909fdcca2b85ac@dora-t-rpc.noders.services:37656"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.dorad/config/config.toml
 ```
 
