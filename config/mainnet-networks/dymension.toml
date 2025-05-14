@@ -9,6 +9,7 @@ STAKE_URL="https://wallet.keplr.app/?modal=staking&chain=dymension_1100-1&valida
 RESTAKE_URL="https://restake.app/dymension/dymvaloper1ta56hcqaxj55wu8emarnw090gk5uq4366uz572/stake"
 VALIDATOR_URL=""
 EXPLORER_URL=""
+EXPLORER_IMAGE="dymension-exp.png"
 APP_URL="https://dymensionhub.org"
 APP_IMAGE="dymension-app.png"
 FAUCET_URL=""

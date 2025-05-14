@@ -4,8 +4,19 @@ CHAIN_SYSTEM_NAME="seda"
 CHAIN_ICON="seda-icon.svg"
 CHAIN_BACKGROUND_COLOR="#6100FF"
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL=""
+VALIDATOR_URL=""
+EXPLORER_URL=""
+EXPLORER_IMAGE="seda-exp.png"
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
+CHAIN_DENOM_PRETTY="SEDA"
 CHAIN_DENOM="aseda"
 CHAIN_FEES="300000000000"
 
@@ -22,6 +33,7 @@ ENDPOINT_JRPC=""
 ENDPOINT_GRPC="https://seda-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/seda"
+ENDPOINT_SEED="auto"
 
 # Social
 SOCIAL_WEBSITE="https://www.seda.xyz/"
@@ -33,7 +45,6 @@ SOCIAL_TELEGRAM="https://t.me/sedaprotocol"
 # Other
 SNAPSHOT_URL="https://snapshots.noders.services/seda"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://seda.explorers.guru/validator/sedavaloper1ur9sw064p8zs793cn20y6qapaz4rsccmcjv96y"
 
 # Updates
 UPDATE_MAIN=true

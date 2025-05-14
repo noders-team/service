@@ -9,17 +9,18 @@ type Props = {
   appUrl?: string;
   appImageUrl?: string;
   explorerUrl?: string;
+  explorerImageUrl?: string;
   faucetUrl?: string;
 };
 
-function ProductLinks({ appUrl, appImageUrl, explorerUrl, faucetUrl }: Props): React.JSX.Element {
+function ProductLinks({ appUrl, appImageUrl, explorerUrl, explorerImageUrl, faucetUrl }: Props): React.JSX.Element {
   if (!explorerUrl && !faucetUrl && !appUrl) {
     return null;
   }
 
-  const explorerImageUrl = useBaseUrl('/img/products/explorer.webp');
+  const baseAppImageUrl = useBaseUrl(appImageUrl);
+  const baseExpImageUrl = useBaseUrl(explorerImageUrl);
   const faucetImageUrl = useBaseUrl('/img/products/faucet.webp');
-  const hubAppImageUrl = useBaseUrl(appImageUrl);
 
   const handleClick = (url: string) => {
     window.open(url, '_blank');
@@ -49,7 +50,7 @@ function ProductLinks({ appUrl, appImageUrl, explorerUrl, faucetUrl }: Props): R
     >
       {appUrl && (
         <SimpleCard gap={3} alignItems="center" paddingRight={3} onClick={() => handleClick(appUrl)} cursor="pointer">
-          <Box component="img" src={hubAppImageUrl} alt="Community App" width={120} height={120} />
+          <Box component="img" src={baseAppImageUrl} alt="Community App" width={120} height={120} />
           <Box display="flex" flexDirection="column" gap={1} flexGrow={1}>
             <Box display="flex" justifyContent="space-between" alignItems="center">
               <Typography variant="h6" sx={{ fontSize: '18px', fontWeight: 600, ...typographyStyle }}>
@@ -71,7 +72,7 @@ function ProductLinks({ appUrl, appImageUrl, explorerUrl, faucetUrl }: Props): R
           onClick={() => handleClick(explorerUrl)}
           cursor="pointer"
         >
-          <Box component="img" src={explorerImageUrl} alt="Explorer" width={120} height={120} />
+          <Box component="img" src={baseExpImageUrl} alt="Explorer" width={120} height={120} />
           <Box display="flex" flexDirection="column" gap={1} flexGrow={1}>
             <Box display="flex" justifyContent="space-between" alignItems="center">
               <Typography variant="h6" sx={{ fontSize: '18px', fontWeight: 600, ...typographyStyle }}>

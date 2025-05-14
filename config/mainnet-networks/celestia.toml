@@ -9,6 +9,7 @@ STAKE_URL="https://wallet.keplr.app/?modal=staking&chain=celestia&validator_addr
 RESTAKE_URL="https://restake.app/celestia/celestiavaloper139mu0a0ucz0gmrkavm5wjar2lpx7yvxq3e25e5"
 VALIDATOR_URL="https://celestia.explorers.guru/validator/celestiavaloper139mu0a0ucz0gmrkavm5wjar2lpx7yvxq3e25e5"
 EXPLORER_URL="https://celestiahub.org/explorer"
+EXPLORER_IMAGE="celestia-exp.png"
 APP_URL="https://celestiahub.org"
 APP_IMAGE="celestia-app.png"
 FAUCET_URL=""

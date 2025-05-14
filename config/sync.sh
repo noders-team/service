@@ -16,6 +16,7 @@ function readBlockchainConfig {
   RESTAKE_URL=$(grep -oE '^RESTAKE_URL=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   VALIDATOR_URL=$(grep -oE '^VALIDATOR_URL=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   EXPLORER_URL=$(grep -oE '^EXPLORER_URL=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
+  EXPLORER_IMAGE=$(grep -oE '^EXPLORER_IMAGE=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   FAUCET_URL=$(grep -oE '^FAUCET_URL=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   APP_URL=$(grep -oE '^APP_URL=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
   APP_IMAGE=$(grep -oE '^APP_IMAGE=.*' "${config_file}" | cut -d"=" -f2- | tr -d '"')
@@ -175,6 +176,7 @@ function replacePageVariables {
   $SED_CMD "s|\[RESTAKE_URL\]|${escaped_restake_url}|g" "$1" 2>/dev/null
   $SED_CMD "s|\[VALIDATOR_URL\]|${VALIDATOR_URL}|g" "$1" 2>/dev/null
   $SED_CMD "s|\[EXPLORER_URL\]|${EXPLORER_URL}|g" "$1" 2>/dev/null
+  $SED_CMD "s|\[EXPLORER_IMAGE\]|${EXPLORER_IMAGE}|g" "$1" 2>/dev/null
   $SED_CMD "s|\[FAUCET_URL\]|${FAUCET_URL}|g" "$1" 2>/dev/null
   $SED_CMD "s|\[APP_URL\]|${APP_URL}|g" "$1" 2>/dev/null
   $SED_CMD "s|\[APP_IMAGE\]|${APP_IMAGE}|g" "$1" 2>/dev/null

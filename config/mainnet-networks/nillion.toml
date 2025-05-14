@@ -9,6 +9,7 @@ STAKE_URL="https://wallet.keplr.app/chains/nillion?modal=staking&chain=nillion-1
 RESTAKE_URL=""
 VALIDATOR_URL="https://nillionhub.org/explorer/staking/nillionvaloper12dzevy6zu7kyqvx6hsa4ajru8835wga6k0tphu"
 EXPLORER_URL="https://nillionhub.org/explorer"
+EXPLORER_IMAGE="nillion-exp.png"
 APP_URL="https://nillionhub.org"
 APP_IMAGE="nillion-app.png"
 FAUCET_URL=""
