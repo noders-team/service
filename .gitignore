@@ -3,6 +3,7 @@
 
 # Production
 /build
+/lib
 
 # Generated files
 .docusaurus
@@ -29,3 +30,5 @@ seeds-and-peers.mdx
 snapshot.mdx
 !docs/mainnet-networks/template/snapshot.mdx
 !docs/testnet-networks/template/snapshot.mdx
+
+/static/img/png-icon
