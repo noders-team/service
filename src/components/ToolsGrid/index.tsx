@@ -1,8 +1,8 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import {
+  PiAddressBook,
   PiArrowRightBold,
-  PiAtom,
   PiBookOpenText,
   PiBroadcast,
   PiCubeFocus,
@@ -125,7 +125,7 @@ function ToolsGrid(props: ToolsGridProps): React.ReactElement {
             {props.showInstall && <ToolCard icon={PiBookOpenText} linkUrl={linkUrl+"/install"} title="Installation Guide" />}
             {props.showUpgrade && <ToolCard icon={PiFileCode} linkUrl={linkUrl+"/upgrade"} title="Upgrade Guide" />}
             {props.showGenesis && (
-              <ToolCard icon={PiAtom} linkUrl={linkUrl+"/install#download-genesis-and-addrbook"} title="Genesis File" />
+              <ToolCard icon={PiAddressBook} linkUrl={linkUrl+"/install#download-genesis-and-addrbook"} title="Genesis File" />
             )}
             {props.showCli && <ToolCard icon={PiTerminalWindow} linkUrl={linkUrl+"/cli-cheatsheet"} title="CLI Cheatsheet" />}
           </Box>
