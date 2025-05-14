@@ -6,7 +6,7 @@ module.exports = {
     {
       type: 'doc',
       id: 'mainnet-networks/overview',
-      label: 'Cosmos Networks',
+      label: 'Mainnet Networks',
     },
     {
       type: 'category',
