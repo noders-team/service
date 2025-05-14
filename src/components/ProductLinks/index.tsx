@@ -18,7 +18,7 @@ function ProductLinks({ appUrl, appImageUrl, explorerUrl, faucetUrl }: Props): R
   }
 
   const explorerImageUrl = useBaseUrl('/img/products/explorer.webp');
-  const faucetImageUrl = useBaseUrl('/img/products/faucet.png');
+  const faucetImageUrl = useBaseUrl('/img/products/faucet.webp');
   const hubAppImageUrl = useBaseUrl(appImageUrl);
 
   const handleClick = (url: string) => {
