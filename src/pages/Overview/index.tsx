@@ -102,6 +102,16 @@ function Overview({ scope }: Props): React.JSX.Element {
                 Cosmos
               </Typography>
             </Box>
+            <Box px={1} py={0.5} bgcolor="background.paper" borderRadius={2}>
+              <Typography variant="subtitle2" sx={{ fontWeight: 500 }}>
+                EVM
+              </Typography>
+            </Box>
+            <Box px={1} py={0.5} bgcolor="background.paper" borderRadius={2}>
+              <Typography variant="subtitle2" sx={{ fontWeight: 500 }}>
+                Polkadot
+              </Typography>
+            </Box>
           </Box>
         </Box>
       </Box>
