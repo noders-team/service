@@ -23,13 +23,15 @@ function PageTitle({ iconUrl, title, chainId, version }: Props): React.JSX.Eleme
           {title}
         </Typography>
       </Box>
-      <Box display="flex" gap={2}>
-        <Typography variant="subtitle2">Chain ID:</Typography>
-        <CodeText text={chainId} />
-        <Divider orientation="vertical" flexItem />
-        <Typography variant="subtitle2">Current Node Version:</Typography>
-        <CodeText text={version} />
-      </Box>
+      {chainId && version && (
+        <Box display="flex" gap={2}>
+          <Typography variant="subtitle2">Chain ID:</Typography>
+          <CodeText text={chainId} />
+          <Divider orientation="vertical" flexItem />
+          <Typography variant="subtitle2">Current Node Version:</Typography>
+          <CodeText text={version} />
+        </Box>
+      )}
     </Box>
   );
 }
