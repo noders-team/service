@@ -19,7 +19,7 @@ DAEMON_HOME="~/.rebusd"
 ENDPOINT_RPC="https://rebus-rpc.noders.services"
 ENDPOINT_API="https://rebus-api.noders.services"
 ENDPOINT_JRPC="https://rebus-jsonrpc.noders.services"
-ENDPOINT_GRPC="https://rebus-grpc.noders.services:443"
+ENDPOINT_GRPC="rebus-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/rebus"
 

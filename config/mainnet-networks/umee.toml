@@ -19,7 +19,7 @@ DAEMON_HOME="~/.umee"
 ENDPOINT_RPC="https://umee-rpc.noders.services"
 ENDPOINT_API="https://umee-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://umee-grpc.noders.services:443"
+ENDPOINT_GRPC="umee-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/umee"
 

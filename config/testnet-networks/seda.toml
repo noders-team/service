@@ -19,7 +19,7 @@ DAEMON_HOME="~/.sedad"
 ENDPOINT_RPC="https://seda-t-rpc.noders.services"
 ENDPOINT_API="https://seda-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://seda-t-grpc.noders.services:443"
+ENDPOINT_GRPC="seda-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/seda"
 

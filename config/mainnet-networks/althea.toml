@@ -19,7 +19,7 @@ DAEMON_HOME="~/.althea"
 ENDPOINT_RPC="https://althea-rpc.noders.services"
 ENDPOINT_API="https://althea-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://althea-grpc.noders.services:443"
+ENDPOINT_GRPC="althea-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/althea"
 

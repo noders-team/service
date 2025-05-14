@@ -19,7 +19,7 @@ DAEMON_HOME="~/.quicksilverd"
 ENDPOINT_RPC="https://quicksilver-rpc.noders.services"
 ENDPOINT_API="https://quicksilver-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://quicksilver-grpc.noders.services:443"
+ENDPOINT_GRPC="quicksilver-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/quicksilver"
 

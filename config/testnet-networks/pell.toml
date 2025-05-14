@@ -19,7 +19,7 @@ DAEMON_HOME="~/.pellcored"
 ENDPOINT_RPC="https://pell-t-rpc.noders.services"
 ENDPOINT_API="https://pell-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://pell-t-grpc.noders.services:443"
+ENDPOINT_GRPC="pell-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/pell"
 

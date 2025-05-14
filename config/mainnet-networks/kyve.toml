@@ -19,7 +19,7 @@ DAEMON_HOME="~/.kyve"
 ENDPOINT_RPC="https://kyve-rpc.noders.services"
 ENDPOINT_API="https://kyve-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://kyve-grpc.noders.services:443"
+ENDPOINT_GRPC="kyve-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/kyve"
 

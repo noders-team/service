@@ -19,7 +19,7 @@ DAEMON_HOME="~/.kopid"
 ENDPOINT_RPC="https://kopi-rpc.noders.services"
 ENDPOINT_API="https://kopi-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://kopi-grpc.noders.services:443"
+ENDPOINT_GRPC="kopi-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/kopi"
 

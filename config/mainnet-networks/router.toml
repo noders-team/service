@@ -19,7 +19,7 @@ DAEMON_HOME="~/.routerd"
 ENDPOINT_RPC="https://router-rpc.noders.services"
 ENDPOINT_API="https://router-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://router-grpc.noders.services:443"
+ENDPOINT_GRPC="router-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/router"
 

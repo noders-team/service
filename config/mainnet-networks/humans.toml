@@ -19,7 +19,7 @@ DAEMON_HOME="~/.humansd"
 ENDPOINT_RPC="https://humans-rpc.noders.services"
 ENDPOINT_API="https://humans-api.noders.services"
 ENDPOINT_JCWEB="https://humans-jsonrpc.noders.services"
-ENDPOINT_GRPC="https://humans-grpc.noders.services:443"
+ENDPOINT_GRPC="humans-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/humans"
 

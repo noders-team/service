@@ -19,7 +19,7 @@ DAEMON_HOME="~/.lava"
 ENDPOINT_RPC="https://lava-t-rpc.noders.services"
 ENDPOINT_API="https://lava-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://lava-t-grpc.noders.services:443"
+ENDPOINT_GRPC="lava-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/lava"
 

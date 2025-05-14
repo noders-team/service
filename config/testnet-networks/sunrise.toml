@@ -19,7 +19,7 @@ DAEMON_HOME="~/.sunrise"
 ENDPOINT_RPC="https://sunrise-t-rpc.noders.services"
 ENDPOINT_API="https://sunrise-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://sunrise-t-grpc.noders.services:443"
+ENDPOINT_GRPC="sunrise-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/sunrise"
 

@@ -19,7 +19,7 @@ DAEMON_HOME="~/.haqqd"
 ENDPOINT_RPC="https://haqq-rpc.noders.services"
 ENDPOINT_API="https://haqq-api.noders.services"
 ENDPOINT_JRPC="https://haqq-jsonrpc.noders.services"
-ENDPOINT_GRPC="https://haqq-grpc.noders.services:443"
+ENDPOINT_GRPC="haqq-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/haqq"
 

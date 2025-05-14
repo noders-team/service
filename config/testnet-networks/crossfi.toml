@@ -19,7 +19,7 @@ DAEMON_HOME="~/.mineplex-chain"
 ENDPOINT_RPC="https://crossfi-t-rpc.noders.services"
 ENDPOINT_API="https://crossfi-t-api.noders.services"
 ENDPOINT_JRPC="https://crossfi-t-jsonrpc.noders.services"
-ENDPOINT_GRPC="https://crossfi-t-grpc.noders.services:443"
+ENDPOINT_GRPC="crossfi-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/crossfi"
 

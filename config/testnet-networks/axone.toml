@@ -19,7 +19,7 @@ DAEMON_HOME="~/.axoned"
 ENDPOINT_RPC="https://axone-t-rpc.noders.services"
 ENDPOINT_API="https://axone-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://axone-t-grpc.noders.services:443"
+ENDPOINT_GRPC="axone-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/axone"
 

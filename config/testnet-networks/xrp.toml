@@ -19,7 +19,7 @@ DAEMON_HOME="~/.exrpd"
 ENDPOINT_RPC="https://xrp-t-rpc.noders.services"
 ENDPOINT_API="https://xrp-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://xrp-t-grpc.noders.services:443"
+ENDPOINT_GRPC="xrp-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/xrp"
 

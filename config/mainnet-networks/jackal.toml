@@ -20,7 +20,7 @@ DAEMON_HOME="~/.canine"
 ENDPOINT_RPC="https://jackal-rpc.noders.services"
 ENDPOINT_API="https://jackal-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://jackal-grpc.noders.services:443"
+ENDPOINT_GRPC="jackal-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/jackal"
 

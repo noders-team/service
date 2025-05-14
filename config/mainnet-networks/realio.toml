@@ -19,7 +19,7 @@ DAEMON_HOME="~/.realio-network"
 ENDPOINT_RPC="https://realio-rpc.noders.services"
 ENDPOINT_API="https://realio-api.noders.services"
 ENDPOINT_JRPC="https://realio-jsonrpc.noders.services"
-ENDPOINT_GRPC="https://realio-grpc.noders.services:443"
+ENDPOINT_GRPC="realio-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/realio"
 

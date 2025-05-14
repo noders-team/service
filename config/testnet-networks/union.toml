@@ -20,7 +20,7 @@ DAEMON_HOME="~/.union"
 ENDPOINT_RPC="https://union-t-rpc.noders.services"
 ENDPOINT_API="https://union-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://union-t-grpc.noders.services:443"
+ENDPOINT_GRPC="union-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/union"
 

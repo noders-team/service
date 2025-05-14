@@ -19,7 +19,7 @@ DAEMON_HOME="~/.empe-chain"
 ENDPOINT_RPC="https://empeiria-t-rpc.noders.services"
 ENDPOINT_API="https://empeiria-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://empeiria-t-grpc.noders.services:443"
+ENDPOINT_GRPC="empeiria-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/empeiria"
 

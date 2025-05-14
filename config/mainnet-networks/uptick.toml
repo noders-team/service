@@ -19,7 +19,7 @@ DAEMON_HOME="~/.uptickd"
 ENDPOINT_RPC="https://uptick-rpc.noders.services"
 ENDPOINT_API="https://uptick-api.noders.services"
 ENDPOINT_JRPC="https://uptick-jsonrpc.noders.services"
-ENDPOINT_GRPC="https://uptick-grpc.noders.services:443"
+ENDPOINT_GRPC="uptick-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/uptick"
 

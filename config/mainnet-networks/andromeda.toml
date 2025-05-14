@@ -20,7 +20,7 @@ DAEMON_HOME="~/.andromeda"
 ENDPOINT_RPC="https://andromeda-rpc.noders.services"
 ENDPOINT_API="https://andromeda-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://andromeda-grpc.noders.services:443"
+ENDPOINT_GRPC="andromeda-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/andromeda"
 

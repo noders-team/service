@@ -19,7 +19,7 @@ DAEMON_HOME="~/.mantrachaind"
 ENDPOINT_RPC="https://mantra-t-rpc.noders.services"
 ENDPOINT_API="https://mantra-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://mantra-t-grpc.noders.services:443"
+ENDPOINT_GRPC="mantra-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/mantra"
 
