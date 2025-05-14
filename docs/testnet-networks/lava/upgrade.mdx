@@ -11,7 +11,7 @@ import PageTitle from "@site/src/components/PageTitle";
   iconUrl="img/lava-icon.svg"
   title="Lava Upgrade Guide"
   chainId="lava-testnet-2"
-  version="auto"
+  version="v5.4.0"
 />
 
 ## Clone Lava repository
@@ -21,7 +21,7 @@ cd $HOME
 rm -rf lavanet
 git clone https://github.com/lavanet.git
 cd lavanet
-git checkout auto
+git checkout v5.4.0
 ```
 
 ## Build binaries
@@ -33,8 +33,8 @@ make build
 ## Prepare binaries for Cosmovisor
 
 ```js
-mkdir -p ~/.lava/cosmovisor/upgrades/auto/bin
-mv build/lavad ~/.lava/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.lava/cosmovisor/upgrades/v5.4.0/bin
+mv build/lavad ~/.lava/cosmovisor/upgrades/v5.4.0/bin/
 rm -rf build
 ```
 
@@ -47,7 +47,7 @@ cd $HOME
 rm -rf lavanet
 git clone https://github.com/lavanet.git
 cd lavanet
-git checkout auto
+git checkout v5.4.0
 ```
 
 ## Build binaries

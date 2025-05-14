@@ -11,7 +11,7 @@ import PageTitle from "@site/src/components/PageTitle";
   iconUrl="img/lava-icon.svg"
   title="Lava Installation Guide"
   chainId="lava-testnet-2"
-  version="auto"
+  version="v5.4.0"
 />
 
 ## Install dependencies
@@ -45,13 +45,13 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 ### Download and build binaries
 
-### Clone Lava repo and build lavad auto
+### Clone Lava repo and build lavad v5.4.0
 
 ```js
 cd $HOME
 git clone https://github.com/lavanet.git
 cd lavanet
-git checkout auto
+git checkout v5.4.0
 ```
 
 ### Build binaries
@@ -64,8 +64,8 @@ make install
 
 ```js
 cd $HOME
-mkdir -p ~/.lava/cosmovisor/upgrades/auto/bin
-mv $HOME/go/bin/lavad ~/.lava/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.lava/cosmovisor/upgrades/v5.4.0/bin
+mv $HOME/go/bin/lavad ~/.lava/cosmovisor/upgrades/v5.4.0/bin/
 ```
 
 ### Create symlinks
@@ -111,13 +111,13 @@ EOF
 
 ### Download and build binaries
 
-### Clone Lava repo and build lavad auto
+### Clone Lava repo and build lavad v5.4.0
 
 ```js
 cd $HOME
 git clone https://github.com/lavanet.git
 cd lavanet
-git checkout auto
+git checkout v5.4.0
 ```
 
 ### Build binaries
