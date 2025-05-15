@@ -35,7 +35,7 @@ export default function Footer({ docusaurusContainer = false }: Props) {
       <Box
         pt={{ xs: 5, md: 10 }}
         pb={3}
-        px={{ xs: 5, md: 8 }}
+        px={{ xs: 5, md: docusaurusContainer ? 5 : 8 }}
         borderTop={1}
         borderLeft={1}
         borderRight={1}
