@@ -1,12 +1,10 @@
 import React from 'react';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import Home from './Home';
 import Footer from '@/components/Footer';
 
 export default function RootPage(): React.JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout>
       <Head>

@@ -15,8 +15,7 @@
     "typecheck": "tsc",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "prebuild": "tsc --project tsconfig.client.json && node scripts/convert-icons.js",
-    "postbuild": "node scripts/cleanup-icons.js"
+    "prebuild": "tsc --project tsconfig.client.json && node scripts/convert-icons.js"
   },
   "dependencies": {
     "@acid-info/docusaurus-og": "^1.0.2",

@@ -7,11 +7,11 @@ const { glob } = require('glob');
 const iconPattern = 'static/img/*-icon.svg';
 const outputDir = 'static/img/png-icon';
 
-// Icon settings
-const iconSize = 120; // 120x120 pixels
+// Icon size (120x120 pixels)
+const iconSize = 120;
 
-// Set Sharp to use high quality rendering
-sharp.cache(false); // Отключаем кэш для максимального качества каждой обработки
+// Disable cache for maximum quality
+sharp.cache(false);
 
 // Helper function to get file size in KB
 function getFileSizeInKB(filePath) {
@@ -27,10 +27,9 @@ function ensureDirectoryExists(directory) {
   }
 }
 
-// Find all SVG icons
+// Find and convert all SVG icons
 async function convertIcons() {
   try {
-    // Ensure output directory exists
     ensureDirectoryExists(outputDir);
 
     const files = await glob(iconPattern);
@@ -39,7 +38,6 @@ async function convertIcons() {
 
     let totalOriginalSize = 0;
     let totalConvertedSize = 0;
-    let skippedCount = 0;
 
     // Process each file
     for (const filePath of files) {
@@ -47,21 +45,14 @@ async function convertIcons() {
         const baseName = path.basename(filePath, '.svg');
         const outputPath = path.join(outputDir, `${baseName}.png`);
 
-        // Skip if PNG already exists
-        if (fs.existsSync(outputPath)) {
-          console.log(`Skipped: ${filePath} (PNG already exists)`);
-          skippedCount++;
-          continue;
-        }
-
         // Get original file size
         const originalSizeKB = getFileSizeInKB(filePath);
         totalOriginalSize += parseFloat(originalSizeKB);
 
-        // Convert SVG to a high-resolution version first for better antialiasing
-        const largeSize = iconSize * 4; // 480x480 промежуточный размер для улучшения сглаживания
+        // Convert to high-resolution first for better antialiasing
+        const largeSize = iconSize * 4;
 
-        // Создаем промежуточный буфер с высоким разрешением
+        // Create intermediate high-res buffer
         const svgBuffer = await sharp(filePath)
           .resize({
             width: largeSize,
@@ -77,13 +68,13 @@ async function convertIcons() {
           })
           .toBuffer();
 
-        // Теперь уменьшаем до итогового размера с высоким качеством сглаживания
+        // Resize to final size with high-quality antialiasing
         await sharp(svgBuffer)
           .resize({
             width: iconSize,
             height: iconSize,
             fit: 'contain',
-            kernel: 'lanczos3', // Используем Lanczos для лучшего сглаживания при уменьшении
+            kernel: 'lanczos3',
             background: { r: 0, g: 0, b: 0, alpha: 0 },
           })
           .png({
@@ -98,34 +89,28 @@ async function convertIcons() {
         const convertedSizeKB = getFileSizeInKB(outputPath);
         totalConvertedSize += parseFloat(convertedSizeKB);
 
-        // Calculate size reduction percentage
+        // Calculate size change
         const sizeChange = (((convertedSizeKB - originalSizeKB) / originalSizeKB) * 100).toFixed(2);
         const changeText = sizeChange >= 0 ? `increased by ${sizeChange}%` : `reduced by ${Math.abs(sizeChange)}%`;
 
-        console.log(`Converted: ${filePath} → ${outputPath} (${iconSize}x${iconSize} px with enhanced antialiasing)`);
+        console.log(`Converted: ${filePath} → ${outputPath} (${iconSize}x${iconSize} px)`);
         console.log(`  Size: ${originalSizeKB} KB → ${convertedSizeKB} KB (${changeText})`);
       } catch (error) {
         console.error(`Error converting ${filePath}:`, error);
       }
     }
 
-    // Only show total stats if files were actually converted
-    if (files.length > skippedCount) {
-      const totalChange = (((totalConvertedSize - totalOriginalSize) / totalOriginalSize) * 100).toFixed(2);
-      const totalChangeText =
-        totalChange >= 0 ? `increased by ${totalChange}%` : `reduced by ${Math.abs(totalChange)}%`;
+    // Show total stats
+    const totalChange = (((totalConvertedSize - totalOriginalSize) / totalOriginalSize) * 100).toFixed(2);
+    const totalChangeText = totalChange >= 0 ? `increased by ${totalChange}%` : `reduced by ${Math.abs(totalChange)}%`;
 
-      console.log('\nConversion complete!');
-      console.log(`old: ${totalOriginalSize.toFixed(2)} KB`);
-      console.log(`new: ${totalConvertedSize.toFixed(2)} KB`);
-      console.log(`change: ${totalChangeText}`);
-    }
-
+    console.log('\nConversion complete!');
+    console.log(`Original total: ${totalOriginalSize.toFixed(2)} KB`);
+    console.log(`Converted total: ${totalConvertedSize.toFixed(2)} KB`);
+    console.log(`Size change: ${totalChangeText}`);
     console.log(`\nTotal processed: ${files.length} files`);
-    console.log(`Converted: ${files.length - skippedCount} files (${iconSize}x${iconSize} px)`);
-    console.log(`Skipped: ${skippedCount} files (already exist)`);
 
-    return { success: true, converted: files.length - skippedCount, skipped: skippedCount };
+    return { success: true, converted: files.length };
   } catch (err) {
     console.error('Error finding files:', err);
     return { success: false, error: err.message };
