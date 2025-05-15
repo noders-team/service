@@ -60,7 +60,7 @@ function Overview({ scope }: Props): React.JSX.Element {
         flexDirection="column"
         justifyContent="space-between"
         minHeight="320px"
-        padding={4}
+        padding={{ xs: 3, sm: 4 }}
         sx={{
           borderRadius: (theme) => theme.spacing(3),
           border: (theme) => `1px solid ${theme.palette.divider}`,
@@ -89,7 +89,7 @@ function Overview({ scope }: Props): React.JSX.Element {
             flexDirection="column"
             gap={1}
             sx={{
-              minWidth: { xs: '145px', sm: '160px' },
+              minWidth: { xs: '130px', sm: '160px' },
             }}
           >
             <Typography variant="overline">Networks</Typography>
