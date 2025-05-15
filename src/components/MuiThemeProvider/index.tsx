@@ -46,6 +46,7 @@ export default function MuiThemeProvider(props) {
         lineHeight: '56px',
         letterSpacing: '-1.5px',
         fontFamily: '"Space Grotesk", sans-serif',
+        marginBottom: '0px!important',
       },
       h2: {
         fontSize: '32px',
