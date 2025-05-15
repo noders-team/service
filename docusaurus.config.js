@@ -7,7 +7,7 @@ const path = require('path');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'VALIDATOR SERVICES | NODERS',
+  title: 'Validator Services | NODERS',
   tagline: 'Trusted blockchain validator and web3 developer team',
   favicon: 'img/favicon.svg',
 
@@ -129,8 +129,8 @@ const config = {
       {
         path: './preview-images',
         imageRenderers: {
-          'docusaurus-plugin-content-pages': require('./lib/open-graph/ImageRenderers').pages,
-          'docusaurus-plugin-content-docs': require('./lib/open-graph/ImageRenderers').docs,
+          'docusaurus-plugin-content-pages': require('./lib/open-graph/ImageRenderers').default.pages,
+          'docusaurus-plugin-content-docs': require('./lib/open-graph/ImageRenderers').default.docs,
         },
       },
     ],
