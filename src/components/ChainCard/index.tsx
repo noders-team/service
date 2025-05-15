@@ -31,9 +31,9 @@ function ChainCard({ chainName, chainId, iconUrl }: ChainCardProps) {
         sx={{ width: 56, height: 56 }}
       />
       <Box>
-        <Typography variant="h6">{chainName}</Typography>
+        <Typography variant="h4">{chainName}</Typography>
         <Typography
-          variant="body2"
+          variant="body1"
           title={chainId}
           sx={{
             maxWidth: 120,

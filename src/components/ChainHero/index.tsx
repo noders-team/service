@@ -80,7 +80,7 @@ function ChainHero({
       <Box display="flex" flexWrap="wrap" alignItems="top" justifyContent="space-between" gap={2}>
         <Box display="flex" alignItems="center" gap={2}>
           <Box component="img" src={baseIconUrl} alt={name} width={50} height={50} />
-          <Typography variant="h3">{name}</Typography>
+          <Typography variant="h1">{name}</Typography>
         </Box>
 
         <Box display="flex" alignItems="center" gap={2}>

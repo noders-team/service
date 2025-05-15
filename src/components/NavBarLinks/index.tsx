@@ -47,9 +47,7 @@ export default function NavBarLinks(props: any): React.JSX.Element {
         onClick={() => handleClick(mainnetHref)}
       >
         <MainnetIcon width={24} height={24} />
-        <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
-          Mainnet
-        </Typography>
+        <Typography variant="button">Mainnet</Typography>
       </Box>
       <Box
         display="flex"
@@ -68,9 +66,7 @@ export default function NavBarLinks(props: any): React.JSX.Element {
         onClick={() => handleClick(testnetHref)}
       >
         <TestnetIcon width={24} height={24} />
-        <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
-          Testnet
-        </Typography>
+        <Typography variant="button">Testnet</Typography>
       </Box>
     </Box>
   );

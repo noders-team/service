@@ -77,8 +77,8 @@ function Overview({ scope }: Props): React.JSX.Element {
         }}
       >
         <Box display="flex" flexDirection="column" gap={2}>
-          <Typography variant="h3">{scopePrettyName} networks</Typography>
-          <Typography variant="body1" sx={{ maxWidth: "540px", opacity: 0.6 }}>
+          <Typography variant="h1">{scopePrettyName} networks</Typography>
+          <Typography variant="subtitle1" sx={{ maxWidth: '540px', opacity: 0.6 }}>
             Our service is designed to empower developers and enthusiasts alike with detailed, step-by-step guides for
             running and maintaining nodes
           </Typography>
@@ -93,25 +93,19 @@ function Overview({ scope }: Props): React.JSX.Element {
             }}
           >
             <Typography variant="overline">Networks</Typography>
-            <Typography variant="h6">{chains.length}</Typography>
+            <Typography variant="h4">{chains.length}</Typography>
           </Box>
           <Box display="flex" flexDirection="column" gap={1}>
             <Typography variant="overline">Type</Typography>
-            <Box display="flex" gap={0.5}>
+            <Box display="flex" flexWrap="wrap" gap={0.5}>
               <Box px={1} py={0.5} bgcolor="background.paper" borderRadius={2}>
-                <Typography variant="subtitle2" sx={{ fontWeight: 500 }}>
-                  Cosmos
-                </Typography>
+                <Typography variant="subtitle2">Cosmos</Typography>
               </Box>
               <Box px={1} py={0.5} bgcolor="background.paper" borderRadius={2}>
-                <Typography variant="subtitle2" sx={{ fontWeight: 500 }}>
-                  EVM
-                </Typography>
+                <Typography variant="subtitle2">EVM</Typography>
               </Box>
               <Box px={1} py={0.5} bgcolor="background.paper" borderRadius={2}>
-                <Typography variant="subtitle2" sx={{ fontWeight: 500 }}>
-                  Polkadot
-                </Typography>
+                <Typography variant="subtitle2">Polkadot</Typography>
               </Box>
             </Box>
           </Box>
@@ -120,9 +114,7 @@ function Overview({ scope }: Props): React.JSX.Element {
 
       {/* OUR SERVICES */}
       <Box display="flex" flexDirection="column" pt={6} gap={3}>
-        <Typography variant="h4" sx={{ fontSize: '32px', fontWeight: 500, lineHeight: '40px' }}>
-          Our service includes
-        </Typography>
+        <Typography variant="h2">Our service includes</Typography>
         <Box display="flex" flexDirection="column">
           <Box
             display="flex"
@@ -145,19 +137,19 @@ function Overview({ scope }: Props): React.JSX.Element {
                 <Illustration src="img/home-page/sync.svg" alt="Sync" width={114} />
               </Box>
               <Box display="flex" flexDirection="column" gap={1}>
-                <Typography variant="h6" sx={{ fontWeight: 600, marginBottom: 1 }}>
+                <Typography variant="h4" sx={{ marginBottom: 1 }}>
                   Sync
                 </Typography>
-                <Typography variant="subtitle1" sx={{ opacity: 0.6 }}>
+                <Typography variant="body1" sx={{ opacity: 0.6 }}>
                   — Fresh Snapshots
                 </Typography>
-                <Typography variant="subtitle1" sx={{ opacity: 0.6 }}>
+                <Typography variant="body1" sx={{ opacity: 0.6 }}>
                   — State Sync
                 </Typography>
-                <Typography variant="subtitle1" sx={{ opacity: 0.6 }}>
+                <Typography variant="body1" sx={{ opacity: 0.6 }}>
                   — Live Peers & Addrbooks
                 </Typography>
-                <Typography variant="subtitle1" sx={{ opacity: 0.6 }}>
+                <Typography variant="body1" sx={{ opacity: 0.6 }}>
                   — Seed nodes
                 </Typography>
               </Box>
@@ -174,22 +166,22 @@ function Overview({ scope }: Props): React.JSX.Element {
               }}
             >
               <Box display="flex" alignItems="flex-start" sx={{ maxWidth: { xs: '30%', md: 'unset' } }}>
-                <Illustration src="img/home-page/endpoints.svg" alt="Sync" width={114} />
+                <Illustration src="img/home-page/endpoints.svg" alt="Endpoints" width={114} />
               </Box>
               <Box display="flex" flexDirection="column" gap={1}>
-                <Typography variant="h6" sx={{ fontWeight: 600, marginBottom: 1 }}>
+                <Typography variant="h4" sx={{ marginBottom: 1 }}>
                   Endpoints
                 </Typography>
-                <Typography variant="subtitle1" sx={{ opacity: 0.6 }}>
+                <Typography variant="body1" sx={{ opacity: 0.6 }}>
                   — API
                 </Typography>
-                <Typography variant="subtitle1" sx={{ opacity: 0.6 }}>
+                <Typography variant="body1" sx={{ opacity: 0.6 }}>
                   — RPC
                 </Typography>
-                <Typography variant="subtitle1" sx={{ opacity: 0.6 }}>
+                <Typography variant="body1" sx={{ opacity: 0.6 }}>
                   — gRPC
                 </Typography>
-                <Typography variant="subtitle1" sx={{ opacity: 0.6 }}>
+                <Typography variant="body1" sx={{ opacity: 0.6 }}>
                   — Public Endpoints
                 </Typography>
               </Box>
@@ -212,19 +204,19 @@ function Overview({ scope }: Props): React.JSX.Element {
               }}
             >
               <Box display="flex" alignItems="flex-start" sx={{ maxWidth: { xs: '30%', md: 'unset' } }}>
-                <Illustration src="img/home-page/explorer.svg" alt="Sync" width={114} />
+                <Illustration src="img/home-page/explorer.svg" alt="Explorers & Tools" width={114} />
               </Box>
               <Box display="flex" flexDirection="column" gap={1}>
-                <Typography variant="h6" sx={{ fontWeight: 600, marginBottom: 1 }}>
+                <Typography variant="h4" sx={{ marginBottom: 1 }}>
                   Explorers & Tools
                 </Typography>
-                <Typography variant="subtitle1" sx={{ opacity: 0.6 }}>
+                <Typography variant="body1" sx={{ opacity: 0.6 }}>
                   — Explorers
                 </Typography>
-                <Typography variant="subtitle1" sx={{ opacity: 0.6 }}>
+                <Typography variant="body1" sx={{ opacity: 0.6 }}>
                   — Faucet
                 </Typography>
-                <Typography variant="subtitle1" sx={{ opacity: 0.6 }}>
+                <Typography variant="body1" sx={{ opacity: 0.6 }}>
                   — and other Useful Tools
                 </Typography>
               </Box>
@@ -241,19 +233,19 @@ function Overview({ scope }: Props): React.JSX.Element {
               }}
             >
               <Box display="flex" alignItems="flex-start" sx={{ maxWidth: { xs: '30%', md: 'unset' } }}>
-                <Illustration src="img/home-page/guides.svg" alt="Sync" width={114} />
+                <Illustration src="img/home-page/guides.svg" alt="Guides" width={114} />
               </Box>
               <Box display="flex" flexDirection="column" gap={1}>
-                <Typography variant="h6" sx={{ fontWeight: 600, marginBottom: 1 }}>
+                <Typography variant="h4" sx={{ marginBottom: 1 }}>
                   Guides
                 </Typography>
-                <Typography variant="subtitle1" sx={{ opacity: 0.6 }}>
+                <Typography variant="body1" sx={{ opacity: 0.6 }}>
                   — Installation
                 </Typography>
-                <Typography variant="subtitle1" sx={{ opacity: 0.6 }}>
+                <Typography variant="body1" sx={{ opacity: 0.6 }}>
                   — Upgrade
                 </Typography>
-                <Typography variant="subtitle1" sx={{ opacity: 0.6 }}>
+                <Typography variant="body1" sx={{ opacity: 0.6 }}>
                   — CLI Cheatsheet
                 </Typography>
               </Box>
@@ -284,13 +276,9 @@ function Overview({ scope }: Props): React.JSX.Element {
         />
         <Box display="flex" flexDirection="column" justifyContent="space-between" padding={5}>
           <Box display="flex" flexDirection="column" gap={2}>
-            <Typography variant="overline" sx={{ fontWeight: 600 }}>
-              Staking
-            </Typography>
-            <Typography variant="h4" sx={{ fontSize: '32px', fontWeight: 500 }}>
-              Our Validated Networks
-            </Typography>
-            <Typography variant="subtitle1" sx={{ opacity: 0.6 }}>
+            <Typography variant="overline">Staking</Typography>
+            <Typography variant="h2">Our Validated Networks</Typography>
+            <Typography variant="body1" sx={{ opacity: 0.6 }}>
               Earn passive income using our non-custodial staking
             </Typography>
           </Box>
@@ -319,13 +307,9 @@ function Overview({ scope }: Props): React.JSX.Element {
         >
           <Box display="flex" flexDirection="column" justifyContent="space-between" padding={5}>
             <Box display="flex" flexDirection="column" gap={2}>
-              <Typography variant="overline" sx={{ fontWeight: 600 }}>
-                Our Products
-              </Typography>
-              <Typography variant="h4" sx={{ fontSize: '32px', fontWeight: 500 }}>
-                Blockpulse
-              </Typography>
-              <Typography variant="subtitle1" sx={{ opacity: 0.6 }}>
+              <Typography variant="overline">Our Products</Typography>
+              <Typography variant="h2">Blockpulse</Typography>
+              <Typography variant="body1" sx={{ opacity: 0.6 }}>
                 A powerful and user-friendly blockchain explorer & analytics tool
               </Typography>
             </Box>
@@ -354,9 +338,7 @@ function Overview({ scope }: Props): React.JSX.Element {
 
       {/* SOCIAL RESOURCES */}
       <Box display="flex" flexDirection="column" pt={10}>
-        <Typography variant="h4" sx={{ fontSize: '32px', fontWeight: 500, lineHeight: '40px' }}>
-          Our social resources
-        </Typography>
+        <Typography variant="h2">Our social resources</Typography>
         <Typography variant="body1" sx={{ pt: 2 }}>
           Official links of social networks of NODERS LLC
         </Typography>
@@ -379,9 +361,7 @@ function Overview({ scope }: Props): React.JSX.Element {
             onClick={() => handleOpenLink('https://noders.team')}
           >
             <PiPlanetFill size={32} opacity={0.2} />
-            <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
-              Website
-            </Typography>
+            <Typography variant="h6">Website</Typography>
           </SimpleCard>
           <SimpleCard
             flexDirection="column"
@@ -391,9 +371,7 @@ function Overview({ scope }: Props): React.JSX.Element {
             onClick={() => handleOpenLink('https://github.com/noders-team')}
           >
             <FaGithub size={32} opacity={0.2} />
-            <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
-              GitHub
-            </Typography>
+            <Typography variant="h6">GitHub</Typography>
           </SimpleCard>
           <SimpleCard
             flexDirection="column"
@@ -403,9 +381,7 @@ function Overview({ scope }: Props): React.JSX.Element {
             onClick={() => handleOpenLink('https://x.com/NODERS_TEAM')}
           >
             <FaXTwitter size={32} opacity={0.2} />
-            <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
-              X
-            </Typography>
+            <Typography variant="h6">X</Typography>
           </SimpleCard>
           <SimpleCard
             flexDirection="column"
@@ -415,9 +391,7 @@ function Overview({ scope }: Props): React.JSX.Element {
             onClick={() => handleOpenLink('https://t.me/nodersteam')}
           >
             <FaTelegram size={32} opacity={0.2} />
-            <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
-              Telegram
-            </Typography>
+            <Typography variant="h6">Telegram</Typography>
           </SimpleCard>
         </Box>
       </Box>

@@ -53,7 +53,7 @@ function ProductLinks({ appUrl, appImageUrl, explorerUrl, explorerImageUrl, fauc
           <Box component="img" src={baseAppImageUrl} alt="Community App" width={120} height={120} />
           <Box display="flex" flexDirection="column" gap={1} flexGrow={1}>
             <Box display="flex" justifyContent="space-between" alignItems="center">
-              <Typography variant="h6" sx={{ fontSize: '18px', fontWeight: 600, ...typographyStyle }}>
+              <Typography variant="h5" sx={typographyStyle}>
                 CommunityApp
               </Typography>
               <PiArrowUpRightBold size={24} opacity={0.2} />
@@ -75,7 +75,7 @@ function ProductLinks({ appUrl, appImageUrl, explorerUrl, explorerImageUrl, fauc
           <Box component="img" src={baseExpImageUrl} alt="Explorer" width={120} height={120} />
           <Box display="flex" flexDirection="column" gap={1} flexGrow={1}>
             <Box display="flex" justifyContent="space-between" alignItems="center">
-              <Typography variant="h6" sx={{ fontSize: '18px', fontWeight: 600, ...typographyStyle }}>
+              <Typography variant="h5" sx={typographyStyle}>
                 Explorer
               </Typography>
               <PiArrowUpRightBold size={24} opacity={0.2} />
@@ -97,7 +97,7 @@ function ProductLinks({ appUrl, appImageUrl, explorerUrl, explorerImageUrl, fauc
           <Box component="img" src={faucetImageUrl} alt="Faucet" width={120} height={120} />
           <Box display="flex" flexDirection="column" gap={1} flexGrow={1}>
             <Box display="flex" justifyContent="space-between" alignItems="center">
-              <Typography variant="h6" sx={{ fontSize: '18px', fontWeight: 600, ...typographyStyle }}>
+              <Typography variant="h5" sx={typographyStyle}>
                 Faucet
               </Typography>
               <PiArrowUpRightBold size={24} opacity={0.2} />

@@ -19,7 +19,7 @@ function PageTitle({ iconUrl, title, chainId, version }: Props): React.JSX.Eleme
     <Box display="flex" flexDirection="column" gap={2}>
       <Box display="flex" alignItems="center" gap={2}>
         <Box component="img" src={baseIconUrl} alt={title} width={56} height={56} />
-        <Typography variant="h3" sx={{ fontWeight: 800 }}>
+        <Typography variant="h1">
           {title}
         </Typography>
       </Box>
