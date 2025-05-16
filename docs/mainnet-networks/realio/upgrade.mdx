@@ -7,7 +7,7 @@ description: ''
 chain_name: 'Realio'
 scope: 'mainnet'
 chain_id: 'realionetwork_3301-1'
-binary_version: 'v1.0.2'
+binary_version: 'v1.2.0'
 icon_url: 'realio-icon.svg'
 ---
 
@@ -17,7 +17,7 @@ import PageTitle from "@site/src/components/PageTitle";
   iconUrl="img/realio-icon.svg"
   title="Realio Upgrade Guide"
   chainId="realionetwork_3301-1"
-  version="v1.0.2"
+  version="v1.2.0"
 />
 
 ## Clone Realio repository
@@ -27,7 +27,7 @@ cd $HOME
 rm -rf realio-network
 git clone https://github.com/realio-network.git
 cd realio-network
-git checkout v1.0.2
+git checkout v1.2.0
 ```
 
 ## Build binaries
@@ -39,8 +39,8 @@ make build
 ## Prepare binaries for Cosmovisor
 
 ```js
-mkdir -p ~/.realio-network/cosmovisor/upgrades/v1.0.2/bin
-mv build/realiod ~/.realio-network/cosmovisor/upgrades/v1.0.2/bin/
+mkdir -p ~/.realio-network/cosmovisor/upgrades/v1.2.0/bin
+mv build/realiod ~/.realio-network/cosmovisor/upgrades/v1.2.0/bin/
 rm -rf build
 ```
 
@@ -53,7 +53,7 @@ cd $HOME
 rm -rf realio-network
 git clone https://github.com/realio-network.git
 cd realio-network
-git checkout v1.0.2
+git checkout v1.2.0
 ```
 
 ## Build binaries
