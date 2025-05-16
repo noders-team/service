@@ -97,9 +97,9 @@ import PageTitle from '@site/src/components/PageTitle';
 |------|------|----------|-------------|
 """
 
-    explorers_table = "\n".join([f"| {n} | [{n}]({u}) |" for n, u in explorers if u])
+    explorers_table = "\n".join([f"| {n} | [{u}]({u}) |" for n, u in explorers if u])
     useful_tools_table = "\n".join(
-        [f"| {n} | [{n}]({u}) | {c or ''} | {d or ''} |" for n, u, c, d in tools if u]
+        [f"| {n} | [{u}]({u}) | {c or ''} | {d or ''} |" for n, u, c, d in tools if u]
     )
 
     with open(explorers_path, "w") as f:
