@@ -2,21 +2,16 @@ import os
 
 import openpyxl
 
-base_dir = "docs/mainnet-networks"
+base_dir = "docs/testnet-networks"
 wb = openpyxl.load_workbook("Tools.xlsx")
 ws = wb["EXP+TOOLS"]
 
-# Получаем список всех папок-проектов, отсортированных по алфавиту
+# Получаем список всех папок-проектов
 all_projects = [
     name
     for name in sorted(os.listdir(base_dir))
     if os.path.isdir(os.path.join(base_dir, name)) and not name.startswith("template")
 ]
-
-# Найдём индекс, с которого начинаем (с haqq)
-start_from = "haqq"
-start_idx = all_projects.index(start_from)
-projects_to_process = all_projects[start_idx:]
 
 # Парсим Excel и собираем все строки для каждого проекта
 current_project = None
@@ -31,7 +26,7 @@ for row in ws.iter_rows(min_row=1, max_row=ws.max_row):
             project_rows[current_project] = []
         project_rows[current_project].append(row)
 
-for project in projects_to_process:
+for project in all_projects:
     project_title = project.capitalize()
     project_icon = f"{project}-icon.svg"
     project_dir = os.path.join(base_dir, project)
@@ -53,9 +48,9 @@ for project in projects_to_process:
 
     explorers, tools = [], []
     for row in project_rows[found_key]:
-        expl_name = row[4].value  # EXP MAINNET (E)
-        if expl_name and row[4].hyperlink:
-            url = row[4].hyperlink.target
+        expl_name = row[3].value  # EXP TESTNET (D)
+        if expl_name and row[3].hyperlink:
+            url = row[3].hyperlink.target
             explorers.append((expl_name, url))
         tool_name = row[5].value  # USEFUL TOOLS (F)
         if tool_name and row[5].hyperlink:
@@ -97,7 +92,6 @@ import PageTitle from '@site/src/components/PageTitle';
 |------|------|----------|-------------|
 """
 
-    # Генерируем ссылки как ты просил
     explorers_table = "\n".join([f"| {n} | [{u}]({u}) |" for n, u in explorers if u])
     useful_tools_table = "\n".join(
         [f"| {n} | [{u}]({u}) | {c or ''} | {d or ''} |" for n, u, c, d in tools if u]
