@@ -2,25 +2,28 @@ import os
 
 import openpyxl
 
-projects = [
-    ("aura", "Aura", "aura-icon.svg"),
-    ("bitsong", "Bitsong", "bitsong-icon.svg"),
-]
 base_dir = "docs/mainnet-networks"
-
 wb = openpyxl.load_workbook("Tools.xlsx")
 ws = wb["EXP+TOOLS"]
 
-existing_projects = [
-    name for name in os.listdir(base_dir) if os.path.isdir(os.path.join(base_dir, name))
+# Получаем список всех папок-проектов, отсортированных по алфавиту
+all_projects = [
+    name
+    for name in sorted(os.listdir(base_dir))
+    if os.path.isdir(os.path.join(base_dir, name)) and not name.startswith("template")
 ]
 
-# Считываем все строки: теперь по столбцу C (индекс 2)!
+# Найдём индекс, с которого начинаем (с haqq)
+start_from = "haqq"
+start_idx = all_projects.index(start_from)
+projects_to_process = all_projects[start_idx:]
+
+# Парсим Excel и собираем все строки для каждого проекта
 current_project = None
 project_rows = {}
 
 for row in ws.iter_rows(min_row=1, max_row=ws.max_row):
-    cell_value = row[2].value  # Это C (project name)
+    cell_value = row[2].value  # C (project name)
     if cell_value and isinstance(cell_value, str) and cell_value.strip():
         current_project = cell_value.strip().lower().replace(" ", "")
     if current_project:
@@ -28,25 +31,22 @@ for row in ws.iter_rows(min_row=1, max_row=ws.max_row):
             project_rows[current_project] = []
         project_rows[current_project].append(row)
 
-print("Проекты в Excel:", list(project_rows.keys()))
-
-for project, project_title, project_icon in projects:
-    target_name = project.lower().replace(" ", "")
-    if project not in existing_projects:
-        print(f"[!] Пропущено {project_title}: нет папки.")
-        continue
-
+for project in projects_to_process:
+    project_title = project.capitalize()
+    project_icon = f"{project}-icon.svg"
     project_dir = os.path.join(base_dir, project)
     explorers_path = os.path.join(project_dir, "explorers.mdx")
     tools_path = os.path.join(project_dir, "useful-tools.mdx")
 
+    # Пропуск, если уже есть
     if os.path.exists(explorers_path) or os.path.exists(tools_path):
         print(
             f"[=] Уже есть {project_title}: {explorers_path if os.path.exists(explorers_path) else tools_path}"
         )
         continue
 
-    found_key = next((k for k in project_rows if target_name in k), None)
+    # Находим ключ в Excel (может быть вариант с дефисами, нижним регистром и т.п.)
+    found_key = next((k for k in project_rows if project in k), None)
     if not found_key:
         print(f"[!] Пропущено {project_title}: нет в Excel.")
         continue
@@ -97,6 +97,7 @@ import PageTitle from '@site/src/components/PageTitle';
 |------|------|----------|-------------|
 """
 
+    # Генерируем ссылки как ты просил
     explorers_table = "\n".join([f"| {n} | [{u}]({u}) |" for n, u in explorers if u])
     useful_tools_table = "\n".join(
         [f"| {n} | [{u}]({u}) | {c or ''} | {d or ''} |" for n, u, c, d in tools if u]
@@ -104,7 +105,10 @@ import PageTitle from '@site/src/components/PageTitle';
 
     with open(explorers_path, "w") as f:
         f.write(explorers_header + explorers_table + "\n")
+
     with open(tools_path, "w") as f:
         f.write(useful_tools_header + useful_tools_table + "\n")
 
     print(f"[+] Создано для {project_title}!")
+
+print("Готово!")
