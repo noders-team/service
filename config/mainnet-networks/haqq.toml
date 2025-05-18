@@ -4,6 +4,16 @@ CHAIN_SYSTEM_NAME="haqq"
 CHAIN_ICON="haqq-icon.svg"
 CHAIN_BACKGROUND_COLOR="#00D784"
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL="https://restake.app/haqq/haqqvaloper1hgggrfgjeu4d5nveh03c6w37magsuqcy84p44t"
+VALIDATOR_URL="https://haqq.explorers.guru/validator/haqqvaloper1hgggrfgjeu4d5nveh03c6w37magsuqcy84p44t"
+EXPLORER_URL=""
+EXPLORER_IMAGE=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
 CHAIN_DENOM="aISLM"
@@ -19,8 +29,9 @@ DAEMON_HOME="~/.haqqd"
 ENDPOINT_RPC="https://haqq-rpc.noders.services"
 ENDPOINT_API="https://haqq-api.noders.services"
 ENDPOINT_JRPC="https://haqq-jsonrpc.noders.services"
-ENDPOINT_GRPC="https://haqq-grpc.noders.services:443"
+ENDPOINT_GRPC="haqq-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="66f934002d8cd25f96a6ecf1830624173cda2204@haqq-seed.noders.services:24033"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/haqq"
 
 # Social
@@ -33,7 +44,6 @@ SOCIAL_TELEGRAM="https://t.me/islamiccoin_int"
 # Other
 SNAPSHOT_URL="https://snapshots.noders.services/haqq"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://haqq.explorers.guru/validator/haqqvaloper1hgggrfgjeu4d5nveh03c6w37magsuqcy84p44t"
 
 # Updates
 UPDATE_MAIN=true

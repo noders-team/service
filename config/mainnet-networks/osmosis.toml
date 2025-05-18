@@ -4,6 +4,16 @@ CHAIN_SYSTEM_NAME="osmosis"
 CHAIN_ICON="osmosis-icon.svg"
 CHAIN_BACKGROUND_COLOR="#AB00C2"
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL=""
+VALIDATOR_URL=""
+EXPLORER_URL=""
+EXPLORER_IMAGE=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
 CHAIN_DENOM="uosmo"
@@ -19,7 +29,7 @@ DAEMON_HOME="~/.osmosisd"
 ENDPOINT_RPC="https://osmosis-rpc.noders.services"
 ENDPOINT_API="https://osmosis-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://osmosis-grpc.noders.services:443"
+ENDPOINT_GRPC="osmosis-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/osmosis"
 
@@ -33,7 +43,6 @@ SOCIAL_TELEGRAM="https://t.me/osmosiszone"
 # Other
 SNAPSHOT_URL="https://snapshots.noders.services/osmosis"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL=""
 
 # Updates
 UPDATE_MAIN=true

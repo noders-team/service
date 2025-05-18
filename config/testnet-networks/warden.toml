@@ -4,6 +4,15 @@ CHAIN_SYSTEM_NAME="warden"
 CHAIN_ICON="warden-icon.svg"
 CHAIN_BACKGROUND_COLOR="#CAFF93"
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL=""
+VALIDATOR_URL="https://explorer.stavr.tech/Warden-Testnet/staking/wardenvaloper1nun82ve6x07rhd0vda25acnalea70m28trfp4j"
+EXPLORER_URL=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
 CHAIN_DENOM="uward"
@@ -19,8 +28,9 @@ DAEMON_HOME="~/.warden"
 ENDPOINT_RPC="https://warden-t-rpc.noders.services"
 ENDPOINT_API="https://warden-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://warden-t-grpc.noders.services:443"
+ENDPOINT_GRPC="warden-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="be1a3fcc97b0220a170312748416ee535e0a4e59@warden-t-seed.noders.services:27333"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/warden"
 
 # Social
@@ -33,7 +43,6 @@ SOCIAL_TELEGRAM="https://t.me/wardenprotocol"
 # Other
 SNAPSHOT_URL="https://snapshots-t.noders.services/warden"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://testnet.warden.explorers.guru/validator/wardenvaloper1nun82ve6x07rhd0vda25acnalea70m28trfp4j"
 
 # Updates
 UPDATE_MAIN=true

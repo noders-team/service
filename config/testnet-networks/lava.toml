@@ -4,6 +4,15 @@ CHAIN_SYSTEM_NAME="lava"
 CHAIN_ICON="lava-icon.svg"
 CHAIN_BACKGROUND_COLOR="#D7001F"
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL=""
+VALIDATOR_URL="https://testnet.lava.explorers.guru/validator/lava@valoper1tkhehvca5uur6svd2l83lp704mlhc7xu32r2j4"
+EXPLORER_URL=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
 CHAIN_DENOM="ulava"
@@ -19,8 +28,9 @@ DAEMON_HOME="~/.lava"
 ENDPOINT_RPC="https://lava-t-rpc.noders.services"
 ENDPOINT_API="https://lava-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://lava-t-grpc.noders.services:443"
+ENDPOINT_GRPC="lava-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="fcce20cf57ae8499e3087bd5a7f10c976d40eb40@lava-t-seed.noders.services:19933"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/lava"
 
 # Social
@@ -33,7 +43,6 @@ SOCIAL_TELEGRAM=""
 # Other
 SNAPSHOT_URL="https://snapshots-t.noders.services/lava"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://explorer.kjnodes.com/lava-testnet/staking/lava@valoper1tkhehvca5uur6svd2l83lp704mlhc7xu32r2j4"
 
 # Updates
 UPDATE_MAIN=true

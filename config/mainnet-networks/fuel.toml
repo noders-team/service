@@ -9,6 +9,16 @@ CHAIN_ID="auto"
 CHAIN_DENOM="fuel"
 CHAIN_FEES="10"
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL=""
+VALIDATOR_URL="https://mainnet.itrocket.net/fuel/staking/fuelsequencervaloper1hhzm5ud6a026lj84axxa98w258cgfxgkp6jr8l"
+EXPLORER_URL=""
+EXPLORER_IMAGE=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Binary
 VERSION="auto"
 DAEMON_NAME="fuelsequencerd"
@@ -19,8 +29,9 @@ DAEMON_HOME="~/.fuelsequencer"
 ENDPOINT_RPC="https://fuel-rpc.noders.services"
 ENDPOINT_API="https://fuel-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://fuel-grpc.noders.services:443"
+ENDPOINT_GRPC="fuel-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="802848baf0f758c411e8dd65c59d74e2e70fd9c9@fuel-seed.noders.services:38533"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/fuel"
 
 # Social
@@ -33,7 +44,6 @@ SOCIAL_TELEGRAM=""
 # Other
 SNAPSHOT_URL="https://snapshots.noders.services/fuel"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://mainnet.itrocket.net/fuel/staking/fuelsequencervaloper1hhzm5ud6a026lj84axxa98w258cgfxgkp6jr8l"
 
 # Updates
 UPDATE_MAIN=true

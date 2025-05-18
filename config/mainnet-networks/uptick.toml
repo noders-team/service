@@ -4,6 +4,16 @@ CHAIN_SYSTEM_NAME="uptick"
 CHAIN_ICON="uptick-icon.svg"
 CHAIN_BACKGROUND_COLOR="#7600F3"
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL="https://restake.app/uptick/uptickvaloper1fl3426k0avvergm7ejzczqy6rfzxk5ma93mqwj"
+VALIDATOR_URL="https://uptick.explorers.guru/validator/uptickvaloper1fl3426k0avvergm7ejzczqy6rfzxk5ma93mqwj"
+EXPLORER_URL=""
+EXPLORER_IMAGE=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
 CHAIN_DENOM="auptick"
@@ -19,8 +29,9 @@ DAEMON_HOME="~/.uptickd"
 ENDPOINT_RPC="https://uptick-rpc.noders.services"
 ENDPOINT_API="https://uptick-api.noders.services"
 ENDPOINT_JRPC="https://uptick-jsonrpc.noders.services"
-ENDPOINT_GRPC="https://uptick-grpc.noders.services:443"
+ENDPOINT_GRPC="uptick-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="29279e5f7339dfefd041f7fe41ad7506e957cbc7@uptick-seed.noders.services:15933"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/uptick"
 
 # Social
@@ -33,7 +44,6 @@ SOCIAL_TELEGRAM="https://t.me/uptickproject"
 # Other
 SNAPSHOT_URL="https://snapshots.noders.services/uptick"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://uptick.explorers.guru/validator/uptickvaloper1fl3426k0avvergm7ejzczqy6rfzxk5ma93mqwj"
 
 # Updates
 UPDATE_MAIN=true

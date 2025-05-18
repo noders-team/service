@@ -4,6 +4,16 @@ CHAIN_SYSTEM_NAME="kyve"
 CHAIN_ICON="kyve-icon.svg"
 CHAIN_BACKGROUND_COLOR="#58C9B0"
 
+# NODERS
+STAKE_URL="https://wallet.keplr.app/?modal=staking&chain=kyve-1&validator_address=kyvevaloper1sfwfat9p9k7datgy0kzge7pv0szcd5ycc0jxre&step_id=3&action_id=stake"
+RESTAKE_URL="https://restake.app/kyve/kyvevaloper1sfwfat9p9k7datgy0kzge7pv0szcd5ycc0jxre"
+VALIDATOR_URL="https://kyve.explorers.guru/validator/kyvevaloper1sfwfat9p9k7datgy0kzge7pv0szcd5ycc0jxre"
+EXPLORER_URL=""
+EXPLORER_IMAGE=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
 CHAIN_DENOM="ukyve"
@@ -19,8 +29,9 @@ DAEMON_HOME="~/.kyve"
 ENDPOINT_RPC="https://kyve-rpc.noders.services"
 ENDPOINT_API="https://kyve-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://kyve-grpc.noders.services:443"
+ENDPOINT_GRPC="kyve-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="e1356e3df8cb93516037eed48d38e206351b64d4@kyve-seed.noders.services:11033"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/kyve"
 
 # Social
@@ -33,7 +44,6 @@ SOCIAL_TELEGRAM="https://t.me/kyvenet"
 # Other
 SNAPSHOT_URL="https://snapshots.noders.services/kyve"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://kyve.explorers.guru/validator/kyvevaloper1sfwfat9p9k7datgy0kzge7pv0szcd5ycc0jxre"
 
 # Updates
 UPDATE_MAIN=true

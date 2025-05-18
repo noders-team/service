@@ -4,6 +4,16 @@ CHAIN_SYSTEM_NAME="umee"
 CHAIN_ICON="umee-icon.svg"
 CHAIN_BACKGROUND_COLOR="#c6a9ff"
 
+# NODERS
+STAKE_URL="https://wallet.keplr.app/?modal=staking&chain=umee-1&validator_address=umeevaloper1wwl9f8wcc0am9wruvmx4hjzdv7ewfcex0lz9vp&step_id=3&action_id=stake"
+RESTAKE_URL="https://restake.app/umee/umeevaloper1wwl9f8wcc0am9wruvmx4hjzdv7ewfcex0lz9vp"
+VALIDATOR_URL="https://ux.explorers.guru/validator/umeevaloper1wwl9f8wcc0am9wruvmx4hjzdv7ewfcex0lz9vp"
+EXPLORER_URL=""
+EXPLORER_IMAGE=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
 CHAIN_DENOM="uumee"
@@ -19,8 +29,9 @@ DAEMON_HOME="~/.umee"
 ENDPOINT_RPC="https://umee-rpc.noders.services"
 ENDPOINT_API="https://umee-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://umee-grpc.noders.services:443"
+ENDPOINT_GRPC="umee-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="2ab54e4682a45a79101a7c17b29994886c463fd0@umee-seed.noders.services:13633"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/umee"
 
 # Social
@@ -33,7 +44,6 @@ SOCIAL_TELEGRAM="https://t.me/uxuxchain"
 # Other
 SNAPSHOT_URL="https://snapshots.noders.services/umee"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://ux.explorers.guru/validator/umeevaloper1wwl9f8wcc0am9wruvmx4hjzdv7ewfcex0lz9vp"
 
 # Updates
 UPDATE_MAIN=true

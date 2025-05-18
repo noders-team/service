@@ -4,6 +4,16 @@ CHAIN_SYSTEM_NAME="althea"
 CHAIN_ICON="althea-icon.svg"
 CHAIN_BACKGROUND_COLOR="#5DA9FF"
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL=""
+VALIDATOR_URL=""
+EXPLORER_URL=""
+EXPLORER_IMAGE=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
 CHAIN_DENOM="aalthea"
@@ -19,8 +29,9 @@ DAEMON_HOME="~/.althea"
 ENDPOINT_RPC="https://althea-rpc.noders.services"
 ENDPOINT_API="https://althea-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://althea-grpc.noders.services:443"
+ENDPOINT_GRPC="althea-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="0ce9c4f60b2239991d24b3116182190601cedd5a@althea-seed.noders.services:12433"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/althea"
 
 # Social
@@ -52,6 +63,7 @@ SHOW_INSTALLATION_GUIDE=true
 SHOW_UPGRADE_GUIDE=true
 SHOW_GENESIS=true
 SHOW_CLI=true
+
 # Endpoints and Sync
 SHOW_ENDPOINTS=true
 SHOW_STATE_SYNC=true
@@ -59,6 +71,7 @@ SHOW_SNAPSHOT=true
 SHOW_LIVE_PEERS=true
 SHOW_SEED=true
 SHOW_ADDRESS_BOOK=true
+
 # Tools
 SHOW_EXPLORERS_LIST=false
 SHOW_PUBLIC_ENDPOINTS=false

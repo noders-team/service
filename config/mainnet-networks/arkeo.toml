@@ -4,6 +4,17 @@ CHAIN_SYSTEM_NAME="arkeo"
 CHAIN_ICON="arkeo-icon.svg"
 CHAIN_BACKGROUND_COLOR="#3CE2FB"
 
+# NODERS
+# NODERS
+STAKE_URL=""
+RESTAKE_URL="https://restake.app/arkeo/arkeovaloper1rnfgv6uhry6ywl880mgz4rmxm8csqwd74plfuu"
+VALIDATOR_URL="https://exp.utsa.tech/arkeo-main/staking/arkeovaloper1rnfgv6uhry6ywl880mgz4rmxm8csqwd74plfuu"
+EXPLORER_URL=""
+EXPLORER_IMAGE=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
 CHAIN_DENOM="uarkeo"
@@ -19,8 +30,9 @@ DAEMON_HOME="~/.arkeo"
 ENDPOINT_RPC="https://arkeo-rpc.noders.services"
 ENDPOINT_API="https://arkeo-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://arkeo-grpc.noders.services:443"
+ENDPOINT_GRPC="arkeo-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="3efa2352582ccb66b3d2b84de8a562e8057e88e6@arkeo-seed.noders.services:22833"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/arkeo"
 
 # Social
@@ -33,7 +45,6 @@ SOCIAL_TELEGRAM=""
 # Other
 SNAPSHOT_URL="https://snapshots.noders.services/arkeo"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://exp.utsa.tech/arkeo-main/staking/arkeovaloper1rnfgv6uhry6ywl880mgz4rmxm8csqwd74plfuu"
 
 # Updates
 UPDATE_MAIN=true

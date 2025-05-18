@@ -4,6 +4,15 @@ CHAIN_SYSTEM_NAME="sunrise"
 CHAIN_ICON="sunrise-icon.svg"
 CHAIN_BACKGROUND_COLOR="#EDBC64"
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL=""
+VALIDATOR_URL="https://testnet.sunrise.explorers.guru/validator/sunrisevaloper1knkwlqqxky07f7vu6vgxna49m2tf9aa9j7fnkt"
+EXPLORER_URL=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
 CHAIN_DENOM="uvrise"
@@ -19,8 +28,9 @@ DAEMON_HOME="~/.sunrise"
 ENDPOINT_RPC="https://sunrise-t-rpc.noders.services"
 ENDPOINT_API="https://sunrise-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://sunrise-t-grpc.noders.services:443"
+ENDPOINT_GRPC="sunrise-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="9d3148799e0b48eeba28f7e12be5b85ac1db4720@sunrise-t-seed.noders.services:28333"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/sunrise"
 
 # Social
@@ -33,7 +43,6 @@ SOCIAL_TELEGRAM=""
 # Other
 SNAPSHOT_URL="https://snapshots-t.noders.services/sunrise"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://testnet.sunrise.explorers.guru/validator/sunrisevaloper1knkwlqqxky07f7vu6vgxna49m2tf9aa9j7fnkt"
 
 # Updates
 UPDATE_MAIN=true

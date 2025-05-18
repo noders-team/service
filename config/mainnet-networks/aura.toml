@@ -9,6 +9,16 @@ CHAIN_ID="auto"
 CHAIN_DENOM="uaura"
 CHAIN_FEES="20000"
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL="https://restake.app/aura/auravaloper1vvqz6j3ucxr6n0ejdz4ck602lnyjew93cgcw4m"
+VALIDATOR_URL="https://ping.pub/aura/staking/auravaloper1vvqz6j3ucxr6n0ejdz4ck602lnyjew93cgcw4m"
+EXPLORER_URL=""
+EXPLORER_IMAGE=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Binary
 VERSION="auto"
 DAEMON_NAME="aurad"
@@ -19,7 +29,7 @@ DAEMON_HOME="~/.aura"
 ENDPOINT_RPC="https://aura-rpc.noders.services"
 ENDPOINT_API="https://aura-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://aura-grpc.noders.services:443"
+ENDPOINT_GRPC="aura-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/aura"
 
@@ -33,7 +43,6 @@ SOCIAL_TELEGRAM="https://t.me/AuraNetworkOfficial"
 # Other
 SNAPSHOT_URL="https://snapshots.noders.services/aura"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://aurascan.io/validators/auravaloper1vvqz6j3ucxr6n0ejdz4ck602lnyjew93cgcw4m"
 
 # Updates
 UPDATE_MAIN=true

@@ -30,10 +30,10 @@ DAEMON_HOME="~/.nilliond"
 ENDPOINT_RPC="https://nillion-rpc.noders.services"
 ENDPOINT_API="https://nillion-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://nillion-grpc.noders.services:443"
+ENDPOINT_GRPC="nillion-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="https://nillion-seed.noders.services:29856"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/nillion"
-ENDPOINT_SEED=""
 
 # Social
 SOCIAL_WEBSITE="https://nillion.com"

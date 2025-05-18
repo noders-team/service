@@ -4,6 +4,16 @@ CHAIN_SYSTEM_NAME="andromeda"
 CHAIN_ICON="andromeda-icon.svg"
 CHAIN_BACKGROUND_COLOR="#EC2842"
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL="https://restake.app/andromeda/andrvaloper1t8zsecgzc5025k3s0mthdm6vt82p5p0v48p2ry"
+VALIDATOR_URL="https://andromeda.explorers.guru/validator/andrvaloper1t8zsecgzc5025k3s0mthdm6vt82p5p0v48p2ry"
+EXPLORER_URL=""
+EXPLORER_IMAGE=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
 CHAIN_DENOM_PRETTY="ANDR"
@@ -20,8 +30,9 @@ DAEMON_HOME="~/.andromeda"
 ENDPOINT_RPC="https://andromeda-rpc.noders.services"
 ENDPOINT_API="https://andromeda-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://andromeda-grpc.noders.services:443"
+ENDPOINT_GRPC="andromeda-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="bf23dd8baf62d28b281ed40254148d66d75b3c75@andromeda-seed.noders.services:21233"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/andromeda"
 
 # Social
@@ -34,7 +45,6 @@ SOCIAL_TELEGRAM="https://t.me/andromedaprotocol"
 # Other
 SNAPSHOT_URL="https://snapshots.noders.services/andromeda"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://andromeda.explorers.guru/validator/andrvaloper1t8zsecgzc5025k3s0mthdm6vt82p5p0v48p2ry"
 
 # Updates
 UPDATE_MAIN=true

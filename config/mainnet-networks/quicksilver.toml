@@ -4,6 +4,16 @@ CHAIN_SYSTEM_NAME="quicksilver"
 CHAIN_ICON="quicksilver-icon.svg"
 CHAIN_BACKGROUND_COLOR="#75757599"
 
+# NODERS
+STAKE_URL="https://wallet.keplr.app/?modal=staking&chain=quicksilver-2&validator_address=quickvaloper17gwfcceyvcw53r6cclrhwk5jksmtd96xfjwrcv&step_id=3&action_id=stake"
+RESTAKE_URL="https://restake.app/quicksilver/quickvaloper17gwfcceyvcw53r6cclrhwk5jksmtd96xfjwrcv"
+VALIDATOR_URL="https://explorer.quicksilver.zone/validators/quickvaloper17gwfcceyvcw53r6cclrhwk5jksmtd96xfjwrcv"
+EXPLORER_URL=""
+EXPLORER_IMAGE=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
 CHAIN_DENOM="uqck"
@@ -19,8 +29,9 @@ DAEMON_HOME="~/.quicksilverd"
 ENDPOINT_RPC="https://quicksilver-rpc.noders.services"
 ENDPOINT_API="https://quicksilver-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://quicksilver-grpc.noders.services:443"
+ENDPOINT_GRPC="quicksilver-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="ac869c9a4dde57428000424e707dfd6478c37629@quicksilver-seed.noders.services:11133"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/quicksilver"
 
 # Social
@@ -33,7 +44,6 @@ SOCIAL_TELEGRAM="https://t.me/quicksilverzone"
 # Other
 SNAPSHOT_URL="https://snapshots.noders.services/quicksilver"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://ping.pub/quicksilver/staking/quickvaloper17gwfcceyvcw53r6cclrhwk5jksmtd96xfjwrcv"
 
 # Updates
 UPDATE_MAIN=true

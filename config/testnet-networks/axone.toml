@@ -4,6 +4,14 @@ CHAIN_SYSTEM_NAME="axone"
 CHAIN_ICON="axone-icon.svg"
 CHAIN_BACKGROUND_COLOR="#FB5F03"
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL=""
+VALIDATOR_URL="https://testnet.axone.explorers.guru/validator/axonevaloper1zux0q0unnu9s0sz9kfy074e0rp7cj909yf4hc8"
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
 CHAIN_DENOM="uaxone"
@@ -19,8 +27,9 @@ DAEMON_HOME="~/.axoned"
 ENDPOINT_RPC="https://axone-t-rpc.noders.services"
 ENDPOINT_API="https://axone-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://axone-t-grpc.noders.services:443"
+ENDPOINT_GRPC="axone-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="91cbdaa7af204d8ec1da183bbe98a25ee186f7f2@axone-t-seed.noders.services:20033"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/axone"
 
 # Social
@@ -33,7 +42,6 @@ SOCIAL_TELEGRAM=""
 # Other
 SNAPSHOT_URL="https://snapshots-t.noders.services/axone"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://testnet.axone.explorers.guru/validator/axonevaloper1zux0q0unnu9s0sz9kfy074e0rp7cj909yf4hc8"
 
 # Updates
 UPDATE_MAIN=true

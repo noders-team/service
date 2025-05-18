@@ -7,7 +7,7 @@ CHAIN_BACKGROUND_COLOR="#dc6bbd"
 # NODERS
 STAKE_URL=""
 RESTAKE_URL=""
-VALIDATOR_URL=""
+VALIDATOR_URL="https://testnet.0g.explorers.guru/validator/0gvaloper1w24g8xczpxuy5y87lwv0dyq9n27mlyul3xf2zk"
 EXPLORER_URL="https://0ghub.org/explorer"
 EXPLORER_IMAGE="og-exp.png"
 APP_URL="https://0ghub.org/"
@@ -30,10 +30,10 @@ DAEMON_HOME="~/.0gchain"
 ENDPOINT_RPC="https://og-t-rpc.noders.services"
 ENDPOINT_API="https://og-t-api.noders.services"
 ENDPOINT_JRPC="https://og-t-json.noders.services"
-ENDPOINT_GRPC="https://og-t-grpc.noders.services:443"
+ENDPOINT_GRPC="og-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="dbf6036f6a2bdc952d58678756dc835dff0abbc7@og-t-seed.noders.services:23833"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/og"
-ENDPOINT_SEED=""
 
 # Social
 SOCIAL_WEBSITE="https://0g.ai/"
@@ -45,7 +45,6 @@ SOCIAL_TELEGRAM="https://t.me/web3_0glabs"
 # Other
 SNAPSHOT_URL="https://snapshots-t.noders.services/og"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://testnet.0g.explorers.guru/validator/0gvaloper1w24g8xczpxuy5y87lwv0dyq9n27mlyul3xf2zk"
 
 # Updates
 UPDATE_MAIN=true

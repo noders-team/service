@@ -6,8 +6,8 @@ CHAIN_BACKGROUND_COLOR="#dbb447"
 
 # NODERS
 STAKE_URL="https://wallet.keplr.app/?modal=staking&chain=dymension_1100-1&validator_address=dymvaloper1ta56hcqaxj55wu8emarnw090gk5uq4366uz572&step_id=3&action_id=stake"
-RESTAKE_URL="https://restake.app/dymension/dymvaloper1ta56hcqaxj55wu8emarnw090gk5uq4366uz572/stake"
-VALIDATOR_URL=""
+RESTAKE_URL="https://restake.app/dymension/dymvaloper1ta56hcqaxj55wu8emarnw090gk5uq4366uz572"
+VALIDATOR_URL="https://dymension.explorers.guru/validator/dymvaloper1ta56hcqaxj55wu8emarnw090gk5uq4366uz572"
 EXPLORER_URL=""
 EXPLORER_IMAGE="dymension-exp.png"
 APP_URL="https://dymensionhub.org"
@@ -30,10 +30,10 @@ DAEMON_HOME="~/.dymension"
 ENDPOINT_RPC="https://dymension-rpc.noders.services"
 ENDPOINT_API="https://dymension-api.noders.services"
 ENDPOINT_JRPC="https://dymension-jsonrpc.noders.services"
-ENDPOINT_GRPC="https://dymension-grpc.noders.services:443"
+ENDPOINT_GRPC="dymension-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/dymension"
-ENDPOINT_SEED=""
+ENDPOINT_SEED="5707bb72616deaf595eb79def6e371e50085f403@dymension-seed.noders.services:20533"
 
 # Social
 SOCIAL_WEBSITE="https://dymension.xyz/"

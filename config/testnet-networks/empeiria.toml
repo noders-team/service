@@ -4,6 +4,15 @@ CHAIN_SYSTEM_NAME="empeiria"
 CHAIN_ICON="empeiria-icon.svg"
 CHAIN_BACKGROUND_COLOR="#890098"
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL=""
+VALIDATOR_URL="https://testnet.ping.pub/empe/staking/empevaloper1ghmjf5nhwqzvd7ztkrf3d5c383lmmsc9az392s"
+EXPLORER_URL=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
 CHAIN_DENOM="uempe"
@@ -19,8 +28,9 @@ DAEMON_HOME="~/.empe-chain"
 ENDPOINT_RPC="https://empeiria-t-rpc.noders.services"
 ENDPOINT_API="https://empeiria-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="https://empeiria-t-grpc.noders.services:443"
+ENDPOINT_GRPC="empeiria-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="dd0628195b94fca40ae287333244da00561a3471@empeiria-t-seed.noders.services:11233"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/empeiria"
 
 # Social
@@ -33,7 +43,6 @@ SOCIAL_TELEGRAM="https://t.me/web3Empeiria"
 # Other
 SNAPSHOT_URL="https://snapshots-t.noders.services/empeiria"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://explorer.stavr.tech/Empeiria-Testnet/staking/empevaloper1ghmjf5nhwqzvd7ztkrf3d5c383lmmsc9az392s"
 
 # Updates
 UPDATE_MAIN=true
