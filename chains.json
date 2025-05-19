@@ -56,6 +56,13 @@
     "scope": "mainnet"
   },
   {
+    "name": "dora",
+    "pretty_name": "DoraVota",
+    "chain_id": "vota-ash",
+    "logo_url": "img/dora-icon.svg",
+    "scope": "mainnet"
+  },
+  {
     "name": "dymension",
     "pretty_name": "Dymension",
     "chain_id": "dymension_1100-1",
