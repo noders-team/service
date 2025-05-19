@@ -32,3 +32,7 @@ snapshot.mdx
 !docs/testnet-networks/template/snapshot.mdx
 
 /static/img/png-icon
+
+venv/
+generate_docs.py
+Tools.xlsx
