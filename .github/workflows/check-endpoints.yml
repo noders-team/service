@@ -81,7 +81,6 @@ jobs:
                 grpcurl -plaintext -max-time 3 "$clean_endpoint" list > /dev/null 2>&1 || FAIL=1
                 set -e
              fi
-           done
 
             if [ "$FAIL" == "1" ]; then
               FAILED_ENDPOINTS+=("$endpoint (GRPC unreachable)")
