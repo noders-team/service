@@ -6,7 +6,7 @@ CHAIN_BACKGROUND_COLOR="#EF4520"
 
 # NODERS
 STAKE_URL=""
-RESTAKE_URL="https://restake.app/pylons/pylovaloper1yc06qqa99vz50jrh64fctt0gvjj7pp7n7029c7"
+RESTAKE_URL=""
 VALIDATOR_URL="https://pylons.explorers.guru/validator/pylovaloper1yc06qqa99vz50jrh64fctt0gvjj7pp7n7029c7"
 EXPLORER_URL=""
 EXPLORER_IMAGE=""
