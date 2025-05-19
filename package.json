@@ -6,7 +6,7 @@
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
-    "build-staging": "BASE_URL=/service/ docusaurus build",
+    "build-staging": "yarn prebuild && BASE_URL=/service/ docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
@@ -57,7 +57,7 @@
     ]
   },
   "engines": {
-    "node": ">=18.0"
+    "node": ">=22.0"
   },
   "packageManager": "yarn@1.22.22"
 }
