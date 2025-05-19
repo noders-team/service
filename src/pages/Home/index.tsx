@@ -91,8 +91,8 @@ function Home() {
               paddingY: { xs: 8, md: 10 },
             }}
           >
-            <Typography variant="h3">Validator Services</Typography>
-            <Typography variant="subtitle1" sx={{ opacity: 0.6, fontWeight: 300 }}>
+            <Typography variant="h1">Validator Services</Typography>
+            <Typography variant="body1" sx={{ opacity: 0.6 }}>
               Noders LLC provides a stable, reliable infrastructure for web3 projects, supporting them at all stages of
               development: starting with testnet and continuing into the mainnet
             </Typography>
@@ -143,8 +143,8 @@ function Home() {
                 <Illustration src="img/home-page/endpoints.svg" alt="Endpoints" width={112} />
               </Box>
               <Box display="flex" flexDirection="column" gap={1}>
-                <Typography variant="h6">Endpoints</Typography>
-                <Typography variant="body2" sx={{ opacity: 0.6 }}>
+                <Typography variant="h4">Endpoints</Typography>
+                <Typography variant="body1" sx={{ opacity: 0.6 }}>
                   API, RPC, gRPC
                 </Typography>
               </Box>
@@ -166,8 +166,8 @@ function Home() {
                 <Illustration src="img/home-page/sync.svg" alt="Sync" width={114} />
               </Box>
               <Box display="flex" flexDirection="column" gap={1}>
-                <Typography variant="h6">Sync</Typography>
-                <Typography variant="body2" sx={{ opacity: 0.6 }}>
+                <Typography variant="h4">Sync</Typography>
+                <Typography variant="body1" sx={{ opacity: 0.6 }}>
                   Snapshot, State Sync, Peers, Seed
                 </Typography>
               </Box>
@@ -188,8 +188,8 @@ function Home() {
                 <Illustration src="img/home-page/explorer.svg" alt="Explorers" width={112} />
               </Box>
               <Box display="flex" flexDirection="column" gap={1}>
-                <Typography variant="h6">Explorers</Typography>
-                <Typography variant="body2" sx={{ opacity: 0.6 }}>
+                <Typography variant="h4">Explorers</Typography>
+                <Typography variant="body1" sx={{ opacity: 0.6 }}>
                   Faucet, Bots and other Useful Tools
                 </Typography>
               </Box>
@@ -208,9 +208,9 @@ function Home() {
                 <Illustration src="img/home-page/guides.svg" alt="Guides" width={108} />
               </Box>
               <Box display="flex" flexDirection="column" gap={1}>
-                <Typography variant="h6">Guides</Typography>
-                <Typography variant="body2" sx={{ opacity: 0.6 }}>
-                  Clear Installation and Upgrade Guides{' '}
+                <Typography variant="h4">Guides</Typography>
+                <Typography variant="body1" sx={{ opacity: 0.6 }}>
+                  Clear Installation and Upgrade Guides
                 </Typography>
               </Box>
             </Box>

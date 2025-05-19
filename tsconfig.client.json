@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "composite": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "tsBuildInfoFile": "./lib/.tsbuildinfo-client",
+    "rootDir": "src",
+    "outDir": "lib",
+    "module": "ESNext",
+    "target": "esnext",
+    "jsx": "react",
+    "types": ["node", "react"],
+    "baseUrl": "./",
+    "lib": ["DOM"]
+  },
+  "include": ["src/open-graph"]
+}

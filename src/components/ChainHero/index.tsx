@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import useBaseUrl from '@docusaurus/useBaseUrl';
@@ -12,6 +12,13 @@ import KeplrIcon from '@site/static/img/keplr-logo.svg';
 import RestakeIcon from '@site/static/img/restake-logo.svg';
 import { useMediaQuery, useTheme } from '@mui/material';
 import { alpha } from '@mui/material/styles';
+import { keyframes } from '@mui/system';
+
+const marquee = keyframes`
+  0% { transform: translateX(0); }
+  50% { transform: translateX(calc(-100% + 100px)); }
+  100% { transform: translateX(0); }
+`;
 
 type Props = {
   name: string;
@@ -49,6 +56,20 @@ function ChainHero({
   const bgImageUrl = useBaseUrl('/img/home-page/dot-pattern.svg');
   const isMobile = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   const showStakingButtons = stakeUrl || restakeUrl;
+  const textRef = useRef<HTMLDivElement>(null);
+  const [isOverflowing, setIsOverflowing] = useState(false);
+
+  useEffect(() => {
+    const checkOverflow = () => {
+      if (textRef.current) {
+        setIsOverflowing(textRef.current.scrollWidth > textRef.current.clientWidth);
+      }
+    };
+
+    checkOverflow();
+    window.addEventListener('resize', checkOverflow);
+    return () => window.removeEventListener('resize', checkOverflow);
+  }, [name]);
 
   let bgColorString = alpha(theme.palette.primary.main, 0.5);
   if (bgColor && bgColor !== '[CHAIN_BACKGROUND_COLOR]') {
@@ -80,7 +101,25 @@ function ChainHero({
       <Box display="flex" flexWrap="wrap" alignItems="top" justifyContent="space-between" gap={2}>
         <Box display="flex" alignItems="center" gap={2}>
           <Box component="img" src={baseIconUrl} alt={name} width={50} height={50} />
-          <Typography variant="h3">{name}</Typography>
+          <Box sx={{ overflow: 'hidden', width: '100%' }}>
+            <Typography
+              ref={textRef}
+              variant="h1"
+              sx={{
+                whiteSpace: 'nowrap',
+                display: 'block',
+                minWidth: 0,
+                width: '100%',
+                textOverflow: 'clip',
+                animation: isOverflowing ? `${marquee} 8s ease-in-out infinite` : 'none',
+                '&:hover': {
+                  animationPlayState: 'paused',
+                },
+              }}
+            >
+              {name}
+            </Typography>
+          </Box>
         </Box>
 
         <Box display="flex" alignItems="center" gap={2}>

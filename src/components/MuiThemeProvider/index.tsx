@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
-import { createTheme, ThemeProvider, ThemeOptions } from '@mui/material/styles';
+import { createTheme, ThemeOptions, ThemeProvider } from '@mui/material/styles';
 import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
-import { useColorMode } from '@docusaurus/theme-common';
+// import { useColorMode } from '@docusaurus/theme-common';
 import '@fontsource/space-grotesk/500.css';
+import '@fontsource/space-grotesk/600.css';
 
 const createEmotionCache = () => {
   return createCache({ key: 'mui' });
@@ -12,7 +13,8 @@ const createEmotionCache = () => {
 const emotionCache = createEmotionCache();
 
 export default function MuiThemeProvider(props) {
-  const { colorMode } = useColorMode();
+  //const { colorMode } = useColorMode();
+  const colorMode = 'dark';
   const isDark = colorMode === 'dark';
 
   const dark: ThemeOptions = {
@@ -38,14 +40,63 @@ export default function MuiThemeProvider(props) {
     },
     typography: {
       fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
-      h1: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
-      h2: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
-      h3: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
-      h4: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
-      h5: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
-      h6: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
-      subtitle2: { fontSize: '14px', fontWeight: 600 },
-      overline: { fontWeight: 600, opacity: 0.6 },
+      h1: {
+        fontSize: '48px',
+        fontWeight: 500,
+        lineHeight: '56px',
+        letterSpacing: '-1.5px',
+        fontFamily: '"Space Grotesk", sans-serif',
+        marginBottom: '0px!important',
+      },
+      h2: {
+        fontSize: '32px',
+        fontWeight: 500,
+        lineHeight: '38px',
+        letterSpacing: '-0.5px',
+        fontFamily: '"Space Grotesk", sans-serif',
+      },
+      h3: {
+        fontSize: '24px',
+        fontWeight: 500,
+        lineHeight: '28px',
+        letterSpacing: '0px',
+        fontFamily: '"Space Grotesk", sans-serif',
+      },
+      h4: {
+        fontSize: '20px',
+        fontWeight: 500,
+        lineHeight: '24px',
+        letterSpacing: '0.25px',
+        fontFamily: '"Space Grotesk", sans-serif',
+      },
+      h5: {
+        fontSize: '18px',
+        fontWeight: 600,
+        lineHeight: '24px',
+        letterSpacing: '0px',
+        fontFamily: '"Space Grotesk", sans-serif',
+      },
+      h6: {
+        fontSize: '16px',
+        fontWeight: 600,
+        lineHeight: '24px',
+        letterSpacing: '0.15px',
+        fontFamily: '"Space Grotesk", sans-serif',
+      },
+      subtitle1: { fontSize: '18px', fontWeight: 400, lineHeight: '175%', letterSpacing: '0.15px' },
+      subtitle2: { fontSize: '14px', fontWeight: 500, lineHeight: '157%', letterSpacing: '0.1px' },
+      body1: { fontSize: '16px', fontWeight: 400, lineHeight: '150%', letterSpacing: '0.15px' },
+      body2: { fontSize: '14px', fontWeight: 400, lineHeight: '143%', letterSpacing: '0.17px' },
+      button: { fontSize: '16px', fontWeight: 500, lineHeight: '150%', letterSpacing: '1px', textTransform: 'none' },
+      caption: { fontSize: '12px', fontWeight: 400, lineHeight: '165%', letterSpacing: '0.4px' },
+      overline: {
+        fontSize: '12px',
+        fontWeight: 600,
+        lineHeight: '150%',
+        letterSpacing: '1px',
+        textTransform: 'uppercase',
+        opacity: 0.6,
+      },
     },
     components: {
       MuiButton: {
@@ -67,14 +118,16 @@ export default function MuiThemeProvider(props) {
           },
           sizeMedium: {
             fontSize: '14px',
-            lineHeight: '16px',
-            fontWeight: 600,
+            lineHeight: '21px',
+            fontWeight: 500,
+            letterSpacing: '1px',
             padding: '12px 24px',
           },
           sizeLarge: {
+            fontSize: '16px',
+            fontWeight: 500,
+            lineHeight: '24px',
             borderRadius: 8,
-            fontSize: '1rem',
-            lineHeight: '1.5',
             padding: '12px 24px',
           },
         },
@@ -83,7 +136,9 @@ export default function MuiThemeProvider(props) {
         styleOverrides: {
           root: {
             textTransform: 'none',
-            fontSize: '1rem',
+            fontSize: '16px',
+            fontWeight: 500,
+            lineHeight: '24px',
           },
         },
       },
@@ -109,69 +164,7 @@ export default function MuiThemeProvider(props) {
     },
   };
 
-  const light: ThemeOptions = {
-    palette: {
-      mode: 'light',
-      primary: {
-        main: '#3880FF',
-      },
-      secondary: {
-        main: '#25c2a0',
-      },
-      background: {
-        default: '#ffffff',
-        paper: '#f6f8fa',
-      },
-    },
-    typography: {
-      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
-      h1: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
-      h2: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
-      h3: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
-      h4: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
-      h5: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
-      h6: { fontFamily: '"Space Grotesk", sans-serif', fontWeight: 500 },
-    },
-    components: {
-      MuiButton: {
-        styleOverrides: {
-          root: {
-            textTransform: 'none',
-            '&:hover': {
-              color: 'inherit',
-            },
-          },
-          outlined: {
-            '&:hover': {
-              color: '#3880FF',
-              borderColor: '#3880FF',
-            },
-          },
-        },
-      },
-      MuiTab: {
-        styleOverrides: {
-          root: {
-            textTransform: 'none',
-          },
-        },
-      },
-      MuiLink: {
-        styleOverrides: {
-          root: {
-            textDecoration: 'none',
-          },
-        },
-      },
-      MuiContainer: {
-        styleOverrides: {
-          root: {
-            backgroundColor: '#ffffff',
-          },
-        },
-      },
-    },
-  };
+  const light: ThemeOptions = {};
 
   const palette = isDark ? dark : light;
   const theme = React.useMemo(() => createTheme(palette), [colorMode]);
@@ -212,8 +205,6 @@ export default function MuiThemeProvider(props) {
       root.style.setProperty('--docusaurus-highlighted-code-line-bg', 'rgba(0, 0, 0, 0.1)');
     }
   }, [theme, colorMode]);
-
-  console.log('🎨 Theme: ', colorMode, theme);
 
   return (
     <CacheProvider value={emotionCache}>

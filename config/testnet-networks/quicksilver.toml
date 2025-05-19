@@ -4,6 +4,15 @@ CHAIN_SYSTEM_NAME="quicksilver"
 CHAIN_ICON="quicksilver-icon.svg"
 CHAIN_BACKGROUND_COLOR="#75757599"
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL=""
+VALIDATOR_URL="https://testnet.itrocket.net/quicksilver/staking/quickvaloper17gwfcceyvcw53r6cclrhwk5jksmtd96xfjwrcv"
+EXPLORER_URL=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
 CHAIN_DENOM="uqck"
@@ -21,6 +30,7 @@ ENDPOINT_API="https://quicksilver-t-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="quicksilver-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="74057e47515d4bf87ab68520bd13bb60ec7678cc@quicksilver-t-seed.noders.services:11133"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/quicksilver"
 
 # Social
@@ -33,7 +43,6 @@ SOCIAL_TELEGRAM="https://t.me/quicksilverzone"
 # Other
 SNAPSHOT_URL="https://snapshots-t.noders.services/quicksilver"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://testnet.itrocket.net/quicksilver/staking/quickvaloper17gwfcceyvcw53r6cclrhwk5jksmtd96xfjwrcv"
 
 # Updates
 UPDATE_MAIN=true

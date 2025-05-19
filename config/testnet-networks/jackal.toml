@@ -4,6 +4,15 @@ CHAIN_SYSTEM_NAME="jackal"
 CHAIN_ICON="jackal-icon.svg"
 CHAIN_BACKGROUND_COLOR="#052253"
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL=""
+VALIDATOR_URL="https://testnet-explorer.brocha.in/Jackal/staking/jklvaloper132k95jan8ju92jtmkzr49vnusv5xvwvju27kpq"
+EXPLORER_URL=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
 CHAIN_DENOM="ujckl"
@@ -22,6 +31,7 @@ ENDPOINT_API="https://jackal-t-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="jackal-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="dc5d5a9d671cc001f52714162411b0803f069bd8@jackal-t-seed.noders.services:17533"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/jackal"
 
 # Social
@@ -34,7 +44,6 @@ SOCIAL_TELEGRAM="https://t.me/+rtuZnbTlHaIzNjVh"
 # Other
 SNAPSHOT_URL="https://snapshots-t.noders.services/jackal"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://explorer.kjnodes.com/jackal-testnet/staking/jklvaloper132k95jan8ju92jtmkzr49vnusv5xvwvju27kpq"
 
 # Updates
 UPDATE_MAIN=true

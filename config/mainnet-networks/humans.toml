@@ -4,6 +4,16 @@ CHAIN_SYSTEM_NAME="humans"
 CHAIN_ICON="humans-icon.svg"
 CHAIN_BACKGROUND_COLOR="#5EFEC6"
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL="https://restake.app/humans/humanvaloper1xl4lxgvwesnehdkfpn92ku8fk99lkrk6kmjc98"
+VALIDATOR_URL="https://humans.explorers.guru/validator/humanvaloper1xl4lxgvwesnehdkfpn92ku8fk99lkrk6kmjc98"
+EXPLORER_URL=""
+EXPLORER_IMAGE=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
 CHAIN_DENOM="aheart"
@@ -21,6 +31,7 @@ ENDPOINT_API="https://humans-api.noders.services"
 ENDPOINT_JCWEB="https://humans-jsonrpc.noders.services"
 ENDPOINT_GRPC="humans-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="2c347efd728f2c61930622bd69727280c18346a8@humans-seed.noders.services:18433"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/humans"
 
 # Social
@@ -33,7 +44,6 @@ SOCIAL_TELEGRAM="https://t.me/humansdotai"
 # Other
 SNAPSHOT_URL="https://snapshots.noders.services/humans"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://humans.explorers.guru/validator/humanvaloper1xl4lxgvwesnehdkfpn92ku8fk99lkrk6kmjc98"
 
 # Updates
 UPDATE_MAIN=true

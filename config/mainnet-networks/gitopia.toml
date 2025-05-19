@@ -9,6 +9,16 @@ CHAIN_ID="auto"
 CHAIN_DENOM="ulore"
 CHAIN_FEES="20000"
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL="https://restake.app/gitopia/gitopiavaloper1fpwhn7tevwz657rg00mc7zcf9eq4tg0a703dw8"
+VALIDATOR_URL="https://ping.pub/gitopia/staking/gitopiavaloper1fpwhn7tevwz657rg00mc7zcf9eq4tg0a703dw8"
+EXPLORER_URL=""
+EXPLORER_IMAGE=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Binary
 VERSION="auto"
 DAEMON_NAME="gitopiad"
@@ -21,6 +31,7 @@ ENDPOINT_API="https://gitopia-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="gitopia-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="1623d545d0fcc5501e2c2fce8acd7f2398db36d4@gitopia-seed.noders.services:11333"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/gitopia"
 
 # Social
@@ -33,7 +44,6 @@ SOCIAL_TELEGRAM="https://t.me/Gitopia"
 # Other
 SNAPSHOT_URL="https://snapshots.noders.services/gitopia"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://ping.pub/gitopia/staking/gitopiavaloper1fpwhn7tevwz657rg00mc7zcf9eq4tg0a703dw8"
 
 # Updates
 UPDATE_MAIN=true

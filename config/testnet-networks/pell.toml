@@ -4,6 +4,15 @@ CHAIN_SYSTEM_NAME="pell"
 CHAIN_ICON="pell-icon.svg"
 CHAIN_BACKGROUND_COLOR="#4C67EF"
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL=""
+VALIDATOR_URL="https://testnet.pell.explorers.guru/validator/pellvaloper1qkvwaakuf2expvp22kys5z9p8jt9c3dxfjwk0z"
+EXPLORER_URL=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
 CHAIN_DENOM="apell"
@@ -21,6 +30,7 @@ ENDPOINT_API="https://pell-t-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="pell-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="fd6dc2772f6965b3e45f945fcad61153e7f1ac34@pell-t-seed.noders.services:47933"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/pell"
 
 # Social
@@ -33,7 +43,6 @@ SOCIAL_TELEGRAM="https://t.me/pellnetwork_chat"
 # Other
 SNAPSHOT_URL="https://snapshots-t.noders.services/pell"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://testnet.pell.explorers.guru/validator/pellvaloper1qkvwaakuf2expvp22kys5z9p8jt9c3dxfjwk0z"
 
 # Updates
 UPDATE_MAIN=true

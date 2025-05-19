@@ -4,6 +4,16 @@ CHAIN_SYSTEM_NAME="kopi"
 CHAIN_ICON="kopi-icon.svg"
 CHAIN_BACKGROUND_COLOR="#B9E17C"
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL="https://restake.app/kopi/kopivaloper1ctu3g3m2jyp26m03vhjap2aua8646magep7y36"
+VALIDATOR_URL="https://explorer.kopi.money/luwak-1/staking/kopivaloper1ctu3g3m2jyp26m03vhjap2aua8646magep7y36"
+EXPLORER_URL=""
+EXPLORER_IMAGE=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
 CHAIN_DENOM="ukopi"
@@ -21,6 +31,7 @@ ENDPOINT_API="https://kopi-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="kopi-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="7fa77c0236b0c0b99c5c957e11def8a2531ecbce@kopi-seed.noders.services:30733"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/kopi"
 
 # Social
@@ -33,7 +44,6 @@ SOCIAL_TELEGRAM="https://t.me/+_hk--L9mKKc4MThk"
 # Other
 SNAPSHOT_URL="https://snapshots.noders.services/kopi"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://explorer.kopi.money/luwak-1/staking/kopivaloper1ctu3g3m2jyp26m03vhjap2aua8646magep7y36"
 
 # Updates
 UPDATE_MAIN=true

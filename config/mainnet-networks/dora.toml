@@ -1,0 +1,76 @@
+# App
+CHAIN_NAME="DoraVota"
+CHAIN_SYSTEM_NAME="dora"
+CHAIN_ICON="dora-icon.svg"
+CHAIN_BACKGROUND_COLOR="#FF6500"
+
+# NODERS
+STAKE_URL=""
+RESTAKE_URL=""
+VALIDATOR_URL=""
+EXPLORER_URL=""
+APP_URL=""
+APP_IMAGE=""
+
+# Blockchain
+CHAIN_ID="auto"
+CHAIN_DENOM_PRETTY=""
+CHAIN_DENOM="peaka"
+CHAIN_FEES="3000"
+
+# Binary
+VERSION="auto"
+DAEMON_NAME="dorad"
+DAEMON_SERVICE="dora.service"
+DAEMON_HOME="~/.dorad"
+
+# Endpoints
+ENDPOINT_RPC="https://dora-rpc.noders.services"
+ENDPOINT_API="https://dora-api.noders.services"
+ENDPOINT_JRPC=""
+ENDPOINT_GRPC="dora-grpc.noders.services:443"
+ENDPOINT_PEER="auto"
+ENDPOINT_SEED="4df091676d42231553eeb9cec880c516dee6a6d2@162.55.132.169:37656"
+ENDPOINT_COSMOSLIST=""
+ENDPOINT_SEED=""
+
+# Social
+SOCIAL_WEBSITE="https://dorafactory.org/"
+SOCIAL_GITHUB="https://github.com/DoraFactory/doravota"
+SOCIAL_DISCORD="https://discord.com/invite/gKT5DsWwQ5"
+SOCIAL_X="https://twitter.com/DoraFactory"
+SOCIAL_TELEGRAM=""
+
+# Other
+DOWNLOAD_URL="https://snapshots.noders.services/dora"
+GITHUB_FOLDER_NAME="auto"
+
+# Updates
+UPDATE_MAIN=true
+UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
+UPDATE_UPGRADE=true
+UPDATE_SNAPSHOT=true
+UPDATE_STATESYNC=true
+UPDATE_LIVE_PEERS=true
+UPDATE_CLI_CHEATSHEET=true
+UPDATE_ENDPOINTS=true
+
+# Feature toggles
+# Node installation
+SHOW_INSTALLATION_GUIDE=true
+SHOW_UPGRADE_GUIDE=true
+SHOW_GENESIS=true
+SHOW_CLI=true
+# Endpoints and Sync
+SHOW_ENDPOINTS=true
+SHOW_STATE_SYNC=true
+SHOW_SNAPSHOT=true
+SHOW_LIVE_PEERS=true
+SHOW_SEED=true
+SHOW_ADDRESS_BOOK=true
+# Tools
+SHOW_EXPLORERS_LIST=false
+SHOW_PUBLIC_ENDPOINTS=false
+SHOW_USEFUL_TOOLS=false
+SHOW_UPGRADE_WATCHER=false

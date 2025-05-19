@@ -7,7 +7,7 @@ CHAIN_BACKGROUND_COLOR="#7F61EE"
 # NODERS
 STAKE_URL=""
 RESTAKE_URL=""
-VALIDATOR_URL=""
+VALIDATOR_URL="https://testnet.itrocket.net/airchains/staking/airvaloper1z6q26lprv70xgztfzgnfxgm7t57xh0p0hugz54"
 EXPLORER_URL=""
 APP_URL=""
 APP_IMAGE=""
@@ -31,8 +31,8 @@ ENDPOINT_API="https://airchains-t-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="airchains-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="e77bb2134768d291d56034d338818bc2b0d3b239@airchains-t-seed.noders.services:26733"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/airchains"
-ENDPOINT_SEED=""
 
 # Social
 SOCIAL_WEBSITE="https://www.airchains.io/"

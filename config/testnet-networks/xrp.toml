@@ -4,6 +4,15 @@ CHAIN_SYSTEM_NAME="xrp"
 CHAIN_ICON="xrp-icon.svg"
 CHAIN_BACKGROUND_COLOR="#7B00F3"
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL=""
+VALIDATOR_URL=""
+EXPLORER_URL=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
 CHAIN_DENOM="apoa"
@@ -21,6 +30,7 @@ ENDPOINT_API="https://xrp-t-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="xrp-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="1f5ece1cbfba945f79b9d2ddda2582498082093d@xrp-t-seed.noders.services:37933"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/xrp"
 
 # Social

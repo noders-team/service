@@ -4,6 +4,16 @@ CHAIN_SYSTEM_NAME="bitsong"
 CHAIN_ICON="bitsong-icon.svg"
 CHAIN_BACKGROUND_COLOR="#F42172"
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL="https://restake.app/bitsong/bitsongvaloper19qtzdsu57hf5jmcyy5t2uuh0y45q4ah7hrwk4n"
+VALIDATOR_URL="https://ping.pub/bitsong/staking/bitsongvaloper19qtzdsu57hf5jmcyy5t2uuh0y45q4ah7hrwk4n"
+EXPLORER_URL=""
+EXPLORER_IMAGE=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
 CHAIN_DENOM="ubtsg"
@@ -21,6 +31,7 @@ ENDPOINT_API="https://bitsong-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="bitsong-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="955a296a5b32b8c91ae1a573edb4e9f9983e7c5f@bitsong-seed.noders.services:16033"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/bitsong"
 
 # Social
@@ -33,7 +44,6 @@ SOCIAL_TELEGRAM="https://t.me/BitSongOfficial"
 # Other
 SNAPSHOT_URL="https://snapshots.noders.services/bitsong"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://ping.pub/bitsong/staking/bitsongvaloper19qtzdsu57hf5jmcyy5t2uuh0y45q4ah7hrwk4n"
 
 # Updates
 UPDATE_MAIN=true

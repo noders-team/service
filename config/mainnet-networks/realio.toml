@@ -4,6 +4,16 @@ CHAIN_SYSTEM_NAME="realio"
 CHAIN_ICON="realio-icon.svg"
 CHAIN_BACKGROUND_COLOR="#67676799"
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL="https://restake.app/realio/realiovaloper1q0ju3af59l2kp2vfywcjrmj07tkgkg0s9zfh03"
+VALIDATOR_URL="https://ping.pub/realio/staking/realiovaloper1q0ju3af59l2kp2vfywcjrmj07tkgkg0s9zfh03"
+EXPLORER_URL=""
+EXPLORER_IMAGE=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
 CHAIN_DENOM="ario"
@@ -21,6 +31,7 @@ ENDPOINT_API="https://realio-api.noders.services"
 ENDPOINT_JRPC="https://realio-jsonrpc.noders.services"
 ENDPOINT_GRPC="realio-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="159d9f766f935962a88566ea4bea3448872a51fb@realio-seed.noders.services:12033"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/realio"
 
 # Social
@@ -33,7 +44,6 @@ SOCIAL_TELEGRAM=""
 # Other
 DOWNLOAD_URL="https://snapshots.noders.services/realio"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_LINK="https://ping.pub/realio/staking/realiovaloper1q0ju3af59l2kp2vfywcjrmj07tkgkg0s9zfh03"
 
 # Updates
 UPDATE_MAIN=true

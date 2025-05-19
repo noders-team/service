@@ -4,6 +4,15 @@ CHAIN_SYSTEM_NAME="side"
 CHAIN_ICON="side-icon.svg"
 CHAIN_BACKGROUND_COLOR="#EC7926"
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL=""
+VALIDATOR_URL="https://testnet.side.explorers.guru/validator/sidevaloper1qqfquysyqstp5qq8rsfqypgxq5zs7pc2r5tsv8cezc93gycrpywp22zkf48"
+EXPLORER_URL=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
 CHAIN_DENOM="uside"
@@ -21,6 +30,7 @@ ENDPOINT_API="https://side-t-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="side-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="9ce6c59a4a3d2a7c6c0780ebc0403316e5cdaec4@side-t-seed.noders.services:26333"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/side"
 
 # Social
@@ -33,7 +43,6 @@ SOCIAL_TELEGRAM="https://t.me/SideProtocolOfficial"
 # Other
 SNAPSHOT_URL="https://snapshots-t.noders.services/side"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://testnet.side.explorers.guru/validator/sidevaloper1qqfquysyqstp5qq8rsfqypgxq5zs7pc2r5tsv8cezc93gycrpywp22zkf48"
 
 # Updates
 UPDATE_MAIN=true

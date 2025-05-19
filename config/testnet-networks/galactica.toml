@@ -4,6 +4,15 @@ CHAIN_SYSTEM_NAME="galactica"
 CHAIN_ICON="galactica-icon.svg"
 CHAIN_BACKGROUND_COLOR="#E87C59"
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL=""
+VALIDATOR_URL="https://testnet.itrocket.net/galactica/staking/galavaloper1p0gs5uq44usv2fnx0qcw785jj2ey76svjtlgx7"
+EXPLORER_URL=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
 CHAIN_DENOM="agnet"
@@ -21,6 +30,7 @@ ENDPOINT_API="https://galactica-t-api.noders.services"
 ENDPOINT_JRPC="https://galactica-t-json.noders.services"
 ENDPOINT_GRPC="galactica-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="7a74b01d4baa10ae4722d28aaeb6bc422466451f@galactica-t-seed.noders.services:27433"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/galactica"
 
 # Social
@@ -33,7 +43,6 @@ SOCIAL_TELEGRAM="https://t.me/TheCypherState"
 # Other
 SNAPSHOT_URL="https://snapshots-t.noders.services/galactica"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://explorer.nodestake.org/galactica-testnet/staking/galavaloper1p0gs5uq44usv2fnx0qcw785jj2ey76svjtlgx7"
 
 # Updates
 UPDATE_MAIN=true

@@ -4,6 +4,16 @@ CHAIN_SYSTEM_NAME="zenrock"
 CHAIN_ICON="zenrock-icon.svg"
 CHAIN_BACKGROUND_COLOR="#050C40"
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL="https://restake.app/zenrock/zenvaloper1ydj6n7xea4gtkxd0maa4p9k85zl0kpwpsa4tak"
+VALIDATOR_URL="https://mainnet.itrocket.net/zenrock/staking/zenvaloper1ydj6n7xea4gtkxd0maa4p9k85zl0kpwpsa4tak"
+EXPLORER_URL=""
+EXPLORER_IMAGE=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
 CHAIN_DENOM="urock"
@@ -21,6 +31,7 @@ ENDPOINT_API="https://zenrock-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="zenrock-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="a131719349e0bcadeec5a4b4a2fdfe85486c1c60@zenrock-seed.noders.services:49633"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/zenrock"
 
 # Social

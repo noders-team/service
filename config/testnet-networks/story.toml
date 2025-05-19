@@ -7,7 +7,7 @@ CHAIN_BACKGROUND_COLOR="#EEE9EA"
 # NODERS
 STAKE_URL=""
 RESTAKE_URL=""
-VALIDATOR_URL=""
+VALIDATOR_URL="https://aeneid.storyscan.app/validators/storyvaloper17kry8akmlwxraf75j5esjal05ltd797dqa0kj5"
 EXPLORER_URL="https://ipstoryhub.org/explorer"
 APP_URL="https://ipstoryhub.org"
 APP_IMAGE="story-app.png"

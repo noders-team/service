@@ -32,6 +32,7 @@ ENDPOINT_API="https://celestia-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="celestia-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="6a1e1fd9f5a2ee93c86a8657ab329f11648b91dc@celestia-seed.noders.services:11633"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/celestia"
 ENDPOINT_SEED="6a1e1fd9f5a2ee93c86a8657ab329f11648b91dc@celestia-seed.noders.services:11633"
 

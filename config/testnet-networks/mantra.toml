@@ -4,6 +4,15 @@ CHAIN_SYSTEM_NAME="mantra"
 CHAIN_ICON="mantra-icon.svg"
 CHAIN_BACKGROUND_COLOR="#FE99D0"
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL=""
+VALIDATOR_URL="https://testnet.itrocket.net/mantra/staking/mantravaloper1aysxyetv0y7sfe0v70akyjn3kkjc6qyt5dlewa"
+EXPLORER_URL=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
 CHAIN_DENOM="uom"
@@ -21,6 +30,7 @@ ENDPOINT_API="https://mantra-t-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="mantra-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="0767221d878318764af082adac089eee9f1cdb4e@mantra-t-seed.noders.services:25133"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/mantra"
 
 # Social
@@ -33,7 +43,6 @@ SOCIAL_TELEGRAM="https://t.me/MANTRA_Chain"
 # Other
 SNAPSHOT_URL="https://snapshots-t.noders.services/mantra"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://explorer.stavr.tech/MANTRA-Hongbai/staking/mantravaloper1aysxyetv0y7sfe0v70akyjn3kkjc6qyt5dlewa"
 
 # Updates
 UPDATE_MAIN=true

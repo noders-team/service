@@ -7,7 +7,7 @@ const path = require('path');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'VALIDATOR SERVICES | NODERS',
+  title: 'Validator Services | NODERS',
   tagline: 'Trusted blockchain validator and web3 developer team',
   favicon: 'img/favicon.svg',
 
@@ -35,9 +35,7 @@ const config = {
 
   // future: { experimental_faster: true },
 
-  stylesheets: [
-    'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap',
-  ],
+  stylesheets: ['https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap'],
 
   headTags: [
     {
@@ -55,8 +53,8 @@ const config = {
           src: local('Consolas');
           font-display: swap;
         }
-      `
-    }
+      `,
+    },
   ],
 
   presets: [
@@ -125,7 +123,17 @@ const config = {
           };
         },
       };
-    }
+    },
+    [
+      '@acid-info/docusaurus-og',
+      {
+        path: './preview-images',
+        imageRenderers: {
+          'docusaurus-plugin-content-pages': require('./lib/open-graph/ImageRenderers').default.pages,
+          'docusaurus-plugin-content-docs': require('./lib/open-graph/ImageRenderers').default.docs,
+        },
+      },
+    ],
   ],
 };
 

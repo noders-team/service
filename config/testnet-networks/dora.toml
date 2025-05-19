@@ -11,6 +11,7 @@ VALIDATOR_URL="https://vota-bobtail-explorer.dorafactory.org/vota-bobtail/stakin
 EXPLORER_URL=""
 APP_URL=""
 APP_IMAGE=""
+FAUCET_URL="https://faucet.noders.services/doravota"
 
 # Blockchain
 CHAIN_ID="auto"
@@ -30,8 +31,8 @@ ENDPOINT_API="https://dora-t-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="dora-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="c3cd074e26cfc745d797f726b2909fdcca2b85ac@dora-t-seed.noders.services:37656"
 ENDPOINT_COSMOSLIST=""
-ENDPOINT_SEED=""
 
 # Social
 SOCIAL_WEBSITE="https://dorafactory.org/"

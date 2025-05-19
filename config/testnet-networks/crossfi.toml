@@ -4,6 +4,15 @@ CHAIN_SYSTEM_NAME="crossfi"
 CHAIN_ICON="crossfi-icon.svg"
 CHAIN_BACKGROUND_COLOR="#00C0FF"
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL=""
+VALIDATOR_URL="https://testnet.celestia.explorers.guru/validator/celestiavaloper1zzxrq7tjlsqvv0jtqtlt8gjaa68racukf5n9xh"
+EXPLORER_URL=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
 CHAIN_DENOM="mpx"
@@ -21,6 +30,7 @@ ENDPOINT_API="https://crossfi-t-api.noders.services"
 ENDPOINT_JRPC="https://crossfi-t-jsonrpc.noders.services"
 ENDPOINT_GRPC="crossfi-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="abb664a0229542c29b270476927a6da2041eae8e@crossfi-t-seed.noders.services:26033"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/crossfi"
 
 # Social
@@ -33,7 +43,6 @@ SOCIAL_TELEGRAM="https://t.me/crossfichain"
 # Other
 SNAPSHOT_URL="https://snapshots-t.noders.services/crossfi"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://test.xfiscan.com/validator/mxvaloper1jep3dc0aysyzcj78mer6zps5jftm89s2fzrf7m"
 
 # Updates
 UPDATE_MAIN=true

@@ -32,6 +32,7 @@ ENDPOINT_API=""
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC=""
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="77015c62605bcfd22011faf532678ee71797156e@namada-seed.noders.services:26633"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/namada"
 ENDPOINT_SEED=""
 

@@ -2,15 +2,21 @@ name: Check APIs liveness
 
 on:
   push:
+    branches:
+      - main
     paths:
       - 'config/mainnet-networks/**.toml'
       - 'config/testnet-networks/**.toml'
   workflow_dispatch:
   workflow_run:
     workflows:
-      - "Deploy to Remote Host"
+      - 'Deploy to Remote Host'
     types:
       - requested
+
+concurrency:
+  group: check-apis-liveness
+  cancel-in-progress: true
 
 jobs:
   check-endpoints:
@@ -38,7 +44,7 @@ jobs:
           }
 
           FAILED_ENDPOINTS=()
-          
+
           API_CHECK_PATH="/cosmos/bank/v1beta1/params"
 
           echo "Checking ENDPOINT_RPC..."
@@ -100,7 +106,7 @@ jobs:
         run: |
           echo '${{ needs.check-endpoints.outputs.failed_endpoints }}' > endpoints.json
           count=$(jq 'length' endpoints.json)
-          
+
           if [ "$count" -gt 0 ]; then
             echo "ENDPOINT_LIST<<EOF" >> $GITHUB_OUTPUT
             jq -r '.[]' endpoints.json >> $GITHUB_OUTPUT

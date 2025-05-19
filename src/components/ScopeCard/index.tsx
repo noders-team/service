@@ -25,7 +25,7 @@ function ScopeCard({ scope }: Props) {
         variant="body2"
         color={color}
         sx={{
-          fontFamily: 'var(--font-family-monospace)',
+          fontFamily: 'Consolas, monospace',
           fontSize: '15px',
           fontWeight: 400,
           fontStyle: 'normal',

@@ -4,6 +4,16 @@ CHAIN_SYSTEM_NAME="desmos"
 CHAIN_ICON="desmos-icon.svg"
 CHAIN_BACKGROUND_COLOR="#E97E58"
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL="https://restake.app/desmos/desmosvaloper1pequu0gsvh9ay5rx2xyg6j7eratwufu560dpnu"
+VALIDATOR_URL="https://bigdipper.live/desmos/validators/desmosvaloper1pequu0gsvh9ay5rx2xyg6j7eratwufu560dpnu"
+EXPLORER_URL=""
+EXPLORER_IMAGE=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
 CHAIN_DENOM="udsm"
@@ -21,6 +31,7 @@ ENDPOINT_API="https://desmos-api.noders.services"
 ENDPOINT_JRPC=""
 ENDPOINT_GRPC="desmos-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="5a40a86aad501a21816c4cb1be393dc9a4bda9b6@desmos-seed.noders.services:16233"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/desmos"
 
 # Social
@@ -33,7 +44,6 @@ SOCIAL_TELEGRAM="https://t.me/desmosnetwork"
 # Other
 SNAPSHOT_URL="https://snapshots.noders.services/desmos"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://ping.pub/desmos/staking/desmosvaloper1pequu0gsvh9ay5rx2xyg6j7eratwufu560dpnu"
 
 # Updates
 UPDATE_MAIN=true

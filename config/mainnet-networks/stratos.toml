@@ -4,6 +4,16 @@ CHAIN_SYSTEM_NAME="stratos"
 CHAIN_ICON="stratos-icon.svg"
 CHAIN_BACKGROUND_COLOR="#33948A"
 
+# NODERS
+STAKE_URL=""
+RESTAKE_URL="https://restake.app/stratos/stvaloper1ghkn8ra63422mcepdk0zzglzy6qax637g6fhzm"
+VALIDATOR_URL="https://ping.pub/stratos/staking/stvaloper1ghkn8ra63422mcepdk0zzglzy6qax637g6fhzm"
+EXPLORER_URL=""
+EXPLORER_IMAGE=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
 # Blockchain
 CHAIN_ID="auto"
 CHAIN_DENOM="wei"
@@ -21,6 +31,7 @@ ENDPOINT_API="https://stratos-api.noders.services"
 ENDPOINT_JRPC="https://stratos-jsonrpc.noders.services "
 ENDPOINT_GRPC="stratos-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
+ENDPOINT_SEED="65c1811742bd8dc718e2a4c8801a5ec4f34f4df8@stratos-seed.noders.services:21833"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/stratos"
 
 # Social
@@ -33,7 +44,6 @@ SOCIAL_TELEGRAM="https://t.me/StratosOfficial"
 # Other
 SNAPSHOT_URL="https://snapshots.noders.services/stratos"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL="https://explorer.thestratos.org/stratos/validators/stvaloper1ghkn8ra63422mcepdk0zzglzy6qax637g6fhzm"
 
 # Updates
 UPDATE_MAIN=true

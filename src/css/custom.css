@@ -9,15 +9,15 @@
 }
 
 [data-theme='dark'] {
-    /* Colors set dynamically from ThemeProvider.js */
-  --ifm-background-color: #04060B;
-  --ifm-background-surface-color: #04060B;
-  --ifm-navbar-background-color: #04060B;
+  /* Colors set dynamically from ThemeProvider.js */
+  --ifm-background-color: #04060b;
+  --ifm-background-surface-color: #04060b;
+  --ifm-navbar-background-color: #04060b;
 }
 
 /* NAV BAR */
 .navbar {
-  border-bottom: 1px solid #1F232E;
+  border-bottom: 1px solid #1f232e;
 }
 
 /* HIDE PAGINATION */
@@ -33,213 +33,211 @@ footer {
 /* SIDEBAR STYLES FOR ICONS */
 
 .sidebar-section-with-icon {
-    background-repeat: no-repeat;
-    background-position: 10px 4px;
-    background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: 10px 4px;
+  background-size: 24px 24px;
 }
 
 .sidebar-section-with-icon .menu__list-item-collapsible {
-    padding-left: 30px;
+  padding-left: 30px;
 }
 
 /* ICONS */
 
 .icon-andromeda {
-    background-image: url('../../static/img/andromeda-icon.svg');
+  background-image: url('../../static/img/andromeda-icon.svg');
 }
 
 .icon-aura {
-    background-image: url('../../static/img/aura-icon.svg');
+  background-image: url('../../static/img/aura-icon.svg');
 }
 
 .icon-cosmos {
-    background-image: url('../../static/img/cosmos-icon.svg');
+  background-image: url('../../static/img/cosmos-icon.svg');
 }
 
 .icon-bitsong {
-    background-image: url('../../static/img/bitsong-icon.svg');
+  background-image: url('../../static/img/bitsong-icon.svg');
 }
 
 .icon-celestia {
-    background-image: url('../../static/img/celestia-icon.svg');
+  background-image: url('../../static/img/celestia-icon.svg');
 }
 
 .icon-desmos {
-    background-image: url('../../static/img/desmos-icon.svg');
+  background-image: url('../../static/img/desmos-icon.svg');
 }
 
 .icon-dymension {
-    background-image: url('../../static/img/dymension-icon.svg');
+  background-image: url('../../static/img/dymension-icon.svg');
 }
 
 .icon-gitopia {
-    background-image: url('../../static/img/gitopia-icon.svg');
+  background-image: url('../../static/img/gitopia-icon.svg');
 }
 
 .icon-haqq {
-    background-image: url('../../static/img/haqq-icon.svg');
+  background-image: url('../../static/img/haqq-icon.svg');
 }
 
 .icon-humans {
-    background-image: url('../../static/img/humans-icon.svg');
+  background-image: url('../../static/img/humans-icon.svg');
 }
 
 .icon-jackal {
-    background-image: url('../../static/img/jackal-icon.svg');
+  background-image: url('../../static/img/jackal-icon.svg');
 }
 
 .icon-kyve {
-    background-image: url('../../static/img/kyve-icon.svg');
+  background-image: url('../../static/img/kyve-icon.svg');
 }
 
 .icon-osmosis {
-    background-image: url('../../static/img/osmosis-icon.svg');
+  background-image: url('../../static/img/osmosis-icon.svg');
 }
 
 .icon-quicksilver {
-    background-image: url('../../static/img/quicksilver-icon.svg');
+  background-image: url('../../static/img/quicksilver-icon.svg');
 }
 
 .icon-realio {
-    background-image: url('../../static/img/realio-icon.svg');
+  background-image: url('../../static/img/realio-icon.svg');
 }
 
-
 .icon-rebus {
-    background-image: url('../../static/img/rebus-icon.svg');
+  background-image: url('../../static/img/rebus-icon.svg');
 }
 
 .icon-router {
-    background-image: url('../../static/img/router-icon.svg');
+  background-image: url('../../static/img/router-icon.svg');
 }
 
 .icon-stratos {
-    background-image: url('../../static/img/stratos-icon.svg');
+  background-image: url('../../static/img/stratos-icon.svg');
 }
 
 .icon-uptick {
-    background-image: url('../../static/img/uptick-icon.svg');
+  background-image: url('../../static/img/uptick-icon.svg');
 }
 
 .icon-ux {
-    background-image: url('../../static/img/umee-icon.svg');
+  background-image: url('../../static/img/umee-icon.svg');
 }
 
 .icon-side {
-    background-image: url('../../static/img/side-icon.svg');
+  background-image: url('../../static/img/side-icon.svg');
 }
 
 .icon-pylons {
-    background-image: url('../../static/img/pylons-icon.svg');
+  background-image: url('../../static/img/pylons-icon.svg');
 }
 
 .icon-crossfi {
-    background-image: url('../../static/img/crossfi-icon.svg');
+  background-image: url('../../static/img/crossfi-icon.svg');
 }
-.icon-entrypoint {
-    background-image: url('../../static/img/entrypoint-icon.svg');
-}
+
 .icon-lava {
-    background-image: url('../../static/img/lava-icon.svg');
+  background-image: url('../../static/img/lava-icon.svg');
 }
 
 .icon-seda {
-    background-image: url('../../static/img/seda-icon.svg');
+  background-image: url('../../static/img/seda-icon.svg');
 }
 
 .icon-swisstronik {
-    background-image: url('../../static/img/swisstronik-icon.svg');
+  background-image: url('../../static/img/swisstronik-icon.svg');
 }
+
 .icon-union {
-    background-image: url('../../static/img/union-icon.svg');
+  background-image: url('../../static/img/union-icon.svg');
 }
 
 .icon-warden {
-    background-image: url('../../static/img/warden-icon.svg');
+  background-image: url('../../static/img/warden-icon.svg');
 }
 
 .icon-zetachain {
-    background-image: url('../../static/img/zetachain-icon.svg');
+  background-image: url('../../static/img/zetachain-icon.svg');
 }
 
 .icon-og {
-    background-image: url('../../static/img/og-icon.svg');
+  background-image: url('../../static/img/og-icon.svg');
 }
 
 .icon-galactica {
-    background-image: url('../../static/img/galactica-icon.svg');
+  background-image: url('../../static/img/galactica-icon.svg');
 }
 
 .icon-mantra {
-    background-image: url('../../static/img/mantra-icon.svg');
+  background-image: url('../../static/img/mantra-icon.svg');
 }
 
 .icon-airchains {
-    background-image: url('../../static/img/airchains-icon.svg');
+  background-image: url('../../static/img/airchains-icon.svg');
 }
 
 .icon-arkeo {
-    background-image: url('../../static/img/arkeo-icon.svg');
+  background-image: url('../../static/img/arkeo-icon.svg');
 }
 
 .icon-berachain {
-    background-image: url('../../static/img/berachain-icon.svg');
+  background-image: url('../../static/img/berachain-icon.svg');
 }
 
 .icon-axone {
-    background-image: url('../../static/img/axone-icon.svg');
+  background-image: url('../../static/img/axone-icon.svg');
 }
 
 .icon-empeiria {
-    background-image: url('../../static/img/empeiria-icon.svg');
+  background-image: url('../../static/img/empeiria-icon.svg');
 }
 
 .icon-kopi {
-    background-image: url('../../static/img/kopi-icon.svg');
+  background-image: url('../../static/img/kopi-icon.svg');
 }
 
 .icon-story {
-    background-image: url('../../static/img/story-icon.svg');
+  background-image: url('../../static/img/story-icon.svg');
 }
 
 .icon-namada {
-    background-image: url('../../static/img/namada-icon.svg');
+  background-image: url('../../static/img/namada-icon.svg');
 }
 
 .icon-nillion {
-    background-image: url('../../static/img/nillion-icon.svg');
+  background-image: url('../../static/img/nillion-icon.svg');
 }
 
 .icon-sunrise {
-    background-image: url('../../static/img/sunrise-icon.svg');
+  background-image: url('../../static/img/sunrise-icon.svg');
 }
 
 .icon-pell {
-    background-image: url('../../static/img/pell-icon.svg');
+  background-image: url('../../static/img/pell-icon.svg');
 }
 
 .icon-zenrock {
-    background-image: url('../../static/img/zenrock-icon.svg');
+  background-image: url('../../static/img/zenrock-icon.svg');
 }
 
 .icon-althea {
-    background-image: url('../../static/img/althea-icon.svg');
+  background-image: url('../../static/img/althea-icon.svg');
 }
 
 .icon-atomone {
-    background-image: url('../../static/img/atomone-icon.svg');
+  background-image: url('../../static/img/atomone-icon.svg');
 }
 
 .icon-babylon {
-    background-image: url('../../static/img/babylon-icon.svg');
+  background-image: url('../../static/img/babylon-icon.svg');
 }
 
 .icon-xrp {
-    background-image: url('../../static/img/xrp-icon.svg');
+  background-image: url('../../static/img/xrp-icon.svg');
 }
 
 .icon-fuel {
-    background-image: url('../../static/img/fuel-icon.svg');
+  background-image: url('../../static/img/fuel-icon.svg');
 }
 
 .icon-dora {
