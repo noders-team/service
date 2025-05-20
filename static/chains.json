@@ -385,6 +385,13 @@
     "scope": "testnet"
   },
   {
+    "name": "zenrock",
+    "pretty_name": "Zenrock",
+    "chain_id": "zenrock-testnet",
+    "logo_url": "img/zenrock-icon.svg",
+    "scope": "testnet"
+  },
+  {
     "name": "zetachain",
     "pretty_name": "Zetachain",
     "chain_id": "athens_7001-1",
