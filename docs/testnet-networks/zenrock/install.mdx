@@ -4,20 +4,20 @@ sidebar_position: 1
 hide_title: true
 hide_table_of_contents: false
 description: ''
-chain_name: 'BitSong'
-scope: 'mainnet'
-chain_id: 'bitsong-2b'
-binary_version: 'v0.22.0'
-icon_url: 'bitsong-icon.svg'
+chain_name: 'Zenrock'
+scope: 'testnet'
+chain_id: 'auto'
+binary_version: 'v6.4.0'
+icon_url: 'zenrock-icon.svg'
 ---
 
 import PageTitle from "@site/src/components/PageTitle";
 
 <PageTitle
-  iconUrl="img/bitsong-icon.svg"
-  title="BitSong Installation Guide"
-  chainId="bitsong-2b"
-  version="v0.22.0"
+  iconUrl="img/zenrock-icon.svg"
+  title="Zenrock Installation Guide"
+  chainId="auto"
+  version="v6.4.0"
 />
 
 ## Install dependencies
@@ -51,13 +51,13 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 ### Download and build binaries
 
-### Clone BitSong repo and build bitsongd v0.22.0
+### Clone Zenrock repo and build zenrockd v6.4.0
 
 ```js
 cd $HOME
-git clone https://github.com/bitsongofficial.git
-cd bitsongofficial
-git checkout v0.22.0
+git clone https://github.com/Zenrock-Foundation/zrchain.git
+cd zrchain
+git checkout v6.4.0
 ```
 
 ### Build binaries
@@ -70,15 +70,15 @@ make install
 
 ```js
 cd $HOME
-mkdir -p ~/.bitsongd/cosmovisor/upgrades/v0.22.0/bin
-mv $HOME/go/bin/bitsongd ~/.bitsongd/cosmovisor/upgrades/v0.22.0/bin/
+mkdir -p ~/.zrchain/cosmovisor/upgrades/v6.4.0/bin
+mv $HOME/go/bin/zenrockd ~/.zrchain/cosmovisor/upgrades/v6.4.0/bin/
 ```
 
 ### Create symlinks
 
 ```js
-sudo ln -s ~/.bitsongd/cosmovisor/genesis ~/.bitsongd/cosmovisor/current -f
-sudo ln -s ~/.bitsongd/cosmovisor/current/bin/bitsongd /usr/local/bin/bitsongd -f
+sudo ln -s ~/.zrchain/cosmovisor/genesis ~/.zrchain/cosmovisor/current -f
+sudo ln -s ~/.zrchain/cosmovisor/current/bin/zenrockd /usr/local/bin/zenrockd -f
 ```
 
 ## Download and install Cosmovisor
@@ -92,9 +92,9 @@ go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
 ### Create service
 
 ```js
-sudo tee /etc/systemd/system/bitsongd.service > /dev/null << EOF
+sudo tee /etc/systemd/system/zenrockd.service > /dev/null << EOF
 [Unit]
-Description=bitsong node service
+Description=zenrock node service
 After=network-online.target
 
 [Service]
@@ -103,10 +103,10 @@ ExecStart=$(which cosmovisor) run start
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
-Environment="DAEMON_HOME=~/.bitsongd"
-Environment="DAEMON_NAME=bitsongd"
+Environment="DAEMON_HOME=~/.zrchain"
+Environment="DAEMON_NAME=zenrockd"
 Environment="UNSAFE_SKIP_BACKUP=true"
-Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/.bitsongd/cosmovisor/current/bin"
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/.zrchain/cosmovisor/current/bin"
 
 [Install]
 WantedBy=multi-user.target
@@ -117,13 +117,13 @@ EOF
 
 ### Download and build binaries
 
-### Clone BitSong repo and build bitsongd v0.22.0
+### Clone Zenrock repo and build zenrockd v6.4.0
 
 ```js
 cd $HOME
-git clone https://github.com/bitsongofficial.git
-cd bitsongofficial
-git checkout v0.22.0
+git clone https://github.com/Zenrock-Foundation/zrchain.git
+cd zrchain
+git checkout v6.4.0
 ```
 
 ### Build binaries
@@ -137,14 +137,14 @@ make install
 ### Create service
 
 ```js
-sudo tee /etc/systemd/system/bitsongd.service > /dev/null << EOF
+sudo tee /etc/systemd/system/zenrockd.service > /dev/null << EOF
 [Unit]
-Description=bitsong node service
+Description=zenrock node service
 After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=$(which bitsongd) start
+ExecStart=$(which zenrockd) start
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
@@ -159,7 +159,7 @@ EOF
 
 ```js
 sudo systemctl daemon-reload
-sudo systemctl enable bitsongd
+sudo systemctl enable zenrockd
 ```
 
 ## Node configuration
@@ -167,34 +167,34 @@ sudo systemctl enable bitsongd
 ### Set config
 
 ```js
-bitsongd config chain-id bitsong-2b
-bitsongd config keyring-backend os
-bitsongd config node tcp://localhost:26657
+zenrockd config chain-id auto
+zenrockd config keyring-backend os
+zenrockd config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 
 ```js
-bitsongd init NAME_OF_YOUR_VALIDATOR --chain-id bitsong-2b
+zenrockd init NAME_OF_YOUR_VALIDATOR --chain-id auto
 ```
 
 ### Download genesis and addrbook
 
 ```js
-curl https://snapshots.noders.services/bitsong/genesis.json -o ~/.bitsongd/config/genesis.json
-curl https://snapshots.noders.services/bitsong/addrbook.json -o ~/.bitsongd/config/addrbook.json
+curl https://snapshots-t.noders.services/zenrock/genesis.json -o ~/.zrchain/config/genesis.json
+curl https://snapshots-t.noders.services/zenrock/addrbook.json -o ~/.zrchain/config/addrbook.json
 ```
 
 ### Add peers
 
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"b347b47a650981b2e12782e92cf26ba8aa0148c9@bitsong-rpc.noders.services:16056\"/" ~/.bitsongd/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@zenrock-t-rpc.noders.services:\"/" ~/.zrchain/config/config.toml
 ```
 
 ### Set minimum gas price
 
 ```js
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001ubtsg\"|" ~/.bitsongd/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001urock\"|" ~/.zrchain/config/app.toml
 ```
 
 ### Set pruning
@@ -205,35 +205,35 @@ sed -i \
   -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
   -e 's|^pruning-keep-every *=.*|pruning-keep-every = "0"|' \
   -e 's|^pruning-interval *=.*|pruning-interval = "19"|' \
-  ~/.bitsongd/config/app.toml
+  ~/.zrchain/config/app.toml
 ```
 
 ### Set custom ports
 
 ```bash
-echo "export bitsongd_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export zenrockd_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
 # Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${bitsongd_PORT}317%g" \
--e "s%:8080%:${bitsongd_PORT}080%g" \
--e "s%:9090%:${bitsongd_PORT}090%g" \
--e "s%:9091%:${bitsongd_PORT}091%g" \
--e "s%:8545%:${bitsongd_PORT}545%g" \
--e "s%:8546%:${bitsongd_PORT}546%g" \
--e "s%:6065%:${bitsongd_PORT}065%g" ~/.bitsongd/config/app.toml
+sed -i.bak -e "s%:1317%:${zenrockd_PORT}317%g" \
+-e "s%:8080%:${zenrockd_PORT}080%g" \
+-e "s%:9090%:${zenrockd_PORT}090%g" \
+-e "s%:9091%:${zenrockd_PORT}091%g" \
+-e "s%:8545%:${zenrockd_PORT}545%g" \
+-e "s%:8546%:${zenrockd_PORT}546%g" \
+-e "s%:6065%:${zenrockd_PORT}065%g" ~/.zrchain/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${bitsongd_PORT}658%g" \
--e "s%:26657%:${bitsongd_PORT}657%g" \
--e "s%:6060%:${bitsongd_PORT}060%g" \
--e "s%:26656%:${bitsongd_PORT}656%g" \
--e "s%:26660%:${bitsongd_PORT}660%g" ~/.bitsongd/config/config.toml
+sed -i.bak -e "s%:26658%:${zenrockd_PORT}658%g" \
+-e "s%:26657%:${zenrockd_PORT}657%g" \
+-e "s%:6060%:${zenrockd_PORT}060%g" \
+-e "s%:26656%:${zenrockd_PORT}656%g" \
+-e "s%:26660%:${zenrockd_PORT}660%g" ~/.zrchain/config/config.toml
 ```
 
 ### Start node and check logs
 
 ```js
-sudo systemctl start bitsongd && sudo journalctl -u bitsongd -f --no-hostname -o cat
+sudo systemctl start zenrockd && sudo journalctl -u zenrockd -f --no-hostname -o cat
 ```

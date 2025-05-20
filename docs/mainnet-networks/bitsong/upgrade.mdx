@@ -7,7 +7,7 @@ description: ''
 chain_name: 'BitSong'
 scope: 'mainnet'
 chain_id: 'bitsong-2b'
-binary_version: 'v0.21.6'
+binary_version: 'v0.22.0'
 icon_url: 'bitsong-icon.svg'
 ---
 
@@ -17,7 +17,7 @@ import PageTitle from "@site/src/components/PageTitle";
   iconUrl="img/bitsong-icon.svg"
   title="BitSong Upgrade Guide"
   chainId="bitsong-2b"
-  version="v0.21.6"
+  version="v0.22.0"
 />
 
 ## Clone BitSong repository
@@ -27,7 +27,7 @@ cd $HOME
 rm -rf bitsongofficial
 git clone https://github.com/bitsongofficial.git
 cd bitsongofficial
-git checkout v0.21.6
+git checkout v0.22.0
 ```
 
 ## Build binaries
@@ -39,8 +39,8 @@ make build
 ## Prepare binaries for Cosmovisor
 
 ```js
-mkdir -p ~/.bitsongd/cosmovisor/upgrades/v0.21.6/bin
-mv build/bitsongd ~/.bitsongd/cosmovisor/upgrades/v0.21.6/bin/
+mkdir -p ~/.bitsongd/cosmovisor/upgrades/v0.22.0/bin
+mv build/bitsongd ~/.bitsongd/cosmovisor/upgrades/v0.22.0/bin/
 rm -rf build
 ```
 
@@ -53,7 +53,7 @@ cd $HOME
 rm -rf bitsongofficial
 git clone https://github.com/bitsongofficial.git
 cd bitsongofficial
-git checkout v0.21.6
+git checkout v0.22.0
 ```
 
 ## Build binaries

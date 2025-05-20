@@ -7,7 +7,7 @@ description: ''
 chain_name: 'XRP'
 scope: 'testnet'
 chain_id: 'exrp_1440002-1'
-binary_version: 'v7.0.0'
+binary_version: '8.0.0-rc.1'
 icon_url: 'xrp-icon.svg'
 ---
 
@@ -17,7 +17,7 @@ import PageTitle from "@site/src/components/PageTitle";
   iconUrl="img/xrp-icon.svg"
   title="XRP Installation Guide"
   chainId="exrp_1440002-1"
-  version="v7.0.0"
+  version="8.0.0-rc.1"
 />
 
 ## Install dependencies
@@ -51,13 +51,13 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 ### Download and build binaries
 
-### Clone XRP repo and build exrpd v7.0.0
+### Clone XRP repo and build exrpd 8.0.0-rc.1
 
 ```js
 cd $HOME
 git clone https://github.com/xrplevm/node.git
 cd node
-git checkout v7.0.0
+git checkout 8.0.0-rc.1
 ```
 
 ### Build binaries
@@ -70,8 +70,8 @@ make install
 
 ```js
 cd $HOME
-mkdir -p ~/.exrpd/cosmovisor/upgrades/v7.0.0/bin
-mv $HOME/go/bin/exrpd ~/.exrpd/cosmovisor/upgrades/v7.0.0/bin/
+mkdir -p ~/.exrpd/cosmovisor/upgrades/8.0.0-rc.1/bin
+mv $HOME/go/bin/exrpd ~/.exrpd/cosmovisor/upgrades/8.0.0-rc.1/bin/
 ```
 
 ### Create symlinks
@@ -117,13 +117,13 @@ EOF
 
 ### Download and build binaries
 
-### Clone XRP repo and build exrpd v7.0.0
+### Clone XRP repo and build exrpd 8.0.0-rc.1
 
 ```js
 cd $HOME
 git clone https://github.com/xrplevm/node.git
 cd node
-git checkout v7.0.0
+git checkout 8.0.0-rc.1
 ```
 
 ### Build binaries
