@@ -6,8 +6,8 @@ hide_table_of_contents: false
 description: ''
 chain_name: 'XRP'
 scope: 'testnet'
-chain_id: 'exrp_1440002-1'
-binary_version: '8.0.0-rc.1'
+chain_id: 'xrplevm_1449000-1'
+binary_version: 'v7.0.0'
 icon_url: 'xrp-icon.svg'
 ---
 
@@ -16,8 +16,8 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/xrp-icon.svg"
   title="XRP Installation Guide"
-  chainId="exrp_1440002-1"
-  version="8.0.0-rc.1"
+  chainId="xrplevm_1449000-1"
+  version="v7.0.0"
 />
 
 ## Install dependencies
@@ -51,13 +51,13 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 ### Download and build binaries
 
-### Clone XRP repo and build exrpd 8.0.0-rc.1
+### Clone XRP repo and build exrpd v7.0.0
 
 ```js
 cd $HOME
 git clone https://github.com/xrplevm/node.git
 cd node
-git checkout 8.0.0-rc.1
+git checkout v7.0.0
 ```
 
 ### Build binaries
@@ -70,8 +70,8 @@ make install
 
 ```js
 cd $HOME
-mkdir -p ~/.exrpd/cosmovisor/upgrades/8.0.0-rc.1/bin
-mv $HOME/go/bin/exrpd ~/.exrpd/cosmovisor/upgrades/8.0.0-rc.1/bin/
+mkdir -p ~/.exrpd/cosmovisor/upgrades/v7.0.0/bin
+mv $HOME/go/bin/exrpd ~/.exrpd/cosmovisor/upgrades/v7.0.0/bin/
 ```
 
 ### Create symlinks
@@ -117,13 +117,13 @@ EOF
 
 ### Download and build binaries
 
-### Clone XRP repo and build exrpd 8.0.0-rc.1
+### Clone XRP repo and build exrpd v7.0.0
 
 ```js
 cd $HOME
 git clone https://github.com/xrplevm/node.git
 cd node
-git checkout 8.0.0-rc.1
+git checkout v7.0.0
 ```
 
 ### Build binaries
@@ -167,7 +167,7 @@ sudo systemctl enable exrpd
 ### Set config
 
 ```js
-exrpd config chain-id exrp_1440002-1
+exrpd config chain-id xrplevm_1449000-1
 exrpd config keyring-backend os
 exrpd config node tcp://localhost:26657
 ```
@@ -175,7 +175,7 @@ exrpd config node tcp://localhost:26657
 ### Initialize the node
 
 ```js
-exrpd init NAME_OF_YOUR_VALIDATOR --chain-id exrp_1440002-1
+exrpd init NAME_OF_YOUR_VALIDATOR --chain-id xrplevm_1449000-1
 ```
 
 ### Download genesis and addrbook

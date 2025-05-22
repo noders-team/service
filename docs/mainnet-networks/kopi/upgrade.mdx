@@ -7,7 +7,7 @@ description: ''
 chain_name: 'Kopi'
 scope: 'mainnet'
 chain_id: 'luwak-1'
-binary_version: 'v20.1'
+binary_version: 'v21'
 icon_url: 'kopi-icon.svg'
 ---
 
@@ -17,7 +17,7 @@ import PageTitle from "@site/src/components/PageTitle";
   iconUrl="img/kopi-icon.svg"
   title="Kopi Upgrade Guide"
   chainId="luwak-1"
-  version="v20.1"
+  version="v21"
 />
 
 ## Clone Kopi repository
@@ -27,7 +27,7 @@ cd $HOME
 rm -rf kopi
 git clone https://github.com/kopi-money/kopi.git
 cd kopi
-git checkout v20.1
+git checkout v21
 ```
 
 ## Build binaries
@@ -39,8 +39,8 @@ make build
 ## Prepare binaries for Cosmovisor
 
 ```js
-mkdir -p ~/.kopid/cosmovisor/upgrades/v20.1/bin
-mv build/uxkp ~/.kopid/cosmovisor/upgrades/v20.1/bin/
+mkdir -p ~/.kopid/cosmovisor/upgrades/v21/bin
+mv build/uxkp ~/.kopid/cosmovisor/upgrades/v21/bin/
 rm -rf build
 ```
 
@@ -53,7 +53,7 @@ cd $HOME
 rm -rf kopi
 git clone https://github.com/kopi-money/kopi.git
 cd kopi
-git checkout v20.1
+git checkout v21
 ```
 
 ## Build binaries

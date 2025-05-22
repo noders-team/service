@@ -6,8 +6,8 @@ hide_table_of_contents: false
 description: ''
 chain_name: 'Zenrock'
 scope: 'testnet'
-chain_id: 'auto'
-binary_version: 'v6.4.0'
+chain_id: 'gardia-9'
+binary_version: 'v6.3.10'
 icon_url: 'zenrock-icon.svg'
 ---
 
@@ -16,8 +16,8 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/zenrock-icon.svg"
   title="Zenrock Installation Guide"
-  chainId="auto"
-  version="v6.4.0"
+  chainId="gardia-9"
+  version="v6.3.10"
 />
 
 ## Install dependencies
@@ -51,13 +51,13 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 ### Download and build binaries
 
-### Clone Zenrock repo and build zenrockd v6.4.0
+### Clone Zenrock repo and build zenrockd v6.3.10
 
 ```js
 cd $HOME
 git clone https://github.com/Zenrock-Foundation/zrchain.git
 cd zrchain
-git checkout v6.4.0
+git checkout v6.3.10
 ```
 
 ### Build binaries
@@ -70,8 +70,8 @@ make install
 
 ```js
 cd $HOME
-mkdir -p ~/.zrchain/cosmovisor/upgrades/v6.4.0/bin
-mv $HOME/go/bin/zenrockd ~/.zrchain/cosmovisor/upgrades/v6.4.0/bin/
+mkdir -p ~/.zrchain/cosmovisor/upgrades/v6.3.10/bin
+mv $HOME/go/bin/zenrockd ~/.zrchain/cosmovisor/upgrades/v6.3.10/bin/
 ```
 
 ### Create symlinks
@@ -117,13 +117,13 @@ EOF
 
 ### Download and build binaries
 
-### Clone Zenrock repo and build zenrockd v6.4.0
+### Clone Zenrock repo and build zenrockd v6.3.10
 
 ```js
 cd $HOME
 git clone https://github.com/Zenrock-Foundation/zrchain.git
 cd zrchain
-git checkout v6.4.0
+git checkout v6.3.10
 ```
 
 ### Build binaries
@@ -167,7 +167,7 @@ sudo systemctl enable zenrockd
 ### Set config
 
 ```js
-zenrockd config chain-id auto
+zenrockd config chain-id gardia-9
 zenrockd config keyring-backend os
 zenrockd config node tcp://localhost:26657
 ```
@@ -175,7 +175,7 @@ zenrockd config node tcp://localhost:26657
 ### Initialize the node
 
 ```js
-zenrockd init NAME_OF_YOUR_VALIDATOR --chain-id auto
+zenrockd init NAME_OF_YOUR_VALIDATOR --chain-id gardia-9
 ```
 
 ### Download genesis and addrbook
@@ -188,7 +188,7 @@ curl https://snapshots-t.noders.services/zenrock/addrbook.json -o ~/.zrchain/con
 ### Add peers
 
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@zenrock-t-rpc.noders.services:\"/" ~/.zrchain/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"24cf2d3bd77e9d0eb3b6a5f81ae0048d5739af8c@zenrock-t-rpc.noders.services:40956\"/" ~/.zrchain/config/config.toml
 ```
 
 ### Set minimum gas price

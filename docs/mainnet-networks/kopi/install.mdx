@@ -7,7 +7,7 @@ description: ''
 chain_name: 'Kopi'
 scope: 'mainnet'
 chain_id: 'luwak-1'
-binary_version: 'v20.1'
+binary_version: 'v21'
 icon_url: 'kopi-icon.svg'
 ---
 
@@ -17,7 +17,7 @@ import PageTitle from "@site/src/components/PageTitle";
   iconUrl="img/kopi-icon.svg"
   title="Kopi Installation Guide"
   chainId="luwak-1"
-  version="v20.1"
+  version="v21"
 />
 
 ## Install dependencies
@@ -51,13 +51,13 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 ### Download and build binaries
 
-### Clone Kopi repo and build uxkp v20.1
+### Clone Kopi repo and build uxkp v21
 
 ```js
 cd $HOME
 git clone https://github.com/kopi-money/kopi.git
 cd kopi
-git checkout v20.1
+git checkout v21
 ```
 
 ### Build binaries
@@ -70,8 +70,8 @@ make install
 
 ```js
 cd $HOME
-mkdir -p ~/.kopid/cosmovisor/upgrades/v20.1/bin
-mv $HOME/go/bin/uxkp ~/.kopid/cosmovisor/upgrades/v20.1/bin/
+mkdir -p ~/.kopid/cosmovisor/upgrades/v21/bin
+mv $HOME/go/bin/uxkp ~/.kopid/cosmovisor/upgrades/v21/bin/
 ```
 
 ### Create symlinks
@@ -117,13 +117,13 @@ EOF
 
 ### Download and build binaries
 
-### Clone Kopi repo and build uxkp v20.1
+### Clone Kopi repo and build uxkp v21
 
 ```js
 cd $HOME
 git clone https://github.com/kopi-money/kopi.git
 cd kopi
-git checkout v20.1
+git checkout v21
 ```
 
 ### Build binaries

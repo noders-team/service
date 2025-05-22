@@ -6,8 +6,8 @@ hide_table_of_contents: false
 description: ''
 chain_name: 'XRP'
 scope: 'testnet'
-chain_id: 'exrp_1440002-1'
-binary_version: '8.0.0-rc.1'
+chain_id: 'xrplevm_1449000-1'
+binary_version: 'v7.0.0'
 icon_url: 'xrp-icon.svg'
 ---
 
@@ -16,8 +16,8 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/xrp-icon.svg"
   title="XRP Upgrade Guide"
-  chainId="exrp_1440002-1"
-  version="8.0.0-rc.1"
+  chainId="xrplevm_1449000-1"
+  version="v7.0.0"
 />
 
 ## Clone XRP repository
@@ -27,7 +27,7 @@ cd $HOME
 rm -rf node
 git clone https://github.com/xrplevm/node.git
 cd node
-git checkout 8.0.0-rc.1
+git checkout v7.0.0
 ```
 
 ## Build binaries
@@ -39,8 +39,8 @@ make build
 ## Prepare binaries for Cosmovisor
 
 ```js
-mkdir -p ~/.exrpd/cosmovisor/upgrades/8.0.0-rc.1/bin
-mv build/exrpd ~/.exrpd/cosmovisor/upgrades/8.0.0-rc.1/bin/
+mkdir -p ~/.exrpd/cosmovisor/upgrades/v7.0.0/bin
+mv build/exrpd ~/.exrpd/cosmovisor/upgrades/v7.0.0/bin/
 rm -rf build
 ```
 
@@ -53,7 +53,7 @@ cd $HOME
 rm -rf node
 git clone https://github.com/xrplevm/node.git
 cd node
-git checkout 8.0.0-rc.1
+git checkout v7.0.0
 ```
 
 ## Build binaries
