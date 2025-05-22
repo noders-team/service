@@ -5,10 +5,9 @@ CHAIN_ICON="arkeo-icon.svg"
 CHAIN_BACKGROUND_COLOR="#3CE2FB"
 
 # NODERS
-# NODERS
 STAKE_URL=""
-RESTAKE_URL="https://restake.app/arkeo/arkeovaloper1rnfgv6uhry6ywl880mgz4rmxm8csqwd74plfuu"
-VALIDATOR_URL="https://exp.utsa.tech/arkeo-main/staking/arkeovaloper1rnfgv6uhry6ywl880mgz4rmxm8csqwd74plfuu"
+RESTAKE_URL=""
+VALIDATOR_URL="https://testnet.arkeo.explorers.guru/validator/tarkeovaloper1hsrprv6xpfqrn2x46c4v0jxxvp4hhwrdqw483f"
 EXPLORER_URL=""
 EXPLORER_IMAGE=""
 APP_URL=""
@@ -27,13 +26,13 @@ DAEMON_SERVICE="arkeo.service"
 DAEMON_HOME="~/.arkeo"
 
 # Endpoints
-ENDPOINT_RPC="https://arkeo-rpc.noders.services"
-ENDPOINT_API="https://arkeo-api.noders.services"
+ENDPOINT_RPC="https://arkeo-t-rpc.noders.services"
+ENDPOINT_API="https://arkeo-t-api.noders.services"
 ENDPOINT_JRPC=""
-ENDPOINT_GRPC="arkeo-grpc.noders.services:443"
+ENDPOINT_GRPC="arkeo-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
-ENDPOINT_SEED="3efa2352582ccb66b3d2b84de8a562e8057e88e6@arkeo-seed.noders.services:22833"
-ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/arkeo"
+ENDPOINT_SEED="385a4bfe66e76875d1cbb4f898aeeecdef83b4e4@arkeo-s-teed.noders.services:22856"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/arkeo"
 
 # Social
 SOCIAL_WEBSITE="https://arkeo.network/"
@@ -43,7 +42,7 @@ SOCIAL_X="https://twitter.com/arkeonetwork"
 SOCIAL_TELEGRAM=""
 
 # Other
-SNAPSHOT_URL="https://snapshots.noders.services/arkeo"
+SNAPSHOT_URL="https://snapshots-t.noders.services/arkeo"
 GITHUB_FOLDER_NAME="auto"
 
 # Updates
