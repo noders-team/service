@@ -131,7 +131,7 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'nillion',
+      label: 'Nillion',
       link: {
         type: 'doc',
         id: 'testnet-networks/nillion',
