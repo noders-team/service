@@ -4,26 +4,26 @@ sidebar_position: 4
 hide_title: true
 hide_table_of_contents: false
 description: ''
-chain_name: 'Zenrock'
+chain_name: 'Arkeo'
 scope: 'testnet'
-chain_id: 'gardia-9'
-binary_version: 'v6.4.2'
-icon_url: 'zenrock-icon.svg'
+chain_id: 'arkeo-main-v1'
+binary_version: 'v1.0.13'
+icon_url: 'arkeo-icon.svg'
 ---
 
 import PageTitle from "@site/src/components/PageTitle";
 
 <PageTitle
-  iconUrl="img/zenrock-icon.svg"
-  title="Zenrock State Sync"
-  chainId="gardia-9"
-  version="v6.4.2"
+  iconUrl="img/arkeo-icon.svg"
+  title="Arkeo State Sync"
+  chainId="arkeo-main-v1"
+  version="v1.0.13"
 />
 
 ## How to enable state sync
 
 ```bash
-SNAP_RPC=https://zenrock-t-rpc.noders.services:443 && \
+SNAP_RPC=https://arkeo-rpc.noders.services:443 && \
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
 TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash) && \
@@ -31,12 +31,12 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 
 ```bash
-sudo systemctl stop zenrockd && zenrockd tendermint unsafe-reset-all --home ~/.zrchain --keep-addr-book
+sudo systemctl stop arkeod && arkeod tendermint unsafe-reset-all --home ~/.arkeo --keep-addr-book
 ```
 
 ```bash
-peers="24cf2d3bd77e9d0eb3b6a5f81ae0048d5739af8c@zenrock-t-rpc.noders.services:40956"
-sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.zrchain/config/config.toml
+peers="4f1a4cd780aebef488151e71f938453f9059f995@arkeo-rpc.noders.services:22856"
+sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.arkeo/config/config.toml
 ```
 
 ```bash
@@ -44,9 +44,9 @@ sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
 s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
 s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
 s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
-s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.zrchain/config/config.toml
+s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.arkeo/config/config.toml
 ```
 
 ```bash
-sudo systemctl restart zenrockd && sudo journalctl -fu zenrockd --no-hostname -o cat
+sudo systemctl restart arkeod && sudo journalctl -fu arkeod --no-hostname -o cat
 ```
