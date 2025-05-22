@@ -34,7 +34,6 @@ ENDPOINT_GRPC="seda-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
 ENDPOINT_SEED="6e4921541dbdcc44d6d157d6d3e87fe811407d4e@seda-seed.noders.services:25833"
 ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/seda"
-ENDPOINT_SEED="auto"
 
 # Social
 SOCIAL_WEBSITE="https://www.seda.xyz/"
