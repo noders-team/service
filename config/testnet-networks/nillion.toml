@@ -23,7 +23,7 @@ VERSION="auto"
 CHAIN_DENOM_PRETTY="NIL"
 DAEMON_NAME="nilliond"
 DAEMON_SERVICE="nillion.service"
-DAEMON_HOME="~/.nilliond"
+DAEMON_HOME="~/.nillionapp"
 
 # Endpoints
 ENDPOINT_RPC="https://nillion-t-rpc.noders.services"
@@ -36,7 +36,7 @@ ENDPOINT_SEED="7004b5ab387d27ba449b07a19a0a3af431bebb3d@nillion-t-seed.noders.se
 
 # Social
 SOCIAL_WEBSITE="https://nillion.com"
-SOCIAL_GITHUB="https://github.com/NillionNetwork"
+SOCIAL_GITHUB="https://github.com/NillionNetwork/nilchain"
 SOCIAL_DISCORD="https://discord.com/invite/nillionnetwork"
 SOCIAL_X="https://x.com/nillionnetwork"
 SOCIAL_TELEGRAM="https://t.me/nillionnetwork"
