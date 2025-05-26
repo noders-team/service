@@ -7,7 +7,7 @@ description: ''
 chain_name: 'Nillion'
 scope: 'testnet'
 chain_id: 'nillion-chain-testnet-1'
-binary_version: 'v0.2.1'
+binary_version: 'v0.2.5'
 icon_url: 'nillion-icon.svg'
 ---
 
@@ -17,7 +17,7 @@ import PageTitle from "@site/src/components/PageTitle";
   iconUrl="img/nillion-icon.svg"
   title="Nillion Installation Guide"
   chainId="nillion-chain-testnet-1"
-  version="v0.2.1"
+  version="v0.2.5"
 />
 
 ## Install dependencies
@@ -51,13 +51,13 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 ### Download and build binaries
 
-### Clone Nillion repo and build nilchaind v0.2.1
+### Clone Nillion repo and build nilchaind v0.2.5
 
 ```js
 cd $HOME
 git clone https://github.com/NillionNetwork/nilchain.git
 cd nilchain
-git checkout v0.2.1
+git checkout v0.2.5
 ```
 
 ### Build binaries
@@ -70,8 +70,8 @@ make install
 
 ```js
 cd $HOME
-mkdir -p ~/.nillionapp/cosmovisor/upgrades/v0.2.1/bin
-mv $HOME/go/bin/nilchaind ~/.nillionapp/cosmovisor/upgrades/v0.2.1/bin/
+mkdir -p ~/.nillionapp/cosmovisor/upgrades/v0.2.5/bin
+mv $HOME/go/bin/nilchaind ~/.nillionapp/cosmovisor/upgrades/v0.2.5/bin/
 ```
 
 ### Create symlinks
@@ -117,13 +117,13 @@ EOF
 
 ### Download and build binaries
 
-### Clone Nillion repo and build nilchaind v0.2.1
+### Clone Nillion repo and build nilchaind v0.2.5
 
 ```js
 cd $HOME
 git clone https://github.com/NillionNetwork/nilchain.git
 cd nilchain
-git checkout v0.2.1
+git checkout v0.2.5
 ```
 
 ### Build binaries

@@ -6,8 +6,8 @@ hide_table_of_contents: false
 description: ''
 chain_name: 'Sunrise'
 scope: 'testnet'
-chain_id: 'sunrise-test-0.2'
-binary_version: 'v0.2.6'
+chain_id: 'auto'
+binary_version: 'auto'
 icon_url: 'sunrise-icon.svg'
 ---
 
@@ -16,8 +16,8 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/sunrise-icon.svg"
   title="Sunrise Upgrade Guide"
-  chainId="sunrise-test-0.2"
-  version="v0.2.6"
+  chainId="auto"
+  version="auto"
 />
 
 ## Clone Sunrise repository
@@ -27,7 +27,7 @@ cd $HOME
 rm -rf sunrise
 git clone https://github.com/sunriselayer/sunrise.git
 cd sunrise
-git checkout v0.2.6
+git checkout auto
 ```
 
 ## Build binaries
@@ -39,8 +39,8 @@ make build
 ## Prepare binaries for Cosmovisor
 
 ```js
-mkdir -p ~/.sunrise/cosmovisor/upgrades/v0.2.6/bin
-mv build/sunrised ~/.sunrise/cosmovisor/upgrades/v0.2.6/bin/
+mkdir -p ~/.sunrise/cosmovisor/upgrades/auto/bin
+mv build/sunrised ~/.sunrise/cosmovisor/upgrades/auto/bin/
 rm -rf build
 ```
 
@@ -53,7 +53,7 @@ cd $HOME
 rm -rf sunrise
 git clone https://github.com/sunriselayer/sunrise.git
 cd sunrise
-git checkout v0.2.6
+git checkout auto
 ```
 
 ## Build binaries

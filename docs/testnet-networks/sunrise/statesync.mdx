@@ -6,8 +6,8 @@ hide_table_of_contents: false
 description: ''
 chain_name: 'Sunrise'
 scope: 'testnet'
-chain_id: 'sunrise-test-0.2'
-binary_version: 'v0.2.6'
+chain_id: 'auto'
+binary_version: 'auto'
 icon_url: 'sunrise-icon.svg'
 ---
 
@@ -16,8 +16,8 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/sunrise-icon.svg"
   title="Sunrise State Sync"
-  chainId="sunrise-test-0.2"
-  version="v0.2.6"
+  chainId="auto"
+  version="auto"
 />
 
 ## How to enable state sync
@@ -35,7 +35,7 @@ sudo systemctl stop sunrised && sunrised tendermint unsafe-reset-all --home ~/.s
 ```
 
 ```bash
-peers="66751839fcecdde5eaabd33b0e8877e8d7e85747@sunrise-t-rpc.noders.services:28356"
+peers="@sunrise-t-rpc.noders.services:"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.sunrise/config/config.toml
 ```
 

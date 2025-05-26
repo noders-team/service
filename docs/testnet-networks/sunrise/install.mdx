@@ -6,8 +6,8 @@ hide_table_of_contents: false
 description: ''
 chain_name: 'Sunrise'
 scope: 'testnet'
-chain_id: 'sunrise-test-0.2'
-binary_version: 'v0.2.6'
+chain_id: 'auto'
+binary_version: 'auto'
 icon_url: 'sunrise-icon.svg'
 ---
 
@@ -16,8 +16,8 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/sunrise-icon.svg"
   title="Sunrise Installation Guide"
-  chainId="sunrise-test-0.2"
-  version="v0.2.6"
+  chainId="auto"
+  version="auto"
 />
 
 ## Install dependencies
@@ -51,13 +51,13 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 ### Download and build binaries
 
-### Clone Sunrise repo and build sunrised v0.2.6
+### Clone Sunrise repo and build sunrised auto
 
 ```js
 cd $HOME
 git clone https://github.com/sunriselayer/sunrise.git
 cd sunrise
-git checkout v0.2.6
+git checkout auto
 ```
 
 ### Build binaries
@@ -70,8 +70,8 @@ make install
 
 ```js
 cd $HOME
-mkdir -p ~/.sunrise/cosmovisor/upgrades/v0.2.6/bin
-mv $HOME/go/bin/sunrised ~/.sunrise/cosmovisor/upgrades/v0.2.6/bin/
+mkdir -p ~/.sunrise/cosmovisor/upgrades/auto/bin
+mv $HOME/go/bin/sunrised ~/.sunrise/cosmovisor/upgrades/auto/bin/
 ```
 
 ### Create symlinks
@@ -117,13 +117,13 @@ EOF
 
 ### Download and build binaries
 
-### Clone Sunrise repo and build sunrised v0.2.6
+### Clone Sunrise repo and build sunrised auto
 
 ```js
 cd $HOME
 git clone https://github.com/sunriselayer/sunrise.git
 cd sunrise
-git checkout v0.2.6
+git checkout auto
 ```
 
 ### Build binaries
@@ -167,7 +167,7 @@ sudo systemctl enable sunrised
 ### Set config
 
 ```js
-sunrised config chain-id sunrise-test-0.2
+sunrised config chain-id auto
 sunrised config keyring-backend os
 sunrised config node tcp://localhost:26657
 ```
@@ -175,7 +175,7 @@ sunrised config node tcp://localhost:26657
 ### Initialize the node
 
 ```js
-sunrised init NAME_OF_YOUR_VALIDATOR --chain-id sunrise-test-0.2
+sunrised init NAME_OF_YOUR_VALIDATOR --chain-id auto
 ```
 
 ### Download genesis and addrbook
@@ -188,7 +188,7 @@ curl https://snapshots-t.noders.services/sunrise/addrbook.json -o ~/.sunrise/con
 ### Add peers
 
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"66751839fcecdde5eaabd33b0e8877e8d7e85747@sunrise-t-rpc.noders.services:28356\"/" ~/.sunrise/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@sunrise-t-rpc.noders.services:\"/" ~/.sunrise/config/config.toml
 ```
 
 ### Set minimum gas price
