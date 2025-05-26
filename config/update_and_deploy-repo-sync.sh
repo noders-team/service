@@ -68,10 +68,10 @@ log "Building static files..."
 yarn install
 yarn build || {
 	log "Build failed! Rolling back..."
-	rm -rf "$DEPLOY_DIR"
-        cp -r "$DEPLOY_BACKUP_DIR" "$DEPLOY_DIR"
+	sudo rm -rf "$DEPLOY_DIR"
+  sudo cp -r "$DEPLOY_BACKUP_DIR" "$DEPLOY_DIR"
 	exit 1
-    }
+}
 
 log "Update static files with zero downtime..."
 mkdir -p $TEMP_DEPLOY_DIR
