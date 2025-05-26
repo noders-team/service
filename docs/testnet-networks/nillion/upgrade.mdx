@@ -24,9 +24,9 @@ import PageTitle from "@site/src/components/PageTitle";
 
 ```js
 cd $HOME
-rm -rf NillionNetwork
-git clone https://github.com/NillionNetwork.git
-cd NillionNetwork
+rm -rf nilchain
+git clone https://github.com/NillionNetwork/nilchain.git
+cd nilchain
 git checkout v0.2.1
 ```
 
@@ -39,8 +39,8 @@ make build
 ## Prepare binaries for Cosmovisor
 
 ```js
-mkdir -p ~/.nilliond/cosmovisor/upgrades/v0.2.1/bin
-mv build/nilliond ~/.nilliond/cosmovisor/upgrades/v0.2.1/bin/
+mkdir -p ~/.nillionapp/cosmovisor/upgrades/v0.2.1/bin
+mv build/nilchaind ~/.nillionapp/cosmovisor/upgrades/v0.2.1/bin/
 rm -rf build
 ```
 
@@ -50,9 +50,9 @@ rm -rf build
 
 ```js
 cd $HOME
-rm -rf NillionNetwork
-git clone https://github.com/NillionNetwork.git
-cd NillionNetwork
+rm -rf nilchain
+git clone https://github.com/NillionNetwork/nilchain.git
+cd nilchain
 git checkout v0.2.1
 ```
 
@@ -65,5 +65,5 @@ make install
 ## Restart node and check logs
 
 ```js
-sudo systemctl restart nilliond && sudo journalctl -u nilliond -f --no-hostname -o cat
+sudo systemctl restart nilchaind && sudo journalctl -u nilchaind -f --no-hostname -o cat
 ```
