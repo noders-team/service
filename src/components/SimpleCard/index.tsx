@@ -17,13 +17,13 @@ function SimpleCard(props): React.JSX.Element {
       display="flex"
       overflow="hidden"
       sx={{
-        backgroundColor: "background.paper",
+        backgroundColor: 'background.paper',
         cursor: cursor,
         borderRadius: theme.spacing(borderRadius),
-        transition: theme.transitions.create('all'),
+        transition: theme.transitions.create('background-color'),
         '&:hover': {
           cursor: cursor,
-          backgroundColor: "#22252A",
+          backgroundColor: '#22252A',
         },
       }}
       {...rest}
