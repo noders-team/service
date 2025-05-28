@@ -6,8 +6,8 @@ hide_table_of_contents: false
 description: ''
 chain_name: 'ZeroGravity'
 scope: 'testnet'
-chain_id: 'zgtendermint_16600-2'
-binary_version: 'v0.5.0.1'
+chain_id: 'auto'
+binary_version: 'v0.2.0-alpha.4-726-g680c0d7e2'
 icon_url: 'og-icon.svg'
 ---
 
@@ -16,8 +16,8 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/og-icon.svg"
   title="ZeroGravity Installation Guide"
-  chainId="zgtendermint_16600-2"
-  version="v0.5.0.1"
+  chainId="auto"
+  version="v0.2.0-alpha.4-726-g680c0d7e2"
 />
 
 ## Install dependencies
@@ -51,13 +51,13 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 ### Download and build binaries
 
-### Clone ZeroGravity repo and build 0gchaind v0.5.0.1
+### Clone ZeroGravity repo and build 0gchaind v0.2.0-alpha.4-726-g680c0d7e2
 
 ```js
 cd $HOME
 git clone https://github.com/0glabs/0g-chain.git
 cd 0g-chain
-git checkout v0.5.0.1
+git checkout v0.2.0-alpha.4-726-g680c0d7e2
 ```
 
 ### Build binaries
@@ -70,8 +70,8 @@ make install
 
 ```js
 cd $HOME
-mkdir -p ~/.0gchain/cosmovisor/upgrades/v0.5.0.1/bin
-mv $HOME/go/bin/0gchaind ~/.0gchain/cosmovisor/upgrades/v0.5.0.1/bin/
+mkdir -p ~/.0gchain/cosmovisor/upgrades/v0.2.0-alpha.4-726-g680c0d7e2/bin
+mv $HOME/go/bin/0gchaind ~/.0gchain/cosmovisor/upgrades/v0.2.0-alpha.4-726-g680c0d7e2/bin/
 ```
 
 ### Create symlinks
@@ -117,13 +117,13 @@ EOF
 
 ### Download and build binaries
 
-### Clone ZeroGravity repo and build 0gchaind v0.5.0.1
+### Clone ZeroGravity repo and build 0gchaind v0.2.0-alpha.4-726-g680c0d7e2
 
 ```js
 cd $HOME
 git clone https://github.com/0glabs/0g-chain.git
 cd 0g-chain
-git checkout v0.5.0.1
+git checkout v0.2.0-alpha.4-726-g680c0d7e2
 ```
 
 ### Build binaries
@@ -167,7 +167,7 @@ sudo systemctl enable 0gchaind
 ### Set config
 
 ```js
-0gchaind config chain-id zgtendermint_16600-2
+0gchaind config chain-id auto
 0gchaind config keyring-backend os
 0gchaind config node tcp://localhost:26657
 ```
@@ -175,7 +175,7 @@ sudo systemctl enable 0gchaind
 ### Initialize the node
 
 ```js
-0gchaind init NAME_OF_YOUR_VALIDATOR --chain-id zgtendermint_16600-2
+0gchaind init NAME_OF_YOUR_VALIDATOR --chain-id auto
 ```
 
 ### Download genesis and addrbook
@@ -188,7 +188,7 @@ curl https://snapshots-t.noders.services/og/addrbook.json -o ~/.0gchain/config/a
 ### Add peers
 
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"d9fee544b90d15c4f024e52b6c5b2fd9fd199514@og-t-rpc.noders.services:23856\"/" ~/.0gchain/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@og-t-rpc.noders.services:\"/" ~/.0gchain/config/config.toml
 ```
 
 ### Set minimum gas price
