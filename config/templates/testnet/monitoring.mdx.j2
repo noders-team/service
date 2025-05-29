@@ -94,6 +94,17 @@ services:
       - ./grafana/datasources:/etc/grafana/provisioning/datasources
     restart: unless-stopped
 
+  node-exporter:
+    image: prom/node-exporter:latest
+    container_name: {{ chain_system_name }}-node-exporter
+    ports:
+      - "9100:9100"
+    command:
+      - '--path.rootfs=/host'
+    volumes:
+      - '/:/host:ro,rslave'
+    restart: unless-stopped
+
 volumes:
   prometheus_data:
   grafana_data:
@@ -120,7 +131,7 @@ scrape_configs:
 
   - job_name: 'node-exporter'
     static_configs:
-      - targets: ['host.docker.internal:9100']
+      - targets: ['node-exporter:9100']
     scrape_interval: 15s
 
 alerting:
@@ -239,15 +250,26 @@ docker-compose logs -f
 
 ### Pre-built Dashboard
 
-Import our {{ chain_name }} validator dashboard using ID: `{{ monitoring_dashboard_id | default('15991') }}` or download JSON from:
+Import our {{ chain_name }} validator dashboard from NODERS:
+
+**🔗 Dashboard JSON**: [https://snapshots.noders.services/monitoring/cosmos-dashboard.json](https://snapshots.noders.services/monitoring/cosmos-dashboard.json)
+
+**How to Import:**
+1. Open Grafana at http://localhost:{{ monitoring_grafana_port | default('3000') }}
+2. Click **"+"** → **"Import"** 
+3. Paste the URL: `https://snapshots.noders.services/monitoring/cosmos-dashboard.json`
+4. Click **"Load"** and configure data sources
+5. Select your Prometheus datasource and save
 
 **Dashboard Features:**
 - Validator status and uptime
 - Block height and sync status  
 - Missed blocks tracking
 - System resources (CPU, Memory, Disk)
-- Network metrics
-- Peer connections
+- Network metrics and TCP connections
+- Peer connections and network health
+- Hardware monitoring with node-exporter
+- Custom alerts and thresholds
 
 ### Useful Queries
 
@@ -280,6 +302,9 @@ curl http://localhost:{{ monitoring_node_metrics_port | default('26660') }}/metr
 
 # Check Prometheus targets
 curl http://localhost:{{ monitoring_prometheus_port | default('9090') }}/api/v1/targets
+
+# Check node-exporter metrics
+curl http://localhost:9100/metrics
 ```
 
 **Grafana connection issues:**
