@@ -20,7 +20,7 @@ CHAIN_DENOM="urock"
 CHAIN_FEES="20000"
 
 # Binary
-VERSION="auto"
+VERSION="v6.5.2"
 DAEMON_NAME="zenrockd"
 DAEMON_SERVICE="zenrock.service"
 DAEMON_HOME="~/.zrchain"
