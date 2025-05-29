@@ -55,7 +55,7 @@ fi
 
 log "Starting sync process.."
 cd $SERVICES_CONFIG_PATH
-pip3 install -r requirements.txt --user --break-system-packages --quiet
+pip3 install -r requirements.txt --user --quiet
 python3 sync.py --docs-dir "$SERVICES_REPO_PATH/docs" 2>&1 | tee -a "$LOG_FILE"
 
 cd "$SERVICES_REPO_PATH"
