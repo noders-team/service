@@ -20,38 +20,38 @@ const sidebars = {
   documentationSidebar: [
     {
       type: 'html',
-      value: 'Getting Started 1',
+      value: 'Getting Started',
       className: 'sidebar-section-header',
     },{
       type: 'category',
       label: 'Testnet Introduction',
       link: {
         type: 'doc',
-        id: 'testnet-networks/template',
+        id: 'testnet-networks/overview',
       },
       collapsible: true,
       collapsed: false,
       items: [
         {
           type: 'doc',
-          id: 'testnet-networks/template',
+          id: 'testnet-networks/overview',
           label: 'Introduction to Testnet'
         },
       ]
     },
     {
       type: 'category',
-      label: 'Introduction',
+      label: 'Mainnet Introduction',
       link: {
         type: 'doc',
-        id: 'mainnet-networks/template',
+        id: 'mainnet-networks/overview',
       },
       collapsible: true,
       collapsed: false,
       items: [
         {
           type: 'doc',
-          id: 'mainnet-networks/template',
+          id: 'mainnet-networks/overview',
           label: 'Introduction to Mainnet'
         }
       ]

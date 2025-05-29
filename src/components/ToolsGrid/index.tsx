@@ -5,6 +5,7 @@ import {
   PiArrowRightBold,
   PiBookOpenText,
   PiBroadcast,
+  PiChartLine,
   PiCubeFocus,
   PiDatabase,
   PiFediverseLogo,
@@ -73,6 +74,7 @@ type ToolsGridProps = {
   showEndpoints: boolean;
   showStateSync: boolean;
   showSnapshot: boolean;
+  showMonitoring: boolean;
   showLivePeers: boolean;
   showSeed: boolean;
   showAddressBook: boolean;
@@ -95,6 +97,7 @@ function ToolsGrid(props: ToolsGridProps): React.ReactElement {
     props.showEndpoints ||
     props.showStateSync ||
     props.showSnapshot ||
+    props.showMonitoring ||
     props.showLivePeers ||
     props.showSeed ||
     props.showAddressBook;
@@ -158,6 +161,7 @@ function ToolsGrid(props: ToolsGridProps): React.ReactElement {
             {props.showEndpoints && <ToolCard icon={PiGraph} linkUrl={linkUrl + '/endpoints'} title="RPC, API, gRPC" />}
             {props.showStateSync && <ToolCard icon={PiLightning} linkUrl={linkUrl + '/statesync'} title="State Sync" />}
             {props.showSnapshot && <ToolCard icon={PiDatabase} linkUrl={linkUrl + '/snapshot'} title="Node Snapshot" />}
+            {props.showMonitoring && <ToolCard icon={PiChartLine} linkUrl={linkUrl + '/monitoring'} title="Monitoring" />}
             {props.showLivePeers && (
               <ToolCard icon={PiGitPullRequest} linkUrl={linkUrl + '/seeds-and-peers'} title="Live Peers" />
             )}
