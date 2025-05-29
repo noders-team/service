@@ -328,14 +328,14 @@ class BlockchainSyncer:
         
         matches = re.findall(f'"{chain_name}.*\\.tar\\.lz4"', content)
         if not matches:
-            return self._default_snapshot_info()
+            return self._default_snapshot_info(f"{base_url}/{chain_name}/")
         
         filename = matches[-1].strip('"')
         file_url = f"{base_url}/{chain_name}/{filename}"
         headers = await self._fetch_headers(session, file_url)
         
         if not headers:
-            return self._default_snapshot_info()
+            return self._default_snapshot_info(f"{base_url}/{chain_name}/")
         
         size_bytes = headers.get('Content-Length')
         size = f"{int(size_bytes) / (1024**3):.2f} GB" if size_bytes else "-"
