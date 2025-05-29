@@ -44,7 +44,6 @@ SOCIAL_TELEGRAM=""
 # Other
 SNAPSHOT_URL="https://snapshots.noders.services/althea"
 GITHUB_FOLDER_NAME="auto"
-VALIDATOR_URL=""
 
 # Updates
 UPDATE_MAIN=true

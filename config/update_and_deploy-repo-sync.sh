@@ -55,7 +55,8 @@ fi
 
 log "Starting sync process.."
 cd $SERVICES_CONFIG_PATH
-bash sync.sh 2>&1 | tee -a "$LOG_FILE"
+pip3 install -r requirements.txt --user --break-system-packages --quiet
+python3 sync.py --docs-dir "$SERVICES_REPO_PATH/docs" 2>&1 | tee -a "$LOG_FILE"
 
 cd "$SERVICES_REPO_PATH"
 if ! git diff --quiet; then

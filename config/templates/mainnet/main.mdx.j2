@@ -1,0 +1,63 @@
+---
+title: '{{ chain_name }}'
+hide_title: true
+hide_table_of_contents: false
+description: 'Access {{ chain_name }} {{ scope }} via fast, reliable RPC by NODERS — no limits, Omnichain-ready, and built for scalable Web3'
+chain_name: '{{ chain_name }}'
+scope: '{{ scope }}'
+chain_id: '{{ chain_id }}'
+binary_version: '{{ version }}'
+icon_url: '{{ chain_icon }}'
+---
+
+import ChainLayout from '@site/src/components/ChainLayout';
+import ChainHero from '@site/src/components/ChainHero';
+import ProductLinks from '@site/src/components/ProductLinks';
+import ToolsGrid from '@site/src/components/ToolsGrid';
+
+<ChainLayout>
+  <ChainHero
+    name="{{ chain_name }}"
+    iconUrl="img/{{ chain_icon }}"
+    bgColor="{{ chain_background_color }}"
+    scope="{{ scope }}"
+    chainId="{{ chain_id }}"
+    nodeVersion="{{ version }}"
+    token="{{ chain_denom_pretty }}"
+    stakeUrl="{{ stake_url }}"
+    restakeUrl="{{ restake_url }}"
+    websiteUrl="{{ social_website }}"
+    githubUrl="{{ social_github }}"
+    xUrl="{{ social_x }}"
+    discordUrl="{{ social_discord }}"
+  />
+
+  <ProductLinks
+    appUrl="{{ app_url }}"
+    appImageUrl="img/products/{{ app_image }}"
+    explorerUrl="{{ explorer_url }}"
+    explorerImageUrl="img/products/{{ explorer_image }}"
+    faucetUrl="{{ faucet_url }}"
+  />
+
+  <ToolsGrid
+    chainName="{{ chain_system_name }}"
+    scope="{{ scope }}"
+    showInstall={{ '{true}' if show_installation_guide == 'true' else '{false}' }}
+    showUpgrade={{ '{true}' if show_upgrade_guide == 'true' else '{false}' }}
+    showGenesis={{ '{true}' if show_genesis == 'true' else '{false}' }}
+    showCli={{ '{true}' if show_cli == 'true' else '{false}' }}
+    showEndpoints={{ '{true}' if show_endpoints == 'true' else '{false}' }}
+    showStateSync={{ '{true}' if show_state_sync == 'true' else '{false}' }}
+    showSnapshot={{ '{true}' if show_snapshot == 'true' else '{false}' }}
+    showLivePeers={{ '{true}' if show_live_peers == 'true' else '{false}' }}
+    showSeed={{ '{true}' if show_seed == 'true' else '{false}' }}
+    showAddressBook={{ '{true}' if show_address_book == 'true' else '{false}' }}
+    showExplorersList={{ '{true}' if show_explorers_list == 'true' else '{false}' }}
+    showPublicEndpoints={{ '{true}' if show_public_endpoints == 'true' else '{false}' }}
+    showUsefulTools={{ '{true}' if show_useful_tools == 'true' else '{false}' }}
+    showUpgradeWatcher={{ '{true}' if show_upgrade_watcher == 'true' else '{false}' }}
+  />
+
+</ChainLayout>
+

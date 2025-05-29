@@ -1,0 +1,64 @@
+---
+title: 'Seeds and Peers'
+sidebar_position: 5
+hide_title: true
+hide_table_of_contents: false
+description: ''
+chain_name: '{{ chain_name }}'
+scope: '{{ scope }}'
+chain_id: '{{ chain_id }}'
+binary_version: '{{ version }}'
+icon_url: '{{ chain_icon }}'
+---
+
+import PageTitle from "@site/src/components/PageTitle";
+
+<PageTitle
+  iconUrl="img/{{ chain_icon }}"
+  title="{{ chain_name }} Seeds and Peers"
+  chainId="{{ chain_id }}"
+  version="{{ version }}"
+/>
+
+## Our seed node
+
+You might also decide to use a seed node to bootstrap your node.
+```bash
+{{ endpoint_seed }}
+```
+
+## Our peer
+
+When you state-sync, you might also consider adding [NODERS]TEAM state-sync peer to your persistent_peers setting in `config.toml`.
+
+```bash
+{{ endpoint_peer }}
+```
+
+## Live Peers
+
+Here is a list of {{ live_peers_count }} active peers as observed by [NODERS]TEAM in real-time. Add them to your `config.toml` if you have trouble finding peers.
+
+```bash
+{{ live_peers_all }}
+```
+
+Here is a script for you to update `persistent_peers` setting in `config.toml`. Stale peers can cause node inefficiency over time, so the script below selects a few random live peers.
+
+```bash
+PEERS={{ live_peers_random }}
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" {{ daemon_home }}/config/config.toml
+
+sudo systemctl restart {{ daemon_name }}
+sudo journalctl -fu {{ daemon_name }} --no-hostname -o cat
+```
+
+## Address book
+
+The address book contains a list of previously connected peers. It helps your node find and connect to the network quickly. Download our address book to speed up your initial connection:
+
+```bash
+curl https://snapshots.noders.services/{{ chain_system_name }}/addrbook.json -o {{ daemon_home }}/config/addrbook.json
+sudo systemctl restart {{ daemon_name }}
+```
+
