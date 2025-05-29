@@ -84,7 +84,7 @@ sudo ln -s ~/.axoned/cosmovisor/current/bin/axoned /usr/local/bin/axoned -f
 ## Download and install Cosmovisor
 
 ```js
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.1
 ```
 
 ## Run node
@@ -181,8 +181,8 @@ axoned init NAME_OF_YOUR_VALIDATOR --chain-id axone-dentrite-1
 ### Download genesis and addrbook
 
 ```js
-curl https://snapshots-t.noders.services/axone/genesis.json -o ~/.axoned/config/genesis.json
-curl https://snapshots-t.noders.services/axone/addrbook.json -o ~/.axoned/config/addrbook.json
+curl https://snapshots.noders.services/axone/genesis.json -o ~/.axoned/config/genesis.json
+curl https://snapshots.noders.services/axone/addrbook.json -o ~/.axoned/config/addrbook.json
 ```
 
 ### Add peers
@@ -211,29 +211,23 @@ sed -i \
 ### Set custom ports
 
 ```bash
-echo "export axoned_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export AXONED_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
-# Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${axoned_PORT}317%g" \
--e "s%:8080%:${axoned_PORT}080%g" \
--e "s%:9090%:${axoned_PORT}090%g" \
--e "s%:9091%:${axoned_PORT}091%g" \
--e "s%:8545%:${axoned_PORT}545%g" \
--e "s%:8546%:${axoned_PORT}546%g" \
--e "s%:6065%:${axoned_PORT}065%g" ~/.axoned/config/app.toml
+# Set custom ports in app.tom{l
+sed -i.bak -e "s%:1317%:${AXONED_PORT}317%g" \
+-e "s%:8080%:${AXONED_PORT}080%g" \
+-e "s%:9090%:${AXONED_PORT}090%g" \
+-e "s%:9091%:${AXONED_PORT}091%g" \
+-e "s%:8545%:${AXONED_PORT}545%g" \
+-e "s%:8546%:${AXONED_PORT}546%g" \
+-e "s%:6065%:${AXONED_PORT}065%g" ~/.axoned/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${axoned_PORT}658%g" \
--e "s%:26657%:${axoned_PORT}657%g" \
--e "s%:6060%:${axoned_PORT}060%g" \
--e "s%:26656%:${axoned_PORT}656%g" \
--e "s%:26660%:${axoned_PORT}660%g" ~/.axoned/config/config.toml
-```
-
-### Start node and check logs
-
-```js
-sudo systemctl start axoned && sudo journalctl -u axoned -f --no-hostname -o cat
+sed -i.bak -e "s%:26658%:${AXONED_PORT}658%g" \
+-e "s%:26657%:${AXONED_PORT}657%g" \
+-e "s%:6060%:${AXONED_PORT}060%g" \
+-e "s%:26656%:${AXONED_PORT}656%g" \
+-e "s%:26660%:${AXONED_PORT}660%g" ~/.axoned/config/config.toml
 ```

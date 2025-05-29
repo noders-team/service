@@ -7,7 +7,7 @@ description: ''
 chain_name: 'Jackal'
 scope: 'testnet'
 chain_id: 'lupulella-2'
-binary_version: 'canary-17-gb6ed8056'
+binary_version: 'v4.6.0-beta.1'
 icon_url: 'jackal-icon.svg'
 ---
 
@@ -17,7 +17,7 @@ import PageTitle from "@site/src/components/PageTitle";
   iconUrl="img/jackal-icon.svg"
   title="Jackal Upgrade Guide"
   chainId="lupulella-2"
-  version="canary-17-gb6ed8056"
+  version="v4.6.0-beta.1"
 />
 
 ## Clone Jackal repository
@@ -27,7 +27,7 @@ cd $HOME
 rm -rf canine-chain
 git clone https://github.com/JackalLabs/canine-chain.git
 cd canine-chain
-git checkout canary-17-gb6ed8056
+git checkout v4.6.0-beta.1
 ```
 
 ## Build binaries
@@ -39,8 +39,8 @@ make build
 ## Prepare binaries for Cosmovisor
 
 ```js
-mkdir -p ~/.canine/cosmovisor/upgrades/canary-17-gb6ed8056/bin
-mv build/canined ~/.canine/cosmovisor/upgrades/canary-17-gb6ed8056/bin/
+mkdir -p ~/.canine/cosmovisor/upgrades/v4.6.0-beta.1/bin
+mv build/canined ~/.canine/cosmovisor/upgrades/v4.6.0-beta.1/bin/
 rm -rf build
 ```
 
@@ -53,7 +53,7 @@ cd $HOME
 rm -rf canine-chain
 git clone https://github.com/JackalLabs/canine-chain.git
 cd canine-chain
-git checkout canary-17-gb6ed8056
+git checkout v4.6.0-beta.1
 ```
 
 ## Build binaries

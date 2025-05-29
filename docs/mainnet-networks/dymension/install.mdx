@@ -84,7 +84,7 @@ sudo ln -s ~/.dymension/cosmovisor/current/bin/dymd /usr/local/bin/dymd -f
 ## Download and install Cosmovisor
 
 ```js
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.1
 ```
 
 ## Run node
@@ -211,29 +211,23 @@ sed -i \
 ### Set custom ports
 
 ```bash
-echo "export dymd_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export DYMD_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
-# Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${dymd_PORT}317%g" \
--e "s%:8080%:${dymd_PORT}080%g" \
--e "s%:9090%:${dymd_PORT}090%g" \
--e "s%:9091%:${dymd_PORT}091%g" \
--e "s%:8545%:${dymd_PORT}545%g" \
--e "s%:8546%:${dymd_PORT}546%g" \
--e "s%:6065%:${dymd_PORT}065%g" ~/.dymension/config/app.toml
+# Set custom ports in app.tom{l
+sed -i.bak -e "s%:1317%:${DYMD_PORT}317%g" \
+-e "s%:8080%:${DYMD_PORT}080%g" \
+-e "s%:9090%:${DYMD_PORT}090%g" \
+-e "s%:9091%:${DYMD_PORT}091%g" \
+-e "s%:8545%:${DYMD_PORT}545%g" \
+-e "s%:8546%:${DYMD_PORT}546%g" \
+-e "s%:6065%:${DYMD_PORT}065%g" ~/.dymension/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${dymd_PORT}658%g" \
--e "s%:26657%:${dymd_PORT}657%g" \
--e "s%:6060%:${dymd_PORT}060%g" \
--e "s%:26656%:${dymd_PORT}656%g" \
--e "s%:26660%:${dymd_PORT}660%g" ~/.dymension/config/config.toml
-```
-
-### Start node and check logs
-
-```js
-sudo systemctl start dymd && sudo journalctl -u dymd -f --no-hostname -o cat
+sed -i.bak -e "s%:26658%:${DYMD_PORT}658%g" \
+-e "s%:26657%:${DYMD_PORT}657%g" \
+-e "s%:6060%:${DYMD_PORT}060%g" \
+-e "s%:26656%:${DYMD_PORT}656%g" \
+-e "s%:26660%:${DYMD_PORT}660%g" ~/.dymension/config/config.toml
 ```

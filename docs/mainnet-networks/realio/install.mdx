@@ -84,7 +84,7 @@ sudo ln -s ~/.realio-network/cosmovisor/current/bin/realiod /usr/local/bin/reali
 ## Download and install Cosmovisor
 
 ```js
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.1
 ```
 
 ## Run node
@@ -211,29 +211,23 @@ sed -i \
 ### Set custom ports
 
 ```bash
-echo "export realiod_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export REALIOD_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
-# Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${realiod_PORT}317%g" \
--e "s%:8080%:${realiod_PORT}080%g" \
--e "s%:9090%:${realiod_PORT}090%g" \
--e "s%:9091%:${realiod_PORT}091%g" \
--e "s%:8545%:${realiod_PORT}545%g" \
--e "s%:8546%:${realiod_PORT}546%g" \
--e "s%:6065%:${realiod_PORT}065%g" ~/.realio-network/config/app.toml
+# Set custom ports in app.tom{l
+sed -i.bak -e "s%:1317%:${REALIOD_PORT}317%g" \
+-e "s%:8080%:${REALIOD_PORT}080%g" \
+-e "s%:9090%:${REALIOD_PORT}090%g" \
+-e "s%:9091%:${REALIOD_PORT}091%g" \
+-e "s%:8545%:${REALIOD_PORT}545%g" \
+-e "s%:8546%:${REALIOD_PORT}546%g" \
+-e "s%:6065%:${REALIOD_PORT}065%g" ~/.realio-network/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${realiod_PORT}658%g" \
--e "s%:26657%:${realiod_PORT}657%g" \
--e "s%:6060%:${realiod_PORT}060%g" \
--e "s%:26656%:${realiod_PORT}656%g" \
--e "s%:26660%:${realiod_PORT}660%g" ~/.realio-network/config/config.toml
-```
-
-### Start node and check logs
-
-```js
-sudo systemctl start realiod && sudo journalctl -u realiod -f --no-hostname -o cat
+sed -i.bak -e "s%:26658%:${REALIOD_PORT}658%g" \
+-e "s%:26657%:${REALIOD_PORT}657%g" \
+-e "s%:6060%:${REALIOD_PORT}060%g" \
+-e "s%:26656%:${REALIOD_PORT}656%g" \
+-e "s%:26660%:${REALIOD_PORT}660%g" ~/.realio-network/config/config.toml
 ```

@@ -84,7 +84,7 @@ sudo ln -s ~/.dorad/cosmovisor/current/bin/dorad /usr/local/bin/dorad -f
 ## Download and install Cosmovisor
 
 ```js
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.1
 ```
 
 ## Run node
@@ -181,8 +181,8 @@ dorad init NAME_OF_YOUR_VALIDATOR --chain-id vota-bobtail
 ### Download genesis and addrbook
 
 ```js
-curl https://snapshots-t.noders.services/dora/genesis.json -o ~/.dorad/config/genesis.json
-curl https://snapshots-t.noders.services/dora/addrbook.json -o ~/.dorad/config/addrbook.json
+curl https://snapshots.noders.services/dora/genesis.json -o ~/.dorad/config/genesis.json
+curl https://snapshots.noders.services/dora/addrbook.json -o ~/.dorad/config/addrbook.json
 ```
 
 ### Add peers
@@ -211,29 +211,23 @@ sed -i \
 ### Set custom ports
 
 ```bash
-echo "export dorad_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export DORAD_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
-# Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${dorad_PORT}317%g" \
--e "s%:8080%:${dorad_PORT}080%g" \
--e "s%:9090%:${dorad_PORT}090%g" \
--e "s%:9091%:${dorad_PORT}091%g" \
--e "s%:8545%:${dorad_PORT}545%g" \
--e "s%:8546%:${dorad_PORT}546%g" \
--e "s%:6065%:${dorad_PORT}065%g" ~/.dorad/config/app.toml
+# Set custom ports in app.tom{l
+sed -i.bak -e "s%:1317%:${DORAD_PORT}317%g" \
+-e "s%:8080%:${DORAD_PORT}080%g" \
+-e "s%:9090%:${DORAD_PORT}090%g" \
+-e "s%:9091%:${DORAD_PORT}091%g" \
+-e "s%:8545%:${DORAD_PORT}545%g" \
+-e "s%:8546%:${DORAD_PORT}546%g" \
+-e "s%:6065%:${DORAD_PORT}065%g" ~/.dorad/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${dorad_PORT}658%g" \
--e "s%:26657%:${dorad_PORT}657%g" \
--e "s%:6060%:${dorad_PORT}060%g" \
--e "s%:26656%:${dorad_PORT}656%g" \
--e "s%:26660%:${dorad_PORT}660%g" ~/.dorad/config/config.toml
-```
-
-### Start node and check logs
-
-```js
-sudo systemctl start dorad && sudo journalctl -u dorad -f --no-hostname -o cat
+sed -i.bak -e "s%:26658%:${DORAD_PORT}658%g" \
+-e "s%:26657%:${DORAD_PORT}657%g" \
+-e "s%:6060%:${DORAD_PORT}060%g" \
+-e "s%:26656%:${DORAD_PORT}656%g" \
+-e "s%:26660%:${DORAD_PORT}660%g" ~/.dorad/config/config.toml
 ```

@@ -84,7 +84,7 @@ sudo ln -s ~/.warden/cosmovisor/current/bin/wardend /usr/local/bin/wardend -f
 ## Download and install Cosmovisor
 
 ```js
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.1
 ```
 
 ## Run node
@@ -181,8 +181,8 @@ wardend init NAME_OF_YOUR_VALIDATOR --chain-id chiado_10010-1
 ### Download genesis and addrbook
 
 ```js
-curl https://snapshots-t.noders.services/warden/genesis.json -o ~/.warden/config/genesis.json
-curl https://snapshots-t.noders.services/warden/addrbook.json -o ~/.warden/config/addrbook.json
+curl https://snapshots.noders.services/warden/genesis.json -o ~/.warden/config/genesis.json
+curl https://snapshots.noders.services/warden/addrbook.json -o ~/.warden/config/addrbook.json
 ```
 
 ### Add peers
@@ -211,29 +211,23 @@ sed -i \
 ### Set custom ports
 
 ```bash
-echo "export wardend_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export WARDEND_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
-# Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${wardend_PORT}317%g" \
--e "s%:8080%:${wardend_PORT}080%g" \
--e "s%:9090%:${wardend_PORT}090%g" \
--e "s%:9091%:${wardend_PORT}091%g" \
--e "s%:8545%:${wardend_PORT}545%g" \
--e "s%:8546%:${wardend_PORT}546%g" \
--e "s%:6065%:${wardend_PORT}065%g" ~/.warden/config/app.toml
+# Set custom ports in app.tom{l
+sed -i.bak -e "s%:1317%:${WARDEND_PORT}317%g" \
+-e "s%:8080%:${WARDEND_PORT}080%g" \
+-e "s%:9090%:${WARDEND_PORT}090%g" \
+-e "s%:9091%:${WARDEND_PORT}091%g" \
+-e "s%:8545%:${WARDEND_PORT}545%g" \
+-e "s%:8546%:${WARDEND_PORT}546%g" \
+-e "s%:6065%:${WARDEND_PORT}065%g" ~/.warden/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${wardend_PORT}658%g" \
--e "s%:26657%:${wardend_PORT}657%g" \
--e "s%:6060%:${wardend_PORT}060%g" \
--e "s%:26656%:${wardend_PORT}656%g" \
--e "s%:26660%:${wardend_PORT}660%g" ~/.warden/config/config.toml
-```
-
-### Start node and check logs
-
-```js
-sudo systemctl start wardend && sudo journalctl -u wardend -f --no-hostname -o cat
+sed -i.bak -e "s%:26658%:${WARDEND_PORT}658%g" \
+-e "s%:26657%:${WARDEND_PORT}657%g" \
+-e "s%:6060%:${WARDEND_PORT}060%g" \
+-e "s%:26656%:${WARDEND_PORT}656%g" \
+-e "s%:26660%:${WARDEND_PORT}660%g" ~/.warden/config/config.toml
 ```

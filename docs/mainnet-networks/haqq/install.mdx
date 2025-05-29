@@ -84,7 +84,7 @@ sudo ln -s ~/.haqqd/cosmovisor/current/bin/haqqd /usr/local/bin/haqqd -f
 ## Download and install Cosmovisor
 
 ```js
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.1
 ```
 
 ## Run node
@@ -211,29 +211,23 @@ sed -i \
 ### Set custom ports
 
 ```bash
-echo "export haqqd_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export HAQQD_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
-# Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${haqqd_PORT}317%g" \
--e "s%:8080%:${haqqd_PORT}080%g" \
--e "s%:9090%:${haqqd_PORT}090%g" \
--e "s%:9091%:${haqqd_PORT}091%g" \
--e "s%:8545%:${haqqd_PORT}545%g" \
--e "s%:8546%:${haqqd_PORT}546%g" \
--e "s%:6065%:${haqqd_PORT}065%g" ~/.haqqd/config/app.toml
+# Set custom ports in app.tom{l
+sed -i.bak -e "s%:1317%:${HAQQD_PORT}317%g" \
+-e "s%:8080%:${HAQQD_PORT}080%g" \
+-e "s%:9090%:${HAQQD_PORT}090%g" \
+-e "s%:9091%:${HAQQD_PORT}091%g" \
+-e "s%:8545%:${HAQQD_PORT}545%g" \
+-e "s%:8546%:${HAQQD_PORT}546%g" \
+-e "s%:6065%:${HAQQD_PORT}065%g" ~/.haqqd/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${haqqd_PORT}658%g" \
--e "s%:26657%:${haqqd_PORT}657%g" \
--e "s%:6060%:${haqqd_PORT}060%g" \
--e "s%:26656%:${haqqd_PORT}656%g" \
--e "s%:26660%:${haqqd_PORT}660%g" ~/.haqqd/config/config.toml
-```
-
-### Start node and check logs
-
-```js
-sudo systemctl start haqqd && sudo journalctl -u haqqd -f --no-hostname -o cat
+sed -i.bak -e "s%:26658%:${HAQQD_PORT}658%g" \
+-e "s%:26657%:${HAQQD_PORT}657%g" \
+-e "s%:6060%:${HAQQD_PORT}060%g" \
+-e "s%:26656%:${HAQQD_PORT}656%g" \
+-e "s%:26660%:${HAQQD_PORT}660%g" ~/.haqqd/config/config.toml
 ```

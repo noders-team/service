@@ -84,7 +84,7 @@ sudo ln -s ~/.exrpd/cosmovisor/current/bin/exrpd /usr/local/bin/exrpd -f
 ## Download and install Cosmovisor
 
 ```js
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.1
 ```
 
 ## Run node
@@ -181,8 +181,8 @@ exrpd init NAME_OF_YOUR_VALIDATOR --chain-id xrplevm_1449000-1
 ### Download genesis and addrbook
 
 ```js
-curl https://snapshots-t.noders.services/xrp/genesis.json -o ~/.exrpd/config/genesis.json
-curl https://snapshots-t.noders.services/xrp/addrbook.json -o ~/.exrpd/config/addrbook.json
+curl https://snapshots.noders.services/xrp/genesis.json -o ~/.exrpd/config/genesis.json
+curl https://snapshots.noders.services/xrp/addrbook.json -o ~/.exrpd/config/addrbook.json
 ```
 
 ### Add peers
@@ -211,29 +211,23 @@ sed -i \
 ### Set custom ports
 
 ```bash
-echo "export exrpd_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export EXRPD_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
-# Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${exrpd_PORT}317%g" \
--e "s%:8080%:${exrpd_PORT}080%g" \
--e "s%:9090%:${exrpd_PORT}090%g" \
--e "s%:9091%:${exrpd_PORT}091%g" \
--e "s%:8545%:${exrpd_PORT}545%g" \
--e "s%:8546%:${exrpd_PORT}546%g" \
--e "s%:6065%:${exrpd_PORT}065%g" ~/.exrpd/config/app.toml
+# Set custom ports in app.tom{l
+sed -i.bak -e "s%:1317%:${EXRPD_PORT}317%g" \
+-e "s%:8080%:${EXRPD_PORT}080%g" \
+-e "s%:9090%:${EXRPD_PORT}090%g" \
+-e "s%:9091%:${EXRPD_PORT}091%g" \
+-e "s%:8545%:${EXRPD_PORT}545%g" \
+-e "s%:8546%:${EXRPD_PORT}546%g" \
+-e "s%:6065%:${EXRPD_PORT}065%g" ~/.exrpd/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${exrpd_PORT}658%g" \
--e "s%:26657%:${exrpd_PORT}657%g" \
--e "s%:6060%:${exrpd_PORT}060%g" \
--e "s%:26656%:${exrpd_PORT}656%g" \
--e "s%:26660%:${exrpd_PORT}660%g" ~/.exrpd/config/config.toml
-```
-
-### Start node and check logs
-
-```js
-sudo systemctl start exrpd && sudo journalctl -u exrpd -f --no-hostname -o cat
+sed -i.bak -e "s%:26658%:${EXRPD_PORT}658%g" \
+-e "s%:26657%:${EXRPD_PORT}657%g" \
+-e "s%:6060%:${EXRPD_PORT}060%g" \
+-e "s%:26656%:${EXRPD_PORT}656%g" \
+-e "s%:26660%:${EXRPD_PORT}660%g" ~/.exrpd/config/config.toml
 ```

@@ -84,7 +84,7 @@ sudo ln -s ~/.junction/cosmovisor/current/bin/junctiond /usr/local/bin/junctiond
 ## Download and install Cosmovisor
 
 ```js
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.1
 ```
 
 ## Run node
@@ -181,8 +181,8 @@ junctiond init NAME_OF_YOUR_VALIDATOR --chain-id varanasi-1
 ### Download genesis and addrbook
 
 ```js
-curl https://snapshots-t.noders.services/airchains/genesis.json -o ~/.junction/config/genesis.json
-curl https://snapshots-t.noders.services/airchains/addrbook.json -o ~/.junction/config/addrbook.json
+curl https://snapshots.noders.services/airchains/genesis.json -o ~/.junction/config/genesis.json
+curl https://snapshots.noders.services/airchains/addrbook.json -o ~/.junction/config/addrbook.json
 ```
 
 ### Add peers
@@ -211,29 +211,23 @@ sed -i \
 ### Set custom ports
 
 ```bash
-echo "export junctiond_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export JUNCTIOND_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
-# Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${junctiond_PORT}317%g" \
--e "s%:8080%:${junctiond_PORT}080%g" \
--e "s%:9090%:${junctiond_PORT}090%g" \
--e "s%:9091%:${junctiond_PORT}091%g" \
--e "s%:8545%:${junctiond_PORT}545%g" \
--e "s%:8546%:${junctiond_PORT}546%g" \
--e "s%:6065%:${junctiond_PORT}065%g" ~/.junction/config/app.toml
+# Set custom ports in app.tom{l
+sed -i.bak -e "s%:1317%:${JUNCTIOND_PORT}317%g" \
+-e "s%:8080%:${JUNCTIOND_PORT}080%g" \
+-e "s%:9090%:${JUNCTIOND_PORT}090%g" \
+-e "s%:9091%:${JUNCTIOND_PORT}091%g" \
+-e "s%:8545%:${JUNCTIOND_PORT}545%g" \
+-e "s%:8546%:${JUNCTIOND_PORT}546%g" \
+-e "s%:6065%:${JUNCTIOND_PORT}065%g" ~/.junction/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${junctiond_PORT}658%g" \
--e "s%:26657%:${junctiond_PORT}657%g" \
--e "s%:6060%:${junctiond_PORT}060%g" \
--e "s%:26656%:${junctiond_PORT}656%g" \
--e "s%:26660%:${junctiond_PORT}660%g" ~/.junction/config/config.toml
-```
-
-### Start node and check logs
-
-```js
-sudo systemctl start junctiond && sudo journalctl -u junctiond -f --no-hostname -o cat
+sed -i.bak -e "s%:26658%:${JUNCTIOND_PORT}658%g" \
+-e "s%:26657%:${JUNCTIOND_PORT}657%g" \
+-e "s%:6060%:${JUNCTIOND_PORT}060%g" \
+-e "s%:26656%:${JUNCTIOND_PORT}656%g" \
+-e "s%:26660%:${JUNCTIOND_PORT}660%g" ~/.junction/config/config.toml
 ```

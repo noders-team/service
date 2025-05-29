@@ -84,7 +84,7 @@ sudo ln -s ~/.pellcored/cosmovisor/current/bin/pellcored /usr/local/bin/pellcore
 ## Download and install Cosmovisor
 
 ```js
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.1
 ```
 
 ## Run node
@@ -181,8 +181,8 @@ pellcored init NAME_OF_YOUR_VALIDATOR --chain-id ignite_186-1
 ### Download genesis and addrbook
 
 ```js
-curl https://snapshots-t.noders.services/pell/genesis.json -o ~/.pellcored/config/genesis.json
-curl https://snapshots-t.noders.services/pell/addrbook.json -o ~/.pellcored/config/addrbook.json
+curl https://snapshots.noders.services/pell/genesis.json -o ~/.pellcored/config/genesis.json
+curl https://snapshots.noders.services/pell/addrbook.json -o ~/.pellcored/config/addrbook.json
 ```
 
 ### Add peers
@@ -211,29 +211,23 @@ sed -i \
 ### Set custom ports
 
 ```bash
-echo "export pellcored_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export PELLCORED_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
-# Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${pellcored_PORT}317%g" \
--e "s%:8080%:${pellcored_PORT}080%g" \
--e "s%:9090%:${pellcored_PORT}090%g" \
--e "s%:9091%:${pellcored_PORT}091%g" \
--e "s%:8545%:${pellcored_PORT}545%g" \
--e "s%:8546%:${pellcored_PORT}546%g" \
--e "s%:6065%:${pellcored_PORT}065%g" ~/.pellcored/config/app.toml
+# Set custom ports in app.tom{l
+sed -i.bak -e "s%:1317%:${PELLCORED_PORT}317%g" \
+-e "s%:8080%:${PELLCORED_PORT}080%g" \
+-e "s%:9090%:${PELLCORED_PORT}090%g" \
+-e "s%:9091%:${PELLCORED_PORT}091%g" \
+-e "s%:8545%:${PELLCORED_PORT}545%g" \
+-e "s%:8546%:${PELLCORED_PORT}546%g" \
+-e "s%:6065%:${PELLCORED_PORT}065%g" ~/.pellcored/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${pellcored_PORT}658%g" \
--e "s%:26657%:${pellcored_PORT}657%g" \
--e "s%:6060%:${pellcored_PORT}060%g" \
--e "s%:26656%:${pellcored_PORT}656%g" \
--e "s%:26660%:${pellcored_PORT}660%g" ~/.pellcored/config/config.toml
-```
-
-### Start node and check logs
-
-```js
-sudo systemctl start pellcored && sudo journalctl -u pellcored -f --no-hostname -o cat
+sed -i.bak -e "s%:26658%:${PELLCORED_PORT}658%g" \
+-e "s%:26657%:${PELLCORED_PORT}657%g" \
+-e "s%:6060%:${PELLCORED_PORT}060%g" \
+-e "s%:26656%:${PELLCORED_PORT}656%g" \
+-e "s%:26660%:${PELLCORED_PORT}660%g" ~/.pellcored/config/config.toml
 ```

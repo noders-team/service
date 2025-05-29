@@ -84,7 +84,7 @@ sudo ln -s ~/.althea/cosmovisor/current/bin/althea /usr/local/bin/althea -f
 ## Download and install Cosmovisor
 
 ```js
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.1
 ```
 
 ## Run node
@@ -211,29 +211,23 @@ sed -i \
 ### Set custom ports
 
 ```bash
-echo "export althea_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export ALTHEA_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
-# Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${althea_PORT}317%g" \
--e "s%:8080%:${althea_PORT}080%g" \
--e "s%:9090%:${althea_PORT}090%g" \
--e "s%:9091%:${althea_PORT}091%g" \
--e "s%:8545%:${althea_PORT}545%g" \
--e "s%:8546%:${althea_PORT}546%g" \
--e "s%:6065%:${althea_PORT}065%g" ~/.althea/config/app.toml
+# Set custom ports in app.tom{l
+sed -i.bak -e "s%:1317%:${ALTHEA_PORT}317%g" \
+-e "s%:8080%:${ALTHEA_PORT}080%g" \
+-e "s%:9090%:${ALTHEA_PORT}090%g" \
+-e "s%:9091%:${ALTHEA_PORT}091%g" \
+-e "s%:8545%:${ALTHEA_PORT}545%g" \
+-e "s%:8546%:${ALTHEA_PORT}546%g" \
+-e "s%:6065%:${ALTHEA_PORT}065%g" ~/.althea/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${althea_PORT}658%g" \
--e "s%:26657%:${althea_PORT}657%g" \
--e "s%:6060%:${althea_PORT}060%g" \
--e "s%:26656%:${althea_PORT}656%g" \
--e "s%:26660%:${althea_PORT}660%g" ~/.althea/config/config.toml
-```
-
-### Start node and check logs
-
-```js
-sudo systemctl start althea && sudo journalctl -u althea -f --no-hostname -o cat
+sed -i.bak -e "s%:26658%:${ALTHEA_PORT}658%g" \
+-e "s%:26657%:${ALTHEA_PORT}657%g" \
+-e "s%:6060%:${ALTHEA_PORT}060%g" \
+-e "s%:26656%:${ALTHEA_PORT}656%g" \
+-e "s%:26660%:${ALTHEA_PORT}660%g" ~/.althea/config/config.toml
 ```

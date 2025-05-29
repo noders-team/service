@@ -84,7 +84,7 @@ sudo ln -s ~/.side/cosmovisor/current/bin/sided /usr/local/bin/sided -f
 ## Download and install Cosmovisor
 
 ```js
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.1
 ```
 
 ## Run node
@@ -181,8 +181,8 @@ sided init NAME_OF_YOUR_VALIDATOR --chain-id sidechain-testnet-4
 ### Download genesis and addrbook
 
 ```js
-curl https://snapshots-t.noders.services/side/genesis.json -o ~/.side/config/genesis.json
-curl https://snapshots-t.noders.services/side/addrbook.json -o ~/.side/config/addrbook.json
+curl https://snapshots.noders.services/side/genesis.json -o ~/.side/config/genesis.json
+curl https://snapshots.noders.services/side/addrbook.json -o ~/.side/config/addrbook.json
 ```
 
 ### Add peers
@@ -211,29 +211,23 @@ sed -i \
 ### Set custom ports
 
 ```bash
-echo "export sided_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export SIDED_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
-# Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${sided_PORT}317%g" \
--e "s%:8080%:${sided_PORT}080%g" \
--e "s%:9090%:${sided_PORT}090%g" \
--e "s%:9091%:${sided_PORT}091%g" \
--e "s%:8545%:${sided_PORT}545%g" \
--e "s%:8546%:${sided_PORT}546%g" \
--e "s%:6065%:${sided_PORT}065%g" ~/.side/config/app.toml
+# Set custom ports in app.tom{l
+sed -i.bak -e "s%:1317%:${SIDED_PORT}317%g" \
+-e "s%:8080%:${SIDED_PORT}080%g" \
+-e "s%:9090%:${SIDED_PORT}090%g" \
+-e "s%:9091%:${SIDED_PORT}091%g" \
+-e "s%:8545%:${SIDED_PORT}545%g" \
+-e "s%:8546%:${SIDED_PORT}546%g" \
+-e "s%:6065%:${SIDED_PORT}065%g" ~/.side/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${sided_PORT}658%g" \
--e "s%:26657%:${sided_PORT}657%g" \
--e "s%:6060%:${sided_PORT}060%g" \
--e "s%:26656%:${sided_PORT}656%g" \
--e "s%:26660%:${sided_PORT}660%g" ~/.side/config/config.toml
-```
-
-### Start node and check logs
-
-```js
-sudo systemctl start sided && sudo journalctl -u sided -f --no-hostname -o cat
+sed -i.bak -e "s%:26658%:${SIDED_PORT}658%g" \
+-e "s%:26657%:${SIDED_PORT}657%g" \
+-e "s%:6060%:${SIDED_PORT}060%g" \
+-e "s%:26656%:${SIDED_PORT}656%g" \
+-e "s%:26660%:${SIDED_PORT}660%g" ~/.side/config/config.toml
 ```

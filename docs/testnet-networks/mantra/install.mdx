@@ -84,7 +84,7 @@ sudo ln -s ~/.mantrachaind/cosmovisor/current/bin/mantrachaind /usr/local/bin/ma
 ## Download and install Cosmovisor
 
 ```js
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.1
 ```
 
 ## Run node
@@ -181,8 +181,8 @@ mantrachaind init NAME_OF_YOUR_VALIDATOR --chain-id mantra-dukong-1
 ### Download genesis and addrbook
 
 ```js
-curl https://snapshots-t.noders.services/mantra/genesis.json -o ~/.mantrachaind/config/genesis.json
-curl https://snapshots-t.noders.services/mantra/addrbook.json -o ~/.mantrachaind/config/addrbook.json
+curl https://snapshots.noders.services/mantra/genesis.json -o ~/.mantrachaind/config/genesis.json
+curl https://snapshots.noders.services/mantra/addrbook.json -o ~/.mantrachaind/config/addrbook.json
 ```
 
 ### Add peers
@@ -211,29 +211,23 @@ sed -i \
 ### Set custom ports
 
 ```bash
-echo "export mantrachaind_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export MANTRACHAIND_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
-# Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${mantrachaind_PORT}317%g" \
--e "s%:8080%:${mantrachaind_PORT}080%g" \
--e "s%:9090%:${mantrachaind_PORT}090%g" \
--e "s%:9091%:${mantrachaind_PORT}091%g" \
--e "s%:8545%:${mantrachaind_PORT}545%g" \
--e "s%:8546%:${mantrachaind_PORT}546%g" \
--e "s%:6065%:${mantrachaind_PORT}065%g" ~/.mantrachaind/config/app.toml
+# Set custom ports in app.tom{l
+sed -i.bak -e "s%:1317%:${MANTRACHAIND_PORT}317%g" \
+-e "s%:8080%:${MANTRACHAIND_PORT}080%g" \
+-e "s%:9090%:${MANTRACHAIND_PORT}090%g" \
+-e "s%:9091%:${MANTRACHAIND_PORT}091%g" \
+-e "s%:8545%:${MANTRACHAIND_PORT}545%g" \
+-e "s%:8546%:${MANTRACHAIND_PORT}546%g" \
+-e "s%:6065%:${MANTRACHAIND_PORT}065%g" ~/.mantrachaind/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${mantrachaind_PORT}658%g" \
--e "s%:26657%:${mantrachaind_PORT}657%g" \
--e "s%:6060%:${mantrachaind_PORT}060%g" \
--e "s%:26656%:${mantrachaind_PORT}656%g" \
--e "s%:26660%:${mantrachaind_PORT}660%g" ~/.mantrachaind/config/config.toml
-```
-
-### Start node and check logs
-
-```js
-sudo systemctl start mantrachaind && sudo journalctl -u mantrachaind -f --no-hostname -o cat
+sed -i.bak -e "s%:26658%:${MANTRACHAIND_PORT}658%g" \
+-e "s%:26657%:${MANTRACHAIND_PORT}657%g" \
+-e "s%:6060%:${MANTRACHAIND_PORT}060%g" \
+-e "s%:26656%:${MANTRACHAIND_PORT}656%g" \
+-e "s%:26660%:${MANTRACHAIND_PORT}660%g" ~/.mantrachaind/config/config.toml
 ```
