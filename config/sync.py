@@ -498,7 +498,7 @@ class BlockchainSyncer:
         if self.stats['template_fails']:
             template_display = ', '.join(self.stats['template_fails'][:5])
             if len(self.stats['template_fails']) > 5:
-                template_display += f', ... ({len(self.stats['template_fails']) - 5} more)'
+                template_display += f", ... ({len(self.stats['template_fails']) - 5} more)"
             print(f"\n📝 Template failures ({len(self.stats['template_fails'])}): {template_display}")
         
         print(f"\n📁 Output directory: {self.docs_dir}")
