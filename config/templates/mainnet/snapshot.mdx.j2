@@ -24,9 +24,17 @@ import PageTitle from "@site/src/components/PageTitle";
 
 ### Snapshot Information
 
-| Block Height        | Size   | Timestamp   | Download Link                   |
-| ------------------- | ------ | ----------- | ------------------------------- |
-| {{ snap_latest_block }} | {{ size }} | {{ timestamp }} | [Download]({{ snap_archive_link }}) |
+{% if snap_archive_link and snap_latest_block != '-' and size != '-' %}
+{# Detailed table when full snapshot info is available #}
+| Block Height | Size | Download Link |
+| ------------ | ---- | ------------- |
+| {{ snap_latest_block }} | {{ size }} | [Download]({{ snap_archive_link }}) |
+{% else %}
+{# Simple table when limited info or using fallback #}
+| Download Link |
+| ------------- |
+| [Download]({% if snap_archive_link %}{{ snap_archive_link }}{% else %}https://snapshots.noders.services/{{ chain_system_name }}/{% endif %}) |
+{% endif %}
 
 We take one node snapshot every day. We then delete all the previous snapshots to free up the space on the file server.
 
