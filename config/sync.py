@@ -104,7 +104,7 @@ class BlockchainSyncer:
         required_templates = [
             'main.mdx.j2', '_category_.json.j2', 'install.mdx.j2', 'upgrade.mdx.j2', 
             'snapshot.mdx.j2', 'statesync.mdx.j2', 'seeds-and-peers.mdx.j2', 
-            'cli-cheatsheet.mdx.j2', 'endpoints.mdx.j2'
+            'cli-cheatsheet.mdx.j2', 'endpoints.mdx.j2', 'monitoring.mdx.j2'
         ]
         
         for scope in ['mainnet', 'testnet']:
@@ -324,7 +324,7 @@ class BlockchainSyncer:
         content = await self._fetch_text(session, f"{base_url}/{chain_name}/")
         
         if not content:
-            return self._default_snapshot_info()
+            return self._default_snapshot_info(f"{base_url}/{chain_name}/")
         
         matches = re.findall(f'"{chain_name}.*\\.tar\\.lz4"', content)
         if not matches:
@@ -350,10 +350,10 @@ class BlockchainSyncer:
             'size': size
         }
 
-    def _default_snapshot_info(self) -> Dict[str, Any]:
+    def _default_snapshot_info(self, snap_url: Optional[str] = None) -> Dict[str, Any]:
         return {
-            'snap_latest_block': '-', 'snap_archive_name': '', 'snap_archive_link': '',
-            'snap_archive_download_command': 'Snapshot is not available',
+            'snap_latest_block': '-', 'snap_archive_name': '', 'snap_archive_link': snap_url,
+            'snap_archive_download_command': f'Snapshot file is not available, you can find it on {snap_url}',
             'timestamp': '-', 'size': '-'
         }
 
@@ -439,6 +439,7 @@ class BlockchainSyncer:
                 ('update_live_peers', 'seeds-and-peers.mdx', chain_dir, 'seeds-and-peers.mdx.j2'),
                 ('update_cli_cheatsheet', 'cli-cheatsheet.mdx', chain_dir, 'cli-cheatsheet.mdx.j2'),
                 ('update_endpoints', 'endpoints.mdx', chain_dir, 'endpoints.mdx.j2'),
+                ('update_monitoring', 'monitoring.mdx', chain_dir, 'monitoring.mdx.j2'),
             ]
             
             render_tasks = [

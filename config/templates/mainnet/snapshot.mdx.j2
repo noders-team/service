@@ -26,9 +26,9 @@ import PageTitle from "@site/src/components/PageTitle";
 
 {% if snap_archive_link and snap_latest_block != '-' and size != '-' %}
 {# Detailed table when full snapshot info is available #}
-| Block Height | Size | Download Link |
-| ------------ | ---- | ------------- |
-| {{ snap_latest_block }} | {{ size }} | [Download]({{ snap_archive_link }}) |
+| Block Height | Size | Timestamp | Download Link |
+| ------------ | ---- | --------- | ------------- |
+| {{ snap_latest_block }} | {{ size }} | {{ timestamp }} | [Download]({{ snap_archive_link }}) |
 {% else %}
 {# Simple table when limited info or using fallback #}
 | Download Link |
