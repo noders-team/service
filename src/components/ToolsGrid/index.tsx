@@ -97,12 +97,15 @@ function ToolsGrid(props: ToolsGridProps): React.ReactElement {
     props.showEndpoints ||
     props.showStateSync ||
     props.showSnapshot ||
-    props.showMonitoring ||
     props.showLivePeers ||
     props.showSeed ||
     props.showAddressBook;
   const showTools =
-    props.showExplorersList || props.showPublicEndpoints || props.showUsefulTools || props.showUpgradeWatcher;
+    props.showExplorersList || 
+    props.showPublicEndpoints || 
+    props.showUsefulTools || 
+    props.showUpgradeWatcher ||
+    props.showMonitoring;
 
   return (
     <Box display="flex" flexDirection="column" gap={5}>
@@ -161,7 +164,6 @@ function ToolsGrid(props: ToolsGridProps): React.ReactElement {
             {props.showEndpoints && <ToolCard icon={PiGraph} linkUrl={linkUrl + '/endpoints'} title="RPC, API, gRPC" />}
             {props.showStateSync && <ToolCard icon={PiLightning} linkUrl={linkUrl + '/statesync'} title="State Sync" />}
             {props.showSnapshot && <ToolCard icon={PiDatabase} linkUrl={linkUrl + '/snapshot'} title="Node Snapshot" />}
-            {props.showMonitoring && <ToolCard icon={PiChartLine} linkUrl={linkUrl + '/monitoring'} title="Monitoring" />}
             {props.showLivePeers && (
               <ToolCard icon={PiGitPullRequest} linkUrl={linkUrl + '/seeds-and-peers'} title="Live Peers" />
             )}
@@ -208,6 +210,7 @@ function ToolsGrid(props: ToolsGridProps): React.ReactElement {
             {props.showUpgradeWatcher && (
               <ToolCard icon={PiTarget} linkUrl={linkUrl + '/upgrade-watcher'} title="Upgrade Watcher" />
             )}
+            {props.showMonitoring && <ToolCard icon={PiChartLine} linkUrl={linkUrl + '/monitoring'} title="Monitoring" />}
           </Box>
         </Box>
       )}
