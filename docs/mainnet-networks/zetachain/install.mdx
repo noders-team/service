@@ -84,7 +84,7 @@ sudo ln -s ~/.zetacored/cosmovisor/current/bin/zetacored /usr/local/bin/zetacore
 ## Download and install Cosmovisor
 
 ```js
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.1
 ```
 
 ## Run node
@@ -211,29 +211,23 @@ sed -i \
 ### Set custom ports
 
 ```bash
-echo "export zetacored_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export ZETACORED_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
-# Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${zetacored_PORT}317%g" \
--e "s%:8080%:${zetacored_PORT}080%g" \
--e "s%:9090%:${zetacored_PORT}090%g" \
--e "s%:9091%:${zetacored_PORT}091%g" \
--e "s%:8545%:${zetacored_PORT}545%g" \
--e "s%:8546%:${zetacored_PORT}546%g" \
--e "s%:6065%:${zetacored_PORT}065%g" ~/.zetacored/config/app.toml
+# Set custom ports in app.tom{l
+sed -i.bak -e "s%:1317%:${ZETACORED_PORT}317%g" \
+-e "s%:8080%:${ZETACORED_PORT}080%g" \
+-e "s%:9090%:${ZETACORED_PORT}090%g" \
+-e "s%:9091%:${ZETACORED_PORT}091%g" \
+-e "s%:8545%:${ZETACORED_PORT}545%g" \
+-e "s%:8546%:${ZETACORED_PORT}546%g" \
+-e "s%:6065%:${ZETACORED_PORT}065%g" ~/.zetacored/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${zetacored_PORT}658%g" \
--e "s%:26657%:${zetacored_PORT}657%g" \
--e "s%:6060%:${zetacored_PORT}060%g" \
--e "s%:26656%:${zetacored_PORT}656%g" \
--e "s%:26660%:${zetacored_PORT}660%g" ~/.zetacored/config/config.toml
-```
-
-### Start node and check logs
-
-```js
-sudo systemctl start zetacored && sudo journalctl -u zetacored -f --no-hostname -o cat
+sed -i.bak -e "s%:26658%:${ZETACORED_PORT}658%g" \
+-e "s%:26657%:${ZETACORED_PORT}657%g" \
+-e "s%:6060%:${ZETACORED_PORT}060%g" \
+-e "s%:26656%:${ZETACORED_PORT}656%g" \
+-e "s%:26660%:${ZETACORED_PORT}660%g" ~/.zetacored/config/config.toml
 ```

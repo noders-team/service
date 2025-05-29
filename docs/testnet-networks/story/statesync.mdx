@@ -35,7 +35,7 @@ sudo systemctl stop story && story tendermint unsafe-reset-all --home ~/.story -
 ```
 
 ```bash
-peers="@story-t-rpc.noders.services:"
+peers="cf7cd44feb2ce662eed7bff437dc5a08f2f8b0f9@story-t-rpc.noders.services:26656"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.story/config/config.toml
 ```
 

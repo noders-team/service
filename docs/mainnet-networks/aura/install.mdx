@@ -84,7 +84,7 @@ sudo ln -s ~/.aura/cosmovisor/current/bin/aurad /usr/local/bin/aurad -f
 ## Download and install Cosmovisor
 
 ```js
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.1
 ```
 
 ## Run node
@@ -211,29 +211,23 @@ sed -i \
 ### Set custom ports
 
 ```bash
-echo "export aurad_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export AURAD_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
-# Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${aurad_PORT}317%g" \
--e "s%:8080%:${aurad_PORT}080%g" \
--e "s%:9090%:${aurad_PORT}090%g" \
--e "s%:9091%:${aurad_PORT}091%g" \
--e "s%:8545%:${aurad_PORT}545%g" \
--e "s%:8546%:${aurad_PORT}546%g" \
--e "s%:6065%:${aurad_PORT}065%g" ~/.aura/config/app.toml
+# Set custom ports in app.tom{l
+sed -i.bak -e "s%:1317%:${AURAD_PORT}317%g" \
+-e "s%:8080%:${AURAD_PORT}080%g" \
+-e "s%:9090%:${AURAD_PORT}090%g" \
+-e "s%:9091%:${AURAD_PORT}091%g" \
+-e "s%:8545%:${AURAD_PORT}545%g" \
+-e "s%:8546%:${AURAD_PORT}546%g" \
+-e "s%:6065%:${AURAD_PORT}065%g" ~/.aura/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${aurad_PORT}658%g" \
--e "s%:26657%:${aurad_PORT}657%g" \
--e "s%:6060%:${aurad_PORT}060%g" \
--e "s%:26656%:${aurad_PORT}656%g" \
--e "s%:26660%:${aurad_PORT}660%g" ~/.aura/config/config.toml
-```
-
-### Start node and check logs
-
-```js
-sudo systemctl start aurad && sudo journalctl -u aurad -f --no-hostname -o cat
+sed -i.bak -e "s%:26658%:${AURAD_PORT}658%g" \
+-e "s%:26657%:${AURAD_PORT}657%g" \
+-e "s%:6060%:${AURAD_PORT}060%g" \
+-e "s%:26656%:${AURAD_PORT}656%g" \
+-e "s%:26660%:${AURAD_PORT}660%g" ~/.aura/config/config.toml
 ```

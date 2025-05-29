@@ -84,7 +84,7 @@ sudo ln -s ~/.gitopia/cosmovisor/current/bin/gitopiad /usr/local/bin/gitopiad -f
 ## Download and install Cosmovisor
 
 ```js
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.1
 ```
 
 ## Run node
@@ -211,29 +211,23 @@ sed -i \
 ### Set custom ports
 
 ```bash
-echo "export gitopiad_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export GITOPIAD_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
-# Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${gitopiad_PORT}317%g" \
--e "s%:8080%:${gitopiad_PORT}080%g" \
--e "s%:9090%:${gitopiad_PORT}090%g" \
--e "s%:9091%:${gitopiad_PORT}091%g" \
--e "s%:8545%:${gitopiad_PORT}545%g" \
--e "s%:8546%:${gitopiad_PORT}546%g" \
--e "s%:6065%:${gitopiad_PORT}065%g" ~/.gitopia/config/app.toml
+# Set custom ports in app.tom{l
+sed -i.bak -e "s%:1317%:${GITOPIAD_PORT}317%g" \
+-e "s%:8080%:${GITOPIAD_PORT}080%g" \
+-e "s%:9090%:${GITOPIAD_PORT}090%g" \
+-e "s%:9091%:${GITOPIAD_PORT}091%g" \
+-e "s%:8545%:${GITOPIAD_PORT}545%g" \
+-e "s%:8546%:${GITOPIAD_PORT}546%g" \
+-e "s%:6065%:${GITOPIAD_PORT}065%g" ~/.gitopia/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${gitopiad_PORT}658%g" \
--e "s%:26657%:${gitopiad_PORT}657%g" \
--e "s%:6060%:${gitopiad_PORT}060%g" \
--e "s%:26656%:${gitopiad_PORT}656%g" \
--e "s%:26660%:${gitopiad_PORT}660%g" ~/.gitopia/config/config.toml
-```
-
-### Start node and check logs
-
-```js
-sudo systemctl start gitopiad && sudo journalctl -u gitopiad -f --no-hostname -o cat
+sed -i.bak -e "s%:26658%:${GITOPIAD_PORT}658%g" \
+-e "s%:26657%:${GITOPIAD_PORT}657%g" \
+-e "s%:6060%:${GITOPIAD_PORT}060%g" \
+-e "s%:26656%:${GITOPIAD_PORT}656%g" \
+-e "s%:26660%:${GITOPIAD_PORT}660%g" ~/.gitopia/config/config.toml
 ```

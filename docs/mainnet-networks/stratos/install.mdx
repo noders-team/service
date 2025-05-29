@@ -84,7 +84,7 @@ sudo ln -s ~/.stchaind/cosmovisor/current/bin/stchaind /usr/local/bin/stchaind -
 ## Download and install Cosmovisor
 
 ```js
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.1
 ```
 
 ## Run node
@@ -211,29 +211,23 @@ sed -i \
 ### Set custom ports
 
 ```bash
-echo "export stchaind_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export STCHAIND_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
-# Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${stchaind_PORT}317%g" \
--e "s%:8080%:${stchaind_PORT}080%g" \
--e "s%:9090%:${stchaind_PORT}090%g" \
--e "s%:9091%:${stchaind_PORT}091%g" \
--e "s%:8545%:${stchaind_PORT}545%g" \
--e "s%:8546%:${stchaind_PORT}546%g" \
--e "s%:6065%:${stchaind_PORT}065%g" ~/.stchaind/config/app.toml
+# Set custom ports in app.tom{l
+sed -i.bak -e "s%:1317%:${STCHAIND_PORT}317%g" \
+-e "s%:8080%:${STCHAIND_PORT}080%g" \
+-e "s%:9090%:${STCHAIND_PORT}090%g" \
+-e "s%:9091%:${STCHAIND_PORT}091%g" \
+-e "s%:8545%:${STCHAIND_PORT}545%g" \
+-e "s%:8546%:${STCHAIND_PORT}546%g" \
+-e "s%:6065%:${STCHAIND_PORT}065%g" ~/.stchaind/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${stchaind_PORT}658%g" \
--e "s%:26657%:${stchaind_PORT}657%g" \
--e "s%:6060%:${stchaind_PORT}060%g" \
--e "s%:26656%:${stchaind_PORT}656%g" \
--e "s%:26660%:${stchaind_PORT}660%g" ~/.stchaind/config/config.toml
-```
-
-### Start node and check logs
-
-```js
-sudo systemctl start stchaind && sudo journalctl -u stchaind -f --no-hostname -o cat
+sed -i.bak -e "s%:26658%:${STCHAIND_PORT}658%g" \
+-e "s%:26657%:${STCHAIND_PORT}657%g" \
+-e "s%:6060%:${STCHAIND_PORT}060%g" \
+-e "s%:26656%:${STCHAIND_PORT}656%g" \
+-e "s%:26660%:${STCHAIND_PORT}660%g" ~/.stchaind/config/config.toml
 ```

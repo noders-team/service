@@ -84,7 +84,7 @@ sudo ln -s ~/.routerd/cosmovisor/current/bin/routerd /usr/local/bin/routerd -f
 ## Download and install Cosmovisor
 
 ```js
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.1
 ```
 
 ## Run node
@@ -211,29 +211,23 @@ sed -i \
 ### Set custom ports
 
 ```bash
-echo "export routerd_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export ROUTERD_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
-# Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${routerd_PORT}317%g" \
--e "s%:8080%:${routerd_PORT}080%g" \
--e "s%:9090%:${routerd_PORT}090%g" \
--e "s%:9091%:${routerd_PORT}091%g" \
--e "s%:8545%:${routerd_PORT}545%g" \
--e "s%:8546%:${routerd_PORT}546%g" \
--e "s%:6065%:${routerd_PORT}065%g" ~/.routerd/config/app.toml
+# Set custom ports in app.tom{l
+sed -i.bak -e "s%:1317%:${ROUTERD_PORT}317%g" \
+-e "s%:8080%:${ROUTERD_PORT}080%g" \
+-e "s%:9090%:${ROUTERD_PORT}090%g" \
+-e "s%:9091%:${ROUTERD_PORT}091%g" \
+-e "s%:8545%:${ROUTERD_PORT}545%g" \
+-e "s%:8546%:${ROUTERD_PORT}546%g" \
+-e "s%:6065%:${ROUTERD_PORT}065%g" ~/.routerd/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${routerd_PORT}658%g" \
--e "s%:26657%:${routerd_PORT}657%g" \
--e "s%:6060%:${routerd_PORT}060%g" \
--e "s%:26656%:${routerd_PORT}656%g" \
--e "s%:26660%:${routerd_PORT}660%g" ~/.routerd/config/config.toml
-```
-
-### Start node and check logs
-
-```js
-sudo systemctl start routerd && sudo journalctl -u routerd -f --no-hostname -o cat
+sed -i.bak -e "s%:26658%:${ROUTERD_PORT}658%g" \
+-e "s%:26657%:${ROUTERD_PORT}657%g" \
+-e "s%:6060%:${ROUTERD_PORT}060%g" \
+-e "s%:26656%:${ROUTERD_PORT}656%g" \
+-e "s%:26660%:${ROUTERD_PORT}660%g" ~/.routerd/config/config.toml
 ```

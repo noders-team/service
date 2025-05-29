@@ -7,7 +7,7 @@ description: ''
 chain_name: 'Osmosis'
 scope: 'testnet'
 chain_id: 'osmo-test-5'
-binary_version: '29.0.0-rc1'
+binary_version: 'v29.0.0-rc1'
 icon_url: 'osmosis-icon.svg'
 ---
 
@@ -17,7 +17,7 @@ import PageTitle from "@site/src/components/PageTitle";
   iconUrl="img/osmosis-icon.svg"
   title="Osmosis Upgrade Guide"
   chainId="osmo-test-5"
-  version="29.0.0-rc1"
+  version="v29.0.0-rc1"
 />
 
 ## Clone Osmosis repository
@@ -27,7 +27,7 @@ cd $HOME
 rm -rf osmosis
 git clone https://github.com/osmosis-labs/osmosis.git
 cd osmosis
-git checkout 29.0.0-rc1
+git checkout v29.0.0-rc1
 ```
 
 ## Build binaries
@@ -39,8 +39,8 @@ make build
 ## Prepare binaries for Cosmovisor
 
 ```js
-mkdir -p ~/.osmosisd/cosmovisor/upgrades/29.0.0-rc1/bin
-mv build/osmosisd ~/.osmosisd/cosmovisor/upgrades/29.0.0-rc1/bin/
+mkdir -p ~/.osmosisd/cosmovisor/upgrades/v29.0.0-rc1/bin
+mv build/osmosisd ~/.osmosisd/cosmovisor/upgrades/v29.0.0-rc1/bin/
 rm -rf build
 ```
 
@@ -53,7 +53,7 @@ cd $HOME
 rm -rf osmosis
 git clone https://github.com/osmosis-labs/osmosis.git
 cd osmosis
-git checkout 29.0.0-rc1
+git checkout v29.0.0-rc1
 ```
 
 ## Build binaries

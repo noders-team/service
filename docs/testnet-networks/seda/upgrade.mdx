@@ -7,7 +7,7 @@ description: ''
 chain_name: 'Seda'
 scope: 'testnet'
 chain_id: 'seda-1-testnet'
-binary_version: '1.0.0-rc.2'
+binary_version: 'v1.0.0-rc.2'
 icon_url: 'seda-icon.svg'
 ---
 
@@ -17,7 +17,7 @@ import PageTitle from "@site/src/components/PageTitle";
   iconUrl="img/seda-icon.svg"
   title="Seda Upgrade Guide"
   chainId="seda-1-testnet"
-  version="1.0.0-rc.2"
+  version="v1.0.0-rc.2"
 />
 
 ## Clone Seda repository
@@ -27,7 +27,7 @@ cd $HOME
 rm -rf seda-chain
 git clone https://github.com/sedaprotocol/seda-chain.git
 cd seda-chain
-git checkout 1.0.0-rc.2
+git checkout v1.0.0-rc.2
 ```
 
 ## Build binaries
@@ -39,8 +39,8 @@ make build
 ## Prepare binaries for Cosmovisor
 
 ```js
-mkdir -p ~/.sedad/cosmovisor/upgrades/1.0.0-rc.2/bin
-mv build/sedad ~/.sedad/cosmovisor/upgrades/1.0.0-rc.2/bin/
+mkdir -p ~/.sedad/cosmovisor/upgrades/v1.0.0-rc.2/bin
+mv build/sedad ~/.sedad/cosmovisor/upgrades/v1.0.0-rc.2/bin/
 rm -rf build
 ```
 
@@ -53,7 +53,7 @@ cd $HOME
 rm -rf seda-chain
 git clone https://github.com/sedaprotocol/seda-chain.git
 cd seda-chain
-git checkout 1.0.0-rc.2
+git checkout v1.0.0-rc.2
 ```
 
 ## Build binaries

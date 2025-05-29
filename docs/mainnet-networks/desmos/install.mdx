@@ -84,7 +84,7 @@ sudo ln -s ~/.desmos/cosmovisor/current/bin/desmos /usr/local/bin/desmos -f
 ## Download and install Cosmovisor
 
 ```js
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.1
 ```
 
 ## Run node
@@ -211,29 +211,23 @@ sed -i \
 ### Set custom ports
 
 ```bash
-echo "export desmos_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export DESMOS_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
-# Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${desmos_PORT}317%g" \
--e "s%:8080%:${desmos_PORT}080%g" \
--e "s%:9090%:${desmos_PORT}090%g" \
--e "s%:9091%:${desmos_PORT}091%g" \
--e "s%:8545%:${desmos_PORT}545%g" \
--e "s%:8546%:${desmos_PORT}546%g" \
--e "s%:6065%:${desmos_PORT}065%g" ~/.desmos/config/app.toml
+# Set custom ports in app.tom{l
+sed -i.bak -e "s%:1317%:${DESMOS_PORT}317%g" \
+-e "s%:8080%:${DESMOS_PORT}080%g" \
+-e "s%:9090%:${DESMOS_PORT}090%g" \
+-e "s%:9091%:${DESMOS_PORT}091%g" \
+-e "s%:8545%:${DESMOS_PORT}545%g" \
+-e "s%:8546%:${DESMOS_PORT}546%g" \
+-e "s%:6065%:${DESMOS_PORT}065%g" ~/.desmos/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${desmos_PORT}658%g" \
--e "s%:26657%:${desmos_PORT}657%g" \
--e "s%:6060%:${desmos_PORT}060%g" \
--e "s%:26656%:${desmos_PORT}656%g" \
--e "s%:26660%:${desmos_PORT}660%g" ~/.desmos/config/config.toml
-```
-
-### Start node and check logs
-
-```js
-sudo systemctl start desmos && sudo journalctl -u desmos -f --no-hostname -o cat
+sed -i.bak -e "s%:26658%:${DESMOS_PORT}658%g" \
+-e "s%:26657%:${DESMOS_PORT}657%g" \
+-e "s%:6060%:${DESMOS_PORT}060%g" \
+-e "s%:26656%:${DESMOS_PORT}656%g" \
+-e "s%:26660%:${DESMOS_PORT}660%g" ~/.desmos/config/config.toml
 ```

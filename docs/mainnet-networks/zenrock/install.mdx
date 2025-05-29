@@ -84,7 +84,7 @@ sudo ln -s ~/.zrchain/cosmovisor/current/bin/zenrockd /usr/local/bin/zenrockd -f
 ## Download and install Cosmovisor
 
 ```js
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.1
 ```
 
 ## Run node
@@ -211,29 +211,23 @@ sed -i \
 ### Set custom ports
 
 ```bash
-echo "export zenrockd_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export ZENROCKD_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
-# Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${zenrockd_PORT}317%g" \
--e "s%:8080%:${zenrockd_PORT}080%g" \
--e "s%:9090%:${zenrockd_PORT}090%g" \
--e "s%:9091%:${zenrockd_PORT}091%g" \
--e "s%:8545%:${zenrockd_PORT}545%g" \
--e "s%:8546%:${zenrockd_PORT}546%g" \
--e "s%:6065%:${zenrockd_PORT}065%g" ~/.zrchain/config/app.toml
+# Set custom ports in app.tom{l
+sed -i.bak -e "s%:1317%:${ZENROCKD_PORT}317%g" \
+-e "s%:8080%:${ZENROCKD_PORT}080%g" \
+-e "s%:9090%:${ZENROCKD_PORT}090%g" \
+-e "s%:9091%:${ZENROCKD_PORT}091%g" \
+-e "s%:8545%:${ZENROCKD_PORT}545%g" \
+-e "s%:8546%:${ZENROCKD_PORT}546%g" \
+-e "s%:6065%:${ZENROCKD_PORT}065%g" ~/.zrchain/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${zenrockd_PORT}658%g" \
--e "s%:26657%:${zenrockd_PORT}657%g" \
--e "s%:6060%:${zenrockd_PORT}060%g" \
--e "s%:26656%:${zenrockd_PORT}656%g" \
--e "s%:26660%:${zenrockd_PORT}660%g" ~/.zrchain/config/config.toml
-```
-
-### Start node and check logs
-
-```js
-sudo systemctl start zenrockd && sudo journalctl -u zenrockd -f --no-hostname -o cat
+sed -i.bak -e "s%:26658%:${ZENROCKD_PORT}658%g" \
+-e "s%:26657%:${ZENROCKD_PORT}657%g" \
+-e "s%:6060%:${ZENROCKD_PORT}060%g" \
+-e "s%:26656%:${ZENROCKD_PORT}656%g" \
+-e "s%:26660%:${ZENROCKD_PORT}660%g" ~/.zrchain/config/config.toml
 ```

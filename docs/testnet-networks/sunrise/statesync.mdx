@@ -35,7 +35,7 @@ sudo systemctl stop sunrised && sunrised tendermint unsafe-reset-all --home ~/.s
 ```
 
 ```bash
-peers="@sunrise-t-rpc.noders.services:"
+peers="auto"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.sunrise/config/config.toml
 ```
 

@@ -6,7 +6,7 @@ hide_table_of_contents: false
 description: ''
 chain_name: 'ZeroGravity'
 scope: 'testnet'
-chain_id: 'auto'
+chain_id: '0gchain-16601'
 binary_version: 'v0.2.0-alpha.4-726-g680c0d7e2'
 icon_url: 'og-icon.svg'
 ---
@@ -16,7 +16,7 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/og-icon.svg"
   title="ZeroGravity Installation Guide"
-  chainId="auto"
+  chainId="0gchain-16601"
   version="v0.2.0-alpha.4-726-g680c0d7e2"
 />
 
@@ -84,7 +84,7 @@ sudo ln -s ~/.0gchain/cosmovisor/current/bin/0gchaind /usr/local/bin/0gchaind -f
 ## Download and install Cosmovisor
 
 ```js
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.1
 ```
 
 ## Run node
@@ -167,7 +167,7 @@ sudo systemctl enable 0gchaind
 ### Set config
 
 ```js
-0gchaind config chain-id auto
+0gchaind config chain-id 0gchain-16601
 0gchaind config keyring-backend os
 0gchaind config node tcp://localhost:26657
 ```
@@ -175,20 +175,20 @@ sudo systemctl enable 0gchaind
 ### Initialize the node
 
 ```js
-0gchaind init NAME_OF_YOUR_VALIDATOR --chain-id auto
+0gchaind init NAME_OF_YOUR_VALIDATOR --chain-id 0gchain-16601
 ```
 
 ### Download genesis and addrbook
 
 ```js
-curl https://snapshots-t.noders.services/og/genesis.json -o ~/.0gchain/config/genesis.json
-curl https://snapshots-t.noders.services/og/addrbook.json -o ~/.0gchain/config/addrbook.json
+curl https://snapshots.noders.services/og/genesis.json -o ~/.0gchain/config/genesis.json
+curl https://snapshots.noders.services/og/addrbook.json -o ~/.0gchain/config/addrbook.json
 ```
 
 ### Add peers
 
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"@og-t-rpc.noders.services:\"/" ~/.0gchain/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"bad556a90877c1f73163d2625993352260fd5450@og-t-rpc.noders.services:23856\"/" ~/.0gchain/config/config.toml
 ```
 
 ### Set minimum gas price
@@ -211,29 +211,23 @@ sed -i \
 ### Set custom ports
 
 ```bash
-echo "export 0gchaind_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export 0GCHAIND_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
-# Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${0gchaind_PORT}317%g" \
--e "s%:8080%:${0gchaind_PORT}080%g" \
--e "s%:9090%:${0gchaind_PORT}090%g" \
--e "s%:9091%:${0gchaind_PORT}091%g" \
--e "s%:8545%:${0gchaind_PORT}545%g" \
--e "s%:8546%:${0gchaind_PORT}546%g" \
--e "s%:6065%:${0gchaind_PORT}065%g" ~/.0gchain/config/app.toml
+# Set custom ports in app.tom{l
+sed -i.bak -e "s%:1317%:${0GCHAIND_PORT}317%g" \
+-e "s%:8080%:${0GCHAIND_PORT}080%g" \
+-e "s%:9090%:${0GCHAIND_PORT}090%g" \
+-e "s%:9091%:${0GCHAIND_PORT}091%g" \
+-e "s%:8545%:${0GCHAIND_PORT}545%g" \
+-e "s%:8546%:${0GCHAIND_PORT}546%g" \
+-e "s%:6065%:${0GCHAIND_PORT}065%g" ~/.0gchain/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${0gchaind_PORT}658%g" \
--e "s%:26657%:${0gchaind_PORT}657%g" \
--e "s%:6060%:${0gchaind_PORT}060%g" \
--e "s%:26656%:${0gchaind_PORT}656%g" \
--e "s%:26660%:${0gchaind_PORT}660%g" ~/.0gchain/config/config.toml
-```
-
-### Start node and check logs
-
-```js
-sudo systemctl start 0gchaind && sudo journalctl -u 0gchaind -f --no-hostname -o cat
+sed -i.bak -e "s%:26658%:${0GCHAIND_PORT}658%g" \
+-e "s%:26657%:${0GCHAIND_PORT}657%g" \
+-e "s%:6060%:${0GCHAIND_PORT}060%g" \
+-e "s%:26656%:${0GCHAIND_PORT}656%g" \
+-e "s%:26660%:${0GCHAIND_PORT}660%g" ~/.0gchain/config/config.toml
 ```
