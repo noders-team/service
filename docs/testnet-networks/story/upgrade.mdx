@@ -7,7 +7,7 @@ description: ''
 chain_name: 'Story'
 scope: 'testnet'
 chain_id: 'devnet-1'
-binary_version: 'v1.1.0'
+binary_version: 'v1.2.0'
 icon_url: 'story-icon.svg'
 ---
 
@@ -17,53 +17,95 @@ import PageTitle from "@site/src/components/PageTitle";
   iconUrl="img/story-icon.svg"
   title="Story Upgrade Guide"
   chainId="devnet-1"
-  version="v1.1.0"
+  version="v1.2.0"
 />
 
-## Clone Story repository
+:::warning
+Upgrade height: 2065886. Please don't upgrade before the specified height
+:::
 
-```js
+## Manual upgrade
+
+```bash
 cd $HOME
 rm -rf story
-git clone https://github.com/piplabs/story.git
+git clone https://github.com/piplabs/story
 cd story
-git checkout v1.1.0
+git checkout v1.2.0
+go build -o story ./client 
+sudo systemctl stop story-geth
+wget -O $(which geth) https://github.com/piplabs/story-geth/releases/download/v1.0.2/geth-linux-amd64
+chmod +x $(which geth)
+sudo systemctl start story-geth
+sudo mv $HOME/story/story $(which story)
+sudo systemctl restart story && sudo journalctl -u story -f
 ```
 
-## Build binaries
+## Automatic upgrade (Systemd)
 
-```js
-make build
+:::note
+Don't kill the session with CTRL+C before update is completed, if you want to disconnect the session use CTRL+B D
+:::
+
+```bash
+cd $HOME && \
+rm -rf story && \
+git clone https://github.com/piplabs/story && \
+cd story && \
+git checkout v1.2.0 && \
+go build -o story ./client  && \
+sudo systemctl stop story-geth && \
+wget -O $(which geth) https://github.com/piplabs/story-geth/releases/download/v1.0.2/geth-linux-amd64 && \
+chmod +x $(which geth) && \
+sudo systemctl start story-geth && \
+old_bin_path=$(which story) && \
+home_path=$HOME && \
+rpc_port=$(grep -m 1 -oP '^laddr = "\K[^"]+' "$HOME/.story/story/config/config.toml" | cut -d ':' -f 3) && \
+[[ -z "$rpc_port" ]] && rpc_port=$(grep -oP 'node = "tcp://[^:]+:\K\d+' "$HOME/.story/story/config/client.toml") ; \
+tmux new -s story-upgrade "sudo bash -c 'curl -s https://raw.githubusercontent.com/itrocket-team/testnet_guides/main/utils/autoupgrade/upgrade.sh | bash -s -- -u \"2065886\" -b story -n \"$HOME/story/story\" -o \"$old_bin_path\" -h \"$home_path\" -p \"undefined\" -r \"$rpc_port\"'"
 ```
 
-## Prepare binaries for Cosmovisor
+## Cosmovisor upgrade
 
-```js
-mkdir -p ~/.story/cosmovisor/upgrades/v1.1.0/bin
-mv build/story ~/.story/cosmovisor/upgrades/v1.1.0/bin/
-rm -rf build
-```
+### Prepare binaries for Cosmovisor
 
-# Without Cosmovisor
-
-## Clone Story repository
-
-```js
+```bash
+mkdir -p ~/.story/story/cosmovisor/upgrades/v1.2.0/bin
 cd $HOME
 rm -rf story
-git clone https://github.com/piplabs/story.git
+git clone https://github.com/piplabs/story
 cd story
-git checkout v1.1.0
+git checkout v1.2.0
+go build -o story ./client 
+mv $HOME/story/story ~/.story/story/cosmovisor/upgrades/v1.2.0/bin/
 ```
 
-## Build binaries
+### Update geth binary
 
-```js
-make install
+```bash
+sudo systemctl stop story-geth
+wget -O $(which geth) https://github.com/piplabs/story-geth/releases/download/v1.0.2/geth-linux-amd64
+chmod +x $(which geth)
+sudo systemctl start story-geth
 ```
 
-## Restart node and check logs
+### Restart services
 
-```js
-sudo systemctl restart story && sudo journalctl -u story -f --no-hostname -o cat
+```bash
+sudo systemctl restart story && sudo journalctl -u story -f
+```
+
+## Verification
+
+After the upgrade, verify that your node is running the correct version:
+
+```bash
+story version
+geth version
+```
+
+Monitor the logs to ensure the upgrade was successful:
+
+```bash
+sudo journalctl -u story -u story-geth -f
 ```
