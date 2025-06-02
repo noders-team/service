@@ -1,0 +1,70 @@
+---
+title: 'Upgrade Guide'
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
+description: ''
+chain_name: '{{ chain_name }}'
+scope: '{{ scope }}'
+chain_id: '{{ chain_id }}'
+binary_version: '{{ version }}'
+icon_url: '{{ chain_icon }}'
+---
+
+import PageTitle from "@site/src/components/PageTitle";
+
+<PageTitle
+  iconUrl="img/{{ chain_icon }}"
+  title="{{ chain_name }} Upgrade Guide"
+  chainId="{{ chain_id }}"
+  version="{{ version }}"
+/>
+
+## Clone {{ chain_name }} repository
+
+```js
+cd $HOME
+rm -rf {{ github_folder_name }}
+git clone {{ social_github }}.git
+cd {{ github_folder_name }}
+git checkout {{ version }}
+```
+
+## Build binaries
+
+```js
+make build
+```
+
+## Prepare binaries for Cosmovisor
+
+```js
+mkdir -p {{ daemon_home }}/cosmovisor/upgrades/{{ version }}/bin
+mv build/{{ daemon_name }} {{ daemon_home }}/cosmovisor/upgrades/{{ version }}/bin/
+rm -rf build
+```
+
+# Without Cosmovisor
+
+## Clone {{ chain_name }} repository
+
+```js
+cd $HOME
+rm -rf {{ github_folder_name }}
+git clone {{ social_github }}.git
+cd {{ github_folder_name }}
+git checkout {{ version }}
+```
+
+## Build binaries
+
+```js
+make install
+```
+
+## Restart node and check logs
+
+```js
+sudo systemctl restart {{ daemon_name }} && sudo journalctl -u {{ daemon_name }} -f --no-hostname -o cat
+```
+

@@ -6,8 +6,8 @@ hide_table_of_contents: false
 description: ''
 chain_name: 'ZeroGravity'
 scope: 'testnet'
-chain_id: 'zgtendermint_16600-2'
-binary_version: 'v0.5.0.1'
+chain_id: '0gchain-16601'
+binary_version: 'v0.2.0-alpha.4-726-g680c0d7e2'
 icon_url: 'og-icon.svg'
 ---
 
@@ -16,8 +16,8 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/og-icon.svg"
   title="ZeroGravity State Sync"
-  chainId="zgtendermint_16600-2"
-  version="v0.5.0.1"
+  chainId="0gchain-16601"
+  version="v0.2.0-alpha.4-726-g680c0d7e2"
 />
 
 ## How to enable state sync
@@ -35,7 +35,7 @@ sudo systemctl stop 0gchaind && 0gchaind tendermint unsafe-reset-all --home ~/.0
 ```
 
 ```bash
-peers="d9fee544b90d15c4f024e52b6c5b2fd9fd199514@og-t-rpc.noders.services:23856"
+peers="bad556a90877c1f73163d2625993352260fd5450@og-t-rpc.noders.services:23856"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.0gchain/config/config.toml
 ```
 

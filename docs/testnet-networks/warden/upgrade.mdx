@@ -7,7 +7,7 @@ description: ''
 chain_name: 'Warden'
 scope: 'testnet'
 chain_id: 'chiado_10010-1'
-binary_version: 'v0.6.2'
+binary_version: 'v0.6.3'
 icon_url: 'warden-icon.svg'
 ---
 
@@ -17,7 +17,7 @@ import PageTitle from "@site/src/components/PageTitle";
   iconUrl="img/warden-icon.svg"
   title="Warden Upgrade Guide"
   chainId="chiado_10010-1"
-  version="v0.6.2"
+  version="v0.6.3"
 />
 
 ## Clone Warden repository
@@ -27,7 +27,7 @@ cd $HOME
 rm -rf wardenprotocol
 git clone https://github.com/warden-protocol/wardenprotocol.git
 cd wardenprotocol
-git checkout v0.6.2
+git checkout v0.6.3
 ```
 
 ## Build binaries
@@ -39,8 +39,8 @@ make build
 ## Prepare binaries for Cosmovisor
 
 ```js
-mkdir -p ~/.warden/cosmovisor/upgrades/v0.6.2/bin
-mv build/wardend ~/.warden/cosmovisor/upgrades/v0.6.2/bin/
+mkdir -p ~/.warden/cosmovisor/upgrades/v0.6.3/bin
+mv build/wardend ~/.warden/cosmovisor/upgrades/v0.6.3/bin/
 rm -rf build
 ```
 
@@ -53,7 +53,7 @@ cd $HOME
 rm -rf wardenprotocol
 git clone https://github.com/warden-protocol/wardenprotocol.git
 cd wardenprotocol
-git checkout v0.6.2
+git checkout v0.6.3
 ```
 
 ## Build binaries

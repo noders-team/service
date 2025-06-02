@@ -55,7 +55,8 @@ fi
 
 log "Starting sync process.."
 cd $SERVICES_CONFIG_PATH
-bash sync.sh 2>&1 | tee -a "$LOG_FILE"
+pip3 install -r requirements.txt --user --quiet
+python3 sync.py --docs-dir "$SERVICES_REPO_PATH/docs" 2>&1 | tee -a "$LOG_FILE"
 
 cd "$SERVICES_REPO_PATH"
 if ! git diff --quiet; then
@@ -68,10 +69,10 @@ log "Building static files..."
 yarn install
 yarn build || {
 	log "Build failed! Rolling back..."
-	rm -rf "$DEPLOY_DIR"
-        cp -r "$DEPLOY_BACKUP_DIR" "$DEPLOY_DIR"
+	sudo rm -rf "$DEPLOY_DIR"
+  sudo cp -r "$DEPLOY_BACKUP_DIR" "$DEPLOY_DIR"
 	exit 1
-    }
+}
 
 log "Update static files with zero downtime..."
 mkdir -p $TEMP_DEPLOY_DIR

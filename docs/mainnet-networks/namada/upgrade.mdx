@@ -1,0 +1,125 @@
+---
+title: 'Upgrade'
+sidebar_position: 3
+hide_title: true
+hide_table_of_contents: false
+---
+
+import PageTitle from "@site/src/components/PageTitle";
+
+<PageTitle
+  iconUrl="img/namada-icon.svg"
+  title="Upgrade"
+  chainId="namada.5f5de2dd1b88cba30586420"
+  version="v101.0.0"
+/>
+
+## Prepare to Upgrade
+
+:::warning
+Do not use this guide until block 2176000 is reached
+:::
+
+```bash
+cd $HOME
+sudo systemctl stop namadad
+rm -rf namada
+git clone https://github.com/anoma/namada
+cd namada
+git checkout v101.0.0
+make build
+sudo cp $HOME/namada/target/release/namad* /usr/local/bin/
+wget https://raw.githubusercontent.com/anoma/namada/refs/heads/brent/mainnet-upgrade-pre-phase4/pre_phase4_migration.json
+sha256sum pre_phase4_migration.json
+# 83d7b4fc38f135adfae2f6219bf13c1bbf9022609fb61124be1ff0c5f79e1d7e
+MIGRATION_HASH=83d7b4fc38f135adfae2f6219bf13c1bbf9022609fb61124be1ff0c5f79e1d7e
+
+# create service file 
+sudo tee /etc/systemd/system/namadad.service > /dev/null <<EOF
+[Unit]
+Description=namada
+After=network-online.target
+
+[Service]
+User=$USER
+WorkingDirectory=$BASE_DIR
+Environment=CMT_LOG_LEVEL=p2p:none,pex:error
+Environment=NAMADA_CMT_STDOUT=true
+ExecStart=$(which namada) node ledger run --path $HOME/pre_phase4_migration.json \
+--hash 83d7b4fc38f135adfae2f6219bf13c1bbf9022609fb61124be1ff0c5f79e1d7e --height 2176020
+StandardOutput=syslog
+StandardError=syslog
+Restart=always
+RestartSec=10
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+sudo systemctl daemon-reload
+sudo systemctl restart namadad && sudo journalctl -u namadad -f
+```
+
+## Verification
+
+After the upgrade, verify that your node is running the correct version:
+
+```bash
+namada --version
+```
+
+Monitor the logs to ensure the upgrade was successful:
+
+```bash
+sudo journalctl -u namadad -f --no-hostname -o cat
+```
+
+## Troubleshooting
+
+If you encounter issues during the upgrade:
+
+1. **Check service status:**
+```bash
+sudo systemctl status namadad
+```
+
+2. **View detailed logs:**
+```bash
+sudo journalctl -u namadad -f
+```
+
+3. **Verify migration file hash:**
+```bash
+sha256sum $HOME/pre_phase4_migration.json
+```
+
+4. **Check if the upgrade height has been reached:**
+```bash
+# Check current block height
+curl -s http://localhost:26657/status | jq -r '.result.sync_info.latest_block_height'
+```
+
+## Post-Upgrade
+
+After successful upgrade:
+
+1. **Verify node synchronization**
+2. **Check validator status** (if applicable)
+3. **Monitor performance** and ensure stable operation
+4. **Update any automation scripts** to use the new version
+
+## Rollback (Emergency Only)
+
+In case of critical issues, you may need to rollback:
+
+```bash
+sudo systemctl stop namadad
+# Restore previous version binaries
+# Restore previous service file
+sudo systemctl start namadad
+```
+
+:::caution
+Only perform rollback if absolutely necessary and consult with the Namada community first.
+::: 

@@ -84,7 +84,7 @@ sudo ln -s ~/.rebusd/cosmovisor/current/bin/rebusd /usr/local/bin/rebusd -f
 ## Download and install Cosmovisor
 
 ```js
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.1
 ```
 
 ## Run node
@@ -211,29 +211,23 @@ sed -i \
 ### Set custom ports
 
 ```bash
-echo "export rebusd_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export REBUSD_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
-# Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${rebusd_PORT}317%g" \
--e "s%:8080%:${rebusd_PORT}080%g" \
--e "s%:9090%:${rebusd_PORT}090%g" \
--e "s%:9091%:${rebusd_PORT}091%g" \
--e "s%:8545%:${rebusd_PORT}545%g" \
--e "s%:8546%:${rebusd_PORT}546%g" \
--e "s%:6065%:${rebusd_PORT}065%g" ~/.rebusd/config/app.toml
+# Set custom ports in app.tom{l
+sed -i.bak -e "s%:1317%:${REBUSD_PORT}317%g" \
+-e "s%:8080%:${REBUSD_PORT}080%g" \
+-e "s%:9090%:${REBUSD_PORT}090%g" \
+-e "s%:9091%:${REBUSD_PORT}091%g" \
+-e "s%:8545%:${REBUSD_PORT}545%g" \
+-e "s%:8546%:${REBUSD_PORT}546%g" \
+-e "s%:6065%:${REBUSD_PORT}065%g" ~/.rebusd/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${rebusd_PORT}658%g" \
--e "s%:26657%:${rebusd_PORT}657%g" \
--e "s%:6060%:${rebusd_PORT}060%g" \
--e "s%:26656%:${rebusd_PORT}656%g" \
--e "s%:26660%:${rebusd_PORT}660%g" ~/.rebusd/config/config.toml
-```
-
-### Start node and check logs
-
-```js
-sudo systemctl start rebusd && sudo journalctl -u rebusd -f --no-hostname -o cat
+sed -i.bak -e "s%:26658%:${REBUSD_PORT}658%g" \
+-e "s%:26657%:${REBUSD_PORT}657%g" \
+-e "s%:6060%:${REBUSD_PORT}060%g" \
+-e "s%:26656%:${REBUSD_PORT}656%g" \
+-e "s%:26660%:${REBUSD_PORT}660%g" ~/.rebusd/config/config.toml
 ```

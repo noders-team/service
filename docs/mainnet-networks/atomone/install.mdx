@@ -7,7 +7,7 @@ description: ''
 chain_name: 'Atomone'
 scope: 'mainnet'
 chain_id: 'atomone-1'
-binary_version: 'v1.1.2'
+binary_version: 'v2.0.0'
 icon_url: 'atomone-icon.svg'
 ---
 
@@ -17,7 +17,7 @@ import PageTitle from "@site/src/components/PageTitle";
   iconUrl="img/atomone-icon.svg"
   title="Atomone Installation Guide"
   chainId="atomone-1"
-  version="v1.1.2"
+  version="v2.0.0"
 />
 
 ## Install dependencies
@@ -51,13 +51,13 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 ### Download and build binaries
 
-### Clone Atomone repo and build atomoned v1.1.2
+### Clone Atomone repo and build atomoned v2.0.0
 
 ```js
 cd $HOME
 git clone https://github.com/atomone-hub/atomone.git
 cd atomone
-git checkout v1.1.2
+git checkout v2.0.0
 ```
 
 ### Build binaries
@@ -70,8 +70,8 @@ make install
 
 ```js
 cd $HOME
-mkdir -p ~/.atomone/cosmovisor/upgrades/v1.1.2/bin
-mv $HOME/go/bin/atomoned ~/.atomone/cosmovisor/upgrades/v1.1.2/bin/
+mkdir -p ~/.atomone/cosmovisor/upgrades/v2.0.0/bin
+mv $HOME/go/bin/atomoned ~/.atomone/cosmovisor/upgrades/v2.0.0/bin/
 ```
 
 ### Create symlinks
@@ -84,7 +84,7 @@ sudo ln -s ~/.atomone/cosmovisor/current/bin/atomoned /usr/local/bin/atomoned -f
 ## Download and install Cosmovisor
 
 ```js
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.1
 ```
 
 ## Run node
@@ -117,13 +117,13 @@ EOF
 
 ### Download and build binaries
 
-### Clone Atomone repo and build atomoned v1.1.2
+### Clone Atomone repo and build atomoned v2.0.0
 
 ```js
 cd $HOME
 git clone https://github.com/atomone-hub/atomone.git
 cd atomone
-git checkout v1.1.2
+git checkout v2.0.0
 ```
 
 ### Build binaries
@@ -211,29 +211,23 @@ sed -i \
 ### Set custom ports
 
 ```bash
-echo "export atomoned_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export ATOMONED_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
-# Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${atomoned_PORT}317%g" \
--e "s%:8080%:${atomoned_PORT}080%g" \
--e "s%:9090%:${atomoned_PORT}090%g" \
--e "s%:9091%:${atomoned_PORT}091%g" \
--e "s%:8545%:${atomoned_PORT}545%g" \
--e "s%:8546%:${atomoned_PORT}546%g" \
--e "s%:6065%:${atomoned_PORT}065%g" ~/.atomone/config/app.toml
+# Set custom ports in app.tom{l
+sed -i.bak -e "s%:1317%:${ATOMONED_PORT}317%g" \
+-e "s%:8080%:${ATOMONED_PORT}080%g" \
+-e "s%:9090%:${ATOMONED_PORT}090%g" \
+-e "s%:9091%:${ATOMONED_PORT}091%g" \
+-e "s%:8545%:${ATOMONED_PORT}545%g" \
+-e "s%:8546%:${ATOMONED_PORT}546%g" \
+-e "s%:6065%:${ATOMONED_PORT}065%g" ~/.atomone/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${atomoned_PORT}658%g" \
--e "s%:26657%:${atomoned_PORT}657%g" \
--e "s%:6060%:${atomoned_PORT}060%g" \
--e "s%:26656%:${atomoned_PORT}656%g" \
--e "s%:26660%:${atomoned_PORT}660%g" ~/.atomone/config/config.toml
-```
-
-### Start node and check logs
-
-```js
-sudo systemctl start atomoned && sudo journalctl -u atomoned -f --no-hostname -o cat
+sed -i.bak -e "s%:26658%:${ATOMONED_PORT}658%g" \
+-e "s%:26657%:${ATOMONED_PORT}657%g" \
+-e "s%:6060%:${ATOMONED_PORT}060%g" \
+-e "s%:26656%:${ATOMONED_PORT}656%g" \
+-e "s%:26660%:${ATOMONED_PORT}660%g" ~/.atomone/config/config.toml
 ```

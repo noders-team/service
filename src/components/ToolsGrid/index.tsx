@@ -5,6 +5,7 @@ import {
   PiArrowRightBold,
   PiBookOpenText,
   PiBroadcast,
+  PiChartLine,
   PiCubeFocus,
   PiDatabase,
   PiFediverseLogo,
@@ -73,6 +74,7 @@ type ToolsGridProps = {
   showEndpoints: boolean;
   showStateSync: boolean;
   showSnapshot: boolean;
+  showMonitoring: boolean;
   showLivePeers: boolean;
   showSeed: boolean;
   showAddressBook: boolean;
@@ -99,7 +101,11 @@ function ToolsGrid(props: ToolsGridProps): React.ReactElement {
     props.showSeed ||
     props.showAddressBook;
   const showTools =
-    props.showExplorersList || props.showPublicEndpoints || props.showUsefulTools || props.showUpgradeWatcher;
+    props.showExplorersList || 
+    props.showPublicEndpoints || 
+    props.showUsefulTools || 
+    props.showUpgradeWatcher ||
+    props.showMonitoring;
 
   return (
     <Box display="flex" flexDirection="column" gap={5}>
@@ -204,6 +210,7 @@ function ToolsGrid(props: ToolsGridProps): React.ReactElement {
             {props.showUpgradeWatcher && (
               <ToolCard icon={PiTarget} linkUrl={linkUrl + '/upgrade-watcher'} title="Upgrade Watcher" />
             )}
+            {props.showMonitoring && <ToolCard icon={PiChartLine} linkUrl={linkUrl + '/monitoring'} title="Monitoring" />}
           </Box>
         </Box>
       )}

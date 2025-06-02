@@ -1,0 +1,69 @@
+---
+title: 'Upgrade Guide'
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
+description: ''
+chain_name: 'Arkeo'
+scope: 'testnet'
+chain_id: 'arkeo-testnet-4'
+binary_version: 'v1.0.13'
+icon_url: 'arkeo-icon.svg'
+---
+
+import PageTitle from "@site/src/components/PageTitle";
+
+<PageTitle
+  iconUrl="img/arkeo-icon.svg"
+  title="Arkeo Upgrade Guide"
+  chainId="arkeo-testnet-4"
+  version="v1.0.13"
+/>
+
+## Clone Arkeo repository
+
+```js
+cd $HOME
+rm -rf arkeonetwork
+git clone https://github.com/arkeonetwork.git
+cd arkeonetwork
+git checkout v1.0.13
+```
+
+## Build binaries
+
+```js
+make build
+```
+
+## Prepare binaries for Cosmovisor
+
+```js
+mkdir -p ~/.arkeo/cosmovisor/upgrades/v1.0.13/bin
+mv build/arkeod ~/.arkeo/cosmovisor/upgrades/v1.0.13/bin/
+rm -rf build
+```
+
+# Without Cosmovisor
+
+## Clone Arkeo repository
+
+```js
+cd $HOME
+rm -rf arkeonetwork
+git clone https://github.com/arkeonetwork.git
+cd arkeonetwork
+git checkout v1.0.13
+```
+
+## Build binaries
+
+```js
+make install
+```
+
+## Restart node and check logs
+
+```js
+sudo systemctl restart arkeod && sudo journalctl -u arkeod -f --no-hostname -o cat
+```

@@ -84,7 +84,7 @@ sudo ln -s ~/.andromeda/cosmovisor/current/bin/andromedad /usr/local/bin/androme
 ## Download and install Cosmovisor
 
 ```js
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.1
 ```
 
 ## Run node
@@ -211,29 +211,23 @@ sed -i \
 ### Set custom ports
 
 ```bash
-echo "export andromedad_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export ANDROMEDAD_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
-# Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${andromedad_PORT}317%g" \
--e "s%:8080%:${andromedad_PORT}080%g" \
--e "s%:9090%:${andromedad_PORT}090%g" \
--e "s%:9091%:${andromedad_PORT}091%g" \
--e "s%:8545%:${andromedad_PORT}545%g" \
--e "s%:8546%:${andromedad_PORT}546%g" \
--e "s%:6065%:${andromedad_PORT}065%g" ~/.andromeda/config/app.toml
+# Set custom ports in app.tom{l
+sed -i.bak -e "s%:1317%:${ANDROMEDAD_PORT}317%g" \
+-e "s%:8080%:${ANDROMEDAD_PORT}080%g" \
+-e "s%:9090%:${ANDROMEDAD_PORT}090%g" \
+-e "s%:9091%:${ANDROMEDAD_PORT}091%g" \
+-e "s%:8545%:${ANDROMEDAD_PORT}545%g" \
+-e "s%:8546%:${ANDROMEDAD_PORT}546%g" \
+-e "s%:6065%:${ANDROMEDAD_PORT}065%g" ~/.andromeda/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${andromedad_PORT}658%g" \
--e "s%:26657%:${andromedad_PORT}657%g" \
--e "s%:6060%:${andromedad_PORT}060%g" \
--e "s%:26656%:${andromedad_PORT}656%g" \
--e "s%:26660%:${andromedad_PORT}660%g" ~/.andromeda/config/config.toml
-```
-
-### Start node and check logs
-
-```js
-sudo systemctl start andromedad && sudo journalctl -u andromedad -f --no-hostname -o cat
+sed -i.bak -e "s%:26658%:${ANDROMEDAD_PORT}658%g" \
+-e "s%:26657%:${ANDROMEDAD_PORT}657%g" \
+-e "s%:6060%:${ANDROMEDAD_PORT}060%g" \
+-e "s%:26656%:${ANDROMEDAD_PORT}656%g" \
+-e "s%:26660%:${ANDROMEDAD_PORT}660%g" ~/.andromeda/config/config.toml
 ```

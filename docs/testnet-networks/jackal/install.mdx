@@ -7,7 +7,7 @@ description: ''
 chain_name: 'Jackal'
 scope: 'testnet'
 chain_id: 'lupulella-2'
-binary_version: 'canary-17-gb6ed8056'
+binary_version: 'v4.6.0-beta.1'
 icon_url: 'jackal-icon.svg'
 ---
 
@@ -17,7 +17,7 @@ import PageTitle from "@site/src/components/PageTitle";
   iconUrl="img/jackal-icon.svg"
   title="Jackal Installation Guide"
   chainId="lupulella-2"
-  version="canary-17-gb6ed8056"
+  version="v4.6.0-beta.1"
 />
 
 ## Install dependencies
@@ -51,13 +51,13 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 ### Download and build binaries
 
-### Clone Jackal repo and build canined canary-17-gb6ed8056
+### Clone Jackal repo and build canined v4.6.0-beta.1
 
 ```js
 cd $HOME
 git clone https://github.com/JackalLabs/canine-chain.git
 cd canine-chain
-git checkout canary-17-gb6ed8056
+git checkout v4.6.0-beta.1
 ```
 
 ### Build binaries
@@ -70,8 +70,8 @@ make install
 
 ```js
 cd $HOME
-mkdir -p ~/.canine/cosmovisor/upgrades/canary-17-gb6ed8056/bin
-mv $HOME/go/bin/canined ~/.canine/cosmovisor/upgrades/canary-17-gb6ed8056/bin/
+mkdir -p ~/.canine/cosmovisor/upgrades/v4.6.0-beta.1/bin
+mv $HOME/go/bin/canined ~/.canine/cosmovisor/upgrades/v4.6.0-beta.1/bin/
 ```
 
 ### Create symlinks
@@ -84,7 +84,7 @@ sudo ln -s ~/.canine/cosmovisor/current/bin/canined /usr/local/bin/canined -f
 ## Download and install Cosmovisor
 
 ```js
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.1
 ```
 
 ## Run node
@@ -117,13 +117,13 @@ EOF
 
 ### Download and build binaries
 
-### Clone Jackal repo and build canined canary-17-gb6ed8056
+### Clone Jackal repo and build canined v4.6.0-beta.1
 
 ```js
 cd $HOME
 git clone https://github.com/JackalLabs/canine-chain.git
 cd canine-chain
-git checkout canary-17-gb6ed8056
+git checkout v4.6.0-beta.1
 ```
 
 ### Build binaries
@@ -181,8 +181,8 @@ canined init NAME_OF_YOUR_VALIDATOR --chain-id lupulella-2
 ### Download genesis and addrbook
 
 ```js
-curl https://snapshots-t.noders.services/jackal/genesis.json -o ~/.canine/config/genesis.json
-curl https://snapshots-t.noders.services/jackal/addrbook.json -o ~/.canine/config/addrbook.json
+curl https://snapshots.noders.services/jackal/genesis.json -o ~/.canine/config/genesis.json
+curl https://snapshots.noders.services/jackal/addrbook.json -o ~/.canine/config/addrbook.json
 ```
 
 ### Add peers
@@ -211,29 +211,23 @@ sed -i \
 ### Set custom ports
 
 ```bash
-echo "export canined_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export CANINED_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
-# Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${canined_PORT}317%g" \
--e "s%:8080%:${canined_PORT}080%g" \
--e "s%:9090%:${canined_PORT}090%g" \
--e "s%:9091%:${canined_PORT}091%g" \
--e "s%:8545%:${canined_PORT}545%g" \
--e "s%:8546%:${canined_PORT}546%g" \
--e "s%:6065%:${canined_PORT}065%g" ~/.canine/config/app.toml
+# Set custom ports in app.tom{l
+sed -i.bak -e "s%:1317%:${CANINED_PORT}317%g" \
+-e "s%:8080%:${CANINED_PORT}080%g" \
+-e "s%:9090%:${CANINED_PORT}090%g" \
+-e "s%:9091%:${CANINED_PORT}091%g" \
+-e "s%:8545%:${CANINED_PORT}545%g" \
+-e "s%:8546%:${CANINED_PORT}546%g" \
+-e "s%:6065%:${CANINED_PORT}065%g" ~/.canine/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${canined_PORT}658%g" \
--e "s%:26657%:${canined_PORT}657%g" \
--e "s%:6060%:${canined_PORT}060%g" \
--e "s%:26656%:${canined_PORT}656%g" \
--e "s%:26660%:${canined_PORT}660%g" ~/.canine/config/config.toml
-```
-
-### Start node and check logs
-
-```js
-sudo systemctl start canined && sudo journalctl -u canined -f --no-hostname -o cat
+sed -i.bak -e "s%:26658%:${CANINED_PORT}658%g" \
+-e "s%:26657%:${CANINED_PORT}657%g" \
+-e "s%:6060%:${CANINED_PORT}060%g" \
+-e "s%:26656%:${CANINED_PORT}656%g" \
+-e "s%:26660%:${CANINED_PORT}660%g" ~/.canine/config/config.toml
 ```

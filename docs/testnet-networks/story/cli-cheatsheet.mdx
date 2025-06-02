@@ -7,7 +7,7 @@ description: ''
 chain_name: 'Story'
 scope: 'testnet'
 chain_id: 'devnet-1'
-binary_version: 'v1.1.0'
+binary_version: 'v1.2.0'
 icon_url: 'story-icon.svg'
 ---
 
@@ -17,7 +17,7 @@ import PageTitle from "@site/src/components/PageTitle";
   iconUrl="img/story-icon.svg"
   title="Story CLI Cheatsheet"
   chainId="devnet-1"
-  version="v1.1.0"
+  version="v1.2.0"
 />
 
 ## Useful commands
@@ -122,7 +122,7 @@ story tx staking redelegate $(story keys show KEY --bech val -a) VALIDATOR_ADDRE
 
 ```js
 story tx staking unbond $(story keys show KEY --bech val -a) aip \
-  --chain-id andromeda-1 \
+  --chain-id devnet-1 \
   --node https://story-t-rpc.noders.services:443 --fees 300000000000aip \
   --from KEY
 ```

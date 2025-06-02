@@ -7,7 +7,7 @@ description: ''
 chain_name: 'Atomone'
 scope: 'mainnet'
 chain_id: 'atomone-1'
-binary_version: 'v1.1.2'
+binary_version: 'v2.0.0'
 icon_url: 'atomone-icon.svg'
 ---
 
@@ -17,7 +17,7 @@ import PageTitle from "@site/src/components/PageTitle";
   iconUrl="img/atomone-icon.svg"
   title="Atomone Upgrade Guide"
   chainId="atomone-1"
-  version="v1.1.2"
+  version="v2.0.0"
 />
 
 ## Clone Atomone repository
@@ -27,7 +27,7 @@ cd $HOME
 rm -rf atomone
 git clone https://github.com/atomone-hub/atomone.git
 cd atomone
-git checkout v1.1.2
+git checkout v2.0.0
 ```
 
 ## Build binaries
@@ -39,8 +39,8 @@ make build
 ## Prepare binaries for Cosmovisor
 
 ```js
-mkdir -p ~/.atomone/cosmovisor/upgrades/v1.1.2/bin
-mv build/atomoned ~/.atomone/cosmovisor/upgrades/v1.1.2/bin/
+mkdir -p ~/.atomone/cosmovisor/upgrades/v2.0.0/bin
+mv build/atomoned ~/.atomone/cosmovisor/upgrades/v2.0.0/bin/
 rm -rf build
 ```
 
@@ -53,7 +53,7 @@ cd $HOME
 rm -rf atomone
 git clone https://github.com/atomone-hub/atomone.git
 cd atomone
-git checkout v1.1.2
+git checkout v2.0.0
 ```
 
 ## Build binaries

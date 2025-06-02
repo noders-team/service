@@ -84,7 +84,7 @@ sudo ln -s ~/.uptickd/cosmovisor/current/bin/uptickd /usr/local/bin/uptickd -f
 ## Download and install Cosmovisor
 
 ```js
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.1
 ```
 
 ## Run node
@@ -211,29 +211,23 @@ sed -i \
 ### Set custom ports
 
 ```bash
-echo "export uptickd_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export UPTICKD_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
-# Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${uptickd_PORT}317%g" \
--e "s%:8080%:${uptickd_PORT}080%g" \
--e "s%:9090%:${uptickd_PORT}090%g" \
--e "s%:9091%:${uptickd_PORT}091%g" \
--e "s%:8545%:${uptickd_PORT}545%g" \
--e "s%:8546%:${uptickd_PORT}546%g" \
--e "s%:6065%:${uptickd_PORT}065%g" ~/.uptickd/config/app.toml
+# Set custom ports in app.tom{l
+sed -i.bak -e "s%:1317%:${UPTICKD_PORT}317%g" \
+-e "s%:8080%:${UPTICKD_PORT}080%g" \
+-e "s%:9090%:${UPTICKD_PORT}090%g" \
+-e "s%:9091%:${UPTICKD_PORT}091%g" \
+-e "s%:8545%:${UPTICKD_PORT}545%g" \
+-e "s%:8546%:${UPTICKD_PORT}546%g" \
+-e "s%:6065%:${UPTICKD_PORT}065%g" ~/.uptickd/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${uptickd_PORT}658%g" \
--e "s%:26657%:${uptickd_PORT}657%g" \
--e "s%:6060%:${uptickd_PORT}060%g" \
--e "s%:26656%:${uptickd_PORT}656%g" \
--e "s%:26660%:${uptickd_PORT}660%g" ~/.uptickd/config/config.toml
-```
-
-### Start node and check logs
-
-```js
-sudo systemctl start uptickd && sudo journalctl -u uptickd -f --no-hostname -o cat
+sed -i.bak -e "s%:26658%:${UPTICKD_PORT}658%g" \
+-e "s%:26657%:${UPTICKD_PORT}657%g" \
+-e "s%:6060%:${UPTICKD_PORT}060%g" \
+-e "s%:26656%:${UPTICKD_PORT}656%g" \
+-e "s%:26660%:${UPTICKD_PORT}660%g" ~/.uptickd/config/config.toml
 ```

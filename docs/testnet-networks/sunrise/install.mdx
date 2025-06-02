@@ -6,8 +6,8 @@ hide_table_of_contents: false
 description: ''
 chain_name: 'Sunrise'
 scope: 'testnet'
-chain_id: 'sunrise-test-0.2'
-binary_version: 'v0.2.6'
+chain_id: 'auto'
+binary_version: 'auto'
 icon_url: 'sunrise-icon.svg'
 ---
 
@@ -16,8 +16,8 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/sunrise-icon.svg"
   title="Sunrise Installation Guide"
-  chainId="sunrise-test-0.2"
-  version="v0.2.6"
+  chainId="auto"
+  version="auto"
 />
 
 ## Install dependencies
@@ -51,13 +51,13 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 ### Download and build binaries
 
-### Clone Sunrise repo and build sunrised v0.2.6
+### Clone Sunrise repo and build sunrised auto
 
 ```js
 cd $HOME
 git clone https://github.com/sunriselayer/sunrise.git
 cd sunrise
-git checkout v0.2.6
+git checkout auto
 ```
 
 ### Build binaries
@@ -70,8 +70,8 @@ make install
 
 ```js
 cd $HOME
-mkdir -p ~/.sunrise/cosmovisor/upgrades/v0.2.6/bin
-mv $HOME/go/bin/sunrised ~/.sunrise/cosmovisor/upgrades/v0.2.6/bin/
+mkdir -p ~/.sunrise/cosmovisor/upgrades/auto/bin
+mv $HOME/go/bin/sunrised ~/.sunrise/cosmovisor/upgrades/auto/bin/
 ```
 
 ### Create symlinks
@@ -84,7 +84,7 @@ sudo ln -s ~/.sunrise/cosmovisor/current/bin/sunrised /usr/local/bin/sunrised -f
 ## Download and install Cosmovisor
 
 ```js
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.1
 ```
 
 ## Run node
@@ -117,13 +117,13 @@ EOF
 
 ### Download and build binaries
 
-### Clone Sunrise repo and build sunrised v0.2.6
+### Clone Sunrise repo and build sunrised auto
 
 ```js
 cd $HOME
 git clone https://github.com/sunriselayer/sunrise.git
 cd sunrise
-git checkout v0.2.6
+git checkout auto
 ```
 
 ### Build binaries
@@ -167,7 +167,7 @@ sudo systemctl enable sunrised
 ### Set config
 
 ```js
-sunrised config chain-id sunrise-test-0.2
+sunrised config chain-id auto
 sunrised config keyring-backend os
 sunrised config node tcp://localhost:26657
 ```
@@ -175,20 +175,20 @@ sunrised config node tcp://localhost:26657
 ### Initialize the node
 
 ```js
-sunrised init NAME_OF_YOUR_VALIDATOR --chain-id sunrise-test-0.2
+sunrised init NAME_OF_YOUR_VALIDATOR --chain-id auto
 ```
 
 ### Download genesis and addrbook
 
 ```js
-curl https://snapshots-t.noders.services/sunrise/genesis.json -o ~/.sunrise/config/genesis.json
-curl https://snapshots-t.noders.services/sunrise/addrbook.json -o ~/.sunrise/config/addrbook.json
+curl https://snapshots.noders.services/sunrise/genesis.json -o ~/.sunrise/config/genesis.json
+curl https://snapshots.noders.services/sunrise/addrbook.json -o ~/.sunrise/config/addrbook.json
 ```
 
 ### Add peers
 
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"66751839fcecdde5eaabd33b0e8877e8d7e85747@sunrise-t-rpc.noders.services:28356\"/" ~/.sunrise/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"auto\"/" ~/.sunrise/config/config.toml
 ```
 
 ### Set minimum gas price
@@ -211,29 +211,23 @@ sed -i \
 ### Set custom ports
 
 ```bash
-echo "export sunrised_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export SUNRISED_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
-# Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${sunrised_PORT}317%g" \
--e "s%:8080%:${sunrised_PORT}080%g" \
--e "s%:9090%:${sunrised_PORT}090%g" \
--e "s%:9091%:${sunrised_PORT}091%g" \
--e "s%:8545%:${sunrised_PORT}545%g" \
--e "s%:8546%:${sunrised_PORT}546%g" \
--e "s%:6065%:${sunrised_PORT}065%g" ~/.sunrise/config/app.toml
+# Set custom ports in app.tom{l
+sed -i.bak -e "s%:1317%:${SUNRISED_PORT}317%g" \
+-e "s%:8080%:${SUNRISED_PORT}080%g" \
+-e "s%:9090%:${SUNRISED_PORT}090%g" \
+-e "s%:9091%:${SUNRISED_PORT}091%g" \
+-e "s%:8545%:${SUNRISED_PORT}545%g" \
+-e "s%:8546%:${SUNRISED_PORT}546%g" \
+-e "s%:6065%:${SUNRISED_PORT}065%g" ~/.sunrise/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${sunrised_PORT}658%g" \
--e "s%:26657%:${sunrised_PORT}657%g" \
--e "s%:6060%:${sunrised_PORT}060%g" \
--e "s%:26656%:${sunrised_PORT}656%g" \
--e "s%:26660%:${sunrised_PORT}660%g" ~/.sunrise/config/config.toml
-```
-
-### Start node and check logs
-
-```js
-sudo systemctl start sunrised && sudo journalctl -u sunrised -f --no-hostname -o cat
+sed -i.bak -e "s%:26658%:${SUNRISED_PORT}658%g" \
+-e "s%:26657%:${SUNRISED_PORT}657%g" \
+-e "s%:6060%:${SUNRISED_PORT}060%g" \
+-e "s%:26656%:${SUNRISED_PORT}656%g" \
+-e "s%:26660%:${SUNRISED_PORT}660%g" ~/.sunrise/config/config.toml
 ```

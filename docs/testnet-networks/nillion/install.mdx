@@ -7,7 +7,7 @@ description: ''
 chain_name: 'Nillion'
 scope: 'testnet'
 chain_id: 'nillion-chain-testnet-1'
-binary_version: 'v0.2.1'
+binary_version: 'v0.2.5'
 icon_url: 'nillion-icon.svg'
 ---
 
@@ -17,7 +17,7 @@ import PageTitle from "@site/src/components/PageTitle";
   iconUrl="img/nillion-icon.svg"
   title="Nillion Installation Guide"
   chainId="nillion-chain-testnet-1"
-  version="v0.2.1"
+  version="v0.2.5"
 />
 
 ## Install dependencies
@@ -51,13 +51,13 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 ### Download and build binaries
 
-### Clone Nillion repo and build nilliond v0.2.1
+### Clone Nillion repo and build nilchaind v0.2.5
 
 ```js
 cd $HOME
-git clone https://github.com/NillionNetwork.git
-cd NillionNetwork
-git checkout v0.2.1
+git clone https://github.com/NillionNetwork/nilchain.git
+cd nilchain
+git checkout v0.2.5
 ```
 
 ### Build binaries
@@ -70,21 +70,21 @@ make install
 
 ```js
 cd $HOME
-mkdir -p ~/.nilliond/cosmovisor/upgrades/v0.2.1/bin
-mv $HOME/go/bin/nilliond ~/.nilliond/cosmovisor/upgrades/v0.2.1/bin/
+mkdir -p ~/.nillionapp/cosmovisor/upgrades/v0.2.5/bin
+mv $HOME/go/bin/nilchaind ~/.nillionapp/cosmovisor/upgrades/v0.2.5/bin/
 ```
 
 ### Create symlinks
 
 ```js
-sudo ln -s ~/.nilliond/cosmovisor/genesis ~/.nilliond/cosmovisor/current -f
-sudo ln -s ~/.nilliond/cosmovisor/current/bin/nilliond /usr/local/bin/nilliond -f
+sudo ln -s ~/.nillionapp/cosmovisor/genesis ~/.nillionapp/cosmovisor/current -f
+sudo ln -s ~/.nillionapp/cosmovisor/current/bin/nilchaind /usr/local/bin/nilchaind -f
 ```
 
 ## Download and install Cosmovisor
 
 ```js
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.1
 ```
 
 ## Run node
@@ -92,7 +92,7 @@ go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
 ### Create service
 
 ```js
-sudo tee /etc/systemd/system/nilliond.service > /dev/null << EOF
+sudo tee /etc/systemd/system/nilchaind.service > /dev/null << EOF
 [Unit]
 Description=nillion node service
 After=network-online.target
@@ -103,10 +103,10 @@ ExecStart=$(which cosmovisor) run start
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
-Environment="DAEMON_HOME=~/.nilliond"
-Environment="DAEMON_NAME=nilliond"
+Environment="DAEMON_HOME=~/.nillionapp"
+Environment="DAEMON_NAME=nilchaind"
 Environment="UNSAFE_SKIP_BACKUP=true"
-Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/.nilliond/cosmovisor/current/bin"
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/.nillionapp/cosmovisor/current/bin"
 
 [Install]
 WantedBy=multi-user.target
@@ -117,13 +117,13 @@ EOF
 
 ### Download and build binaries
 
-### Clone Nillion repo and build nilliond v0.2.1
+### Clone Nillion repo and build nilchaind v0.2.5
 
 ```js
 cd $HOME
-git clone https://github.com/NillionNetwork.git
-cd NillionNetwork
-git checkout v0.2.1
+git clone https://github.com/NillionNetwork/nilchain.git
+cd nilchain
+git checkout v0.2.5
 ```
 
 ### Build binaries
@@ -137,14 +137,14 @@ make install
 ### Create service
 
 ```js
-sudo tee /etc/systemd/system/nilliond.service > /dev/null << EOF
+sudo tee /etc/systemd/system/nilchaind.service > /dev/null << EOF
 [Unit]
 Description=nillion node service
 After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=$(which nilliond) start
+ExecStart=$(which nilchaind) start
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
@@ -159,7 +159,7 @@ EOF
 
 ```js
 sudo systemctl daemon-reload
-sudo systemctl enable nilliond
+sudo systemctl enable nilchaind
 ```
 
 ## Node configuration
@@ -167,34 +167,34 @@ sudo systemctl enable nilliond
 ### Set config
 
 ```js
-nilliond config chain-id nillion-chain-testnet-1
-nilliond config keyring-backend os
-nilliond config node tcp://localhost:26657
+nilchaind config chain-id nillion-chain-testnet-1
+nilchaind config keyring-backend os
+nilchaind config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 
 ```js
-nilliond init NAME_OF_YOUR_VALIDATOR --chain-id nillion-chain-testnet-1
+nilchaind init NAME_OF_YOUR_VALIDATOR --chain-id nillion-chain-testnet-1
 ```
 
 ### Download genesis and addrbook
 
 ```js
-curl https://snapshots-t.noders.services/nillion/genesis.json -o ~/.nilliond/config/genesis.json
-curl https://snapshots-t.noders.services/nillion/addrbook.json -o ~/.nilliond/config/addrbook.json
+curl https://snapshots.noders.services/nillion/genesis.json -o ~/.nillionapp/config/genesis.json
+curl https://snapshots.noders.services/nillion/addrbook.json -o ~/.nillionapp/config/addrbook.json
 ```
 
 ### Add peers
 
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"7004b5ab387d27ba449b07a19a0a3af431bebb3d@nillion-t-rpc.noders.services:29856\"/" ~/.nilliond/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"7004b5ab387d27ba449b07a19a0a3af431bebb3d@nillion-t-rpc.noders.services:29856\"/" ~/.nillionapp/config/config.toml
 ```
 
 ### Set minimum gas price
 
 ```js
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001unil\"|" ~/.nilliond/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001unil\"|" ~/.nillionapp/config/app.toml
 ```
 
 ### Set pruning
@@ -205,35 +205,29 @@ sed -i \
   -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
   -e 's|^pruning-keep-every *=.*|pruning-keep-every = "0"|' \
   -e 's|^pruning-interval *=.*|pruning-interval = "19"|' \
-  ~/.nilliond/config/app.toml
+  ~/.nillionapp/config/app.toml
 ```
 
 ### Set custom ports
 
 ```bash
-echo "export nilliond_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export NILCHAIND_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
-# Set custom ports in app.toml
-sed -i.bak -e "s%:1317%:${nilliond_PORT}317%g" \
--e "s%:8080%:${nilliond_PORT}080%g" \
--e "s%:9090%:${nilliond_PORT}090%g" \
--e "s%:9091%:${nilliond_PORT}091%g" \
--e "s%:8545%:${nilliond_PORT}545%g" \
--e "s%:8546%:${nilliond_PORT}546%g" \
--e "s%:6065%:${nilliond_PORT}065%g" ~/.nilliond/config/app.toml
+# Set custom ports in app.tom{l
+sed -i.bak -e "s%:1317%:${NILCHAIND_PORT}317%g" \
+-e "s%:8080%:${NILCHAIND_PORT}080%g" \
+-e "s%:9090%:${NILCHAIND_PORT}090%g" \
+-e "s%:9091%:${NILCHAIND_PORT}091%g" \
+-e "s%:8545%:${NILCHAIND_PORT}545%g" \
+-e "s%:8546%:${NILCHAIND_PORT}546%g" \
+-e "s%:6065%:${NILCHAIND_PORT}065%g" ~/.nillionapp/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${nilliond_PORT}658%g" \
--e "s%:26657%:${nilliond_PORT}657%g" \
--e "s%:6060%:${nilliond_PORT}060%g" \
--e "s%:26656%:${nilliond_PORT}656%g" \
--e "s%:26660%:${nilliond_PORT}660%g" ~/.nilliond/config/config.toml
-```
-
-### Start node and check logs
-
-```js
-sudo systemctl start nilliond && sudo journalctl -u nilliond -f --no-hostname -o cat
+sed -i.bak -e "s%:26658%:${NILCHAIND_PORT}658%g" \
+-e "s%:26657%:${NILCHAIND_PORT}657%g" \
+-e "s%:6060%:${NILCHAIND_PORT}060%g" \
+-e "s%:26656%:${NILCHAIND_PORT}656%g" \
+-e "s%:26660%:${NILCHAIND_PORT}660%g" ~/.nillionapp/config/config.toml
 ```

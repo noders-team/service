@@ -231,6 +231,13 @@
     "scope": "testnet"
   },
   {
+    "name": "arkeo",
+    "pretty_name": "Arkeo",
+    "chain_id": "arkeo-testnet-4",
+    "logo_url": "img/arkeo-icon.svg",
+    "scope": "testnet"
+  },
+  {
     "name": "atomone",
     "pretty_name": "Atomone",
     "chain_id": "atomone-testnet-1",
@@ -382,6 +389,13 @@
     "pretty_name": "XRPL EVM",
     "chain_id": "exrp_1440002-1",
     "logo_url": "img/xrp-icon.svg",
+    "scope": "testnet"
+  },
+  {
+    "name": "zenrock",
+    "pretty_name": "Zenrock",
+    "chain_id": "gardia-9",
+    "logo_url": "img/zenrock-icon.svg",
     "scope": "testnet"
   },
   {
