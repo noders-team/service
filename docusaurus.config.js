@@ -124,16 +124,20 @@ const config = {
         },
       };
     },
-    [
-      '@acid-info/docusaurus-og',
-      {
-        path: './preview-images',
-        imageRenderers: {
-          'docusaurus-plugin-content-pages': require('./lib/open-graph/ImageRenderers').default.pages,
-          'docusaurus-plugin-content-docs': require('./lib/open-graph/ImageRenderers').default.docs,
-        },
-      },
-    ],
+    ...(process.env.BASE_URL && process.env.BASE_URL !== '/'
+      ? []
+      : [
+          [
+            '@acid-info/docusaurus-og',
+            {
+              path: './preview-images',
+              imageRenderers: {
+                'docusaurus-plugin-content-pages': require('./lib/open-graph/ImageRenderers').default.pages,
+                'docusaurus-plugin-content-docs': require('./lib/open-graph/ImageRenderers').default.docs,
+              },
+            },
+          ],
+        ]),
   ],
 };
 
