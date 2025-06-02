@@ -9,7 +9,7 @@ const path = require('path');
 const config = {
   title: 'Validator Services | NODERS',
   tagline: 'Trusted blockchain validator and web3 developer team',
-  favicon: 'img/favicon.svg',
+  favicon: 'img/favicon.png',
 
   // Set the production url of your site here
   url: 'https://noders.services',
