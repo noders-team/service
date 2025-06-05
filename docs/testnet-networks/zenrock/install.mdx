@@ -7,7 +7,7 @@ description: ''
 chain_name: 'Zenrock'
 scope: 'testnet'
 chain_id: 'gardia-9'
-binary_version: 'v6.5.2'
+binary_version: 'v6.5.5'
 icon_url: 'zenrock-icon.svg'
 ---
 
@@ -17,7 +17,7 @@ import PageTitle from "@site/src/components/PageTitle";
   iconUrl="img/zenrock-icon.svg"
   title="Zenrock Installation Guide"
   chainId="gardia-9"
-  version="v6.5.2"
+  version="v6.5.5"
 />
 
 ## Install dependencies
@@ -51,13 +51,13 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 ### Download and build binaries
 
-### Clone Zenrock repo and build zenrockd v6.5.2
+### Clone Zenrock repo and build zenrockd v6.5.5
 
 ```js
 cd $HOME
 git clone https://github.com/Zenrock-Foundation/zrchain.git
 cd zrchain
-git checkout v6.5.2
+git checkout v6.5.5
 ```
 
 ### Build binaries
@@ -70,8 +70,8 @@ make install
 
 ```js
 cd $HOME
-mkdir -p ~/.zrchain/cosmovisor/upgrades/v6.5.2/bin
-mv $HOME/go/bin/zenrockd ~/.zrchain/cosmovisor/upgrades/v6.5.2/bin/
+mkdir -p ~/.zrchain/cosmovisor/upgrades/v6.5.5/bin
+mv $HOME/go/bin/zenrockd ~/.zrchain/cosmovisor/upgrades/v6.5.5/bin/
 ```
 
 ### Create symlinks
@@ -117,13 +117,13 @@ EOF
 
 ### Download and build binaries
 
-### Clone Zenrock repo and build zenrockd v6.5.2
+### Clone Zenrock repo and build zenrockd v6.5.5
 
 ```js
 cd $HOME
 git clone https://github.com/Zenrock-Foundation/zrchain.git
 cd zrchain
-git checkout v6.5.2
+git checkout v6.5.5
 ```
 
 ### Build binaries
