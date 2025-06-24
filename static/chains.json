@@ -35,24 +35,10 @@
     "scope": "mainnet"
   },
   {
-    "name": "bitsong",
-    "pretty_name": "BitSong",
-    "chain_id": "bitsong-2b",
-    "logo_url": "img/bitsong-icon.svg",
-    "scope": "mainnet"
-  },
-  {
     "name": "celestia",
     "pretty_name": "Celestia",
     "chain_id": "celestia",
     "logo_url": "img/celestia-icon.svg",
-    "scope": "mainnet"
-  },
-  {
-    "name": "desmos",
-    "pretty_name": "Desmos",
-    "chain_id": "desmos-mainnet",
-    "logo_url": "img/desmos-icon.svg",
     "scope": "mainnet"
   },
   {
@@ -74,13 +60,6 @@
     "pretty_name": "Fuel",
     "chain_id": "seq-mainnet-1",
     "logo_url": "img/fuel-icon.svg",
-    "scope": "mainnet"
-  },
-  {
-    "name": "gitopia",
-    "pretty_name": "Gitopia",
-    "chain_id": "gitopia",
-    "logo_url": "img/gitopia-icon.svg",
     "scope": "mainnet"
   },
   {
@@ -109,13 +88,6 @@
     "pretty_name": "Kopi",
     "chain_id": "luwak-1",
     "logo_url": "img/kopi-icon.svg",
-    "scope": "mainnet"
-  },
-  {
-    "name": "kyve",
-    "pretty_name": "Kyve",
-    "chain_id": "kyve-1",
-    "logo_url": "img/kyve-icon.svg",
     "scope": "mainnet"
   },
   {
@@ -154,24 +126,10 @@
     "scope": "mainnet"
   },
   {
-    "name": "quicksilver",
-    "pretty_name": "Quicksilver",
-    "chain_id": "quicksilver-2",
-    "logo_url": "img/quicksilver-icon.svg",
-    "scope": "mainnet"
-  },
-  {
     "name": "realio",
     "pretty_name": "Realio",
     "chain_id": "realionetwork_3301-1",
     "logo_url": "img/realio-icon.svg",
-    "scope": "mainnet"
-  },
-  {
-    "name": "rebus",
-    "pretty_name": "Rebus",
-    "chain_id": "reb_1111-1",
-    "logo_url": "img/rebus-icon.svg",
     "scope": "mainnet"
   },
   {
@@ -193,13 +151,6 @@
     "pretty_name": "Stratos",
     "chain_id": "stratos-1",
     "logo_url": "img/stratos-icon.svg",
-    "scope": "mainnet"
-  },
-  {
-    "name": "umee",
-    "pretty_name": "UX",
-    "chain_id": "umee-1",
-    "logo_url": "img/umee-icon.svg",
     "scope": "mainnet"
   },
   {
