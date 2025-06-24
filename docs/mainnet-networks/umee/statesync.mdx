@@ -6,8 +6,8 @@ hide_table_of_contents: false
 description: ''
 chain_name: 'UX'
 scope: 'mainnet'
-chain_id: 'umee-1'
-binary_version: 'v6.7.3'
+chain_id: 'auto'
+binary_version: 'auto'
 icon_url: 'umee-icon.svg'
 ---
 
@@ -16,8 +16,8 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/umee-icon.svg"
   title="UX State Sync"
-  chainId="umee-1"
-  version="v6.7.3"
+  chainId="auto"
+  version="auto"
 />
 
 ## How to enable state sync
@@ -35,7 +35,7 @@ sudo systemctl stop umeed && umeed tendermint unsafe-reset-all --home ~/.umee --
 ```
 
 ```bash
-peers="8349a4ab1d96f63cd0c9ff603c9869810e4a8e15@umee-rpc.noders.services:13656"
+peers="auto"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.umee/config/config.toml
 ```
 

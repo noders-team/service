@@ -6,8 +6,8 @@ hide_table_of_contents: false
 description: ''
 chain_name: 'Kyve'
 scope: 'mainnet'
-chain_id: 'kyve-1'
-binary_version: 'v2.1.0'
+chain_id: 'auto'
+binary_version: 'auto'
 icon_url: 'kyve-icon.svg'
 ---
 
@@ -16,8 +16,8 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/kyve-icon.svg"
   title="Kyve Installation Guide"
-  chainId="kyve-1"
-  version="v2.1.0"
+  chainId="auto"
+  version="auto"
 />
 
 ## Install dependencies
@@ -51,13 +51,13 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 ### Download and build binaries
 
-### Clone Kyve repo and build kyved v2.1.0
+### Clone Kyve repo and build kyved auto
 
 ```js
 cd $HOME
 git clone https://github.com/KYVENetwork.git
 cd KYVENetwork
-git checkout v2.1.0
+git checkout auto
 ```
 
 ### Build binaries
@@ -70,8 +70,8 @@ make install
 
 ```js
 cd $HOME
-mkdir -p ~/.kyve/cosmovisor/upgrades/v2.1.0/bin
-mv $HOME/go/bin/kyved ~/.kyve/cosmovisor/upgrades/v2.1.0/bin/
+mkdir -p ~/.kyve/cosmovisor/upgrades/auto/bin
+mv $HOME/go/bin/kyved ~/.kyve/cosmovisor/upgrades/auto/bin/
 ```
 
 ### Create symlinks
@@ -117,13 +117,13 @@ EOF
 
 ### Download and build binaries
 
-### Clone Kyve repo and build kyved v2.1.0
+### Clone Kyve repo and build kyved auto
 
 ```js
 cd $HOME
 git clone https://github.com/KYVENetwork.git
 cd KYVENetwork
-git checkout v2.1.0
+git checkout auto
 ```
 
 ### Build binaries
@@ -167,7 +167,7 @@ sudo systemctl enable kyved
 ### Set config
 
 ```js
-kyved config chain-id kyve-1
+kyved config chain-id auto
 kyved config keyring-backend os
 kyved config node tcp://localhost:26657
 ```
@@ -175,7 +175,7 @@ kyved config node tcp://localhost:26657
 ### Initialize the node
 
 ```js
-kyved init NAME_OF_YOUR_VALIDATOR --chain-id kyve-1
+kyved init NAME_OF_YOUR_VALIDATOR --chain-id auto
 ```
 
 ### Download genesis and addrbook
@@ -188,7 +188,7 @@ curl https://snapshots.noders.services/kyve/addrbook.json -o ~/.kyve/config/addr
 ### Add peers
 
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"a3780bb3c6eb953dfd0019e61a37e054a18dd197@kyve-rpc.noders.services:11056\"/" ~/.kyve/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"auto\"/" ~/.kyve/config/config.toml
 ```
 
 ### Set minimum gas price

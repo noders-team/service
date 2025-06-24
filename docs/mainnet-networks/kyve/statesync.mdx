@@ -6,8 +6,8 @@ hide_table_of_contents: false
 description: ''
 chain_name: 'Kyve'
 scope: 'mainnet'
-chain_id: 'kyve-1'
-binary_version: 'v2.1.0'
+chain_id: 'auto'
+binary_version: 'auto'
 icon_url: 'kyve-icon.svg'
 ---
 
@@ -16,8 +16,8 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/kyve-icon.svg"
   title="Kyve State Sync"
-  chainId="kyve-1"
-  version="v2.1.0"
+  chainId="auto"
+  version="auto"
 />
 
 ## How to enable state sync
@@ -35,7 +35,7 @@ sudo systemctl stop kyved && kyved tendermint unsafe-reset-all --home ~/.kyve --
 ```
 
 ```bash
-peers="a3780bb3c6eb953dfd0019e61a37e054a18dd197@kyve-rpc.noders.services:11056"
+peers="auto"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.kyve/config/config.toml
 ```
 

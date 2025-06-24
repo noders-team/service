@@ -7,7 +7,7 @@ description: ''
 chain_name: 'Fuel'
 scope: 'mainnet'
 chain_id: 'seq-mainnet-1'
-binary_version: 'seq-mainnet-1.2-improved-sidecar'
+binary_version: 'seq-mainnet-1.3'
 icon_url: 'fuel-icon.svg'
 ---
 
@@ -17,7 +17,7 @@ import PageTitle from "@site/src/components/PageTitle";
   iconUrl="img/fuel-icon.svg"
   title="Fuel Upgrade Guide"
   chainId="seq-mainnet-1"
-  version="seq-mainnet-1.2-improved-sidecar"
+  version="seq-mainnet-1.3"
 />
 
 ## Clone Fuel repository
@@ -27,7 +27,7 @@ cd $HOME
 rm -rf FuelLabs
 git clone https://github.com/FuelLabs.git
 cd FuelLabs
-git checkout seq-mainnet-1.2-improved-sidecar
+git checkout seq-mainnet-1.3
 ```
 
 ## Build binaries
@@ -39,8 +39,8 @@ make build
 ## Prepare binaries for Cosmovisor
 
 ```js
-mkdir -p ~/.fuelsequencer/cosmovisor/upgrades/seq-mainnet-1.2-improved-sidecar/bin
-mv build/fuelsequencerd ~/.fuelsequencer/cosmovisor/upgrades/seq-mainnet-1.2-improved-sidecar/bin/
+mkdir -p ~/.fuelsequencer/cosmovisor/upgrades/seq-mainnet-1.3/bin
+mv build/fuelsequencerd ~/.fuelsequencer/cosmovisor/upgrades/seq-mainnet-1.3/bin/
 rm -rf build
 ```
 
@@ -53,7 +53,7 @@ cd $HOME
 rm -rf FuelLabs
 git clone https://github.com/FuelLabs.git
 cd FuelLabs
-git checkout seq-mainnet-1.2-improved-sidecar
+git checkout seq-mainnet-1.3
 ```
 
 ## Build binaries

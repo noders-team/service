@@ -7,7 +7,7 @@ description: ''
 chain_name: 'Celestia'
 scope: 'mainnet'
 chain_id: 'celestia'
-binary_version: 'v3.8.1'
+binary_version: 'v3.8.2'
 icon_url: 'celestia-icon.svg'
 ---
 
@@ -17,7 +17,7 @@ import PageTitle from "@site/src/components/PageTitle";
   iconUrl="img/celestia-icon.svg"
   title="Celestia Upgrade Guide"
   chainId="celestia"
-  version="v3.8.1"
+  version="v3.8.2"
 />
 
 ## Clone Celestia repository
@@ -27,7 +27,7 @@ cd $HOME
 rm -rf celestia-app
 git clone https://github.com/celestiaorg/celestia-app.git
 cd celestia-app
-git checkout v3.8.1
+git checkout v3.8.2
 ```
 
 ## Build binaries
@@ -39,8 +39,8 @@ make build
 ## Prepare binaries for Cosmovisor
 
 ```js
-mkdir -p ~/.celestia-app/cosmovisor/upgrades/v3.8.1/bin
-mv build/celestia-appd ~/.celestia-app/cosmovisor/upgrades/v3.8.1/bin/
+mkdir -p ~/.celestia-app/cosmovisor/upgrades/v3.8.2/bin
+mv build/celestia-appd ~/.celestia-app/cosmovisor/upgrades/v3.8.2/bin/
 rm -rf build
 ```
 
@@ -53,7 +53,7 @@ cd $HOME
 rm -rf celestia-app
 git clone https://github.com/celestiaorg/celestia-app.git
 cd celestia-app
-git checkout v3.8.1
+git checkout v3.8.2
 ```
 
 ## Build binaries

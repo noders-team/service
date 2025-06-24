@@ -7,7 +7,7 @@ description: ''
 chain_name: 'Zetachain'
 scope: 'mainnet'
 chain_id: 'zetachain_7000-1'
-binary_version: 'v29.1.2'
+binary_version: 'v31.0.1'
 icon_url: 'zetachain-icon.svg'
 ---
 
@@ -17,7 +17,7 @@ import PageTitle from "@site/src/components/PageTitle";
   iconUrl="img/zetachain-icon.svg"
   title="Zetachain Upgrade Guide"
   chainId="zetachain_7000-1"
-  version="v29.1.2"
+  version="v31.0.1"
 />
 
 ## Clone Zetachain repository
@@ -27,7 +27,7 @@ cd $HOME
 rm -rf zeta-chain
 git clone https://github.com/zeta-chain.git
 cd zeta-chain
-git checkout v29.1.2
+git checkout v31.0.1
 ```
 
 ## Build binaries
@@ -39,8 +39,8 @@ make build
 ## Prepare binaries for Cosmovisor
 
 ```js
-mkdir -p ~/.zetacored/cosmovisor/upgrades/v29.1.2/bin
-mv build/zetacored ~/.zetacored/cosmovisor/upgrades/v29.1.2/bin/
+mkdir -p ~/.zetacored/cosmovisor/upgrades/v31.0.1/bin
+mv build/zetacored ~/.zetacored/cosmovisor/upgrades/v31.0.1/bin/
 rm -rf build
 ```
 
@@ -53,7 +53,7 @@ cd $HOME
 rm -rf zeta-chain
 git clone https://github.com/zeta-chain.git
 cd zeta-chain
-git checkout v29.1.2
+git checkout v31.0.1
 ```
 
 ## Build binaries

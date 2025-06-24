@@ -6,8 +6,8 @@ hide_table_of_contents: false
 description: ''
 chain_name: 'Side'
 scope: 'testnet'
-chain_id: 'sidechain-testnet-4'
-binary_version: 'v0.9.5'
+chain_id: 'sidechain-testnet-6'
+binary_version: 'v2.0.0-rc.5'
 icon_url: 'side-icon.svg'
 ---
 
@@ -16,8 +16,8 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/side-icon.svg"
   title="Side State Sync"
-  chainId="sidechain-testnet-4"
-  version="v0.9.5"
+  chainId="sidechain-testnet-6"
+  version="v2.0.0-rc.5"
 />
 
 ## How to enable state sync
@@ -35,7 +35,7 @@ sudo systemctl stop sided && sided tendermint unsafe-reset-all --home ~/.side --
 ```
 
 ```bash
-peers="9eb27c4ebb46f11fcfd2ce04467f7aaff0e92bb5@side-t-rpc.noders.services:26356"
+peers="bc95425c0a1501f2e9d54747994fba3bafd51d02@side-t-rpc.noders.services:26356"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.side/config/config.toml
 ```
 

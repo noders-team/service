@@ -7,7 +7,7 @@ description: ''
 chain_name: 'Celestia'
 scope: 'testnet'
 chain_id: 'mocha-4'
-binary_version: 'v3.10.1-mocha'
+binary_version: 'v3.10.2-mocha'
 icon_url: 'celestia-icon.svg'
 ---
 
@@ -17,7 +17,7 @@ import PageTitle from "@site/src/components/PageTitle";
   iconUrl="img/celestia-icon.svg"
   title="Celestia Upgrade Guide"
   chainId="mocha-4"
-  version="v3.10.1-mocha"
+  version="v3.10.2-mocha"
 />
 
 ## Clone Celestia repository
@@ -27,7 +27,7 @@ cd $HOME
 rm -rf celestia-app
 git clone https://github.com/celestiaorg/celestia-app.git
 cd celestia-app
-git checkout v3.10.1-mocha
+git checkout v3.10.2-mocha
 ```
 
 ## Build binaries
@@ -39,8 +39,8 @@ make build
 ## Prepare binaries for Cosmovisor
 
 ```js
-mkdir -p ~/.celestia-app/cosmovisor/upgrades/v3.10.1-mocha/bin
-mv build/celestia-appd ~/.celestia-app/cosmovisor/upgrades/v3.10.1-mocha/bin/
+mkdir -p ~/.celestia-app/cosmovisor/upgrades/v3.10.2-mocha/bin
+mv build/celestia-appd ~/.celestia-app/cosmovisor/upgrades/v3.10.2-mocha/bin/
 rm -rf build
 ```
 
@@ -53,7 +53,7 @@ cd $HOME
 rm -rf celestia-app
 git clone https://github.com/celestiaorg/celestia-app.git
 cd celestia-app
-git checkout v3.10.1-mocha
+git checkout v3.10.2-mocha
 ```
 
 ## Build binaries

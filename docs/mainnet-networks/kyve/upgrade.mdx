@@ -6,8 +6,8 @@ hide_table_of_contents: false
 description: ''
 chain_name: 'Kyve'
 scope: 'mainnet'
-chain_id: 'kyve-1'
-binary_version: 'v2.1.0'
+chain_id: 'auto'
+binary_version: 'auto'
 icon_url: 'kyve-icon.svg'
 ---
 
@@ -16,8 +16,8 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/kyve-icon.svg"
   title="Kyve Upgrade Guide"
-  chainId="kyve-1"
-  version="v2.1.0"
+  chainId="auto"
+  version="auto"
 />
 
 ## Clone Kyve repository
@@ -27,7 +27,7 @@ cd $HOME
 rm -rf KYVENetwork
 git clone https://github.com/KYVENetwork.git
 cd KYVENetwork
-git checkout v2.1.0
+git checkout auto
 ```
 
 ## Build binaries
@@ -39,8 +39,8 @@ make build
 ## Prepare binaries for Cosmovisor
 
 ```js
-mkdir -p ~/.kyve/cosmovisor/upgrades/v2.1.0/bin
-mv build/kyved ~/.kyve/cosmovisor/upgrades/v2.1.0/bin/
+mkdir -p ~/.kyve/cosmovisor/upgrades/auto/bin
+mv build/kyved ~/.kyve/cosmovisor/upgrades/auto/bin/
 rm -rf build
 ```
 
@@ -53,7 +53,7 @@ cd $HOME
 rm -rf KYVENetwork
 git clone https://github.com/KYVENetwork.git
 cd KYVENetwork
-git checkout v2.1.0
+git checkout auto
 ```
 
 ## Build binaries

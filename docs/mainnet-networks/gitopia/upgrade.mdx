@@ -6,8 +6,8 @@ hide_table_of_contents: false
 description: ''
 chain_name: 'Gitopia'
 scope: 'mainnet'
-chain_id: 'gitopia'
-binary_version: 'v5.1.0'
+chain_id: 'auto'
+binary_version: 'auto'
 icon_url: 'gitopia-icon.svg'
 ---
 
@@ -16,8 +16,8 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/gitopia-icon.svg"
   title="Gitopia Upgrade Guide"
-  chainId="gitopia"
-  version="v5.1.0"
+  chainId="auto"
+  version="auto"
 />
 
 ## Clone Gitopia repository
@@ -27,7 +27,7 @@ cd $HOME
 rm -rf gitopia
 git clone https://github.com/gitopia.git
 cd gitopia
-git checkout v5.1.0
+git checkout auto
 ```
 
 ## Build binaries
@@ -39,8 +39,8 @@ make build
 ## Prepare binaries for Cosmovisor
 
 ```js
-mkdir -p ~/.gitopia/cosmovisor/upgrades/v5.1.0/bin
-mv build/gitopiad ~/.gitopia/cosmovisor/upgrades/v5.1.0/bin/
+mkdir -p ~/.gitopia/cosmovisor/upgrades/auto/bin
+mv build/gitopiad ~/.gitopia/cosmovisor/upgrades/auto/bin/
 rm -rf build
 ```
 
@@ -53,7 +53,7 @@ cd $HOME
 rm -rf gitopia
 git clone https://github.com/gitopia.git
 cd gitopia
-git checkout v5.1.0
+git checkout auto
 ```
 
 ## Build binaries

@@ -6,8 +6,8 @@ hide_table_of_contents: false
 description: ''
 chain_name: 'UX'
 scope: 'mainnet'
-chain_id: 'umee-1'
-binary_version: 'v6.7.3'
+chain_id: 'auto'
+binary_version: 'auto'
 icon_url: 'umee-icon.svg'
 ---
 
@@ -16,8 +16,8 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/umee-icon.svg"
   title="UX CLI Cheatsheet"
-  chainId="umee-1"
-  version="v6.7.3"
+  chainId="auto"
+  version="auto"
 />
 
 ## Useful commands
@@ -67,7 +67,7 @@ umeed q bank balances $(umeed keys show KEY -a) --node https://umee-rpc.noders.s
 
 ```js
 umeed tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uumee \
-  --chain-id umee-1 \
+  --chain-id auto \
   --node https://umee-rpc.noders.services:443 --fees 20000uumee \
   --from KEY
 ```
@@ -76,7 +76,7 @@ umeed tx bank send YOUR_KEY RECEIVER_ADDRESS 1000000uumee \
 
 ```js
 umeed tx distribution withdraw-all-rewards \
-  --chain-id umee-1 \
+  --chain-id auto \
   --node https://umee-rpc.noders.services:443 --fees 20000uumee \
   --from KEY
 ```
@@ -86,7 +86,7 @@ umeed tx distribution withdraw-all-rewards \
 ```js
 umeed tx distribution withdraw-rewards VALIDATOR_ADRESS \
   --commission \
-  --chain-id umee-1 \
+  --chain-id auto \
   --node https://umee-rpc.noders.services:443 --fees 20000uumee \
   --from KEY
 ```
@@ -95,7 +95,7 @@ umeed tx distribution withdraw-rewards VALIDATOR_ADRESS \
 
 ```js
 umeed tx staking delegate $(umeed keys show KEY --bech val -a) 1000000uumee \
---chain-id umee-1 \
+--chain-id auto \
 --node https://umee-rpc.noders.services:443 --fees 20000uumee \
 --from KEY
 ```
@@ -104,7 +104,7 @@ umeed tx staking delegate $(umeed keys show KEY --bech val -a) 1000000uumee \
 
 ```js
 umeed tx staking delegate VALIDATOR_ADDRESS 1000000uumee \
---chain-id umee-1 \
+--chain-id auto \
 --node https://umee-rpc.noders.services:443 --fees 20000uumee \
 --from KEY
 ```
@@ -113,7 +113,7 @@ umeed tx staking delegate VALIDATOR_ADDRESS 1000000uumee \
 
 ```js
 umeed tx staking redelegate $(umeed keys show KEY --bech val -a) VALIDATOR_ADDRESS 1000000uumee \
-  --chain-id umee-1 \
+  --chain-id auto \
   --node https://umee-rpc.noders.services:443 --fees 20000uumee \
   --from KEY
 ```
@@ -139,7 +139,7 @@ umeed query gov proposals --node https://umee-rpc.noders.services:443
 
 ```js
 umeed query gov proposal PROPOSAL_NUMBER \
-  --chain-id umee-1 \
+  --chain-id auto \
   --node https://umee-rpc.noders.services:443 --fees 20000uumee \
   --output json | jq
 ```
@@ -155,7 +155,7 @@ umeed query gov proposal PROPOSAL_NUMBER \
 
 ```js
 umeed tx gov vote PROPOSAL_NUMBER VOTE_OPTION \
-  --chain-id umee-1 \
+  --chain-id auto \
   --node https://umee-rpc.noders.services:443 --fees 20000uumee \
   --from KEY
 ```
@@ -181,7 +181,7 @@ umeed tx staking create-validator \
   --identity "220491ADDD660741" \
   --details "Trusted blockchain validator and web3 developer team" \
   --security-contact="office@noders.team" \
-  --chain-id umee-1 \
+  --chain-id auto \
   --node https://umee-rpc.noders.services:443 --fees 20000uumee \
   --from KEY
 ```
@@ -194,7 +194,7 @@ umeed tx staking edit-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id umee-1 \
+--chain-id auto \
 --commission-rate 0.05 \
 --from KEY \
 --node https://umee-rpc.noders.services:443 --fees 20000uumee \
@@ -204,7 +204,7 @@ umeed tx staking edit-validator \
 
 ```js
 umeed tx slashing unjail \
-  --chain-id umee-1 \
+  --chain-id auto \
   --node https://umee-rpc.noders.services:443 --fees 20000uumee \
   --from KEY
 ```

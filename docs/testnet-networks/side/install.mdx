@@ -6,8 +6,8 @@ hide_table_of_contents: false
 description: ''
 chain_name: 'Side'
 scope: 'testnet'
-chain_id: 'sidechain-testnet-4'
-binary_version: 'v0.9.5'
+chain_id: 'sidechain-testnet-6'
+binary_version: 'v2.0.0-rc.5'
 icon_url: 'side-icon.svg'
 ---
 
@@ -16,8 +16,8 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/side-icon.svg"
   title="Side Installation Guide"
-  chainId="sidechain-testnet-4"
-  version="v0.9.5"
+  chainId="sidechain-testnet-6"
+  version="v2.0.0-rc.5"
 />
 
 ## Install dependencies
@@ -51,13 +51,13 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 ### Download and build binaries
 
-### Clone Side repo and build sided v0.9.5
+### Clone Side repo and build sided v2.0.0-rc.5
 
 ```js
 cd $HOME
 git clone https://github.com/sideprotocol.git
 cd sideprotocol
-git checkout v0.9.5
+git checkout v2.0.0-rc.5
 ```
 
 ### Build binaries
@@ -70,8 +70,8 @@ make install
 
 ```js
 cd $HOME
-mkdir -p ~/.side/cosmovisor/upgrades/v0.9.5/bin
-mv $HOME/go/bin/sided ~/.side/cosmovisor/upgrades/v0.9.5/bin/
+mkdir -p ~/.side/cosmovisor/upgrades/v2.0.0-rc.5/bin
+mv $HOME/go/bin/sided ~/.side/cosmovisor/upgrades/v2.0.0-rc.5/bin/
 ```
 
 ### Create symlinks
@@ -117,13 +117,13 @@ EOF
 
 ### Download and build binaries
 
-### Clone Side repo and build sided v0.9.5
+### Clone Side repo and build sided v2.0.0-rc.5
 
 ```js
 cd $HOME
 git clone https://github.com/sideprotocol.git
 cd sideprotocol
-git checkout v0.9.5
+git checkout v2.0.0-rc.5
 ```
 
 ### Build binaries
@@ -167,7 +167,7 @@ sudo systemctl enable sided
 ### Set config
 
 ```js
-sided config chain-id sidechain-testnet-4
+sided config chain-id sidechain-testnet-6
 sided config keyring-backend os
 sided config node tcp://localhost:26657
 ```
@@ -175,7 +175,7 @@ sided config node tcp://localhost:26657
 ### Initialize the node
 
 ```js
-sided init NAME_OF_YOUR_VALIDATOR --chain-id sidechain-testnet-4
+sided init NAME_OF_YOUR_VALIDATOR --chain-id sidechain-testnet-6
 ```
 
 ### Download genesis and addrbook
@@ -188,7 +188,7 @@ curl https://snapshots.noders.services/side/addrbook.json -o ~/.side/config/addr
 ### Add peers
 
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"9eb27c4ebb46f11fcfd2ce04467f7aaff0e92bb5@side-t-rpc.noders.services:26356\"/" ~/.side/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"bc95425c0a1501f2e9d54747994fba3bafd51d02@side-t-rpc.noders.services:26356\"/" ~/.side/config/config.toml
 ```
 
 ### Set minimum gas price

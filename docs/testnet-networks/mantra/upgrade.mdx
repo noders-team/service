@@ -7,7 +7,7 @@ description: ''
 chain_name: 'Mantra'
 scope: 'testnet'
 chain_id: 'mantra-dukong-1'
-binary_version: 'v4.0.0'
+binary_version: 'v5.0.0-rc0'
 icon_url: 'mantra-icon.svg'
 ---
 
@@ -17,7 +17,7 @@ import PageTitle from "@site/src/components/PageTitle";
   iconUrl="img/mantra-icon.svg"
   title="Mantra Upgrade Guide"
   chainId="mantra-dukong-1"
-  version="v4.0.0"
+  version="v5.0.0-rc0"
 />
 
 ## Clone Mantra repository
@@ -27,7 +27,7 @@ cd $HOME
 rm -rf public
 git clone https://github.com/MANTRA-Finance/public.git
 cd public
-git checkout v4.0.0
+git checkout v5.0.0-rc0
 ```
 
 ## Build binaries
@@ -39,8 +39,8 @@ make build
 ## Prepare binaries for Cosmovisor
 
 ```js
-mkdir -p ~/.mantrachaind/cosmovisor/upgrades/v4.0.0/bin
-mv build/mantrachaind ~/.mantrachaind/cosmovisor/upgrades/v4.0.0/bin/
+mkdir -p ~/.mantrachaind/cosmovisor/upgrades/v5.0.0-rc0/bin
+mv build/mantrachaind ~/.mantrachaind/cosmovisor/upgrades/v5.0.0-rc0/bin/
 rm -rf build
 ```
 
@@ -53,7 +53,7 @@ cd $HOME
 rm -rf public
 git clone https://github.com/MANTRA-Finance/public.git
 cd public
-git checkout v4.0.0
+git checkout v5.0.0-rc0
 ```
 
 ## Build binaries

@@ -6,8 +6,8 @@ hide_table_of_contents: false
 description: ''
 chain_name: 'UX'
 scope: 'mainnet'
-chain_id: 'umee-1'
-binary_version: 'v6.7.3'
+chain_id: 'auto'
+binary_version: 'auto'
 icon_url: 'umee-icon.svg'
 ---
 
@@ -16,8 +16,8 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/umee-icon.svg"
   title="UX Upgrade Guide"
-  chainId="umee-1"
-  version="v6.7.3"
+  chainId="auto"
+  version="auto"
 />
 
 ## Clone UX repository
@@ -27,7 +27,7 @@ cd $HOME
 rm -rf umee-network
 git clone https://github.com/umee-network.git
 cd umee-network
-git checkout v6.7.3
+git checkout auto
 ```
 
 ## Build binaries
@@ -39,8 +39,8 @@ make build
 ## Prepare binaries for Cosmovisor
 
 ```js
-mkdir -p ~/.umee/cosmovisor/upgrades/v6.7.3/bin
-mv build/umeed ~/.umee/cosmovisor/upgrades/v6.7.3/bin/
+mkdir -p ~/.umee/cosmovisor/upgrades/auto/bin
+mv build/umeed ~/.umee/cosmovisor/upgrades/auto/bin/
 rm -rf build
 ```
 
@@ -53,7 +53,7 @@ cd $HOME
 rm -rf umee-network
 git clone https://github.com/umee-network.git
 cd umee-network
-git checkout v6.7.3
+git checkout auto
 ```
 
 ## Build binaries

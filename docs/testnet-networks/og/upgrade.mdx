@@ -7,7 +7,7 @@ description: ''
 chain_name: 'ZeroGravity'
 scope: 'testnet'
 chain_id: '0gchain-16601'
-binary_version: 'v0.2.0-alpha.4-726-g680c0d7e2'
+binary_version: 'v0.2.0-alpha.4-752-g764df4768'
 icon_url: 'og-icon.svg'
 ---
 
@@ -17,7 +17,7 @@ import PageTitle from "@site/src/components/PageTitle";
   iconUrl="img/og-icon.svg"
   title="ZeroGravity Upgrade Guide"
   chainId="0gchain-16601"
-  version="v0.2.0-alpha.4-726-g680c0d7e2"
+  version="v0.2.0-alpha.4-752-g764df4768"
 />
 
 ## Clone ZeroGravity repository
@@ -27,7 +27,7 @@ cd $HOME
 rm -rf 0g-chain
 git clone https://github.com/0glabs/0g-chain.git
 cd 0g-chain
-git checkout v0.2.0-alpha.4-726-g680c0d7e2
+git checkout v0.2.0-alpha.4-752-g764df4768
 ```
 
 ## Build binaries
@@ -39,8 +39,8 @@ make build
 ## Prepare binaries for Cosmovisor
 
 ```js
-mkdir -p ~/.0gchain/cosmovisor/upgrades/v0.2.0-alpha.4-726-g680c0d7e2/bin
-mv build/0gchaind ~/.0gchain/cosmovisor/upgrades/v0.2.0-alpha.4-726-g680c0d7e2/bin/
+mkdir -p ~/.0gchain/cosmovisor/upgrades/v0.2.0-alpha.4-752-g764df4768/bin
+mv build/0gchaind ~/.0gchain/cosmovisor/upgrades/v0.2.0-alpha.4-752-g764df4768/bin/
 rm -rf build
 ```
 
@@ -53,7 +53,7 @@ cd $HOME
 rm -rf 0g-chain
 git clone https://github.com/0glabs/0g-chain.git
 cd 0g-chain
-git checkout v0.2.0-alpha.4-726-g680c0d7e2
+git checkout v0.2.0-alpha.4-752-g764df4768
 ```
 
 ## Build binaries

@@ -6,8 +6,8 @@ hide_table_of_contents: false
 description: ''
 chain_name: 'BitSong'
 scope: 'mainnet'
-chain_id: 'bitsong-2b'
-binary_version: 'v0.22.0'
+chain_id: 'auto'
+binary_version: 'auto'
 icon_url: 'bitsong-icon.svg'
 ---
 
@@ -16,8 +16,8 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/bitsong-icon.svg"
   title="BitSong State Sync"
-  chainId="bitsong-2b"
-  version="v0.22.0"
+  chainId="auto"
+  version="auto"
 />
 
 ## How to enable state sync
@@ -35,7 +35,7 @@ sudo systemctl stop bitsongd && bitsongd tendermint unsafe-reset-all --home ~/.b
 ```
 
 ```bash
-peers="b347b47a650981b2e12782e92cf26ba8aa0148c9@bitsong-rpc.noders.services:16056"
+peers="auto"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.bitsongd/config/config.toml
 ```
 

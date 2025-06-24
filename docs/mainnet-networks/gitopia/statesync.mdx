@@ -6,8 +6,8 @@ hide_table_of_contents: false
 description: ''
 chain_name: 'Gitopia'
 scope: 'mainnet'
-chain_id: 'gitopia'
-binary_version: 'v5.1.0'
+chain_id: 'auto'
+binary_version: 'auto'
 icon_url: 'gitopia-icon.svg'
 ---
 
@@ -16,8 +16,8 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/gitopia-icon.svg"
   title="Gitopia State Sync"
-  chainId="gitopia"
-  version="v5.1.0"
+  chainId="auto"
+  version="auto"
 />
 
 ## How to enable state sync
@@ -35,7 +35,7 @@ sudo systemctl stop gitopiad && gitopiad tendermint unsafe-reset-all --home ~/.g
 ```
 
 ```bash
-peers="8bd48e54552f091c1d8f194515754ab6ed74f054@gitopia-rpc.noders.services:11356"
+peers="auto"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.gitopia/config/config.toml
 ```
 
