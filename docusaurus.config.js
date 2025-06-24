@@ -9,13 +9,13 @@ const path = require('path');
 const config = {
   title: 'Validator Services | NODERS',
   tagline: 'Trusted blockchain validator and web3 developer team',
-  favicon: 'img/favicon.svg',
+  favicon: 'img/favicon.png',
 
   // Set the production url of your site here
   url: 'https://noders.services',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: process.env.BASE_URL || '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -124,16 +124,20 @@ const config = {
         },
       };
     },
-    [
-      '@acid-info/docusaurus-og',
-      {
-        path: './preview-images',
-        imageRenderers: {
-          'docusaurus-plugin-content-pages': require('./lib/open-graph/ImageRenderers').default.pages,
-          'docusaurus-plugin-content-docs': require('./lib/open-graph/ImageRenderers').default.docs,
-        },
-      },
-    ],
+    ...(process.env.BASE_URL && process.env.BASE_URL !== '/'
+      ? []
+      : [
+          [
+            '@acid-info/docusaurus-og',
+            {
+              path: './preview-images',
+              imageRenderers: {
+                'docusaurus-plugin-content-pages': require('./lib/open-graph/ImageRenderers').default.pages,
+                'docusaurus-plugin-content-docs': require('./lib/open-graph/ImageRenderers').default.docs,
+              },
+            },
+          ],
+        ]),
   ],
 };
 
