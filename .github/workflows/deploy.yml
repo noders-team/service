@@ -1,4 +1,4 @@
-name: Deploy to Remote Host
+name: Deploy
 
 on:
   workflow_dispatch:
