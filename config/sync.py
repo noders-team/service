@@ -95,7 +95,7 @@ class BlockchainSyncer:
         errors = []
 
         # Check directories
-        for scope in ['mainnet-networks', 'testnet-networks']:
+        for scope in ['mainnet', 'testnet']:
             dir_path = self.config_dir / scope
             if not dir_path.exists() or not any(dir_path.glob("*")):
                 errors.append(f"Directory missing/empty: {dir_path}")
@@ -125,7 +125,7 @@ class BlockchainSyncer:
 
         # Check config files
         config_count = config_errors = 0
-        for scope in ['mainnet-networks', 'testnet-networks']:
+        for scope in ['mainnet', 'testnet']:
             scope_dir = self.config_dir / scope
             if scope_dir.exists():
                 for config_file in scope_dir.glob("*"):
@@ -412,7 +412,7 @@ class BlockchainSyncer:
             if not chain_system_name:
                 raise SyncError(f"No chain_system_name in {config_path}")
 
-            scope_dir = self.docs_dir / f"{scope}-networks"
+            scope_dir = self.docs_dir / f"{scope}"
             chain_dir = scope_dir / chain_system_name
 
             # Fetch dynamic data concurrently (different endpoints)
@@ -524,7 +524,7 @@ class BlockchainSyncer:
             async with aiohttp.ClientSession(connector=connector, timeout=timeout) as session:
                 total_chains = 0
 
-                for scope, scope_name in [("mainnet-networks", "mainnet"), ("testnet-networks", "testnet")]:
+                for scope in ["mainnet", "testnet"]:
                     scope_dir = self.config_dir / scope
                     if not scope_dir.exists():
                         continue
@@ -534,14 +534,14 @@ class BlockchainSyncer:
                         continue
 
                     print(f"{'=' * 50}")
-                    print(f"📡 PROCESSING {scope_name.upper()} ({len(config_files)} chains)")
+                    print(f"📡 PROCESSING {scope.upper()} ({len(config_files)} chains)")
                     print("=" * 50)
 
                     # Process chains sequentially
                     for i, config_file in enumerate(config_files, 1):
                         print(f"🔄 [{i}/{len(config_files)}] {config_file.stem}")
                         try:
-                            await self._process_chain(session, config_file, scope_name)
+                            await self._process_chain(session, config_file, scope)
                             total_chains += 1
                         except Exception as e:
                             print(f"❌ Failed to process {config_file.stem}: {e}")

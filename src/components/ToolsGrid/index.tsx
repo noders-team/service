@@ -90,7 +90,7 @@ function ToolsGrid(props: ToolsGridProps): React.ReactElement {
   const theme = useTheme();
   const { chainName, scope } = props;
   const linkUrl =
-    scope === 'mainnet' ? useBaseUrl(`/mainnet-networks/${chainName}`) : useBaseUrl(`testnet-networks/${chainName}`);
+    scope === 'mainnet' ? useBaseUrl(`/mainnet/${chainName}`) : useBaseUrl(`/testnet/${chainName}`);
 
   const showNodeInstallation = props.showInstall || props.showUpgrade || props.showGenesis || props.showCli;
   const showEndpointsAndSync =
@@ -101,9 +101,9 @@ function ToolsGrid(props: ToolsGridProps): React.ReactElement {
     props.showSeed ||
     props.showAddressBook;
   const showTools =
-    props.showExplorersList || 
-    props.showPublicEndpoints || 
-    props.showUsefulTools || 
+    props.showExplorersList ||
+    props.showPublicEndpoints ||
+    props.showUsefulTools ||
     props.showUpgradeWatcher ||
     props.showMonitoring;
 

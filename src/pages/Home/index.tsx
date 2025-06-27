@@ -18,8 +18,8 @@ function Home() {
   const bgImage = useBaseUrl('img/home-page/anim-bg.png');
   const bgImageAnimated = useBaseUrl('img/home-page/anim-blocks.webp');
   const history = useHistory();
-  const mainnetUrl = useBaseUrl('mainnet-networks/overview');
-  const testnetUrl = useBaseUrl('testnet-networks/overview');
+  const mainnetUrl = useBaseUrl('mainnet/overview');
+  const testnetUrl = useBaseUrl('testnet/overview');
 
   const handleMainnetClick = () => {
     history.push(mainnetUrl);

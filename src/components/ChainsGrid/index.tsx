@@ -66,7 +66,7 @@ function ChainsGrid() {
         {mainnetChains.map((chain) => (
           <Link
             component={DocusaurusLink}
-            to={`mainnet-networks/${chain.name}`}
+            to={`mainnet/${chain.name}`}
             key={chain.chain_id}
             sx={{
               textDecoration: 'none',
@@ -102,7 +102,7 @@ function ChainsGrid() {
         {testnetChains.map((chain) => (
           <Link
             component={DocusaurusLink}
-            to={`testnet-networks/${chain.name}`}
+            to={`testnet/${chain.name}`}
             key={chain.chain_id}
             sx={{
               textDecoration: 'none',
