@@ -1,6 +1,6 @@
 ---
-title: 'RPC, API, gRPC'
-sidebar_position: 6
+title: 'Public Endpoints'
+sidebar_position: 9
 hide_title: true
 hide_table_of_contents: false
 description: ''
@@ -12,18 +12,13 @@ icon_url: '{{ chain_icon }}'
 ---
 
 import PageTitle from "@site/src/components/PageTitle";
-import Endpoints from "@site/src/components/Endpoints";
+import PublicEndpoints from "@site/src/components/PublicEndpoints";
 
 <PageTitle
   iconUrl="img/{{ chain_icon }}"
-  title="{{ chain_name }} NODERS Public Endpoints"
+  title="{{ chain_name }} Public Endpoints"
   chainId="{{ chain_id }}"
   version="{{ version }}"
 />
 
-<Endpoints
-  api="{{ endpoint_api }}"
-  rpc="{{ endpoint_rpc }}"
-  grpc="{{ endpoint_grpc }}"
-  jsonRpc="{{ endpoint_jrpc }}"
-/>
+<PublicEndpoints chainId="{{ chain_id }}" />

@@ -6,7 +6,7 @@ CHAIN_BACKGROUND_COLOR="#0000FE"
 
 # NODERS
 STAKE_URL="https://wallet.keplr.app/chains/nillion?modal=staking&chain=nillion-1&validator_address=nillionvaloper12dzevy6zu7kyqvx6hsa4ajru8835wga6k0tphu&step_id=3&action_id=stake"
-RESTAKE_URL=""
+RESTAKE_URL="https://restake.app/nillion/nillionvaloper12dzevy6zu7kyqvx6hsa4ajru8835wga6k0tphu/stake"
 VALIDATOR_URL="https://nillionhub.org/explorer/staking/nillionvaloper12dzevy6zu7kyqvx6hsa4ajru8835wga6k0tphu"
 EXPLORER_URL="https://nillionhub.org/explorer"
 EXPLORER_IMAGE="nillion-exp.png"
@@ -76,7 +76,7 @@ SHOW_ADDRESS_BOOK=true
 
 # Tools
 SHOW_EXPLORERS_LIST=true
-SHOW_PUBLIC_ENDPOINTS=false
+SHOW_PUBLIC_ENDPOINTS=true
 SHOW_USEFUL_TOOLS=true
 SHOW_UPGRADE_WATCHER=false
 SHOW_MONITORING=true
@@ -87,4 +87,3 @@ MONITORING_GRAFANA_PORT="3000"
 MONITORING_NODE_METRICS_PORT="26661"
 MONITORING_GRAFANA_PASSWORD="admin123"
 MONITORING_MAX_MISSED_BLOCKS="5"
-

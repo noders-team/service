@@ -1,13 +1,13 @@
 ---
 title: 'Monitoring'
-sidebar_position: 7
+sidebar_position: 8
 hide_title: true
 hide_table_of_contents: false
 description: ''
 chain_name: 'Zenrock'
 scope: 'mainnet'
 chain_id: 'diamond-1'
-binary_version: 'v6.8.1'
+binary_version: 'v6.13.0'
 icon_url: 'zenrock-icon.svg'
 ---
 
@@ -17,7 +17,7 @@ import PageTitle from "@site/src/components/PageTitle";
   iconUrl="img/zenrock-icon.svg"
   title="Zenrock Monitoring Setup"
   chainId="diamond-1"
-  version="v6.8.1"
+  version="v6.13.0"
 />
 
 ## Monitoring Stack
@@ -248,14 +248,14 @@ Import our Zenrock validator dashboard from NODERS:
 
 **How to Import:**
 1. Open Grafana at http://localhost:3000
-2. Click **"+"** → **"Import"** 
+2. Click **"+"** → **"Import"**
 3. Paste the URL: `https://snapshots.noders.services/monitoring/cosmos-dashboard.json`
 4. Click **"Load"** and configure data sources
 5. Select your Prometheus datasource and save
 
 **Dashboard Features:**
 - Validator status and uptime
-- Block height and sync status  
+- Block height and sync status
 - Missed blocks tracking
 - System resources (CPU, Memory, Disk)
 - Network metrics and TCP connections
@@ -312,7 +312,7 @@ docker-compose restart grafana
 
 **Add more exporters:**
 - **Node Exporter**: System metrics
-- **Process Exporter**: zenrockd process metrics  
+- **Process Exporter**: zenrockd process metrics
 - **Blackbox Exporter**: Endpoint monitoring
 
 **Custom Alerts:**
@@ -328,4 +328,4 @@ To stop and remove the monitoring stack:
 
 ```bash
 docker-compose down -v
-``` 
+```
