@@ -1,0 +1,69 @@
+---
+title: 'Upgrade Guide'
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
+description: ''
+chain_name: 'Sei'
+scope: 'mainnet'
+chain_id: 'pacific-1'
+binary_version: 'v6.1.0'
+icon_url: 'sei-icon.svg'
+---
+
+import PageTitle from "@site/src/components/PageTitle";
+
+<PageTitle
+  iconUrl="img/sei-icon.svg"
+  title="Sei Upgrade Guide"
+  chainId="pacific-1"
+  version="v6.1.0"
+/>
+
+## Clone Sei repository
+
+```js
+cd $HOME
+rm -rf sei-chain
+git clone https://github.com/sei-protocol/sei-chain.git
+cd sei-chain
+git checkout v6.1.0
+```
+
+## Build binaries
+
+```js
+make build
+```
+
+## Prepare binaries for Cosmovisor
+
+```js
+mkdir -p ~/.sei/cosmovisor/upgrades/v6.1.0/bin
+mv build/seid ~/.sei/cosmovisor/upgrades/v6.1.0/bin/
+rm -rf build
+```
+
+# Without Cosmovisor
+
+## Clone Sei repository
+
+```js
+cd $HOME
+rm -rf sei-chain
+git clone https://github.com/sei-protocol/sei-chain.git
+cd sei-chain
+git checkout v6.1.0
+```
+
+## Build binaries
+
+```js
+make install
+```
+
+## Restart node and check logs
+
+```js
+sudo systemctl restart seid && sudo journalctl -u seid -f --no-hostname -o cat
+```

@@ -1,0 +1,63 @@
+---
+title: 'Babylon'
+hide_title: true
+hide_table_of_contents: false
+description: 'Access Babylon mainnet via fast, reliable RPC by NODERS — no limits, Omnichain-ready, and built for scalable Web3'
+chain_name: 'Babylon'
+scope: 'mainnet'
+chain_id: 'bbn-1'
+binary_version: 'v2.2.0'
+icon_url: 'babylon-icon.svg'
+---
+
+import ChainLayout from '@site/src/components/ChainLayout';
+import ChainHero from '@site/src/components/ChainHero';
+import ProductLinks from '@site/src/components/ProductLinks';
+import ToolsGrid from '@site/src/components/ToolsGrid';
+
+<ChainLayout>
+  <ChainHero
+    name="Babylon"
+    iconUrl="img/babylon-icon.svg"
+    bgColor="#d9681c"
+    scope="mainnet"
+    chainId="bbn-1"
+    nodeVersion="v2.2.0"
+    token="BBN"
+    stakeUrl=""
+    restakeUrl=""
+    websiteUrl="https://babylonlabs.io"
+    githubUrl="https://github.com/babylonlabs-io/babylon"
+    xUrl="https://discord.com/invite/babylonglobal"
+    discordUrl="https://discord.com/invite/babylonglobal"
+  />
+
+  <ProductLinks
+    appUrl=""
+    appImageUrl="img/products/"
+    explorerUrl=""
+    explorerImageUrl="img/products/"
+    faucetUrl=""
+  />
+
+  <ToolsGrid
+    chainName="babylon"
+    scope="mainnet"
+    showInstall={true}
+    showUpgrade={true}
+    showGenesis={true}
+    showCli={true}
+    showEndpoints={true}
+    showStateSync={true}
+    showSnapshot={true}
+    showMonitoring={true}
+    showLivePeers={true}
+    showSeed={true}
+    showAddressBook={true}
+    showExplorersList={true}
+    showPublicEndpoints={false}
+    showUsefulTools={true}
+    showUpgradeWatcher={false}
+  />
+
+</ChainLayout>
