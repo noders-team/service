@@ -16,9 +16,9 @@ FAUCET_URL=""
 
 # Blockchain
 CHAIN_ID="auto"
-CHAIN_DENOM_PRETTY="A0GI"
-CHAIN_DENOM="ua0gi"
-CHAIN_FEES="20000"
+CHAIN_DENOM_PRETTY="OG"
+CHAIN_DENOM="neuron"
+CHAIN_FEES="200000000"
 
 # Binary
 VERSION="auto"
@@ -28,7 +28,7 @@ DAEMON_HOME="~/.0gchain"
 
 # Endpoints
 ENDPOINT_RPC="https://og-t-rpc.noders.services"
-ENDPOINT_API="https://og-t-api.noders.services"
+ENDPOINT_API=""
 ENDPOINT_JRPC="https://og-t-json.noders.services"
 ENDPOINT_GRPC="og-t-grpc.noders.services:443"
 ENDPOINT_PEER="auto"
