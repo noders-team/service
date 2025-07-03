@@ -1,0 +1,69 @@
+---
+title: 'Upgrade Guide'
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
+description: ''
+chain_name: 'Babylon'
+scope: 'mainnet'
+chain_id: 'bbn-1'
+binary_version: 'v2.2.0'
+icon_url: 'babylon-icon.svg'
+---
+
+import PageTitle from "@site/src/components/PageTitle";
+
+<PageTitle
+  iconUrl="img/babylon-icon.svg"
+  title="Babylon Upgrade Guide"
+  chainId="bbn-1"
+  version="v2.2.0"
+/>
+
+## Clone Babylon repository
+
+```js
+cd $HOME
+rm -rf babylon
+git clone https://github.com/babylonlabs-io/babylon.git
+cd babylon
+git checkout v2.2.0
+```
+
+## Build binaries
+
+```js
+make build
+```
+
+## Prepare binaries for Cosmovisor
+
+```js
+mkdir -p ~/.babylond/cosmovisor/upgrades/v2.2.0/bin
+mv build/babylond ~/.babylond/cosmovisor/upgrades/v2.2.0/bin/
+rm -rf build
+```
+
+# Without Cosmovisor
+
+## Clone Babylon repository
+
+```js
+cd $HOME
+rm -rf babylon
+git clone https://github.com/babylonlabs-io/babylon.git
+cd babylon
+git checkout v2.2.0
+```
+
+## Build binaries
+
+```js
+make install
+```
+
+## Restart node and check logs
+
+```js
+sudo systemctl restart babylond && sudo journalctl -u babylond -f --no-hostname -o cat
+```

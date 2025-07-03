@@ -4,20 +4,20 @@ sidebar_position: 1
 hide_title: true
 hide_table_of_contents: false
 description: ''
-chain_name: 'Side'
-scope: 'testnet'
-chain_id: 'auto'
-binary_version: 'auto'
-icon_url: 'side-icon.svg'
+chain_name: 'Sei'
+scope: 'mainnet'
+chain_id: 'pacific-1'
+binary_version: 'v6.1.0'
+icon_url: 'sei-icon.svg'
 ---
 
 import PageTitle from "@site/src/components/PageTitle";
 
 <PageTitle
-  iconUrl="img/side-icon.svg"
-  title="Side Installation Guide"
-  chainId="auto"
-  version="auto"
+  iconUrl="img/sei-icon.svg"
+  title="Sei Installation Guide"
+  chainId="pacific-1"
+  version="v6.1.0"
 />
 
 ## Install dependencies
@@ -51,13 +51,13 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 ### Download and build binaries
 
-### Clone Side repo and build sided auto
+### Clone Sei repo and build seid v6.1.0
 
 ```js
 cd $HOME
-git clone https://github.com/sideprotocol.git
-cd sideprotocol
-git checkout auto
+git clone https://github.com/sei-protocol/sei-chain.git
+cd sei-chain
+git checkout v6.1.0
 ```
 
 ### Build binaries
@@ -70,15 +70,15 @@ make install
 
 ```js
 cd $HOME
-mkdir -p ~/.side/cosmovisor/upgrades/auto/bin
-mv $HOME/go/bin/sided ~/.side/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.sei/cosmovisor/upgrades/v6.1.0/bin
+mv $HOME/go/bin/seid ~/.sei/cosmovisor/upgrades/v6.1.0/bin/
 ```
 
 ### Create symlinks
 
 ```js
-sudo ln -s ~/.side/cosmovisor/genesis ~/.side/cosmovisor/current -f
-sudo ln -s ~/.side/cosmovisor/current/bin/sided /usr/local/bin/sided -f
+sudo ln -s ~/.sei/cosmovisor/genesis ~/.sei/cosmovisor/current -f
+sudo ln -s ~/.sei/cosmovisor/current/bin/seid /usr/local/bin/seid -f
 ```
 
 ## Download and install Cosmovisor
@@ -92,9 +92,9 @@ go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.1
 ### Create service
 
 ```js
-sudo tee /etc/systemd/system/sided.service > /dev/null << EOF
+sudo tee /etc/systemd/system/seid.service > /dev/null << EOF
 [Unit]
-Description=side node service
+Description=sei node service
 After=network-online.target
 
 [Service]
@@ -103,10 +103,10 @@ ExecStart=$(which cosmovisor) run start
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
-Environment="DAEMON_HOME=~/.side"
-Environment="DAEMON_NAME=sided"
+Environment="DAEMON_HOME=~/.sei"
+Environment="DAEMON_NAME=seid"
 Environment="UNSAFE_SKIP_BACKUP=true"
-Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/.side/cosmovisor/current/bin"
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/.sei/cosmovisor/current/bin"
 
 [Install]
 WantedBy=multi-user.target
@@ -117,13 +117,13 @@ EOF
 
 ### Download and build binaries
 
-### Clone Side repo and build sided auto
+### Clone Sei repo and build seid v6.1.0
 
 ```js
 cd $HOME
-git clone https://github.com/sideprotocol.git
-cd sideprotocol
-git checkout auto
+git clone https://github.com/sei-protocol/sei-chain.git
+cd sei-chain
+git checkout v6.1.0
 ```
 
 ### Build binaries
@@ -137,14 +137,14 @@ make install
 ### Create service
 
 ```js
-sudo tee /etc/systemd/system/sided.service > /dev/null << EOF
+sudo tee /etc/systemd/system/seid.service > /dev/null << EOF
 [Unit]
-Description=side node service
+Description=sei node service
 After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=$(which sided) start
+ExecStart=$(which seid) start
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
@@ -159,7 +159,7 @@ EOF
 
 ```js
 sudo systemctl daemon-reload
-sudo systemctl enable sided
+sudo systemctl enable seid
 ```
 
 ## Node configuration
@@ -167,34 +167,34 @@ sudo systemctl enable sided
 ### Set config
 
 ```js
-sided config chain-id auto
-sided config keyring-backend os
-sided config node tcp://localhost:26657
+seid config chain-id pacific-1
+seid config keyring-backend os
+seid config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 
 ```js
-sided init NAME_OF_YOUR_VALIDATOR --chain-id auto
+seid init NAME_OF_YOUR_VALIDATOR --chain-id pacific-1
 ```
 
 ### Download genesis and addrbook
 
 ```js
-curl https://snapshots.noders.services/side/genesis.json -o ~/.side/config/genesis.json
-curl https://snapshots.noders.services/side/addrbook.json -o ~/.side/config/addrbook.json
+curl https://snapshots.noders.services/sei/genesis.json -o ~/.sei/config/genesis.json
+curl https://snapshots.noders.services/sei/addrbook.json -o ~/.sei/config/addrbook.json
 ```
 
 ### Add peers
 
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"auto\"/" ~/.side/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"auto\"/" ~/.sei/config/config.toml
 ```
 
 ### Set minimum gas price
 
 ```js
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001uside\"|" ~/.side/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001usei\"|" ~/.sei/config/app.toml
 ```
 
 ### Set pruning
@@ -205,29 +205,29 @@ sed -i \
   -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
   -e 's|^pruning-keep-every *=.*|pruning-keep-every = "0"|' \
   -e 's|^pruning-interval *=.*|pruning-interval = "19"|' \
-  ~/.side/config/app.toml
+  ~/.sei/config/app.toml
 ```
 
 ### Set custom ports
 
 ```bash
-echo "export SIDED_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export SEID_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
 # Set custom ports in app.tom{l
-sed -i.bak -e "s%:1317%:${SIDED_PORT}317%g" \
--e "s%:8080%:${SIDED_PORT}080%g" \
--e "s%:9090%:${SIDED_PORT}090%g" \
--e "s%:9091%:${SIDED_PORT}091%g" \
--e "s%:8545%:${SIDED_PORT}545%g" \
--e "s%:8546%:${SIDED_PORT}546%g" \
--e "s%:6065%:${SIDED_PORT}065%g" ~/.side/config/app.toml
+sed -i.bak -e "s%:1317%:${SEID_PORT}317%g" \
+-e "s%:8080%:${SEID_PORT}080%g" \
+-e "s%:9090%:${SEID_PORT}090%g" \
+-e "s%:9091%:${SEID_PORT}091%g" \
+-e "s%:8545%:${SEID_PORT}545%g" \
+-e "s%:8546%:${SEID_PORT}546%g" \
+-e "s%:6065%:${SEID_PORT}065%g" ~/.sei/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${SIDED_PORT}658%g" \
--e "s%:26657%:${SIDED_PORT}657%g" \
--e "s%:6060%:${SIDED_PORT}060%g" \
--e "s%:26656%:${SIDED_PORT}656%g" \
--e "s%:26660%:${SIDED_PORT}660%g" ~/.side/config/config.toml
+sed -i.bak -e "s%:26658%:${SEID_PORT}658%g" \
+-e "s%:26657%:${SEID_PORT}657%g" \
+-e "s%:6060%:${SEID_PORT}060%g" \
+-e "s%:26656%:${SEID_PORT}656%g" \
+-e "s%:26660%:${SEID_PORT}660%g" ~/.sei/config/config.toml
 ```
