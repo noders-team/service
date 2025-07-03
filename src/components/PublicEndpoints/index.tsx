@@ -1,5 +1,5 @@
 import Box from '@mui/material/Box';
-import React from 'react';
+import React, { version } from 'react';
 import Typography from '@mui/material/Typography';
 import { PublicEndpoint } from '@/types/PublicEndpoint';
 import crawlerService from '@/service/crawlerService';
@@ -14,6 +14,8 @@ import { alpha, styled, useTheme } from '@mui/material/styles';
 import { FiAlertTriangle, FiCheck } from 'react-icons/fi';
 import CopyButton from '@/components/CopyButton';
 import Skeleton from '@mui/material/Skeleton';
+import CodeText from '../CodeText';
+import Divider from '@mui/material/Divider';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -46,6 +48,22 @@ function PublicEndpoints({ chainId }: Props): React.JSX.Element {
 
   return (
     <Box display="flex" flexDirection="column" gap={2} pt={5}>
+      <Box display="flex" flexWrap="wrap" gap={2} pb={4}>
+        <Box display="flex" gap={2}>
+          <Typography variant="subtitle2">Providers:</Typography>
+          {isLoading ? (
+            <Skeleton variant="text" width={25} height={20} />
+          ) : (
+            <CodeText text={publicEndpoints.length.toString()} />
+          )}
+        </Box>
+        <Divider orientation="vertical" flexItem />
+        <Box display="flex" gap={2}>
+          <Typography variant="subtitle2">Last updated:</Typography>
+          {isLoading ? <Skeleton variant="text" width={100} height={20} /> : <CodeText text={'1 hour ago'} />}
+        </Box>
+      </Box>
+
       <Typography variant="h3">RPC / API / gRPC Endpoints</Typography>
       <TableContainer>
         <Table>
