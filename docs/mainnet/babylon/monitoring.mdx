@@ -1,6 +1,6 @@
 ---
 title: 'Monitoring'
-sidebar_position: 7
+sidebar_position: 8
 hide_title: true
 hide_table_of_contents: false
 description: ''
@@ -248,14 +248,14 @@ Import our Babylon validator dashboard from NODERS:
 
 **How to Import:**
 1. Open Grafana at http://localhost:3000
-2. Click **"+"** → **"Import"** 
+2. Click **"+"** → **"Import"**
 3. Paste the URL: `https://snapshots.noders.services/monitoring/cosmos-dashboard.json`
 4. Click **"Load"** and configure data sources
 5. Select your Prometheus datasource and save
 
 **Dashboard Features:**
 - Validator status and uptime
-- Block height and sync status  
+- Block height and sync status
 - Missed blocks tracking
 - System resources (CPU, Memory, Disk)
 - Network metrics and TCP connections
@@ -312,7 +312,7 @@ docker-compose restart grafana
 
 **Add more exporters:**
 - **Node Exporter**: System metrics
-- **Process Exporter**: babylond process metrics  
+- **Process Exporter**: babylond process metrics
 - **Blackbox Exporter**: Endpoint monitoring
 
 **Custom Alerts:**
@@ -328,4 +328,4 @@ To stop and remove the monitoring stack:
 
 ```bash
 docker-compose down -v
-``` 
+```

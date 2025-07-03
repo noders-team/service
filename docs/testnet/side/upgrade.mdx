@@ -6,8 +6,8 @@ hide_table_of_contents: false
 description: ''
 chain_name: 'Side'
 scope: 'testnet'
-chain_id: 'auto'
-binary_version: 'auto'
+chain_id: 'sidechain-testnet-6'
+binary_version: 'v2.0.0-rc.6'
 icon_url: 'side-icon.svg'
 ---
 
@@ -16,8 +16,8 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/side-icon.svg"
   title="Side Upgrade Guide"
-  chainId="auto"
-  version="auto"
+  chainId="sidechain-testnet-6"
+  version="v2.0.0-rc.6"
 />
 
 ## Clone Side repository
@@ -27,7 +27,7 @@ cd $HOME
 rm -rf sideprotocol
 git clone https://github.com/sideprotocol.git
 cd sideprotocol
-git checkout auto
+git checkout v2.0.0-rc.6
 ```
 
 ## Build binaries
@@ -39,8 +39,8 @@ make build
 ## Prepare binaries for Cosmovisor
 
 ```js
-mkdir -p ~/.side/cosmovisor/upgrades/auto/bin
-mv build/sided ~/.side/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.side/cosmovisor/upgrades/v2.0.0-rc.6/bin
+mv build/sided ~/.side/cosmovisor/upgrades/v2.0.0-rc.6/bin/
 rm -rf build
 ```
 
@@ -53,7 +53,7 @@ cd $HOME
 rm -rf sideprotocol
 git clone https://github.com/sideprotocol.git
 cd sideprotocol
-git checkout auto
+git checkout v2.0.0-rc.6
 ```
 
 ## Build binaries
