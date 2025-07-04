@@ -110,6 +110,41 @@ const config = {
     }),
 
   plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            from: '/mainnet-networks',
+            to: '/mainnet/overview',
+          },
+          {
+            from: '/mainnet',
+            to: '/mainnet/overview',
+          },
+          {
+            from: '/testnet-networks',
+            to: '/testnet/overview',
+          },
+          {
+            from: '/testnet',
+            to: '/testnet/overview',
+          },
+        ],
+        createRedirects(existingPath) {
+          const redirects = [];
+          if (existingPath.includes('/mainnet/')) {
+            const oldPath = existingPath.replace('/mainnet/', '/mainnet-networks/');
+            redirects.push(oldPath);
+          }
+          if (existingPath.includes('/testnet/')) {
+            const oldPath = existingPath.replace('/testnet/', '/testnet-networks/');
+            redirects.push(oldPath);
+          }
+          return redirects.length > 0 ? redirects : undefined;
+        },
+      },
+    ],
     function aliasPlugin(context, options) {
       return {
         name: 'docusaurus-plugin-aliases',

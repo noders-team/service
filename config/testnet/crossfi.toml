@@ -1,0 +1,89 @@
+# App
+CHAIN_NAME="CrossFi"
+CHAIN_SYSTEM_NAME="crossfi"
+CHAIN_ICON="crossfi-icon.svg"
+CHAIN_BACKGROUND_COLOR="#00C0FF"
+
+# NODERS
+STAKE_URL=""
+RESTAKE_URL=""
+VALIDATOR_URL="https://testnet.celestia.explorers.guru/validator/celestiavaloper1zzxrq7tjlsqvv0jtqtlt8gjaa68racukf5n9xh"
+EXPLORER_URL=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
+# Blockchain
+CHAIN_ID="auto"
+CHAIN_DENOM="mpx"
+CHAIN_FEES="300000000000"
+
+# Binary
+VERSION="auto"
+DAEMON_NAME="crossfid"
+DAEMON_SERVICE="crossfi.service"
+DAEMON_HOME="~/.mineplex-chain"
+
+# Endpoints
+ENDPOINT_RPC="https://crossfi-t-rpc.noders.services"
+ENDPOINT_API="https://crossfi-t-api.noders.services"
+ENDPOINT_JRPC="https://crossfi-t-jsonrpc.noders.services"
+ENDPOINT_GRPC="crossfi-t-grpc.noders.services:443"
+ENDPOINT_PEER="auto"
+ENDPOINT_SEED="abb664a0229542c29b270476927a6da2041eae8e@crossfi-t-seed.noders.services:26033"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/testnet/crossfi"
+
+# Social
+SOCIAL_WEBSITE="https://crossfi.org/"
+SOCIAL_GITHUB="https://github.com/crossfichain"
+SOCIAL_DISCORD="https://discord.gg/crossfi"
+SOCIAL_X="https://x.com/crossfichain"
+SOCIAL_TELEGRAM="https://t.me/crossfichain"
+
+# Other
+SNAPSHOT_URL="https://snapshots-t.noders.services/crossfi"
+GITHUB_FOLDER_NAME="auto"
+
+# Updates
+UPDATE_MAIN=true
+UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
+UPDATE_UPGRADE=true
+UPDATE_SNAPSHOT=true
+UPDATE_STATESYNC=true
+UPDATE_LIVE_PEERS=true
+UPDATE_CLI_CHEATSHEET=true
+UPDATE_ENDPOINTS=true
+UPDATE_MONITORING=true
+UPDATE_PUBLIC_ENDPOINTS=true
+
+# Feature toggles
+
+# Node installation
+SHOW_INSTALLATION_GUIDE=true
+SHOW_UPGRADE_GUIDE=true
+SHOW_GENESIS=true
+SHOW_CLI=true
+
+# Endpoints and Sync
+SHOW_ENDPOINTS=true
+SHOW_STATE_SYNC=true
+SHOW_SNAPSHOT=true
+SHOW_LIVE_PEERS=true
+SHOW_SEED=true
+SHOW_ADDRESS_BOOK=true
+
+# Tools
+SHOW_EXPLORERS_LIST=false
+SHOW_PUBLIC_ENDPOINTS=true
+SHOW_USEFUL_TOOLS=true
+SHOW_UPGRADE_WATCHER=false
+SHOW_MONITORING=true
+
+# Monitoring Configuration
+MONITORING_PROMETHEUS_PORT="9090"
+MONITORING_GRAFANA_PORT="3000"
+MONITORING_NODE_METRICS_PORT="26661"
+MONITORING_GRAFANA_PASSWORD="admin123"
+MONITORING_MAX_MISSED_BLOCKS="5"
+MONITORING_DASHBOARD_ID="15991"

@@ -5,8 +5,8 @@ on:
     branches:
       - main
     paths:
-      - 'config/mainnet-networks/**.toml'
-      - 'config/testnet-networks/**.toml'
+      - 'config/mainnet/**.toml'
+      - 'config/testnet/**.toml'
   workflow_dispatch:
   workflow_run:
     workflows:
@@ -40,7 +40,7 @@ jobs:
         run: |
           extracted_values() {
             local pattern="$1"
-            cat config/mainnet-networks/* config/testnet-networks/* | grep "$pattern" | cut -d '=' -f 2 | tr -d '"' | tr -d "'"
+            cat config/mainnet/* config/testnet/* | grep "$pattern" | cut -d '=' -f 2 | tr -d '"' | tr -d "'"
           }
 
           FAILED_ENDPOINTS=()

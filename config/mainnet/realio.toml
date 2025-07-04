@@ -1,0 +1,89 @@
+# App
+CHAIN_NAME="Realio"
+CHAIN_SYSTEM_NAME="realio"
+CHAIN_ICON="realio-icon.svg"
+CHAIN_BACKGROUND_COLOR="#67676799"
+
+# NODERS
+STAKE_URL=""
+RESTAKE_URL="https://restake.app/realio/realiovaloper1q0ju3af59l2kp2vfywcjrmj07tkgkg0s9zfh03"
+VALIDATOR_URL="https://ping.pub/realio/staking/realiovaloper1q0ju3af59l2kp2vfywcjrmj07tkgkg0s9zfh03"
+EXPLORER_URL=""
+EXPLORER_IMAGE=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
+# Blockchain
+CHAIN_ID="auto"
+CHAIN_DENOM="ario"
+CHAIN_FEES="10000000000000000"
+
+# Binary
+VERSION="auto"
+DAEMON_NAME="realiod"
+DAEMON_SERVICE="realio.service"
+DAEMON_HOME="~/.realio-network"
+
+# Endpoints
+ENDPOINT_RPC="https://realio-rpc.noders.services"
+ENDPOINT_API="https://realio-api.noders.services"
+ENDPOINT_JRPC="https://realio-jsonrpc.noders.services"
+ENDPOINT_GRPC="realio-grpc.noders.services:443"
+ENDPOINT_PEER="auto"
+ENDPOINT_SEED="159d9f766f935962a88566ea4bea3448872a51fb@realio-seed.noders.services:12033"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/realio"
+
+# Social
+SOCIAL_WEBSITE="https://www.realio.network/"
+SOCIAL_GITHUB="https://github.com/realio-network"
+SOCIAL_DISCORD="https://discord.com/invite/Nv9EUbRnKb"
+SOCIAL_X="https://twitter.com/realio_network"
+SOCIAL_TELEGRAM=""
+
+# Other
+DOWNLOAD_URL="https://snapshots.noders.services/realio"
+GITHUB_FOLDER_NAME="auto"
+
+# Updates
+UPDATE_MAIN=true
+UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
+UPDATE_UPGRADE=true
+UPDATE_SNAPSHOT=true
+UPDATE_STATESYNC=true
+UPDATE_LIVE_PEERS=true
+UPDATE_CLI_CHEATSHEET=true
+UPDATE_ENDPOINTS=true
+UPDATE_MONITORING=true
+UPDATE_PUBLIC_ENDPOINTS=true
+
+# Feature toggles
+
+# Node installation
+SHOW_INSTALLATION_GUIDE=true
+SHOW_UPGRADE_GUIDE=true
+SHOW_GENESIS=true
+SHOW_CLI=true
+
+# Endpoints and Sync
+SHOW_ENDPOINTS=true
+SHOW_STATE_SYNC=true
+SHOW_SNAPSHOT=true
+SHOW_LIVE_PEERS=true
+SHOW_SEED=true
+SHOW_ADDRESS_BOOK=true
+
+# Tools
+SHOW_EXPLORERS_LIST=true
+SHOW_PUBLIC_ENDPOINTS=true
+SHOW_USEFUL_TOOLS=true
+SHOW_UPGRADE_WATCHER=false
+SHOW_MONITORING=true
+
+# Monitoring Configuration
+MONITORING_PROMETHEUS_PORT="9090"
+MONITORING_GRAFANA_PORT="3000"
+MONITORING_NODE_METRICS_PORT="26661"
+MONITORING_GRAFANA_PASSWORD="admin123"
+MONITORING_MAX_MISSED_BLOCKS="5"

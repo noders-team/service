@@ -1,0 +1,89 @@
+# App
+CHAIN_NAME="Arkeo"
+CHAIN_SYSTEM_NAME="arkeo"
+CHAIN_ICON="arkeo-icon.svg"
+CHAIN_BACKGROUND_COLOR="#3CE2FB"
+
+# NODERS
+STAKE_URL=""
+RESTAKE_URL="https://restake.app/arkeo/arkeovaloper1rnfgv6uhry6ywl880mgz4rmxm8csqwd74plfuu"
+VALIDATOR_URL="https://exp.utsa.tech/arkeo-main/staking/arkeovaloper1rnfgv6uhry6ywl880mgz4rmxm8csqwd74plfuu"
+EXPLORER_URL=""
+EXPLORER_IMAGE=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
+# Blockchain
+CHAIN_ID="auto"
+CHAIN_DENOM="uarkeo"
+CHAIN_FEES="20000"
+
+# Binary
+VERSION="auto"
+DAEMON_NAME="arkeod"
+DAEMON_SERVICE="arkeo.service"
+DAEMON_HOME="~/.arkeo"
+
+# Endpoints
+ENDPOINT_RPC="https://arkeo-rpc.noders.services"
+ENDPOINT_API="https://arkeo-api.noders.services"
+ENDPOINT_JRPC=""
+ENDPOINT_GRPC="arkeo-grpc.noders.services:443"
+ENDPOINT_PEER="auto"
+ENDPOINT_SEED="3efa2352582ccb66b3d2b84de8a562e8057e88e6@arkeo-seed.noders.services:22833"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/arkeo"
+
+# Social
+SOCIAL_WEBSITE="https://arkeo.network/"
+SOCIAL_GITHUB="https://github.com/arkeonetwork"
+SOCIAL_DISCORD="https://discord.gg/BfEHpm6uFc"
+SOCIAL_X="https://twitter.com/arkeonetwork"
+SOCIAL_TELEGRAM=""
+
+# Other
+SNAPSHOT_URL="https://snapshots.noders.services/arkeo"
+GITHUB_FOLDER_NAME="auto"
+
+# Updates
+UPDATE_MAIN=true
+UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
+UPDATE_UPGRADE=true
+UPDATE_SNAPSHOT=true
+UPDATE_STATESYNC=true
+UPDATE_LIVE_PEERS=true
+UPDATE_CLI_CHEATSHEET=true
+UPDATE_ENDPOINTS=true
+UPDATE_MONITORING=true
+UPDATE_PUBLIC_ENDPOINTS=true
+
+# Feature toggles
+
+# Node installation
+SHOW_INSTALLATION_GUIDE=true
+SHOW_UPGRADE_GUIDE=true
+SHOW_GENESIS=true
+SHOW_CLI=true
+
+# Endpoints and Sync
+SHOW_ENDPOINTS=true
+SHOW_STATE_SYNC=true
+SHOW_SNAPSHOT=true
+SHOW_LIVE_PEERS=true
+SHOW_SEED=true
+SHOW_ADDRESS_BOOK=true
+
+# Tools
+SHOW_EXPLORERS_LIST=true
+SHOW_PUBLIC_ENDPOINTS=true
+SHOW_USEFUL_TOOLS=false
+SHOW_UPGRADE_WATCHER=false
+SHOW_MONITORING=true
+
+# Monitoring Configuration
+MONITORING_PROMETHEUS_PORT="9090"
+MONITORING_GRAFANA_PORT="3000"
+MONITORING_NODE_METRICS_PORT="26661"
+MONITORING_GRAFANA_PASSWORD="admin123"
+MONITORING_MAX_MISSED_BLOCKS="5"

@@ -1,0 +1,63 @@
+---
+title: 'Empeiria'
+hide_title: true
+hide_table_of_contents: false
+description: 'Access Empeiria testnet via fast, reliable RPC by NODERS — no limits, Omnichain-ready, and built for scalable Web3'
+chain_name: 'Empeiria'
+scope: 'testnet'
+chain_id: 'empe-testnet-2'
+binary_version: 'v0.4.0'
+icon_url: 'empeiria-icon.svg'
+---
+
+import ChainLayout from '@site/src/components/ChainLayout';
+import ChainHero from '@site/src/components/ChainHero';
+import ProductLinks from '@site/src/components/ProductLinks';
+import ToolsGrid from '@site/src/components/ToolsGrid';
+
+<ChainLayout>
+  <ChainHero
+    name="Empeiria"
+    iconUrl="img/empeiria-icon.svg"
+    bgColor="#890098"
+    scope="testnet"
+    chainId="empe-testnet-2"
+    nodeVersion="v0.4.0"
+    token=""
+    stakeUrl=""
+    restakeUrl=""
+    websiteUrl="https://empe.io/"
+    githubUrl="https://github.com/empe-io"
+    xUrl="https://twitter.com/empe_io"
+    discordUrl=""
+  />
+
+  <ProductLinks
+    appUrl=""
+    appImageUrl="img/products/"
+    explorerUrl=""
+    explorerImageUrl="img/products/"
+    faucetUrl=""
+  />
+
+  <ToolsGrid
+    chainName="empeiria"
+    scope="testnet"
+    showInstall={true}
+    showUpgrade={true}
+    showGenesis={true}
+    showCli={true}
+    showEndpoints={true}
+    showStateSync={true}
+    showSnapshot={true}
+    showMonitoring={true}
+    showLivePeers={true}
+    showSeed={true}
+    showAddressBook={true}
+    showExplorersList={true}
+    showPublicEndpoints={true}
+    showUsefulTools={true}
+    showUpgradeWatcher={false}
+  />
+
+</ChainLayout>

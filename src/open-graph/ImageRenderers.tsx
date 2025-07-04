@@ -53,7 +53,7 @@ const docs: ImageRenderer<DocsPageData> = (data: DocsPageData, context) => {
   //
   // OVERVIEW PAGES
   //
-  if (permaLink === '/mainnet-networks/overview' || permaLink === '/testnet-networks/overview') {
+  if (permaLink === '/mainnet/overview' || permaLink === '/testnet/overview') {
     const imageUrl = permaLink.includes('mainnet')
       ? `img/open-graph/overview-mainnet.png`
       : `img/open-graph/overview-testnet.png`;

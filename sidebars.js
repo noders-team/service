@@ -22,45 +22,45 @@ const sidebars = {
       type: 'html',
       value: 'Getting Started',
       className: 'sidebar-section-header',
-    },{
+    },
+    {
       type: 'category',
       label: 'Testnet Introduction',
       link: {
         type: 'doc',
-        id: 'testnet-networks/overview',
+        id: 'testnet/overview',
       },
       collapsible: true,
       collapsed: false,
       items: [
         {
           type: 'doc',
-          id: 'testnet-networks/overview',
-          label: 'Introduction to Testnet'
+          id: 'testnet/overview',
+          label: 'Introduction to Testnet',
         },
-      ]
+      ],
     },
     {
       type: 'category',
       label: 'Mainnet Introduction',
       link: {
         type: 'doc',
-        id: 'mainnet-networks/overview',
+        id: 'mainnet/overview',
       },
       collapsible: true,
       collapsed: false,
       items: [
         {
           type: 'doc',
-          id: 'mainnet-networks/overview',
-          label: 'Introduction to Mainnet'
-        }
-      ]
+          id: 'mainnet/overview',
+          label: 'Introduction to Mainnet',
+        },
+      ],
     },
   ],
 
-  ...require("./sidebars/mainnetSidebar.js"),
-  ...require("./sidebars/testnetSidebar.js"),
-
+  ...require('./sidebars/mainnetSidebar.js'),
+  ...require('./sidebars/testnetSidebar.js'),
 };
 
 module.exports = sidebars;

@@ -1,0 +1,63 @@
+---
+title: 'Lava'
+hide_title: true
+hide_table_of_contents: false
+description: 'Access Lava testnet via fast, reliable RPC by NODERS — no limits, Omnichain-ready, and built for scalable Web3'
+chain_name: 'Lava'
+scope: 'testnet'
+chain_id: 'lava-testnet-2'
+binary_version: 'v5.4.0'
+icon_url: 'lava-icon.svg'
+---
+
+import ChainLayout from '@site/src/components/ChainLayout';
+import ChainHero from '@site/src/components/ChainHero';
+import ProductLinks from '@site/src/components/ProductLinks';
+import ToolsGrid from '@site/src/components/ToolsGrid';
+
+<ChainLayout>
+  <ChainHero
+    name="Lava"
+    iconUrl="img/lava-icon.svg"
+    bgColor="#D7001F"
+    scope="testnet"
+    chainId="lava-testnet-2"
+    nodeVersion="v5.4.0"
+    token=""
+    stakeUrl=""
+    restakeUrl=""
+    websiteUrl="https://www.lavanet.xyz/"
+    githubUrl="https://github.com/lavanet"
+    xUrl="https://twitter.com/lavanetxyz"
+    discordUrl="https://discord.gg/Tbk5NxTCdA"
+  />
+
+  <ProductLinks
+    appUrl=""
+    appImageUrl="img/products/"
+    explorerUrl=""
+    explorerImageUrl="img/products/"
+    faucetUrl=""
+  />
+
+  <ToolsGrid
+    chainName="lava"
+    scope="testnet"
+    showInstall={true}
+    showUpgrade={true}
+    showGenesis={true}
+    showCli={true}
+    showEndpoints={true}
+    showStateSync={true}
+    showSnapshot={true}
+    showMonitoring={true}
+    showLivePeers={true}
+    showSeed={true}
+    showAddressBook={true}
+    showExplorersList={true}
+    showPublicEndpoints={true}
+    showUsefulTools={true}
+    showUpgradeWatcher={false}
+  />
+
+</ChainLayout>

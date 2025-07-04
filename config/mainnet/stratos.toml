@@ -1,0 +1,89 @@
+# App
+CHAIN_NAME="Stratos"
+CHAIN_SYSTEM_NAME="stratos"
+CHAIN_ICON="stratos-icon.svg"
+CHAIN_BACKGROUND_COLOR="#33948A"
+
+# NODERS
+STAKE_URL=""
+RESTAKE_URL="https://restake.app/stratos/stvaloper1ghkn8ra63422mcepdk0zzglzy6qax637g6fhzm"
+VALIDATOR_URL="https://ping.pub/stratos/staking/stvaloper1ghkn8ra63422mcepdk0zzglzy6qax637g6fhzm"
+EXPLORER_URL=""
+EXPLORER_IMAGE=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
+# Blockchain
+CHAIN_ID="auto"
+CHAIN_DENOM="wei"
+CHAIN_FEES="300000000000"
+
+# Binary
+VERSION="auto"
+DAEMON_NAME="stchaind"
+DAEMON_SERVICE="stchaind.service"
+DAEMON_HOME="~/.stchaind"
+
+# Endpoints
+ENDPOINT_RPC="https://stratos-rpc.noders.services"
+ENDPOINT_API="https://stratos-api.noders.services"
+ENDPOINT_JRPC="https://stratos-jsonrpc.noders.services "
+ENDPOINT_GRPC="stratos-grpc.noders.services:443"
+ENDPOINT_PEER="auto"
+ENDPOINT_SEED="65c1811742bd8dc718e2a4c8801a5ec4f34f4df8@stratos-seed.noders.services:21833"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/stratos"
+
+# Social
+SOCIAL_WEBSITE="https://www.thestratos.org/"
+SOCIAL_GITHUB="https://github.com/stratosnet/stratos-chain"
+SOCIAL_DISCORD="https://discord.gg/79dMCCyjAM"
+SOCIAL_X="https://twitter.com/Stratos_Network"
+SOCIAL_TELEGRAM="https://t.me/StratosOfficial"
+
+# Other
+SNAPSHOT_URL="https://snapshots.noders.services/stratos"
+GITHUB_FOLDER_NAME="auto"
+
+# Updates
+UPDATE_MAIN=true
+UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
+UPDATE_UPGRADE=true
+UPDATE_SNAPSHOT=true
+UPDATE_STATESYNC=true
+UPDATE_LIVE_PEERS=true
+UPDATE_CLI_CHEATSHEET=true
+UPDATE_ENDPOINTS=true
+UPDATE_MONITORING=true
+UPDATE_PUBLIC_ENDPOINTS=true
+
+# Feature toggles
+
+# Node installation
+SHOW_INSTALLATION_GUIDE=true
+SHOW_UPGRADE_GUIDE=true
+SHOW_GENESIS=true
+SHOW_CLI=true
+
+# Endpoints and Sync
+SHOW_ENDPOINTS=true
+SHOW_STATE_SYNC=true
+SHOW_SNAPSHOT=true
+SHOW_LIVE_PEERS=true
+SHOW_SEED=true
+SHOW_ADDRESS_BOOK=true
+
+# Tools
+SHOW_EXPLORERS_LIST=true
+SHOW_PUBLIC_ENDPOINTS=true
+SHOW_USEFUL_TOOLS=true
+SHOW_UPGRADE_WATCHER=false
+SHOW_MONITORING=true
+
+# Monitoring Configuration
+MONITORING_PROMETHEUS_PORT="9090"
+MONITORING_GRAFANA_PORT="3000"
+MONITORING_NODE_METRICS_PORT="26661"
+MONITORING_GRAFANA_PASSWORD="admin123"
+MONITORING_MAX_MISSED_BLOCKS="5"

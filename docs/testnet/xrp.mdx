@@ -1,0 +1,63 @@
+---
+title: 'XRP'
+hide_title: true
+hide_table_of_contents: false
+description: 'Access XRP testnet via fast, reliable RPC by NODERS — no limits, Omnichain-ready, and built for scalable Web3'
+chain_name: 'XRP'
+scope: 'testnet'
+chain_id: 'xrplevm_1449000-1'
+binary_version: 'v8.0.0'
+icon_url: 'xrp-icon.svg'
+---
+
+import ChainLayout from '@site/src/components/ChainLayout';
+import ChainHero from '@site/src/components/ChainHero';
+import ProductLinks from '@site/src/components/ProductLinks';
+import ToolsGrid from '@site/src/components/ToolsGrid';
+
+<ChainLayout>
+  <ChainHero
+    name="XRP"
+    iconUrl="img/xrp-icon.svg"
+    bgColor="#7B00F3"
+    scope="testnet"
+    chainId="xrplevm_1449000-1"
+    nodeVersion="v8.0.0"
+    token=""
+    stakeUrl=""
+    restakeUrl=""
+    websiteUrl="https://xrplevm.org/"
+    githubUrl="https://github.com/xrplevm/node"
+    xUrl=""
+    discordUrl="https://discord.gg/xrplevm"
+  />
+
+  <ProductLinks
+    appUrl=""
+    appImageUrl="img/products/"
+    explorerUrl=""
+    explorerImageUrl="img/products/"
+    faucetUrl=""
+  />
+
+  <ToolsGrid
+    chainName="xrp"
+    scope="testnet"
+    showInstall={true}
+    showUpgrade={true}
+    showGenesis={true}
+    showCli={true}
+    showEndpoints={true}
+    showStateSync={true}
+    showSnapshot={true}
+    showMonitoring={true}
+    showLivePeers={true}
+    showSeed={true}
+    showAddressBook={true}
+    showExplorersList={true}
+    showPublicEndpoints={true}
+    showUsefulTools={true}
+    showUpgradeWatcher={false}
+  />
+
+</ChainLayout>

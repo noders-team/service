@@ -22,17 +22,14 @@ yarn-error.log*
 
 .idea
 .vscode
+.zed
 
 seeds-and-peers.mdx
-!docs/mainnet-networks/template/seeds-and-peers.mdx
-!docs/testnet-networks/template/seeds-and-peers.mdx
-
 snapshot.mdx
-!docs/mainnet-networks/template/snapshot.mdx
-!docs/testnet-networks/template/snapshot.mdx
 
 /static/img/png-icon
 
 venv/
 generate_docs.py
 Tools.xlsx
+.ropeproject

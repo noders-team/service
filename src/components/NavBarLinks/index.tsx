@@ -11,8 +11,8 @@ export default function NavBarLinks(props: any): React.JSX.Element {
   const history = useHistory();
   const isMobile = props?.mobile === true;
   const isDesktop = useMediaQuery('(min-width: 997px)');
-  const mainnetHref = useBaseUrl('/mainnet-networks/overview');
-  const testnetHref = useBaseUrl('/testnet-networks/overview');
+  const mainnetHref = useBaseUrl('/mainnet/overview');
+  const testnetHref = useBaseUrl('/testnet/overview');
 
   if (!isMobile && !isDesktop) {
     return null;

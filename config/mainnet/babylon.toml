@@ -1,0 +1,90 @@
+# App
+CHAIN_NAME="Babylon"
+CHAIN_SYSTEM_NAME="babylon"
+CHAIN_ICON="babylon-icon.svg"
+CHAIN_BACKGROUND_COLOR="#d9681c"
+
+# NODERS
+STAKE_URL=""
+RESTAKE_URL=""
+VALIDATOR_URL=""
+EXPLORER_URL=""
+EXPLORER_IMAGE=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
+# Blockchain
+CHAIN_ID="auto"
+CHAIN_DENOM_PRETTY="BBN"
+CHAIN_DENOM="ubbn"
+CHAIN_FEES="20000"
+
+# Binary
+VERSION="auto"
+DAEMON_NAME="babylond"
+DAEMON_SERVICE="babylon.service"
+DAEMON_HOME="~/.babylond"
+
+# Endpoints
+ENDPOINT_RPC="https://babylon-rpc.noders.services"
+ENDPOINT_API="https://babylon-api.noders.services/"
+ENDPOINT_JRPC=""
+ENDPOINT_GRPC="babylon-grpc.noders.services:443"
+ENDPOINT_PEER="auto"
+ENDPOINT_COSMOSLIST=""
+ENDPOINT_SEED="c4278162a71ba2ae4be51e4f541f12ec8de4fe30@babylon-seed.noders.services:20633"
+
+# Social
+SOCIAL_WEBSITE="https://babylonlabs.io"
+SOCIAL_GITHUB="https://github.com/babylonlabs-io/babylon"
+SOCIAL_DISCORD="https://discord.com/invite/babylonglobal"
+SOCIAL_X="https://discord.com/invite/babylonglobal"
+SOCIAL_TELEGRAM=""
+
+# Other
+SNAPSHOT_URL="https://snapshots.noders.services/babylon"
+GITHUB_FOLDER_NAME="auto"
+
+# Updates
+UPDATE_MAIN=true
+UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
+UPDATE_UPGRADE=true
+UPDATE_SNAPSHOT=true
+UPDATE_STATESYNC=true
+UPDATE_LIVE_PEERS=true
+UPDATE_CLI_CHEATSHEET=true
+UPDATE_ENDPOINTS=true
+UPDATE_MONITORING=true
+UPDATE_PUBLIC_ENDPOINTS=true
+
+# Feature toggles
+
+# Node installation
+SHOW_INSTALLATION_GUIDE=true
+SHOW_UPGRADE_GUIDE=true
+SHOW_GENESIS=true
+SHOW_CLI=true
+
+# Endpoints and Sync
+SHOW_ENDPOINTS=true
+SHOW_STATE_SYNC=true
+SHOW_SNAPSHOT=true
+SHOW_LIVE_PEERS=true
+SHOW_SEED=true
+SHOW_ADDRESS_BOOK=true
+
+# Tools
+SHOW_EXPLORERS_LIST=false
+SHOW_PUBLIC_ENDPOINTS=true
+SHOW_USEFUL_TOOLS=false
+SHOW_UPGRADE_WATCHER=false
+SHOW_MONITORING=true
+
+# Monitoring Configuration
+MONITORING_PROMETHEUS_PORT="9090"
+MONITORING_GRAFANA_PORT="3000"
+MONITORING_NODE_METRICS_PORT="26661"
+MONITORING_GRAFANA_PASSWORD="admin123"
+MONITORING_MAX_MISSED_BLOCKS="5"

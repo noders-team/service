@@ -1,0 +1,89 @@
+# App
+CHAIN_NAME="Haqq"
+CHAIN_SYSTEM_NAME="haqq"
+CHAIN_ICON="haqq-icon.svg"
+CHAIN_BACKGROUND_COLOR="#00D784"
+
+# NODERS
+STAKE_URL=""
+RESTAKE_URL="https://restake.app/haqq/haqqvaloper1hgggrfgjeu4d5nveh03c6w37magsuqcy84p44t"
+VALIDATOR_URL="https://haqq.explorers.guru/validator/haqqvaloper1hgggrfgjeu4d5nveh03c6w37magsuqcy84p44t"
+EXPLORER_URL=""
+EXPLORER_IMAGE=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
+# Blockchain
+CHAIN_ID="auto"
+CHAIN_DENOM="aISLM"
+CHAIN_FEES="300000000000"
+
+# Binary
+VERSION="auto"
+DAEMON_NAME="haqqd"
+DAEMON_SERVICE="haqqd.service"
+DAEMON_HOME="~/.haqqd"
+
+# Endpoints
+ENDPOINT_RPC="https://haqq-rpc.noders.services"
+ENDPOINT_API="https://haqq-api.noders.services"
+ENDPOINT_JRPC="https://haqq-jsonrpc.noders.services"
+ENDPOINT_GRPC="haqq-grpc.noders.services:443"
+ENDPOINT_PEER="auto"
+ENDPOINT_SEED="66f934002d8cd25f96a6ecf1830624173cda2204@haqq-seed.noders.services:24033"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/haqq"
+
+# Social
+SOCIAL_WEBSITE="https://haqq.network/"
+SOCIAL_GITHUB="https://github.com/haqq-network"
+SOCIAL_DISCORD="https://discord.gg/CDtXuQG3Vd"
+SOCIAL_X="https://twitter.com/The_HaqqNetwork"
+SOCIAL_TELEGRAM="https://t.me/islamiccoin_int"
+
+# Other
+SNAPSHOT_URL="https://snapshots.noders.services/haqq"
+GITHUB_FOLDER_NAME="auto"
+
+# Updates
+UPDATE_MAIN=true
+UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
+UPDATE_UPGRADE=true
+UPDATE_SNAPSHOT=true
+UPDATE_STATESYNC=true
+UPDATE_LIVE_PEERS=true
+UPDATE_CLI_CHEATSHEET=true
+UPDATE_ENDPOINTS=true
+UPDATE_MONITORING=true
+UPDATE_PUBLIC_ENDPOINTS=true
+
+# Feature toggles
+
+# Node installation
+SHOW_INSTALLATION_GUIDE=true
+SHOW_UPGRADE_GUIDE=true
+SHOW_GENESIS=true
+SHOW_CLI=true
+
+# Endpoints and Sync
+SHOW_ENDPOINTS=true
+SHOW_STATE_SYNC=true
+SHOW_SNAPSHOT=true
+SHOW_LIVE_PEERS=true
+SHOW_SEED=true
+SHOW_ADDRESS_BOOK=true
+
+# Tools
+SHOW_EXPLORERS_LIST=true
+SHOW_PUBLIC_ENDPOINTS=true
+SHOW_USEFUL_TOOLS=true
+SHOW_UPGRADE_WATCHER=false
+SHOW_MONITORING=true
+
+# Monitoring Configuration
+MONITORING_PROMETHEUS_PORT="9090"
+MONITORING_GRAFANA_PORT="3000"
+MONITORING_NODE_METRICS_PORT="26661"
+MONITORING_GRAFANA_PASSWORD="admin123"
+MONITORING_MAX_MISSED_BLOCKS="5"
