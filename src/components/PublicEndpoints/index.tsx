@@ -16,6 +16,7 @@ import CopyButton from '@/components/CopyButton';
 import Skeleton from '@mui/material/Skeleton';
 import CodeText from '../CodeText';
 import Divider from '@mui/material/Divider';
+import Radar from '@/components/Radar';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -92,79 +93,101 @@ function PublicEndpoints({ chainId }: Props): React.JSX.Element {
             </TableRow>
           </TableHead>
           <TableBody>
-            {isLoading
-              ? [...Array(10)].map((item) => (
-                  <TableRow>
-                    <TableCell align="center">
-                      <Skeleton variant="text" width={200} height={20} />
-                    </TableCell>
-                    <TableCell align="center">
-                      <Skeleton variant="text" width={50} height={20} />
-                    </TableCell>
-                    <TableCell align="center">
-                      <Skeleton variant="text" width={60} height={20} />
-                    </TableCell>
-                    <TableCell align="center">
-                      <Skeleton variant="text" width={100} height={20} />
-                    </TableCell>
-                    <TableCell align="center">
-                      <Skeleton variant="text" width={100} height={20} />
-                    </TableCell>
-                    <TableCell align="center">
-                      <Skeleton variant="text" width={200} height={20} />
-                    </TableCell>
-                    <TableCell align="center">
-                      <Skeleton variant="text" width={50} height={20} />
-                    </TableCell>
-                  </TableRow>
-                ))
-              : publicEndpoints.map((endpoint) => (
-                  <StyledTableRow key={endpoint.id}>
-                    <TableCell>
-                      <Box display="flex" gap={1} alignItems="center">
-                        <Typography variant="body1">RPC:</Typography>
-                        <Link href={`http://${endpoint.ip}:${endpoint.rpc_port}`}>
-                          {endpoint.ip + ':' + endpoint.rpc_port}
-                        </Link>
-                        <CopyButton copyText={`http://${endpoint.ip}:${endpoint.rpc_port}`} />
-                      </Box>
-                    </TableCell>
-                    <TableCell align="center">
-                      <Box component="img" src={endpoint.flag.img} alt={endpoint.flag.emoji} width={22} height={16} />
-                    </TableCell>
-                    <TableCell align="right">
-                      <Typography variant="body2">
-                        {endpoint.earliest_block}-{endpoint.latest_block}
-                      </Typography>
-                    </TableCell>
-                    <TableCell align="center">
+            {isLoading &&
+              [...Array(10)].map((item, index) => (
+                <TableRow key={index}>
+                  <TableCell align="center">
+                    <Skeleton variant="text" width={200} height={20} />
+                  </TableCell>
+                  <TableCell align="center">
+                    <Skeleton variant="text" width={50} height={20} />
+                  </TableCell>
+                  <TableCell align="center">
+                    <Skeleton variant="text" width={60} height={20} />
+                  </TableCell>
+                  <TableCell align="center">
+                    <Skeleton variant="text" width={100} height={20} />
+                  </TableCell>
+                  <TableCell align="center">
+                    <Skeleton variant="text" width={100} height={20} />
+                  </TableCell>
+                  <TableCell align="center">
+                    <Skeleton variant="text" width={200} height={20} />
+                  </TableCell>
+                  <TableCell align="center">
+                    <Skeleton variant="text" width={50} height={20} />
+                  </TableCell>
+                </TableRow>
+              ))}
+            {!isLoading &&
+              publicEndpoints.length > 0 &&
+              publicEndpoints.map((endpoint) => (
+                <StyledTableRow key={endpoint.id}>
+                  <TableCell>
+                    <Box display="flex" gap={1} alignItems="center">
+                      <Typography variant="body1">RPC:</Typography>
+                      <Link href={`http://${endpoint.ip}:${endpoint.rpc_port}`}>
+                        {endpoint.ip + ':' + endpoint.rpc_port}
+                      </Link>
+                      <CopyButton copyText={`http://${endpoint.ip}:${endpoint.rpc_port}`} />
+                    </Box>
+                  </TableCell>
+                  <TableCell align="center">
+                    <Box component="img" src={endpoint.flag.img} alt={endpoint.flag.emoji} width={22} height={16} />
+                  </TableCell>
+                  <TableCell align="right">
+                    <Typography variant="body2">
+                      {endpoint.earliest_block}-{endpoint.latest_block}
+                    </Typography>
+                  </TableCell>
+                  <TableCell align="center">
+                    <CustomChip
+                      icon={endpoint.tx_index_enabled ? <FiCheck color={theme.palette.success.main} /> : undefined}
+                      label={endpoint.tx_index_enabled ? 'On' : 'Off'}
+                      color={endpoint.tx_index_enabled ? theme.palette.success.main : '#FFFFFF'}
+                    />
+                  </TableCell>
+                  <TableCell align="center">
+                    {endpoint.archive && (
                       <CustomChip
-                        icon={endpoint.tx_index_enabled ? <FiCheck color={theme.palette.success.main} /> : undefined}
-                        label={endpoint.tx_index_enabled ? 'On' : 'Off'}
-                        color={endpoint.tx_index_enabled ? theme.palette.success.main : '#FFFFFF'}
+                        icon={<FiCheck color={theme.palette.success.main} />}
+                        label="Archival"
+                        color={theme.palette.success.main}
                       />
-                    </TableCell>
-                    <TableCell align="center">
-                      {endpoint.archive && (
-                        <CustomChip
-                          icon={<FiCheck color={theme.palette.success.main} />}
-                          label="Archival"
-                          color={theme.palette.success.main}
-                        />
-                      )}
-                    </TableCell>
-                    <TableCell>
-                      <Typography variant="body1">{endpoint.moniker}</Typography>
-                    </TableCell>
-                    <TableCell align="center">
-                      <CustomChip
-                        icon={endpoint.validator ? <FiAlertTriangle color={theme.palette.warning.main} /> : undefined}
-                        label={endpoint.validator ? 'Yes' : 'No'}
-                        color={endpoint.validator ? theme.palette.warning.main : '#FFFFFF'}
-                      />
-                    </TableCell>
-                  </StyledTableRow>
-                ))}
+                    )}
+                  </TableCell>
+                  <TableCell>
+                    <Typography variant="body1">{endpoint.moniker}</Typography>
+                  </TableCell>
+                  <TableCell align="center">
+                    <CustomChip
+                      icon={endpoint.validator ? <FiAlertTriangle color={theme.palette.warning.main} /> : undefined}
+                      label={endpoint.validator ? 'Yes' : 'No'}
+                      color={endpoint.validator ? theme.palette.warning.main : '#FFFFFF'}
+                    />
+                  </TableCell>
+                </StyledTableRow>
+              ))}
+            {!isLoading && publicEndpoints.length === 0 && (
+              <StyledTableRow>
+                <TableCell colSpan={7} align="center">
+                  <Box display="flex" flexDirection="column" alignItems="center" gap={2}>
+                    <Box
+                      sx={{
+                        width: '96px',
+                        height: '96px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                      }}
+                    >
+                      <Radar />
+                    </Box>
+                    <Typography variant="body1">No public endpoints found</Typography>
+                  </Box>
+                </TableCell>
+              </StyledTableRow>
+            )}
           </TableBody>
         </Table>
       </TableContainer>
