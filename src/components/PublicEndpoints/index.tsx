@@ -48,7 +48,9 @@ function PublicEndpoints({ chainId }: Props): React.JSX.Element {
 
   return (
     <Box display="flex" flexDirection="column" gap={2} pt={5}>
-      <Box display="flex" flexWrap="wrap" gap={2} pb={4}>
+      <Typography variant="h3">RPC / API / gRPC Endpoints</Typography>
+
+      <Box display="flex" flexWrap="wrap" gap={2} pb={2}>
         <Box display="flex" gap={2}>
           <Typography variant="subtitle2">Providers:</Typography>
           {isLoading ? (
@@ -64,7 +66,6 @@ function PublicEndpoints({ chainId }: Props): React.JSX.Element {
         </Box>
       </Box>
 
-      <Typography variant="h3">RPC / API / gRPC Endpoints</Typography>
       <TableContainer>
         <Table>
           <TableHead>
