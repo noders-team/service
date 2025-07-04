@@ -6,8 +6,8 @@ hide_table_of_contents: true
 description: ''
 chain_name: 'DoraVota'
 scope: 'testnet'
-chain_id: 'vota-bobtail'
-binary_version: 'v0.4.3'
+chain_id: 'auto'
+binary_version: 'auto'
 icon_url: 'dora-icon.svg'
 ---
 
@@ -17,8 +17,14 @@ import PublicEndpoints from "@site/src/components/PublicEndpoints";
 <PageTitle
   iconUrl="img/dora-icon.svg"
   title="DoraVota Public Endpoints"
-  chainId="vota-bobtail"
-  version="v0.4.3"
+  chainId="auto"
+  version="auto"
 />
 
-<PublicEndpoints chainId="vota-bobtail" />
+<PublicEndpoints
+  chainId="auto"
+  primaryRpcUrl="https://dora-t-rpc.noders.services"
+  primaryApiUrl="https://dora-t-api.noders.services"
+  primaryGrpcUrl="dora-t-grpc.noders.services:443"
+  primaryJsonRpcUrl=""
+/>

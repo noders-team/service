@@ -21,4 +21,10 @@ import PublicEndpoints from "@site/src/components/PublicEndpoints";
   version="{{ version }}"
 />
 
-<PublicEndpoints chainId="{{ chain_id }}" />
+<PublicEndpoints
+  chainId="{{ chain_id }}"
+  primaryRpcUrl="{{ endpoint_rpc }}"
+  primaryApiUrl="{{ endpoint_api }}"
+  primaryGrpcUrl="{{ endpoint_grpc }}"
+  primaryJsonRpcUrl="{{ endpoint_jrpc }}"
+/>
