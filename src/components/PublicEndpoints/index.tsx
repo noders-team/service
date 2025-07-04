@@ -239,10 +239,15 @@ function PublicEndpoints({
                     {endpoint.rpc_port !== 0 && (
                       <Box display="flex" gap={1} alignItems="center">
                         <Typography variant="body1">RPC:</Typography>
-                        <Link href={`http://${endpoint.ip}:${endpoint.rpc_port}`} target="_blank">
+                        <Link
+                          href={`${endpoint.rpc_port === 443 ? 'https' : 'http'}://${endpoint.ip}:${endpoint.rpc_port}`}
+                          target="_blank"
+                        >
                           {endpoint.ip + ':' + endpoint.rpc_port}
                         </Link>
-                        <CopyButton copyText={`http://${endpoint.ip}:${endpoint.rpc_port}`} />
+                        <CopyButton
+                          copyText={`${endpoint.rpc_port === 443 ? 'https' : 'http'}://${endpoint.ip}:${endpoint.rpc_port}`}
+                        />
                       </Box>
                     )}
                     {endpoint.rest_port !== 0 && (
