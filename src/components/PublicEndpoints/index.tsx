@@ -33,16 +33,44 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 type Props = {
   chainId: string;
+  primaryRpcUrl: string;
+  primaryApiUrl: string;
+  primaryGrpcUrl: string;
+  primaryJsonRpcUrl: string;
 };
 
-function PublicEndpoints({ chainId }: Props): React.JSX.Element {
+function PublicEndpoints({
+  chainId,
+  primaryRpcUrl,
+  primaryApiUrl,
+  primaryGrpcUrl,
+  primaryJsonRpcUrl,
+}: Props): React.JSX.Element {
   const [publicEndpoints, setPublicEndpoints] = React.useState<PublicEndpoint[]>([]);
+  const [primaryEndpoint, setPrimaryEndpoint] = React.useState<PublicEndpoint | null>(null);
+  const [endpointsCount, setEndpointsCount] = React.useState(0);
   const [isLoading, setIsLoading] = React.useState(true);
+  const [isEmpty, setIsEmpty] = React.useState(false);
   const theme = useTheme();
+  const isPrimaryApisProvided = primaryRpcUrl || primaryApiUrl || primaryGrpcUrl || primaryJsonRpcUrl;
 
   React.useEffect(() => {
     crawlerService.getPublicEndpointsByChainId(chainId).then((endpoints) => {
-      setPublicEndpoints(endpoints);
+      let count = 0;
+      if (endpoints !== null) {
+        setPublicEndpoints(endpoints);
+        setIsEmpty(endpoints.length === 0 && !isPrimaryApisProvided);
+        count = endpoints.length;
+      }
+
+      if (isPrimaryApisProvided) {
+        crawlerService.getEndpointInfo(primaryRpcUrl).then((endpoint) => {
+          setPrimaryEndpoint(endpoint);
+        });
+        count = count + 1;
+      }
+
+      setEndpointsCount(count);
       setIsLoading(false);
     });
   }, [chainId]);
@@ -57,7 +85,7 @@ function PublicEndpoints({ chainId }: Props): React.JSX.Element {
           {isLoading ? (
             <Skeleton variant="text" width={25} height={20} />
           ) : (
-            <CodeText text={publicEndpoints.length.toString()} />
+            <CodeText text={endpointsCount.toString()} />
           )}
         </Box>
         <Divider orientation="vertical" flexItem />
@@ -119,18 +147,131 @@ function PublicEndpoints({ chainId }: Props): React.JSX.Element {
                   </TableCell>
                 </TableRow>
               ))}
+            {!isLoading && primaryEndpoint && (
+              <StyledTableRow>
+                <TableCell>
+                  {primaryRpcUrl && (
+                    <Box display="flex" gap={1} alignItems="center">
+                      <Typography variant="body1">RPC:</Typography>
+                      <Link href={primaryRpcUrl} target="_blank">
+                        {primaryRpcUrl}
+                      </Link>
+                      <CopyButton copyText={primaryRpcUrl} />
+                    </Box>
+                  )}
+                  {primaryApiUrl && (
+                    <Box display="flex" gap={1} alignItems="center">
+                      <Typography variant="body1">API:</Typography>
+                      <Link href={primaryApiUrl} target="_blank">
+                        {primaryApiUrl}
+                      </Link>
+                      <CopyButton copyText={primaryApiUrl} />
+                    </Box>
+                  )}
+                  {primaryGrpcUrl && (
+                    <Box display="flex" gap={1} alignItems="center">
+                      <Typography variant="body1">GRPC:</Typography>
+                      <Link href={primaryGrpcUrl} target="_blank">
+                        {primaryGrpcUrl}
+                      </Link>
+                      <CopyButton copyText={primaryGrpcUrl} />
+                    </Box>
+                  )}
+                  {primaryJsonRpcUrl && (
+                    <Box display="flex" gap={1} alignItems="center">
+                      <Typography variant="body1">JSON-RPC:</Typography>
+                      <Link href={primaryJsonRpcUrl} target="_blank">
+                        {primaryJsonRpcUrl}
+                      </Link>
+                      <CopyButton copyText={primaryJsonRpcUrl} />
+                    </Box>
+                  )}
+                </TableCell>
+                <TableCell align="center">
+                  <Box
+                    component="img"
+                    src={primaryEndpoint.flag.img}
+                    alt={primaryEndpoint.flag.emoji}
+                    width={22}
+                    height={16}
+                  />
+                </TableCell>
+                <TableCell align="right">
+                  <Typography variant="body2">
+                    {primaryEndpoint.earliest_block}-{primaryEndpoint.latest_block}
+                  </Typography>
+                </TableCell>
+                <TableCell align="center">
+                  <CustomChip
+                    icon={primaryEndpoint.tx_index_enabled ? <FiCheck color={theme.palette.success.main} /> : undefined}
+                    label={primaryEndpoint.tx_index_enabled ? 'On' : 'Off'}
+                    color={primaryEndpoint.tx_index_enabled ? theme.palette.success.main : '#FFFFFF'}
+                  />
+                </TableCell>
+                <TableCell align="center">
+                  {primaryEndpoint.archive && (
+                    <CustomChip
+                      icon={<FiCheck color={theme.palette.success.main} />}
+                      label="Archival"
+                      color={theme.palette.success.main}
+                    />
+                  )}
+                </TableCell>
+                <TableCell>
+                  <Typography variant="body1">{primaryEndpoint.moniker}</Typography>
+                </TableCell>
+                <TableCell align="center">
+                  <CustomChip
+                    icon={
+                      primaryEndpoint.validator ? <FiAlertTriangle color={theme.palette.warning.main} /> : undefined
+                    }
+                    label={primaryEndpoint.validator ? 'Yes' : 'No'}
+                    color={primaryEndpoint.validator ? theme.palette.warning.main : '#FFFFFF'}
+                  />
+                </TableCell>
+              </StyledTableRow>
+            )}
             {!isLoading &&
-              publicEndpoints.length > 0 &&
+              !isEmpty &&
               publicEndpoints.map((endpoint) => (
                 <StyledTableRow key={endpoint.id}>
                   <TableCell>
-                    <Box display="flex" gap={1} alignItems="center">
-                      <Typography variant="body1">RPC:</Typography>
-                      <Link href={`http://${endpoint.ip}:${endpoint.rpc_port}`}>
-                        {endpoint.ip + ':' + endpoint.rpc_port}
-                      </Link>
-                      <CopyButton copyText={`http://${endpoint.ip}:${endpoint.rpc_port}`} />
-                    </Box>
+                    {endpoint.rpc_port !== 0 && (
+                      <Box display="flex" gap={1} alignItems="center">
+                        <Typography variant="body1">RPC:</Typography>
+                        <Link href={`http://${endpoint.ip}:${endpoint.rpc_port}`} target="_blank">
+                          {endpoint.ip + ':' + endpoint.rpc_port}
+                        </Link>
+                        <CopyButton copyText={`http://${endpoint.ip}:${endpoint.rpc_port}`} />
+                      </Box>
+                    )}
+                    {endpoint.rest_port !== 0 && (
+                      <Box display="flex" gap={1} alignItems="center">
+                        <Typography variant="body1">API:</Typography>
+                        <Link href={`http://${endpoint.ip}:${endpoint.rest_port}`} target="_blank">
+                          {endpoint.ip + ':' + endpoint.rest_port}
+                        </Link>
+                        <CopyButton copyText={`http://${endpoint.ip}:${endpoint.rest_port}`} />
+                      </Box>
+                    )}
+                    {endpoint.grpc_port !== 0 && (
+                      <Box display="flex" gap={1} alignItems="center">
+                        <Typography variant="body1">GRPC:</Typography>
+                        <Link href={`http://${endpoint.ip}:${endpoint.grpc_port}`} target="_blank">
+                          {endpoint.ip + ':' + endpoint.grpc_port}
+                        </Link>
+                        <CopyButton copyText={`http://${endpoint.ip}:${endpoint.grpc_port}`} />
+                      </Box>
+                    )}
+                    {endpoint.jsonrpc_port !== 0 && (
+                      <Box display="flex" gap={1} alignItems="center">
+                        <Typography variant="body1">JSON-RPC:</Typography>
+                        <Link href={`http://${endpoint.ip}:${endpoint.jsonrpc_port}`} target="_blank">
+                          {endpoint.ip + ':' + endpoint.jsonrpc_port}
+                        </Link>
+                        <CopyButton copyText={`http://${endpoint.ip}:${endpoint.jsonrpc_port}`} />
+                      </Box>
+                    )}
                   </TableCell>
                   <TableCell align="center">
                     <Box component="img" src={endpoint.flag.img} alt={endpoint.flag.emoji} width={22} height={16} />
@@ -168,7 +309,7 @@ function PublicEndpoints({ chainId }: Props): React.JSX.Element {
                   </TableCell>
                 </StyledTableRow>
               ))}
-            {!isLoading && publicEndpoints.length === 0 && (
+            {!isLoading && isEmpty && (
               <StyledTableRow>
                 <TableCell colSpan={7} align="center">
                   <Box display="flex" flexDirection="column" alignItems="center" gap={2}>
