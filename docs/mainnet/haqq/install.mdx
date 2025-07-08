@@ -6,8 +6,8 @@ hide_table_of_contents: false
 description: ''
 chain_name: 'Haqq'
 scope: 'mainnet'
-chain_id: 'haqq_11235-1'
-binary_version: 'v1.8.3'
+chain_id: 'auto'
+binary_version: 'auto'
 icon_url: 'haqq-icon.svg'
 ---
 
@@ -16,8 +16,8 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/haqq-icon.svg"
   title="Haqq Installation Guide"
-  chainId="haqq_11235-1"
-  version="v1.8.3"
+  chainId="auto"
+  version="auto"
 />
 
 ## Install dependencies
@@ -51,13 +51,13 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 ### Download and build binaries
 
-### Clone Haqq repo and build haqqd v1.8.3
+### Clone Haqq repo and build haqqd auto
 
 ```js
 cd $HOME
 git clone https://github.com/haqq-network.git
 cd haqq-network
-git checkout v1.8.3
+git checkout auto
 ```
 
 ### Build binaries
@@ -70,8 +70,8 @@ make install
 
 ```js
 cd $HOME
-mkdir -p ~/.haqqd/cosmovisor/upgrades/v1.8.3/bin
-mv $HOME/go/bin/haqqd ~/.haqqd/cosmovisor/upgrades/v1.8.3/bin/
+mkdir -p ~/.haqqd/cosmovisor/upgrades/auto/bin
+mv $HOME/go/bin/haqqd ~/.haqqd/cosmovisor/upgrades/auto/bin/
 ```
 
 ### Create symlinks
@@ -117,13 +117,13 @@ EOF
 
 ### Download and build binaries
 
-### Clone Haqq repo and build haqqd v1.8.3
+### Clone Haqq repo and build haqqd auto
 
 ```js
 cd $HOME
 git clone https://github.com/haqq-network.git
 cd haqq-network
-git checkout v1.8.3
+git checkout auto
 ```
 
 ### Build binaries
@@ -167,7 +167,7 @@ sudo systemctl enable haqqd
 ### Set config
 
 ```js
-haqqd config chain-id haqq_11235-1
+haqqd config chain-id auto
 haqqd config keyring-backend os
 haqqd config node tcp://localhost:26657
 ```
@@ -175,7 +175,7 @@ haqqd config node tcp://localhost:26657
 ### Initialize the node
 
 ```js
-haqqd init NAME_OF_YOUR_VALIDATOR --chain-id haqq_11235-1
+haqqd init NAME_OF_YOUR_VALIDATOR --chain-id auto
 ```
 
 ### Download genesis and addrbook
@@ -188,7 +188,7 @@ curl https://snapshots.noders.services/haqq/addrbook.json -o ~/.haqqd/config/add
 ### Add peers
 
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"acbd4ad54449c6e762628f957dd25f99955daa6c@haqq-rpc.noders.services:24056\"/" ~/.haqqd/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"auto\"/" ~/.haqqd/config/config.toml
 ```
 
 ### Set minimum gas price
