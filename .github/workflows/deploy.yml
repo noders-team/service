@@ -22,4 +22,5 @@ jobs:
           key: ${{ secrets.SERVICE_SSH_KEY }}
           script: |
             cd $HOME/service/config
+            export NODE_OPTIONS="--max-old-space-size=1024"
             ./update_and_deploy-repo-sync.sh
