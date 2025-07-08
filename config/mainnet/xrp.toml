@@ -1,0 +1,90 @@
+# App
+CHAIN_NAME="XRP"
+CHAIN_SYSTEM_NAME="xrp"
+CHAIN_ICON="xrp-icon.svg"
+CHAIN_BACKGROUND_COLOR="#7B00F3"
+
+# NODERS
+STAKE_URL=""
+RESTAKE_URL=""
+VALIDATOR_URL=""
+EXPLORER_URL=""
+APP_URL=""
+APP_IMAGE=""
+FAUCET_URL=""
+
+# Blockchain
+CHAIN_ID="auto"
+CHAIN_DENOM="apoa"
+CHAIN_FEES="300000000000"
+
+# Binary
+VERSION="auto"
+DAEMON_NAME="exrpd"
+DAEMON_SERVICE="xrp.service"
+DAEMON_HOME="~/.exrpd"
+
+# Endpoints
+ENDPOINT_RPC="https://xrp-rpc.noders.services"
+ENDPOINT_API="https://xrp-api.noders.services"
+ENDPOINT_JRPC=""
+ENDPOINT_GRPC="xrp-grpc.noders.services:443"
+ENDPOINT_PEER="auto"
+ENDPOINT_SEED="2dc8d776176a275bc64421e31d9b1ed6af228fa5@seed-0.mainnet.xrplevm.org:26656"
+ENDPOINT_COSMOSLIST="https://cosmoslist.co/mainnet/xrp"
+
+# Social
+SOCIAL_WEBSITE="https://xrplevm.org/"
+SOCIAL_GITHUB="https://github.com/xrplevm/node"
+SOCIAL_DISCORD="https://discord.gg/xrplevm"
+SOCIAL_X=""
+SOCIAL_TELEGRAM=""
+
+# Other
+SNAPSHOT_URL="https://snapshots.noders.services/xrp"
+GITHUB_FOLDER_NAME="auto"
+VALIDATOR_URL=""
+
+# Updates
+UPDATE_MAIN=true
+UPDATE_CATEGORY=true
+UPDATE_INSTALL=true
+UPDATE_UPGRADE=true
+UPDATE_SNAPSHOT=true
+UPDATE_STATESYNC=true
+UPDATE_LIVE_PEERS=true
+UPDATE_CLI_CHEATSHEET=true
+UPDATE_ENDPOINTS=true
+UPDATE_MONITORING=true
+UPDATE_PUBLIC_ENDPOINTS=true
+
+# Feature toggles
+
+# Node installation
+SHOW_INSTALLATION_GUIDE=true
+SHOW_UPGRADE_GUIDE=true
+SHOW_GENESIS=true
+SHOW_CLI=true
+
+# Endpoints and Sync
+SHOW_ENDPOINTS=true
+SHOW_STATE_SYNC=true
+SHOW_SNAPSHOT=true
+SHOW_LIVE_PEERS=true
+SHOW_SEED=true
+SHOW_ADDRESS_BOOK=true
+
+# Tools
+SHOW_EXPLORERS_LIST=true
+SHOW_PUBLIC_ENDPOINTS=true
+SHOW_USEFUL_TOOLS=true
+SHOW_UPGRADE_WATCHER=false
+SHOW_MONITORING=true
+
+# Monitoring Configuration
+MONITORING_PROMETHEUS_PORT="9090"
+MONITORING_GRAFANA_PORT="3000"
+MONITORING_NODE_METRICS_PORT="26661"
+MONITORING_GRAFANA_PASSWORD="admin123"
+MONITORING_MAX_MISSED_BLOCKS="5"
+MONITORING_DASHBOARD_ID="15991"

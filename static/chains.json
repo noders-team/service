@@ -161,6 +161,13 @@
     "scope": "mainnet"
   },
   {
+    "name": "xrp",
+    "pretty_name": "XRP",
+    "chain_id": "xrplevm_1440000-1",
+    "logo_url": "img/xrp-icon.svg",
+    "scope": "mainnet"
+  },
+  {
     "name": "zenrock",
     "pretty_name": "Zenrock",
     "chain_id": "diamond-1",
