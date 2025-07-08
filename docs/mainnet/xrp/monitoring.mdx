@@ -4,33 +4,33 @@ sidebar_position: 8
 hide_title: true
 hide_table_of_contents: false
 description: ''
-chain_name: 'Celestia'
-scope: 'testnet'
-chain_id: 'mocha-4'
-binary_version: 'v4.0.7-arabica'
-icon_url: 'celestia-icon.svg'
+chain_name: 'XRP'
+scope: 'mainnet'
+chain_id: 'xrplevm_1440000-1'
+binary_version: 'v8.0.0'
+icon_url: 'xrp-icon.svg'
 ---
 
 import PageTitle from "@site/src/components/PageTitle";
 
 <PageTitle
-  iconUrl="img/celestia-icon.svg"
-  title="Celestia Monitoring Setup"
-  chainId="mocha-4"
-  version="v4.0.7-arabica"
+  iconUrl="img/xrp-icon.svg"
+  title="XRP Monitoring Setup"
+  chainId="xrplevm_1440000-1"
+  version="v8.0.0"
 />
 
 ## Monitoring Stack
 
-This guide helps you set up comprehensive monitoring for your Celestia validator node using Prometheus and Grafana.
+This guide helps you set up comprehensive monitoring for your XRP validator node using Prometheus and Grafana.
 
 ### Prerequisites
 
 - Docker and Docker Compose installed
-- Celestia node running with metrics enabled
+- XRP node running with metrics enabled
 - Ports 9090 (Prometheus) and 3000 (Grafana) available
 
-### Step 1: Enable Metrics in Celestia Node
+### Step 1: Enable Metrics in XRP Node
 
 Edit your `config.toml` file:
 
@@ -40,17 +40,17 @@ prometheus = true
 prometheus_listen_addr = "26661"
 ```
 
-Restart your celestia-appd service:
+Restart your exrpd service:
 
 ```bash
-sudo systemctl restart celestia-appd
+sudo systemctl restart exrpd
 ```
 
 ### Step 2: Create Monitoring Directory
 
 ```bash
-mkdir -p $HOME/celestia-monitoring
-cd $HOME/celestia-monitoring
+mkdir -p $HOME/xrp-monitoring
+cd $HOME/xrp-monitoring
 ```
 
 ### Step 3: Docker Compose Configuration
@@ -63,7 +63,7 @@ version: '3.8'
 services:
   prometheus:
     image: prom/prometheus:latest
-    container_name: celestia-prometheus
+    container_name: xrp-prometheus
     ports:
       - "9090:9090"
     volumes:
@@ -82,7 +82,7 @@ services:
 
   grafana:
     image: grafana/grafana:latest
-    container_name: celestia-grafana
+    container_name: xrp-grafana
     ports:
       - "3000:3000"
     environment:
@@ -96,7 +96,7 @@ services:
 
   node-exporter:
     image: prom/node-exporter:latest
-    container_name: celestia-node-exporter
+    container_name: xrp-node-exporter
     ports:
       - "9100:9100"
     command:
@@ -123,7 +123,7 @@ rule_files:
   - "alert_rules.yml"
 
 scrape_configs:
-  - job_name: 'celestia-validator'
+  - job_name: 'xrp-validator'
     static_configs:
       - targets: ['host.docker.internal:26661']
     scrape_interval: 10s
@@ -146,46 +146,46 @@ Create `alert_rules.yml`:
 
 ```yaml title="alert_rules.yml"
 groups:
-  - name: celestia-validator-alerts
+  - name: xrp-validator-alerts
     rules:
       - alert: ValidatorDown
-        expr: up{job="celestia-validator"} == 0
+        expr: up{job="xrp-validator"} == 0
         for: 1m
         labels:
           severity: critical
-          chain: Celestia
+          chain: XRP
         annotations:
-          summary: "Celestia validator is down"
-          description: "Celestia validator has been down for more than 1 minute"
+          summary: "XRP validator is down"
+          description: "XRP validator has been down for more than 1 minute"
 
       - alert: NodeNotSyncing
         expr: tendermint_consensus_height - tendermint_consensus_latest_block_height > 10
         for: 5m
         labels:
           severity: warning
-          chain: Celestia
+          chain: XRP
         annotations:
-          summary: "Celestia node is not syncing"
-          description: "Celestia node is behind by {{ $value }} blocks"
+          summary: "XRP node is not syncing"
+          description: "XRP node is behind by {{ $value }} blocks"
 
       - alert: MissedBlocks
         expr: tendermint_consensus_validator_missed_blocks > 5
         for: 2m
         labels:
           severity: warning
-          chain: Celestia
+          chain: XRP
         annotations:
-          summary: "Celestia validator missing blocks"
-          description: "Celestia validator has missed {{ $value }} blocks"
+          summary: "XRP validator missing blocks"
+          description: "XRP validator has missed {{ $value }} blocks"
 
       - alert: HighMemoryUsage
         expr: (node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes) / node_memory_MemTotal_bytes > 0.9
         for: 5m
         labels:
           severity: warning
-          chain: Celestia
+          chain: XRP
         annotations:
-          summary: "High memory usage on Celestia validator"
+          summary: "High memory usage on XRP validator"
           description: "Memory usage is above 90%"
 
       - alert: DiskSpaceLow
@@ -193,9 +193,9 @@ groups:
         for: 1m
         labels:
           severity: critical
-          chain: Celestia
+          chain: XRP
         annotations:
-          summary: "Low disk space on Celestia validator"
+          summary: "Low disk space on XRP validator"
           description: "Disk space is below 10%"
 ```
 
@@ -242,7 +242,7 @@ docker-compose logs -f
 
 ### Pre-built Dashboard
 
-Import our Celestia validator dashboard from NODERS:
+Import our XRP validator dashboard from NODERS:
 
 **🔗 Dashboard JSON**: [https://snapshots.noders.services/monitoring/cosmos-dashboard.json](https://snapshots.noders.services/monitoring/cosmos-dashboard.json)
 
@@ -267,7 +267,7 @@ Import our Celestia validator dashboard from NODERS:
 
 **Validator Status:**
 ```promql
-up{job="celestia-validator"}
+up{job="xrp-validator"}
 ```
 
 **Block Height:**
@@ -312,7 +312,7 @@ docker-compose restart grafana
 
 **Add more exporters:**
 - **Node Exporter**: System metrics
-- **Process Exporter**: celestia-appd process metrics
+- **Process Exporter**: exrpd process metrics
 - **Blackbox Exporter**: Endpoint monitoring
 
 **Custom Alerts:**
