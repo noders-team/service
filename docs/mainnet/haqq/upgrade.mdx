@@ -6,8 +6,8 @@ hide_table_of_contents: false
 description: ''
 chain_name: 'Haqq'
 scope: 'mainnet'
-chain_id: 'auto'
-binary_version: 'auto'
+chain_id: 'haqq_11235-1'
+binary_version: 'v1.8.5'
 icon_url: 'haqq-icon.svg'
 ---
 
@@ -16,8 +16,8 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/haqq-icon.svg"
   title="Haqq Upgrade Guide"
-  chainId="auto"
-  version="auto"
+  chainId="haqq_11235-1"
+  version="v1.8.5"
 />
 
 ## Clone Haqq repository
@@ -27,7 +27,7 @@ cd $HOME
 rm -rf haqq-network
 git clone https://github.com/haqq-network.git
 cd haqq-network
-git checkout auto
+git checkout v1.8.5
 ```
 
 ## Build binaries
@@ -39,8 +39,8 @@ make build
 ## Prepare binaries for Cosmovisor
 
 ```js
-mkdir -p ~/.haqqd/cosmovisor/upgrades/auto/bin
-mv build/haqqd ~/.haqqd/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.haqqd/cosmovisor/upgrades/v1.8.5/bin
+mv build/haqqd ~/.haqqd/cosmovisor/upgrades/v1.8.5/bin/
 rm -rf build
 ```
 
@@ -53,7 +53,7 @@ cd $HOME
 rm -rf haqq-network
 git clone https://github.com/haqq-network.git
 cd haqq-network
-git checkout auto
+git checkout v1.8.5
 ```
 
 ## Build binaries

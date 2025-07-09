@@ -6,8 +6,8 @@ hide_table_of_contents: false
 description: ''
 chain_name: 'Haqq'
 scope: 'mainnet'
-chain_id: 'auto'
-binary_version: 'auto'
+chain_id: 'haqq_11235-1'
+binary_version: 'v1.8.5'
 icon_url: 'haqq-icon.svg'
 ---
 
@@ -16,8 +16,8 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/haqq-icon.svg"
   title="Haqq State Sync"
-  chainId="auto"
-  version="auto"
+  chainId="haqq_11235-1"
+  version="v1.8.5"
 />
 
 ## How to enable state sync
@@ -35,7 +35,7 @@ sudo systemctl stop haqqd && haqqd tendermint unsafe-reset-all --home ~/.haqqd -
 ```
 
 ```bash
-peers="auto"
+peers="acbd4ad54449c6e762628f957dd25f99955daa6c@haqq-rpc.noders.services:24056"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.haqqd/config/config.toml
 ```
 
