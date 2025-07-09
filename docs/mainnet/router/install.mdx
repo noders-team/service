@@ -6,8 +6,8 @@ hide_table_of_contents: false
 description: ''
 chain_name: 'Router'
 scope: 'mainnet'
-chain_id: 'auto'
-binary_version: 'auto'
+chain_id: 'router_9600-1'
+binary_version: 'v1.6.0'
 icon_url: 'router-icon.svg'
 ---
 
@@ -16,8 +16,8 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/router-icon.svg"
   title="Router Installation Guide"
-  chainId="auto"
-  version="auto"
+  chainId="router_9600-1"
+  version="v1.6.0"
 />
 
 ## Install dependencies
@@ -31,7 +31,7 @@ sudo apt -qy upgrade
 ## Install GO
 
 ```js
-ver="1.21.3" &&
+ver="1.23.3" &&
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" &&
 sudo rm -rf /usr/local/go &&
 sudo tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz" &&
@@ -51,13 +51,13 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 ### Download and build binaries
 
-### Clone Router repo and build routerd auto
+### Clone Router repo and build routerd v1.6.0
 
 ```js
 cd $HOME
 git clone https://github.com/router-protocol.git
 cd router-protocol
-git checkout auto
+git checkout v1.6.0
 ```
 
 ### Build binaries
@@ -70,8 +70,8 @@ make install
 
 ```js
 cd $HOME
-mkdir -p ~/.routerd/cosmovisor/upgrades/auto/bin
-mv $HOME/go/bin/routerd ~/.routerd/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.routerd/cosmovisor/upgrades/v1.6.0/bin
+mv $HOME/go/bin/routerd ~/.routerd/cosmovisor/upgrades/v1.6.0/bin/
 ```
 
 ### Create symlinks
@@ -117,13 +117,13 @@ EOF
 
 ### Download and build binaries
 
-### Clone Router repo and build routerd auto
+### Clone Router repo and build routerd v1.6.0
 
 ```js
 cd $HOME
 git clone https://github.com/router-protocol.git
 cd router-protocol
-git checkout auto
+git checkout v1.6.0
 ```
 
 ### Build binaries
@@ -167,7 +167,7 @@ sudo systemctl enable routerd
 ### Set config
 
 ```js
-routerd config chain-id auto
+routerd config chain-id router_9600-1
 routerd config keyring-backend os
 routerd config node tcp://localhost:26657
 ```
@@ -175,7 +175,7 @@ routerd config node tcp://localhost:26657
 ### Initialize the node
 
 ```js
-routerd init NAME_OF_YOUR_VALIDATOR --chain-id auto
+routerd init NAME_OF_YOUR_VALIDATOR --chain-id router_9600-1
 ```
 
 ### Download genesis and addrbook
@@ -188,7 +188,7 @@ curl https://snapshots.noders.services/router/addrbook.json -o ~/.routerd/config
 ### Add peers
 
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"auto\"/" ~/.routerd/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"7406480265ca3f45cce81737abd245f3d3e6a8bb@router-rpc.noders.services:23756\"/" ~/.routerd/config/config.toml
 ```
 
 ### Set minimum gas price

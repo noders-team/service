@@ -6,8 +6,8 @@ hide_table_of_contents: false
 description: ''
 chain_name: 'Router'
 scope: 'mainnet'
-chain_id: 'auto'
-binary_version: 'auto'
+chain_id: 'router_9600-1'
+binary_version: 'v1.6.0'
 icon_url: 'router-icon.svg'
 ---
 
@@ -16,8 +16,8 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/router-icon.svg"
   title="Router State Sync"
-  chainId="auto"
-  version="auto"
+  chainId="router_9600-1"
+  version="v1.6.0"
 />
 
 ## How to enable state sync
@@ -35,7 +35,7 @@ sudo systemctl stop routerd && routerd tendermint unsafe-reset-all --home ~/.rou
 ```
 
 ```bash
-peers="auto"
+peers="7406480265ca3f45cce81737abd245f3d3e6a8bb@router-rpc.noders.services:23756"
 sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.routerd/config/config.toml
 ```
 

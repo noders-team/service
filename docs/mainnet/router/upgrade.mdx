@@ -6,8 +6,8 @@ hide_table_of_contents: false
 description: ''
 chain_name: 'Router'
 scope: 'mainnet'
-chain_id: 'auto'
-binary_version: 'auto'
+chain_id: 'router_9600-1'
+binary_version: 'v1.6.0'
 icon_url: 'router-icon.svg'
 ---
 
@@ -16,8 +16,8 @@ import PageTitle from "@site/src/components/PageTitle";
 <PageTitle
   iconUrl="img/router-icon.svg"
   title="Router Upgrade Guide"
-  chainId="auto"
-  version="auto"
+  chainId="router_9600-1"
+  version="v1.6.0"
 />
 
 ## Clone Router repository
@@ -27,7 +27,7 @@ cd $HOME
 rm -rf router-protocol
 git clone https://github.com/router-protocol.git
 cd router-protocol
-git checkout auto
+git checkout v1.6.0
 ```
 
 ## Build binaries
@@ -39,8 +39,8 @@ make build
 ## Prepare binaries for Cosmovisor
 
 ```js
-mkdir -p ~/.routerd/cosmovisor/upgrades/auto/bin
-mv build/routerd ~/.routerd/cosmovisor/upgrades/auto/bin/
+mkdir -p ~/.routerd/cosmovisor/upgrades/v1.6.0/bin
+mv build/routerd ~/.routerd/cosmovisor/upgrades/v1.6.0/bin/
 rm -rf build
 ```
 
@@ -53,7 +53,7 @@ cd $HOME
 rm -rf router-protocol
 git clone https://github.com/router-protocol.git
 cd router-protocol
-git checkout auto
+git checkout v1.6.0
 ```
 
 ## Build binaries
