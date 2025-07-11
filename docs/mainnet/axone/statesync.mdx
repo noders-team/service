@@ -4,26 +4,26 @@ sidebar_position: 4
 hide_title: true
 hide_table_of_contents: false
 description: ''
-chain_name: 'Zetachain'
-scope: 'testnet'
-chain_id: 'athens_7001-1'
-binary_version: 'v32.0.0'
-icon_url: 'zetachain-icon.svg'
+chain_name: 'Axone'
+scope: 'mainnet'
+chain_id: 'axone-1'
+binary_version: 'v12.0.0'
+icon_url: 'axone-icon.svg'
 ---
 
 import PageTitle from "@site/src/components/PageTitle";
 
 <PageTitle
-  iconUrl="img/zetachain-icon.svg"
-  title="Zetachain State Sync"
-  chainId="athens_7001-1"
-  version="v32.0.0"
+  iconUrl="img/axone-icon.svg"
+  title="Axone State Sync"
+  chainId="axone-1"
+  version="v12.0.0"
 />
 
 ## How to enable state sync
 
 ```bash
-SNAP_RPC=https://zetachain-t-rpc.noders.services:443 && \
+SNAP_RPC=https://axone-rpc.noders.services:443 && \
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
 TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash) && \
@@ -31,12 +31,12 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 ```
 
 ```bash
-sudo systemctl stop zetacored && zetacored tendermint unsafe-reset-all --home ~/.zetacored --keep-addr-book
+sudo systemctl stop axoned && axoned tendermint unsafe-reset-all --home ~/.axoned --keep-addr-book
 ```
 
 ```bash
-peers="fdc0a43704510897ad55a611e3f0d6f2c888c40e@zetachain-t-rpc.noders.services:22556"
-sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.zetacored/config/config.toml
+peers="3714fae5df6b7c18a0fb1409b7284a4bfc2a5af7@axone-rpc.noders.services:20056"
+sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.axoned/config/config.toml
 ```
 
 ```bash
@@ -44,9 +44,9 @@ sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
 s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
 s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
 s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
-s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.zetacored/config/config.toml
+s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" ~/.axoned/config/config.toml
 ```
 
 ```bash
-sudo systemctl restart zetacored && sudo journalctl -fu zetacored --no-hostname -o cat
+sudo systemctl restart axoned && sudo journalctl -fu axoned --no-hostname -o cat
 ```

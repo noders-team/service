@@ -1,0 +1,69 @@
+---
+title: 'Upgrade Guide'
+sidebar_position: 2
+hide_title: true
+hide_table_of_contents: false
+description: ''
+chain_name: 'Axone'
+scope: 'mainnet'
+chain_id: 'axone-1'
+binary_version: 'v12.0.0'
+icon_url: 'axone-icon.svg'
+---
+
+import PageTitle from "@site/src/components/PageTitle";
+
+<PageTitle
+  iconUrl="img/axone-icon.svg"
+  title="Axone Upgrade Guide"
+  chainId="axone-1"
+  version="v12.0.0"
+/>
+
+## Clone Axone repository
+
+```js
+cd $HOME
+rm -rf axone-protocol
+git clone https://github.com/axone-protocol.git
+cd axone-protocol
+git checkout v12.0.0
+```
+
+## Build binaries
+
+```js
+make build
+```
+
+## Prepare binaries for Cosmovisor
+
+```js
+mkdir -p ~/.axoned/cosmovisor/upgrades/v12.0.0/bin
+mv build/axoned ~/.axoned/cosmovisor/upgrades/v12.0.0/bin/
+rm -rf build
+```
+
+# Without Cosmovisor
+
+## Clone Axone repository
+
+```js
+cd $HOME
+rm -rf axone-protocol
+git clone https://github.com/axone-protocol.git
+cd axone-protocol
+git checkout v12.0.0
+```
+
+## Build binaries
+
+```js
+make install
+```
+
+## Restart node and check logs
+
+```js
+sudo systemctl restart axoned && sudo journalctl -u axoned -f --no-hostname -o cat
+```

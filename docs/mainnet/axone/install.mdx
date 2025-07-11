@@ -4,20 +4,20 @@ sidebar_position: 1
 hide_title: true
 hide_table_of_contents: false
 description: ''
-chain_name: 'Zetachain'
-scope: 'testnet'
-chain_id: 'athens_7001-1'
-binary_version: 'v32.0.0'
-icon_url: 'zetachain-icon.svg'
+chain_name: 'Axone'
+scope: 'mainnet'
+chain_id: 'axone-1'
+binary_version: 'v12.0.0'
+icon_url: 'axone-icon.svg'
 ---
 
 import PageTitle from "@site/src/components/PageTitle";
 
 <PageTitle
-  iconUrl="img/zetachain-icon.svg"
-  title="Zetachain Installation Guide"
-  chainId="athens_7001-1"
-  version="v32.0.0"
+  iconUrl="img/axone-icon.svg"
+  title="Axone Installation Guide"
+  chainId="axone-1"
+  version="v12.0.0"
 />
 
 ## Install dependencies
@@ -51,13 +51,13 @@ Cosmosvisor is a process manager for Cosmos SDK application binaries that monito
 
 ### Download and build binaries
 
-### Clone Zetachain repo and build zetacored v32.0.0
+### Clone Axone repo and build axoned v12.0.0
 
 ```js
 cd $HOME
-git clone https://github.com/zeta-chain.git
-cd zeta-chain
-git checkout v32.0.0
+git clone https://github.com/axone-protocol.git
+cd axone-protocol
+git checkout v12.0.0
 ```
 
 ### Build binaries
@@ -70,15 +70,15 @@ make install
 
 ```js
 cd $HOME
-mkdir -p ~/.zetacored/cosmovisor/upgrades/v32.0.0/bin
-mv $HOME/go/bin/zetacored ~/.zetacored/cosmovisor/upgrades/v32.0.0/bin/
+mkdir -p ~/.axoned/cosmovisor/upgrades/v12.0.0/bin
+mv $HOME/go/bin/axoned ~/.axoned/cosmovisor/upgrades/v12.0.0/bin/
 ```
 
 ### Create symlinks
 
 ```js
-sudo ln -s ~/.zetacored/cosmovisor/genesis ~/.zetacored/cosmovisor/current -f
-sudo ln -s ~/.zetacored/cosmovisor/current/bin/zetacored /usr/local/bin/zetacored -f
+sudo ln -s ~/.axoned/cosmovisor/genesis ~/.axoned/cosmovisor/current -f
+sudo ln -s ~/.axoned/cosmovisor/current/bin/axoned /usr/local/bin/axoned -f
 ```
 
 ## Download and install Cosmovisor
@@ -92,9 +92,9 @@ go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.1
 ### Create service
 
 ```js
-sudo tee /etc/systemd/system/zetacored.service > /dev/null << EOF
+sudo tee /etc/systemd/system/axoned.service > /dev/null << EOF
 [Unit]
-Description=zetachain node service
+Description=axone node service
 After=network-online.target
 
 [Service]
@@ -103,10 +103,10 @@ ExecStart=$(which cosmovisor) run start
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
-Environment="DAEMON_HOME=~/.zetacored"
-Environment="DAEMON_NAME=zetacored"
+Environment="DAEMON_HOME=~/.axoned"
+Environment="DAEMON_NAME=axoned"
 Environment="UNSAFE_SKIP_BACKUP=true"
-Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/.zetacored/cosmovisor/current/bin"
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/.axoned/cosmovisor/current/bin"
 
 [Install]
 WantedBy=multi-user.target
@@ -117,13 +117,13 @@ EOF
 
 ### Download and build binaries
 
-### Clone Zetachain repo and build zetacored v32.0.0
+### Clone Axone repo and build axoned v12.0.0
 
 ```js
 cd $HOME
-git clone https://github.com/zeta-chain.git
-cd zeta-chain
-git checkout v32.0.0
+git clone https://github.com/axone-protocol.git
+cd axone-protocol
+git checkout v12.0.0
 ```
 
 ### Build binaries
@@ -137,14 +137,14 @@ make install
 ### Create service
 
 ```js
-sudo tee /etc/systemd/system/zetacored.service > /dev/null << EOF
+sudo tee /etc/systemd/system/axoned.service > /dev/null << EOF
 [Unit]
-Description=zetachain node service
+Description=axone node service
 After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=$(which zetacored) start
+ExecStart=$(which axoned) start
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
@@ -159,7 +159,7 @@ EOF
 
 ```js
 sudo systemctl daemon-reload
-sudo systemctl enable zetacored
+sudo systemctl enable axoned
 ```
 
 ## Node configuration
@@ -167,34 +167,34 @@ sudo systemctl enable zetacored
 ### Set config
 
 ```js
-zetacored config chain-id athens_7001-1
-zetacored config keyring-backend os
-zetacored config node tcp://localhost:26657
+axoned config chain-id axone-1
+axoned config keyring-backend os
+axoned config node tcp://localhost:26657
 ```
 
 ### Initialize the node
 
 ```js
-zetacored init NAME_OF_YOUR_VALIDATOR --chain-id athens_7001-1
+axoned init NAME_OF_YOUR_VALIDATOR --chain-id axone-1
 ```
 
 ### Download genesis and addrbook
 
 ```js
-curl https://snapshots.noders.services/zetachain/genesis.json -o ~/.zetacored/config/genesis.json
-curl https://snapshots.noders.services/zetachain/addrbook.json -o ~/.zetacored/config/addrbook.json
+curl https://snapshots.noders.services/axone/genesis.json -o ~/.axoned/config/genesis.json
+curl https://snapshots.noders.services/axone/addrbook.json -o ~/.axoned/config/addrbook.json
 ```
 
 ### Add peers
 
 ```js
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"fdc0a43704510897ad55a611e3f0d6f2c888c40e@zetachain-t-rpc.noders.services:22556\"/" ~/.zetacored/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"3714fae5df6b7c18a0fb1409b7284a4bfc2a5af7@axone-rpc.noders.services:20056\"/" ~/.axoned/config/config.toml
 ```
 
 ### Set minimum gas price
 
 ```js
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001azeta\"|" ~/.zetacored/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001uaxone\"|" ~/.axoned/config/app.toml
 ```
 
 ### Set pruning
@@ -205,29 +205,29 @@ sed -i \
   -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
   -e 's|^pruning-keep-every *=.*|pruning-keep-every = "0"|' \
   -e 's|^pruning-interval *=.*|pruning-interval = "19"|' \
-  ~/.zetacored/config/app.toml
+  ~/.axoned/config/app.toml
 ```
 
 ### Set custom ports
 
 ```bash
-echo "export ZETACORED_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
+echo "export AXONED_PORT="SET_YOUR_PORT"" >> $HOME/.bash_profile
 ```
 
 ```js
 # Set custom ports in app.tom{l
-sed -i.bak -e "s%:1317%:${ZETACORED_PORT}317%g" \
--e "s%:8080%:${ZETACORED_PORT}080%g" \
--e "s%:9090%:${ZETACORED_PORT}090%g" \
--e "s%:9091%:${ZETACORED_PORT}091%g" \
--e "s%:8545%:${ZETACORED_PORT}545%g" \
--e "s%:8546%:${ZETACORED_PORT}546%g" \
--e "s%:6065%:${ZETACORED_PORT}065%g" ~/.zetacored/config/app.toml
+sed -i.bak -e "s%:1317%:${AXONED_PORT}317%g" \
+-e "s%:8080%:${AXONED_PORT}080%g" \
+-e "s%:9090%:${AXONED_PORT}090%g" \
+-e "s%:9091%:${AXONED_PORT}091%g" \
+-e "s%:8545%:${AXONED_PORT}545%g" \
+-e "s%:8546%:${AXONED_PORT}546%g" \
+-e "s%:6065%:${AXONED_PORT}065%g" ~/.axoned/config/app.toml
 
 # Set custom ports in config.toml file
-sed -i.bak -e "s%:26658%:${ZETACORED_PORT}658%g" \
--e "s%:26657%:${ZETACORED_PORT}657%g" \
--e "s%:6060%:${ZETACORED_PORT}060%g" \
--e "s%:26656%:${ZETACORED_PORT}656%g" \
--e "s%:26660%:${ZETACORED_PORT}660%g" ~/.zetacored/config/config.toml
+sed -i.bak -e "s%:26658%:${AXONED_PORT}658%g" \
+-e "s%:26657%:${AXONED_PORT}657%g" \
+-e "s%:6060%:${AXONED_PORT}060%g" \
+-e "s%:26656%:${AXONED_PORT}656%g" \
+-e "s%:26660%:${AXONED_PORT}660%g" ~/.axoned/config/config.toml
 ```
