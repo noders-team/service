@@ -35,6 +35,13 @@
     "scope": "mainnet"
   },
   {
+    "name": "axone",
+    "pretty_name": "Axone",
+    "chain_id": "axone-1",
+    "logo_url": "img/axone-icon.svg",
+    "scope": "mainnet"
+  },
+  {
     "name": "celestia",
     "pretty_name": "Celestia",
     "chain_id": "celestia",
